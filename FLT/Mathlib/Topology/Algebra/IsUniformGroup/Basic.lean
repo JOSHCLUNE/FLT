@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.IsUniformGroup.Basic
 public import FLT.Mathlib.GroupTheory.Index
+import Hammer
 
 /-!
 # Total boundedness for topological groups with small finite-index subgroups

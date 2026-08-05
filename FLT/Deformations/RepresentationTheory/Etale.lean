@@ -7,6 +7,7 @@ module
 
 public import FLT.Mathlib.FieldTheory.Galois.Infinite
 public import Mathlib.RingTheory.Bialgebra.Basic
+import Hammer
 
 /-!
 # Equivalence between continuous `G`-finite sets and `k`-etale algebras

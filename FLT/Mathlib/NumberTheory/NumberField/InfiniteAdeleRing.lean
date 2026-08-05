@@ -7,6 +7,7 @@ module
 
 public import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 import FLT.Mathlib.NumberTheory.NumberField.InfinitePlace.Completion
+import Hammer
 
 /-!
 # Infinite Adele Ring

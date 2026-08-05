@@ -7,6 +7,7 @@ module
 
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
 public import Mathlib.RepresentationTheory.Basic
+import Hammer
 
 /-!
 # Basic

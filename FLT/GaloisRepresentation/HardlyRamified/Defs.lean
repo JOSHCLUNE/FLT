@@ -10,6 +10,7 @@ public import FLT.Mathlib.RingTheory.DedekindDomain.Ideal.Lemmas
 public import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
 public import Mathlib.NumberTheory.Padics.Complex
 public import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # Hardly ramified Galois representations

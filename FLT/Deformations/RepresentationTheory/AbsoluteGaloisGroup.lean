@@ -14,6 +14,7 @@ public import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
 
 import FLT.NumberField.Completion.Finite
 import Mathlib.FieldTheory.Galois.Infinite
+import Hammer
 
 /-!
 # Functoriality of the absolute Galois group

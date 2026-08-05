@@ -15,6 +15,7 @@ import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
 import Mathlib.LinearAlgebra.FreeModule.StrongRankCondition
 import Mathlib.Tactic.NormNum.GCD
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 /-!
 
 # API for base change of free modules

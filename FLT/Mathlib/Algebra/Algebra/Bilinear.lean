@@ -13,6 +13,7 @@ import Mathlib.Data.Nat.Totient
 import Mathlib.Data.Sym.Sym2.Init
 import Mathlib.Tactic.NormNum.GCD
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 

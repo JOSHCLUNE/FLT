@@ -12,6 +12,7 @@ public import Mathlib.Data.ZMod.Basic
 public import Mathlib.RingTheory.Flat.Basic
 import Mathlib.Algebra.Order.Star.Basic
 import Mathlib.RingTheory.Flat.TorsionFree
+import Hammer
 
 /-!
 # The profinite completion of `ℤ` and the finite adeles of `ℚ`

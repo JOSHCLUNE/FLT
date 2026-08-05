@@ -6,6 +6,7 @@ Authors: Andrew Yang, Kevin Buzzard
 module
 
 public import Mathlib.GroupTheory.GroupAction.Quotient
+import Hammer
 
 /-!
 # Group actions on quotients and equivariant homs

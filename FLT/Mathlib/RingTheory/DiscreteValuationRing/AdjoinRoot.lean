@@ -15,6 +15,7 @@ public import FLT.Mathlib.RingTheory.AdjoinRoot
 import Mathlib.Algebra.Polynomial.Lifts
 import Mathlib.RingTheory.Ideal.GoingUp
 import Mathlib.RingTheory.DedekindDomain.Basic
+import Hammer
 
 /-!
 # `R[X]/(P)` as an unramified discrete valuation ring

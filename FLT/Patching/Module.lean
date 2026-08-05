@@ -18,6 +18,7 @@ import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 import Mathlib.Topology.Algebra.Ring.Compact
 import Mathlib.Topology.Compactness.Paracompact
 import Mathlib.Topology.Connected.Separation
+import Hammer
 
 /-!
 # The patching module

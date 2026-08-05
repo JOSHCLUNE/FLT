@@ -12,6 +12,7 @@ public import Mathlib.Tactic.NormNum.Prime
 public import FLT.Slop.PGL2.FiniteSubgroups.PSLBasic
 public import FLT.Slop.PGL2.FiniteSubgroups.PSLRecognition
 public import FLT.Slop.PGL2.FiniteSubgroups.PartitionProof
+import Hammer
 
 /-!
 # Dickson's classification: the wild case

@@ -9,6 +9,7 @@ public import Mathlib.Topology.Instances.Matrix
 -- needs additional import so maybe Mathlib.Topology.Instances.Matrix not
 -- the right place for it?
 public import Mathlib.Topology.Algebra.Module.ModuleTopology
+import Hammer
 
 /-!
 # Matrix

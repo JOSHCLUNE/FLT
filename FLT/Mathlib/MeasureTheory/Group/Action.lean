@@ -9,6 +9,7 @@ public import Mathlib.GroupTheory.Index
 public import Mathlib.MeasureTheory.Group.Arithmetic
 public import Mathlib.MeasureTheory.Group.Defs
 import Mathlib.MeasureTheory.Group.Measure
+import Hammer
 /-!
 # TODO
 

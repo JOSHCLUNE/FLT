@@ -7,6 +7,7 @@ module
 
 public import Mathlib.MeasureTheory.Measure.Regular
 import FLT.Mathlib.MeasureTheory.Measure.Typeclasses.Finite
+import Hammer
 
 /-!
 # Regular

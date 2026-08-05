@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Group.Submonoid.Units
 public import Mathlib.Topology.Algebra.Constructions
 import Mathlib.Tactic.Bound.Init
+import Hammer
 
 /-!
 # Units

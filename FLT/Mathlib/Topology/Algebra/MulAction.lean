@@ -6,6 +6,7 @@ Authors: Matthew Jasper, Kevin Buzzard
 module
 
 public import Mathlib.Topology.Algebra.MulAction
+import Hammer
 
 /-!
 # Mul Action

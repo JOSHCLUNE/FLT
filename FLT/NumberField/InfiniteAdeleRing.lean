@@ -13,6 +13,7 @@ public import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 public import Mathlib.RingTheory.TensorProduct.Pi
 import FLT.Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-! # Base change for the infinite adele ring
 

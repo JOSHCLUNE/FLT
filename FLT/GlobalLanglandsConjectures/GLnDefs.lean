@@ -13,6 +13,7 @@ public import Mathlib.Geometry.Manifold.Instances.UnitsOfNormedAlgebra
 public import Mathlib.RepresentationTheory.FDRep
 public import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 public import Mathlib.Topology.LocallyConstant.Basic
+import Hammer
 
 /-!
 # The Global Langlands Conjectures for GL(n) over the rationals.

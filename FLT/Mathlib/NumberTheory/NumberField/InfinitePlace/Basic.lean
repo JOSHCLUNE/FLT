@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import Mathlib.NumberTheory.NumberField.InfinitePlace.Basic
+import Hammer
 
 /-!
 # Basic

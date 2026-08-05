@@ -11,6 +11,7 @@ public meta import Mathlib.Tactic.ToAdditive
 public import Mathlib.Topology.Constructions.SumProd
 import Mathlib.Algebra.Order.AbsoluteValue.Basic
 import Mathlib.Data.Rat.Floor
+import Hammer
 
 /-!
 # Hom

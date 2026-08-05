@@ -8,6 +8,7 @@ module
 public import Mathlib.Analysis.Normed.Ring.Basic
 public import Mathlib.Topology.Instances.Matrix
 import FLT.Mathlib.Topology.Constructions
+import Hammer
 
 /-!
 # Matrix

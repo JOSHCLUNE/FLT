@@ -13,6 +13,7 @@ public import Mathlib.MeasureTheory.Measure.Haar.MulEquivHaarChar
 import FLT.HaarMeasure.HaarChar.AddEquiv
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # The ring Haar character

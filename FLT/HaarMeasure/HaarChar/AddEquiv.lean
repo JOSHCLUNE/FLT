@@ -12,6 +12,7 @@ public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.RestrictedProdu
 import FLT.Mathlib.MeasureTheory.Group.Measure
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # The Haar character under continuous group equivalences

@@ -6,6 +6,7 @@ Authors: Edison Xie
 module
 
 public import Mathlib.Topology.CompactOpen
+import Hammer
 
 /-!
 # Joint continuity of pairing into a product

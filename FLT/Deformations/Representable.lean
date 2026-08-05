@@ -8,6 +8,7 @@ module
 public import FLT.Deformations.LiftFunctor
 public import FLT.Deformations.RepresentationTheory.Irreducible
 public import Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex
+import Hammer
 
 /-!
 # Representability of deformation functors

@@ -8,6 +8,7 @@ module
 public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.VariableChange
 public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
 public import FLT.Mathlib.FieldTheory.Galois.Basic
+import Hammer
 
 /-!
 # Galois descent for Weierstrass curve data

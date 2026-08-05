@@ -13,6 +13,7 @@ import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
 import Mathlib.NumberTheory.Padics.HeightOneSpectrum
 import Mathlib.NumberTheory.Padics.ProperSpace
 public import FLT.Mathlib.LinearAlgebra.Countable
+import Hammer
 
 /-!
 

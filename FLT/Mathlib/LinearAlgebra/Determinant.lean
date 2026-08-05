@@ -17,6 +17,7 @@ import Mathlib.RingTheory.Henselian
 import Mathlib.RingTheory.PicardGroup
 import Mathlib.RingTheory.SimpleModule.IsAlgClosed
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # Determinant

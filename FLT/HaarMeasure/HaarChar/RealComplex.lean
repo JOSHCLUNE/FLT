@@ -13,6 +13,7 @@ import Mathlib.RingTheory.Complex
 import Mathlib.RingTheory.Norm.Transitivity
 import Mathlib.RingTheory.PicardGroup
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # The distributive Haar characters of `ℝ` and `ℂ`

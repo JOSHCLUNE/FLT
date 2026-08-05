@@ -258,3 +258,4 @@ public import FLT.Slop.PGL2.FiniteSubgroups.WildClassification
 public import FLT.Slop.RepresentationTheory.OddAbsIrredOrig
 public import FLT.Slop.RepresentationTheory.OddAbsIrredSlop
 public import FLT.TateCurve.TateCurve
+import Hammer

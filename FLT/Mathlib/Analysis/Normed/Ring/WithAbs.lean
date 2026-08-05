@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Analysis.Normed.Field.WithAbs
 public import Mathlib.NumberTheory.NumberField.Basic
+import Hammer
 
 /-!
 # With Abs

@@ -8,6 +8,7 @@ module
 public import Mathlib.RingTheory.Ideal.Quotient.Operations
 public import Mathlib.RingTheory.LocalRing.Defs
 import Mathlib.RingTheory.LocalRing.RingHom.Basic
+import Hammer
 
 /-!
 # Defs

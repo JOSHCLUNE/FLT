@@ -16,6 +16,7 @@ public import FLT.Mathlib.RingTheory.Valuation.ValuativeRel.Basic
 public import FLT.Mathlib.Topology.Algebra.ValuativeRel.ValuativeTopology
 
 import Mathlib.Topology.Algebra.InfiniteSum.Nonarchimedean
+import Hammer
 
 /-!
 

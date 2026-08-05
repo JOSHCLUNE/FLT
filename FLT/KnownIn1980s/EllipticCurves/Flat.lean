@@ -12,6 +12,7 @@ public import Mathlib.RingTheory.Etale.Basic
 public import Mathlib.RingTheory.Flat.Basic
 public import Mathlib.RingTheory.HopfAlgebra.Basic
 public import Mathlib.RingTheory.Polynomial.Resultant.Basic
+import Hammer
 
 /-!
 

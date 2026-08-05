@@ -6,6 +6,7 @@ Authors: Andrew Yang
 module
 
 public import Mathlib.Topology.Algebra.Group.Basic
+import Hammer
 
 /-! # Lemmas about topological groups -/
 

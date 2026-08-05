@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.Module.Basic
 public import Mathlib.Topology.ContinuousMap.Algebra
+import Hammer
 
 /-!
 # The compact-open topology on continuous linear maps

@@ -8,6 +8,7 @@ module
 public import Mathlib.Topology.Constructions
 import Mathlib.CategoryTheory.CofilteredSystem
 import Mathlib.Data.Finset.Order
+import Hammer
 
 /-!
 # Inverse-limit utilities

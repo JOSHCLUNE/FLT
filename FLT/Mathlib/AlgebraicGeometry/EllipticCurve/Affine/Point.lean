@@ -6,6 +6,7 @@ Authors: Michael Stoll, Claude
 module
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+import Hammer
 
 /-!
 # Isomorphism of point groups induced by a change of variables

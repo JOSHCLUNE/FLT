@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Algebra.Category.ModuleCat.Topology.Basic
 public import FLT.Mathlib.Topology.Algebra.Module.CompactOpen
+import Hammer
 
 /-!
 # The internal hom of topological modules

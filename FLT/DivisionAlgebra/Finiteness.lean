@@ -28,6 +28,7 @@ import FLT.Mathlib.Topology.HomToDiscrete
 import FLT.Mathlib.Topology.MetricSpace.ProperSpace.InfinitePlace
 import FLT.Mathlib.Topology.Polish
 import Mathlib.Analysis.CStarAlgebra.Classes
+import Hammer
 
 /-!
 # Finiteness theorem for the adelic quotient of a division algebra

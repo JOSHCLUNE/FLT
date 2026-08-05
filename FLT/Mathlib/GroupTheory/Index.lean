@@ -13,6 +13,7 @@ import Mathlib.Tactic.Bound.Init
 import Mathlib.Tactic.Finiteness.Attr
 import Mathlib.Tactic.ScopedNS
 import Mathlib.Tactic.SetLike
+import Hammer
 
 /-!
 # TODO

@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Salvatore Mercuri
 module
 
 public import Mathlib.Algebra.Algebra.Prod
+import Hammer
 
 /-!
 # Hom

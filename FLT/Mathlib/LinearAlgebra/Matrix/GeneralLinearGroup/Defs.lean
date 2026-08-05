@@ -6,6 +6,7 @@ Authors: Bryan Wang
 module
 
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+import Hammer
 
 /-!
 # Defs

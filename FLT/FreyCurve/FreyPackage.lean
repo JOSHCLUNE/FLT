@@ -16,6 +16,7 @@ import Mathlib.NumberTheory.FLT.Four
 import Mathlib.NumberTheory.FLT.Three
 import Mathlib.Tactic.ModCases
 public import FLT.Basic.Lemmas
+import Hammer
 
 /-!
 

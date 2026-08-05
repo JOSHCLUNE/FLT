@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Ruben Van de Velde, Pietro Monticone
 module
 
 public import FLT.FreyCurve.FreyPackage
+import Hammer
 /-!
 
 # The Frey curve associated to a Frey package

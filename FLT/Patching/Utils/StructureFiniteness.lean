@@ -9,6 +9,7 @@ public import FLT.Patching.Utils.TopologicallyFG
 public import Mathlib.Topology.Algebra.Module.Equiv
 public import Mathlib.Algebra.Algebra.TransferInstance
 import Mathlib.Algebra.Ring.Ext
+import Hammer
 
 /-!
 # Finiteness of algebraic structures on finite types

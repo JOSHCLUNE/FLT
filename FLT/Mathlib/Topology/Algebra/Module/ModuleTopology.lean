@@ -18,6 +18,7 @@ import Mathlib.LinearAlgebra.FreeModule.PID
 import Mathlib.RingTheory.Henselian
 import Mathlib.RingTheory.PicardGroup
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 /-!
 # Module Topology
 

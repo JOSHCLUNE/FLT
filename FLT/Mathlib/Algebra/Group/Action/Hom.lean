@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Algebra.Algebra.Pi
 public import Mathlib.Algebra.Group.Action.Hom
+import Hammer
 
 /-!
 # Algebra structures on equivariant homs

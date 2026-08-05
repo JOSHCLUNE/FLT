@@ -9,6 +9,7 @@ public import FLT.Patching.Utils.Lemmas
 public import FLT.Patching.Utils.TopologicallyFG
 import FLT.Patching.Utils.StructureFiniteness
 import Mathlib.Tactic.ContinuousFunctionalCalculus
+import Hammer
 
 /-!
 # Ultraproducts of submodules

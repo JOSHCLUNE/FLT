@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Claude
 module
 
 public import Mathlib.Algebra.Polynomial.Splits
+import Hammer
 
 /-!
 # Polynomials of degree at most two split once they have a root

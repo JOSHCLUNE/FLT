@@ -10,6 +10,7 @@ public import Mathlib.NumberTheory.NumberField.Basic
 import Mathlib.Algebra.Order.Algebra
 import Mathlib.Analysis.SpecialFunctions.Pow.NNReal
 import Mathlib.Data.Nat.Prime.Int
+import Hammer
 
 /-!
 # Lemmas

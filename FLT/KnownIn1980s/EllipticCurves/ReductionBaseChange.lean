@@ -13,6 +13,7 @@ public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.Reduction
 -- (step 0, used to build `integerMap`) and the adic ↔ canonical bridges
 -- `ValuativeRel.adicValuation_{lt,eq}_one_iff` (used throughout the proof sketches)
 public import FLT.Mathlib.RingTheory.Valuation.ValuativeRel.Basic
+import Hammer
 
 /-!
 

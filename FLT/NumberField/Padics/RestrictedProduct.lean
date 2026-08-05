@@ -16,6 +16,7 @@ import Mathlib.NumberTheory.Padics.RingHoms
 import Mathlib.Tactic.NormNum.GCD
 import Mathlib.Tactic.Positivity.Finset
 import Mathlib.RingTheory.DedekindDomain.Basic
+import Hammer
 
 
 

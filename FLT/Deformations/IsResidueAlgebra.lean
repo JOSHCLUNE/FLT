@@ -8,6 +8,7 @@ module
 public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
 public import FLT.Mathlib.RingTheory.LocalRing.Defs
 import FLT.Deformations.Lemmas
+import Hammer
 
 /-!
 # Residue algebras

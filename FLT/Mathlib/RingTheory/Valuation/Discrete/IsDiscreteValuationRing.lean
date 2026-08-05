@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
 public import Mathlib.RingTheory.DedekindDomain.AdicValuation
+import Hammer
 
 /-!
 # Elements of valuation one

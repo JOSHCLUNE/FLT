@@ -24,6 +24,7 @@ import FLT.Mathlib.Data.Real.Archimedean
 import FLT.Mathlib.NumberTheory.NumberField.AdeleRing
 import FLT.NumberField.Completion.Finite
 import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
+import Hammer
 
 /-! # The adele ring of a number field
 

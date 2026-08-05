@@ -9,6 +9,7 @@ public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.Basic
 public import Mathlib.Algebra.Group.Submonoid.Units
 public import Mathlib.LinearAlgebra.DFinsupp
 public import Mathlib.LinearAlgebra.Matrix.Defs
+import Hammer
 --import Mathlib.Topology.Algebra.ContinuousMonoidHom
 
 /-!

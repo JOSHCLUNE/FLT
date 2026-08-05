@@ -9,6 +9,7 @@ public import Mathlib.NumberTheory.NumberField.Basic
 public import Mathlib.RingTheory.DedekindDomain.Ideal.Lemmas
 import FLT.DedekindDomain.IntegralClosure
 import Mathlib.NumberTheory.Padics.HeightOneSpectrum
+import Hammer
 
 /-!
 # The height-one spectrum of a number field

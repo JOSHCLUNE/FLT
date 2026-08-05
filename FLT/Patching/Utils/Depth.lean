@@ -14,6 +14,7 @@ import Mathlib.RingTheory.KrullDimension.NonZeroDivisors
 import Mathlib.RingTheory.TensorProduct.Free
 import Mathlib.Tactic.Continuity.Init
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # Module depth

@@ -9,6 +9,7 @@ public import FLT.Data.Hurwitz
 public import FLT.Data.QHat
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # Adelic Hurwitz quaternions

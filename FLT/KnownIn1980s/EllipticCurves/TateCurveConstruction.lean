@@ -17,6 +17,7 @@ import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.NumberTheory.ModularForms.EisensteinSeries.QExpansion
 import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 import Mathlib.NumberTheory.ZetaValues
+import Hammer
 
 /-!
 

@@ -6,6 +6,7 @@ Authors: William Coram, Kevin Buzzard
 module
 
 public import Mathlib.Topology.Constructions
+import Hammer
 
 /-!
 # Hom To Discrete

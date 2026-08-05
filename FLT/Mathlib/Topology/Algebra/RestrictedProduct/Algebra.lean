@@ -7,6 +7,7 @@ module
 
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.Basic
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.Module
+import Hammer
 
 /-! # Lemmas about restricted products of algebras -/
 

@@ -9,6 +9,7 @@ public import Mathlib.Data.Fintype.Parity
 public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
 public import Mathlib.LinearAlgebra.SpecialLinearGroup
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
+import Hammer
 
 /-!
 # Basics on `SL₂`, its centre, and the image of `PSL₂` in `PGL₂`

@@ -12,6 +12,7 @@ import Mathlib.Analysis.SpecialFunctions.Stirling
 import Mathlib.Algebra.Order.Star.Real
 import Mathlib.Order.Monotone.Union
 import Mathlib.Tactic.NormNum.NatFactorial
+import Hammer
 
 /-!
 # Discriminant bounds for number fields

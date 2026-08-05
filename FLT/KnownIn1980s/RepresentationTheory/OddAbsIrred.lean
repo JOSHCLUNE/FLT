@@ -6,6 +6,7 @@ Authors: Zachary Feng, Y. Samanda Zhang
 module
 
 public import FLT.Slop.RepresentationTheory.OddAbsIrredSlop
+import Hammer
 
 /-!
 # Irreducible ↔ absolutely irreducible, given a one-dimensional fixed space

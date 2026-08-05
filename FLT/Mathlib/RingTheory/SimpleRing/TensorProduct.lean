@@ -16,6 +16,7 @@ import Mathlib.LinearAlgebra.Basis.VectorSpace
 import Mathlib.RingTheory.Flat.FaithfullyFlat.Basic
 import Mathlib.RingTheory.Henselian
 import Mathlib.RingTheory.TwoSidedIdeal.Instances
+import Hammer
 
 /-!
 # Tensor product of simple algebras over a field

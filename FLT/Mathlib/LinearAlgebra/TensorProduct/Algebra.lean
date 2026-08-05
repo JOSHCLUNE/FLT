@@ -7,6 +7,7 @@ module
 
 public import Mathlib.LinearAlgebra.TensorProduct.Map
 public import Mathlib.Algebra.Algebra.Hom
+import Hammer
 
 /-!
 # Algebra

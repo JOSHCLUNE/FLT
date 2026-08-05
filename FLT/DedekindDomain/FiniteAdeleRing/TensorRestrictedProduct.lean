@@ -10,6 +10,7 @@ public import Mathlib.RingTheory.Flat.Basic
 public import FLT.Mathlib.Algebra.IsDirectLimit
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.Basic
 import FLT.DedekindDomain.FiniteAdeleRing.IsDirectLimitRestricted
+import Hammer
 
 /-!
 # Tensor product distributing over a restricted product

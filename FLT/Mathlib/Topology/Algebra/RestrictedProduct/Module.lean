@@ -15,6 +15,7 @@ import FLT.Mathlib.Topology.Algebra.RestrictedProduct.TopologicalSpace
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Data.Nat.Totient
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 

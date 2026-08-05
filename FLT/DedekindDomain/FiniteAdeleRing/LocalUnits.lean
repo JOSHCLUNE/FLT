@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 import FLT.Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
+import Hammer
 
 /-!
 # Uniformisers in adic completions

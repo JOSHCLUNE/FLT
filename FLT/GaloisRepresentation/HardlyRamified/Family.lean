@@ -7,6 +7,7 @@ module
 
 public import FLT.GaloisRepresentation.HardlyRamified.Defs
 public import FLT.Deformations.RepresentationTheory.GaloisRepFamily
+import Hammer
 
 /-!
 # Hardly ramified representations in compatible families

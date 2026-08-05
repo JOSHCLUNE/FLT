@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.MulAction
 import Mathlib.Topology.Algebra.Group.Basic
+import Hammer
 
 /-!
 # Continuous actions on discrete modules

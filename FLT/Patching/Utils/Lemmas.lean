@@ -18,6 +18,7 @@ import Mathlib.RingTheory.Localization.AtPrime.Basic
 import Mathlib.Topology.Algebra.Module.Compact
 import Mathlib.Topology.Algebra.OpenSubgroup
 import Mathlib.Topology.Separation.Profinite
+import Hammer
 
 /-!
 # Miscellaneous lemmas for the patching folder

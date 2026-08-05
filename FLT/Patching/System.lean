@@ -8,6 +8,7 @@ module
 public import FLT.Patching.Over
 public import FLT.Patching.Utils.Depth
 import Mathlib.RingTheory.Length
+import Hammer
 
 /-!
 # Compatibility data for the patching system

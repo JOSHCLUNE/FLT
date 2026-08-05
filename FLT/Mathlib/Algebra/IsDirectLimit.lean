@@ -6,6 +6,7 @@ Authors: Madison Crim
 module
 
 public import Mathlib.Algebra.Colimit.Module
+import Hammer
 
 /-!
 # Is Direct Limit

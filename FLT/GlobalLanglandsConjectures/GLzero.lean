@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Jonas Bayer
 module
 
 public import FLT.GlobalLanglandsConjectures.GLnDefs
+import Hammer
 
 /-!
 # Proof of a case of the global Langlands conjectures.

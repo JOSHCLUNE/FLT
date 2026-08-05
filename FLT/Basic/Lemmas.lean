@@ -8,6 +8,7 @@ module
 public import Mathlib.Data.Nat.Factors
 public import Mathlib.NumberTheory.FLT.Four
 public import Mathlib.NumberTheory.FLT.Three
+import Hammer
 
 /-!
 

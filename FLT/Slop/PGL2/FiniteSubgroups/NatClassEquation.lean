@@ -8,6 +8,7 @@ module
 public import Mathlib.Analysis.Normed.Ring.Lemmas
 public import Mathlib.Data.SetLike.Fintype
 public import Mathlib.GroupTheory.Index
+import Hammer
 
 /-!
 # A class-equation-style counting lemma for conjugates of subgroups

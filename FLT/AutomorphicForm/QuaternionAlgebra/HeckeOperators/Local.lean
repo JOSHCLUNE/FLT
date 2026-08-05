@@ -9,6 +9,7 @@ public import FLT.QuaternionAlgebra.NumberField -- rigidifications of quat algs
 public import FLT.Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
 public import FLT.DedekindDomain.FiniteAdeleRing.LocalUnits
 import FLT.DedekindDomain.AdicValuation
+import Hammer
 
 /-!
 # Local computations for Hecke operators

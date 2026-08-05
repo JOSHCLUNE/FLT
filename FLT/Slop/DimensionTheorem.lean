@@ -6,6 +6,7 @@ Authors: Akhil Mathew
 module
 
 public import FLT.Slop.DimensionTheorem.Main
+import Hammer
 
 /-!
 # Dimension theorem for Noetherian local rings

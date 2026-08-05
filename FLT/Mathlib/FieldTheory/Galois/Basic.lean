@@ -9,6 +9,7 @@ public import Mathlib.FieldTheory.Galois.Basic
 public import FLT.Mathlib.LinearAlgebra.Dimension.IsQuadraticExtension
 
 import Mathlib.RingTheory.Norm.Transitivity
+import Hammer
 
 /-!
 # The Galois theory of separable quadratic extensions

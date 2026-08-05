@@ -13,6 +13,7 @@ public import Mathlib.RingTheory.Filtration
 import FLT.Patching.Utils.InverseLimit
 import Mathlib.Topology.Algebra.Ring.Compact
 import Mathlib.Topology.Connected.Separation
+import Hammer
 
 /-!
 # The patching algebra

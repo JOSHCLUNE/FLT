@@ -8,6 +8,7 @@ Authors: Matthew Jasper
 module
 
 public import Mathlib.RingTheory.Localization.BaseChange
+import Hammer
 
 /-!
 # Base Change

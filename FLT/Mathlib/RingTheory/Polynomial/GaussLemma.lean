@@ -6,6 +6,7 @@ Authors: Michael Stoll, Claude
 module
 
 public import Mathlib.RingTheory.Polynomial.GaussLemma
+import Hammer
 
 /-!
 # Monic divisors descend along the fraction field

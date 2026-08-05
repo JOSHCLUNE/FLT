@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RingTheory.FiniteType
 public import Mathlib.Topology.Algebra.Ring.Basic
+import Hammer
 
 /-!
 # Topologically finitely generated algebras

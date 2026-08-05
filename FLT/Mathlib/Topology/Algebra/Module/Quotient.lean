@@ -7,6 +7,7 @@ module
 
 public import Mathlib.LinearAlgebra.Quotient.Pi
 public import Mathlib.Topology.Algebra.Module.Equiv
+import Hammer
 
 /-!
 # Quotient

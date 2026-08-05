@@ -8,6 +8,7 @@ module
 public import Mathlib.MeasureTheory.Measure.Haar.Unique
 public import Mathlib.NumberTheory.Padics.ProperSpace
 import FLT.Mathlib.NumberTheory.Padics.PadicIntegers
+import Hammer
 
 /-!
 # Measurability and measures on the p-adics

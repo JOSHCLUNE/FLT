@@ -17,6 +17,7 @@ import Mathlib.Logic.Equiv.PartialEquiv
 import Mathlib.RingTheory.TensorProduct.Finite
 import Mathlib.Tactic.NormNum.GCD
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # Right-action instances on tensor products

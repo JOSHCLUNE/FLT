@@ -9,6 +9,7 @@ public import Mathlib.Topology.Instances.Matrix
 public import Mathlib.Analysis.Normed.Field.Basic
 public import Mathlib.LinearAlgebra.Matrix.Basis
 import Mathlib.Topology.Algebra.Module.FiniteDimension
+import Hammer
 
 /-!
 # Finite Dimension

@@ -6,6 +6,7 @@ Authors: Ruben Van de Velde, Kevin Buzzard, Matthew Jasper
 module
 
 public import Mathlib.Topology.Algebra.Valued.ValuationTopology
+import Hammer
 
 /-!
 # Valuation Topology

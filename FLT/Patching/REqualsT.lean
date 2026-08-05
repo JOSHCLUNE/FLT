@@ -6,6 +6,7 @@ Authors: Andrew Yang, Kevin Buzzard
 module
 
 public import FLT.Patching.System
+import Hammer
 
 /-!
 # `R = T` from a successful patching argument

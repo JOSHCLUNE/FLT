@@ -6,6 +6,7 @@ Authors: Salvatore Mercuri, Kevin Buzzard
 module
 
 public import Mathlib.LinearAlgebra.TensorProduct.Pi
+import Hammer
 
 /-!
 # Pi

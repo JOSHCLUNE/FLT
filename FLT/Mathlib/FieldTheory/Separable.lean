@@ -6,6 +6,7 @@ Authors: Michael Stoll, Claude
 module
 
 public import Mathlib.FieldTheory.Separable
+import Hammer
 
 /-!
 # Non-separable polynomials share a monic factor with their derivative

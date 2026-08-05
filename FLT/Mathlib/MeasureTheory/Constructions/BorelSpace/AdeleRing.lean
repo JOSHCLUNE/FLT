@@ -9,6 +9,7 @@ public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.InfinitePlace
 public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.FiniteAdeleRing
 public import Mathlib.NumberTheory.NumberField.AdeleRing
 import FLT.Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
+import Hammer
 
 /-!
 # Adele Ring

@@ -12,6 +12,7 @@ public import FLT.Mathlib.RepresentationTheory.Continuous.Basic
 public import FLT.Mathlib.RepresentationTheory.Continuous.TopRep
 public import FLT.Mathlib.RepresentationTheory.Homological.ContCohomology.Basic
 public import FLT.Mathlib.Topology.CompactOpen
+import Hammer
 
 /-!
 # Cup products in continuous group cohomology

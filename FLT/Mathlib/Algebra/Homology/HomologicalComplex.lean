@@ -6,6 +6,7 @@ Authors: Edison Xie
 module
 
 public import Mathlib.Algebra.Homology.HomologicalComplex
+import Hammer
 
 /-!
 # Complements on homological complexes

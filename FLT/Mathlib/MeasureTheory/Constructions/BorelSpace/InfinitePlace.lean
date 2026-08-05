@@ -7,6 +7,7 @@ module
 
 public import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 import FLT.Mathlib.Topology.MetricSpace.ProperSpace.InfinitePlace
+import Hammer
 
 /-!
 # Infinite Place

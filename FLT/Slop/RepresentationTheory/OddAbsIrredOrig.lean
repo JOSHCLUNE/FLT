@@ -6,6 +6,7 @@ Authors: Zachary Feng, Y. Samanda Zhang
 module
 
 public import FLT.Slop.RepresentationTheory.OddAbsIrredSlop
+import Hammer
 
 /-!
 # Compatibility aliases for the original odd-representation namespace

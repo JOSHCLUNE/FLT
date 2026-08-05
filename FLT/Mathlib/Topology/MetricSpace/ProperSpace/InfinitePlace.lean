@@ -7,6 +7,7 @@ module
 
 public import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 import Mathlib.Analysis.CStarAlgebra.Classes
+import Hammer
 
 /-!
 # Infinite Place

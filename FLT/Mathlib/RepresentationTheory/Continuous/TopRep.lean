@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RepresentationTheory.Continuous.TopRep
 public import FLT.Mathlib.RepresentationTheory.Continuous.Basic
+import Hammer
 
 /-!
 # The internal hom of topological representations

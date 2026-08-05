@@ -12,6 +12,7 @@ public import FLT.Mathlib.RingTheory.Norm.Quadratic
 public import FLT.Mathlib.LinearAlgebra.Dimension.IsQuadraticExtension
 
 import Mathlib.RingTheory.Norm.Transitivity
+import Hammer
 
 /-!
 

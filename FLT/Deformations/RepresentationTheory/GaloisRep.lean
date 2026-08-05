@@ -12,6 +12,7 @@ public import Mathlib.LinearAlgebra.Matrix.Unique
 public import Mathlib.RingTheory.Bialgebra.TensorProduct
 public import Mathlib.RingTheory.HopfAlgebra.Basic
 public import Mathlib.RepresentationTheory.Irreducible
+import Hammer
 
 /-!
 # Galois representations

@@ -16,6 +16,7 @@ public import Mathlib.Topology.Separation.Lemmas
 public import FLT.NumberField.Completion.Finite
 public import FLT.NumberField.HeightOneSpectrum
 public import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
+import Hammer
 
 /-!
 

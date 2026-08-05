@@ -7,6 +7,7 @@ module
 
 public import Mathlib.NumberTheory.NumberField.Discriminant.Defs
 public import Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex
+import Hammer
 
 /-!
 

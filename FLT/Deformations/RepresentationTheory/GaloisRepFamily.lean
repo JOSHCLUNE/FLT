@@ -8,6 +8,7 @@ module
 public import FLT.Deformations.RepresentationTheory.GaloisRep
 public import Mathlib.NumberTheory.Padics.Complex
 import Mathlib.RingTheory.PicardGroup
+import Hammer
 
 /-!
 # Compatible families of Galois representations

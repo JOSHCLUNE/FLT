@@ -9,6 +9,7 @@ public import FLT.Basic.Lemmas
 public import FLT.FreyCurve.Basic
 public import FLT.EllipticCurve.Torsion
 public import FLT.FreyCurve.Mazur
+import Hammer
 
 /-!
 # The proof of Fermat's Last Theorem

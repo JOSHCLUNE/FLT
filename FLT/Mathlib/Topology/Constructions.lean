@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Constructions
 public import FLT.Mathlib.Algebra.Algebra.Pi
+import Hammer
 
 /-!
 # Constructions

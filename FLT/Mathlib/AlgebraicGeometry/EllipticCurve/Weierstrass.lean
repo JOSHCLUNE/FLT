@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Claude
 module
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
+import Hammer
 
 /-!
 # Complements on Weierstrass curves

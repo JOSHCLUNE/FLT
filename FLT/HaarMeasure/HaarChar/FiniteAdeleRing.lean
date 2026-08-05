@@ -22,6 +22,7 @@ import FLT.Mathlib.Algebra.Central.TensorProduct
 import FLT.Mathlib.LinearAlgebra.Determinant
 import FLT.NumberField.HeightOneSpectrum
 public import FLT.AutomorphicForm.GroupTheoryStuff
+import Hammer
 
 /-!
 

@@ -11,6 +11,7 @@ public import Mathlib.RingTheory.Trace.Basic
 import Mathlib.LinearAlgebra.Charpoly.ToMatrix
 public import Mathlib.RingTheory.LocalRing.Quotient
 public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+import Hammer
 
 /-!
 # Norm and the residue field

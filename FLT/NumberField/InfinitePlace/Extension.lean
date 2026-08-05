@@ -6,6 +6,7 @@ Authors: Salvatore Mercuri
 module
 
 public import Mathlib.NumberTheory.NumberField.InfinitePlace.Ramification
+import Hammer
 
 /-!
 # Extensions of complex embeddings and infinite places of a number field

@@ -10,6 +10,7 @@ public import Mathlib.Algebra.Module.ZMod
 public import FLT.Slop.PGL2.FiniteSubgroups.CyclicPartition
 public import FLT.Slop.PGL2.FiniteSubgroups.NatClassEquation
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
+import Hammer
 
 /-!
 # Dickson's classification: the tame case

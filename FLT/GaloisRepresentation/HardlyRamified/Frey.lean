@@ -11,6 +11,7 @@ public import FLT.EllipticCurve.Torsion
 import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
 import Mathlib.Data.Nat.Factorial.DoubleFactorial
 import Mathlib.NumberTheory.ArithmeticFunction.Misc
+import Hammer
 
 /-!
 # The Frey curve gives a hardly ramified representation

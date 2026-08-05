@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import Mathlib.Order.Filter.Cofinite
+import Hammer
 
 /-!
 # Cofinite

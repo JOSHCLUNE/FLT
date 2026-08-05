@@ -8,6 +8,7 @@ module
 public import Mathlib.RepresentationTheory.Continuous.Basic
 public import FLT.Mathlib.Topology.Algebra.Module.CompactOpen
 public import FLT.Mathlib.Topology.Constructions
+import Hammer
 
 /-!
 # The internal hom of continuous representations

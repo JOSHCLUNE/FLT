@@ -8,6 +8,7 @@ module
 public import FLT.Mathlib.Topology.Algebra.ContinuousSMulDiscrete
 public import Mathlib.RingTheory.Frobenius
 import Mathlib.RingTheory.Invariant.Profinite
+import Hammer
 
 /-!
 # Frobenius elements

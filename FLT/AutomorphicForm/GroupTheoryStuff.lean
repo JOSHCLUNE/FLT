@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Group.Submonoid.Units
 public import Mathlib.GroupTheory.Torsion
 public import Mathlib.RingTheory.UniqueFactorizationDomain.Nat
+import Hammer
 
 /-! # Random assortments of results on group theory. -/
 

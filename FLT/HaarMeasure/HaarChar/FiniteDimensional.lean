@@ -14,6 +14,7 @@ import FLT.Mathlib.LinearAlgebra.Determinant
 import Mathlib.LinearAlgebra.FreeModule.PID
 import Mathlib.RingTheory.Henselian
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # Haar character scaling under linear automorphisms

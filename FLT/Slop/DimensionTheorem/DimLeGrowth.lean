@@ -8,6 +8,7 @@ module
 public import Mathlib.RingTheory.KrullDimension.Field
 public import Mathlib.RingTheory.KrullDimension.Regular
 public import FLT.Slop.DimensionTheorem.Defs
+import Hammer
 
 /-!
 # `dim R ≤ d(R)`

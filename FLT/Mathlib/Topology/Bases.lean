@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Bases
 import Mathlib.Topology.Homeomorph.Lemmas
+import Hammer
 
 /-!
 # Bases

@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Category.ModuleCat.Topology.Homology
 public import Mathlib.Algebra.Homology.ShortComplex.HomologicalComplex
 public import FLT.Mathlib.Algebra.Category.ModuleCat.Topology.Basic
+import Hammer
 
 /-!
 # Kernels, cokernels and homology of topological modules

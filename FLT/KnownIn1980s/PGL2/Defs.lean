@@ -13,6 +13,7 @@ public import Mathlib.GroupTheory.SpecificGroups.Dihedral
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Projective
 public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
+import Hammer
 
 /-!
 # Public statements for Dickson's classification in `PGL₂`

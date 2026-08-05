@@ -7,6 +7,7 @@ module
 
 public import FLT.KnownIn1980s.PGL2.Defs
 import FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification
+import Hammer
 
 /-!
 # Proofs for the public PGL2 classification statements

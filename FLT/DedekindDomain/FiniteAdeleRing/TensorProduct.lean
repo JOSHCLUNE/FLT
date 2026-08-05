@@ -10,6 +10,7 @@ public import FLT.Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 public import Mathlib.RingTheory.SimpleRing.Principal
 import FLT.Mathlib.LinearAlgebra.TensorProduct.Algebra
 import Mathlib.Logic.Equiv.PartialEquiv
+import Hammer
 
 /-!
 # Tensor product compatibilities for the finite adele ring

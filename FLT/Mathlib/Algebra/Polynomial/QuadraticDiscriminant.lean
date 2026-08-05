@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.QuadraticDiscriminant
 public import Mathlib.FieldTheory.Separable
 public import FLT.Mathlib.Algebra.Polynomial.Splits
+import Hammer
 
 /-!
 # Separability and splitting criteria for quadratic polynomials

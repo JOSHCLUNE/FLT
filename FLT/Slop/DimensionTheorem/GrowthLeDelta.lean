@@ -7,6 +7,7 @@ module
 
 public import Mathlib.LinearAlgebra.Quotient.Pi
 public import FLT.Slop.DimensionTheorem.Defs
+import Hammer
 
 /-!
 # `d(R) ≤ δ(R)`

@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Tactic.Cases
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
+import Hammer
 
 /-!
 # Sylow `p`-subgroup lemmas for finite subgroups of `PGL₂(𝔽̄_p)`

@@ -8,6 +8,7 @@ module
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
 public import Mathlib.Topology.Instances.ZMod
 public import FLT.Deformations.RepresentationTheory.GaloisRep
+import Hammer
 
 /-!
 

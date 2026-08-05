@@ -6,6 +6,7 @@ Authors: Kevin Buzzard, Salvatore Mercuri
 module
 
 public import Mathlib.RingTheory.DedekindDomain.AdicValuation
+import Hammer
 
 /-!
 # Adic Valuation

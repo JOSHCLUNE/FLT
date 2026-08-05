@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RingTheory.Idempotents
 public import Mathlib.RingTheory.Unramified.LocalRing
+import Hammer
 
 /-! # Helper lemmas for finite extensions of henselian local is henselian -/
 

@@ -6,6 +6,7 @@ Authors: David Ledvinka
 module
 
 public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
+import Hammer
 
 /-!
 # Finite

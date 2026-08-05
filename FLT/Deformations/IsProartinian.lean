@@ -10,6 +10,7 @@ import FLT.Deformations.Lemmas
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.RingTheory.Artinian.Ring
 import Mathlib.Topology.Connected.Separation
+import Hammer
 
 /-!
 # Proartinian topological rings

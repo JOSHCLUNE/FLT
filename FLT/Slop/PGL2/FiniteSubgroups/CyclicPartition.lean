@@ -12,6 +12,7 @@ public import Mathlib.Tactic.Cases
 public import Mathlib.Tactic.NormNum.NatFactorial
 public import Mathlib.Tactic.NormNum.Prime
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
+import Hammer
 
 /-!
 # Recognition theorems for groups with a partition into cyclic subgroups

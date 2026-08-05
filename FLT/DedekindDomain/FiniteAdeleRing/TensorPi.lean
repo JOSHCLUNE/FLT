@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Module.FinitePresentation
 public import Mathlib.LinearAlgebra.TensorProduct.Pi
 import Mathlib.Algebra.FiveLemma
+import Hammer
 /-!
 
 # Tensor product commutes with direct product when tensoring with a finite free module

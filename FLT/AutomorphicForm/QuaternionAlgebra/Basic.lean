@@ -14,6 +14,7 @@ public import FLT.Mathlib.GroupTheory.DoubleCoset
 public import Mathlib.GroupTheory.DoubleCoset
 public import Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex
 public import Mathlib.LinearAlgebra.TensorProduct.Pi
+import Hammer
 
 /-!
 

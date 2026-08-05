@@ -8,6 +8,7 @@ module
 public import Mathlib.LinearAlgebra.Dimension.FreeAndStrongRankCondition
 public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 public import Mathlib.LinearAlgebra.LinearIndependent.Lemmas
+import Hammer
 
 /-!
 # Elements of a quadratic field extension

@@ -10,6 +10,7 @@ public import Mathlib.Algebra.Ring.Subring.Basic
 public import Mathlib.Topology.Algebra.RestrictedProduct.Basic
 public import Mathlib.Algebra.Module.Submodule.Defs
 public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+import Hammer
 
 /-!
 # Basic

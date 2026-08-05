@@ -9,6 +9,7 @@ public import Mathlib.Topology.Algebra.MulAction
 public import Mathlib.Algebra.Module.Submodule.Defs
 public import Mathlib.Algebra.Module.Pi
 import Mathlib.Topology.Algebra.Module.ContinuousLinearMap.Restrict
+import Hammer
 
 /-!
 # Topological modules

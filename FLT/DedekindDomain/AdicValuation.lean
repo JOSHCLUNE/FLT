@@ -15,6 +15,7 @@ public import FLT.Mathlib.RingTheory.Valuation.ValuationSubring
 public import Mathlib.Algebra.Group.Int.TypeTags
 public import Mathlib.RingTheory.Valuation.Discrete.RankOne
 public import FLT.Mathlib.RingTheory.DedekindDomain.AdicValuation
+import Hammer
 
 /-!
 

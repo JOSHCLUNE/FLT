@@ -6,6 +6,7 @@ Authors: Michael Stoll, Claude
 module
 
 public import Mathlib.RingTheory.AdjoinRoot
+import Hammer
 
 /-!
 # Complements on `AdjoinRoot`

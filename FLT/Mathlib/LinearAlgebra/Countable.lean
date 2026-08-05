@@ -8,6 +8,7 @@ module
 public import Mathlib.NumberTheory.NumberField.Basic
 import Mathlib.Data.Rat.Encodable
 import Mathlib.LinearAlgebra.Countable
+import Hammer
 
 /-!
 # Countable

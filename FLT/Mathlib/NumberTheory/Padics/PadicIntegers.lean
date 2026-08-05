@@ -8,6 +8,7 @@ module
 public import Mathlib.NumberTheory.Padics.PadicIntegers
 import Mathlib.Algebra.CharZero.Infinite
 import Mathlib.NumberTheory.Padics.RingHoms
+import Hammer
 
 /-!
 # TODO

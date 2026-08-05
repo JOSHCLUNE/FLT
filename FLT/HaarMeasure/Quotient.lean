@@ -7,6 +7,7 @@ module
 
 public import FLT.Mathlib.MeasureTheory.Group.ModularCharacter
 public import FLT.Mathlib.Topology.Polish
+import Hammer
 
 /-!
 

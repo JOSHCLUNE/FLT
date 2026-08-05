@@ -17,6 +17,7 @@ import FLT.Patching.Utils.Lemmas
 import Mathlib.Topology.Algebra.Algebra
 import Mathlib.Topology.Algebra.Ring.Compact
 import Mathlib.Topology.Connected.Separation
+import Hammer
 
 /-!
 # Local rings with the adic topology

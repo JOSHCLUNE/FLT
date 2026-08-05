@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.Algebra.Equiv
 public import FLT.Mathlib.Algebra.Algebra.Tower
+import Hammer
 
 /-!
 # Topological (sub)algebras

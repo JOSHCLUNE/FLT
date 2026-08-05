@@ -9,6 +9,7 @@ public import FLT.Deformations.Categories
 public import FLT.Deformations.Subfunctor
 public import FLT.Deformations.RepresentationTheory.GaloisRep
 public import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
+import Hammer
 
 /-!
 # The functor of continuous representations

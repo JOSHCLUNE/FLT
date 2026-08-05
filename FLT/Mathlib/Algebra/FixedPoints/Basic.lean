@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Module.Defs
 public import Mathlib.Algebra.Ring.Action.Basic
 import Mathlib.Analysis.Normed.Ring.Lemmas
+import Hammer
 
 /-!
 # Fixed points of actions

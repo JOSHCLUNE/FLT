@@ -9,6 +9,7 @@ public import Mathlib.LinearAlgebra.TensorProduct.Pi
 public import Mathlib.LinearAlgebra.Dimension.Free
 import FLT.Mathlib.RingTheory.TensorProduct.Pi
 import Mathlib.LinearAlgebra.Dimension.Constructions
+import Hammer
 
 /-!
 # Constructions

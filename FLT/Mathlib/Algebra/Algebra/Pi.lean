@@ -8,6 +8,7 @@ module
 public import FLT.Mathlib.Algebra.Algebra.Hom
 public import Mathlib.Algebra.Algebra.Pi
 public import Mathlib.Algebra.BigOperators.Pi
+import Hammer
 
 /-!
 # Pi

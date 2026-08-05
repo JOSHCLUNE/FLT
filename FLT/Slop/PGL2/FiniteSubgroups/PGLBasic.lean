@@ -15,6 +15,7 @@ public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Basic
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
 public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
 public import Mathlib.LinearAlgebra.Projectivization.Action
+import Hammer
 
 /-!
 # Basic theory of `PGL₂` over the algebraic closure of `𝔽_p`

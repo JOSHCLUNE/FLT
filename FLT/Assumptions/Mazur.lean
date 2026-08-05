@@ -7,6 +7,7 @@ module
 
 public import Mathlib.GroupTheory.Torsion
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+import Hammer
 
 /-!
 

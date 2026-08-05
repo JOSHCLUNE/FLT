@@ -12,6 +12,7 @@ public import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 import FLT.Patching.Utils.InverseLimit
 import Mathlib.Topology.Algebra.Nonarchimedean.TotallyDisconnected
 import Mathlib.Topology.Algebra.Ring.Compact
+import Hammer
 
 /-!
 # The patching module over a coefficient ring

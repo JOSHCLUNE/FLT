@@ -8,6 +8,7 @@ module
 public import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
 public import FLT.Data.QHat
 import Mathlib.NumberTheory.Cyclotomic.Basic
+import Hammer
 
 /-!
 # The cyclotomic character

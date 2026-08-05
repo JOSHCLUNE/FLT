@@ -7,6 +7,7 @@ module
 
 public import FLT.Mathlib.LinearAlgebra.TensorProduct.FiniteFree
 public import Mathlib.Topology.Algebra.Module.ModuleTopology
+import Hammer
 
 /-!
 # Tensor Product

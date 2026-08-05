@@ -18,6 +18,7 @@ import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Data.Nat.Totient
 import Mathlib.Logic.Equiv.PartialEquiv
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # Topological Space

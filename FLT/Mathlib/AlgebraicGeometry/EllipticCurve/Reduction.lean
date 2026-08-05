@@ -11,6 +11,7 @@ public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
 public import FLT.Mathlib.RingTheory.Valuation.Discrete.IsDiscreteValuationRing
 
 import Mathlib.Tactic.ComputeDegree
+import Hammer
 
 /-!
 # Complements on reduction of elliptic curves

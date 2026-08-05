@@ -7,6 +7,7 @@ module
 
 public import Mathlib.RepresentationTheory.Irreducible
 public import FLT.Mathlib.RepresentationTheory.Basic
+import Hammer
 
 /-!
 # Absolutely irreducible representations

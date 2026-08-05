@@ -10,6 +10,7 @@ public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
 public import Mathlib.RingTheory.Localization.FractionRing
 public import FLT.Mathlib.FieldTheory.Separable
 public import FLT.Mathlib.RingTheory.Polynomial.GaussLemma
+import Hammer
 
 /-!
 # Separability transfer over a discrete valuation ring

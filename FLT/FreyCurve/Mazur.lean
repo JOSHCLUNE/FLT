@@ -12,6 +12,7 @@ import Mathlib.Analysis.SpecialFunctions.Gamma.Basic
 import Mathlib.Data.Nat.Factorial.DoubleFactorial
 import Mathlib.NumberTheory.ArithmeticFunction.Misc
 import FLT.Assumptions.KnownIn1980s
+import Hammer
 /-!
 
 # Irreducibility of the p-torsion of the Frey curve

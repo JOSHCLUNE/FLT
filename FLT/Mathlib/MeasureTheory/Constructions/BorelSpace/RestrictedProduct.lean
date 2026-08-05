@@ -7,6 +7,7 @@ module
 
 public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
 public import Mathlib.Topology.Algebra.RestrictedProduct.TopologicalSpace
+import Hammer
 
 /-!
 # Restricted Product

@@ -9,6 +9,7 @@ public import FLT.AutomorphicForm.GroupTheoryStuff
 public import FLT.Mathlib.Topology.Algebra.Group.Quotient
 public import Mathlib.Data.Set.Card.Arithmetic
 public import Mathlib.GroupTheory.DoubleCoset
+import Hammer
 
 /-!
 # Double Coset

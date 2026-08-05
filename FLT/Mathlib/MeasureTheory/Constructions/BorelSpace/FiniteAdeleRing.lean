@@ -7,6 +7,7 @@ module
 
 public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
 public import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
+import Hammer
 
 /-!
 # Finite Adele Ring

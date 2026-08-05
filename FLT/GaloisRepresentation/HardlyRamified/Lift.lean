@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import FLT.GaloisRepresentation.HardlyRamified.Defs
+import Hammer
 
 /-!
 # Lifting hardly ramified residual representations

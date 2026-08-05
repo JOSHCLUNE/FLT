@@ -13,6 +13,7 @@ public import Mathlib.GroupTheory.Coset.Defs
 public import Mathlib.NumberTheory.Cyclotomic.Basic
 import Mathlib.Algebra.BigOperators.GroupWithZero.Action
 import Mathlib.GroupTheory.GroupAction.Quotient
+import Hammer
 
 /-!
 # Abstract Hecke operators

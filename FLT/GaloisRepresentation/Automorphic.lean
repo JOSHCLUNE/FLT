@@ -11,6 +11,7 @@ public import FLT.Deformations.RepresentationTheory.GaloisRep
 public import Mathlib.NumberTheory.Cyclotomic.CyclotomicCharacter
 public import Mathlib.NumberTheory.Padics.Complex
 public import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # Automorphic Galois representations

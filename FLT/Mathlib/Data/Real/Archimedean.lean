@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import Mathlib.Algebra.Order.Archimedean.Real.Basic
+import Hammer
 /-!
 # Archimedean
 

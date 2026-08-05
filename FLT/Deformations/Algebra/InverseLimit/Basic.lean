@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Algebra.Module.LinearMap.Defs
 import Mathlib.Algebra.GroupWithZero.Units.Lemmas
+import Hammer
 
 /-!
 # Inverse limit of algebraic structures

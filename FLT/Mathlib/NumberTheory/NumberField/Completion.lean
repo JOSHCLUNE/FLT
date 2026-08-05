@@ -8,6 +8,7 @@ module
 import Mathlib.Combinatorics.Matroid.Init
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # TODO

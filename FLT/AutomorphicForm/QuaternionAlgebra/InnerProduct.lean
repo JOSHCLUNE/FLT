@@ -9,6 +9,7 @@ public import FLT.AutomorphicForm.QuaternionAlgebra.HeckeOperators.Concrete
 public import FLT.Mathlib.MeasureTheory.Group.ModularCharacter
 public import FLT.HaarMeasure.FiniteAdeleRing
 public import Mathlib
+import Hammer
 
 /-! # The Petersson inner product on quaternion modular forms. -/
 

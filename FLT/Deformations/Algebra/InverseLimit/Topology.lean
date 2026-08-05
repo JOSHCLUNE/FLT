@@ -8,6 +8,7 @@ module
 public import FLT.Deformations.ContinuousRepresentation.IsTopologicalModule
 public import FLT.Deformations.Algebra.InverseLimit.Basic
 public import Mathlib.Topology.Algebra.Ring.Basic
+import Hammer
 
 /-!
 # Topology on inverse limits

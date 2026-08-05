@@ -7,6 +7,7 @@ module
 
 public import FLT.Slop.PGL2.FiniteSubgroups.TameClassification
 public import FLT.Slop.PGL2.FiniteSubgroups.WildClassification
+import Hammer
 
 /-!
 # Dickson's classification of the finite subgroups of `PGL₂(𝔽̄_p)`

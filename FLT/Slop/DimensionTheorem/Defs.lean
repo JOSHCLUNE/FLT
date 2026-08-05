@@ -8,6 +8,7 @@ module
 public import Mathlib.RingTheory.Ideal.KrullsHeightTheorem
 public import Mathlib.RingTheory.Length
 public import FLT.Slop.DimensionTheorem.Numeric
+import Hammer
 
 /-!
 # The Hilbert–Samuel function, `d(R)`, and `δ(R)`

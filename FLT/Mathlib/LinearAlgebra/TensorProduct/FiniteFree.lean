@@ -7,6 +7,7 @@ module
 
 public import Mathlib.LinearAlgebra.TensorProduct.Pi
 public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+import Hammer
 
 /-!
 # Finite Free

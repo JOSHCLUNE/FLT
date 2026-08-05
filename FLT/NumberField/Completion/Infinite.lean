@@ -20,6 +20,7 @@ import Mathlib.NumberTheory.NumberField.Completion.Ramification
 import Mathlib.NumberTheory.NumberField.InfiniteAdeleRing
 import Mathlib.RingTheory.PicardGroup
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 # The completion of a number field at an infinite place

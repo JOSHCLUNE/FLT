@@ -6,6 +6,7 @@ Authors: Michael Stoll, Claude
 module
 
 public import Mathlib.Algebra.Algebra.Equiv
+import Hammer
 
 /-!
 # Algebra isomorphisms and the image of the base ring

@@ -7,6 +7,7 @@ module
 
 public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.VariableChange
 public import FLT.Mathlib.GroupTheory.SpecificGroups.Cyclic
+import Hammer
 
 /-!
 

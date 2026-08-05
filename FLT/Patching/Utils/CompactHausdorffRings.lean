@@ -11,6 +11,7 @@ public import Mathlib.Data.Nat.Prime.Defs
 import Mathlib.Data.Nat.Factorization.Induction
 import Mathlib.Topology.Algebra.Group.SubmonoidClosure
 import Mathlib.Topology.Algebra.Ring.Ideal
+import Hammer
 
 /-!
 # Compact Hausdorff rings

@@ -11,6 +11,7 @@ public import FLT.Mathlib.RingTheory.DiscreteValuationRing.Separable
 
 import Mathlib.Algebra.Polynomial.Eval.Irreducible
 import Mathlib.RingTheory.Polynomial.GaussLemma
+import Hammer
 
 /-!
 # Unramified lifts of separable residue field extensions

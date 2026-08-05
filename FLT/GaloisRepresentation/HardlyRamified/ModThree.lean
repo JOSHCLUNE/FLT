@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import FLT.GaloisRepresentation.HardlyRamified.Defs
+import Hammer
 
 /-!
 # Mod-3 hardly ramified representations

@@ -10,6 +10,7 @@ public import FLT.Mathlib.Algebra.Category.ModuleCat.Topology.Basic
 public import FLT.Mathlib.Algebra.Category.ModuleCat.Topology.Homology
 public import FLT.Mathlib.Algebra.Homology.HomologicalComplex
 public import FLT.Mathlib.RepresentationTheory.Continuous.TopRep
+import Hammer
 
 /-!
 # Complements on the coinduced resolutions computing continuous group cohomology

@@ -14,6 +14,7 @@ public import Mathlib.Topology.Algebra.Algebra.Equiv
 public import Mathlib.Topology.Algebra.LinearTopology
 public import Mathlib.Topology.Algebra.Module.ModuleTopology
 public import Mathlib.Topology.Instances.Matrix
+import Hammer
 
 /-!
 # Miscellaneous lemmas for the Deformations folder

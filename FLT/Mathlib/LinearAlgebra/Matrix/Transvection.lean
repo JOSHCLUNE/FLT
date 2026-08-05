@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import Mathlib.LinearAlgebra.Matrix.Transvection
+import Hammer
 /-!
 
 Variant of `Matrix.diagonal_transvection_induction_of_det_ne_zero`

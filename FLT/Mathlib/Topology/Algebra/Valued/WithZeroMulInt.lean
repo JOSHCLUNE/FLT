@@ -13,6 +13,7 @@ import Mathlib.RingTheory.Valuation.Discrete.RankOne
 import Mathlib.Topology.Algebra.Valued.WithZeroMulInt
 public import Mathlib.Topology.Algebra.Valued.ValuationTopology
 public import Mathlib.Topology.Algebra.Valued.ValuedField
+import Hammer
 
 /-! # Topological results for integer-valued rings
 

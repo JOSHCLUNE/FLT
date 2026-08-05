@@ -17,6 +17,7 @@ public import FLT.Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 import Mathlib.Algebra.Order.Algebra
 import Mathlib.RingTheory.Flat.TorsionFree
 import Mathlib.RingTheory.SimpleRing.Principal
+import Hammer
 
 /-!
 

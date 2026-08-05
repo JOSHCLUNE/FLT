@@ -6,6 +6,7 @@ Authors: Akhil Mathew
 module
 
 public import FLT.Slop.DimensionTheorem.Defs
+import Hammer
 
 /-!
 # `dim R = δ(R)`

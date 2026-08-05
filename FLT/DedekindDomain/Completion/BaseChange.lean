@@ -21,6 +21,7 @@ public import Mathlib.RingTheory.PicardGroup
 public import Mathlib.RingTheory.SimpleRing.Principal
 public import Mathlib.Topology.Algebra.Module.FiniteDimension
 public import FLT.Mathlib.RingTheory.DedekindDomain.AdicValuation
+import Hammer
 
 /-!
 

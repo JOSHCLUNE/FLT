@@ -10,6 +10,7 @@ public import Mathlib.Algebra.Central.Defs
 public import FLT.DivisionAlgebra.Finiteness
 import Mathlib.RingTheory.PicardGroup
 import FLT.Mathlib.GroupTheory.DoubleCoset
+import Hammer
 
 /-!
 # Finite-dimensionality of spaces of weight-2 automorphic forms

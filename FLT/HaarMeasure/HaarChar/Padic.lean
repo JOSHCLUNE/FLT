@@ -11,6 +11,7 @@ import FLT.Mathlib.MeasureTheory.Group.Action
 import FLT.Mathlib.NumberTheory.Padics.PadicIntegers
 import Mathlib.CategoryTheory.Category.Init
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # The distributive Haar characters of the p-adics

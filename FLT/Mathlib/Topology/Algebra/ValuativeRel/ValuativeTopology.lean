@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.LinearTopology
 public import Mathlib.Topology.Algebra.ValuativeRel.ValuativeTopology
+import Hammer
 
 /-!
 # Valuative topologies

@@ -7,6 +7,7 @@ module
 
 public import Mathlib.CategoryTheory.Limits.Shapes.IsTerminal
 public import Mathlib.CategoryTheory.Subfunctor.Basic
+import Hammer
 
 /-!
 # Subfunctors

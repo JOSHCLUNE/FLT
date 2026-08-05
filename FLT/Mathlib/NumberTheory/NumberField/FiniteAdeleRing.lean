@@ -13,6 +13,7 @@ import FLT.Mathlib.RingTheory.DedekindDomain.AdicValuation
 import FLT.NumberField.Completion.Finite
 import FLT.NumberField.HeightOneSpectrum
 import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
+import Hammer
 
 /-!
 # Finite Adele Ring

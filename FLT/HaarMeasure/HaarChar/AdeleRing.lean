@@ -24,6 +24,7 @@ import FLT.Mathlib.Topology.MetricSpace.ProperSpace.InfinitePlace
 import FLT.NumberField.HeightOneSpectrum
 import Mathlib.LinearAlgebra.Charpoly.BaseChange
 import Mathlib.NumberTheory.NumberField.ProductFormula
+import Hammer
 
 /-!
 

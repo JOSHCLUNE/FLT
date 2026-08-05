@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 module
 
 public import Mathlib.Analysis.Quaternion
+import Hammer
 
 /-!
 # Hurwitz integers

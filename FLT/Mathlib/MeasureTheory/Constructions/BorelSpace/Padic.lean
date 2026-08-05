@@ -7,6 +7,7 @@ module
 
 public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
 public import Mathlib.NumberTheory.Padics.PadicNumbers
+import Hammer
 
 /-!
 # Padic

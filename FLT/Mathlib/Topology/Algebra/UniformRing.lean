@@ -7,6 +7,7 @@ module
 
 public import Mathlib.Topology.Algebra.UniformRing
 public import FLT.Mathlib.Algebra.Algebra.Hom
+import Hammer
 
 /-!
 # Completion of topological rings

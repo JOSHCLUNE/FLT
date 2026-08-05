@@ -6,6 +6,7 @@ Authors: Andrew Yang
 module
 
 public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+import Hammer
 
 /-! # Bound of degree of splitting field -/
 

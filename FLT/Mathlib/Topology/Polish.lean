@@ -9,6 +9,7 @@ public import Mathlib.Topology.MetricSpace.Polish
 import Mathlib.Topology.Compactness.Paracompact
 import Mathlib.Topology.MetricSpace.Completion
 import Mathlib.Topology.Metrizable.Urysohn
+import Hammer
 
 /-!
 # Polish

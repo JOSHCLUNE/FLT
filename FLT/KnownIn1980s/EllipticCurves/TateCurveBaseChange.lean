@@ -9,6 +9,7 @@ public import FLT.KnownIn1980s.EllipticCurves.TateParameter
 
 import FLT.Slop.NumberTheory.TsumDivisorsAntidiagonal
 import Mathlib.Topology.Algebra.InfiniteSum.Nonarchimedean
+import Hammer
 
 /-!
 

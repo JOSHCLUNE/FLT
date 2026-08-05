@@ -8,6 +8,7 @@ module
 public import FLT.Slop.DimensionTheorem.DimEqDelta
 public import FLT.Slop.DimensionTheorem.DimLeGrowth
 public import FLT.Slop.DimensionTheorem.GrowthLeDelta
+import Hammer
 
 /-!
 # The dimension theorem for Noetherian local rings

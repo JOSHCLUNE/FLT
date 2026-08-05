@@ -9,6 +9,7 @@ public import Mathlib.Algebra.Module.Submodule.Defs
 public import Mathlib.Algebra.Ring.Subring.Defs
 public import Mathlib.Algebra.Ring.Subsemiring.Basic
 import Mathlib.Algebra.Ring.Subring.Basic
+import Hammer
 
 /-!
 # Basic

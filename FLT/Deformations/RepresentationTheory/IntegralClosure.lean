@@ -10,6 +10,7 @@ public import FLT.Mathlib.Topology.Algebra.ContinuousSMulDiscrete
 public import Mathlib.RingTheory.Invariant.Defs
 
 import Mathlib.Algebra.GCDMonoid.IntegrallyClosed
+import Hammer
 
 /-!
 # The integral closure as a type

@@ -8,6 +8,7 @@ module
 public import Mathlib.RingTheory.Norm.Transitivity
 public import Mathlib.RingTheory.Trace.Basic
 public import FLT.Mathlib.FieldTheory.Galois.Basic
+import Hammer
 
 /-!
 # Trace and norm in a separable quadratic extension

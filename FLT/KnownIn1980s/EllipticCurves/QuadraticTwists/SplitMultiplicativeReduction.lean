@@ -15,6 +15,7 @@ import Mathlib.LinearAlgebra.Charpoly.ToMatrix
 import Mathlib.RingTheory.Flat.TorsionFree
 import Mathlib.RingTheory.LocalRing.Quotient
 import Mathlib.RingTheory.Localization.NormTrace
+import Hammer
 
 /-!
 # Multiplicative reduction becomes split after a quadratic twist

@@ -10,6 +10,7 @@ public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.TopologicalSpace
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.Algebra
 public import Mathlib.Algebra.Lie.OfAssociative
 public import Mathlib.Topology.Algebra.Algebra
+import Hammer
 
 /-!
 # Finite Adele Ring

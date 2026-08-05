@@ -10,6 +10,7 @@ public import Mathlib.NumberTheory.NumberField.InfinitePlace.Basic
 
 import Mathlib.RingTheory.SimpleModule.WedderburnArtin
 import Mathlib.LinearAlgebra.Matrix.Unique
+import Hammer
 
 /-!
 # Is Quaternion Algebra

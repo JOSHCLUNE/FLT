@@ -9,6 +9,7 @@ public import FLT.HenselianLocalRing.EtaleDecomposition
 public import FLT.HenselianLocalRing.Stuff
 public import Mathlib.RingTheory.Henselian
 public import Mathlib.RingTheory.Unramified.LocalStructure
+import Hammer
 
 /-! # Finite extensions of henselian local rings are products of henselian local rings -/
 

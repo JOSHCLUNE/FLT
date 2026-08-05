@@ -8,6 +8,7 @@ module
 public import Mathlib.MeasureTheory.Group.Measure
 import FLT.Mathlib.MeasureTheory.Group.Action
 import FLT.Mathlib.MeasureTheory.Measure.Typeclasses.Finite
+import Hammer
 
 /-!
 # Measure

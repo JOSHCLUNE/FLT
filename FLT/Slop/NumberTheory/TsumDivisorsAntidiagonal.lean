@@ -7,6 +7,7 @@ module
 
 public import Mathlib.NumberTheory.TsumDivisorsAntidiagonal
 public import Mathlib.Topology.Algebra.TopologicallyNilpotent
+import Hammer
 
 /-!
 # The Lambert series rearrangement, hypothesis-driven

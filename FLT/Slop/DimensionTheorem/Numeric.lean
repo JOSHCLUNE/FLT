@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Order.BigOperators.Group.Finset
 public import Mathlib.Data.Sym.Card
 public import Mathlib.Tactic.Ring.RingNF
+import Hammer
 
 /-!
 # Numerical growth lemmas for the dimension theorem

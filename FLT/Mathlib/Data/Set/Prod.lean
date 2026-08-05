@@ -6,6 +6,7 @@ Authors: Matthew Jasper, Kevin Buzzard
 module
 
 public import Mathlib.Data.Set.Operations
+import Hammer
 
 /-!
 # Prod

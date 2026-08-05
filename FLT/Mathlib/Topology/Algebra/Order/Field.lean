@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.EuclideanDomain.Field
 public import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import FLT.Mathlib.Algebra.Order.AbsoluteValue.Basic
+import Hammer
 
 /-!
 # Field

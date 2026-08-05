@@ -7,6 +7,7 @@ module
 
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
 public import FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers
+import Hammer
 
 /-!
 # Reconstructing a finite field from a wild subgroup of `PGL₂(𝔽̄_p)`

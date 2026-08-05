@@ -12,6 +12,7 @@ public import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
 import Mathlib.LinearAlgebra.Determinant
 import Mathlib.Logic.Equiv.PartialEquiv
 import Mathlib.Tactic.Positivity.Finset
+import Hammer
 
 /-!
 # Equiv

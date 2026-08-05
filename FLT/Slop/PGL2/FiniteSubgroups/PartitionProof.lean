@@ -9,6 +9,7 @@ public import Mathlib.Combinatorics.Enumerative.DoubleCounting
 public import FLT.Slop.PGL2.FiniteSubgroups.PGLBasic
 public import FLT.Slop.PGL2.FiniteSubgroups.PartitionHelpers
 public import FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5
+import Hammer
 
 /-!
 # The partition equation for wild finite subgroups of `PGL₂(𝔽̄_p)`

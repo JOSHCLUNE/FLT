@@ -7,6 +7,7 @@ module
 
 public import FLT.Patching.Ultraproduct
 import Mathlib.Tactic.ContinuousFunctionalCalculus
+import Hammer
 
 /-!
 # Vanishing filters of ideals in product rings
