@@ -49,6 +49,8 @@ for file in "FLT/Basic/Lemmas.lean"; do
   summary_file="$SUMMARY_DIR/$name.txt"
   error_file="$ERROR_DIR/$name.txt"
 
+  echo "About to process $rel"
+
   start_time=$SECONDS
   lake exe tryAtEachStep "hammer" "$rel" \
     --outfile "$json_file" \
