@@ -34,8 +34,7 @@ FAILED=0
 
 echo "Running tryAtEachStep \"hammer\" on $TOTAL Lean files."
 
-# for file in "${FILES[@]}"; do
-for file in "FLT/Basic/Lemmas.lean"; do
+for file in "${FILES[@]}"; do
   COUNT=$((COUNT + 1))
 
   # Path relative to the repo root, e.g. FLT/Mathlib/Algebra/Order/Hom/Monoid.lean
