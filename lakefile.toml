@@ -20,13 +20,15 @@ git = "https://github.com/PatrickMassot/checkdecls.git"
 
 [[require]]
 name = "Hammer"
-git = "https://github.com/JOSHCLUNE/LeanHammer.git"
-rev = "c92b4f0093470f1293fb97db73348a1718cfded9"
+path = "../LeanHammer"
+# git = "https://github.com/JOSHCLUNE/LeanHammer.git"
+# rev = "c92b4f0093470f1293fb97db73348a1718cfded9"
 
 [[require]]
 name = "tryAtEachStep"
-git = "https://github.com/JOSHCLUNE/tryAtEachStep.git"
-rev = "main"
+path = "../tryAtEachStep"
+# git = "https://github.com/JOSHCLUNE/tryAtEachStep.git"
+# rev = "main"
 
 [[require]]
 name = "mathlib"
