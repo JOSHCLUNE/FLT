@@ -1,0 +1,161 @@
+..........
+line 87, col 54:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 90, col 6:
+rw [hP_deg, Polynomial.natDegree_zero]
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+  [apply] grind => instantiate only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+shortened proof!
+.....
+line 95, col 63:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq, P]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 96, col 21:
+ring
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, zero_mul, mul_neg, mul_one, neg_neg, zero_add, P]
+....
+line 100, col 4:
+rw [Multiset.mem_toFinset, Polynomial.mem_roots hP_ne_zero]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq, Multiset.mem_toFinset, Polynomial.mem_roots', not_false_eq_true,
+      Polynomial.IsRoot.def, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_X, true_and, P]
+    apply Iff.intro
+    · intro a
+      simp_all only [sub_self]
+    · intro a
+      grind only
+shortened proof!
+.....
+line 116, col 6:
+exact hV_zero
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq]
+....
+line 127, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.
+line 132, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+.....__........
+line 161, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 162, col 50:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 163, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 164, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [zero_mul, mul_one, zero_add]
+.....
+line 179, col 4:
+exact ne_of_gt (lt_trans (by norm_num : 1 < 2) Fact.out) h_order.symm
+* Try this:
+
+  [apply]     subst h_order hx
+    simp_all only [gt_iff_lt, Nat.not_ofNat_lt_one]
+    apply Fact.out
+.......
+line 194, col 6:
+exact hP (g • P)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt]
+....
+line 198, col 4:
+exact h_dvd
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Sylow.coe_coe]
+....
+line 203, col 64:
+rw [two_mul]
+* Try this:
+  [apply] grind only
+shortened proof!
+...............
+line 241, col 4:
+exact ⟨b, show translationPGL p b ∈ H from hb ▸ hg, hb.symm⟩
+* Try this:
+
+  [apply]     subst hb
+    simp_all only [gt_iff_lt, SetLike.mem_coe, Set.mem_image]
+    apply Exists.intro
+    · apply And.intro
+      · exact hg
+      · rfl
+....
+line 245, col 8:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.......
+line 253, col 6:
+exact eq_of_sub_eq_zero (Eq.trans
+        (Eq.trans
+          (show a - b = ((1 : K p) * (1 : K p) + (a - b) * (1 : K p)) - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p)) by ring)
+          (congrArg (fun x ↦ x - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p))) h_00))
+        (sub_self _))
+* Try this:
+  [apply] grind only
+.
+line 258, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    rfl
+.......................
+line 322, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+...WARNING: FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean produced errors (exit code 143)

@@ -1,0 +1,45 @@
+....._....
+line 37, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_smul, inv_smul_smul]
+    rfl
+shortened proof!
+...
+line 40, col 35:
+obtain ⟨_, x, rfl⟩ := x
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := x
+    simp_all only
+    simp_all only [Set.mem_range]
+    obtain ⟨w, h⟩ := property
+    subst h
+    duper [*, orbit, orbitRel_apply, mem_orbit] {preprocessing := full}
+shortened proof!
+..
+line 42, col 4:
+congr 2
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.X.X.X..X.X.
+line 61, col 8:
+symm
+* Try this:
+
+  [apply]   duper [*, orbitRel_apply, mem_orbit_self, orbit_smul] {preprocessing := full}
+shortened proof!
+.
+line 62, col 8:
+rw [show fa • ia = fb • ib from e]
+* Try this:
+
+  [apply]     subst ha hb
+    simp_all only [ofQuotientStabilizer_mk, f, Y]
+    duper [*, homEquivProdFixedPoints._simp_2, mem_orbit, orbitRel_apply] {preprocessing := full}
+shortened proof!
+...

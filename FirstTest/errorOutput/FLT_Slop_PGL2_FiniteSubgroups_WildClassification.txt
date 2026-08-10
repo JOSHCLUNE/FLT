@@ -1,0 +1,586 @@
+........
+line 84, col 6:
+rw [nsmul_eq_mul, nsmul_eq_mul, Nat.cast_add, Nat.cast_one]
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 88, col 49:
+rw [nsmul_eq_mul, CharP.cast_eq_zero (K p) p, zero_mul]
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.mem_ker, nsmul_eq_mul, CharP.cast_eq_zero, zero_mul]
+.........
+line 110, col 8:
+dsimp [n] at h_dvd_one
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, Nat.dvd_one, orderOf_eq_one_iff, orderOf_one, f, n]
+shortened proof!
+..
+line 115, col 32:
+rw [map_mul, map_inv, hxy, mul_inv_cancel]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, map_mul, map_inv, mul_inv_cancel, f]
+.......
+line 147, col 6:
+obtain ⟨x, hx, rfl⟩ := Subgroup.mem_map.mp hy
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, Subtype.mk.injEq, Subtype.exists, exists_prop, exists_and_right, exists_eq_right, H]
+    simp_all only [Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right, H]
+shortened proof!
+.............................
+line 175, col 6:
+have pf := congrArg Subtype.val heq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right,
+      Subgroup.mk_eq_one, OneMemClass.coe_eq_one, H, g']
+shortened proof!
+..........................
+line 213, col 4:
+exact hc ▸ heq
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, Nat.card_eq_fintype_card, MulEquiv.toMonoidHom_eq_coe, Subgroup.mem_map,
+      MonoidHom.coe_coe, MulAut.conj_apply, H']
+.....
+line 225, col 4:
+rw [P.card_eq_multiplicity] at h1
+* Try these:
+  [apply] grind only [!Sylow.card_eq_multiplicity]
+  [apply] grind => instantiate only [!Sylow.card_eq_multiplicity]
+shortened proof!
+......................
+line 280, col 4:
+change Nat.card (Fin m → ZMod p) = _
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Subtype.forall, SubmonoidClass.mk_pow, Subgroup.mk_eq_one,
+      Fintype.card_multiplicative, Fintype.card_pi, ZMod.card, Finset.prod_const, Finset.card_univ, Fintype.card_fin]
+shortened proof!
+.......
+line 290, col 6:
+exact Nat.card_congr ⟨fun x ↦ x.1, fun x ↦ ⟨x, trivial⟩, fun _ ↦ rfl, fun _ ↦ rfl⟩
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Subtype.forall, SubmonoidClass.mk_pow, Subgroup.mk_eq_one,
+      ge_iff_le, Sylow.coe_coe, Subgroup.mem_top, Fintype.card_subtype_true]
+....
+line 294, col 4:
+exact hdvd
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Subtype.forall, SubmonoidClass.mk_pow, Subgroup.mk_eq_one,
+      ge_iff_le, Sylow.coe_coe]
+..........__..
+line 311, col 53:
+linarith only [hpm_inv, hn_inv_pos]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_filter` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+....
+line 314, col 43:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, gt_iff_lt, one_div, inv_pos, Nat.cast_pos, nonpos_iff_eq_zero]
+...
+line 316, col 55:
+rw [← one_div, ← one_div]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 317, col 4:
+omega
+* Try this:
+
+  [apply]     subst this
+    simp_all only [ge_iff_le, one_div, IsEmpty.forall_iff, Std.le_refl, gt_iff_lt, lt_self_iff_false]
+....
+line 319, col 45:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 321, col 56:
+simp only [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, gt_iff_lt, one_div, inv_pos, Nat.cast_pos, ne_eq, Finset.sum_const, Finset.card_univ,
+      Fintype.card_fin, nsmul_eq_mul]
+    rfl
+shortened proof!
+..
+line 326, col 4:
+linarith only [h_lt, h_geq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+........
+line 331, col 4:
+linarith only [h_lhs_lt, h_eq, h_leq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+.....
+line 334, col 49:
+have : z 0 ≥ 2 := hz_pos 0
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, gt_iff_lt, one_div, inv_pos, Nat.cast_pos, Fin.forall_fin_one, Fin.isValue,
+      OfNat.ofNat_ne_one, or_true, Nat.cast_ofNat, Order.lt_one_iff, ne_eq, Nat.ofNat_pos, mul_lt_iff_lt_one_right,
+      sub_lt_self_iff]
+    smt +mono [*]
+shortened proof!
+....
+line 336, col 6:
+linarith only [hpm_inv, hn_inv_pos, h_eq, h_leq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+..
+line 337, col 19:
+norm_num
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 339, col 48:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......
+line 343, col 50:
+rw [← one_div, ← one_div]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 353, col 117:
+norm_num
+* Try this:
+  [apply] grind only
+.......
+line 359, col 4:
+rw [e, hn3, hn] at h_card_G
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+shortened proof!
+......
+line 366, col 84:
+rw [hn3]
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 371, col 8:
+exact h_eq_1
+* Try this:
+  [apply] grind only
+..
+line 372, col 112:
+rw [h3, h_card_val P]
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+..
+line 373, col 103:
+rw [h_card_val P, h_card_val Q]
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+.
+line 374, col 8:
+exact absurd (by cases P; cases Q; congr) hPQ
+* Try these:
+  [apply] grind only [Sylow.ext]
+  [apply] grind => instantiate only [Sylow.ext]
+..........
+line 384, col 4:
+rw [h_range, h_perm] at h_mul
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 388, col 50:
+rw [hn3, Fintype.card_fin]
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [Nat.card_eq_fintype_card, Sylow.coe_coe, bot_le, MonoidHom.mem_range, MulAction.toPermHom_apply,
+      Subtype.exists, Fintype.card_fin, ϕ]
+.......
+line 402, col 8:
+rintro ⟨y, hy, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [gt_iff_lt, ge_iff_le, Subgroup.mem_comap, H', φ]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    simp_all only
+shortened proof!
+...
+line 403, col 47:
+exact ⟨y, hx, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, Subgroup.mem_comap, H', φ]
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only
+.......
+line 409, col 81:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 410, col 6:
+have h_odd : ¬ Even p := fun h ↦ ne_of_gt hp_gt_two ((Nat.Prime.even_iff Fact.out).mp h)
+* Try these:
+  [apply] grind only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff, #ce99]
+  [apply] grind only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff]
+  [apply] grind =>
+    instantiate only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff]
+    instantiate only [= Nat.even_iff]
+    cases #ce99
+shortened proof!
+...
+line 413, col 79:
+omega
+* Try this:
+  [apply] grind only
+..
+line 415, col 71:
+omega
+* Try this:
+  [apply] grind only
+.
+line 415, col 115:
+norm_num
+* Try this:
+  [apply] grind only
+.....
+line 424, col 59:
+omega
+* Try this:
+  [apply] grind only
+.
+line 425, col 4:
+exact hpm
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, H', φ]
+..
+line 430, col 2:
+cases m
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply Nat.ge_of_not_lt
+    simp_all only [Order.lt_one_iff]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [pow_zero, Nat.not_ofNat_le_one]
+shortened proof!
+.................................
+line 491, col 77:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 492, col 4:
+exact h_eq ▸ h_idx P ▸ h_dvd P
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [Nat.card_eq_fintype_card, gt_iff_lt, forall_const]
+.....
+line 496, col 64:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 500, col 4:
+omega
+* Try this:
+  [apply] grind only
+.
+line 501, col 4:
+revert h_card_div
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.one_lt_ofNat, Nat.reduceDvd]
+shortened proof!
+.
+line 502, col 4:
+rfl
+* Try this:
+  [apply] grind only
+..
+line 512, col 4:
+exact recognition_PSL_iso p G m h5 hn
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, Nat.card_eq_fintype_card]
+    apply Dickson.recognition_PSL_iso
+    · simp_all only [ge_iff_le]
+    · simp_all only [Nat.card_eq_fintype_card]
+.....
+line 516, col 57:
+linarith only [m_ge_one_of_pow_ge_three p m hm]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, Nat.card_eq_fintype_card, not_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [pow_zero, Nat.not_ofNat_le_one]
+.
+line 516, col 119:
+linarith only [h5]
+* Try this:
+  [apply] grind only
+..
+line 518, col 8:
+rfl
+* Try this:
+  [apply] grind only
+.......
+line 523, col 72:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 523, col 97:
+linarith only [hc]
+* Try this:
+  [apply] grind only
+.
+line 524, col 6:
+change 9 ≤ 3 ^ m at h_pow
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 527, col 38:
+rw [hn]
+* Try this:
+  [apply] grind only
+shortened proof!
+.............
+line 559, col 4:
+intro i
+* Try this:
+  [apply] grind only
+shortened proof!
+........
+line 566, col 60:
+omega
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Fintype.card_ne_zero, not_false_eq_true, D, pm, np, n, z1]
+..
+line 567, col 60:
+omega
+* Try this:
+
+  [apply]     simp_all [D, pm, np, n, z1]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 568, col 60:
+omega
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Nat.cast_eq_zero, Fintype.card_ne_zero, not_false_eq_true, D,
+      pm, np, n, z1]
+...
+line 571, col 6:
+rw [h_n_nat, Nat.cast_mul, Nat.cast_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Nat.cast_eq_zero, Fintype.card_ne_zero, not_false_eq_true,
+      Nat.cast_mul, D, pm, np, n, z1]
+...
+line 573, col 31:
+omega
+* Try this:
+  [apply] grind only
+.
+line 574, col 6:
+change (((pm - 2) * np + 2 : ℕ) : ℚ) = _
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Nat.cast_eq_zero, Fintype.card_ne_zero, not_false_eq_true,
+      Nat.cast_mul, Nat.cast_add, Nat.cast_sub, Nat.cast_ofNat, D, pm, np, n, z1]
+shortened proof!
+...
+line 579, col 60:
+omega
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Nat.cast_eq_zero, Fintype.card_ne_zero, not_false_eq_true,
+      Nat.cast_mul, Nat.cast_add, Nat.cast_ofNat, add_left_inj, mul_eq_mul_right_iff, or_false, Nat.add_eq_zero_iff,
+      mul_eq_zero, OfNat.ofNat_ne_zero, and_false, D, pm, np, n, z1]
+................
+line 617, col 4:
+have h_eval : partitionTerm (if 1 = 1 then 1 else 2) 1 = 0 := by
+      rw [if_pos rfl, partitionTerm]
+      norm_num
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 625, col 44:
+linarith only [hn_gt, hpm]
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.
+line 625, col 76:
+linarith only [hn_gt]
+* Try this:
+  [apply] grind only
+...
+line 628, col 6:
+have h_pow := hpm_eq.trans (Sylow.card_eq_multiplicity P)
+* Try these:
+  [apply] grind only [!Sylow.dvd_card_of_dvd_card]
+  [apply] grind => instantiate only [!Sylow.dvd_card_of_dvd_card]
+shortened proof!
+....
+line 632, col 33:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 634, col 4:
+rfl
+* Try this:
+
+  [apply]     subst hpm_eq hn_eq
+    simp_all only [ge_iff_le, Std.le_refl, gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, isUnit_iff_eq_one,
+      IsUnit.dvd, mul_one, one_div, Nat.cast_one, ne_eq, one_ne_zero, not_false_eq_true, div_self, ↓reduceIte,
+      IsIdempotentElem.iff_eq_zero_or_one, or_true, IsIdempotentElem.mul_one_sub_self, add_zero, pow_one]
+.
+line 635, col 4:
+exact hn_eq.symm.trans h_branch2a.2.2
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 636, col 4:
+exact hG_p
+* Try this:
+  [apply] grind only
+.
+line 637, col 4:
+exact hn_p_gt1
+* Try this:
+  [apply] grind only
+....
+line 656, col 48:
+rw [hm, pow_zero] at h_pow
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Nat.one_lt_ofNat, pow_zero, ge_iff_le, Std.le_refl,
+      OfNat.ofNat_ne_one]
+shortened proof!
+........
+line 661, col 118:
+norm_num
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le, Nat.not_even_one,
+      not_false_eq_true]
+.........
+line 666, col 6:
+have hm_zero : m = 0 := by omega
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le, add_tsub_cancel_right,
+      dvd_mul_left, Nat.reduceLeDiff, Order.lt_two_iff, zero_le, le_mul_iff_one_le_left, not_le, Order.lt_one_iff,
+      zero_mul, zero_add, Nat.not_ofNat_le_one, tsub_self, Nat.zero_div, Nat.reduceAdd, false_and]
+shortened proof!
+...
+line 670, col 72:
+norm_num
+* Try this:
+  [apply] grind only
+......
+line 674, col 64:
+ring
+* Try this:
+  [apply] grind only
+..
+line 675, col 54:
+norm_num
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le, add_tsub_cancel_right,
+      dvd_mul_left, Order.lt_two_iff, zero_le]
+.
+line 676, col 6:
+ring
+* Try this:
+  [apply] grind only
+.
+line 677, col 6:
+exact hG_p
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le, add_tsub_cancel_right,
+      dvd_mul_left]
+.
+line 678, col 6:
+exact hn_p_gt1
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le, add_tsub_cancel_right,
+      dvd_mul_left, Order.lt_add_one_iff, zero_le]
+...
+line 680, col 75:
+linarith only [hm, hpm]
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le]
+.
+line 680, col 131:
+linarith only [hm, hpm]
+* Try this:
+
+  [apply]     subst hpm_eq
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, lt_add_iff_pos_left, ge_iff_le]
+..WARNING: FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean was killed (exit code 137), likely by the 8G MemoryMax cap

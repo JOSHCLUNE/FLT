@@ -1,0 +1,40 @@
+..
+line 27, col 60:
+decide
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Multiplicative.forall, ofAdd_eq_one, EmbeddingLike.apply_eq_iff_eq, one_ne_zero,
+      not_false_eq_true]
+.
+line 29, col 4:
+decide
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 32, col 21:
+rcases key x
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Multiplicative.forall, ofAdd_eq_one, EmbeddingLike.apply_eq_iff_eq, one_ne_zero,
+      not_false_eq_true, ite_eq_left_iff, imp_false, Decidable.not_not]
+    split
+    next h =>
+      subst h
+      simp_all only
+    next h => duper [*] {preprocessing := full}
+shortened proof!
+.
+line 33, col 22:
+rcases keyM x
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Multiplicative.forall, ofAdd_eq_one, EmbeddingLike.apply_eq_iff_eq, one_ne_zero,
+      not_false_eq_true, ite_eq_left_iff, imp_false, Decidable.not_not]
+    split
+    next h =>
+      subst h
+      simp_all only
+    next h => duper [*] {preprocessing := full}
+shortened proof!
+.__

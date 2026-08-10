@@ -1,0 +1,37 @@
+.......
+line 64, col 2:
+rw [v_adicCompletionUniformizer] at h
+* Try this:
+
+  [apply]   simp_all only [v_adicCompletionUniformizer, Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, map_zero, inv_eq_zero,
+      WithZero.coe_ne_zero]
+shortened proof!
+....
+line 84, col 4:
+simp [Pi.mulSingle_eq_of_ne hp]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, SetLike.mem_coe, Set.mem_setOf_eq, ne_eq, not_false_eq_true,
+      Pi.mulSingle_eq_of_ne, one_mem]
+....
+line 100, col 6:
+simp [Pi.mulSingle_eq_of_ne hw]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, SetLike.mem_coe, Set.mem_setOf_eq, ne_eq, not_false_eq_true,
+      Pi.mulSingle_eq_of_ne, one_mem]
+............
+line 121, col 6:
+simp [Pi.mulSingle_eq_of_ne hw]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, SetLike.mem_coe, Set.mem_setOf_eq, ne_eq, not_false_eq_true,
+      Pi.mulSingle_eq_of_ne, one_mem]
+....
+line 126, col 6:
+simp [Pi.mulSingle_eq_of_ne hw]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, SetLike.mem_coe, Set.mem_setOf_eq, ne_eq, not_false_eq_true,
+      Pi.mulSingle_eq_of_ne, one_mem]
+..........

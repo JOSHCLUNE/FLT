@@ -1,0 +1,83 @@
+......
+line 114, col 6:
+rfl
+* Try this:
+
+  [apply]     simp_all only [mul_eq_mul_right_iff]
+    apply Or.inl
+    rfl
+.....
+line 130, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.single_eq_same]
+.
+line 131, col 6:
+simp [Pi.single_eq_of_ne' h]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, Pi.single_eq_of_ne', mul_zero]
+......
+line 149, col 6:
+rfl
+* Try this:
+
+  [apply]     simp_all only [mul_eq_mul_right_iff]
+    apply Or.inl
+    rfl
+.....
+line 177, col 4:
+simp [Pi.single_eq_of_ne hq]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, SetLike.mem_coe, Set.mem_setOf_eq, ne_eq, not_false_eq_true,
+      Pi.single_eq_of_ne, zero_mem]
+.....
+line 197, col 4:
+simp [Pi.single_eq_same]
+* Try this:
+
+  [apply]   simp_all only [Pi.single_eq_same, one_mul]
+.
+line 198, col 4:
+simp [Pi.single_eq_of_ne' h]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, Pi.single_eq_of_ne', zero_mul]
+.......
+line 213, col 6:
+intro i
+* Try this:
+
+  [apply]     intro v
+    simp_all only [structureMap_apply_apply, ne_eq, ZeroMemClass.coe_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    split at a_1
+    next h => simp_all only [one_ne_zero]
+    next h => simp_all only
+shortened proof!
+..
+line 216, col 29:
+simp +contextual
+* Try this:
+
+  [apply]     intro x_1 a_1
+    simp_all only [structureMap_apply_apply, ↓reduceIte, OneMemClass.coe_one, map_one]
+...
+line 219, col 4:
+split_ifs
+* Try this:
+
+  [apply]     split
+    next h => simp_all only [OneMemClass.coe_one, one_mul]
+    next h => grind only [#bee0, #37ab]
+shortened proof!
+..
+line 220, col 27:
+simp +contextual
+* Try this:
+
+  [apply]     intro x_1 a_1
+    simp_all only [IsUnit.unit_spec, structureMap_apply_apply, ↓reduceIte, OneMemClass.coe_one]

@@ -1,0 +1,27 @@
+.
+line 32, col 2:
+convert! ValuativeRel.nonarchimedeanRing R
+* Try this:
+
+  [apply]   apply nonarchimedeanRing
+shortened proof!
+.......
+line 60, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, ZeroMemClass.coe_zero, map_zero, Units.zero_lt]
+.
+line 64, col 10:
+rw [show ((r • x : (valuation K).integer) : K) = (r : K) * (x : K) from rfl, map_mul]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, smul_eq_mul, Subring.coe_mul, map_mul]
+....
+line 81, col 2:
+ext x
+* Try this:
+
+  [apply]     simp_all only [sub_zero, Set.preimage_setOf_eq]
+    rfl
+shortened proof!

@@ -1,0 +1,21 @@
+.
+line 33, col 6:
+rw [h, Ideal.comap_bot_of_injective e e.injective]
+* Try this:
+
+  [apply]     simp_all only
+    ext x : 1
+    simp_all only [Submodule.mem_bot, Ideal.mem_comap, EmbeddingLike.map_eq_zero_iff]
+...
+line 46, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [toRingHom_eq_coe, symm_comp, Ideal.comap_id]
+...
+line 50, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [toRingHom_eq_coe, comp_symm, Ideal.comap_id]
+.

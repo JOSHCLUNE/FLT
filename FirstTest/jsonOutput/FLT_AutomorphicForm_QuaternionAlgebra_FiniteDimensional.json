@@ -1,0 +1,43 @@
+[{"tacticSucceeded": true,
+  "startLine": 65,
+  "startCol": 6,
+  "shortenedStepsCount": 2,
+  "parentName": "TotallyDefiniteQuaternionAlgebra.finite_doubleCoset",
+  "oldText": "congr 1",
+  "message":
+  "Try this:\n\n  [apply]     ext x : 1\n    simp_all only [Set.mem_range, Function.comp_apply]\n    apply Iff.intro\n    · intro a\n      obtain ⟨w, h⟩ := a\n      subst h\n      apply Exists.intro\n      · ext i j v : 4\n        simp_all only [Units.coe_mapEquiv, Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe,\n          Algebra.TensorProduct.includeLeftRingHom_apply, MulEquiv.coe_mk, AlgEquiv.toEquiv_eq_coe, EquivLike.coe_coe,\n          WithRigidification.algEquiv_tmul, Matrix.smul_apply, smul_eq_mul, one_mul, AlgHom.toRingHom_eq_coe,\n          AlgHom.toRingHom_toMonoidHom]\n        rfl\n    · intro a\n      obtain ⟨w, h⟩ := a\n      subst h\n      apply Exists.intro\n      · ext i j v : 4\n        simp_all only [Units.coe_map, AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom,\n          MonoidHom.coe_coe, Units.coe_mapEquiv, Algebra.TensorProduct.includeLeftRingHom_apply, MulEquiv.coe_mk,\n          AlgEquiv.toEquiv_eq_coe, EquivLike.coe_coe, WithRigidification.algEquiv_tmul, Matrix.smul_apply, smul_eq_mul,\n          one_mul]\n        rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/FiniteDimensional.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 59,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "TotallyDefiniteQuaternionAlgebra.finite_doubleCoset",
+  "oldText":
+  "exact IsModuleTopology.continuous_of_linearMap\n        (WithRigidification.algEquiv F D).toLinearMap",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/FiniteDimensional.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 63,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "TotallyDefiniteQuaternionAlgebra.finite_doubleCoset",
+  "oldText":
+  "rw [← MulEquiv.coe_toEquiv, Equiv.preimage_eq_iff_eq_image, ← Set.range_comp]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/FiniteDimensional.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 64,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "TotallyDefiniteQuaternionAlgebra.finite_doubleCoset",
+  "oldText": "dsimp",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/FiniteDimensional.lean"}]

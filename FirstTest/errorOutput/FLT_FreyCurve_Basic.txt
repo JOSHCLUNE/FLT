@@ -1,0 +1,143 @@
+...
+line 78, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₁, eq_intCast]
+    rfl
+...
+line 81, col 6:
+norm_cast
+* Try this:
+
+  [apply]   simp_all only [Int.cast_sub, Int.cast_pow, Int.cast_one, Int.cast_ofNat]
+....
+line 85, col 36:
+norm_num
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 87, col 53:
+linarith [P.hp5]
+* Try this:
+
+  [apply]     apply Nat.Prime.two_le
+    apply FreyPackage.pp
+....
+line 91, col 10:
+norm_num
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 92, col 10:
+rw [Nat.Prime.even_iff P.pp]
+* Try this:
+
+  [apply]   duper [*, hp_odd, Nat.not_even_iff_odd] {preprocessing := full}
+shortened proof!
+.
+line 94, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₃, eq_intCast]
+    rfl
+...
+line 97, col 6:
+norm_cast
+* Try this:
+
+  [apply]   simp_all only [neg_mul, Int.cast_neg, Int.cast_mul, Int.cast_pow, Int.cast_ofNat]
+..
+line 99, col 35:
+norm_num
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 103, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₆, eq_intCast]
+    rfl
+.....
+line 110, col 4:
+ring
+* this parameter is redundant, environment already contains `addRightEmbedding_apply` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 116, col 4:
+apply div_ne_zero
+* Try this:
+
+  [apply]     simp_all
+    intro a
+    cases a with
+    | inl h =>
+      cases h with
+      | inl h_1 => duper [*, ha0] {preprocessing := full}
+      | inr h_2 => duper [*, hb0] {preprocessing := full}
+    | inr h_1 => duper [*, hc0] {preprocessing := full}
+shortened proof!
+..
+line 124, col 2:
+ring
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 128, col 2:
+simp [freyCurve, WeierstrassCurve.b₄]
+* Try this:
+
+  [apply]   apply b₄
+shortened proof!
+...........
+line 154, col 34:
+ring
+* Try this:
+  [apply] grind only
+........
+line 167, col 52:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or]
+.
+line 168, col 24:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or]
+..............
+line 181, col 8:
+exact hqbad.rec hab hc
+* Try this:
+
+  [apply]   simp_all only [or_self]
+....
+line 186, col 6:
+exact h.2
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 189, col 6:
+exact h.2
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 193, col 2:
+exact dvd_mul_of_dvd_left (dvd_mul_left _ _) _
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!dvd_of_mul_left_dvd, !dvd_mul_right]
+  [apply] grind => instantiate only [!dvd_of_mul_left_dvd, !dvd_mul_right]

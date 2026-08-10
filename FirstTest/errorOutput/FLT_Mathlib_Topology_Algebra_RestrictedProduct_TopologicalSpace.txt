@@ -1,0 +1,300 @@
+...
+line 49, col 2:
+simp only [Set.mem_setOf_eq, Set.mem_inter_iff, Set.mem_preimage, Set.mem_pi, Set.mem_compl_iff,
+    ← forall_and]
+* Try this:
+
+  [apply]     simp_all only [Filter.eventually_cofinite, Set.mem_setOf_eq, SetLike.mem_coe, Set.mem_inter_iff, Set.mem_preimage,
+      Set.mem_pi, Set.mem_compl_iff]
+    apply Iff.intro
+    · intro a
+      simp_all only [implies_true, true_and]
+      intro i a_1
+      apply a
+    · intro a i
+      obtain ⟨left, right⟩ := a
+      duper [*] {preprocessing := full}
+shortened proof!
+...
+line 62, col 62:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_cofinite, Set.mem_pi, Set.mem_univ, SetLike.mem_coe, forall_const, Set.mem_setOf_eq, s]
+....
+line 67, col 26:
+aesop
+* Try this:
+
+  [apply]     simp_all only [Filter.eventually_cofinite, SetLike.mem_coe, Filter.eventually_principal, Set.mem_setOf_eq, s]
+    intro x a
+    apply a
+    simp_all only [SetLike.mem_coe]
+    apply h
+.
+line 67, col 46:
+aesop
+* Try this:
+
+  [apply]     intro a i
+    simp_all only [s]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    simp_all only [inclusion_apply]
+.........................
+line 220, col 47:
+simp_all [Subgroup.mem_pi]
+* Try this:
+
+  [apply]     intro a
+    simp_all only [SetLike.mem_coe]
+    apply a
+    simp_all only [Set.mem_univ]
+..
+line 223, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_apply]
+    rfl
+shortened proof!
+.
+line 224, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+.
+line 225, col 21:
+ext
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+......
+line 236, col 30:
+fun_prop
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [!RestrictedProduct.continuous_inclusion]
+  [apply] grind => instantiate only [!RestrictedProduct.continuous_inclusion]
+..
+line 263, col 2:
+ext f
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [Set.mem_setOf_eq, Set.mem_pi, Set.mem_univ, forall_const]
+shortened proof!
+....
+line 310, col 49:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_subtype, Subtype.val_injective]
+..
+line 312, col 6:
+simp only [mem_preimage, mem_image, embedProduct_apply, inv_mk, coeHom_apply, g,
+        unitsEquivUnitsType]
+* Try this:
+
+  [apply]     simp_all only [mem_preimage, mem_image, embedProduct_apply, MulEquiv.toEquiv_eq_coe, toFun_as_coe, EquivLike.coe_coe,
+      g]
+    obtain ⟨val, property⟩ := s
+    simp_all only
+    apply Iff.intro
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      subst right
+      exact left
+    · intro a
+      apply Exists.intro
+      · apply And.intro
+        · exact a
+        · rfl
+shortened proof!
+.........
+line 359, col 4:
+rintro _ ⟨x, hx, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [implies_true, map_one, Set.image_subset_iff, f, g, sMx, sM]
+    rfl
+shortened proof!
+.....
+line 368, col 4:
+rintro _ ⟨_, ⟨x, hx, rfl⟩, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [implies_true, map_one, SetLike.coe_sort_coe, Homeomorph.trans_apply, Homeomorph.homeomorph_mk_coe,
+      toMulEquiv_eq_coe, MulEquiv.toEquiv_eq_coe, EquivLike.coe_coe, Set.image_subset_iff, sM, f, g]
+    rfl
+shortened proof!
+.
+line 382, col 81:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_sum, Finset.sum_apply]
+...........
+line 471, col 6:
+rwa [Filter.le_principal_iff, hTval, ← Filter.mem_comap_iff_compl, hf,
+        ← Filter.le_principal_iff]
+* Try this:
+
+  [apply]   duper [*, compl_compl, Filter.compl_mem_comap, Filter.le_principal_iff, Filter.le_def] {preprocessing := full}
+...
+line 477, col 10:
+rw [Filter.le_principal_iff, Filter.mem_comap]
+* Try these:
+  [apply] grind only [Filter.comap_principal, Filter.le_def, !Set.subset_preimage_image, Filter.principal_mono,
+    Set.preimage_compl, compl_le_iff_compl_le]
+  [apply] grind =>
+    instantiate only [Filter.comap_principal, Filter.le_def, !Set.subset_preimage_image]
+    instantiate only [Filter.principal_mono, Set.preimage_compl, compl_le_iff_compl_le]
+shortened proof!
+..
+line 483, col 8:
+rw [Filter.eventually_comap] at hx
+* Try this:
+
+  [apply]     subst hf
+    simp_all [T]
+    intro x_1 a a_1 b
+    subst b
+    obtain ⟨w, h⟩ := hS
+    obtain ⟨left, right⟩ := h
+    apply hx
+    intro x_1 a_2
+    simp_all only [not_false_eq_true]
+shortened proof!
+........
+line 539, col 2:
+exact ⟨fun ⟨t, ⟨I, hIf, s, hs, ht⟩, htU⟩ ↦ ⟨I, s, hIf, hs, by grw [ht, htU]⟩,
+    fun ⟨I, s, hIf, hs, hU⟩ ↦ ⟨I.pi s, ⟨I, hIf, s, hs, subset_rfl⟩, hU⟩⟩
+* Try these:
+  [apply] grind only [= Set.subset_def, = Set.mem_preimage, #698e, #848a, #dcd0, #8eb3, #20e8, #c925, #c2e7, #e34f,
+    #0903]
+  [apply] grind only [= Set.subset_def, = Set.mem_preimage]
+  [apply] grind =>
+    cases #698e
+    · cases #848a
+      instantiate only [= Set.subset_def, #dcd0]
+      instantiate only [= Set.subset_def]
+      cases #8eb3
+      · cases #20e8 <;> instantiate only [#c925]
+      · instantiate only [#c2e7, = Set.mem_preimage]
+        instantiate only [#e34f, = Set.mem_preimage]
+    · instantiate only [#0903]
+......
+line 552, col 64:
+simp [hTval]
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_cofinite, Filter.le_principal_iff, Filter.mem_cofinite, compl_compl,
+      Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true, I, T]
+........
+line 560, col 2:
+simp only [Set.mem_inter_iff, Set.mem_pi] at hy
+* Try these:
+  [apply] grind only [= Set.mem_inter_iff, = Set.mem_pi, = Set.mem_compl_iff, = Set.mem_union, usr Set.mem_setOf_eq,
+    = Set.subset_def, #820a, #7235, #27de]
+  [apply] grind only [= Set.mem_inter_iff, = Set.mem_pi, = Set.mem_compl_iff, = Set.mem_union, usr Set.mem_setOf_eq,
+    = Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.mem_inter_iff]
+    instantiate only [= Set.mem_pi]
+    instantiate only [#820a, #7235]
+    instantiate only [= Set.mem_compl_iff, = Set.mem_union]
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [= Set.subset_def]
+    instantiate only [#27de]
+shortened proof!
+......
+line 576, col 66:
+simp [hTval]
+* Try this:
+
+  [apply]   simp_all only [Filter.le_principal_iff, Filter.mem_cofinite, compl_compl, Filter.eventually_principal,
+      Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true, T]
+............
+line 587, col 67:
+(hI : i ∉ I)
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true,
+      not_false_eq_true, Set.setOf_true, Set.union_univ, not_true_eq_false, Set.setOf_false, Set.union_empty,
+      Set.univ_inter, T]
+shortened proof!
+..
+line 591, col 6:
+simp [Set.subset_def, or_iff_not_imp_right, forall_and]
+* Try these:
+  [apply] grind only [= Set.subset_def, = Set.setOf_true, = Set.setOf_false, = Set.mem_inter_iff, = Set.mem_pi,
+    = Set.mem_empty_iff_false, ← Set.mem_univ, = Set.mem_compl_iff, = Set.mem_union, usr Set.mem_setOf_eq, #753f, #0b51,
+    #b005, #2f6d, #4810, #85ae, #8f78]
+  [apply] grind only [= Set.subset_def, = Set.setOf_true, = Set.setOf_false, = Set.mem_inter_iff, = Set.mem_pi,
+    = Set.mem_empty_iff_false, ← Set.mem_univ, = Set.mem_compl_iff, = Set.mem_union, usr Set.mem_setOf_eq]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, = Set.setOf_true, = Set.setOf_false]
+    instantiate only [= Set.mem_inter_iff, = Set.mem_pi]
+    instantiate only [= Set.mem_pi]
+    cases #753f
+    · cases #0b51
+      · cases #b005
+        · instantiate only [#2f6d]
+          instantiate only [= Set.mem_empty_iff_false, ← Set.mem_univ]
+        · instantiate only [= Set.mem_compl_iff]
+          instantiate only [← Set.mem_univ]
+      · cases #4810
+        cases #b005
+        · instantiate only [#2f6d]
+          instantiate only [= Set.mem_inter_iff, ← Set.mem_univ]
+          instantiate only [= Set.mem_union]
+          instantiate only [usr Set.mem_setOf_eq]
+        · instantiate only [= Set.mem_compl_iff, #2f6d]
+          instantiate only [= Set.mem_inter_iff, ← Set.mem_univ]
+          instantiate only [= Set.mem_union]
+          instantiate only [usr Set.mem_setOf_eq]
+    · cases #0b51
+      · cases #4810 <;> instantiate only [#2f6d] <;> instantiate only [= Set.mem_empty_iff_false, ← Set.mem_univ]
+      · cases #85ae
+        · cases #8f78
+          cases #b005
+          · instantiate only [#2f6d]
+            instantiate only [= Set.mem_inter_iff, ← Set.mem_univ]
+            instantiate only [= Set.mem_union]
+            instantiate only [usr Set.mem_setOf_eq]
+          · instantiate only [= Set.mem_compl_iff]
+            instantiate only [← Set.mem_univ]
+        · cases #4810
+          cases #8f78
+          cases #b005
+          · instantiate only [#2f6d]
+            instantiate only [= Set.mem_inter_iff, ← Set.mem_univ]
+            instantiate only [= Set.mem_union]
+            instantiate only [usr Set.mem_setOf_eq]
+          · instantiate only [= Set.mem_compl_iff, #2f6d]
+            instantiate only [= Set.mem_inter_iff, ← Set.mem_univ]
+            instantiate only [= Set.mem_union]
+            instantiate only [usr Set.mem_setOf_eq]
+..............
+line 642, col 33:
+aesop
+* Try this:
+
+  [apply]   simp_all only [eventually_principal, Set.mem_setOf_eq, implies_true]
+.........
+line 704, col 22:
+simp [Pi.single_eq_of_ne (Set.mem_compl_singleton_iff.mp hi)]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, ne_eq, not_false_eq_true, Pi.single_eq_of_ne, SetLike.mem_coe,
+      zero_mem, S]
+...

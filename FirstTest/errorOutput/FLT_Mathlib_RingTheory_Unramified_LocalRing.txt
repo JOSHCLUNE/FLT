@@ -1,0 +1,20 @@
+.....
+line 73, col 57:
+rw [hP_map]
+* Try this:
+  [apply] grind only
+shortened proof!
+..................
+line 101, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 114, col 12:
+rw [hP_map]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+..

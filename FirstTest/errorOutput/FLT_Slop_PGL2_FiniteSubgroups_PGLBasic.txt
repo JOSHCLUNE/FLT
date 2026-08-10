@@ -1,0 +1,1324 @@
+..
+line 79, col 38:
+rintro rfl
+* Try this:
+
+  [apply]     subst h_eq
+    simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [dvd_zero, not_true_eq_false]
+shortened proof!
+..
+line 90, col 14:
+rintro rfl
+* Try this:
+
+  [apply]     subst h_eq
+    simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [dvd_zero, not_true_eq_false]
+shortened proof!
+.
+line 93, col 32:
+rintro rfl
+* Try this:
+
+  [apply]     subst h_eq
+    simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [dvd_zero, not_true_eq_false]
+shortened proof!
+..
+line 110, col 91:
+rw [Polynomial.degree_X_pow_sub_C (by norm_num)] at h
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Polynomial.degree_X_pow_sub_C, !Polynomial.degree_X_pow, !Polynomial.degree_le_zero_iff, pow_two,
+    Polynomial.X_pow_sub_C_ne_zero]
+  [apply] grind =>
+    instantiate only [Polynomial.degree_X_pow_sub_C, !Polynomial.degree_X_pow, !Polynomial.degree_le_zero_iff, pow_two]
+    instantiate only [Polynomial.X_pow_sub_C_ne_zero, !Polynomial.degree_le_zero_iff]
+    ring
+    instantiate only [Polynomial.X_pow_sub_C_ne_zero]
+shortened proof!
+.
+line 111, col 11:
+rw [Polynomial.IsRoot.def, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_C, sub_eq_zero] at hy
+* Try this:
+
+  [apply]     simp_all only [Polynomial.IsRoot.def, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_C]
+    grind only
+shortened proof!
+....
+line 117, col 6:
+rw [QuotientGroup.eq_one_iff, Subgroup.mem_center_iff]
+* Try these:
+  [apply] grind only [!Matrix.SpecialLinearGroup.toGL_mem_center_iff, QuotientGroup.eq_one_iff]
+  [apply] grind =>
+    instantiate only [!Matrix.SpecialLinearGroup.toGL_mem_center_iff]
+    instantiate only [QuotientGroup.eq_one_iff]
+shortened proof!
+............
+line 140, col 52:
+rw [← hc, h, zero_pow (by norm_num)]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, f]
+..............
+line 153, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 154, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 155, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 156, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 164, col 6:
+rw [mul_zero, add_zero, zero_mul, add_zero, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 167, col 6:
+rw [mul_zero, zero_add, zero_mul, add_zero, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 170, col 6:
+rw [mul_zero, add_zero, zero_mul, zero_add, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 173, col 6:
+rw [mul_zero, zero_add, zero_mul, zero_add, mul_comm]
+* Try this:
+  [apply] grind only
+......X....
+line 193, col 40:
+rw [← mul_assoc, mul_inv_cancel, one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_inv_cancel_left]
+..........
+line 212, col 6:
+intro x hx
+* Try this:
+
+  [apply]   apply Matrix.GeneralLinearGroup.map_center_le
+shortened proof!
+.....
+line 269, col 4:
+change (f x).val = (f y).val
+* Try this:
+
+  [apply]   simp_all only [Finset.finite_toSet, Subtype.mk.injEq, SetLike.coe_eq_coe, f]
+shortened proof!
+.......
+line 283, col 4:
+exact Set.Finite.biUnion (Finset.finite_toSet S) (fun _ _ ↦ Set.finite_range _)
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.toFinite]
+  [apply] grind => instantiate only [Set.toFinite]
+.....
+line 290, col 53:
+rw [MulAut.conj_apply, inv_one, mul_one, one_mul]
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_image, Finset.mem_univ, true_and, Subtype.exists, exists_prop, Set.iUnion_exists,
+      Set.biUnion_and', Set.iUnion_iUnion_eq_right, Fin.forall_fin_two, Fin.isValue, forall_exists_index, and_imp,
+      forall_apply_eq_imp_iff₂, SetLike.mem_coe, map_one, MulAut.one_apply, L, S]
+.......
+line 298, col 8:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_image, Finset.mem_univ, true_and, Subtype.exists, exists_prop, Set.iUnion_exists,
+      Set.biUnion_and', Set.iUnion_iUnion_eq_right, SetLike.mem_coe, Fin.isValue, Matrix.of_apply, Subfield.subtype_apply,
+      L, S, y_val]
+...
+line 301, col 6:
+exact zero_ne_one h_mul
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_toFinset` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+.........
+line 317, col 4:
+rw [Projectivization.mk_eq_mk_iff] at h
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #6ac8, #a82b]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    cases #6ac8 <;> instantiate only [#a82b]
+shortened proof!
+.....
+line 324, col 4:
+rw [Projectivization.mk_eq_mk_iff]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #4f3e]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#4f3e]
+shortened proof!
+.....
+line 339, col 4:
+change (g.val - x • 1) 0 0 * (g.val - x • 1) 1 1 - (g.val - x • 1) 0 1 * (g.val - x • 1) 1 0 = x^2 - g.val.trace * x + g.val.det
+* Try this:
+
+  [apply]     simp_all only [Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply_eq, smul_eq_mul, mul_one, ne_eq,
+      zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero, sub_zero, one_ne_zero, T, D]
+    grind only [Matrix.trace_fin_two, Matrix.det_fin_two]
+shortened proof!
+..
+line 344, col 100:
+change (g.val - z • 1).det = 0 ↔ z^2 - T * z + D = 0
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, T, D]
+shortened proof!
+.....
+line 350, col 8:
+change (Polynomial.X^2 - Polynomial.C T * Polynomial.X + Polynomial.C D).coeff 2 = 1
+* Try this:
+
+  [apply]   simp_all only [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte, Polynomial.coeff_mul_X,
+      Polynomial.coeff_C_succ, sub_zero, add_zero, T, D, f]
+shortened proof!
+...
+line 355, col 80:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte, Polynomial.coeff_mul_X,
+      Polynomial.coeff_C_succ, sub_zero, add_zero, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, T, D, f]
+.
+line 356, col 6:
+exact one_ne_zero (h1.symm.trans h2)
+* Try this:
+
+  [apply]   simp_all [↓reduceIte, T, D, f]
+..
+line 358, col 4:
+exact ⟨root, by
+      have h_eval : f.eval root = root^2 - T * root + D := by
+        change (Polynomial.X^2 - Polynomial.C T * Polynomial.X + Polynomial.C D).eval root = root^2 - T * root + D
+        simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+      rw [← h_eval]
+      exact h_root⟩
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, T, D, f]
+    apply Exists.intro
+    · exact h_root
+.....
+line 370, col 6:
+change (z - x) * (z - (-x + T)) = z^2 - T * z + D
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...._.
+line 378, col 6:
+apply sub_eq_zero.mp
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 383, col 6:
+change x = -x + T
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...
+line 393, col 4:
+exact Set.ncard_pair (mt hxy.mp h_disc)
+* Try this:
+
+  [apply]   simp_all only [iff_false, Set.mem_singleton_iff, not_false_eq_true, Set.finite_singleton, Set.ncard_insert_of_notMem,
+      Set.ncard_singleton, Nat.reduceAdd, T, D, y]
+.....
+line 404, col 37:
+rw [ha]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [ne_eq, smul_eq_zero, or_false]
+..
+line 406, col 28:
+rw [hwy]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [ne_eq, smul_eq_zero, or_false]
+..
+line 408, col 22:
+rw [ha]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [ne_eq, smul_eq_zero, or_false]
+.
+line 410, col 2:
+have h_zero : (x - y) • v = 0 := by rw [sub_smul, h_eq, sub_self]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [ne_eq, smul_eq_zero, or_false, isUnit_iff_ne_zero, not_false_eq_true, IsUnit.smul_eq_zero,
+      smul_left_inj]
+shortened proof!
+...
+line 426, col 33:
+rw [Fin.sum_univ_two]
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_add, a, b]
+shortened proof!
+......
+line 433, col 72:
+ring
+* Try this:
+  [apply] grind only
+.
+line 435, col 88:
+rw [← hvx, ← hwy]
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_add, Pi.add_apply, Pi.smul_apply, smul_eq_mul, a, b]
+...
+line 438, col 45:
+rw [← h_comb]
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_add, Pi.add_apply, Pi.smul_apply, smul_eq_mul, Finset.sum_apply,
+      Matrix.cons_val', a, b]
+..
+line 439, col 39:
+exact sub_self _
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_add, Pi.smul_apply, Pi.add_apply, smul_eq_mul, Finset.sum_apply,
+      Matrix.cons_val', sub_self, a, b]
+..
+line 441, col 90:
+rw [Fin.sum_univ_two]
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Fin.sum_univ_two, Matrix.cons_val_zero,
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_add, a, b]
+shortened proof!
+..
+line 444, col 4:
+right
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Fin.forall_fin_two, Matrix.cons_val_zero,
+      mul_eq_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one, Fin.sum_univ_two, zero_smul, zero_add, not_false_eq_true,
+      smul_left_inj, exists_eq', or_true, a, b]
+shortened proof!
+..
+line 447, col 6:
+left
+* Try this:
+
+  [apply]     subst hc_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, mul_zero, zero_smul, zero_add, smul_eq_zero,
+      mul_eq_zero, or_false, Fin.forall_fin_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      and_self, Fin.sum_univ_two, add_zero, not_false_eq_true, smul_left_inj, exists_eq', true_or, a, b]
+shortened proof!
+.
+line 449, col 6:
+exfalso
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+......
+line 461, col 6:
+left
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff', #f72a]
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [!Projectivization.mk_rep]
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#f72a]
+shortened proof!
+.
+line 464, col 6:
+right
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff', #8a9a]
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [!Projectivization.mk_rep]
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#8a9a]
+shortened proof!
+...
+line 470, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨x, hvx.symm⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #ff82]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#ff82]
+..
+line 472, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨y, hwy.symm⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #0700]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#0700]
+...........
+line 488, col 2:
+rw [← sub_eq_zero, ← sub_smul, smul_eq_zero, sub_eq_zero] at h_contra
+* Try this:
+
+  [apply]     subst hc
+    simp_all only [ne_eq, not_false_eq_true, smul_left_inj]
+shortened proof!
+....
+line 499, col 6:
+change (Polynomial.X^2 - Polynomial.C g.val.trace * Polynomial.X + Polynomial.C g.val.det).coeff 2 = 1
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte,
+      Polynomial.coeff_mul_X, Polynomial.coeff_C_succ, sub_zero, add_zero, f]
+shortened proof!
+...
+line 504, col 78:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte,
+      Polynomial.coeff_mul_X, Polynomial.coeff_C_succ, sub_zero, add_zero, OfNat.ofNat_ne_zero, not_false_eq_true, f]
+.
+line 505, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+* Try this:
+
+  [apply]   simp_all [↓reduceIte, f]
+...
+line 509, col 4:
+have h_eval : f.eval x = x^2 - g.val.trace * x + g.val.det := by
+      change (Polynomial.X^2 - Polynomial.C g.val.trace * Polynomial.X + Polynomial.C g.val.det).eval x = x^2 - g.val.trace * x + g.val.det
+      simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, f]
+shortened proof!
+...
+line 518, col 4:
+have ht : g.val.trace = 2 * x := by
+      calc g.val.trace = (g.val.trace - x) + x := by rw [sub_add_cancel]
+        _ = y + x := rfl
+        _ = x + x := by rw [h_eq]
+        _ = 2 * x := by ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+..
+line 531, col 4:
+calc y^2 - g.val.trace * y + g.val.det
+      _ = (g.val.trace - x)^2 - g.val.trace * (g.val.trace - x) + g.val.det := rfl
+      _ = x^2 - g.val.trace * x + g.val.det := by ring
+      _ = 0 := hx
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 539, col 4:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 541, col 68:
+rw [expand, hx]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, f, y]
+.
+line 541, col 89:
+rw [expand, hy]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, f, y]
+.......
+line 553, col 4:
+rw [hl]
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.ncard_singleton, Set.mem_singleton_iff]
+....
+line 558, col 4:
+exact hv
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq]
+....
+line 564, col 4:
+rw [Submodule.span_le, Set.singleton_subset_iff, SetLike.mem_coe, LinearMap.mem_ker]
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, ker, A]
+shortened proof!
+......
+line 571, col 64:
+rw [Module.finrank_pi, Fintype.card_fin]
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self,
+      Module.finrank_fintype_fun_eq_card, Fintype.card_fin, ker, A]
+...........
+line 582, col 16:
+change A 0 0 * (1 : K p) + A 0 1 * (0 : K p) = 0 at h_eval
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, LinearMap.ker_eq_top,
+      Fin.isValue, LinearMap.zero_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply_eq, smul_eq_mul, mul_one,
+      Pi.single_eq_same, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero, sub_zero, one_ne_zero,
+      Pi.single_eq_of_ne, add_zero, Matrix.zero_apply, ker, A]
+shortened proof!
+.
+line 583, col 16:
+change A 0 0 * (0 : K p) + A 0 1 * (1 : K p) = 0 at h_eval
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, LinearMap.ker_eq_top,
+      Fin.isValue, LinearMap.zero_apply, Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply_eq, smul_eq_mul, mul_one,
+      zero_ne_one, not_false_eq_true, Pi.single_eq_of_ne, mul_zero, Matrix.one_apply_ne, sub_zero, Pi.single_eq_same,
+      zero_add, Matrix.zero_apply, ker, A]
+shortened proof!
+.
+line 584, col 16:
+change A 1 0 * (1 : K p) + A 1 1 * (0 : K p) = 0 at h_eval
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, LinearMap.ker_eq_top,
+      Fin.isValue, LinearMap.zero_apply, Matrix.sub_apply, Matrix.smul_apply, one_ne_zero, not_false_eq_true,
+      Matrix.one_apply_ne, smul_eq_mul, mul_zero, sub_zero, Pi.single_eq_same, mul_one, Matrix.one_apply_eq,
+      Pi.single_eq_of_ne, add_zero, Matrix.zero_apply, ker, A]
+shortened proof!
+.
+line 585, col 16:
+change A 1 0 * (0 : K p) + A 1 1 * (1 : K p) = 0 at h_eval
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Submodule.span_singleton_le_iff_mem, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, LinearMap.ker_eq_top,
+      Fin.isValue, LinearMap.zero_apply, Matrix.sub_apply, Matrix.smul_apply, one_ne_zero, not_false_eq_true,
+      Matrix.one_apply_ne, smul_eq_mul, mul_zero, sub_zero, zero_ne_one, Pi.single_eq_of_ne, Matrix.one_apply_eq, mul_one,
+      Pi.single_eq_same, zero_add, Matrix.zero_apply, ker, A]
+shortened proof!
+.
+line 586, col 4:
+exact hg ⟨lambda, sub_eq_zero.mp hA_zero⟩
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9b83]
+  [apply] grind only
+  [apply] grind => instantiate only [#9b83]
+.....
+line 593, col 4:
+omega
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 598, col 6:
+rw [LinearMap.mem_ker]
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, ne_eq, map_sub, map_smul,
+      Matrix.mulVecLin_one, Std.le_refl, Order.lt_two_iff, LinearMap.mem_ker, LinearMap.sub_apply,
+      Matrix.mulVecBilin_apply, LinearMap.smul_apply, LinearMap.id_coe, id_eq, sub_self, ker, A]
+shortened proof!
+.....
+line 606, col 4:
+exact Set.ncard_singleton _
+* Try this:
+
+  [apply]   simp_all only [not_exists, Set.setOf_eq_eq_singleton, Set.ncard_singleton, map_sub, map_smul, Matrix.mulVecLin_one,
+      Std.le_refl, Order.lt_two_iff, ker, A]
+...............................
+line 641, col 6:
+change (Polynomial.X^2 - Polynomial.C g.val.trace * Polynomial.X + Polynomial.C g.val.det).coeff 2 = 1
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte,
+      Polynomial.coeff_mul_X, Polynomial.coeff_C_succ, sub_zero, add_zero, f]
+shortened proof!
+...
+line 645, col 106:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, ↓reduceIte,
+      Polynomial.coeff_mul_X, Polynomial.coeff_C_succ, sub_zero, add_zero, OfNat.ofNat_ne_zero, not_false_eq_true, f]
+.
+line 646, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+* Try this:
+
+  [apply]   simp_all [↓reduceIte, f]
+...
+line 650, col 4:
+have h_eval : f.eval lambda1 = lambda1^2 - g.val.trace * lambda1 + g.val.det := by
+      change (Polynomial.X^2 - Polynomial.C g.val.trace * Polynomial.X + Polynomial.C g.val.det).eval lambda1 = lambda1^2 - g.val.trace * lambda1 + g.val.det
+      simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, f]
+shortened proof!
+...
+line 658, col 8:
+ring
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, f, lambda2]
+.
+line 658, col 17:
+linear_combination -hlambda1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 661, col 4:
+calc (g.val.trace)^2 = (2 * lambda1)^2 := by rw [← hlambda2.1, h]; ring
+      _ = 4 * g.val.det := by rw [← hlambda2.2, h]; ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 667, col 4:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 670, col 42:
+rw [expand lambda1, hlambda1]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, f, lambda2]
+.......
+line 680, col 6:
+have hlambda2_eq_zero : lambda2^2 - g.val.trace * lambda2 + g.val.det = 0 := by
+        calc lambda2^2 - g.val.trace * lambda2 + g.val.det = (g.val.trace - lambda1)^2 - g.val.trace * (g.val.trace - lambda1) + g.val.det := rfl
+          _ = lambda1^2 - g.val.trace * lambda1 + g.val.det := by ring
+          _ = 0 := hlambda1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* generated tactic cannot close the goal
+  · instantiate only [#a169]
+Initial goal
+case grind
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+g : GL (Fin 2) (K p)
+h_discr : (↑g).trace ^ 2 ≠ 4 * (↑g).det
+h_fin : IsOfFinOrder ↑g
+f : Polynomial (K p) := Polynomial.X ^ 2 - Polynomial.C (↑g).trace * Polynomial.X + Polynomial.C (↑g).det
+h_deg : f.degree ≠ 0
+lambda1 : K p
+h_root : f.IsRoot lambda1
+hlambda1 : lambda1 ^ 2 - (↑g).trace * lambda1 + (↑g).det = 0
+lambda2 : K p := (↑g).trace - lambda1
+hlambda2 : lambda1 + lambda2 = (↑g).trace ∧ lambda1 * lambda2 = (↑g).det
+h_ne : lambda1 ≠ lambda2
+expand : ∀ (t : K p), (↑g - t • 1).det = t ^ 2 - (↑g).trace * t + (↑g).det
+v1 : Fin 2 → K p
+hv1_ne : v1 ≠ 0
+hv1 : (↑g - lambda1 • 1).mulVec v1 = 0
+hv1_eq : (↑g).mulVec v1 = lambda1 • v1
+h✝ : ¬(↑g - ((↑g).trace - lambda1) • 1).det = 0
+⊢ False
+* Try these:
+  [apply] grind only [#a169]
+  [apply] grind only
+  [apply] grind => instantiate only [#a169]
+shortened proof!
+.............
+line 701, col 8:
+change (if (0 : Fin 2) = 0 then v1 0 else v2 0) * (if (1 : Fin 2) = 0 then v1 1 else v2 1) - (if (1 : Fin 2) = 0 then v1 0 else v2 0) * (if (0 : Fin 2) = 0 then v1 1 else v2 1) = _
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, Matrix.of_apply,
+      ↓reduceIte, one_ne_zero, f, lambda2]
+shortened proof!
+.
+line 703, col 6:
+rw [h_det_fin] at h_lin_indep
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, f, lambda2]
+shortened proof!
+._....
+line 710, col 10:
+change ∑ i : Fin 2, (if i = 0 then v2 1 else -v1 1) * (![v1, v2] i 0) = 0
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      sub_self, Nat.succ_eq_add_one, Nat.reduceAdd, ite_smul, Matrix.cons_val_zero, neg_smul, Finset.sum_apply,
+      Fin.sum_univ_two, ↓reduceIte, Pi.smul_apply, smul_eq_mul, mul_zero, one_ne_zero, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Pi.neg_apply, neg_zero, add_zero, Pi.zero_apply, f, lambda2]
+shortened proof!
+....
+line 718, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+......
+line 722, col 15:
+exact h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      sub_self, Nat.succ_eq_add_one, Nat.reduceAdd, one_ne_zero, ↓reduceIte, neg_eq_zero, Pi.zero_apply, f, lambda2]
+.
+line 723, col 15:
+change -v1 1 = 0 at c1
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      sub_self, Nat.succ_eq_add_one, Nat.reduceAdd, one_ne_zero, ↓reduceIte, neg_eq_zero, Pi.zero_apply, f, lambda2]
+shortened proof!
+.....
+line 726, col 13:
+exact h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      zero_sub, neg_eq_zero, mul_eq_zero, false_or, Pi.zero_apply, f, lambda2]
+.
+line 727, col 13:
+exact (mul_eq_zero.mp <|
+          by calc v2 0 * v1 1 = -(v1 0 * v2 1 - v2 0 * v1 1) + v1 0 * v2 1 := by ring
+                                     _ = -0 + 0 * v2 1 := by rw [h_det, h]
+                                     _ = 0 := by ring).resolve_left h'
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      zero_sub, neg_eq_zero, mul_eq_zero, false_or, Pi.zero_apply, f, lambda2]
+.....
+line 733, col 13:
+exact h'
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      sub_zero, mul_eq_zero, false_or, Pi.zero_apply, f, lambda2]
+.
+line 734, col 13:
+exact (mul_eq_zero.mp <| by
+          calc v1 0 * v2 1
+              = (v1 0 * v2 1 - v2 0 * v1 1) + v2 0 * v1 1 := by
+                ring
+            _ = 0 + 0 * v1 1 := by rw [h_det, h']
+            _ = 0 := by ring).resolve_left h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue, zero_mul,
+      sub_zero, mul_eq_zero, false_or, Pi.zero_apply, f, lambda2]
+.......
+line 747, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 753, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 756, col 8:
+use 0
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Fin.isValue,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Fin.exists_fin_two, ↓reduceIte, neg_eq_zero, not_false_eq_true, one_ne_zero,
+      or_self, f, lambda2]
+shortened proof!
+.......
+line 764, col 6:
+ring
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Nat.succ_eq_add_one,
+      Nat.reduceAdd, Fin.isValue, Matrix.det_diagonal, Fin.prod_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, mul_zero, sub_self, f, lambda2]
+................
+line 782, col 86:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 788, col 86:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 790, col 4:
+calc g.val = (g.val * P.val) * (P⁻¹).val := h_g.symm
+      _ = (P.val * Y.val) * (P⁻¹).val := by rw [h_diag]
+      _ = (P * Y * P⁻¹).val := rfl
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Polynomial.IsRoot.def, Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow,
+      Polynomial.eval_X, Polynomial.eval_mul, Polynomial.eval_C, add_sub_cancel, true_and, Nat.succ_eq_add_one,
+      Nat.reduceAdd, Fin.isValue, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.coe_units_inv, Units.val_mul, f,
+      lambda2, P, P_mat, Y]
+......
+line 798, col 37:
+rw [mul_one]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 800, col 38:
+rw [← mul_assoc (P * Y)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 801, col 26:
+rw [← hP]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 802, col 6:
+rw [h_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 811, col 79:
+rw [← hlambda2.2, hc, mul_zero]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+........
+line 819, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 820, col 8:
+rw [h_det] at hE
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..........
+line 831, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 836, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 837, col 8:
+rw [h_left, h_right] at hE
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 842, col 27:
+exact div_eq_one_iff_eq (pow_ne_zero n hl2_ne) |>.mp h
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [pow_ne_zero]
+  [apply] grind =>
+    instantiate only [pow_ne_zero]
+    ring
+.........
+line 852, col 8:
+change E.val 0 0 * lambda1^n + E.val 0 1 * 0 = lambda1^n * E.val 0 0 + 0 * E.val 1 0
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Matrix.diagonal_apply_ne]
+  [apply] grind =>
+    instantiate only [Matrix.diagonal_apply_ne]
+    ring
+shortened proof!
+....
+line 858, col 8:
+rw [hl_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 863, col 8:
+rw [hl_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 867, col 8:
+change E.val 1 0 * 0 + E.val 1 1 * lambda2^n = 0 * E.val 0 1 + lambda2^n * E.val 1 1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Matrix.diagonal_apply_ne]
+  [apply] grind =>
+    instantiate only [Matrix.diagonal_apply_ne]
+    ring
+shortened proof!
+.........
+line 879, col 6:
+by_contra h_k0
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.........
+line 898, col 69:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, Order.lt_two_iff, zero_le]
+....
+line 903, col 6:
+calc (2 * 2 : K p) = 4 := by ring
+        _ = 0 := h4
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 905, col 4:
+exact h_two_ne (mul_self_eq_zero.mp h22)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, zero_mul, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff,
+      mul_eq_zero, or_self]
+..
+line 908, col 4:
+rw [← Matrix.trace_fin_two, ← Matrix.det_fin_two]
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Matrix.trace_fin_two, Matrix.det_fin_two]
+  [apply] grind => instantiate only [Matrix.trace_fin_two, Matrix.det_fin_two]
+shortened proof!
+..
+line 912, col 4:
+calc 2 * eig = 2 * (g.val.trace / 2) := rfl
+      _ = 2 * (g.val.trace * (2 : K p)⁻¹) := by rw [div_eq_mul_inv]
+      _ = g.val.trace * (2 * (2 : K p)⁻¹) := by ring
+      _ = g.val.trace * 1 := by rw [mul_inv_cancel₀ h_two_ne]
+      _ = g.val 0 0 + g.val 1 1 := by rw [mul_one, Matrix.trace_fin_two]
+* Try these:
+  [apply] grind only [Matrix.trace_fin_two]
+  [apply] grind =>
+    ring
+    instantiate only [Matrix.trace_fin_two]
+..
+line 919, col 4:
+simp only [N, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, eig, N]
+    grind only
+shortened proof!
+.......
+line 930, col 74:
+ring
+* Try this:
+  [apply] grind only
+.
+line 935, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 0]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, eig, N]
+.
+line 938, col 100:
+ring
+* Try this:
+  [apply] grind only
+.
+line 939, col 126:
+rw [h_d]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, sub_self, eig, N]
+.
+line 940, col 22:
+ring
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, sub_self, eig, N]
+.
+line 942, col 8:
+calc 4 * (N 0 0 * N 0 1 + N 0 1 * N 1 1)
+          _ = (2 * N 0 0) * (2 * N 0 1) + (2 * N 0 1) * (2 * N 1 1) := by ring
+          _ = (2 * g.val 0 0 - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 0) *
+                (2 * g.val 0 1 - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 1) +
+              (2 * g.val 0 1 - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 1) *
+                (2 * g.val 1 1 - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) 1 1) := by
+            rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 1]
+          _ = (2 * g.val 0 0 - (g.val 0 0 + g.val 1 1) * 1) * (2 * g.val 0 1 - (g.val 0 0 + g.val 1 1) * 0) +
+              (2 * g.val 0 1 - (g.val 0 0 + g.val 1 1) * 0) * (2 * g.val 1 1 - (g.val 0 0 + g.val 1 1) * 1) := rfl
+          _ = 0 := by ring
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, mul_eq_zero, false_or, eig, N]
+    obtain ⟨left, right⟩ := h_N_entry
+    grind only
+..
+line 954, col 74:
+ring
+* Try this:
+  [apply] grind only
+.
+line 959, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 0, h_N_entry 1 1]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, eig, N]
+.
+line 962, col 22:
+ring
+* Try this:
+  [apply] grind only
+..
+line 965, col 74:
+ring
+* Try this:
+  [apply] grind only
+.
+line 970, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 1, h_N_entry 1 1]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, eig, N]
+.
+line 973, col 100:
+ring
+* Try this:
+  [apply] grind only
+.
+line 974, col 126:
+rw [h_d]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, sub_self, eig, N]
+.
+line 975, col 22:
+ring
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, sub_self, eig, N]
+.
+line 976, col 4:
+cases mul_eq_zero.mp hX with
+    | inl h4 => exact absurd h4 h_four_ne
+    | inr hX_eq => exact hX_eq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, mul_eq_zero, false_or, eig, N]
+...
+line 982, col 6:
+ext i j
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, add_sub_cancel, eig, N]
+shortened proof!
+..........
+line 993, col 47:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Fin.forall_fin_two,
+      Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero, sub_zero, and_true,
+      one_ne_zero, true_and, Matrix.det_fin_two_of, eig, N]
+..
+line 995, col 47:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Fin.forall_fin_two,
+      Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero, sub_zero, and_true,
+      one_ne_zero, true_and, Matrix.det_fin_two_of, eig, N]
+........
+line 1002, col 6:
+rw [Fin.sum_univ_two, Fin.sum_univ_two] at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul, Fin.forall_fin_two,
+      Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero, sub_zero, and_true,
+      one_ne_zero, true_and, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul, Nat.succ_eq_add_one,
+      Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_fin_one,
+      Matrix.cons_val_one, Fin.sum_univ_two, Matrix.cons_val_zero, zero_mul, one_mul, zero_add, right_eq_add, eig, N, E1,
+      E2]
+shortened proof!
+..
+line 1010, col 6:
+have h := congr_fun (congr_fun hE1 0) 1
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+....
+line 1022, col 6:
+rw [Fin.sum_univ_two, Fin.sum_univ_two] at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, mul_zero, sub_zero, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, and_true,
+      one_ne_zero, sub_self, true_and, and_self, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val',
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero, Fin.sum_univ_two, one_mul, Matrix.cons_val_one, add_zero,
+      left_eq_add, eig, N, E1, E2]
+shortened proof!
+...
+line 1032, col 6:
+calc g.val 0 0 = g.val 0 0 * 1 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 0 := rfl
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, mul_zero, sub_zero, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, sub_self,
+      and_true, one_ne_zero, true_and, and_self, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, eig, N, E1, E2]
+.
+line 1035, col 6:
+calc g.val 0 1 = 0 := h01
+        _ = g.val 0 0 * 0 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 1 := rfl
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, mul_zero, sub_zero, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, sub_self,
+      and_true, one_ne_zero, true_and, and_self, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, eig, N, E1, E2]
+.
+line 1039, col 6:
+calc g.val 1 0 = 0 := h10
+        _ = g.val 0 0 * 0 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 1 0 := rfl
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, mul_zero, sub_zero, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, sub_self,
+      and_true, one_ne_zero, true_and, and_self, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, eig, N, E1, E2]
+.
+line 1043, col 6:
+calc g.val 1 1 = g.val 0 0 := h00_11
+        _ = g.val 0 0 * 1 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 1 1 := rfl
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, mul_zero, sub_zero, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, sub_self,
+      and_true, one_ne_zero, true_and, and_self, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul,
+      Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.empty_mul, Equiv.symm_apply_apply, eig, N, E1, E2]
+...
+line 1048, col 4:
+intro x
+* Try this:
+
+  [apply]     intro g_1
+    simp_all only [gt_iff_lt, not_exists, ne_eq, Fin.isValue, Matrix.sub_apply, Matrix.smul_apply, smul_eq_mul,
+      Fin.forall_fin_two, Matrix.one_apply_eq, mul_one, zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, mul_zero,
+      sub_zero, and_true, one_ne_zero, true_and, QuotientGroup.eq_one_iff, eig, N]
+    obtain ⟨left, right⟩ := h_N_entry
+    ext i j : 2
+    simp_all only [Fin.isValue, Units.val_mul, Units.val_pow_eq_pow_val, Algebra.mul_smul_comm, mul_one,
+      Matrix.smul_apply, smul_eq_mul, Algebra.smul_mul_assoc, one_mul]
+shortened proof!
+.......
+line 1063, col 4:
+intro x
+* Try this:
+
+  [apply]     intro g_1
+    simp_all only [gt_iff_lt, ne_eq, QuotientGroup.eq_one_iff]
+    ext i j : 2
+    simp_all only [Units.val_mul, Algebra.mul_smul_comm, mul_one, Matrix.smul_apply, smul_eq_mul, Algebra.smul_mul_assoc,
+      one_mul]
+shortened proof!
+.....
+line 1074, col 4:
+refine ⟨iff_of_true hc1 ho, iff_of_false ?_ ?_⟩
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, QuotientGroup.eq_one_iff, not_exists, Nat.coprime_self, Set.ncard_eq_one, iff_false,
+      true_and]
+    obtain ⟨w, h⟩ := hc1
+    simp_all only [Set.ncard_singleton, OfNat.one_ne_ofNat, not_false_eq_true]
+shortened proof!
+...
+line 1083, col 4:
+refine ⟨iff_of_false ?_ ?_, iff_of_true hc2 ho⟩
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, QuotientGroup.eq_one_iff, not_exists, Nat.coprime_self, OfNat.ofNat_ne_one,
+      false_iff, true_iff]
+    apply And.intro
+    · apply Aesop.BuiltinRules.not_intro
+      intro a
+      simp_all only [Nat.coprime_self]
+    · exact ho
+shortened proof!
+...
+line 1102, col 4:
+exact ⟨Classical.arbitrary _, fun g hg ↦ by rw [h_trivial g hg, one_smul]⟩
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, one_mem, one_smul, implies_true, exists_const]
+.........
+line 1113, col 6:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, Subgroup.mk_eq_one]
+    obtain ⟨val, property⟩ := z
+    simp_all only [Subgroup.mk_eq_one, SubmonoidClass.mk_pow, Subgroup.orderOf_mk]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [pow_zero, orderOf_eq_one_iff]
+shortened proof!
+.......
+line 1127, col 8:
+rw [h, orderOf_one] at hz_val_order
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Subgroup.mk_eq_one, SubmonoidClass.coe_pow, orderOf_one, z_p]
+shortened proof!
+..WARNING: FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean produced errors (exit code 143)

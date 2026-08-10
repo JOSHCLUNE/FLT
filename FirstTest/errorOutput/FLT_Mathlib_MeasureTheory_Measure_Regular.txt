@@ -1,0 +1,16 @@
+..
+line 36, col 4:
+obtain ⟨U, hUA, Uopen, hμU⟩ :=
+      OuterRegular.outerRegular (hφ.measurableEmbedding.measurableSet_image' hA) r hr
+* Try this:
+
+  [apply]   duper [*, OuterRegular.comap', MeasurableEmbedding.comap_apply, OuterRegular.outerRegular,
+      IsOpenEmbedding.measurableEmbedding, continuous] {preprocessing := full}
+shortened proof!
+........
+line 52, col 42:
+exact Set.preimage_mono hKA
+* Try this:
+
+  [apply]   simp_all only [Set.preimage_subset_preimage_iff]
+.

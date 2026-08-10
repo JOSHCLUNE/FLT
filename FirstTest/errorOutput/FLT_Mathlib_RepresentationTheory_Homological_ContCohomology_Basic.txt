@@ -1,0 +1,96 @@
+..
+line 82, col 12:
+rfl
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+....
+line 88, col 12:
+rfl
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+....
+line 98, col 12:
+rfl
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+...
+line 104, col 4:
+rw [inv_inv, mul_inv_cancel_left]
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearMap.comp_apply, inv_inv, mul_inv_cancel_left]
+shortened proof!
+.
+line 115, col 52:
+lia
+* Try this:
+
+  [apply]   simp_all only [Nat.add_right_cancel_iff]
+..
+line 116, col 27:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 122, col 2:
+subst h1
+* Try this:
+
+  [apply]     subst h1 h2
+    rfl
+shortened proof!
+.
+line 126, col 28:
+lia
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Nat.add_left_cancel_iff]
+....
+line 143, col 12:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Nat.reduceAdd]
+    rfl
+....
+line 151, col 74:
+rw [ih]
+* Try this:
+
+  [apply]   simp_all only
+...
+line 166, col 6:
+rwa [hx g⁻¹] at h1
+* Try this:
+
+  [apply]   simp_all only [mem_invariants, linHom_apply]
+.........
+line 189, col 2:
+subst h
+* Try this:
+
+  [apply]     subst h
+    simp_all only [eqToHom_refl, TopRep.hom_id]
+    simp_all only
+    rfl
+shortened proof!
+..
+line 226, col 58:
+simp
+* Try this:
+
+  [apply]   simp_all only [CochainComplex.next, Nat.add_left_cancel_iff]
+....
+line 237, col 80:
+simp
+* Try this:
+
+  [apply]   simp_all only [CochainComplex.next, Nat.add_left_cancel_iff]

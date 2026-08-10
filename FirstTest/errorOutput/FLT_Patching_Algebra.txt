@@ -1,0 +1,120 @@
+............
+line 77, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff]
+..........
+line 115, col 17:
+simp +contextual only [Set.mem_setOf, Pi.mul_apply, map_mul, implies_true]
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.mul_apply, map_mul, implies_true]
+.
+line 116, col 17:
+simp +contextual only [Set.mem_setOf, Pi.add_apply, RingHom.map_add, implies_true]
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.add_apply, map_add, implies_true]
+.
+line 117, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.one_apply, map_one, implies_true]
+.
+line 118, col 18:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.zero_apply, map_zero, implies_true]
+.
+line 119, col 17:
+simp +contextual only [Set.mem_setOf, Pi.neg_apply, RingHom.map_neg, implies_true]
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Set.mem_setOf_eq, Pi.neg_apply, map_neg, implies_true]
+........
+line 135, col 13:
+rfl
+* Try this:
+
+  [apply]   rfl
+........
+line 171, col 2:
+ext
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe, Subring.subtype_apply]
+    obtain ⟨val, property⟩ := a
+    simp_all only
+    ext : 1
+    simp_all only [Units.coe_map, IsUnit.unit_spec, MonoidHom.coe_coe]
+    simp_all only [Subring.subtype_apply]
+    apply property
+shortened proof!
+............
+line 187, col 8:
+exact hb j hij
+* Try this:
+
+  [apply]   simp_all only [not_forall, gt_iff_lt]
+..................
+line 221, col 2:
+simp [componentMap, UltraProduct.mapRingHom_π]
+* Try this:
+
+  [apply]   simp_all only [RingHom.pi_apply, RingHom.coe_comp, Function.comp_apply, UltraProduct.mapRingHom_π, Ideal.quotientMap_mk,
+      RingHomCompTriple.comp_apply, UltraProduct.π_eq_iff, Filter.eventually_true]
+.............
+line 245, col 4:
+exact fun x ↦ ⟨AddSubgroup.quotient_finite_of_isOpen _ (isOpen_maximalIdeal_pow'' _ _), hn _⟩
+* Try this:
+
+  [apply]     intro x
+    simp_all only [and_true]
+    grind only [finite_of_compact_of_discrete]
+...........
+line 277, col 2:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Pi.evalRingHom_apply]
+    ext x_1 : 1
+    simp_all only [RingHom.pi_apply, RingHom.coe_comp, Function.comp_apply, Pi.evalRingHom_apply]
+shortened proof!
+..
+line 296, col 4:
+simp [UltraProduct.mapRingHom_π]
+* Try this:
+
+  [apply]   simp_all only [RingHom.coe_comp, Function.comp_apply, ofPi_apply, RingHom.pi_apply, RingHom.id_apply,
+      UltraProduct.mapRingHom_π, Ideal.quotientMap_mk]
+....
+line 317, col 52:
+infer_instance
+* Try this:
+
+  [apply]   simp_all only
+.....
+line 331, col 36:
+simp
+* Try this:
+
+  [apply]   simp_all only [Ideal.quotientMap_mk, Function.comp_apply]
+.......................
+line 416, col 4:
+exact AddSubgroup.finiteIndex_of_finite_quotient
+* Try this:
+
+  [apply]   apply AddSubgroup.finiteIndex_of_finite_quotient
+..................................
+line 458, col 2:
+simpa using this
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, map_apply, s]
+....................

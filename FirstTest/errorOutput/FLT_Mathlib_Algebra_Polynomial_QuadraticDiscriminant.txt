@@ -1,0 +1,100 @@
+..
+line 30, col 2:
+ring
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 38, col 2:
+simp only [map_sub, map_mul, map_pow, map_ofNat]
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_ofNat, = map_sub, = map_pow, = map_mul]
+  [apply] grind =>
+    instantiate only [map_ofNat, = map_sub]
+    instantiate only [= map_pow, = map_mul]
+    instantiate only [= map_mul]
+    ring
+shortened proof!
+.......
+line 54, col 53:
+linear_combination hid
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 55, col 77:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, derivative_add, derivative_mul, derivative_C, zero_mul, derivative_X_pow_succ, Nat.cast_one,
+      map_add, map_one, pow_one, zero_add, derivative_X, mul_one, add_zero, Order.lt_two_iff, zero_le, P]
+......
+line 62, col 9:
+linear_combination C (b ^ 2 - 4 * a * c)⁻¹ * hid + hdinv
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 71, col 33:
+simp [h] at hdeg
+* Try these:
+  [apply] grind only [= natDegree_zero]
+  [apply] grind => instantiate only [= natDegree_zero]
+....
+line 74, col 49:
+simp [degree_eq_natDegree hp0, hdeg]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, natDegree_add_C, not_false_eq_true, degree_quadratic, OfNat.ofNat_ne_zero, p]
+.
+line 75, col 4:
+exact ⟨x, by simpa [hp] using hx⟩
+* Try this:
+
+  [apply]     simp_all only [ne_eq, natDegree_add_C, eval_add, eval_mul, eval_C, eval_pow, eval_X, p]
+    apply Exists.intro
+    · exact hx
+.
+line 76, col 4:
+rintro ⟨x, hx⟩
+* Try this:
+
+  [apply]     intro a_1
+    simp_all only [ne_eq, natDegree_add_C, p]
+    obtain ⟨w, h⟩ := a_1
+    apply Polynomial.Splits.of_degree_eq_two
+    · simp_all only [ne_eq, not_false_eq_true, degree_quadratic]
+    · simp_all only [eval_add, eval_mul, eval_C, eval_pow, eval_X]
+      exact h
+shortened proof!
+...
+line 91, col 4:
+rintro ⟨x, hx⟩
+* Try these:
+  [apply] grind only [pow_two, isSquare_iff_exists_sq, quadratic_ne_zero_of_discrim_ne_sq]
+  [apply] grind =>
+    instantiate only [pow_two, isSquare_iff_exists_sq]
+    instantiate only [quadratic_ne_zero_of_discrim_ne_sq]
+shortened proof!
+...
+line 96, col 4:
+exact ⟨x, by linear_combination hx⟩
+* Try this:
+
+  [apply]   duper [*, pow_two] {preprocessing := full}
+.....
+line 110, col 4:
+field_simp
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...
+line 114, col 4:
+field_simp
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!

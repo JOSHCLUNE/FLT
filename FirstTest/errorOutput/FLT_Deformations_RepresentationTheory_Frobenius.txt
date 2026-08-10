@@ -1,0 +1,27 @@
+........................
+line 102, col 4:
+simp [hs]
+* Try this:
+
+  [apply]   simp_all only [Set.isEmpty_coe_sort, IsEmpty.forall_iff, isConj_iff, implies_true, and_self, exists_const]
+....
+line 107, col 8:
+rwa [← Ideal.under, ← hQ₂.over]
+* Try these:
+  [apply] grind only [Ideal.liesOver_iff]
+  [apply] grind => instantiate only [Ideal.liesOver_iff]
+.......
+line 134, col 4:
+subst h₁
+* Try this:
+
+  [apply]     subst h₁
+    simp_all only
+    rfl
+shortened proof!
+..
+line 135, col 14:
+rfl
+* Try this:
+
+  [apply]   duper [*, arithFrobAt'] {preprocessing := full}

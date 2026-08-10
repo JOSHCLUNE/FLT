@@ -1,0 +1,61 @@
+.
+line 30, col 2:
+rwa [IsAbsoluteValue.abv_inv v, _root_.inv_pos]
+* Try this:
+
+  [apply]   simp_all only [AbsoluteValue.pos_iff, ne_eq, map_inv₀, _root_.inv_pos, not_false_eq_true]
+.
+line 34, col 15:
+linarith [map_zero v ▸ hx ▸ hv]
+* Try these:
+  [apply] grind only [!AbsoluteValue.nonpos_iff]
+  [apply] grind => instantiate only [!AbsoluteValue.nonpos_iff]
+...
+line 41, col 4:
+simp only [ne_eq, inv_eq_zero]
+* Try this:
+
+  [apply]   duper [*, inv_pos, ne_zero_of_lt_one, AbsoluteValue.pos_iff, AbsoluteValue.map_zero] {preprocessing := full}
+shortened proof!
+.
+line 42, col 4:
+simp only [map_inv₀, ne_eq, inv_eq_one]
+* Try this:
+
+  [apply]     rename_i x_1
+    simp_all only [map_inv₀, ne_eq, inv_eq_one]
+    obtain ⟨w, h⟩ := x_1
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [lt_self_iff_false]
+shortened proof!
+....
+line 66, col 14:
+rw [← hl]
+* Try this:
+
+  [apply]   simp_all only
+..
+line 67, col 55:
+linarith
+* Try this:
+
+  [apply]   simp_all only [lt_self_iff_false]
+.
+line 76, col 2:
+rwa [AbsoluteValue.pos_iff] at hv ⊢
+* Try this:
+
+  [apply]   simp_all only [AbsoluteValue.pos_iff, ne_eq, not_false_eq_true]
+.
+line 82, col 30:
+rw [map_one, map_pow]
+* Try this:
+
+  [apply]   simp_all only [AbsoluteValue.map_one, AbsoluteValue.map_pow, Std.le_refl]
+.
+line 88, col 15:
+rw [map_one, map_pow]
+* Try this:
+
+  [apply]   simp_all only [AbsoluteValue.map_one, AbsoluteValue.map_pow, Std.le_refl]

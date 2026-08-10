@@ -1,0 +1,73 @@
+.................
+line 136, col 6:
+simp only [one_pow] at h1
+* Try this:
+
+  [apply]   simp_all only [one_pow, tendsto_const_nhds_iff, one_ne_zero]
+shortened proof!
+.....
+line 143, col 4:
+rwa [hval] at hlim
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 147, col 45:
+rw [Finset.sum_range_succ]
+* Try these:
+  [apply] grind only [Finset.sum_range_succ]
+  [apply] grind => instantiate only [Finset.sum_range_succ]
+shortened proof!
+.
+line 148, col 4:
+simp_rw [sub_self, Function.comp_apply, hstep] at hdiff
+* Try this:
+
+  [apply]     simp_all only [Function.comp_apply, sub_self]
+    exact hdiff
+shortened proof!
+..................
+line 200, col 67:
+rw [pow_mul, pow_succ]
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind =>
+    instantiate only [pow_mul]
+    ring
+shortened proof!
+...
+line 224, col 4:
+simpa [norm_pow] using pow_lt_one₀ (norm_nonneg r) hr hm
+* Try this:
+
+  [apply]     simp_all only [ne_eq, norm_pow]
+    apply pow_lt_one₀
+    · simp_all only [norm_nonneg]
+    · simp_all only
+    · simp_all only [ne_eq, not_false_eq_true]
+...
+line 227, col 4:
+ring
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind => instantiate only [pow_mul]
+...
+line 236, col 2:
+simp only [Prod.fst_swap, Prod.snd_swap, mul_comm (p.2 : ℕ) (p.1 : ℕ)]
+* Try this:
+
+  [apply]     simp_all only [Prod.snd_swap, Prod.fst_swap, mul_eq_mul_left_iff, pow_eq_zero_iff', ne_eq]
+    obtain ⟨fst, snd⟩ := p
+    simp_all only
+    smt +mono [*]
+.
+line 240, col 2:
+refine Eq.trans (tsum_congr fun n ↦ ?_)
+    ((tsum_lambert_of_summable r (fun d ↦ (d : 𝕜) ^ k)
+      (fun m ↦ hasSum_geometric_pow_mul_succ hr m.pos.ne')
+      (summable_prod_mul_pow' k hr)).trans (tsum_congr fun N ↦ ?_))
+* Try this:
+
+  [apply]     apply tsum_pow_div_one_sub_eq_tsum_sigma
+    simp_all only
+shortened proof!
