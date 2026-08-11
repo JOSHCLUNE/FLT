@@ -1,0 +1,7 @@
+..............
+line 52, col 42:
+exact Set.preimage_mono hKA
+* Try these:
+  [apply] grind only [Set.preimage_mono]
+  [apply] grind => instantiate only [Set.preimage_mono]
+.

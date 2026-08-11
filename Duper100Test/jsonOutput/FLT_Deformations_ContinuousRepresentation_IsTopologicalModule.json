@@ -1,0 +1,21 @@
+[{"tacticSucceeded": true,
+  "startLine": 53,
+  "startCol": 24,
+  "shortenedStepsCount": 0,
+  "parentName": "Pi.instTopologicalModule",
+  "oldText": "apply continuous_smul",
+  "message": "Try this:\n\n  [apply]   apply ContinuousSMul.continuous_smul",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 54,
+  "startCol": 23,
+  "shortenedStepsCount": 0,
+  "parentName": "Pi.instTopologicalModule",
+  "oldText": "apply continuous_add",
+  "message":
+  "Try these:\n  [apply] grind only [continuous_add]\n  [apply] grind => instantiate only [continuous_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean"}]

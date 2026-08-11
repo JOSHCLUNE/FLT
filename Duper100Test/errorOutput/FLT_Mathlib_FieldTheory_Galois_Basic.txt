@@ -1,0 +1,56 @@
+..
+line 39, col 2:
+exact forall_congr' fun x ↦ (FaithfulSMul.algebraMap_injective L M).eq_iff
+* Try these:
+  [apply] grind only [!FaithfulSMul.algebraMap_injective, #0efe, #a3c0, #af48]
+  [apply] grind only [!FaithfulSMul.algebraMap_injective]
+  [apply] grind =>
+    cases #0efe
+    · instantiate only [!FaithfulSMul.algebraMap_injective, #a3c0]
+    · instantiate only [#af48]
+..
+line 53, col 2:
+exact finrank_eq_two K L
+* Try this:
+
+  [apply]   apply Algebra.IsQuadraticExtension.finrank_eq_two
+..
+line 64, col 4:
+exact Or.inl h1
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 79, col 4:
+exact AlgEquiv.one_apply x
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 80, col 4:
+exact hx
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 87, col 39:
+simpa using algEquiv_eq_one_or_eq K L hσ φ
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Finset.mem_insert, Finset.mem_singleton]
+    apply Algebra.IsQuadraticExtension.algEquiv_eq_one_or_eq
+    simp_all only [ne_eq, not_false_eq_true]
+.......
+line 119, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.one_apply, implies_true, ↓reduceIte]
+.......___....
+line 139, col 2:
+split_ifs with h
+* Try this:
+
+  [apply]   simp_all only [ite_eq_left_iff, not_forall, neg_units_ne_self, imp_false, not_exists, not_not]
+shortened proof!
+........

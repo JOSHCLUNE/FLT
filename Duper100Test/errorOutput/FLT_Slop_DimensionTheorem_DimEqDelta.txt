@@ -1,0 +1,28 @@
+..
+line 56, col 2:
+exact Set.mem_singleton _
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [= Set.mem_singleton_iff]
+  [apply] grind => instantiate only [= Set.mem_singleton_iff]
+.......
+line 78, col 45:
+rw [hIk]
+* Try this:
+
+  [apply]   simp_all only [ENat.WithBot.coe_eq_natCast]
+shortened proof!
+...................
+line 112, col 8:
+exact_mod_cast hle
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Cardinal.ofENat_nat, Set.mem_setOf_eq, Nat.cast_le]
+.
+line 113, col 53:
+rw [hfr]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Cardinal.ofENat_nat, Set.mem_setOf_eq, ENat.WithBot.coe_eq_natCast]
+shortened proof!

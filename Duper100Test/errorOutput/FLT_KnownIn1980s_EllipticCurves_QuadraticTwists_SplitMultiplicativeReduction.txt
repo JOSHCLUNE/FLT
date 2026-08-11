@@ -1,0 +1,203 @@
+..
+line 91, col 30:
+field_simp
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 92, col 31:
+rw [hw]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...
+line 94, col 48:
+exact mul_ne_zero (pow_ne_zero 2 hD) hc₄
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_sub, map_pow, map_mul, mul_eq_zero, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff,
+      or_self]
+...
+line 98, col 53:
+ring
+* Try this:
+  [apply] grind only
+.
+line 100, col 49:
+rw [map_pow]
+* Try these:
+  [apply] grind only [= map_sub, = map_pow]
+  [apply] grind =>
+    instantiate only [= map_sub, = map_pow]
+    ring
+shortened proof!
+......
+line 127, col 2:
+exact not_or.mpr ⟨pow_ne_zero 6 hD, hΔint⟩
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, or_self]
+..........
+line 152, col 4:
+exact (IsDiscreteValuationRing.maximalIdeal R).valuation_eq_one_iff_notMem.mpr
+      fun hmem ↦ hc₄res ((residue_eq_zero_iff W.c₄).mpr hmem)
+* Try this:
+
+  [apply]     simp_all only [map_sub, map_pow, map_mul, ne_eq, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not,
+      valuation_eq_one_iff_notMem, W]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    apply a
+    simp_all only
+..........
+line 176, col 4:
+exact (isIntegral_algHom_iff (IsScalarTower.toAlgHom R K L)
+      (FaithfulSMul.algebraMap_injective K L)).mp h1
+* Try this:
+
+  [apply]   duper [*, isIntegral_algebraMap_iff, RingHom.injective] {preprocessing := full}
+....
+line 181, col 38:
+simp only [← ResidueField.algebraMap_residue]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...........
+line 230, col 2:
+rw [neg_eq_zero] at hB
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...........
+line 259, col 2:
+linear_combination hdisc
+    + (residue R c₄' * residue R t' - residue R (E.integralModel R).a₁ * residue R c₄') * hA
+    - 4 * residue R c₄' * hB
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 282, col 61:
+rw [← hkey, h0, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [map_mul, map_add, map_sub, mul_zero, zero_eq_neg, residue_eq_zero_iff, mem_maximalIdeal,
+      mem_nonunits_iff, map_pow, neg_eq_zero, not_false_eq_true]
+......
+line 289, col 4:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   simp_all only [map_sub, map_pow, map_mul, ne_eq, map_add, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff,
+      not_not, ResidueField.algebraMap_eq, not_true_eq_false, not_false_eq_true, c₄', κ']
+shortened proof!
+...
+line 292, col 4:
+rw [show (4 : ResidueField R) = 2 * 2 by norm_num, h2, mul_zero]
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 294, col 4:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   simp_all only [map_add, map_sub, map_mul, ne_eq, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not,
+      ResidueField.algebraMap_eq, not_true_eq_false, not_false_eq_true, map_pow, c₄', κ', D]
+shortened proof!
+.....
+line 300, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hDmap) hc₄map
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.....
+line 305, col 43:
+exact residue_integralModel_c₆_ne_zero E R
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 307, col 4:
+rcases mul_eq_zero.mp (show residue R c₄'
+        * (residue R t' + residue R (E.integralModel R).a₁) = 0 by linear_combination hA)
+      with hz | hz
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+........
+line 325, col 4:
+linear_combination (residue R t') ^ 6 * hB
+      - (residue R t') ^ 6 * residue R n' * residue R c₄' * h2
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 330, col 2:
+rw [hκW_eq, hWc₄eq, show (0 : ResidueField R) ^ 2 + 0 = 0 from by ring, mul_zero, hκW0,
+    neg_zero, mul_zero]
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 355, col 63:
+rw [← hkey, h0, mul_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 359, col 36:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.
+line 360, col 10:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+..
+line 362, col 4:
+apply mul_left_cancel₀ hc₄0
+* Try this:
+
+  [apply]     simp_all only [map_mul, map_add, map_sub, ne_eq, map_pow, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff,
+      not_not, ResidueField.algebraMap_eq, mul_neg, map_neg]
+    grind only
+shortened proof!
+....................................
+line 467, col 61:
+rw [← hkey, h0, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, neg_eq_zero,
+      residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, mul_zero, zero_eq_neg, not_false_eq_true, P, t', n']
+......
+line 477, col 40:
+rfl
+* Try this:
+
+  [apply]     simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, ne_eq, P,
+      t', n']
+    rfl
+..
+line 480, col 15:
+rw [h0, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, ne_eq,
+      map_zero, P, t', n']
+.

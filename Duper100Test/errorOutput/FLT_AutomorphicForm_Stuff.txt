@@ -1,0 +1,103 @@
+....
+line 49, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 54, col 33:
+ring
+* Try this:
+  [apply] grind only
+..
+line 55, col 29:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 77, col 6:
+simpa
+* Try this:
+
+  [apply]   simp_all only [map_neg, sub_neg_eq_add, mul_coeff_zero, coeff_add, coeff_X_zero, coeff_C_zero, zero_add]
+...._...
+line 83, col 24:
+lia
+* Try this:
+
+  [apply]   simp_all only [lt_add_iff_pos_left, Order.lt_add_one_iff, zero_le]
+.
+line 84, col 8:
+simp [hp']
+* Try this:
+
+  [apply]   simp_all only [lt_add_iff_pos_left, Order.lt_add_one_iff, zero_le]
+...
+line 90, col 83:
+simp [H.2]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, orderOf_eq_one_iff, not_false_eq_true]
+.
+line 96, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.constRingHom_eq_algebraMap, Pi.algebraMap_apply, Algebra.algebraMap_self,
+      RingHomCompTriple.comp_apply, Finset.prod_const, Finset.card_univ]
+..
+line 102, col 2:
+grind
+* Try these:
+  [apply] grind only [#9155, #d7fc, #fa26, #abb9]
+  [apply] grind only
+  [apply] grind =>
+    cases #9155
+    · instantiate only [#d7fc, #fa26]
+    · instantiate only [#abb9]
+................._..
+line 139, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_lt_coe, zero_le]
+...
+line 147, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_mul, zero_le, zero_lt_one]
+.......
+line 180, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [symm_comp_self, Measure.map_id]
+.
+line 194, col 80:
+ext
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [smul_apply, smul_symm_apply]
+shortened proof!
+.......
+line 230, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [Homeomorph.homeomorph_mk_coe, ContinuousMulEquiv.toMulEquiv_eq_coe, MulEquiv.toEquiv_eq_coe,
+      EquivLike.coe_coe, MulEquivClass.coe_toMulEquiv]
+    rfl
+shortened proof!
+.........
+line 273, col 4:
+rintro x _ ⟨t, ht, rfl⟩
+* Try this:
+
+  [apply]     intro c
+    obtain ⟨val, property⟩ := c
+    apply Measurable.subtype_mk
+    simp_all only
+    apply MeasurableSMul.measurable_smul_const
+shortened proof!

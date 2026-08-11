@@ -1,0 +1,78 @@
+..
+line 37, col 48:
+simp_all [add_mem]
+* Try this:
+
+  [apply]     intro a_1 a_2 a_3
+    simp_all only [Set.mem_setOf_eq, Pi.add_apply]
+    apply AddMemClass.add_mem
+    · simp_all only
+    · simp_all only
+.
+line 38, col 18:
+simp [zero_mem]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.zero_apply, zero_mem, eventually_true]
+.
+line 39, col 25:
+filter_upwards [hv]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_setOf_eq, Pi.smul_apply']
+    apply Filter.Eventually.mono
+    · exact hv
+    · intro x a
+      apply SMulMemClass.smul_mem
+      simp_all only
+shortened proof!
+...X....X....X.
+line 67, col 6:
+exact if_pos hi
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Pi.single_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `DFinsupp.filter_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finsupp.single_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.notMem_empty` annotated with `@[grind ←]`
+* Try this:
+  [apply] grind only
+.X.X_.X.X..
+line 71, col 11:
+simp_all
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Submodule.mem_pi', mem_eventuallyProd, eventually_true]
+........
+line 132, col 4:
+change UltraProduct.π A F _ = _
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_comp, Function.comp_apply]
+    rfl
+shortened proof!
+.................................................................................................
+line 358, col 6:
+simp only [LinearMap.pi_apply, dif_pos (Nonempty.intro (hi.choose)),
+        AlgEquiv.toLinearMap_apply, map_mul, Pi.mul_apply, g]
+* Try this:
+
+  [apply]     simp_all only [eventually_and, LinearMap.pi_apply, Pi.mul_apply, g]
+    obtain ⟨left, right⟩ := H
+    obtain ⟨w, h⟩ := hi
+    split
+    next h_1 => simp_all only [AlgEquiv.toLinearMap_apply, map_mul]
+    next h_1 => simp_all only [not_nonempty_iff, LinearMap.zero_apply, mul_zero]
+....................
+line 416, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [eventually_and, RingEquiv.toRingHom_eq_coe, RingEquiv.symm_comp, RingHomCompTriple.comp_eq]
+......
+line 444, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [eventually_and, RingEquiv.toRingHom_eq_coe, RingEquiv.symm_comp, RingHomCompTriple.comp_eq]
+..

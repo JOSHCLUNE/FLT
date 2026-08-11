@@ -1,0 +1,90 @@
+.....
+line 78, col 4:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [top_ne_bot, not_false_eq_true]
+...................
+line 110, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Fintype.card_pi, Finset.prod_const, Finset.card_univ, Fintype.card_fin, f']
+...
+line 116, col 4:
+obtain ⟨i, hi⟩ := this
+* Try this:
+
+  [apply]     simp_all only [n]
+    obtain ⟨w, h⟩ := this
+    apply Exists.intro
+    · exact h
+shortened proof!
+.......
+line 124, col 4:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [top_ne_bot, not_false_eq_true]
+.................
+line 229, col 4:
+simp only [map_add, hv α β h, hw α β h]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_add, #1550, #81be]
+  [apply] grind only [map_add]
+  [apply] grind => instantiate only [#1550, #81be, map_add]
+...
+line 233, col 4:
+simp only [LinearMap.map_smul_of_tower, hv α β h]
+* Try this:
+
+  [apply]   simp_all only [map_smul]
+....
+line 241, col 42:
+continuity
+* Try this:
+
+  [apply]     simp_all only
+    apply continuous_apply
+....
+line 243, col 13:
+rfl
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_restrictScalars]
+    rfl
+...............
+line 321, col 15:
+ext
+* Try this:
+
+  [apply]     ext x_1 : 1
+    simp_all only [ofPi_apply]
+shortened proof!
+...................
+line 395, col 6:
+rfl
+* Try this:
+
+  [apply]   simp_all only [LinearMap.id_comp, LinearMap.comp_id]
+..................................
+line 468, col 6:
+obtain ⟨b, hb⟩ := Submodule.Quotient.mk_surjective _ (a i)
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, UltraProduct.map_πₗ, factor_comp_apply, s]
+shortened proof!
+....
+line 477, col 2:
+simpa using this
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, map_apply, s]
+.....
+line 493, col 4:
+exact IsModuleTopology.continuous_of_linearMap _
+* Try these:
+  [apply] grind only [IsModuleTopology.continuous_of_linearMap]
+  [apply] grind => instantiate only [IsModuleTopology.continuous_of_linearMap]
+.........................................

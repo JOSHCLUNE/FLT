@@ -1,0 +1,12 @@
+.
+line 53, col 24:
+apply continuous_smul
+* Try this:
+
+  [apply]   apply ContinuousSMul.continuous_smul
+.
+line 54, col 23:
+apply continuous_add
+* Try these:
+  [apply] grind only [continuous_add]
+  [apply] grind => instantiate only [continuous_add]

@@ -1,0 +1,32 @@
+......
+line 52, col 60:
+rw [hQ]
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 54, col 8:
+rw [hQ, ← derivative_map]
+* Try this:
+
+  [apply]     subst hQ
+    simp_all only [natDegree_map, derivative_map]
+shortened proof!
+..
+line 56, col 8:
+rw [hQmonic.natDegree_map, ← hQmonic.natDegree_map (algebraMap R K), hQ]
+* Try this:
+
+  [apply]     subst hQ
+    simp_all only [natDegree_map, derivative_map]
+shortened proof!
+.
+line 58, col 2:
+rw [derivative_map]
+* Try this:
+
+  [apply]     subst hQ
+    simp_all only [natDegree_map, derivative_map]
+    apply Polynomial.map_dvd
+    simp_all only
+shortened proof!

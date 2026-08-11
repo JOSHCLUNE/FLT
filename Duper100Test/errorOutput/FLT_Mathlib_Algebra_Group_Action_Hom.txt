@@ -1,0 +1,76 @@
+..
+line 27, col 45:
+simp
+* Try these:
+  [apply] grind only [smul_algebraMap]
+  [apply] grind => instantiate only [smul_algebraMap]
+.
+line 28, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_one]
+    rfl
+shortened proof!
+.
+line 29, col 23:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    rfl
+shortened proof!
+...
+line 30, col 31:
+rfl
+* Try this:
+
+  [apply]   rfl
+.
+line 31, col 23:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_add]
+    rfl
+shortened proof!
+.......
+line 82, col 17:
+ext f
+* Try this:
+
+  [apply]     simp_all only [map_one]
+    rfl
+shortened proof!
+.
+line 83, col 21:
+ext f
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    rfl
+shortened proof!
+.
+line 84, col 18:
+ext f
+* Try this:
+
+  [apply]     simp_all only [map_zero]
+    rfl
+shortened proof!
+.
+line 85, col 21:
+ext f
+* Try this:
+
+  [apply]     simp_all only [map_add]
+    rfl
+shortened proof!
+.
+line 86, col 20:
+ext f
+* Try this:
+
+  [apply]     simp_all only [commutes]
+    rfl
+shortened proof!

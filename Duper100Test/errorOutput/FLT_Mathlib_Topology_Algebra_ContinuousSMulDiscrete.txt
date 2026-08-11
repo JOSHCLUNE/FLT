@@ -1,0 +1,28 @@
+...
+line 40, col 6:
+ext
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [Set.mem_preimage, Set.mem_singleton_iff, Set.mem_iUnion, Set.mem_prod, Set.mem_setOf_eq,
+      exists_eq_right']
+shortened proof!
+...
+line 47, col 2:
+rwa [← continuousSMulDiscrete_iff]
+* Try these:
+  [apply] grind only [continuousSMulDiscrete_iff]
+  [apply] grind => instantiate only [continuousSMulDiscrete_iff]
+.
+line 51, col 2:
+rwa [continuousSMulDiscrete_iff]
+* Try these:
+  [apply] grind only [continuousSMulDiscrete_iff]
+  [apply] grind => instantiate only [continuousSMulDiscrete_iff]
+...
+line 58, col 4:
+exact h ▸ isOpen_empty
+* Try this:
+
+  [apply]   simp_all only [isOpen_empty]
+...

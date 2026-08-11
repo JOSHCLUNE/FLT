@@ -1,0 +1,39 @@
+......
+line 63, col 60:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+..............................._...
+line 131, col 52:
+positivity
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 132, col 6:
+simpa [Valuation.mem_integer_iff] using this
+* Try this:
+
+  [apply]     simp_all only [Valued.toNormedField.norm_le_one_iff, Subring.coe_subtype, Subtype.range_coe_subtype,
+      SetLike.setOf_mem_eq, SetLike.mem_coe]
+    exact this
+........
+line 147, col 4:
+simp [H, spectralNorm_zero]
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [spectralNorm_zero]
+  [apply] grind => instantiate only [spectralNorm_zero]
+...........
+line 181, col 41:
+rw [hτ x hx, hσ x hx]
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, #1c04, #f11f]
+  [apply] grind only [usr Set.mem_setOf_eq]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [#1c04, #f11f]
+._.......

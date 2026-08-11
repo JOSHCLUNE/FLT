@@ -1,0 +1,22 @@
+[{"tacticSucceeded": true,
+  "startLine": 30,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "Topology.IsOpenEmbedding.isFiniteMeasureOnCompacts_comap",
+  "oldText":
+  "exact IsFiniteMeasureOnCompacts.lt_top_of_isCompact (hK.image hφ.continuous)",
+  "message":
+  "Try this:\n\n  [apply]     apply MeasureTheory.IsFiniteMeasureOnCompacts.lt_top_of_isCompact\n    apply IsCompact.image\n    · simp_all only\n    · apply Topology.IsOpenEmbedding.continuous\n      simp_all only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/MeasureTheory/Measure/Typeclasses/Finite.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 29,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "Topology.IsOpenEmbedding.isFiniteMeasureOnCompacts_comap",
+  "oldText": "rw [MeasurableEmbedding.comap_apply hφ.measurableEmbedding]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/MeasureTheory/Measure/Typeclasses/Finite.lean"}]

@@ -1,0 +1,332 @@
+.............................
+line 89, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, IsLocalization.coe_liftAlgHom, IsRoot.def, P, φ]
+    ext x_1 : 1
+    simp_all only [AlgHom.coe_comp, IsLocalization.coe_liftAlgHom, AlgHom.toRingHom_eq_coe, AlgEquiv.coe_toAlgHom,
+      IsScalarTower.coe_toAlgHom', Function.comp_apply, AlgEquiv.symm_apply_apply, IsLocalization.lift_eq,
+      RingHom.coe_coe]
+shortened proof!
+...
+line 92, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, IsLocalization.coe_liftAlgHom, IsRoot.def, P, φ]
+    ext : 1
+    simp_all only [AlgHom.coe_comp, IsLocalization.coe_liftAlgHom, AlgHom.toRingHom_eq_coe, AlgEquiv.coe_toAlgHom,
+      Function.comp_apply, StandardEtalePresentation.equivRing_symm_X, IsScalarTower.coe_toAlgHom',
+      ResidueField.algebraMap_eq, StandardEtalePair.lift_X]
+shortened proof!
+.......
+line 112, col 6:
+exact P.ker_algebraMap_residueField.symm
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, IsScalarTower.coe_toAlgHom, Ideal.ker_algebraMap_residueField, φ', φ]
+..
+line 115, col 68:
+rfl
+* Try this:
+
+  [apply]     simp_all only [IsScalarTower.coe_toAlgHom, ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, Ideal.mk_ker, φ', φ]
+    ext x : 1
+    simp_all only [Ideal.mem_comap, RingHom.coe_coe, RingHom.mem_ker, residue_eq_zero_iff, mem_maximalIdeal,
+      mem_nonunits_iff]
+..
+line 116, col 77:
+simp
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, AlgHom.commutes, Algebra.algebraMap_self, RingHom.id_apply,
+      φ', φ]
+......
+line 120, col 69:
+simp [ψ']
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Algebra.TensorProduct.lift_tmul, AlgHom.coe_comp,
+      Function.comp_apply, map_one, Algebra.ofId_apply, AlgHom.coe_id, id_eq, one_mul, φ', φ, ψ']
+......
+line 126, col 94:
+simpa
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, ne_eq, Ideal.span_singleton_eq_top, not_false_eq_true, ψ',
+      φ', φ]
+....
+line 130, col 8:
+congr 1
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Submodule.span_singleton_le_iff_mem, ψ', φ', φ]
+    ext x : 1
+    simp_all only [Ideal.mem_comap, RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply,
+      Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self, RingHom.id_apply, Algebra.TensorProduct.lift_tmul,
+      AlgHom.coe_comp, Algebra.ofId_apply, AlgHom.coe_id, id_eq, mul_one]
+shortened proof!
+.....
+line 135, col 59:
+ring
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, add_sub_cancel, ψ', φ', φ]
+...........
+line 146, col 49:
+infer_instance
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, ψ', Q, φ', φ]
+    apply IsLocalRing.maximalIdeal.isMaximal
+..
+line 147, col 71:
+simp [ψ']
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Algebra.TensorProduct.lift_tmul, AlgHom.coe_comp,
+      Function.comp_apply, map_one, Algebra.ofId_apply, AlgHom.coe_id, id_eq, one_mul, ψ', Q, φ', φ]
+.......
+line 153, col 15:
+simp [ψ']
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, RingHom.coe_comp, Function.comp_apply,
+      Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self, RingHom.id_apply, Algebra.TensorProduct.lift_tmul,
+      AlgHom.coe_comp, Algebra.ofId_apply, AlgHom.coe_id, id_eq, mul_one, AlgHom.commutes, ψ', Q, φ', φ]
+.....
+line 156, col 20:
+simp [ψ']
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, RingHom.coe_comp, Function.comp_apply,
+      Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.lift_tmul, AlgHom.coe_comp, map_one,
+      Algebra.ofId_apply, AlgHom.coe_id, id_eq, one_mul, ψ', Q, φ', φ]
+..
+line 158, col 6:
+rw [← hQP', Ideal.comap_comap]
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, ψ', Q, φ', φ]
+shortened proof!
+.....
+line 163, col 6:
+simp [mul_sub, ← map_mul, (he.idem _).eq]
+* Try this:
+
+  [apply]     subst hPeq
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, IsIdempotentElem.mul_one_sub_self, zero_mem, ψ', Q, φ', φ]
+..................
+line 190, col 2:
+simpa [Module.finrank_eq_card_chooseBasisIndex] using Fintype.card_pos
+* Try this:
+
+  [apply]   smt +mono [*, *, finrank_pos_iff_of_free]
+.
+line 196, col 2:
+constructor
+* Try these:
+  [apply] grind only [Algebra.finrank_eq_one_iff_bijective_algebraMap]
+  [apply] grind => instantiate only [Algebra.finrank_eq_one_iff_bijective_algebraMap]
+shortened proof!
+.
+line 210, col 10:
+simpa using ha₀
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, Algebra.toRingHom_ofId, ResidueField.algebraMap_eq, eval₂_at_apply,
+      residue_eq_zero_iff, not_false_eq_true]
+..
+line 213, col 28:
+simpa using ha₀
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, ne_eq, Algebra.toRingHom_ofId, eval₂_at_apply, residue_eq_zero_iff]
+..
+line 214, col 88:
+simp [φ]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, ne_eq, AdjoinRoot.liftAlgHom_of, Algebra.ofId_apply, φ]
+........
+line 223, col 4:
+simpa using ha₀'
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, ne_eq, derivative_mul, derivative_sub, derivative_X, derivative_C, sub_zero,
+      one_mul, derivative_map, eval_add, eval_map_apply, eval_mul, eval_sub, eval_X, eval_C, sub_self, zero_mul, add_zero,
+      residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not, not_true_eq_false, not_false_eq_true, φ]
+.....
+line 229, col 4:
+exact zero_mem _
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, ne_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, zero_mem, φ]
+........
+line 238, col 60:
+simpa [hφ', φ]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, AdjoinRoot.liftAlgHom_mk,
+      Algebra.toRingHom_ofId, eval₂_at_apply, isUnit_iff_ne_zero, ne_eq, residue_eq_zero_iff, mem_maximalIdeal,
+      mem_nonunits_iff, not_true_eq_false, not_false_eq_true, φ, φ', root]
+...
+line 241, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, Algebra.TensorProduct.includeRight_apply, φ, φ',
+      root]
+.........
+line 256, col 28:
+simpa using ha₀
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, Algebra.toRingHom_ofId, ResidueField.algebraMap_eq, eval₂_at_apply,
+      residue_eq_zero_iff, not_false_eq_true]
+..
+line 257, col 88:
+simp [φ]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AdjoinRoot.liftAlgHom_of, Algebra.ofId_apply, φ]
+...........
+line 277, col 10:
+exact residue_surjective
+* Try this:
+
+  [apply]     simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, φ]
+    apply IsLocalRing.residue_surjective
+....
+line 280, col 56:
+simp [φ]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, AdjoinRoot.liftAlgHom_mk, eval₂_at_apply, φ]
+..
+line 283, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, AdjoinRoot.liftAlgHom_mk, eval₂_at_apply, φ]
+    ext : 1
+    simp_all only [AlgHom.coe_comp, IsScalarTower.coe_toAlgHom', Function.comp_apply, AdjoinRoot.liftAlgHom_root,
+      Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self, RingHomCompTriple.comp_apply,
+      Algebra.TensorProduct.includeRight_apply]
+shortened proof!
+...
+line 286, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, AdjoinRoot.liftAlgHom_mk, eval₂_at_apply, coe_aeval_eq_eval,
+      Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self, RingHomCompTriple.comp_apply, φ]
+...........
+line 296, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, AdjoinRoot.aeval_eq, AdjoinRoot.mk_self, map_zero, φ]
+.....
+line 301, col 6:
+rw [ha]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, AlgHom.toRingHom_eq_coe, AdjoinRoot.toRingHom_liftAlgHom,
+      Algebra.toRingHom_ofId, RingHom.mem_ker, Algebra.TensorProduct.includeRight_apply,
+      Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self, RingHomCompTriple.comp_apply, φ]
+shortened proof!
+...
+line 307, col 74:
+exact this
+* Try this:
+
+  [apply]   exact this
+...........
+line 329, col 6:
+exact congr($hg (1 ⊗ₜ x)).symm
+* Try this:
+
+  [apply]   simp_all only [AlgHom.coe_comp, AlgHom.coe_restrictScalars', Function.comp_apply,
+      Algebra.TensorProduct.includeRight_apply, IsScalarTower.coe_toAlgHom', ResidueField.algebraMap_eq, f', g']
+.....
+line 334, col 4:
+simpa [H, f'] using hx
+* Try this:
+
+  [apply]   simp_all only [AlgHom.coe_comp, AlgHom.coe_restrictScalars', Function.comp_apply,
+      Algebra.TensorProduct.includeRight_apply, AlgHom.toRingHom_eq_coe, RingHom.coe_coe, ne_eq, map_eq_zero,
+      residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not, f', g']
+....
+line 338, col 2:
+simp [ResidueField.map_residue, H]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.coe_comp, AlgHom.coe_restrictScalars', Function.comp_apply,
+      Algebra.TensorProduct.includeRight_apply, AlgHom.toRingHom_eq_coe, ResidueField.map_residue, RingHom.coe_coe, f',
+      g']
+.
+line 343, col 2:
+obtain ⟨c, hc⟩ : ∃ c, c * (b - a) * (b - a) + eval a (derivative p) * (b - a) = 0 := by
+    have : (taylor a p).eval (b - a) = 0 := by
+      rw [taylor_eval]; simp [hb]
+    rw [eval_eq_sum_range' (n := (taylor (b - a) p).natDegree + 2),
+      Finset.sum_range_succ',  Finset.sum_range_succ'] at this
+    · simp only [natDegree_taylor, pow_add, pow_one, ← mul_assoc, ← Finset.sum_mul, zero_add,
+        taylor_coeff_one, taylor_coeff_zero, ha, pow_zero, mul_one, add_zero] at this
+      exact ⟨_, this⟩
+    · simp
+* Try this:
+
+  [apply]     simp_all only [mem_maximalIdeal, mem_nonunits_iff, not_not]
+    apply IsLocalRing.eq_of_eval_eq_zero_of_not_isUnit_sub
+    · exact ha
+    · simp_all only
+    · simp_all only [not_false_eq_true]
+    · simp_all only
+shortened proof!
+.................
+line 383, col 4:
+rw [← residue_ne_zero_iff_isUnit]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.mem_ker, RingHom.coe_coe, AlgHom.coe_comp, IsScalarTower.coe_toAlgHom',
+      ResidueField.algebraMap_eq, Function.comp_apply, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not,
+      P]
+shortened proof!
+............................
+line 427, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, AlgHom.id_toRingHom]
+    ext x : 1
+    simp_all only [RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply, AlgEquiv.apply_symm_apply, RingHom.id_apply]
+shortened proof!
+...........
+line 435, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, AlgHom.id_toRingHom]
+    ext x : 1
+    simp_all only [RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply, AlgEquiv.symm_apply_apply, RingHom.id_apply]
+shortened proof!
+.

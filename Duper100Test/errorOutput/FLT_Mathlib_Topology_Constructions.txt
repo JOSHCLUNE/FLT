@@ -1,0 +1,27 @@
+.
+line 22, col 59:
+simp
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.mem_range]
+  [apply] grind => instantiate only [Set.mem_range]
+..
+line 33, col 2:
+change Continuous (fun (x : (j : J) → g j) w ↦ (p w) (x (r w)))
+* Try this:
+
+  [apply]     apply continuous_pi
+    intro i
+    simp_all only [Pi.semialgHomPi_apply]
+    apply Continuous.comp'
+    · simp_all only
+    · apply continuous_apply
+shortened proof!
+....
+line 45, col 2:
+exact Filter.tendsto_map'_iff.mp ((hg d).tendsto x)
+* Try this:
+
+  [apply]     simp_all only [Filter.tendsto_map'_iff]
+    apply Continuous.tendsto
+    apply hg

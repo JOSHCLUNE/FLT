@@ -1,0 +1,24 @@
+.......
+line 81, col 14:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 82, col 20:
+simp [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 83, col 13:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply, smul_add, map_add]
+.
+line 93, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl

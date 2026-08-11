@@ -1,0 +1,174 @@
+..X.X.X..
+line 75, col 4:
+intro x hx
+* Try this:
+
+  [apply]     intro x a_1
+    simp_all only [Multiset.mem_map, Sym.mem_coe, Subtype.exists, exists_and_right, exists_eq_right]
+    obtain ⟨w, h⟩ := a_1
+    apply Submodule.mem_span_of_mem
+    simp_all only [SetLike.mem_coe]
+shortened proof!
+..
+line 79, col 2:
+rwa [Multiset.card_map, Sym.card_coe] at h
+* Try this:
+
+  [apply]     simp_all only [Multiset.mem_map, Sym.mem_coe, Subtype.exists, exists_and_right, exists_eq_right, forall_exists_index,
+      Multiset.card_map, Sym.card_coe]
+    exact h
+.....
+line 89, col 6:
+simp [monomial]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 103, col 4:
+exact monomial_mem s a
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe]
+    apply _private.FLT.Slop.DimensionTheorem.GrowthLeDelta.0.DimensionTheorem.monomial_mem
+............
+line 126, col 4:
+exact Finset.sum_eq_zero fun i _ => hw (c i) (hc i (Set.mem_univ i)) i
+* Try this:
+
+  [apply]   simp_all only [Submodule.mem_pi, Set.mem_univ, forall_const, Finset.sum_const_zero]
+....
+line 130, col 6:
+rw [Fintype.range_linearCombination R w]
+* Try this:
+
+  [apply]   simp_all only [LinearMap.ker_codRestrict, Fintype.range_linearCombination, SetLike.coe_mem, f]
+shortened proof!
+..
+line 132, col 4:
+exact ⟨c, Subtype.ext hc⟩
+* Try this:
+
+  [apply]     simp_all only [LinearMap.ker_codRestrict, f]
+    obtain ⟨val, property⟩ := y
+    subst hc
+    apply Exists.intro
+    · rfl
+.....
+line 136, col 39:
+rw [Submodule.liftQ_apply]
+* Try this:
+
+  [apply]     subst hc
+    simp_all only [Submodule.liftQ_apply, f]
+shortened proof!
+..
+line 145, col 8:
+rw [Finset.sum_const, Finset.card_univ, nsmul_eq_mul]
+* Try this:
+
+  [apply]   simp_all only [Finset.sum_const, Finset.card_univ, nsmul_eq_mul, f]
+...
+line 159, col 4:
+rw [hq, span_pow_eq_span_monomial, ← Ideal.submodule_span_eq]
+* Try this:
+
+  [apply]     subst hq
+    simp_all only [Finset.one_le_card]
+    apply _private.FLT.Slop.DimensionTheorem.GrowthLeDelta.0.DimensionTheorem.span_pow_eq_span_monomial
+......
+line 167, col 4:
+have h := monomial_mem s a
+* Try this:
+
+  [apply]   duper [*, Ideal.mem_span_range_self] {preprocessing := full}
+shortened proof!
+........
+line 188, col 6:
+haveI : Subsingleton (R ⧸ (q ^ 0 : Ideal R)) := by
+        rw [pow_zero, Ideal.one_eq_top]
+        exact Submodule.Quotient.subsingleton_iff.mpr rfl
+* Try this:
+
+  [apply]     subst hq
+    simp_all only [Finset.one_le_card, pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff,
+      Module.length_eq_zero, zero_add, one_pow, mul_one, zero_le]
+shortened proof!
+.......
+line 200, col 53:
+omega
+* Try this:
+
+  [apply]     subst hq
+    simp_all only [le_add_iff_nonneg_left, zero_le, Nat.cast_mul, Nat.cast_pow, Nat.cast_add, Nat.cast_one,
+      add_le_add_iff_left, Nat.one_le_ofNat]
+........
+line 215, col 12:
+exact mul_le_mul_left harith _
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 217, col 12:
+push_cast
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 221, col 2:
+exact key n
+* Try this:
+
+  [apply]     subst hq
+    simp_all only [Finset.one_le_card, Nat.cast_mul, Nat.cast_pow, Nat.cast_add, Nat.cast_one, ne_eq]
+...
+line 230, col 45:
+rw [← Ideal.submodule_span_eq, hspan]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 237, col 8:
+rw [pow_zero, Ideal.one_eq_top]
+* Try this:
+
+  [apply]     subst hspan
+    simp_all only [pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff]
+shortened proof!
+...
+line 241, col 8:
+rfl
+* Try this:
+
+  [apply]   duper [*, WithBot.coe_zero] {preprocessing := full}
+.
+line 242, col 6:
+simp [h0]
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.....
+line 249, col 35:
+omega
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 251, col 6:
+rw [← hspan, Finset.card_eq_zero.mp hcard0, Finset.coe_empty, Submodule.span_empty]
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Submodule.spanFinrank_eq_zero_iff_eq_bot, IsNoetherian.noetherian]
+  [apply] grind =>
+    instantiate only [Submodule.spanFinrank_eq_zero_iff_eq_bot]
+    instantiate only [IsNoetherian.noetherian]
+.....
+line 263, col 6:
+exact (maximalIdeal.isMaximal R).isPrime.radical
+* Try these:
+  [apply] grind only [Ideal.IsPrime.radical, Ideal.IsMaximal.isPrime']
+  [apply] grind =>
+    instantiate only [Ideal.IsPrime.radical]
+    instantiate only [Ideal.IsMaximal.isPrime']
+....

@@ -1,0 +1,7 @@
+....................
+line 54, col 2:
+simpa [VariableChange.baseChange, VariableChange.map] using huK
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......

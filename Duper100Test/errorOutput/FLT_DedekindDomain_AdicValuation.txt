@@ -1,0 +1,268 @@
+......
+line 58, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [WithZero.coe_inj]
+    rfl
+.
+line 62, col 2:
+obtain ⟨y, hnz, hyx⟩ := WithZero.exists_ne_zero_and_lt hx
+* Try this:
+
+  [apply]   duper [*, WithZero.exists_exp_neg_natCast_lt_and_lt, WithZero.exp, toAdd_one] {preprocessing := full}
+shortened proof!
+.
+line 76, col 2:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [map_zero, nonpos_iff_eq_zero, WithZero.coe_ne_zero]
+shortened proof!
+....
+line 85, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+* Try this:
+
+  [apply]   simp_all only [ofAdd_neg, WithZero.coe_inv, ne_eq, Submodule.span_eq_bot, Set.mem_singleton_iff, imp_false, forall_eq,
+      not_false_eq_true]
+.....
+line 100, col 4:
+apply intValuation_le_one
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply IsDedekindDomain.HeightOneSpectrum.intValuation_le_one
+.....
+line 105, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+* Try this:
+
+  [apply]     subst hn
+    simp_all only [WithZero.exp_neg, ne_eq, ofAdd_neg, WithZero.coe_inv, inv_eq_zero, WithZero.coe_ne_zero,
+      not_false_eq_true, Submodule.span_eq_bot, Set.mem_singleton_iff, imp_false, forall_eq]
+...................
+line 149, col 4:
+rw [Valuation.ne_zero_iff]
+* Try this:
+
+  [apply]   simp_all only [mem_nonZeroDivisors_iff_ne_zero, ne_eq, FaithfulSMul.algebraMap_eq_zero_iff, not_false_eq_true,
+      map_eq_zero]
+shortened proof!
+..
+line 152, col 4:
+rw [mul_ne_zero_iff]
+* Try this:
+
+  [apply]   simp_all only [mem_nonZeroDivisors_iff_ne_zero, ne_eq, FaithfulSMul.algebraMap_eq_zero_iff, not_false_eq_true,
+      map_eq_zero, mul_eq_zero, Units.ne_zero, or_self]
+shortened proof!
+............
+line 168, col 2:
+exact lt_of_le_of_lt hval hγu
+* Try this:
+  [apply] grind only
+.........................
+line 217, col 6:
+rfl
+* Try this:
+
+  [apply]     simp_all only [sub_zero, WithVal.equiv_symm_apply, OrderMonoidIso.toMulEquiv_eq_coe, Units.coe_mapEquiv,
+      OrderMonoidIso.coe_mulEquiv, valueGroup₀_equiv_withZeroMulInt_apply, γ']
+    rfl
+.........
+line 234, col 4:
+exact Subtype.coe_prop x
+* Try this:
+
+  [apply]   simp_all only [RingHom.coe_range, Subtype.coe_prop]
+.
+line 235, col 2:
+simp only [RingHom.coe_range, ← Set.range_comp']
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_range]
+    obtain ⟨val, property⟩ := x
+    ext x : 1
+    simp_all only [Set.mem_image, Set.mem_range, exists_exists_eq_and, algebraMap_adicCompletionIntegers_apply,
+      WithVal.equiv_symm_apply]
+    rfl
+shortened proof!
+..............
+line 258, col 2:
+rw [algebraMap_adicCompletion, Function.comp_apply] at ha
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [forall_const, Set.mem_setOf_eq, WithVal.equiv_symm_apply]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    exact hz
+shortened proof!
+.........
+line 304, col 4:
+obtain ⟨a, ha⟩ := this
+* Try this:
+
+  [apply]     subst hx
+    obtain ⟨val, property⟩ := x
+    obtain ⟨w, h⟩ := this
+    apply Exists.intro
+    · exact h
+shortened proof!
+..._......
+line 323, col 6:
+exact map_mul (ResidueFieldEquivCompletionResidueField K v) x y
+* Try this:
+
+  [apply]     simp_all only [RingEquiv.toEquiv_eq_coe, Algebra.algebraMap_self, RingHom.id_apply, Equiv.toFun_as_coe,
+      EquivLike.coe_coe, map_mul]
+    rfl
+..
+line 326, col 2:
+exact Module.finrank_self _
+* Try this:
+
+  [apply]   simp_all only [Module.finrank_self]
+......................
+line 362, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 374, col 6:
+rw [← ha]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring, Pi.algebraMap_apply, SetLike.mem_coe,
+      ValuationSubring.mem_toSubring]
+    apply IsDedekindDomain.HeightOneSpectrum.coe_mem_adicCompletionIntegers
+shortened proof!
+..............
+line 391, col 6:
+rw [RingHom.coe_range]
+* Try this:
+
+  [apply]   simp_all only [WithVal.equiv_symm_apply, OrderMonoidIso.toMulEquiv_eq_coe, Units.coe_mapEquiv,
+      OrderMonoidIso.coe_mulEquiv, valueGroup₀_equiv_withZeroMulInt_apply, RingHom.coe_range, Set.mem_range,
+      exists_apply_eq_apply, g]
+shortened proof!
+.........
+line 408, col 4:
+exact IsLocalization.to_map_ne_zero_of_mem_nonZeroDivisors K (fun _ ↦ id) hz
+* Try this:
+
+  [apply]   simp_all only [mem_nonZeroDivisors_iff_ne_zero, ne_eq, FaithfulSMul.algebraMap_eq_zero_iff, not_false_eq_true]
+...............................
+line 461, col 2:
+exact hx ▸ hmul y (hint hy) k
+* Try these:
+  [apply] grind only [= Set.subset_def, #b6f7, #7878]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #b6f7]
+    instantiate only [#7878]
+.....
+line 479, col 2:
+simp [hπ]
+* Try this:
+
+  [apply]     subst hπ
+    simp_all only [ZeroMemClass.coe_zero, map_zero, Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, ne_eq, zero_eq_inv,
+      WithZero.zero_ne_coe, not_false_eq_true]
+....
+line 493, col 2:
+omega
+* Try this:
+  [apply] grind only
+..
+line 498, col 36:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, map_eq_zero, ZeroMemClass.coe_eq_zero,
+      not_false_eq_true]
+.....
+line 502, col 32:
+exact (WithZero.coe_unzero _).symm ▸ x.2
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, WithZero.coe_unzero, WithZero.coe_one]
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := π
+    simp_all only
+    exact property
+..........
+line 521, col 4:
+simp only [hx₀, Ideal.zero_mem]
+* Try this:
+
+  [apply]     subst hx₀
+    simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, zero_mem]
+....
+line 525, col 39:
+rw [hu, h, pow_zero, one_mul] at hn
+* Try this:
+
+  [apply]     subst hu h
+    simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, pow_zero, one_mul, IsLocalRing.mem_maximalIdeal,
+      mem_nonunits_iff, Units.isUnit, not_true_eq_false]
+shortened proof!
+..........
+line 538, col 41:
+omega
+* Try this:
+  [apply] grind only
+.............
+line 558, col 4:
+simp only [Ideal.span_singleton_eq_bot] at h
+* Try this:
+
+  [apply]   simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, Submodule.span_eq_bot, Set.mem_singleton_iff, forall_eq,
+      ZeroMemClass.coe_zero, map_zero, zero_eq_inv, WithZero.zero_ne_coe]
+shortened proof!
+........
+line 574, col 4:
+rw [← ofAdd_nsmul, Nat.smul_one_eq_cast]
+* Try this:
+
+  [apply]     simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv]
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := π
+    simp_all only
+    ext : 1
+    simp_all only [toAdd_pow, toAdd_ofAdd, Int.nsmul_eq_mul, mul_one]
+..
+line 576, col 4:
+rintro ⟨a, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, inv_pow, inv_inj, Subtype.exists]
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := π
+    obtain ⟨w, h⟩ := a
+    obtain ⟨w_1, h⟩ := h
+    simp_all only [SubmonoidClass.mk_pow, MulMemClass.mk_mul_mk, Subtype.mk.injEq]
+    subst h
+    simp_all only [map_mul, map_pow, inv_pow, inv_pos, WithZero.zero_lt_coe, mul_le_iff_le_one_left]
+    exact w_1
+shortened proof!
+.........
+line 589, col 4:
+apply pow_ne_zero n
+* Try this:
+
+  [apply]     simp_all only [Int.reduceNeg, ofAdd_neg, WithZero.coe_inv, inv_pow, inv_inj, map_div₀, map_pow, div_inv_eq_mul, ne_eq,
+      pow_eq_zero_iff', ZeroMemClass.coe_eq_zero, not_and, Decidable.not_not, a]
+    intro a_1
+    subst a_1
+    simp_all only [ZeroMemClass.coe_zero, map_zero, zero_eq_inv, WithZero.zero_ne_coe]
+shortened proof!
+.

@@ -1,0 +1,13 @@
+.
+line 27, col 7:
+simp
+* Try this:
+
+  [apply]   simp_all only [diagonal_mul_diagonal, Units.mul_inv, diagonal_one]
+.
+line 27, col 16:
+simp
+* Try this:
+
+  [apply]   simp_all only [diagonal_mul_diagonal, Units.inv_mul, diagonal_one]
+....__..__....__

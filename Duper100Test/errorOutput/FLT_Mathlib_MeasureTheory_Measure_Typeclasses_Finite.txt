@@ -1,0 +1,10 @@
+..
+line 30, col 4:
+exact IsFiniteMeasureOnCompacts.lt_top_of_isCompact (hK.image hφ.continuous)
+* Try this:
+
+  [apply]     apply MeasureTheory.IsFiniteMeasureOnCompacts.lt_top_of_isCompact
+    apply IsCompact.image
+    · simp_all only
+    · apply Topology.IsOpenEmbedding.continuous
+      simp_all only

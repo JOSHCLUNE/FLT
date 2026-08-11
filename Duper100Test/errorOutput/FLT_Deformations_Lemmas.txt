@@ -1,0 +1,80 @@
+..
+line 34, col 76:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, zero_ne_one, not_false_eq_true]
+..
+line 35, col 55:
+simpa [Ideal.eq_top_iff_one] using hI'
+* Try this:
+
+  [apply]     simp_all only [Set.subset_compl_singleton_iff, SetLike.mem_coe, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [Submodule.top_coe, isOpen_univ, Submodule.mem_top, not_true_eq_false]
+.
+line 36, col 2:
+exact ⟨J, hJ, AddSubgroup.isOpen_mono (H₁ := I.toAddSubgroup) (H₂ := J.toAddSubgroup) hIJ hI⟩
+* Try these:
+  [apply] grind only [!Ideal.exists_maximal, Ideal.isOpen_of_isOpen_subideal, #b703]
+  [apply] grind only [!Ideal.exists_maximal, Ideal.isOpen_of_isOpen_subideal]
+  [apply] grind =>
+    instantiate only [!Ideal.exists_maximal, #b703]
+    instantiate only [Ideal.isOpen_of_isOpen_subideal]
+.......
+line 72, col 70:
+simp [mul_smul]
+* Try this:
+
+  [apply]   duper [*, mul_smul] {preprocessing := full}
+............
+line 140, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]   smt +mono [*, *, ContinuousAlgHom.isLocalHom_toRingHom]
+...
+line 151, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]   smt +mono [*, *, ContinuousAlgHom.isLocalHom_toRingHom]
+.
+line 156, col 2:
+convert isLocalHom_equiv f
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!isLocalHom_toRingHom]
+  [apply] grind => instantiate only [!isLocalHom_toRingHom]
+shortened proof!
+.
+line 160, col 17:
+convert hx.map e.symm
+* Try these:
+  [apply] grind only [RingEquiv.toRingHom_eq_coe, !instIsLocalHomRingHomToRingHom_fLT, isUnit_of_map_unit]
+  [apply] grind =>
+    instantiate only [RingEquiv.toRingHom_eq_coe]
+    instantiate only [!instIsLocalHomRingHomToRingHom_fLT]
+    instantiate only [isUnit_of_map_unit]
+shortened proof!
+..................
+line 223, col 65:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearMap.ringLmapEquivSelf_apply, End.one_apply]
+.
+line 223, col 75:
+simp
+* Try this:
+
+  [apply]     intro x y
+    simp_all only [LinearMap.ringLmapEquivSelf_apply, End.mul_apply, Dual.apply_one_mul_eq]
+......
+line 304, col 49:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]

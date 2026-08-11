@@ -1,0 +1,14 @@
+...
+line 43, col 2:
+delta IntegralClosure
+* Try this:
+
+  [apply]   smt +mono [*, integralClosure.AlgebraIsIntegral, integralClosure_eq_top_iff]
+shortened proof!
+...........
+line 81, col 2:
+exact x.2
+* Try these:
+  [apply] grind only [ValuationSubring.algebraMap_apply]
+  [apply] grind => instantiate only [ValuationSubring.algebraMap_apply]
+.......

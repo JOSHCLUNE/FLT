@@ -1,0 +1,13 @@
+....
+line 56, col 2:
+exact instCompactSpaceAdicCompletionIntegers K v
+* Try this:
+
+  [apply]     simp_all only [SetLike.coe_sort_coe]
+    apply NumberField.instCompactSpaceAdicCompletionIntegers
+.
+line 73, col 88:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, zero_mem, vadd_eq_add, add_zero, and_self]

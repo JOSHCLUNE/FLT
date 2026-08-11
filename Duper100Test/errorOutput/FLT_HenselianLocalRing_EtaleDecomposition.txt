@@ -1,0 +1,22 @@
+.......
+line 60, col 74:
+ext
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [not_false_eq_true, Fin.castSucc_succ, AlgHom.toRingHom_eq_coe]
+    ext : 2
+.............................................
+line 100, col 2:
+rw [← Set.ncard_image_of_injective _
+    (Ideal.comap_injective_of_surjective _ Ideal.Quotient.mk_surjective)]
+* Try these:
+  [apply] grind only [!Ideal.ncard_primesOver_quotient_singleton_lt_of_notMem]
+  [apply] grind => instantiate only [!Ideal.ncard_primesOver_quotient_singleton_lt_of_notMem]
+shortened proof!
+...............
+line 138, col 73:
+simp
+* Try this:
+  [apply] grind only
+.......................................

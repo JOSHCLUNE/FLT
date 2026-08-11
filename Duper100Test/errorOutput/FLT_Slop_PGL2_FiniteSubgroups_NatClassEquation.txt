@@ -1,0 +1,151 @@
+..................
+line 75, col 6:
+exact y_eq ▸ hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 81, col 8:
+calc y = b.out⁻¹ * (b.out * y * b.out⁻¹) * b.out := by group
+          _ = _ := by rw [hy_eq]; group
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* generated tactic cannot close the goal
+  · instantiate only [inv_mul_cancel, mul_inv_cancel]
+    ac
+Initial goal
+case grind
+G' : Type u_1
+inst✝¹ : Group G'
+inst✝ : Fintype G'
+H : Subgroup G'
+a b : G' ⧸ Subgroup.normalizer ↑H
+h :
+  Subgroup.map (MulEquiv.toMonoidHom (MulAut.conj (Quotient.out a))) H =
+    Subgroup.map (MulEquiv.toMonoidHom (MulAut.conj (Quotient.out b))) H
+x : G'
+h1 :
+  (∃ x_1 ∈ H, Quotient.out a * x_1 * (Quotient.out a)⁻¹ = Quotient.out b * x * (Quotient.out b)⁻¹) ↔
+    ∃ x_1 ∈ H, Quotient.out b * x_1 * (Quotient.out b)⁻¹ = Quotient.out b * x * (Quotient.out b)⁻¹
+h2 :
+  (∃ x_1 ∈ H,
+      Quotient.out a * x_1 * (Quotient.out a)⁻¹ =
+        Quotient.out a * ((Quotient.out a)⁻¹ * Quotient.out b * x * ((Quotient.out a)⁻¹ * Quotient.out b)⁻¹) *
+          (Quotient.out a)⁻¹) ↔
+    ∃ x_1 ∈ H,
+      Quotient.out b * x_1 * (Quotient.out b)⁻¹ =
+        Quotient.out a * ((Quotient.out a)⁻¹ * Quotient.out b * x * ((Quotient.out a)⁻¹ * Quotient.out b)⁻¹) *
+          (Quotient.out a)⁻¹
+hx : (Quotient.out a)⁻¹ * Quotient.out b * x * ((Quotient.out a)⁻¹ * Quotient.out b)⁻¹ ∈ H
+y : G'
+hy : y ∈ H
+hy_eq :
+  Quotient.out b * y * (Quotient.out b)⁻¹ =
+    Quotient.out a * ((Quotient.out a)⁻¹ * Quotient.out b * x * ((Quotient.out a)⁻¹ * Quotient.out b)⁻¹) *
+      (Quotient.out a)⁻¹
+h✝ : ¬y = x
+⊢ False
+* Try these:
+  [apply] grind only [inv_mul_cancel, mul_inv_cancel]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel, mul_inv_cancel]
+    ac
+.
+line 83, col 6:
+exact y_eq ▸ hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+............
+line 101, col 58:
+group
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.sumCongr_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_cancel, !mul_inv_cancel_right, mul_inv_rev, mul_inv_cancel]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel, !mul_inv_cancel_right, mul_inv_rev, mul_inv_cancel]
+    ac
+.......
+line 110, col 30:
+rw [hg, h_conj]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...............
+line 141, col 46:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 143, col 4:
+exact hw2 ▸ hw
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 151, col 44:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 179, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*, Subgroup.mem_toSubmonoid] {preprocessing := full}
+....
+line 185, col 4:
+exact Set.mem_toFinset.mpr (Subgroup.one_mem K)
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, Subgroup.map_toSubmonoid, Submonoid.map_coe_toMonoidHom, Set.mem_toFinset,
+      Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup, one_mem, K]
+......
+line 205, col 6:
+constructor
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+............
+line 228, col 6:
+simp only [S, Finset.mem_filter, Finset.mem_univ,
+        true_and, Set.mem_setOf_eq, implies_true]
+* this parameter is redundant, environment already contains `Set.mem_toFinset` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, = Finset.mem_filter, ← Finset.mem_univ]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, = Finset.mem_filter]
+    instantiate only [← Finset.mem_univ]
+.....
+line 254, col 6:
+constructor
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.........
+line 272, col 6:
+ext x
+* Try these:
+  [apply] grind only [= Finset.mem_filter, = Finset.mem_erase, ← Finset.mem_univ, #b374]
+  [apply] grind only [= Finset.mem_filter, = Finset.mem_erase, ← Finset.mem_univ]
+  [apply] grind =>
+    cases #b374 <;> instantiate only [= Finset.mem_filter, = Finset.mem_erase] <;> instantiate only [← Finset.mem_univ]
+shortened proof!
+....
+line 280, col 6:
+exact hH_card_ge i
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 282, col 6:
+exact fun K L hK hL hKL ↦ hdisjoint K L
+        ⟨i, hK.choose, hK.choose_spec⟩
+        ⟨i, hL.choose, hL.choose_spec⟩ hKL
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

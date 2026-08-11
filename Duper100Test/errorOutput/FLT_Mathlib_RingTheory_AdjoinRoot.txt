@@ -1,0 +1,6 @@
+.X.X.X..X.X.X.X.X.X.X.X.X.
+line 64, col 53:
+lia
+* Try this:
+  [apply] grind only
+.X.X.X.X.X.X.X

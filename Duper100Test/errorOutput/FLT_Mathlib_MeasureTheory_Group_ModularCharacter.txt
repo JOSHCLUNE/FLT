@@ -1,0 +1,266 @@
+...
+line 44, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.finite_empty, Set.Finite.isCompact, Measure.restrict_empty, lintegral_zero_measure,
+      ENNReal.zero_lt_top]
+...
+line 46, col 34:
+fun_prop
+* Try this:
+
+  [apply]   simp_all only [measurable_const]
+.........._..._...
+line 81, col 40:
+fun_prop
+* Try this:
+
+  [apply]   duper [*, measurable_const_mul] {preprocessing := full}
+.
+line 82, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+......
+line 94, col 56:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 103, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.image_univ, Subtype.range_coe_subtype, SetLike.setOf_mem_eq]
+..........
+line 112, col 71:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........
+line 121, col 4:
+simpa [Subgroup.smul_def] using e
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 122, col 4:
+exact fun _ ↦ .const_smul hH _
+* Try these:
+  [apply] grind only [MeasurableSet.const_smul]
+  [apply] grind => instantiate only [MeasurableSet.const_smul]
+...........
+line 160, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [OneMemClass.coe_nonempty]
+...
+line 166, col 4:
+ring
+* Try this:
+  [apply] grind only
+...
+line 191, col 10:
+simp
+* Try this:
+
+  [apply]   simp_all only [inf_le_right]
+.
+line 191, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [Subgroup.smul_inf, inv_smul_smul, inf_le_left]
+.X.............
+line 218, col 81:
+simp [← ha₁, h]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 224, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ConjAct.toConjAct_inv, Equiv.trans_apply, n, e, e']
+    ext x : 1
+    simp_all only [Function.comp_apply]
+shortened proof!
+.
+line 225, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ConjAct.toConjAct_inv, Equiv.trans_apply, Set.mul_singleton, Set.image_mul_right, Set.image_univ,
+      Subtype.range_coe_subtype, Set.mem_image, Set.mem_preimage, SetLike.mem_coe, n, e, e']
+    rfl
+shortened proof!
+..
+line 227, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ConjAct.toConjAct_inv, Equiv.trans_apply, Equiv.coe_trans, n, e, e']
+    ext x : 1
+    simp_all only [Function.comp_apply]
+shortened proof!
+.
+line 228, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ConjAct.toConjAct_inv, Equiv.trans_apply, Set.mul_singleton, Set.image_mul_right, inv_inv,
+      Set.image_univ, Subtype.range_coe_subtype, Set.mem_image, Set.mem_preimage, SetLike.mem_coe, n, e, e']
+    rfl
+shortened proof!
+.....
+line 262, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+.....
+line 284, col 4:
+ext
+* Try this:
+
+  [apply]   simp_all only [map_inv, Units.isUnit, ↓reduceDIte, IsUnit.unit_of_val_units]
+shortened proof!
+...
+line 293, col 37:
+simp
+* Try this:
+
+  [apply]     intro x
+    simp_all only [map_inv, ENNReal.coe_lt_top]
+..
+line 299, col 37:
+simp
+* Try this:
+
+  [apply]     intro x
+    simp_all only [map_inv, ENNReal.coe_lt_top]
+...............
+line 324, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 331, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [MeasurableEquiv.smul_apply, ne_eq, ENNReal.coe_ne_top, not_false_eq_true]
+.................
+line 360, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [Homeomorph.toMeasurableEquiv_symm_coe, ContinuousMulEquiv.toMulEquiv_eq_coe,
+      MulEquiv.toMonoidHom_eq_coe, MonoidHom.coe_coe, MulEquivClass.coe_toMulEquiv, Homeomorph.toMeasurableEquiv_coe]
+    ext x : 1
+    simp_all only [Set.mem_image, Set.mem_preimage, MulOpposite.opHomeomorph_apply, MulOpposite.exists,
+      exists_exists_and_eq_and, Units.val_opContinuousMulEquiv_symm_apply, MulOpposite.unop_op, MulOpposite.op_inj]
+shortened proof!
+.
+line 362, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [Homeomorph.toMeasurableEquiv_symm_coe, ContinuousMulEquiv.toMulEquiv_eq_coe, MulEquiv.toMonoidHom_eq_coe,
+      MonoidHom.coe_coe, MulEquivClass.coe_toMulEquiv, Homeomorph.toMeasurableEquiv_coe, MulOpposite.opHomeomorph_apply,
+      isUnit_op]
+......
+line 373, col 2:
+exact Measure.haarScalarFactor_self _
+* Try this:
+
+  [apply]   simp_all only [Measure.haarScalarFactor_self, MonoidHom.one_apply]
+.
+line 398, col 44:
+simpa
+* Try this:
+
+  [apply]   simp_all only [ne_eq, MulOpposite.unop_eq_zero_iff, not_false_eq_true]
+...
+line 407, col 57:
+simp
+* Try these:
+  [apply] grind only [!Matrix.coe_units_inv]
+  [apply] grind => instantiate only [!Matrix.coe_units_inv]
+......
+line 413, col 8:
+ext
+* Try these:
+  [apply] grind only [Ring.inverse_unit, #9dbf]
+  [apply] grind only [Ring.inverse_unit]
+  [apply] grind => cases #9dbf <;> instantiate only [Ring.inverse_unit]
+shortened proof!
+....
+line 418, col 4:
+ext
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, Matrix.isUnit_iff_isUnit_det, #56b6]
+  [apply] grind only [usr Set.mem_setOf_eq, Matrix.isUnit_iff_isUnit_det]
+  [apply] grind =>
+    cases #56b6 <;> instantiate only [usr Set.mem_setOf_eq] <;> instantiate only [Matrix.isUnit_iff_isUnit_det]
+shortened proof!
+..
+line 427, col 62:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousAddEquiv.toAddEquiv_eq_coe, AddEquiv.toEquiv_eq_coe, Equiv.toFun_as_coe, EquivLike.coe_coe,
+      AddEquivClass.coe_toAddEquiv, ContinuousAddEquiv.mulLeft_apply, Algebra.mul_smul_comm, RingHom.id_apply]
+..................
+line 456, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+................
+line 476, col 9:
+ext
+* Try this:
+
+  [apply]     simp_all only [ContinuousMulEquiv.coe_trans]
+    ext x : 1
+    simp_all only [Function.comp_apply, ContinuousMulEquiv.symm_apply_apply]
+shortened proof!
+........
+line 506, col 4:
+simp [IsUnimodularGroup.modularCharacter_eq_one]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsUnimodularGroup.modularCharacter_eq_one, MonoidHom.one_apply]
+  [apply] grind =>
+    instantiate only [IsUnimodularGroup.modularCharacter_eq_one, MonoidHom.one_apply]
+    instantiate only [MonoidHom.one_apply]
+.......
+line 521, col 2:
+simp [H, ← map_mul]
+* Try this:
+
+  [apply]   simp_all only [Lean.Elab.WF.paramLet, IsHomeomorph.toEquiv_homeomorph, RingHom.toMonoidHom_eq_coe,
+      ContinuousAddEquiv.mulLeft_apply, Units.coe_map, MonoidHom.coe_coe, ContinuousAddEquiv.trans_apply,
+      ContinuousAddEquiv.coe_mk, AddEquiv.coe_mk, Equiv.ofBijective_apply, map_mul, e']
+shortened proof!
+......
+line 554, col 2:
+ext1
+* Try this:
+
+  [apply]     simp_all only [RingEquiv.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe]
+    ext : 1
+    simp_all only [Units.coe_map, Matrix.coe_detMonoidHom, Units.coe_opEquiv_symm, MulOpposite.unop_op, MonoidHom.coe_coe,
+      RingHom.coe_coe, Matrix.transposeRingEquiv_symm_apply, Matrix.det_transpose]
+shortened proof!
+..

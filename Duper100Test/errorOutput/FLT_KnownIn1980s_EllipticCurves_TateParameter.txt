@@ -1,0 +1,49 @@
+....
+line 154, col 71:
+rw [coeff_one_jInv, mul_one]
+* Try this:
+
+  [apply]     simp_all only [mul_one]
+    apply TateCurve.coeff_one_jInv
+.............................
+line 253, col 6:
+simp [hF n h]
+* Try this:
+
+  [apply]   simp_all only [Int.cast_zero, zero_mul, map_zero, zero_le]
+.........
+line 271, col 8:
+rw [sub_sub_cancel]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Filter.eventually_atTop, forall_const, Units.val_mk0, sub_sub_cancel]
+.._.
+line 284, col 68:
+ring
+* Try this:
+  [apply] grind only
+.....
+line 289, col 6:
+simp [PowerSeries.coeff_zero_eq_constantCoeff, h0]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Order.lt_two_iff, zero_le, coeff_zero_eq_constantCoeff, map_sub, constantCoeff_X, sub_self]
+.
+line 290, col 6:
+simp [h1, PowerSeries.coeff_X]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zero_add, Order.lt_two_iff, Std.le_refl, map_sub, coeff_one_X, sub_self]
+.
+line 291, col 6:
+exact absurd hm (by omega)
+* Try this:
+  [apply] grind only
+................
+line 347, col 2:
+simp only [key, map_mul]
+* Try this:
+
+  [apply]   simp_all only [map_mul, Subring.coe_mul]
+shortened proof!
+...

@@ -1,0 +1,436 @@
+....
+line 179, col 2:
+ring_nf
+* Try this:
+
+  [apply]   simp_all only [mul_neg]
+.......
+line 199, col 2:
+ring_nf
+* Try these:
+  [apply] grind only [Real.pi_ne_zero]
+  [apply] grind =>
+    instantiate only [Real.pi_ne_zero]
+    ring
+...
+line 207, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_eq_zero, OfNat.ofNat_ne_zero, ofReal_eq_zero, Real.pi_ne_zero, or_self, I_ne_zero,
+      not_false_eq_true]
+..
+line 215, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      one_ne_zero, not_false_eq_true]
+.
+line 216, col 4:
+simpa using congrArg Complex.im h.symm
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      real_smul, mul_one, Matrix.cons_val_zero]
+    subst h
+    simp_all only [ofReal_im, not_true_eq_false]
+......
+line 265, col 4:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.....
+line 276, col 4:
+rw [sub_eq_zero] at hr1
+* Try these:
+  [apply] grind only [!norm_sub_norm_le, Complex.norm_map_zero', !one_le_norm_one, !norm_sub_pos_iff]
+  [apply] grind =>
+    instantiate only [!norm_sub_norm_le, Complex.norm_map_zero', !one_le_norm_one]
+    instantiate only [!norm_sub_pos_iff]
+shortened proof!
+.....
+line 285, col 4:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 289, col 2:
+ring
+* Try this:
+  [apply] grind only
+......
+line 319, col 2:
+ring
+* Try this:
+  [apply] grind only
+.
+line 324, col 50:
+exact_mod_cast hk
+* Try this:
+
+  [apply]   simp_all only [Nat.ofNat_le_cast]
+.
+line 325, col 15:
+simp
+* Try these:
+  [apply] grind only [zpow_natCast]
+  [apply] grind => instantiate only [zpow_natCast]
+.
+line 329, col 55:
+simp
+* Try this:
+
+  [apply]   simp_all only [Equiv.neg_apply, Function.comp_apply]
+..
+line 333, col 74:
+simp [← sub_eq_add_neg]
+* Try this:
+
+  [apply]     simp_all only [Int.cast_neg, inv_inj]
+    rfl
+..
+line 338, col 2:
+refine tsum_congr fun m ↦ by simp [← sub_eq_add_neg]
+* Try this:
+
+  [apply]     simp_all only [Int.cast_neg]
+    rfl
+.....
+line 346, col 39:
+ring
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 354, col 39:
+ring
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 361, col 54:
+rw [zero_add]
+* Try this:
+
+  [apply]   simp_all only [zero_add]
+.
+line 370, col 2:
+rcases eq_or_ne v 1 with rfl | hv1
+* Try these:
+  [apply] grind only [#6dd0, #6d83]
+  [apply] grind only
+  [apply] grind =>
+    cases #6dd0
+    · ring
+      ring
+    · cases #6d83 <;> ring
+shortened proof!
+..
+line 378, col 34:
+linarith
+* Try this:
+  [apply] grind only
+....
+line 382, col 4:
+linarith
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+...............
+line 415, col 65:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]
+.
+line 417, col 4:
+exact sum_int_inv_sq w h
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply TateCurve.Blueprint.sum_int_inv_sq
+    simp_all only
+..
+line 423, col 70:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 430, col 2:
+rw [tsum_pnat_eq_tsum_succ]
+* Try this:
+
+  [apply]     apply tsum_pnat_eq_tsum_of_eq_zero
+    simp_all only
+shortened proof!
+..
+line 439, col 58:
+simp
+* Try this:
+  [apply] grind only
+.
+line 445, col 45:
+simpa using hq1
+* Try this:
+  [apply] grind only
+.
+line 445, col 80:
+rw [mul_one]
+* Try this:
+  [apply] grind only
+..
+line 451, col 68:
+simp
+* Try this:
+  [apply] grind only
+........
+line 460, col 4:
+intro c
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind => instantiate only [pow_mul]
+shortened proof!
+..
+line 463, col 66:
+simp
+* Try this:
+
+  [apply]   simp_all only [pow_one, ArithmeticFunction.map_zero, CharP.cast_eq_zero, pow_zero, mul_one]
+..
+line 468, col 45:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast]
+.....
+line 478, col 45:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   duper [*, cpow_natCast] {preprocessing := full}
+....
+line 483, col 48:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast, Nat.cast_add, Nat.cast_one]
+shortened proof!
+......
+line 490, col 4:
+rw [show (fun n : ℕ ↦ q ^ ((n : ℤ)) / (1 - q ^ ((n : ℤ))) ^ 2)
+        = fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2 from funext fun n ↦ by rw [zpow_natCast],
+      tsum_V_nat hq1]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, zpow_natCast, neg_add_rev, Int.reduceNeg]
+    apply _private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat
+    simp_all only [Int.reduceNeg]
+...
+line 495, col 66:
+simp
+* Try this:
+  [apply] grind only
+.
+line 496, col 2:
+rw [h1, h2]
+* Try this:
+  [apply] grind only
+shortened proof!
+.........
+line 524, col 19:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 535, col 47:
+simp [Complex.sub_im, Complex.mul_im]
+* Try this:
+
+  [apply]   simp_all only [sub_im, mul_im, intCast_re, intCast_im, zero_mul, add_zero]
+....
+line 537, col 70:
+exact_mod_cast h
+* Try this:
+
+  [apply]   simp_all only [Int.cast_nonpos]
+......
+line 549, col 28:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Int.cast_zero, zero_mul, zero_add]
+.
+line 550, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [zpow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero, mul_zero,
+      ↓reduceIte, zero_add]
+..
+line 552, col 8:
+simpa [Complex.mul_im] using mul_ne_zero (Int.cast_ne_zero.mpr hn) hτ.ne'
+* Try this:
+
+  [apply]     simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero, mul_eq_zero, Int.cast_eq_zero, false_or]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [lt_self_iff_false]
+.........
+line 585, col 67:
+congr 1
+* generated tactic cannot close the goal
+  · instantiate approx
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    ring
+Initial goal
+case grind
+τ : ℂ
+hτ : 0 < τ.im
+z : ℂ
+hz : 0 < z.im
+hzτ : z.im < τ.im
+hq0 : e τ ≠ 0
+hu1 : ‖e z‖ < 1
+hqu : ‖e τ‖ < ‖e z‖
+hq1 : ‖e τ‖ < 1
+h0 : HasSum (fun p ↦ ((z - (↑p.1 * τ + ↑p.2)) ^ 2)⁻¹ - ((↑p.1 * τ + ↑p.2) ^ 2)⁻¹) (℘[periodPair τ ⋯] z)
+n m : ℤ
+h✝ :
+  ¬((z - IntCast.intCast n * τ - IntCast.intCast m) ^ 2)⁻¹ = ((z - (IntCast.intCast n * τ + IntCast.intCast m)) ^ 2)⁻¹
+⊢ False
+* Try these:
+  [apply] grind only
+  [apply] grind =>
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    ring
+shortened proof!
+.......
+line 598, col 28:
+congr 1
+* generated tactic cannot close the goal
+  · instantiate approx
+    instantiate approx
+    instantiate approx
+    ring
+Initial goal
+case grind
+τ : ℂ
+hτ : 0 < τ.im
+z : ℂ
+hz : 0 < z.im
+hzτ : z.im < τ.im
+hq0 : e τ ≠ 0
+hu1 : ‖e z‖ < 1
+hqu : ‖e τ‖ < ‖e z‖
+hq1 : ‖e τ‖ < 1
+h0 : HasSum (fun p ↦ ((z - (↑p.1 * τ + ↑p.2)) ^ 2)⁻¹ - ((↑p.1 * τ + ↑p.2) ^ 2)⁻¹) (℘[periodPair τ ⋯] z)
+hrowsummA : ∀ (n : ℤ), Summable fun m ↦ ((z - (↑n * τ + ↑m)) ^ 2)⁻¹
+hrowsummB : ∀ (n : ℤ), Summable fun m ↦ ((↑n * τ + ↑m) ^ 2)⁻¹
+n m : ℤ
+h✝ :
+  ¬((z - (IntCast.intCast n * τ + IntCast.intCast m)) ^ 2)⁻¹ = ((z - IntCast.intCast n * τ - IntCast.intCast m) ^ 2)⁻¹
+⊢ False
+* Try these:
+  [apply] grind only
+  [apply] grind =>
+    instantiate approx
+    instantiate approx
+    instantiate approx
+    ring
+shortened proof!
+......
+line 616, col 43:
+ring
+* Try this:
+  [apply] grind only
+.
+line 617, col 2:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 623, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_pow, sub_self, OfNat.ofNat_ne_zero, zero_pow,
+      div_zero, neg_zero]
+..
+line 625, col 4:
+ring
+* Try this:
+  [apply] grind only
+..
+line 633, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_mul, sub_self, OfNat.ofNat_ne_zero, zero_pow,
+      div_zero, neg_zero]
+..
+line 635, col 4:
+ring
+* Try this:
+  [apply] grind only
+..
+line 643, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero, one_pow, mul_zero, add_zero,
+      one_mul]
+.
+line 644, col 4:
+field_simp [sub_ne_zero.mpr (Ne.symm hv1)]
+* Try these:
+  [apply] grind only [pow_eq_zero_iff, sub_eq_zero]
+  [apply] grind =>
+    instantiate only [pow_eq_zero_iff, sub_eq_zero]
+    ring
+shortened proof!
+...
+line 654, col 42:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_one, Nat.reduceAdd]
+.
+line 654, col 79:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]
+.
+line 656, col 4:
+ring
+* Try this:
+  [apply] grind only
+.
+line 657, col 4:
+exact sum_int_inv_cube w h
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply TateCurve.Blueprint.sum_int_inv_cube
+    simp_all only
+....
+line 667, col 37:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_add, Nat.cast_one]
+    rfl
+..WARNING: FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean was killed (exit code 137), likely by the 8G MemoryMax cap

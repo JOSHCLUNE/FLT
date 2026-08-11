@@ -1,0 +1,6 @@
+....X.X.X.X.X..X......X.X.X..X....
+line 106, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [eq_ratCast, map_ratCast]

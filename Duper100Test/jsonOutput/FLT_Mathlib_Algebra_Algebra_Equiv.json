@@ -1,0 +1,20 @@
+[{"tacticSucceeded": true,
+  "startLine": 24,
+  "startCol": 37,
+  "shortenedStepsCount": 0,
+  "parentName": "AlgEquiv.apply_mem_range_algebraMap_iff",
+  "oldText": "rw [e.commutes, hc]",
+  "message":
+  "this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`Try these:\n  [apply] grind only [AlgEquivClass.commutes]\n  [apply] grind => instantiate only [AlgEquivClass.commutes]",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Algebra/Algebra/Equiv.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 25,
+  "startCol": 25,
+  "shortenedStepsCount": 0,
+  "parentName": "AlgEquiv.apply_mem_range_algebraMap_iff",
+  "oldText": "rw [← hc, e.commutes]",
+  "message":
+  "this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`Try these:\n  [apply] grind only [AlgEquivClass.commutes]\n  [apply] grind => instantiate only [AlgEquivClass.commutes]",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Algebra/Algebra/Equiv.lean"}]

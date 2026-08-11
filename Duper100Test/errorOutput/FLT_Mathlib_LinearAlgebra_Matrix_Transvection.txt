@@ -1,0 +1,14 @@
+................................
+line 136, col 6:
+intro A B QA QB
+* Try this:
+
+  [apply]     intro A B a a_1
+    simp_all only [det_diagonal, IsUnit.prod_iff, Finset.mem_univ, forall_const, det_mul, IsUnit.mul_iff, and_self, Q]
+shortened proof!
+.
+line 138, col 2:
+exact this.2
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

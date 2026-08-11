@@ -1,0 +1,93 @@
+.X..
+line 76, col 18:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.X..X.
+line 86, col 4:
+induction bs with
+    | zero => simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+      Algebra.TensorProduct.includeRight_apply, mul_zero, zero_mul]
+    | tmul x y =>
+        simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+          mul_one, mul_comm]
+    | add x y _ _ =>
+        simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, mul_add, add_mul]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.punitProd_symm_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Algebra.TensorProduct.algebraMap_eq_includeRight, #a3b9]
+  [apply] grind only [!Algebra.TensorProduct.algebraMap_eq_includeRight]
+  [apply] grind =>
+    instantiate only [!Algebra.TensorProduct.algebraMap_eq_includeRight]
+    instantiate only [#a3b9]
+..X.X.
+line 103, col 8:
+rw [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.
+line 106, col 8:
+simp_all only [smul_def, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, smul_add, mul_add]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mul_add, smul_add]
+  [apply] grind => instantiate only [mul_add, smul_add]
+.
+line 119, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*, Algebra.TensorProduct.comm_symm_tmul] {preprocessing := full}
+.
+line 128, col 4:
+induction am with
+    | zero => simp only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      map_zero, RingHom.id_apply]
+    | tmul x y =>
+        simp only [smul_tmul', smul_eq_mul, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+          LinearEquiv.coe_coe, comm_tmul, RingHom.id_apply, smul_def, comm_symm_tmul]
+    | add x y hx hy =>
+      simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe,
+        RingHom.id_apply, smul_def, smul_add, map_add]
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply, smul_def, comm_symm,
+      comm_comm]
+.X.
+line 179, col 2:
+ext
+* Try this:
+
+  [apply]   apply LinearMap.baseChange_id
+shortened proof!
+.
+line 188, col 2:
+ext
+* Try this:
+
+  [apply]   apply LinearMap.baseChange_comp
+shortened proof!
+.
+line 192, col 2:
+exact Function.leftInverse_iff_comp
+* Try these:
+  [apply] grind only [Function.leftInverse_iff_comp]
+  [apply] grind => instantiate only [Function.leftInverse_iff_comp]
+.......
+line 219, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, algebraMap_eval,
+      OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe, Algebra.TensorProduct.map_tmul, map_one,
+      AlgHom.coe_id, id_eq]

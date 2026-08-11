@@ -1,0 +1,13 @@
+.._.
+line 67, col 4:
+simp
+* Try this:
+
+  [apply]   duper [*, Fintype.sum_pi_single] {preprocessing := full}
+....
+line 75, col 2:
+exact rightBaseChange_repr A b i 1
+* Try this:
+
+  [apply]   simp_all only [rightBaseChange_repr]
+....

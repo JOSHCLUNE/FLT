@@ -1,0 +1,438 @@
+..........
+line 87, col 54:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 90, col 6:
+rw [hP_deg, Polynomial.natDegree_zero]
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+  [apply] grind => instantiate only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+shortened proof!
+.....
+line 95, col 63:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 96, col 21:
+ring
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, zero_mul, mul_neg, mul_one, neg_neg, zero_add, P]
+............
+line 116, col 6:
+exact hV_zero
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 127, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.
+line 132, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+.....__........
+line 161, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 162, col 50:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 163, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 164, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [zero_mul, mul_one, zero_add]
+.....
+line 179, col 4:
+exact ne_of_gt (lt_trans (by norm_num : 1 < 2) Fact.out) h_order.symm
+* Try this:
+
+  [apply]   smt +mono [*, Fact.out]
+.......
+line 194, col 6:
+exact hP (g • P)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt]
+....
+line 198, col 4:
+exact h_dvd
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Sylow.coe_coe]
+....
+line 203, col 64:
+rw [two_mul]
+* Try this:
+  [apply] grind only
+shortened proof!
+...............
+line 241, col 4:
+exact ⟨b, show translationPGL p b ∈ H from hb ▸ hg, hb.symm⟩
+* Try this:
+
+  [apply]     subst hb
+    simp_all only [gt_iff_lt, SetLike.mem_coe, Set.mem_image]
+    apply Exists.intro
+    · apply And.intro
+      · exact hg
+      · rfl
+....
+line 245, col 8:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.......
+line 253, col 6:
+exact eq_of_sub_eq_zero (Eq.trans
+        (Eq.trans
+          (show a - b = ((1 : K p) * (1 : K p) + (a - b) * (1 : K p)) - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p)) by ring)
+          (congrArg (fun x ↦ x - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p))) h_00))
+        (sub_self _))
+* Try this:
+  [apply] grind only
+.
+line 258, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    rfl
+................
+line 308, col 6:
+convert (Fintype.card_eq_nat_card.trans (GaloisField.card p m (ne_of_gt hm))).symm
+* Try these:
+  [apply] grind only [!GaloisField.card, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!GaloisField.card, Fintype.card_eq_nat_card]
+.......
+line 322, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+......
+line 331, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+.
+line 332, col 12:
+exact hb'
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero]
+    rfl
+.
+line 333, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, map_zero]
+    rfl
+.
+line 334, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+....
+line 343, col 4:
+change c' * 1 - 0 * 0 ≠ 0
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, ne_eq, map_eq_zero, Fin.isValue, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+......
+line 351, col 12:
+exact hc'
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one]
+    rfl
+.
+line 352, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero, map_zero]
+    rfl
+.
+line 353, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, map_zero]
+    rfl
+.
+line 354, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+....
+line 364, col 10:
+exact ha
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 370, col 4:
+exact ha
+* Try this:
+  [apply] grind only
+.....................
+line 393, col 101:
+exact h_det
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 399, col 2:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero,
+    Matrix.cons_val_one, mul_zero, zero_add, mul_one] at h0
+* Try this:
+
+  [apply]   simp_all only [Matrix.smul_cons, smul_zero, Matrix.smul_empty, mul_zero, Fin.isValue, Matrix.mulVec_cons,
+      Nat.succ_eq_add_one, Nat.reduceAdd, zero_smul, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply,
+      Function.comp_apply, Matrix.cons_val_zero, Matrix.tail_cons, Matrix.head_cons, zero_add]
+shortened proof!
+...
+line 406, col 68:
+exact mul_ne_zero_iff.mp h_det
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, not_false_eq_true, and_self]
+...
+line 409, col 68:
+exact mul_ne_zero_iff.mp h_det
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, not_false_eq_true, and_self]
+............................
+line 450, col 101:
+exact h_det
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 453, col 101:
+exact h_det
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.................................................................
+line 558, col 92:
+exact sub_ne_zero.mpr (Ne.symm hne)
+* Try this:
+  [apply] grind only
+...................................................
+line 612, col 152:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 621, col 132:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 624, col 142:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 635, col 111:
+rw [h1] at heq
+* Try this:
+  [apply] grind only
+shortened proof!
+...........
+line 647, col 152:
+ring
+* Try this:
+  [apply] grind only
+.........
+line 656, col 152:
+ring
+* Try this:
+  [apply] grind only
+.........
+line 665, col 132:
+ring
+* Try this:
+  [apply] grind only
+...
+line 668, col 132:
+ring
+* Try this:
+  [apply] grind only
+....
+line 680, col 6:
+exact absurd rfl hab
+* Try this:
+  [apply] grind only
+..
+line 682, col 8:
+exact absurd rfl hac
+* Try this:
+  [apply] grind only
+....
+line 686, col 8:
+exact absurd rfl hbc
+* Try this:
+  [apply] grind only
+........
+line 699, col 4:
+rcases heq with ⟨c, hc⟩
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Matrix.smul_cons, smul_zero, Matrix.smul_empty, Matrix.vecCons_inj, zero_ne_one,
+      and_true, false_and, exists_const]
+shortened proof!
+......
+line 707, col 4:
+rw [mul_one] at h1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.smul_cons, Matrix.smul_empty, Matrix.vecCons_inj, and_true, mul_one,
+      Units.ne_zero]
+shortened proof!
+.....
+line 712, col 4:
+rw [mul_one] at h0
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.smul_cons, Matrix.smul_empty, Matrix.vecCons_inj, and_true, mul_one,
+      Units.ne_zero]
+shortened proof!
+...
+line 715, col 81:
+exact heq
+* Try this:
+  [apply] grind only
+..
+line 716, col 80:
+exact heq
+* Try this:
+  [apply] grind only
+..
+line 717, col 81:
+exact heq
+* Try this:
+  [apply] grind only
+..............
+line 733, col 121:
+ring
+* Try this:
+  [apply] grind only
+...
+line 736, col 121:
+ring
+* Try this:
+  [apply] grind only
+........
+line 751, col 121:
+ring
+* Try this:
+  [apply] grind only
+...
+line 754, col 121:
+ring
+* Try this:
+  [apply] grind only
+.
+line 759, col 59:
+rw [mul_one]
+* Try this:
+  [apply] grind only
+shortened proof!
+........................
+line 798, col 8:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 803, col 8:
+have h_den : galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = den := by
+          change galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = galoisFieldRingHom p m (g.1 1 0)
+          ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+......
+line 812, col 10:
+exact h
+* Try this:
+  [apply] grind only
+......WARNING: FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean produced errors (exit code 143)

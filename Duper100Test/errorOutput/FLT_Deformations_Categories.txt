@@ -1,0 +1,33 @@
+...
+line 50, col 2:
+have hR : Nontrivial R := IsLocalRing.toNontrivial
+* Try this:
+
+  [apply]   duper [*, RingHom.domain_isLocalRing] {preprocessing := full}
+shortened proof!
+................
+line 245, col 6:
+exact isOpen_maximalIdeal_of_isProartinian
+* Try these:
+  [apply] grind only [isOpen_maximalIdeal_of_isProartinian]
+  [apply] grind => instantiate only [isOpen_maximalIdeal_of_isProartinian]
+.
+line 246, col 6:
+exact (IsResidueAlgebra.algEquiv 𝓞 R).symm.injective
+* Try this:
+
+  [apply]     simp_all only [AlgEquiv.toAlgHom_toRingHom, RingHom.coe_coe]
+    duper [*, AlgEquiv.bijective, Bijective.injective] {preprocessing := full}
+.....
+line 264, col 4:
+exact IsResidueAlgebra.preimage_spec _ _
+* Try these:
+  [apply] grind only [IsResidueAlgebra.preimage_spec]
+  [apply] grind => instantiate only [IsResidueAlgebra.preimage_spec]
+..
+line 265, col 27:
+rfl
+* Try this:
+
+  [apply]   rfl
+...
