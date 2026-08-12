@@ -1,0 +1,104 @@
+[{"tacticSucceeded": true,
+  "startLine": 38,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText": "rwa [ne_eq, Ideal.span_singleton_eq_bot]",
+  "message":
+  "Try this:\n\n  [apply]   duper [*, Ideal.span_singleton_eq_bot] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 36,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText":
+  "classical\n  have hnb : Ideal.span {a} ≠ ⊥ := by\n    rwa [ne_eq, Ideal.span_singleton_eq_bot]\n  rw [intValuation_if_neg _ hnz, Ideal.count_associates_factors_eq hnb v.isPrime v.ne_bot]\n  nth_rw 1 [← normalize_eq v.asIdeal]\n  congr\n  symm\n  apply multiplicity_eq_of_emultiplicity_eq_some\n  rw [← UniqueFactorizationMonoid.emultiplicity_eq_count_normalizedFactors v.irreducible hnb]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 37,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText":
+  "have hnb : Ideal.span {a} ≠ ⊥ := by\n    rwa [ne_eq, Ideal.span_singleton_eq_bot]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 39,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText":
+  "rw [intValuation_if_neg _ hnz, Ideal.count_associates_factors_eq hnb v.isPrime v.ne_bot]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 40,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText": "nth_rw 1 [← normalize_eq v.asIdeal]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 41,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText": "congr",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 42,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText": "symm",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 43,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText": "apply multiplicity_eq_of_emultiplicity_eq_some",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 44,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText":
+  "rw [← UniqueFactorizationMonoid.emultiplicity_eq_count_normalizedFactors v.irreducible hnb]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"}]

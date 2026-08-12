@@ -1,0 +1,38 @@
+.....
+line 132, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext σ x_1 : 2
+    simp_all only [conj_apply_apply, LinearEquiv.symm_symm, LinearEquiv.symm_apply_apply]
+shortened proof!
+.
+line 133, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext σ x_1 : 2
+    simp_all only [conj_apply_apply, LinearEquiv.symm_symm, LinearEquiv.apply_symm_apply]
+shortened proof!
+..................
+line 224, col 64:
+simpa [F]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.comp_algebraMap_of_tower, F]
+...........
+line 294, col 2:
+simp
+* Try these:
+  [apply] grind only [!Matrix.trace_toLin'_eq]
+  [apply] grind => instantiate only [!Matrix.trace_toLin'_eq]
+.........
+line 351, col 2:
+rw [this, charFrob]
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+........

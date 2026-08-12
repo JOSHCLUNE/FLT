@@ -1,0 +1,26 @@
+....
+line 39, col 19:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, norm_zero, zero_le_one]
+...
+line 72, col 28:
+simp
+* Try this:
+
+  [apply]   simp_all only [volume_univ, ENNReal.one_lt_top]
+...
+line 83, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+......
+line 97, col 2:
+suffices (comap (Coe.ringHom (p := p)) volume).addHaarScalarFactor volume = 1 by
+    simp [-coe_coeRingHom, this]
+* Try this:
+
+  [apply]   simp_all only [coe_coeRingHom, Measure.smul_apply, volume_univ, ENNReal.smul_one, ENNReal.coe_eq_one, one_smul]
+shortened proof!

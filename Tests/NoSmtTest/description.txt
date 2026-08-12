@@ -1,0 +1,10 @@
+Ran `hammer {disableSmt := true}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 260 files processed, 8 with errors."
+
+tallySummaries.sh output:
+Total number of results: 16756
+Total number of successes: 3033
+Time taken: 90349s
+
+~18.1% success rate
+~25.1 hours

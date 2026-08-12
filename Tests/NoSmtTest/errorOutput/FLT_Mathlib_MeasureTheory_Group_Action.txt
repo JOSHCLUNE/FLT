@@ -1,0 +1,123 @@
+...
+line 34, col 22:
+fun_prop
+* Try this:
+
+  [apply]   duper [*, measurable_const_mul] {preprocessing := full}
+._....
+line 39, col 8:
+rintro ⟨y, hy, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Set.mem_image, Set.mem_preimage]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    apply Exists.intro
+    · apply And.intro
+      · exact left
+      · simp_all only [map_mul]
+shortened proof!
+...
+line 42, col 28:
+simp [yins]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, mul_inv_cancel_left]
+.
+line 43, col 8:
+apply congrArg (φ g⁻¹ * ·) at hy
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    grind only [inv_mul_cancel, mul_inv_cancel, !mul_inv_cancel_left, = map_mul, = map_one]
+shortened proof!
+.
+line 46, col 4:
+rw [this, ← map_apply (by fun_prop), IsMulLeftInvariant.map_mul_left_eq_self]
+* Try this:
+
+  [apply]   duper [*, measurable_const_mul, map_apply, map_mul_left_eq_self, MeasurableEmbedding.measurableSet_image]
+      {preprocessing := full}
+shortened proof!
+...
+line 57, col 22:
+fun_prop
+* Try this:
+
+  [apply]   duper [*, measurable_mul_const] {preprocessing := full}
+._....
+line 62, col 8:
+rintro ⟨y, hy, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Set.mem_image, Set.mem_preimage]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    apply Exists.intro
+    · apply And.intro
+      · exact left
+      · simp_all only [map_mul]
+shortened proof!
+...
+line 65, col 28:
+simp [yins]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, inv_mul_cancel_right]
+.
+line 66, col 8:
+apply congrArg (· * φ g⁻¹) at hy
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    grind only [mul_inv_cancel, !inv_inv, !mul_inv_cancel_left, = map_mul, = map_one]
+shortened proof!
+..
+line 70, col 4:
+exact hφ.measurableSet_image.mpr hs
+* Try this:
+
+  [apply]     apply MeasurableEmbedding.measurableSet_image'
+    · simp_all only
+    · simp_all only
+..
+line 87, col 46:
+measurability
+* Try this:
+
+  [apply]     simp_all only [measurable_inv_iff]
+    apply measurable_subtype_coe
+.
+line 93, col 54:
+measurability
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := c
+    simp_all only
+    apply Measurable.mul_const
+    apply measurable_subtype_coe
+.
+line 94, col 54:
+measurability
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := c
+    simp_all only
+    apply Measurable.const_mul
+    apply measurable_subtype_coe
+.......
+line 118, col 69:
+simpa
+* Try this:
+
+  [apply]   simp_all only [comap_subtype, Subtype.range_coe_subtype, SetLike.setOf_mem_eq, SetLike.coe_subset_coe]
+..
+line 120, col 4:
+exact .subtype_coe hK
+* Try this:
+
+  [apply]   duper [*, MeasurableEmbedding.subtype_coe, coe_subtype] {preprocessing := full}

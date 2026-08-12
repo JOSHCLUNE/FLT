@@ -1,0 +1,65 @@
+................X.
+line 72, col 27:
+rw [add_smul]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [add_smul, Submodule.add_mem]
+  [apply] grind =>
+    instantiate only [add_smul]
+    instantiate only [Submodule.add_mem]
+shortened proof!
+.
+line 73, col 23:
+exact smul_assoc a x n ▸ (I • N).smul_mem _ ‹_›
+* Try these:
+  [apply] grind only [smul_assoc, SMulMemClass.smul_mem]
+  [apply] grind =>
+    instantiate only [smul_assoc]
+    instantiate only [SMulMemClass.smul_mem]
+...X.X.X........
+line 102, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AddSubgroup.mk.injEq]
+    rfl
+......
+line 108, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AddSubgroup.mk.injEq, α']
+    rfl
+...................................................
+line 255, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.pi_apply, RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply,
+      AlgHom.commutes, Ideal.Quotient.mk_algebraMap, Pi.algebraMap_apply, f]
+........
+line 263, col 4:
+rfl
+* Try this:
+  [apply] grind only
+............._........
+line 289, col 87:
+simp
+* Try this:
+
+  [apply]   simp_all only [↓existsAndEq, Filter.eventually_true]
+..
+line 291, col 2:
+filter_upwards [ha] with j hj
+* Try these:
+  [apply] grind only [#e495, #0b47]
+  [apply] grind only
+  [apply] grind => cases #e495 <;> cases #0b47
+shortened proof!
+...................................................................................
+line 455, col 55:
+exact hf₀
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..

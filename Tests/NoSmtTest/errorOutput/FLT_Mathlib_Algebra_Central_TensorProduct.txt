@@ -1,0 +1,43 @@
+....X..X....X..
+line 64, col 53:
+simp
+* Try this:
+
+  [apply]   simp_all only [range_subtype, LinearMap.range_id, le_top]
+.
+line 65, col 40:
+simp
+* Try this:
+
+  [apply]   simp_all only [range_subtype, LinearMap.range_id, le_top]
+.......X.X.X....X.X.X.._...
+line 81, col 2:
+simpa [← TensorProduct.map_comp, ← LinearMap.comp_apply] using hxST
+* Try these:
+  [apply] grind only [TensorProduct.map_map]
+  [apply] grind => instantiate only [TensorProduct.map_map]
+....
+line 109, col 4:
+simpa [← Subalgebra.center_tensorProduct] using! hx
+* Try these:
+  [apply] grind only [!Subalgebra.center_tensorProduct, Subalgebra.mem_center_iff]
+  [apply] grind =>
+    instantiate only [!Subalgebra.center_tensorProduct, Subalgebra.mem_center_iff]
+    instantiate only [Subalgebra.mem_center_iff]
+....
+line 112, col 43:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_zero, zero_mem]
+.
+line 113, col 39:
+simpa using AddMemClass.add_mem
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_add]
+    apply AddMemClass.add_mem
+    · simp_all only
+    · simp_all only
+...

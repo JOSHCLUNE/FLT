@@ -1,0 +1,59 @@
+.......
+line 45, col 4:
+simp only [← hS, f, Fintype.range_linearCombination, gens, (Surjective.range_comp
+    (Finset.equivFin S).symm.surjective Subtype.val), Subtype.range_val_subtype, Finset.setOf_mem]
+* Try this:
+
+  [apply]     subst hS
+    simp_all only [Fintype.range_linearCombination, EquivLike.range_comp, Subtype.range_coe_subtype, SetLike.setOf_mem_eq,
+      m, f, gens]
+..
+line 48, col 4:
+simp only [g, LinearEquiv.ker_comp, Submodule.ker_mkQ]
+* Try this:
+
+  [apply]     subst hS
+    simp_all only [Fintype.range_linearCombination, EquivLike.range_comp, Subtype.range_coe_subtype, SetLike.setOf_mem_eq,
+      LinearEquiv.ker_comp, Submodule.ker_mkQ, m, f, gens, g]
+..
+line 50, col 2:
+have : Surjective g := by
+    simp only [g, LinearMap.coe_comp, LinearEquiv.coe_coe, EquivLike.comp_surjective,
+      Submodule.mkQ_surjective]
+* Try these:
+  [apply] grind only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, LinearMap.exact_iff,
+    !EquivLike.comp_surjective, #ce29]
+  [apply] grind only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, LinearMap.exact_iff,
+    !EquivLike.comp_surjective]
+  [apply] grind =>
+    instantiate only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, #ce29]
+    instantiate only [LinearMap.exact_iff, !EquivLike.comp_surjective]
+shortened proof!
+..........
+line 77, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Finset.mem_univ]
+    rfl
+..._....
+line 86, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, of_eq_same]
+....._....
+line 96, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, of_eq_same]
+......
+line 154, col 66:
+simp [m']
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Equiv.punitProd_symm_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!LinearEquiv.symm_apply_apply]
+  [apply] grind => instantiate only [!LinearEquiv.symm_apply_apply]
+.......................................................................

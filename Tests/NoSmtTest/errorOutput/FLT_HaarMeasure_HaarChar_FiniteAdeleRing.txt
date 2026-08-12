@@ -1,0 +1,91 @@
+.
+line 86, col 2:
+let b₀ := Module.Free.chooseBasis K B
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+.....
+line 104, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearEquiv.symm_apply_apply, g]
+.....
+line 129, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+......
+line 141, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+.....
+line 150, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+....
+line 183, col 2:
+intro x
+* Try this:
+
+  [apply]     intro x
+    simp_all only [AddSubgroup.coe_set_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      AddSubmonoid.coe_set_mk, AddSubsemigroup.coe_set_mk, f]
+    rfl
+shortened proof!
+.
+line 214, col 2:
+let b₀ := Module.Free.chooseBasis K B
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+.....
+line 243, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearEquiv.symm_apply_apply, g]
+......
+line 268, col 13:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 274, col 13:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......_....._..
+line 298, col 46:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......._....._..
+line 322, col 51:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....._................._..._........
+line 418, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......................................_......._......................................
+line 657, col 20:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......

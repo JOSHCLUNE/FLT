@@ -1,0 +1,50 @@
+..X..X..
+line 71, col 8:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [smul_add, lie_add]
+.
+line 72, col 6:
+simp_all [add_lie]
+* Try this:
+
+  [apply]   simp_all only [add_lie, smul_add]
+.._..
+line 85, col 4:
+exact @lieAlgebraSelfModule ..
+* Try these:
+  [apply] grind only [lieAlgebraSelfModule]
+  [apply] grind => instantiate only [lieAlgebraSelfModule]
+............
+line 152, col 10:
+simp only [zero_lie, map_zero]
+* Try this:
+
+  [apply]   simp_all only [zero_lie, map_zero]
+._.
+line 154, col 10:
+simp_all only [add_lie, map_add]
+* Try this:
+
+  [apply]   simp_all only [add_lie, map_add]
+....
+line 169, col 6:
+simp only [zero_lie, map_zero]
+* Try this:
+
+  [apply]   simp_all only [zero_lie, map_zero]
+._.
+line 171, col 6:
+simp_all only [add_lie, map_add]
+* Try this:
+
+  [apply]   simp_all only [add_lie, map_add]
+............
+line 279, col 19:
+aesop
+* Try this:
+
+  [apply]     simp_all only [map_one, Units.val_one, one_mulVec, End.one_def]
+    rfl
+..

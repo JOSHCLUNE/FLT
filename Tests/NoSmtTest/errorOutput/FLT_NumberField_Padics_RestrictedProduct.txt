@@ -1,0 +1,69 @@
+....
+line 44, col 56:
+simp
+* Try this:
+
+  [apply]   duper [*, Finset.finite_toSet] {preprocessing := full}
+..
+line 45, col 29:
+aesop
+* Try this:
+
+  [apply]     rename_i w left right
+    subst right
+    simp_all only [imp_false, Decidable.not_not, Set.mem_image, Subtype.exists, exists_and_right, exists_eq_right,
+      Subtype.coe_eta, exists_prop, and_true, SetLike.mem_coe, Nat.mem_primeFactors, ne_eq, Rat.den_ne_zero,
+      not_false_eq_true, true_and]
+    obtain ⟨val, property⟩ := w
+    simp_all only
+    exact left
+....
+line 67, col 2:
+intro p hp
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, ne_eq, Nat.pow_eq_zero, Int.natAbs_eq_zero, not_and,
+      Decidable.not_not]
+    intro a_2
+    grind only [usr Subtype.property, Nat.Prime.ne_zero]
+shortened proof!
+......
+line 78, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, ne_eq, one_pow]
+......
+line 87, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, one_pow]
+.....
+line 95, col 6:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, zero_mem, not_true_eq_false]
+........
+line 114, col 59:
+simpa [Subtype.val_inj] using! h
+* Try these:
+  [apply] grind only [usr Subtype.property, Subtype.coe_eta]
+  [apply] grind => instantiate only [usr Subtype.property, Subtype.coe_eta]
+....
+line 125, col 4:
+exact hX p
+* Try these:
+  [apply] grind only [#2982]
+  [apply] grind only
+  [apply] grind => instantiate only [#2982]
+................
+line 140, col 34:
+simpa using hp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_pow, ZMod.natCast_val, Subtype.forall, mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, a,
+      padicNum_bar]
+.....

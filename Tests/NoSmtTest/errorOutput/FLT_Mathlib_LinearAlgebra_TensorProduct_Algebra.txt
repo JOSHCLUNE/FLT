@@ -1,0 +1,16 @@
+..
+line 32, col 16:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, map_zero, toRingHom_eq_coe, RingHom.coe_coe]
+..
+line 35, col 8:
+change (LinearMap.rTensor M f.toLinearMap) _ = _
+* Try this:
+
+  [apply]     simp_all only [smul_eq_mul, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearMap.rTensor_tmul, LinearMap.coe_coe,
+      map_mul, toRingHom_eq_coe, RingHom.coe_coe]
+    rfl
+shortened proof!
+.X

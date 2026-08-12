@@ -1,0 +1,146 @@
+.
+line 75, col 21:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+.
+line 76, col 21:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+.
+line 77, col 20:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+..
+line 89, col 4:
+ext x
+* Try this:
+
+  [apply]     simp_all only
+    obtain ⟨val, property⟩ := τ
+    simp_all only [Subgroup.mk_smul, MulOpposite.smul_eq_mul_unop]
+    simp_all only [Subgroup.mem_op]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, coe_val, Function.comp_apply, AlgEquiv.mul_apply,
+      EmbeddingLike.apply_eq_iff_eq]
+    obtain ⟨val_1, property_1⟩ := x
+    simp_all only
+    simp_all only [mem_fixedField_iff]
+shortened proof!
+.._...................
+line 120, col 2:
+rw [map_smul, inv_smul_smul]
+* Try this:
+
+  [apply]   simp_all only [map_smul, AlgEquiv.smul_def, AlgEquiv.coe_inv, AlgEquiv.symm_apply_apply]
+.......................
+line 162, col 4:
+simp only [AlgHom.coe_range, Set.mem_range, forall_exists_index, forall_apply_eq_imp_iff]
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [AlgHom.coe_range, Set.mem_range]
+    obtain ⟨w, h⟩ := a
+    subst h
+    grind only [IsAlgebraic.algHom, Algebra.IsAlgebraic.isAlgebraic]
+shortened proof!
+..............
+line 183, col 4:
+ext x
+* Try this:
+
+  [apply]     simp_all only [IntermediateField.mem_fixingSubgroup_iff, AlgHom.mem_fieldRange, forall_exists_index,
+      forall_apply_eq_imp_iff, emb]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, Ideal.Quotient.mkₐ_eq_mk, Function.comp_apply]
+    apply hσ
+shortened proof!
+....................................
+line 237, col 4:
+obtain ⟨E, hE, H⟩ := (krullTopology_mem_nhds_one_iff _ _ _).mp hs
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [krullTopology_mem_nhds_one_iff, !finiteIndex_fixingSubgroup, #5708, #dda8]
+  [apply] grind only [krullTopology_mem_nhds_one_iff, !finiteIndex_fixingSubgroup]
+  [apply] grind =>
+    instantiate only [krullTopology_mem_nhds_one_iff]
+    cases #5708 <;> instantiate only [!finiteIndex_fixingSubgroup, #dda8]
+shortened proof!
+...........
+line 252, col 41:
+simp
+* Try these:
+  [apply] grind only [= Set.mem_singleton_iff]
+  [apply] grind => instantiate only [= Set.mem_singleton_iff]
+.............
+line 268, col 8:
+dsimp
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!AlgEquiv.apply_symm_apply, #cf85, #5292]
+  [apply] grind only [!AlgEquiv.apply_symm_apply]
+  [apply] grind => instantiate only [#cf85, #5292, !AlgEquiv.apply_symm_apply]
+shortened proof!
+..
+line 275, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_mul]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_mul, #5292]
+  [apply] grind only [= map_mul]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_mul]
+..
+line 279, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_add]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_add, #5292]
+  [apply] grind only [= map_add]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_add]
+.
+line 280, col 22:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [AlgEquiv.commutes]
+........__..
+line 293, col 6:
+simp [F, ← H' _ _ (Set.mem_iInter₂.mp hσ _ h)]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_iInter, SetLike.mem_coe, AlgEquiv.coe_mk, Equiv.coe_fn_mk, F]
+.......
+line 304, col 69:
+simp
+* Try this:
+
+  [apply]     subst hσ
+    simp_all only [smul_eq_mul, mul_one]
+..
+line 306, col 2:
+have := (mem_fixingSubgroup_iff _).mp hτ x (IntermediateField.mem_adjoin_simple_self K x)
+* Try this:
+
+  [apply]     subst hσ
+    simp_all only [SetLike.mem_coe, IntermediateField.mem_fixingSubgroup_iff, AlgEquiv.smul_def, smul_eq_mul,
+      Set.mem_setOf_eq, AlgEquiv.mul_apply, EmbeddingLike.apply_eq_iff_eq]
+    apply hτ
+    apply IntermediateField.mem_adjoin_of_mem
+    simp_all only [Set.mem_singleton_iff]
+shortened proof!

@@ -1,0 +1,29 @@
+....
+line 37, col 4:
+rw [← LinearMap.charpoly_toMatrix (Algebra.lmul A B θ) b, ← Algebra.leftMulMatrix_apply,
+      Matrix.charpoly_fin_two, ← Algebra.trace_eq_matrix_trace b, ← Algebra.norm_eq_matrix_det b]
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!LinearMap.charpoly_natDegree, Algebra.norm_apply, LinearMap.charpoly_def, Algebra.trace_apply,
+    !Matrix.charpoly_natDegree_eq_dim, Matrix.charpoly_of_card_eq_two, !LinearMap.trace_eq_matrix_trace,
+    LinearMap.det_toMatrix]
+  [apply] grind =>
+    instantiate only [!LinearMap.charpoly_natDegree, Algebra.norm_apply, LinearMap.charpoly_def, Algebra.trace_apply]
+    instantiate only [!Matrix.charpoly_natDegree_eq_dim, Matrix.charpoly_of_card_eq_two,
+      !LinearMap.trace_eq_matrix_trace]
+    instantiate only [LinearMap.det_toMatrix]
+..
+line 40, col 2:
+rw [hcp] at hCH
+* Try this:
+
+  [apply]   simp_all only [Algebra.coe_lmul_eq_mul, map_add, Polynomial.aeval_sub, map_pow, Polynomial.aeval_X, map_mul,
+      Polynomial.aeval_C, b]
+shortened proof!
+.........
+line 81, col 4:
+simp only [← ResidueField.algebraMap_residue]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.

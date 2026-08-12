@@ -1,0 +1,7 @@
+.
+line 27, col 70:
+simp [h]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.............

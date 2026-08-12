@@ -1,0 +1,19 @@
+..
+line 40, col 25:
+infer_instance
+* Try this:
+
+  [apply]   apply instIsDomainSubtypeMemSubalgebraIntegralClosure
+..
+line 43, col 25:
+infer_instance
+* Try this:
+
+  [apply]   apply integralClosure.AlgebraIsIntegral
+...........
+line 81, col 2:
+exact x.2
+* Try this:
+
+  [apply]   simp_all only [ValuationSubring.algebraMap_apply, ValuationSubring.mem_top, SetLike.coe_mem]
+.......

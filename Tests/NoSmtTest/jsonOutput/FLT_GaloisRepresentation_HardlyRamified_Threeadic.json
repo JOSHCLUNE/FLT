@@ -1,0 +1,11 @@
+[{"tacticSucceeded": true,
+  "startLine": 37,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName": "GaloisRepresentation.IsHardlyRamified.three_adic",
+  "oldText": "decide",
+  "message":
+  "this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`Try these:\n  [apply] grind only [= Nat.odd_iff]\n  [apply] grind => instantiate only [= Nat.odd_iff]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/GaloisRepresentation/HardlyRamified/Threeadic.lean"}]

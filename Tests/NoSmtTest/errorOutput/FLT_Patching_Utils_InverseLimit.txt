@@ -1,0 +1,35 @@
+.........
+line 42, col 15:
+simp [U, x.2, hu₁]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Set.mem_preimage, Set.mem_iInter, Subtype.forall, U]
+    intro a b
+    obtain ⟨val, property⟩ := x
+    simp_all only
+..
+line 43, col 20:
+simpa [U, z.2] using hz₁
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Set.mem_preimage, Set.mem_iInter, Subtype.forall, Set.mem_pi, SetLike.mem_coe, U]
+    intro i_1 a
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := z
+    simp_all only
+...
+line 51, col 2:
+exact hg _
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply hg
+..
+line 71, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+..........

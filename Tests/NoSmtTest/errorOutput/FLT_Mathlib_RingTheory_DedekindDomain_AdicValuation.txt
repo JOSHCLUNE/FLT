@@ -1,0 +1,7 @@
+...
+line 38, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+* Try this:
+
+  [apply]   duper [*, Ideal.span_singleton_eq_bot] {preprocessing := full}
+......

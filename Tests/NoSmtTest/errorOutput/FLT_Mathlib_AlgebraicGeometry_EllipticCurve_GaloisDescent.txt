@@ -1,0 +1,8 @@
+....................
+line 54, col 2:
+simpa [VariableChange.baseChange, VariableChange.map] using huK
+* Try this:
+
+  [apply]     simp_all only [ne_eq, AlgHom.toRingHom_eq_coe, AlgEquiv.toAlgHom_toRingHom, RingHom.coe_coe, Set.mem_range]
+    exact huK
+.......

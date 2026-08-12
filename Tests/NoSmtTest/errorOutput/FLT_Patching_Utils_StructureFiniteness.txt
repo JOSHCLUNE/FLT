@@ -1,0 +1,31 @@
+.
+line 27, col 21:
+ext a b
+* Try this:
+
+  [apply]     simp_all only
+    apply Monoid.ext
+    exact e
+shortened proof!
+..
+line 32, col 30:
+exact congr_fun (congr_fun e a) b
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...........................
+line 166, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaModuleContinuousSMulOfT2Space_fLT
+shortened proof!
+.......................
+line 244, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaAlgebraContinuousSMulOfT2Space_fLT
+shortened proof!

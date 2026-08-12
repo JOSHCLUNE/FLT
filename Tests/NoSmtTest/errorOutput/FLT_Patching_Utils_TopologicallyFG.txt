@@ -1,0 +1,13 @@
+.
+line 31, col 74:
+simp [hs]
+* Try this:
+
+  [apply]   simp_all only [Algebra.coe_top, dense_univ]
+....
+line 45, col 18:
+exact H x hx m
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....

@@ -1,0 +1,49 @@
+..
+line 197, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 201, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 205, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 208, col 36:
+ring
+* Try this:
+  [apply] grind only
+..
+line 211, col 36:
+ring
+* Try this:
+  [apply] grind only
+..
+line 214, col 36:
+ring
+* Try this:
+  [apply] grind only
+._..
+line 235, col 2:
+ring
+* Try this:
+  [apply] grind only
+.....
+line 255, col 37:
+ring
+* Try this:
+  [apply] grind only
+......__...__...
+line 308, col 2:
+exact E.exists_smul_quadraticTwistOf_eq _ _ b ha
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range, not_exists, ne_eq]
+    apply WeierstrassCurve.exists_smul_quadraticTwistOf_eq
+    simp_all only [ne_eq, not_false_eq_true]
+..WARNING: FLT/KnownIn1980s/EllipticCurves/QuadraticTwists/QuadraticTwists.lean was killed (exit code 137), likely by the 8G MemoryMax cap

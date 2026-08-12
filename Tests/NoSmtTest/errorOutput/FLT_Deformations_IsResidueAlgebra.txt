@@ -1,0 +1,18 @@
+......
+line 79, col 4:
+exact IsResidueAlgebra.algebraMap_surjective _ _
+* Try this:
+
+  [apply]   apply IsResidueAlgebra.algebraMap_surjective
+....
+line 91, col 2:
+exact ha.symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 109, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl

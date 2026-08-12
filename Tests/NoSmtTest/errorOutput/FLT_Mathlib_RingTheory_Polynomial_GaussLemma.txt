@@ -1,0 +1,9 @@
+...
+line 30, col 2:
+exact ⟨Q, (IsFractionRing.injective R K).monic_map_iff.mpr (hQ ▸ hq), hQ⟩
+* Try these:
+  [apply] grind only [!IsFractionRing.injective, !Function.Injective.monic_map_iff, #1122]
+  [apply] grind only [!IsFractionRing.injective, !Function.Injective.monic_map_iff]
+  [apply] grind =>
+    instantiate only [!IsFractionRing.injective, #1122]
+    instantiate only [!Function.Injective.monic_map_iff]

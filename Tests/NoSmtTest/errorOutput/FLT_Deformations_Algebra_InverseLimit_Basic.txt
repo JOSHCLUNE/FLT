@@ -1,0 +1,183 @@
+...
+line 48, col 2:
+exact h i
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 57, col 24:
+simp
+* Try this:
+
+  [apply]   duper [*, map_one] {preprocessing := full}
+.
+line 67, col 50:
+simp
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_mul, usr Subtype.property, #0857, #55b8]
+  [apply] grind only [map_mul, usr Subtype.property]
+  [apply] grind =>
+    instantiate only [map_mul, usr Subtype.property]
+    instantiate only [#0857, #55b8]
+.....
+line 90, col 47:
+simp
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_smul, usr Subtype.property, #55b8]
+  [apply] grind only [map_smul, usr Subtype.property]
+  [apply] grind =>
+    instantiate only [map_smul, usr Subtype.property]
+    instantiate only [#55b8]
+...........
+line 115, col 50:
+ext i
+* Try this:
+
+  [apply]     simp_all only [pow_zero]
+    rfl
+shortened proof!
+....
+line 130, col 20:
+simp
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Pi.inv_apply, usr Subtype.property, map_inv, #55b8]
+  [apply] grind only [Pi.inv_apply, usr Subtype.property, map_inv]
+  [apply] grind =>
+    instantiate only [Pi.inv_apply, usr Subtype.property]
+    instantiate only [map_inv, #55b8]
+.
+line 131, col 28:
+simp
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Pi.div_apply, usr Subtype.property, map_div, #274c, #1d0c]
+  [apply] grind only [Pi.div_apply, usr Subtype.property, map_div]
+  [apply] grind =>
+    instantiate only [Pi.div_apply, usr Subtype.property]
+    instantiate only [map_div, #274c, #1d0c]
+..............
+line 161, col 19:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [mul_def, zero_def, Pi.mul_apply, Pi.zero_apply, zero_mul]
+shortened proof!
+.
+line 162, col 19:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [mul_def, zero_def, Pi.mul_apply, Pi.zero_apply, mul_zero]
+shortened proof!
+...
+line 175, col 80:
+rw [h]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 203, col 22:
+simp
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Pi.inv_apply, usr Subtype.property, map_inv₀, #55b8]
+  [apply] grind only [Pi.inv_apply, usr Subtype.property, map_inv₀]
+  [apply] grind =>
+    instantiate only [Pi.inv_apply, usr Subtype.property]
+    instantiate only [map_inv₀, #55b8]
+.
+line 204, col 28:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.div_apply, map_div₀, prop]
+.
+line 205, col 27:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.pow_apply, map_zpow₀, prop]
+...........
+line 240, col 21:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [Pi.natCast_apply, Nat.cast_zero, zero_def, Pi.zero_apply]
+shortened proof!
+..
+line 241, col 30:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.natCast_apply, Nat.cast_add, Nat.cast_one, add_def, one_def, Pi.add_apply, Pi.one_apply]
+.
+line 242, col 16:
+intros
+* Try this:
+
+  [apply]   duper [*, map_one] {preprocessing := full}
+shortened proof!
+....
+line 260, col 31:
+simp
+* Try this:
+
+  [apply]   simp_all only [Int.cast_natCast, natCast_def, Pi.natCast_apply]
+.......
+line 334, col 4:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [smul_def, zero_def, Pi.smul_apply, Pi.zero_apply, smul_zero]
+shortened proof!
+.
+line 342, col 4:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [smul_def, Pi.smul_apply, zero_smul, zero_def, Pi.zero_apply]
+shortened proof!
+..
+line 351, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, add_def, Pi.smul_apply, Pi.add_apply, smul_add]
+......
+line 373, col 32:
+simp [add_smul]
+* Try this:
+
+  [apply]     simp_all only [smul_def, Pi.smul_apply, add_def, Pi.add_apply]
+    grind only [add_smul]
+.
+line 374, col 22:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [smul_def, Pi.smul_apply, zero_smul, zero_def, Pi.zero_apply]
+shortened proof!
+................

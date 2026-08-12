@@ -1,0 +1,87 @@
+[{"tacticSucceeded": true,
+  "startLine": 33,
+  "startCol": 75,
+  "shortenedStepsCount": 1,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText": "rw [map_one]",
+  "message": "Try this:\n\n  [apply]   simp_all only [map_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 34,
+  "startCol": 70,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText": "exact hu₀",
+  "message": "Try this:\n\n  [apply]   duper [*] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 36,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText":
+  "rw [← map_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, map_one]",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [map_units_inv, ne_eq, FaithfulSMul.algebraMap_eq_zero_iff, Units.ne_zero, not_false_eq_true,\n      mul_inv_cancel₀]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 37,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText":
+  "exact ⟨u₀⁻¹, mul_left_cancel₀ (left_ne_zero_of_mul_eq_one h1) (h2.trans h1.symm)⟩",
+  "message":
+  "this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`Try these:\n  [apply] grind only [#7505]\n  [apply] grind only\n  [apply] grind =>\n    ring\n    instantiate only [#7505]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 33,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText":
+  "obtain ⟨u₀, hu₀⟩ := associated_of_valuation_eq (A := R) (K := K) x 1 (by rw [map_one]; exact hx)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 34,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText":
+  "have h1 : algebraMap R K ↑u₀ * x = 1 := by rw [← Algebra.smul_def]; exact hu₀",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 34,
+  "startCol": 45,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText": "rw [← Algebra.smul_def]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 35,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "exists_algebraMap_unit_eq_of_valuation_eq_one",
+  "oldText":
+  "have h2 : algebraMap R K ↑u₀ * algebraMap R K ↑u₀⁻¹ = 1 := by\n    rw [← map_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, map_one]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/Valuation/Discrete/IsDiscreteValuationRing.lean"}]

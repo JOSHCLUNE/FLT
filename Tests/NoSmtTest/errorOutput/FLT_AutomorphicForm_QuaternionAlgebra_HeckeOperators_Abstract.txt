@@ -1,0 +1,56 @@
+.
+line 71, col 18:
+simp_all [smul_comm]
+* Try this:
+
+  [apply]     intro c x a
+    simp_all only [AddSubsemigroup.mem_carrier, AddSubmonoid.mem_toSubsemigroup, mem_addSubmonoid]
+    intro m
+    duper [*, DistribSMul.toAddMonoidHom_apply, smul_comm] {preprocessing := full}
+.X.
+line 107, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [coe_smul, one_smul]
+shortened proof!
+....
+line 120, col 4:
+ext
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [coe_smul, coe_zero, smul_zero]
+shortened proof!
+.
+line 123, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := s
+    obtain ⟨val_1, property_1⟩ := a
+    ext : 1
+    simp_all only [coe_smul, coe_add, smul_add]
+shortened proof!
+...X.X........X.X..X.X.X.X.X.X.X.X.X.X.X.X.X.X.X.
+line 189, col 6:
+apply Set.bijOn_smul _ _ _ huU
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.bijOn_smul]
+  [apply] grind => instantiate only [Set.bijOn_smul]
+.X.X.X..X.X.X.X.X.X.X.X.X.X.X.X.X.X..X.X.X...X.X.X.X.............
+line 278, col 30:
+rwa [hs₁.finite_iff_finite]
+* Try this:
+
+  [apply]   duper [*, Set.finite_coe_iff, Set.BijOn.finite_iff_finite] {preprocessing := full}
+..
+line 279, col 30:
+rwa [hs₂.finite_iff_finite]
+* Try this:
+
+  [apply]   duper [*, Set.finite_coe_iff, Set.BijOn.finite_iff_finite] {preprocessing := full}
+..........
