@@ -1,0 +1,22 @@
+..............
+line 62, col 4:
+simp
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [ENNReal.coe_ne_top]
+  [apply] grind => instantiate only [ENNReal.coe_ne_top]
+.....
+line 77, col 19:
+simp
+* Try these:
+  [apply] grind only [!Units.val_one, !nnnorm_one]
+  [apply] grind =>
+    instantiate only [!Units.val_one]
+    instantiate only [!nnnorm_one]
+.
+line 78, col 19:
+simp
+* Try this:
+
+  [apply]   duper [*, Units.coeHom_apply, Units.val_mul, nnnorm_mul] {preprocessing := full}
+................

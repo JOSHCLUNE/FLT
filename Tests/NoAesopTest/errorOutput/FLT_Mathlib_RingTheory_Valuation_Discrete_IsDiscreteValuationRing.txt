@@ -1,0 +1,23 @@
+..
+line 33, col 75:
+rw [map_one]
+* Try these:
+  [apply] grind only [= map_one]
+  [apply] grind => instantiate only [= map_one]
+shortened proof!
+...
+line 34, col 70:
+exact hu₀
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 37, col 2:
+exact ⟨u₀⁻¹, mul_left_cancel₀ (left_ne_zero_of_mul_eq_one h1) (h2.trans h1.symm)⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#7505]
+  [apply] grind only
+  [apply] grind =>
+    ring
+    instantiate only [#7505]

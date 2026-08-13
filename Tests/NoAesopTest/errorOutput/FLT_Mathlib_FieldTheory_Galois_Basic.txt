@@ -1,0 +1,41 @@
+..
+line 39, col 2:
+exact forall_congr' fun x ↦ (FaithfulSMul.algebraMap_injective L M).eq_iff
+* Try these:
+  [apply] grind only [!FaithfulSMul.algebraMap_injective, #0efe, #a3c0, #af48]
+  [apply] grind only [!FaithfulSMul.algebraMap_injective]
+  [apply] grind =>
+    cases #0efe
+    · instantiate only [!FaithfulSMul.algebraMap_injective, #a3c0]
+    · instantiate only [#af48]
+....
+line 64, col 4:
+exact Or.inl h1
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 79, col 4:
+exact AlgEquiv.one_apply x
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 80, col 4:
+exact hx
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 102, col 39:
+rw [← map_pow, hα, AlgEquiv.commutes]
+* Try this:
+
+  [apply]   duper [*, AlgEquiv.commutes, map_pow] {preprocessing := full}
+..........___.....
+line 140, col 4:
+exact iff_of_true rfl h
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..........

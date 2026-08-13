@@ -1,0 +1,65 @@
+......
+line 57, col 29:
+simpa using hI
+* Try this:
+
+  [apply]   duper [*, Ideal.isUnit_iff] {preprocessing := full}
+..................................
+line 128, col 2:
+infer_instance
+* Try this:
+
+  [apply]   smt +mono [*, FaithfulSMul.to_isTorsionFree]
+...........
+line 145, col 4:
+simp [Ideal.under_def, under]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 147, col 4:
+rwa [← @HeightOneSpectrum.ext_iff] at hxy
+* Try this:
+
+  [apply]   duper [*, HeightOneSpectrum.ext] {preprocessing := full}
+...................
+line 193, col 6:
+rw [hyover, hbot]
+* Try these:
+  [apply] grind only [←= bot_unique, !Ideal.under_bot]
+  [apply] grind => instantiate only [←= bot_unique, !Ideal.under_bot]
+shortened proof!
+.....
+line 198, col 17:
+simp
+* Try these:
+  [apply] grind only [= Finset.mem_coe, ← Finset.mem_univ]
+  [apply] grind =>
+    instantiate only [= Finset.mem_coe]
+    instantiate only [← Finset.mem_univ]
+.
+line 199, col 4:
+exact fun _ _ ↦ rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 265, col 81:
+ring
+* Try this:
+  [apply] grind only
+..
+line 280, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...............
+line 322, col 6:
+simpa only [Submonoid.smul_def, smul_eq_mul, Algebra.smul_def] using he
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Submonoid.smul_def, algebraMap_smul]
+  [apply] grind =>
+    instantiate only [Submonoid.smul_def]
+    instantiate only [algebraMap_smul]

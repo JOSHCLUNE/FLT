@@ -1,0 +1,58 @@
+............
+line 41, col 6:
+refine closure_minimal ?_ isClosed_closure
+* this parameter is redundant, environment already contains `IsCompact.isClosed` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [!isClosed_closure, closure_minimal, !DenseRange.subset_closure_image_preimage_of_isOpen]
+  [apply] grind =>
+    instantiate only [!isClosed_closure, closure_minimal, !DenseRange.subset_closure_image_preimage_of_isOpen]
+shortened proof!
+.
+line 49, col 6:
+grind [closure_mono]
+* this parameter is redundant, environment already contains `IsCompact.isClosed` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [closure_mono, !isClosed_closure, !subset_closure, closure_minimal, subset_of_eq,
+    closure_eq_iff_isClosed, = subset_def, isClosed_of_closure_subset, = mem_image, = mem_preimage, #afbb, #282c, #fdf3,
+    #b1ca, #1395, #4ac2, #7e25, #6408, #a131]
+  [apply] grind only [closure_mono, !isClosed_closure, !subset_closure, closure_minimal, subset_of_eq,
+    closure_eq_iff_isClosed, = subset_def, isClosed_of_closure_subset, = mem_image, = mem_preimage]
+  [apply] grind =>
+    instantiate only [closure_mono, !isClosed_closure, !subset_closure, closure_minimal, subset_of_eq,
+      closure_eq_iff_isClosed, = subset_def]
+    instantiate only [isClosed_of_closure_subset, = subset_def]
+    instantiate only [!subset_closure, closure_minimal, = mem_image, #afbb]
+    instantiate only [closure_mono]
+    instantiate only [= subset_def]
+    cases #282c
+    · cases #fdf3
+      · cases #b1ca <;> cases #1395/2 <;> instantiate only [= mem_preimage]
+      · cases #4ac2 <;> cases #b1ca <;> cases #1395/2 <;> instantiate only [= mem_preimage]
+    · cases #7e25
+      · cases #fdf3
+        · cases #6408 <;> cases #b1ca <;> cases #1395/2 <;> instantiate only [= mem_preimage]
+        · cases #4ac2 <;> cases #6408 <;> cases #b1ca <;> cases #1395/2 <;> instantiate only [= mem_preimage]
+      · cases #fdf3
+        · cases #b1ca <;> cases #6408 <;> cases #a131 <;> cases #1395 <;> instantiate only [= mem_preimage]
+        ·
+          cases #4ac2 <;>
+            cases #b1ca <;> cases #6408 <;> cases #a131 <;> cases #1395 <;> instantiate only [= mem_preimage]
+......
+line 58, col 10:
+apply IsCompact.isClosed
+* this parameter is redundant, environment already contains `IsCompact.isClosed` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [IsCompact.isClosed, IsCompact.image]
+  [apply] grind =>
+    instantiate only [IsCompact.isClosed]
+    instantiate only [IsCompact.image]
+shortened proof!
+...
+line 62, col 4:
+rw [← hy]
+* this parameter is redundant, environment already contains `IsCompact.isClosed` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [= mem_preimage]
+  [apply] grind => instantiate only [= mem_preimage]
+shortened proof!
+..........

@@ -1,0 +1,52 @@
+....X.
+line 109, col 4:
+simp
+* Try this:
+
+  [apply]   duper [*, one_smul] {preprocessing := full}
+.....
+line 121, col 4:
+exact smul_zero _
+* Try this:
+
+  [apply]   smt +mono [*, smul_zero, DistribSMul.toAddMonoidHom_apply]
+................................
+line 189, col 6:
+apply Set.bijOn_smul _ _ _ huU
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.bijOn_smul]
+  [apply] grind => instantiate only [Set.bijOn_smul]
+..........................
+line 253, col 6:
+aesop
+* Try this:
+
+  [apply]   duper [*, QuotientGroup.leftRel_apply, Quotient.eq] {preprocessing := full}
+..
+line 255, col 4:
+simp
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Quotient.out_eq]
+  [apply] grind => instantiate only [!Quotient.out_eq]
+.............
+line 278, col 30:
+rwa [hs₁.finite_iff_finite]
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.image_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.BijOn.finite_iff_finite]
+  [apply] grind => instantiate only [Set.BijOn.finite_iff_finite]
+..
+line 279, col 30:
+rwa [hs₂.finite_iff_finite]
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.image_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.BijOn.finite_iff_finite]
+  [apply] grind => instantiate only [Set.BijOn.finite_iff_finite]
+..........

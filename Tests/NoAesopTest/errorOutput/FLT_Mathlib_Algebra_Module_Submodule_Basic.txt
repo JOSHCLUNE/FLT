@@ -1,0 +1,10 @@
+..
+line 29, col 4:
+apply S.mul_mem (SetLike.coe_mem x) h
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [Subsemigroup.mul_mem', Subsemiring.mem_carrier, SetLike.coe_mem]
+  [apply] grind =>
+    instantiate only [Subsemigroup.mul_mem']
+    instantiate only [Subsemiring.mem_carrier]
+    instantiate only [SetLike.coe_mem]

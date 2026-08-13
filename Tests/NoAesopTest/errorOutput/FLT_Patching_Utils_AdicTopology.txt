@@ -1,0 +1,50 @@
+.....
+line 68, col 53:
+simpa using hx
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [Submodule.mem_iInf]
+  [apply] grind => instantiate only [Submodule.mem_iInf]
+......
+line 77, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 83, col 2:
+have := IsModuleTopology.toContinuousAdd R M
+* Try this:
+
+  [apply]   duper [*, Submodule.isCompact_of_fg, Submodule.fg_iff_compact] {preprocessing := full}
+shortened proof!
+.............
+line 134, col 49:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....................................
+line 180, col 42:
+simp
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_pi, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [= Set.mem_pi]
+    instantiate only [= Set.mem_singleton_iff]
+.....
+line 187, col 6:
+simp [hx₂, H] at hx₁
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 200, col 2:
+refine ⟨isAdic_iff.mpr ⟨isOpen_maximalIdeal_pow R, ?_⟩⟩
+* Try this:
+
+  [apply]   smt +mono [*, *]
+shortened proof!
+.......

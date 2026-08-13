@@ -1,0 +1,24 @@
+...
+line 35, col 2:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 43, col 2:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..............
+line 78, col 4:
+linear_combination h2
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+........

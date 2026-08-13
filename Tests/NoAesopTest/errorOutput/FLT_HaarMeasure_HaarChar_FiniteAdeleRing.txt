@@ -1,0 +1,31 @@
+..................................................
+line 268, col 13:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 274, col 13:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+......_....._........._....._..
+line 322, col 51:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....._................._..._........
+line 418, col 4:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+......................................_......._......................................
+line 657, col 20:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......

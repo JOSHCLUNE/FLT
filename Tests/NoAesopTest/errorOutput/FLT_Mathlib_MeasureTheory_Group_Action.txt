@@ -1,0 +1,128 @@
+...
+line 34, col 22:
+fun_prop
+* Try this:
+
+  [apply]   duper [*, measurable_const_mul] {preprocessing := full}
+._....
+line 39, col 8:
+rintro ⟨y, hy, rfl⟩
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.mem_preimage, Set.mem_image, map_mul, #86eb, #8980]
+  [apply] grind only [Set.mem_preimage, Set.mem_image, map_mul]
+  [apply] grind =>
+    instantiate only [Set.mem_preimage, Set.mem_image]
+    instantiate only [Set.mem_image]
+    cases #86eb <;> instantiate only [Set.mem_preimage] <;> instantiate only [#8980] <;> instantiate only [map_mul]
+shortened proof!
+...
+line 42, col 28:
+simp [yins]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!mul_inv_cancel_left, Set.mem_preimage]
+  [apply] grind => instantiate only [!mul_inv_cancel_left, Set.mem_preimage]
+...
+line 45, col 8:
+exact hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 46, col 4:
+rw [this, ← map_apply (by fun_prop), IsMulLeftInvariant.map_mul_left_eq_self]
+* Try this:
+
+  [apply]   duper [*, measurable_const_mul, map_apply, map_mul_left_eq_self, MeasurableEmbedding.measurableSet_image]
+      {preprocessing := full}
+shortened proof!
+...
+line 57, col 22:
+fun_prop
+* Try this:
+
+  [apply]   duper [*, measurable_mul_const] {preprocessing := full}
+._....
+line 62, col 8:
+rintro ⟨y, hy, rfl⟩
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.mem_preimage, Set.mem_image, map_mul, #b1db, #8980]
+  [apply] grind only [Set.mem_preimage, Set.mem_image, map_mul]
+  [apply] grind =>
+    instantiate only [Set.mem_preimage, Set.mem_image]
+    instantiate only [Set.mem_image]
+    cases #b1db <;> instantiate only [Set.mem_preimage] <;> instantiate only [#8980] <;> instantiate only [map_mul]
+shortened proof!
+...
+line 65, col 28:
+simp [yins]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!inv_mul_cancel_right, Set.mem_preimage]
+  [apply] grind => instantiate only [!inv_mul_cancel_right, Set.mem_preimage]
+.
+line 66, col 8:
+apply congrArg (· * φ g⁻¹) at hy
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_mul, mul_inv_cancel, !inv_inv, !mul_inv_cancel_left, = map_one]
+  [apply] grind =>
+    instantiate only [= map_mul, mul_inv_cancel, !inv_inv]
+    instantiate only [!mul_inv_cancel_left]
+    instantiate only [= map_mul]
+    instantiate only [= map_mul, = map_one]
+    ac
+shortened proof!
+..
+line 70, col 4:
+exact hφ.measurableSet_image.mpr hs
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [MeasurableEmbedding.measurableSet_image']
+  [apply] grind => instantiate only [MeasurableEmbedding.measurableSet_image']
+..
+line 87, col 46:
+measurability
+* Try this:
+
+  [apply]   duper [*, Measurable.fun_inv, measurable_subtype_coe] {preprocessing := full}
+.
+line 93, col 54:
+measurability
+* Try this:
+
+  [apply]   duper [*, measurable_subtype_coe, Measurable.mul_const] {preprocessing := full}
+..........
+line 120, col 4:
+exact .subtype_coe hK
+* Try this:
+
+  [apply]   duper [*, MeasurableEmbedding.subtype_coe, coe_subtype] {preprocessing := full}

@@ -1,0 +1,61 @@
+......
+line 133, col 4:
+rw [Set.ext_iff] at h
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_empty_iff_false` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.notMem_empty` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Finset.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Set.inter_subset_right, = Set.subset_def, Set.mem_inter_iff, Set.mem_empty_iff_false, #dffa]
+  [apply] grind only [!Set.inter_subset_right, = Set.subset_def, Set.mem_inter_iff, Set.mem_empty_iff_false]
+  [apply] grind =>
+    instantiate only [!Set.inter_subset_right]
+    instantiate only [= Set.subset_def]
+    instantiate only [#dffa]
+    instantiate only [Set.mem_inter_iff, Set.mem_empty_iff_false]
+shortened proof!
+................
+line 186, col 6:
+rw [Set.eq_empty_iff_forall_notMem]
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.subset_def, = Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_singleton_iff, #b702,
+    #533d]
+  [apply] grind only [= Set.subset_def, = Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [= Set.subset_def]
+    cases #b702 <;>
+      instantiate only [= Set.mem_inter_iff, = Set.mem_empty_iff_false] <;>
+        instantiate only [#533d] <;> instantiate only [= Set.mem_singleton_iff]
+shortened proof!
+....
+line 218, col 2:
+ext x i
+* this parameter is redundant, environment already contains `Set.restrict_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9a91, #b3b5, #025b]
+  [apply] grind only
+  [apply] grind => cases #9a91 <;> cases #b3b5 <;> instantiate only [#025b]
+shortened proof!
+.........
+line 235, col 2:
+exact ⟨x, hx⟩
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 245, col 2:
+use (x (f j))
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.restrict_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#025b, #d15e]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#025b]
+    instantiate only [#d15e]
+shortened proof!
+............................_....

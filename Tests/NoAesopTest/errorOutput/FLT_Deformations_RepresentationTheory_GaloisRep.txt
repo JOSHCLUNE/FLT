@@ -1,0 +1,7 @@
+.....................................
+line 294, col 2:
+simp
+* Try these:
+  [apply] grind only [!Matrix.trace_toLin'_eq]
+  [apply] grind => instantiate only [!Matrix.trace_toLin'_eq]
+.................

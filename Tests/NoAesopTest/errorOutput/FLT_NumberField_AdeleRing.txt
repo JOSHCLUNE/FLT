@@ -1,0 +1,102 @@
+...
+line 128, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....................................
+line 322, col 8:
+simp [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 373, col 47:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+........
+line 412, col 4:
+rw [← hz]
+* Try this:
+
+  [apply]   duper [*, ringOfIntegersEquiv_apply_coe] {preprocessing := full}
+shortened proof!
+....
+line 420, col 2:
+rw [Int.negSucc_eq] at h1
+* Try this:
+  [apply] grind only
+shortened proof!
+...........................................................
+line 492, col 2:
+exact hy i
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, Rat.AdeleRing.zero_discrete, #5dd3]
+  [apply] grind only [usr Set.mem_setOf_eq, Rat.AdeleRing.zero_discrete]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, Rat.AdeleRing.zero_discrete]
+    instantiate only [#5dd3]
+............................................
+line 606, col 2:
+grind
+* Try these:
+  [apply] grind only [= Set.mem_Ico, = _root_.abs.eq_1, = max_def, #b6f9]
+  [apply] grind only [= Set.mem_Ico, = _root_.abs.eq_1, = max_def]
+  [apply] grind =>
+    instantiate only [= Set.mem_Ico, = _root_.abs.eq_1]
+    instantiate only [= max_def]
+    cases #b6f9 <;> linarith
+.............................................................................
+line 740, col 4:
+cases ha
+* Try these:
+  [apply] grind only [= Set.mem_Ico]
+  [apply] grind => instantiate only [= Set.mem_Ico]
+shortened proof!
+...............................
+line 786, col 4:
+rw [map_sub]
+* Try these:
+  [apply] grind only [= map_sub]
+  [apply] grind =>
+    instantiate only [= map_sub]
+    ring
+shortened proof!
+.....
+line 838, col 14:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 839, col 18:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 840, col 21:
+simp_all
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]
+....
+line 864, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 865, col 16:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 866, col 19:
+simp_all
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]

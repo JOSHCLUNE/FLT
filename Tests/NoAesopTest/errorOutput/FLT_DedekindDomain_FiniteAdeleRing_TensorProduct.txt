@@ -1,0 +1,22 @@
+......
+line 95, col 37:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 102, col 37:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..........
+line 131, col 4:
+induction x with
+    | zero => simp
+    | tmul x y => exact LinearMap.rTensor_tmul _ _ _ _
+    | add x y _ _ => simp_all
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........

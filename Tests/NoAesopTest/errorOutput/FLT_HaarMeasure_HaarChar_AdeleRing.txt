@@ -1,0 +1,31 @@
+......................_......
+line 124, col 4:
+rw [AdeleRing.algebraMap_snd_apply, WithVal.equiv_symm_apply]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+....................................
+line 234, col 12:
+simp
+* Try these:
+  [apply] grind only [= map_zero]
+  [apply] grind => instantiate only [= map_zero]
+..
+line 236, col 21:
+simp_all [mul_add]
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]
+.....
+line 253, col 12:
+simp
+* Try these:
+  [apply] grind only [= map_zero]
+  [apply] grind => instantiate only [= map_zero]
+..
+line 255, col 21:
+simp_all [add_mul]
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]

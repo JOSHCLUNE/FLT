@@ -1,0 +1,31 @@
+.....
+line 58, col 24:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.............
+line 99, col 12:
+rw [map_zero, map_zero, zero_apply]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+..
+line 100, col 41:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.............
+line 133, col 53:
+simp [N', h]
+* Try this:
+  [apply] grind only
+.
+line 136, col 58:
+simp [N', h]
+* Try this:
+  [apply] grind only
+......_.._.._.._.............................

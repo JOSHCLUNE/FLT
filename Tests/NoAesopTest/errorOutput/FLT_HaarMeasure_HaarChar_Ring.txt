@@ -1,0 +1,20 @@
+......._.......
+line 64, col 4:
+contrapose! hu
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.........
+line 73, col 54:
+exact hu₀
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......................
+line 116, col 2:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.................

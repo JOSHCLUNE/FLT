@@ -1,0 +1,61 @@
+............_...........................................
+line 163, col 4:
+exact fun x ↦ ((Algebra.IsIntegral.isIntegral (R := K) x).map f).isAlgebraic
+* Try these:
+  [apply] grind only [IsAlgebraic.algHom, IsAlgebraic.of_finite]
+  [apply] grind =>
+    instantiate only [IsAlgebraic.algHom]
+    instantiate only [IsAlgebraic.of_finite]
+...................................................
+line 237, col 4:
+obtain ⟨E, hE, H⟩ := (krullTopology_mem_nhds_one_iff _ _ _).mp hs
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [krullTopology_mem_nhds_one_iff, !finiteIndex_fixingSubgroup, #5708, #dda8]
+  [apply] grind only [krullTopology_mem_nhds_one_iff, !finiteIndex_fixingSubgroup]
+  [apply] grind =>
+    instantiate only [krullTopology_mem_nhds_one_iff]
+    cases #5708 <;> instantiate only [!finiteIndex_fixingSubgroup, #dda8]
+shortened proof!
+...........
+line 252, col 41:
+simp
+* Try these:
+  [apply] grind only [= Set.mem_singleton_iff]
+  [apply] grind => instantiate only [= Set.mem_singleton_iff]
+.............
+line 268, col 8:
+dsimp
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!AlgEquiv.apply_symm_apply, #cf85, #5292]
+  [apply] grind only [!AlgEquiv.apply_symm_apply]
+  [apply] grind => instantiate only [#cf85, #5292, !AlgEquiv.apply_symm_apply]
+shortened proof!
+..
+line 275, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_mul]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_mul, #5292]
+  [apply] grind only [= map_mul]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_mul]
+..
+line 279, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_add]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_add, #5292]
+  [apply] grind only [= map_add]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_add]
+.........__.........
+line 304, col 69:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...

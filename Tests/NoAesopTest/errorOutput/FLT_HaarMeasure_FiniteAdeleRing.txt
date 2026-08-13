@@ -1,0 +1,84 @@
+..............
+line 81, col 7:
+exact Valued.isOpen_integer _
+* Try these:
+  [apply] grind only [!NumberField.isOpenAdicCompletionIntegers]
+  [apply] grind => instantiate only [!NumberField.isOpenAdicCompletionIntegers]
+......
+line 125, col 2:
+refine Ideal.Quotient.subsingleton_iff.mp ?_
+* Try this:
+
+  [apply]   smt +mono [*, Module.FaithfullyFlat.rTensor_reflects_triviality, Submodule.Quotient.subsingleton_iff]
+shortened proof!
+.
+line 131, col 2:
+refine ⟨fun H ↦ Module.FaithfullyFlat.smul_top_eq_top_iff (M := S).mp ?_, (· ▸ Ideal.map_top _)⟩
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Ideal.comap_map_eq_self_of_faithfullyFlat, Ideal.comap_eq_top_iff]
+  [apply] grind =>
+    instantiate only [!Ideal.comap_map_eq_self_of_faithfullyFlat]
+    instantiate only [Ideal.comap_eq_top_iff]
+shortened proof!
+...
+line 138, col 8:
+simp +contextual
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `MvPolynomial.mem_support_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Finsupp.mem_support_iff]
+  [apply] grind => instantiate only [Finsupp.mem_support_iff]
+.
+line 138, col 30:
+simp +contextual
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `MvPolynomial.mem_support_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Finsupp.mem_support_iff]
+  [apply] grind => instantiate only [Finsupp.mem_support_iff]
+.
+line 138, col 52:
+simp [mul_comm]
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `MvPolynomial.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_biUnion` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.............................
+line 182, col 52:
+simp [*]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_eq_one_iff, MonoidHom.map_mul, map_mul_eq_one, mul_inv_cancel]
+  [apply] grind => instantiate only [map_eq_one_iff, MonoidHom.map_mul, map_mul_eq_one, mul_inv_cancel]
+.
+line 182, col 71:
+simp [*]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_eq_one_iff, MonoidHom.map_mul, Units.coeHom_apply, !Units.inv_mul]
+  [apply] grind => instantiate only [map_eq_one_iff, MonoidHom.map_mul, Units.coeHom_apply, !Units.inv_mul]
+.
+line 182, col 85:
+ext
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.coe_map, Units.coeHom_apply, Units.ext]
+  [apply] grind =>
+    instantiate only [!Units.coe_map, Units.coeHom_apply]
+    instantiate only [Units.ext]
+shortened proof!
+..............
+line 198, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

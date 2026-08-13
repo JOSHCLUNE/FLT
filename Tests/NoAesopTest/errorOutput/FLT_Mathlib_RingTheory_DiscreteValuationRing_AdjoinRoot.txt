@@ -1,0 +1,34 @@
+.......
+line 54, col 33:
+rw [pb.natDegree_minpoly, pb.finrank]
+* Try this:
+
+  [apply]   duper [*, PowerBasis.finrank, PowerBasis.natDegree_minpoly] {preprocessing := full}
+....
+line 65, col 2:
+exact ⟨P, hP_monic, hP_map, hP_deg⟩
+* Try these:
+  [apply] grind only [#b78f]
+  [apply] grind only
+  [apply] grind => instantiate only [#b78f]
+....
+line 77, col 33:
+exact Ideal.map_comap_le
+* Try these:
+  [apply] grind only [!Ideal.map_comap_le]
+  [apply] grind => instantiate only [!Ideal.map_comap_le]
+.
+line 78, col 4:
+exact (hmax.eq_of_le hM.ne_top hle).symm
+* Try these:
+  [apply] grind only [Ideal.comap_eq_top_iff, Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal, Ideal.IsMaximal.ne_top]
+  [apply] grind =>
+    instantiate only [Ideal.comap_eq_top_iff, Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal]
+    instantiate only [Ideal.IsMaximal.ne_top]
+........................X.........................
+line 208, col 46:
+rw [h, map_zero]
+* Try these:
+  [apply] grind only [= map_zero]
+  [apply] grind => instantiate only [= map_zero]
+.

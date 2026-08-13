@@ -1,0 +1,38 @@
+..
+line 56, col 2:
+exact Set.mem_singleton _
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [= Set.mem_singleton_iff]
+  [apply] grind => instantiate only [= Set.mem_singleton_iff]
+........
+line 78, col 55:
+norm_cast
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..........
+line 100, col 6:
+rw [Ideal.height_eq_inf_minimalPrimes]
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, Ideal.height_mono, Ideal.IsMinimalPrime.le]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, Ideal.height_mono]
+    instantiate only [Ideal.IsMinimalPrime.le]
+shortened proof!
+..
+line 103, col 4:
+exact Ideal.eq_of_le_of_height_le p (le_maximalIdeal Ideal.IsPrime.ne_top') h2
+* Try these:
+  [apply] grind only [Ideal.IsPrime.ne_top', !Ideal.height_eq_ringKrullDim_iff, !Ideal.height_le_ringKrullDim_of_ne_top,
+    WithBot.coe_inj, WithBot.coe_le_coe]
+  [apply] grind =>
+    instantiate only [Ideal.IsPrime.ne_top', !Ideal.height_eq_ringKrullDim_iff, !Ideal.height_le_ringKrullDim_of_ne_top]
+    instantiate only [WithBot.coe_inj, WithBot.coe_le_coe]
+........
+line 113, col 63:
+norm_cast
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

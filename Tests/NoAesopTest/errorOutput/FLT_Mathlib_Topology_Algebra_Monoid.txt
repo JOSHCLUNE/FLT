@@ -1,0 +1,6 @@
+..
+line 44, col 2:
+convert (IsInducing.induced h).continuousMul h
+* Try this:
+
+  [apply]   duper [*, ContinuousMul.induced] {preprocessing := full}

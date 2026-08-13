@@ -1,0 +1,24 @@
+....
+line 48, col 24:
+decide
+* Try these:
+  [apply] grind only [= Nat.odd_iff]
+  [apply] grind => instantiate only [= Nat.odd_iff]
+._..........
+line 72, col 4:
+linear_combination -hv
+* Try this:
+  [apply] grind only
+._..
+line 96, col 2:
+exact (baseChange_smul_baseChange L C V).symm.trans h
+* Try this:
+
+  [apply]   duper [*, map_variableChange, baseChange, VariableChange.baseChange, VariableChange.map] {preprocessing := full}
+...
+line 106, col 2:
+have hmv := map_variableChange (W := V.baseChange L) (C := ρ) (φ := σ.toAlgHom.toRingHom)
+* Try this:
+
+  [apply]   duper [*, map_variableChange, baseChange, VariableChange.map] {preprocessing := full}
+shortened proof!

@@ -1,0 +1,7 @@
+.
+line 31, col 2:
+simp_rw [continuous_iff_continuousAt, ContinuousAt, tendsto_nhds_compactOpen]
+* Try this:
+
+  [apply]   duper [*, continuous_prodMk] {preprocessing := full}
+shortened proof!

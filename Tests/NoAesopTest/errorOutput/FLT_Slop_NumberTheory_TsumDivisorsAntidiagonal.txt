@@ -1,0 +1,71 @@
+.......................
+line 143, col 4:
+rwa [hval] at hlim
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 147, col 45:
+rw [Finset.sum_range_succ]
+* Try these:
+  [apply] grind only [Finset.sum_range_succ]
+  [apply] grind => instantiate only [Finset.sum_range_succ]
+shortened proof!
+..
+line 149, col 4:
+exact hdiff
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..................
+line 200, col 67:
+rw [pow_mul, pow_succ]
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind =>
+    instantiate only [pow_mul]
+    ring
+shortened proof!
+...
+line 224, col 4:
+simpa [norm_pow] using pow_lt_one₀ (norm_nonneg r) hr hm
+* Try these:
+  [apply] grind only [!norm_pow, pow_eq_zero_iff', !norm_pos_iff, !pow_lt_one₀]
+  [apply] grind =>
+    instantiate only [!norm_pow, pow_eq_zero_iff', !norm_pos_iff]
+    instantiate only [!pow_lt_one₀]
+...
+line 227, col 4:
+ring
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind => instantiate only [pow_mul]
+...
+line 236, col 2:
+simp only [Prod.fst_swap, Prod.snd_swap, mul_comm (p.2 : ℕ) (p.1 : ℕ)]
+* Try these:
+  [apply] grind only [!tendsto_pow_atTop_nhds_zero_of_norm_lt_one, !norm_pos_iff, inv_eq_zero, Int.natCast_eq_zero,
+    = Prod.snd_swap, = Prod.fst_swap, #86e6, #b53fa, #35596, #16e51, #25c08, #9ba1]
+  [apply] grind only [!tendsto_pow_atTop_nhds_zero_of_norm_lt_one, !norm_pos_iff, inv_eq_zero, Int.natCast_eq_zero,
+    = Prod.snd_swap, = Prod.fst_swap]
+  [apply] grind =>
+    instantiate only [!tendsto_pow_atTop_nhds_zero_of_norm_lt_one, !norm_pos_iff, inv_eq_zero, Int.natCast_eq_zero,
+      = Prod.snd_swap, = Prod.fst_swap]
+    ring
+    instantiate only [!norm_pos_iff]
+    cases #86e6 <;> cases #b53fa <;> cases #35596 <;> cases #16e51 <;> cases #25c08 <;> mbtc <;> cases #9ba1
+..
+line 244, col 4:
+ring
+* Try this:
+
+  [apply]   duper [*, zpow_natCast] {preprocessing := full}
+.
+line 245, col 4:
+rw [ArithmeticFunction.sigma_apply]
+* Try these:
+  [apply] grind only [ArithmeticFunction.sigma_apply, Nat.cast_sum]
+  [apply] grind =>
+    instantiate only [ArithmeticFunction.sigma_apply]
+    instantiate only [Nat.cast_sum]
+shortened proof!

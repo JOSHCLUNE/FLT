@@ -1,0 +1,53 @@
+.
+line 28, col 4:
+simp [he, Subsemigroup.mem_corner_iff, (Subsemigroup.mem_corner_iff he).mp x.2]
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try these:
+  [apply] grind only [Subsemigroup.mem_corner_iff, Algebra.smul_def, usr Subtype.property, mul_assoc, mul_smul_comm]
+  [apply] grind =>
+    instantiate only [Subsemigroup.mem_corner_iff, Algebra.smul_def, usr Subtype.property]
+    instantiate only [Subsemigroup.mem_corner_iff, mul_assoc, mul_smul_comm]
+.
+line 30, col 26:
+simp [he, Subsemigroup.mem_corner_iff, he.eq]
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try these:
+  [apply] grind only [Subsemigroup.mem_corner_iff, isIdempotentElem_iff, Algebra.smul_def, mul_smul_comm]
+  [apply] grind =>
+    instantiate only [Subsemigroup.mem_corner_iff, isIdempotentElem_iff, Algebra.smul_def]
+    ac
+    instantiate only [mul_smul_comm]
+...
+line 33, col 6:
+simp [he.eq, ← mul_smul, mul_comm]
+* Try this:
+
+  [apply]   duper [*, IsIdempotentElem, Algebra.smul_def, smul_mul_smul_comm] {preprocessing := full}
+...
+line 37, col 4:
+simp [(Subsemigroup.mem_corner_iff he).mp x.2]
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mul_smul_comm, smul_mul_assoc, usr Subtype.property, Subsemigroup.mem_corner_iff]
+  [apply] grind =>
+    instantiate only [mul_smul_comm, smul_mul_assoc, usr Subtype.property]
+    instantiate only [Subsemigroup.mem_corner_iff]
+.
+line 39, col 4:
+simp [(Subsemigroup.mem_corner_iff he).mp x.2]
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [smul_mul_assoc, usr Subtype.property, Subsemigroup.mem_corner_iff]
+  [apply] grind =>
+    instantiate only [smul_mul_assoc, usr Subtype.property]
+    instantiate only [Subsemigroup.mem_corner_iff]
+......
+line 63, col 2:
+constructor
+* Try these:
+  [apply] grind only [Ideal.comap_liesOver]
+  [apply] grind => instantiate only [Ideal.comap_liesOver]
+shortened proof!
+.

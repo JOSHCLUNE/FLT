@@ -1,0 +1,141 @@
+.......
+line 87, col 4:
+change (ρ (g * h)).baseChange l = (ρ g).baseChange l * (ρ h).baseChange l
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_mul, LinearMap.baseChange_mul]
+  [apply] grind =>
+    instantiate only [map_mul]
+    instantiate only [LinearMap.baseChange_mul]
+shortened proof!
+..........................
+line 165, col 4:
+rw [hφ, one_smul] at key
+* Try this:
+
+  [apply]   duper [*, Algebra.algebraMap_eq_smul_one, one_smul] {preprocessing := full}
+shortened proof!
+...
+line 171, col 4:
+rw [TensorProduct.mk_apply, TensorProduct.tmul_smul, TensorProduct.smul_tmul',
+      Algebra.algebraMap_eq_smul_one]
+* Try this:
+
+  [apply]   smt +mono [*, Algebra.algebraMap_eq_smul_one, TensorProduct.smul_tmul]
+.........
+line 195, col 4:
+rw [hc, hv]
+* Try this:
+  [apply] grind only
+...................
+line 221, col 4:
+rw [← hμ']
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 224, col 4:
+exfalso
+* Try these:
+  [apply] grind only [Submodule.mem_bot]
+  [apply] grind => instantiate only [Submodule.mem_bot]
+shortened proof!
+.
+line 228, col 4:
+refine LinearMap.ext fun w => ?_
+* Try these:
+  [apply] grind only [LinearMap.ker_eq_top]
+  [apply] grind => instantiate only [LinearMap.ker_eq_top]
+shortened proof!
+........................
+line 276, col 4:
+exact h
+* Try this:
+  [apply] grind only
+..........
+line 289, col 2:
+exact haT ▸ a.2
+* Try these:
+  [apply] grind only [usr Subtype.property]
+  [apply] grind => instantiate only [usr Subtype.property]
+.....
+line 306, col 65:
+rw [hEapp]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+..............
+line 321, col 4:
+rwa [Subalgebra.mem_restrictScalars] at this
+* Try this:
+
+  [apply]   smt +mono [*]
+.............................
+line 360, col 8:
+obtain ⟨g, rfl⟩ := hx
+* Try these:
+  [apply] grind only [= Set.mem_range, #50b1, #a163]
+  [apply] grind only [= Set.mem_range]
+  [apply] grind =>
+    instantiate only [= Set.mem_range]
+    cases #50b1 <;> instantiate only [#a163]
+shortened proof!
+...
+line 365, col 10:
+simp [Module.algebraMap_end_apply]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 366, col 8:
+rw [h1]
+* Try these:
+  [apply] grind only [SMulMemClass.smul_mem]
+  [apply] grind => instantiate only [SMulMemClass.smul_mem]
+shortened proof!
+...
+line 371, col 8:
+exact W.add_mem (ihx w hw) (ihy w hw)
+* Try this:
+
+  [apply]   duper [*, add_mem] {preprocessing := full}
+.
+line 373, col 8:
+intro w hw
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.....
+line 380, col 4:
+exact Or.inl hbot
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..........
+line 391, col 6:
+exact hall
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 397, col 4:
+have h2 := hWall (((φ w)⁻¹ • φ).smulRight v) w hwW
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.....
+line 413, col 4:
+haveI : Subsingleton V := hV
+* Try these:
+  [apply] grind only [false_of_nontrivial_of_subsingleton]
+  [apply] grind => instantiate only [false_of_nontrivial_of_subsingleton]
+shortened proof!
+.............................
+line 472, col 4:
+exact one_ne_zero hcontra
+* Try this:
+  [apply] grind only
+........

@@ -1,0 +1,733 @@
+..
+line 79, col 38:
+rintro rfl
+* Try these:
+  [apply] grind only [Dvd.intro_left]
+  [apply] grind => instantiate only [Dvd.intro_left]
+shortened proof!
+..
+line 90, col 14:
+rintro rfl
+* Try this:
+
+  [apply]   smt +mono [*, Nat.Prime.dvd_mul, Nat.dvd_prime]
+shortened proof!
+.
+line 93, col 32:
+rintro rfl
+* Try these:
+  [apply] grind only [Dvd.intro_left]
+  [apply] grind => instantiate only [Dvd.intro_left]
+shortened proof!
+..
+line 110, col 91:
+rw [Polynomial.degree_X_pow_sub_C (by norm_num)] at h
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Polynomial.degree_X_pow_sub_C, !Polynomial.degree_X_pow, !Polynomial.degree_le_zero_iff, pow_two,
+    Polynomial.X_pow_sub_C_ne_zero]
+  [apply] grind =>
+    instantiate only [Polynomial.degree_X_pow_sub_C, !Polynomial.degree_X_pow, !Polynomial.degree_le_zero_iff, pow_two]
+    instantiate only [Polynomial.X_pow_sub_C_ne_zero, !Polynomial.degree_le_zero_iff]
+    ring
+    instantiate only [Polynomial.X_pow_sub_C_ne_zero]
+shortened proof!
+..
+line 111, col 138:
+exact hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 117, col 6:
+rw [QuotientGroup.eq_one_iff, Subgroup.mem_center_iff]
+* Try these:
+  [apply] grind only [!Matrix.SpecialLinearGroup.toGL_mem_center_iff, QuotientGroup.eq_one_iff]
+  [apply] grind =>
+    instantiate only [!Matrix.SpecialLinearGroup.toGL_mem_center_iff]
+    instantiate only [QuotientGroup.eq_one_iff]
+shortened proof!
+............
+line 140, col 52:
+rw [← hc, h, zero_pow (by norm_num)]
+* Try this:
+  [apply] grind only
+..............
+line 153, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 154, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 155, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 156, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 164, col 6:
+rw [mul_zero, add_zero, zero_mul, add_zero, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 167, col 6:
+rw [mul_zero, zero_add, zero_mul, add_zero, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 170, col 6:
+rw [mul_zero, add_zero, zero_mul, zero_add, mul_comm]
+* Try this:
+  [apply] grind only
+..
+line 173, col 6:
+rw [mul_zero, zero_add, zero_mul, zero_add, mul_comm]
+* Try this:
+  [apply] grind only
+..........
+line 193, col 40:
+rw [← mul_assoc, mul_inv_cancel, one_mul]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_eq_iff_eq_mul]
+  [apply] grind => instantiate only [inv_mul_eq_iff_eq_mul]
+..........
+line 212, col 6:
+intro x hx
+* Try these:
+  [apply] grind only [!Matrix.GeneralLinearGroup.map_center_le]
+  [apply] grind => instantiate only [!Matrix.GeneralLinearGroup.map_center_le]
+shortened proof!
+.....
+line 269, col 4:
+change (f x).val = (f y).val
+* Try this:
+  [apply] grind only
+shortened proof!
+.......
+line 283, col 4:
+exact Set.Finite.biUnion (Finset.finite_toSet S) (fun _ _ ↦ Set.finite_range _)
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.toFinite]
+  [apply] grind => instantiate only [Set.toFinite]
+...............
+line 301, col 6:
+exact zero_ne_one h_mul
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_toFinset` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+.........
+line 317, col 4:
+rw [Projectivization.mk_eq_mk_iff] at h
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #6ac8, #a82b]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    cases #6ac8 <;> instantiate only [#a82b]
+shortened proof!
+.....
+line 324, col 4:
+rw [Projectivization.mk_eq_mk_iff]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #4f3e]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#4f3e]
+shortened proof!
+........
+line 342, col 4:
+ring
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 344, col 100:
+change (g.val - z • 1).det = 0 ↔ z^2 - T * z + D = 0
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.refl_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, #7822]
+  [apply] grind only [usr Set.mem_setOf_eq]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [#7822]
+shortened proof!
+.......
+line 352, col 8:
+change (1 : K p) - T * 0 + 0 = 1
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 355, col 80:
+norm_num
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 356, col 6:
+exact one_ne_zero (h1.symm.trans h2)
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+............
+line 370, col 6:
+change (z - x) * (z - (-x + T)) = z^2 - T * z + D
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...._.
+line 378, col 6:
+apply sub_eq_zero.mp
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 383, col 6:
+change x = -x + T
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+........
+line 404, col 37:
+rw [ha]
+* Try this:
+  [apply] grind only
+..
+line 406, col 28:
+rw [hwy]
+* Try this:
+  [apply] grind only
+..
+line 408, col 22:
+rw [ha]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 426, col 33:
+rw [Fin.sum_univ_two]
+* Try these:
+  [apply] grind only [Fin.sum_univ_two, Matrix.const_fin1_eq, Matrix.cons_val_zero, Matrix.cons_val_one]
+  [apply] grind =>
+    instantiate only [Fin.sum_univ_two, Matrix.const_fin1_eq]
+    instantiate only [Matrix.cons_val_zero, Matrix.cons_val_one]
+shortened proof!
+......
+line 433, col 72:
+ring
+* Try this:
+  [apply] grind only
+.
+line 435, col 88:
+rw [← hvx, ← hwy]
+* Try this:
+  [apply] grind only
+.......
+line 441, col 90:
+rw [Fin.sum_univ_two]
+* Try these:
+  [apply] grind only [Fin.sum_univ_two, Matrix.const_fin1_eq, Matrix.cons_val_one, Matrix.cons_val_zero]
+  [apply] grind =>
+    instantiate only [Fin.sum_univ_two, Matrix.const_fin1_eq]
+    instantiate only [Matrix.cons_val_one, Matrix.cons_val_zero, Matrix.const_fin1_eq]
+shortened proof!
+.........
+line 449, col 6:
+exfalso
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+......
+line 461, col 6:
+left
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff', #f72a]
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [!Projectivization.mk_rep]
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#f72a]
+shortened proof!
+.
+line 464, col 6:
+right
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff', #8a9a]
+  [apply] grind only [!Projectivization.mk_rep, Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [!Projectivization.mk_rep]
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#8a9a]
+shortened proof!
+...
+line 470, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨x, hvx.symm⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #ff82]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#ff82]
+..
+line 472, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨y, hwy.symm⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.mk_eq_mk_iff', #0700]
+  [apply] grind only [Projectivization.mk_eq_mk_iff']
+  [apply] grind =>
+    instantiate only [Projectivization.mk_eq_mk_iff']
+    instantiate only [#0700]
+............
+line 489, col 2:
+exact h_contra.elim h_ne hv0
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 501, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 504, col 78:
+norm_num
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 505, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..........
+line 518, col 4:
+have ht : g.val.trace = 2 * x := by
+      calc g.val.trace = (g.val.trace - x) + x := by rw [sub_add_cancel]
+        _ = y + x := rfl
+        _ = x + x := by rw [h_eq]
+        _ = 2 * x := by ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+..
+line 531, col 4:
+calc y^2 - g.val.trace * y + g.val.det
+      _ = (g.val.trace - x)^2 - g.val.trace * (g.val.trace - x) + g.val.det := rfl
+      _ = x^2 - g.val.trace * x + g.val.det := by ring
+      _ = 0 := hx
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 539, col 4:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 541, col 68:
+rw [expand, hx]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#a169]
+  [apply] grind only
+  [apply] grind => instantiate only [#a169]
+.
+line 541, col 89:
+rw [expand, hy]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#a169]
+  [apply] grind only
+  [apply] grind => instantiate only [#a169]
+.......
+line 553, col 4:
+rw [hl]
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 558, col 4:
+exact hv
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.............
+line 573, col 6:
+omega
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....................
+line 586, col 4:
+exact hg ⟨lambda, sub_eq_zero.mp hA_zero⟩
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9b83]
+  [apply] grind only
+  [apply] grind => instantiate only [#9b83]
+.....
+line 593, col 4:
+omega
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 603, col 4:
+exact ⟨c, hc.symm⟩
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9518]
+  [apply] grind only
+  [apply] grind => instantiate only [#9518]
+...................................
+line 643, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 645, col 106:
+norm_num
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 646, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..........
+line 658, col 8:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 658, col 17:
+linear_combination -hlambda1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 661, col 4:
+calc (g.val.trace)^2 = (2 * lambda1)^2 := by rw [← hlambda2.1, h]; ring
+      _ = 4 * g.val.det := by rw [← hlambda2.2, h]; ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 667, col 4:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 670, col 42:
+rw [expand lambda1, hlambda1]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#a169]
+  [apply] grind only
+  [apply] grind => instantiate only [#a169]
+.......
+line 680, col 6:
+have hlambda2_eq_zero : lambda2^2 - g.val.trace * lambda2 + g.val.det = 0 := by
+        calc lambda2^2 - g.val.trace * lambda2 + g.val.det = (g.val.trace - lambda1)^2 - g.val.trace * (g.val.trace - lambda1) + g.val.det := rfl
+          _ = lambda1^2 - g.val.trace * lambda1 + g.val.det := by ring
+          _ = 0 := hlambda1
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* generated tactic cannot close the goal
+  · instantiate only [#a169]
+Initial goal
+case grind
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+g : GL (Fin 2) (K p)
+h_discr : (↑g).trace ^ 2 ≠ 4 * (↑g).det
+h_fin : IsOfFinOrder ↑g
+f : Polynomial (K p) := Polynomial.X ^ 2 - Polynomial.C (↑g).trace * Polynomial.X + Polynomial.C (↑g).det
+h_deg : f.degree ≠ 0
+lambda1 : K p
+h_root : f.IsRoot lambda1
+hlambda1 : lambda1 ^ 2 - (↑g).trace * lambda1 + (↑g).det = 0
+lambda2 : K p := (↑g).trace - lambda1
+hlambda2 : lambda1 + lambda2 = (↑g).trace ∧ lambda1 * lambda2 = (↑g).det
+h_ne : lambda1 ≠ lambda2
+expand : ∀ (t : K p), (↑g - t • 1).det = t ^ 2 - (↑g).trace * t + (↑g).det
+v1 : Fin 2 → K p
+hv1_ne : v1 ≠ 0
+hv1 : (↑g - lambda1 • 1).mulVec v1 = 0
+hv1_eq : (↑g).mulVec v1 = lambda1 • v1
+h✝ : ¬(↑g - ((↑g).trace - lambda1) • 1).det = 0
+⊢ False
+* Try these:
+  [apply] grind only [#a169]
+  [apply] grind only
+  [apply] grind => instantiate only [#a169]
+shortened proof!
+..............
+line 702, col 8:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_pos rfl]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 703, col 6:
+rw [h_det_fin] at h_lin_indep
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+._.......
+line 713, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), h, h', mul_zero, mul_zero, add_zero]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 718, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...............
+line 728, col 13:
+calc v2 0 * v1 1 = -(v1 0 * v2 1 - v2 0 * v1 1) + v1 0 * v2 1 := by ring
+                                     _ = -0 + 0 * v2 1 := by rw [h_det, h]
+                                     _ = 0 := by ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 735, col 10:
+calc v1 0 * v2 1
+              = (v1 0 * v2 1 - v2 0 * v1 1) + v2 0 * v1 1 := by
+                ring
+            _ = 0 + 0 * v1 1 := by rw [h_det, h']
+            _ = 0 := by ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 747, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 753, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+..
+line 756, col 15:
+intro c0
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.......
+line 764, col 6:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+................
+line 782, col 86:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 788, col 86:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 791, col 44:
+rw [h_diag]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 798, col 37:
+rw [mul_one]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 800, col 38:
+rw [← mul_assoc (P * Y)]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 801, col 26:
+rw [← hP]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 802, col 6:
+rw [h_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 811, col 79:
+rw [← hlambda2.2, hc, mul_zero]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+........
+line 819, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 820, col 8:
+rw [h_det] at hE
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..........
+line 831, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 836, col 10:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 838, col 8:
+exact hE
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 842, col 27:
+exact div_eq_one_iff_eq (pow_ne_zero n hl2_ne) |>.mp h
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [pow_ne_zero]
+  [apply] grind =>
+    instantiate only [pow_ne_zero]
+    ring
+.........
+line 852, col 8:
+change E.val 0 0 * lambda1^n + E.val 0 1 * 0 = lambda1^n * E.val 0 0 + 0 * E.val 1 0
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Matrix.diagonal_apply_ne]
+  [apply] grind =>
+    instantiate only [Matrix.diagonal_apply_ne]
+    ring
+shortened proof!
+....
+line 858, col 8:
+rw [hl_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 863, col 8:
+rw [hl_eq]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 868, col 8:
+ring
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 879, col 6:
+by_contra h_k0
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+......WARNING: FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean produced errors (exit code 143)

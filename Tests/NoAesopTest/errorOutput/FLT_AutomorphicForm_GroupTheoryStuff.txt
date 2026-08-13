@@ -1,0 +1,153 @@
+.....
+line 43, col 57:
+simp [← QuotientGroup.mk_pow, H]
+* Try these:
+  [apply] grind only [!QuotientGroup.mk_pow, !QuotientGroup.mk_one]
+  [apply] grind => instantiate only [!QuotientGroup.mk_pow, !QuotientGroup.mk_one]
+..
+line 49, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 50, col 36:
+simp [ha'.dvd]
+* this parameter is redundant, environment already contains `isUnit_one` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [IsUnit.dvd, !ZMod.isUnit_iff_coprime, isUnit_one]
+  [apply] grind =>
+    instantiate only [IsUnit.dvd, !ZMod.isUnit_iff_coprime]
+    instantiate only [isUnit_one]
+....
+line 54, col 33:
+ring
+* this parameter is redundant, environment already contains `isUnit_one` annotated with `@[grind ←]`
+* Try this:
+  [apply] grind only
+..
+line 55, col 29:
+ring
+* this parameter is redundant, environment already contains `isUnit_one` annotated with `@[grind ←]`
+* Try this:
+  [apply] grind only
+........
+line 86, col 60:
+rfl
+* Try this:
+
+  [apply]   duper [*, Set.Finite] {preprocessing := full}
+....
+line 98, col 59:
+simp_all
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+................
+line 160, col 26:
+rw [leftRel_apply, mem_ker, φ.map_mul,
+      ← h, ← map_mul, inv_mul_cancel, map_one]
+* Try this:
+
+  [apply]   duper [*, leftRel_eq, eq_iff] {preprocessing := full}
+.......
+line 173, col 66:
+simpa
+* Try these:
+  [apply] grind only [!QuotientGroup.ker_mk']
+  [apply] grind => instantiate only [!QuotientGroup.ker_mk']
+................
+line 203, col 4:
+simp [← map_mul, mul_assoc]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Function.RightInverse.eq_1, MonoidHom.map_mul, !inv_mul_cancel_right,
+    = Function.LeftInverse.eq_1, #ba2e]
+  [apply] grind only [= Function.RightInverse.eq_1, MonoidHom.map_mul, !inv_mul_cancel_right,
+    = Function.LeftInverse.eq_1]
+  [apply] grind =>
+    ac
+    instantiate only [= Function.RightInverse.eq_1, MonoidHom.map_mul, !inv_mul_cancel_right]
+    instantiate only [MonoidHom.map_mul, = Function.LeftInverse.eq_1]
+    instantiate only [#ba2e]
+shortened proof!
+.....
+line 213, col 2:
+simp [← map_mul]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Function.RightInverse.eq_1, !inv_mul_cancel_right, MonoidHom.map_mul,
+    = Function.LeftInverse.eq_1, #ba2e]
+  [apply] grind only [= Function.RightInverse.eq_1, !inv_mul_cancel_right, MonoidHom.map_mul,
+    = Function.LeftInverse.eq_1]
+  [apply] grind =>
+    ac
+    instantiate only [= Function.RightInverse.eq_1, !inv_mul_cancel_right]
+    instantiate only [MonoidHom.map_mul, = Function.LeftInverse.eq_1]
+    instantiate only [#ba2e]
+shortened proof!
+.
+line 252, col 54:
+simp [mem_ker.mp hx]
+* Try this:
+
+  [apply]   duper [*, comp_apply, mem_ker, MonoidHom.map_one] {preprocessing := full}
+.......
+line 296, col 76:
+simp_all
+* Try this:
+
+  [apply]   duper [*, mem_ker, eq_iff, comp_apply] {preprocessing := full}
+.
+line 300, col 2:
+rw [← toConjAct_inv, toConjAct_inv_smul]
+* Try this:
+
+  [apply]   duper [*, smul_def, toConjAct_ofConjAct, ofConjAct_inv, mul_inv_eq_iff_eq_mul, inv_mul_cancel_left]
+      {preprocessing := full}
+..
+line 305, col 2:
+simp [← map_mul, eq_comm]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+    ac
+.
+line 310, col 2:
+rw [← ((Group.isUnit x).map f).mul_left_inj, iff_comm, ← ((Group.isUnit y).map f).mul_right_inj]
+* Try this:
+
+  [apply]   duper [*, map_inv_eq_iff, inv_eq_iff_eq_inv] {preprocessing := full}
+shortened proof!
+............
+line 335, col 2:
+simp [Group.dvd_natCard_iff_of_prime, hp]
+* Try this:
+
+  [apply]   duper [*, dvd_natCard_iff_of_prime, orderOf_dvd_natCard] {preprocessing := full}
+...
+line 347, col 65:
+grind
+* Try these:
+  [apply] grind only [#f0aa, #eb52, #1f14]
+  [apply] grind only
+  [apply] grind =>
+    cases #f0aa
+    · instantiate only [#eb52]
+    · instantiate only [#1f14]
+.........
+line 377, col 33:
+simpa using H
+* Try this:
+
+  [apply]   duper [*, Units.isUnit_units_mul] {preprocessing := full}
+..

@@ -1,0 +1,63 @@
+...........................................
+line 115, col 68:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........................
+line 135, col 59:
+ring
+* Try this:
+  [apply] grind only
+...........................
+line 158, col 6:
+rw [← hQP', Ideal.comap_comap]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.......................
+line 190, col 2:
+simpa [Module.finrank_eq_card_chooseBasisIndex] using Fintype.card_pos
+* Try this:
+
+  [apply]   smt +mono [*, *, finrank_pos_iff_of_free]
+.
+line 196, col 2:
+constructor
+* Try this:
+
+  [apply]   duper [*, Algebra.finrank_eq_one_iff_bijective_algebraMap, finrank_of_bijective_algebraMap] {preprocessing := full}
+shortened proof!
+.............................................................
+line 286, col 6:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.................
+line 301, col 15:
+simp [← hroot]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 307, col 74:
+exact this
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........................
+line 345, col 24:
+simp [hb]
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [sub_eq_iff_eq_add]
+  [apply] grind => instantiate only [sub_eq_iff_eq_add]
+...
+line 350, col 6:
+exact ⟨_, this⟩
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.................................................................

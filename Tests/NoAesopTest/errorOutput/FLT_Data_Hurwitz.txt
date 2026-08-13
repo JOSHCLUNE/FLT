@@ -1,0 +1,249 @@
+....
+line 75, col 4:
+field_simp
+* Try this:
+  [apply] grind only
+shortened proof!
+....______.__.__.__.__....
+line 198, col 12:
+rw [nsmulRec, zero, zero_smul]
+* Try this:
+
+  [apply]   duper [*, zero_nsmul, nsmulRec] {preprocessing := full}
+.
+line 199, col 17:
+rw [nsmulRec, add, add_nsmul, one_nsmul, ih]
+* Try this:
+
+  [apply]   duper [*, add_nsmul, nsmulRec, one_nsmul] {preprocessing := full}
+..
+line 215, col 4:
+rw [zsmulRec, nsmul, Int.ofNat_eq_natCast, natCast_zsmul]
+* Try this:
+
+  [apply]   duper [*, natCast_zsmul, zsmulRec] {preprocessing := full}
+..__.
+line 278, col 2:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+..
+line 286, col 12:
+rw [npowRec, one, pow_zero]
+* Try this:
+
+  [apply]   duper [*, pow_zero] {preprocessing := full}
+.
+line 287, col 17:
+rw [npowRec, pow_succ, mul, ih]
+* Try this:
+
+  [apply]   duper [*, pow_succ] {preprocessing := full}
+..
+line 299, col 12:
+rw [Nat.unaryCast, zero, Nat.cast_zero]
+* Try this:
+
+  [apply]   duper [*, nsmul_one, Nat.cast_zero, Nat.unaryCast] {preprocessing := full}
+...
+line 318, col 15:
+rw [Int.castDef_ofNat, natCast, Int.ofNat_eq_natCast, Int.cast_natCast]
+* Try this:
+
+  [apply]   duper [*, AddGroupWithOne.intCast_ofNat, Int.castDef] {preprocessing := full}
+.
+line 319, col 17:
+rw [Int.castDef_negSucc, neg, natCast, Int.cast_negSucc]
+* Try this:
+
+  [apply]   duper [*, Int.negSucc_eq, AddGroupWithOne.intCast_ofNat, Int.natCast_succ, Int.cast_neg, Int.castDef]
+      {preprocessing := full}
+..
+line 341, col 12:
+simp
+* Try this:
+
+  [apply]   duper [*, zero_re] {preprocessing := full}
+...
+line 345, col 12:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 349, col 12:
+simp
+* Try this:
+
+  [apply]   duper [*, Int.castDef] {preprocessing := full}
+...
+line 353, col 12:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..............
+line 377, col 26:
+ext
+* Try this:
+  [apply] grind only
+shortened proof!
+_.__.__.____....__..
+line 418, col 2:
+field_simp
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 422, col 35:
+simp [norm]
+* Try this:
+
+  [apply]   duper [*, zero_re, norm, norm_zero, zero_im_oi, zero_im_o, zero_im_i] {preprocessing := full}
+.
+line 424, col 34:
+simp [norm]
+* Try this:
+
+  [apply]   duper [*, one_re] {preprocessing := full}
+......
+line 434, col 2:
+positivity
+* Try these:
+  [apply] grind only [!sq_nonneg]
+  [apply] grind =>
+    instantiate only [!sq_nonneg]
+    linarith
+..
+line 439, col 4:
+rintro rfl
+* Try this:
+
+  [apply]   duper [*, norm_zero, zero_re, norm, zero_im_oi] {preprocessing := full}
+shortened proof!
+..........
+line 446, col 44:
+positivity
+* Try these:
+  [apply] grind only [sq]
+  [apply] grind => instantiate only [sq]
+.
+line 446, col 60:
+positivity
+* Try these:
+  [apply] grind only [pow_two]
+  [apply] grind => instantiate only [pow_two]
+............._....
+line 468, col 2:
+simp only [Set.mem_setOf]
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_Ioo` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq]
+  [apply] grind => instantiate only [usr Set.mem_setOf_eq]
+shortened proof!
+.
+line 475, col 2:
+apply lt_of_le_of_ne
+* this parameter is redundant, environment already contains `Set.mem_setOf_eq` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [#787d, #7f24, #6f84]
+  [apply] grind only
+  [apply] grind =>
+    cases #787d
+    · linarith
+    · cases #7f24
+      · linarith
+      · cases #6f84 <;> linarith
+shortened proof!
+..
+line 491, col 44:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 495, col 4:
+rw [abs_of_nonneg]
+* Try these:
+  [apply] grind only [= abs.eq_1, = max_def]
+  [apply] grind =>
+    instantiate only [= abs.eq_1]
+    instantiate only [= max_def]
+shortened proof!
+.......................
+line 513, col 26:
+positivity
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+_.
+line 514, col 19:
+use z
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 515, col 30:
+rw [h, Int.cast_sub, Int.cast_one, add_comm_sub]
+* Try this:
+  [apply] grind only
+shortened proof!
+......_.....__.
+line 528, col 2:
+contrapose! H
+* Try these:
+  [apply] grind only [= abs.eq_1, inv_eq_zero, !mul_inv_cancel_left₀, = max_def, #39e9, #2d1c, #d822, #70cb, #ecd1,
+    #635e, #b7a9, #4eb8, #232d]
+  [apply] grind only [= abs.eq_1, inv_eq_zero, !mul_inv_cancel_left₀, = max_def]
+  [apply] grind =>
+    instantiate only [= abs.eq_1, inv_eq_zero]
+    instantiate only [!mul_inv_cancel_left₀, = max_def]
+    cases #39e9
+    · cases #2d1c <;> cases #d822 <;> cases #70cb <;> ring <;> linarith
+    · cases #ecd1
+      · cases #2d1c <;> cases #d822 <;> cases #635e <;> ring <;> linarith
+      · cases #b7a9
+        · cases #2d1c <;> cases #d822 <;> cases #4eb8 <;> ring <;> linarith
+        · cases #2d1c <;> cases #d822 <;> cases #232d <;> ring <;> linarith
+shortened proof!
+..........
+line 546, col 4:
+exact _root_.norm_nonneg (a - q * b).toQuaternion
+* Try these:
+  [apply] grind only [_root_.norm_nonneg]
+  [apply] grind => instantiate only [_root_.norm_nonneg]
+...........
+line 563, col 4:
+rw [Eq.comm]
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [←= bot_unique, Submodule.span_zero_singleton]
+  [apply] grind => instantiate only [←= bot_unique, Submodule.span_zero_singleton]
+shortened proof!
+....
+line 568, col 4:
+exact Submodule.exists_mem_ne_zero_of_ne_bot h_bot
+* Try this:
+
+  [apply]   duper [*, Submodule.exists_mem_ne_zero_of_ne_bot] {preprocessing := full}
+.....
+line 573, col 4:
+exact norm_nonneg _
+* Try this:
+
+  [apply]   duper [*, norm_nonneg] {preprocessing := full}
+.............
+line 584, col 71:
+exact hqr.1.symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........
+line 593, col 4:
+exact a.2.1
+* Try this:
+
+  [apply]   duper [*, Subtype.prop] {preprocessing := full}

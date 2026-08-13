@@ -1,0 +1,9 @@
+........
+line 34, col 2:
+simp
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_setOf_eq` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!QuotientGroup.out_eq']
+  [apply] grind => instantiate only [!QuotientGroup.out_eq']

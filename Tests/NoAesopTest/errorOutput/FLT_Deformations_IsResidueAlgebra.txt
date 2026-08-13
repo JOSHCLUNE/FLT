@@ -1,0 +1,12 @@
+..........
+line 91, col 2:
+exact ha.symm
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 109, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]

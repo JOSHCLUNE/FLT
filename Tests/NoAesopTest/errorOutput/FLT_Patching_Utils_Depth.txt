@@ -1,0 +1,110 @@
+.......
+line 63, col 4:
+exact fun _ _ _ ↦ Subsingleton.elim _ _
+* Try these:
+  [apply] grind only [usr Fin.isLt, = Fin.getElem_fin, = List.getElem_replicate, IsSMulRegular.zero]
+  [apply] grind =>
+    instantiate only [usr Fin.isLt, = Fin.getElem_fin]
+    instantiate only [= List.getElem_replicate]
+    instantiate only [IsSMulRegular.zero]
+.
+line 64, col 4:
+simp
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [→ List.eq_of_mem_replicate, Ideal.zero_mem]
+  [apply] grind =>
+    instantiate only [→ List.eq_of_mem_replicate]
+    instantiate only [Ideal.zero_mem]
+.
+line 65, col 4:
+simp
+* this parameter is redundant, environment already contains `List.replicate_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.length_replicate]
+  [apply] grind => instantiate only [= List.length_replicate]
+....
+line 72, col 2:
+exact ⟨_, hs₁, by simpa, by simp⟩
+* this parameter is redundant, environment already contains `Fin.val_last` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, = Set.setOf_true, = Set.setOf_false, = List.length_map, = List.mem_map,
+    map_nonunit, ← Set.mem_univ, #3bfc, #7999, #86a5, #236c, #b629, #e601, #ce7a, #8d51, #d387]
+  [apply] grind only [usr Set.mem_setOf_eq, = Set.setOf_true, = Set.setOf_false, = List.length_map, = List.mem_map,
+    map_nonunit, ← Set.mem_univ]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, = Set.setOf_true, = Set.setOf_false]
+    instantiate only [#3bfc]
+    instantiate only [= List.length_map]
+    cases #7999
+    instantiate only [= List.mem_map]
+    cases #86a5
+    · cases #236c <;> cases #b629 <;> cases #e601 <;> instantiate only [#ce7a, map_nonunit]
+    · cases #236c
+      cases #8d51
+      · instantiate only [← Set.mem_univ]
+      · cases #b629 <;> cases #d387 <;> cases #e601 <;> instantiate only [#ce7a, map_nonunit]
+....
+line 81, col 11:
+simpa using Order.krullDim_nonneg.trans_eq h
+* Try these:
+  [apply] grind only [!Order.bot_lt_krullDim]
+  [apply] grind => instantiate only [!Order.bot_lt_krullDim]
+..
+line 84, col 11:
+simp
+* Try these:
+  [apply] grind only [WithBot.coe_le_coe, le_top]
+  [apply] grind =>
+    instantiate only [WithBot.coe_le_coe]
+    instantiate only [le_top]
+........
+line 94, col 13:
+simp
+* Try these:
+  [apply] grind only [!WithBot.addLeftMono, = List.length_nil]
+  [apply] grind => instantiate only [!WithBot.addLeftMono, = List.length_nil]
+...
+line 98, col 6:
+apply Submodule.Quotient.nontrivial_iff.2
+* Try these:
+  [apply] grind only [!nontrivial_quotSMulTop_of_mem_maximalIdeal, = List.mem_cons, #52ff]
+  [apply] grind only [!nontrivial_quotSMulTop_of_mem_maximalIdeal, = List.mem_cons]
+  [apply] grind =>
+    instantiate only [!nontrivial_quotSMulTop_of_mem_maximalIdeal]
+    instantiate only [#52ff]
+    instantiate only [= List.mem_cons]
+shortened proof!
+..............................................................
+line 199, col 13:
+simp at hn
+* Try this:
+
+  [apply]   smt +mono [*, IsWeaklyRegular.nil]
+........
+line 210, col 6:
+simp [RingTheory.Sequence.isWeaklyRegular_of_subsingleton]
+* Try this:
+
+  [apply]   duper [*, isWeaklyRegular_of_subsingleton] {preprocessing := full}
+.
+line 211, col 4:
+exact IH (by simp_all)
+* Try these:
+  [apply] grind only [= List.length_cons, = List.length_map, #a3dc]
+  [apply] grind only [= List.length_cons, = List.length_map]
+  [apply] grind =>
+    instantiate only [#a3dc, = List.length_cons]
+    instantiate only [= List.length_map]
+...........
+line 233, col 8:
+exact top_ne_bot
+* Try these:
+  [apply] grind only [bot_ne_top]
+  [apply] grind => instantiate only [bot_ne_top]
+...........
+line 248, col 10:
+simp
+* Try this:
+  [apply] grind only
+....._.....

@@ -1,0 +1,21 @@
+.......................................................
+line 187, col 8:
+exact hb j hij
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#73fa]
+  [apply] grind only
+  [apply] grind => instantiate only [#73fa]
+.................................................
+line 317, col 52:
+infer_instance
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+............................
+line 416, col 4:
+exact AddSubgroup.finiteIndex_of_finite_quotient
+* Try these:
+  [apply] grind only [AddSubgroup.finiteIndex_of_finite_quotient]
+  [apply] grind => instantiate only [AddSubgroup.finiteIndex_of_finite_quotient]
+......................................................

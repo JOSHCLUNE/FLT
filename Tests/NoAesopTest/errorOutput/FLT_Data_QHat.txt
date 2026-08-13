@@ -1,0 +1,334 @@
+.........
+line 56, col 4:
+intro D N hD
+* Try this:
+
+  [apply]   duper [*, Int.natCast_dvd_natCast, Nat.cast_one, ZMod.cast_one, ZMod.natCast_val] {preprocessing := full}
+shortened proof!
+....
+line 69, col 26:
+simp_all
+* Try these:
+  [apply] grind only [Subtype.ext]
+  [apply] grind => instantiate only [Subtype.ext]
+...
+line 98, col 46:
+simp [h]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 100, col 2:
+revert h2
+* this parameter is redundant, environment already contains `addLeftEmbedding_apply` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.................
+line 137, col 4:
+simpa only [mem_range, Nat.lt_succ_iff] using hi
+* Try this:
+
+  [apply]   smt +mono [*, mem_range]
+..........
+line 151, col 4:
+omega
+* Try this:
+  [apply] grind only
+.
+line 155, col 20:
+positivity
+* Try this:
+
+  [apply]   duper [*, factorial_pos] {preprocessing := full}
+..........
+line 169, col 8:
+simp only [lt_add_iff_pos_left, add_pos_iff, zero_lt_one, or_true]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 172, col 8:
+positivity
+* Try this:
+  [apply] grind only
+....
+line 175, col 32:
+positivity
+* Try this:
+
+  [apply]   duper [*, sum_factorial_lt_factorial_succ, pos_of_gt] {preprocessing := full}
+........
+line 184, col 8:
+omega
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 191, col 31:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 193, col 8:
+gcongr
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......
+line 200, col 8:
+ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 201, col 32:
+positivity
+* Try this:
+
+  [apply]   duper [*, pos_of_gt] {preprocessing := full}
+.......................
+line 239, col 4:
+rw [← pnat_mul_apply]
+* Try this:
+
+  [apply]   duper [*, natCast_val, nat_mul_apply, intCast_val, toZMod, Int.cast_zero, ZMod.natCast_self, toZMod_def]
+      {preprocessing := full}
+shortened proof!
+.....
+line 249, col 2:
+exact eq_zero_of_mul_eq_zero N a ha
+* Try this:
+
+  [apply]   duper [*, eq_zero_of_mul_eq_zero] {preprocessing := full}
+.........
+line 261, col 26:
+omega
+* Try this:
+
+  [apply]   duper [*, Nat.pos_of_ne_zero] {preprocessing := full}
+.
+line 262, col 4:
+exact eq_zero_of_mul_eq_zero _ _ hN.2
+* Try this:
+
+  [apply]   duper [*, eq_zero_of_mul_eq_zero] {preprocessing := full}
+....
+line 266, col 44:
+omega
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....................
+line 291, col 40:
+simp only [PNat.mul_coe, dvd_mul_right]
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [PNat.dvd_iff, dvd_def]
+  [apply] grind =>
+    instantiate only [PNat.dvd_iff]
+    instantiate only [dvd_def]
+.......
+line 297, col 55:
+simp
+* Try this:
+
+  [apply]   duper [*, PNat.ne_zero] {preprocessing := full}
+..
+line 300, col 8:
+simp
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [PNat.mul_coe, !ZMod.natCast_zmod_val]
+  [apply] grind => instantiate only [PNat.mul_coe, !ZMod.natCast_zmod_val]
+.......
+line 310, col 51:
+simp [r]
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!ZMod.natCast_zmod_val]
+  [apply] grind =>
+    instantiate only [!ZMod.natCast_zmod_val]
+    ring
+....
+line 313, col 18:
+linear_combination -hq
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 330, col 4:
+simp
+* Try this:
+
+  [apply]   duper [*, TensorProduct.tmul_zero, Algebra.TensorProduct.natCast_def, Nat.cast_zero, Nat.cast_one]
+      {preprocessing := full}
+....
+line 335, col 4:
+simp only [← q.mul_den_eq_num, mul_assoc,
+      one_div, ne_eq, Nat.cast_eq_zero, Rat.den_ne_zero, not_false_eq_true,
+        mul_one, mul_inv_cancel₀]
+* Try these:
+  [apply] grind only [!Rat.num_div_den]
+  [apply] grind => instantiate only [!Rat.num_div_den]
+.........
+line 355, col 2:
+refine ⟨fun H ↦ ?_, fun H ↦ ?_⟩
+* Try this:
+
+  [apply]   duper [*, isUnit_iff_coprime] {preprocessing := full}
+shortened proof!
+.............
+line 394, col 2:
+simp [Nat.lcm_comm]
+* Try these:
+  [apply] grind only [!PNat.lcm_coe]
+  [apply] grind => instantiate only [!PNat.lcm_coe]
+........
+line 412, col 6:
+rwa [isCoprime_iff_coprime, Nat.coprime_iff_gcd_eq_one]
+* Try this:
+
+  [apply]   duper [*, isCoprime_iff_coprime] {preprocessing := full}
+............................
+line 446, col 79:
+simp
+* Try these:
+  [apply] grind only [PNat.ne_zero]
+  [apply] grind => instantiate only [PNat.ne_zero]
+...._......
+line 460, col 31:
+rw [← hNz]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........___...................................
+line 509, col 59:
+simpa
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......................
+line 530, col 4:
+have hNM' : N' = M' := by
+      apply mul_left_cancel (a := L)
+      conv_lhs =>
+        rw [hN, ← hN']
+      conv_rhs =>
+        rw [hM, ← hM']
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+___.
+line 561, col 2:
+rw [← map_intCast (F := B →ₐ[R] TensorProduct R A B),
+    Algebra.TensorProduct.includeRight_apply]
+* Try this:
+
+  [apply]   duper [*, Algebra.TensorProduct.intCast_def'] {preprocessing := full}
+........
+line 573, col 6:
+exact l.reduced
+* Try this:
+
+  [apply]   duper [*, Rat.reduced] {preprocessing := full}
+...............___.....................
+line 609, col 2:
+simp [hNz]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...........
+line 636, col 6:
+simp [Eq.comm] at hz
+* Try these:
+  [apply] grind only [Units.ne_zero]
+  [apply] grind => instantiate only [Units.ne_zero]
+........................
+line 663, col 8:
+unfold Nat.toPNat
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+............
+line 677, col 4:
+norm_cast at hz
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 681, col 6:
+norm_cast
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......
+line 694, col 2:
+rw [← map_intCast (F := A →ₐ[R] TensorProduct R A B),
+    Algebra.TensorProduct.includeLeft_apply]
+* Try this:
+
+  [apply]   duper [*, Algebra.TensorProduct.intCast_def'] {preprocessing := full}
+.
+line 701, col 2:
+rw [← map_natCast (F := B →ₐ[R] TensorProduct R A B),
+    Algebra.TensorProduct.includeRight_apply]
+* Try these:
+  [apply] grind only [Algebra.TensorProduct.natCast_def']
+  [apply] grind => instantiate only [Algebra.TensorProduct.natCast_def']
+.........
+line 715, col 45:
+rw [mul_comm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.......................
+line 739, col 48:
+norm_cast
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....................
+line 762, col 4:
+rw [Submodule.span_zero_singleton, Submodule.eq_bot_iff] at hg
+* Try these:
+  [apply] grind only [PNat.ne_zero, Ideal.mem_span_singleton]
+  [apply] grind => instantiate only [PNat.ne_zero, Ideal.mem_span_singleton]
+shortened proof!
+...................
+line 783, col 18:
+rw[mul_comm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.....
+line 791, col 6:
+rw [hg, Ideal.submodule_span_eq]
+* Try these:
+  [apply] grind only [!Ideal.mem_span_singleton_self]
+  [apply] grind => instantiate only [!Ideal.mem_span_singleton_self]
+shortened proof!
+.....................
+line 811, col 4:
+apply Ideal.mem_span_singleton_self
+* Try these:
+  [apply] grind only [!Ideal.mem_span_singleton_self]
+  [apply] grind => instantiate only [!Ideal.mem_span_singleton_self]
+...
+line 814, col 4:
+simp only [Int.coe_castRingHom, Int.cast_natCast, I, this]
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_natCast]
+  [apply] grind => instantiate only [map_natCast]
+.......

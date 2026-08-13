@@ -1,0 +1,10 @@
+[{"tacticSucceeded": true,
+  "startLine": 26,
+  "startCol": 2,
+  "shortenedStepsCount": 1,
+  "parentName": "instCountableElemSetSetsCofinite_fLT",
+  "oldText": "rw [Set.countable_coe_iff]",
+  "message":
+  "Try this:\n\n  [apply]   duper [*, Filter.cofinite.sets.countable, Set.countable_coe_iff] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Order/Filter/Cofinite.lean"}]

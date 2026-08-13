@@ -1,0 +1,18 @@
+..
+line 26, col 4:
+exact .zero
+* Try this:
+
+  [apply]   duper [*, Splits.zero] {preprocessing := full}
+...
+line 28, col 38:
+rw [hq, h, mul_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 31, col 4:
+lia
+* Try this:
+  [apply] grind only
+..

@@ -1,0 +1,29 @@
+.........
+line 48, col 4:
+simp only [g, LinearEquiv.ker_comp, Submodule.ker_mkQ]
+* Try these:
+  [apply] grind only [!LinearEquiv.ker_comp, !Submodule.ker_mkQ]
+  [apply] grind => instantiate only [!LinearEquiv.ker_comp, !Submodule.ker_mkQ]
+..
+line 50, col 2:
+have : Surjective g := by
+    simp only [g, LinearMap.coe_comp, LinearEquiv.coe_coe, EquivLike.comp_surjective,
+      Submodule.mkQ_surjective]
+* Try these:
+  [apply] grind only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, LinearMap.exact_iff,
+    !EquivLike.comp_surjective, #ce29]
+  [apply] grind only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, LinearMap.exact_iff,
+    !EquivLike.comp_surjective]
+  [apply] grind =>
+    instantiate only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !LinearEquiv.coe_toLinearMap, #ce29]
+    instantiate only [LinearMap.exact_iff, !EquivLike.comp_surjective]
+shortened proof!
+............._........._..........
+line 154, col 66:
+simp [m']
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Equiv.punitProd_symm_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!LinearEquiv.symm_apply_apply]
+  [apply] grind => instantiate only [!LinearEquiv.symm_apply_apply]
+.......................................................................

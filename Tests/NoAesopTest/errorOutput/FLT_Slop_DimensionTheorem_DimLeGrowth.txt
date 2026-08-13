@@ -1,0 +1,180 @@
+..
+line 72, col 4:
+rw [pow_zero, Ideal.one_eq_top]
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Ideal.one_eq_top, !Ideal.Quotient.subsingleton_iff]
+  [apply] grind => instantiate only [Ideal.one_eq_top, !Ideal.Quotient.subsingleton_iff]
+shortened proof!
+...
+line 76, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 82, col 6:
+rw [pow_zero, Ideal.one_eq_top]
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Ideal.one_eq_top, !Ideal.Quotient.subsingleton_iff]
+  [apply] grind => instantiate only [Ideal.one_eq_top, !Ideal.Quotient.subsingleton_iff]
+shortened proof!
+..........
+line 104, col 45:
+exact Ideal.Quotient.mk_surjective
+* Try these:
+  [apply] grind only [!Ideal.Quotient.mk_surjective]
+  [apply] grind => instantiate only [!Ideal.Quotient.mk_surjective]
+.........
+line 123, col 4:
+exact Nat.zero_le _
+* Try this:
+  [apply] grind only
+.................
+line 158, col 50:
+rwa [smul_eq_mul] at hteq
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 167, col 4:
+simp [hφ, LinearMap.toSpanSingleton_apply, smul_eq_mul]
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 171, col 4:
+exact hcolon r hr
+* Try this:
+
+  [apply]   smt +mono [*]
+.........
+line 187, col 6:
+exact hz
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 200, col 6:
+simpa using hkerle
+* Try this:
+
+  [apply]   smt +mono [*]
+............
+line 226, col 33:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 227, col 6:
+exact (Ideal.radical_mono hJm).trans_eq (maximalIdeal.isMaximal R).isPrime.radical
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Ideal.radical_eq_sInf, sInf_le, usr Set.mem_setOf_eq, Ideal.IsMaximal.isPrime']
+  [apply] grind =>
+    instantiate only [Ideal.radical_eq_sInf]
+    instantiate only [sInf_le]
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [Ideal.IsMaximal.isPrime']
+..
+line 231, col 18:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 240, col 4:
+exact hmain
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 254, col 8:
+exact hlt
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 255, col 8:
+exact absurd ⟨m, hm, heq.symm⟩ hcon
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 259, col 16:
+simp
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 261, col 8:
+have h2 := hlt (j + 1) (by omega)
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#4bf3]
+  [apply] grind only
+  [apply] grind => instantiate only [#4bf3]
+shortened proof!
+..
+line 264, col 4:
+have h4 := hC (C + 1 + 1)
+* Try these:
+  [apply] grind only [#4e5d]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#4e5d]
+    lia
+shortened proof!
+..
+line 269, col 83:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+................
+line 296, col 4:
+exact hbot
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 303, col 40:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+...
+line 305, col 12:
+_
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+...........
+line 329, col 4:
+intro i
+* Try these:
+  [apply] grind only [!Ideal.isPrime_map_quotientMk_of_isPrime, #4c3c]
+  [apply] grind only [!Ideal.isPrime_map_quotientMk_of_isPrime]
+  [apply] grind => instantiate only [#4c3c, !Ideal.isPrime_map_quotientMk_of_isPrime]
+shortened proof!
+.....
+line 341, col 8:
+rw [← hcomap _ (hmono i.castSucc), he, hcomap _ (hmono i.succ)]
+* Try these:
+  [apply] grind only [#4c3c, #7380]
+  [apply] grind only
+  [apply] grind => instantiate only [#4c3c, #7380]
+................................
+line 382, col 75:
+push_cast
+* Try this:
+  [apply] grind only
+shortened proof!
+.

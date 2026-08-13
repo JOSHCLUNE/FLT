@@ -1,0 +1,53 @@
+.....
+line 114, col 2:
+obtain ⟨I, hI⟩ := Ideal.exists_maximal R
+* Try this:
+
+  [apply]   duper [*, FiniteAdeleRing.HeightOneSpectrum.nonempty] {preprocessing := full}
+shortened proof!
+......
+line 125, col 4:
+exact (algebraMap F _).injective
+* Try these:
+  [apply] grind only [!FaithfulSMul.algebraMap_injective]
+  [apply] grind => instantiate only [!FaithfulSMul.algebraMap_injective]
+................................__...............
+line 297, col 4:
+grind
+* Try these:
+  [apply] grind only [#fe3c]
+  [apply] grind only
+  [apply] grind => cases #fe3c
+..
+line 300, col 4:
+simp only [le_antisymm_iff]
+* Try these:
+  [apply] grind only [#4aaa]
+  [apply] grind only
+  [apply] grind => cases #4aaa
+shortened proof!
+.................
+line 315, col 25:
+simpa
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+....
+line 317, col 25:
+simpa
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+............................._...............................................
+line 514, col 38:
+simp [h'] at H
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....................
+line 612, col 4:
+simp [ha]
+* Try these:
+  [apply] grind only [= map_mul]
+  [apply] grind => instantiate only [= map_mul]
+...............

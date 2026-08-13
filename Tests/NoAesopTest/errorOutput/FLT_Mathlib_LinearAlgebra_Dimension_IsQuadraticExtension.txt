@@ -1,0 +1,29 @@
+.
+line 31, col 14:
+rwa [Algebra.algebraMap_eq_smul_one]
+* Try this:
+
+  [apply]   duper [*, Algebra.smul_def, Algebra.algebraMap_eq_smul_one, Set.mem_range] {preprocessing := full}
+.....
+line 44, col 2:
+lia
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...........
+line 60, col 4:
+rw [← hcd, Algebra.smul_def, Algebra.smul_def, mul_one]
+* Try this:
+
+  [apply]   duper [*, smul_def, algebraMap_eq_smul_one] {preprocessing := full}
+...
+line 73, col 2:
+rw [map_mul, ← sq]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_neg` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [pow_two, map_mul]
+  [apply] grind => instantiate only [pow_two, map_mul]
+shortened proof!

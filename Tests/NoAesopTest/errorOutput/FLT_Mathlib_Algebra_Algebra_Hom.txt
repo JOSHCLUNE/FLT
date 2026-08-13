@@ -1,0 +1,16 @@
+.....
+line 101, col 2:
+have := ψ.map_smul r 1
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Algebra.algebraMap_eq_smul_one, map_smul, map_one]
+  [apply] grind =>
+    instantiate only [Algebra.algebraMap_eq_smul_one]
+    instantiate only [map_smul]
+    instantiate only [map_one]
+shortened proof!
+....

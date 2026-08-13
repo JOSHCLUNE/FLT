@@ -1,0 +1,14 @@
+...
+line 29, col 4:
+decide
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+._.
+line 33, col 22:
+rcases keyM x
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.__

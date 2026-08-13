@@ -1,0 +1,43 @@
+............................................
+line 225, col 2:
+rw [WithVal.valued_toVal]
+* Try this:
+
+  [apply]   smt +mono [*]
+.........
+line 282, col 24:
+norm_num
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......
+line 291, col 6:
+simpa only [ne_eq, map_eq_zero, FaithfulSMul.algebraMap_eq_zero_iff]
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [FaithfulSMul.algebraMap_eq_zero_iff, map_eq_zero]
+  [apply] grind => instantiate only [FaithfulSMul.algebraMap_eq_zero_iff, map_eq_zero]
+............................................................................................................
+line 527, col 4:
+rwa [h]
+* Try this:
+  [apply] grind only
+...........
+line 585, col 4:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+...............
+line 627, col 8:
+exact hx
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....................................
+line 715, col 64:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+..........................

@@ -1,0 +1,73 @@
+....
+line 49, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 54, col 33:
+ring
+* Try this:
+  [apply] grind only
+..
+line 55, col 29:
+ring
+* Try this:
+  [apply] grind only
+..........._...
+line 83, col 24:
+lia
+* Try this:
+  [apply] grind only
+.
+line 84, col 8:
+simp [hp']
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+...
+line 90, col 83:
+simp [H.2]
+* Try this:
+
+  [apply]   duper [*, orderOf_eq_one_iff] {preprocessing := full}
+...
+line 102, col 2:
+grind
+* Try these:
+  [apply] grind only [#9155, #d7fc, #fa26, #abb9]
+  [apply] grind only
+  [apply] grind =>
+    cases #9155
+    · instantiate only [#d7fc, #fa26]
+    · instantiate only [#abb9]
+................._..............
+line 194, col 85:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......
+line 230, col 4:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.
+line 252, col 4:
+simp only [continuous_def]
+* Try this:
+
+  [apply]   duper [*, Submonoid.separatelyContinuousMul, continuous_induced_rng, SeparatelyContinuousMul.continuous_const_mul]
+      {preprocessing := full}
+shortened proof!
+.
+line 256, col 4:
+simp only [continuous_def]
+* Try this:
+
+  [apply]   duper [*, Submonoid.separatelyContinuousMul, continuous_induced_rng, SeparatelyContinuousMul.continuous_mul_const]
+      {preprocessing := full}
+shortened proof!
+....

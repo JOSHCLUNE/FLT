@@ -1,0 +1,39 @@
+.
+line 135, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.................................
+line 268, col 41:
+ring
+* Try this:
+  [apply] grind only
+..................
+line 296, col 6:
+ring
+* Try this:
+  [apply] grind only
+.....
+line 302, col 6:
+rw [neg_mul, Int.ediv_mul_cancel (h12 d)]
+* Try these:
+  [apply] grind only [#bbf4]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#bbf4]
+    lia
+..
+line 303, col 48:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 308, col 2:
+refine tsum_congr fun m ↦ ?_
+* Try these:
+  [apply] grind only [#4b0a, #7071]
+  [apply] grind only
+  [apply] grind => cases #4b0a <;> cases #7071
+shortened proof!
+......_....

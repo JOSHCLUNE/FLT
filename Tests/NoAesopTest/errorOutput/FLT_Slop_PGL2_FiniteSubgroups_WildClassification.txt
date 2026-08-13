@@ -1,0 +1,343 @@
+........
+line 84, col 6:
+rw [nsmul_eq_mul, nsmul_eq_mul, Nat.cast_add, Nat.cast_one]
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.......................................................................................
+line 225, col 4:
+rw [P.card_eq_multiplicity] at h1
+* Try these:
+  [apply] grind only [!Sylow.card_eq_multiplicity]
+  [apply] grind => instantiate only [!Sylow.card_eq_multiplicity]
+shortened proof!
+..................................
+line 294, col 4:
+exact hdvd
+* Try this:
+  [apply] grind only
+..........__..
+line 311, col 53:
+linarith only [hpm_inv, hn_inv_pos]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_filter` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+....
+line 314, col 43:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_filter` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 316, col 55:
+rw [← one_div, ← one_div]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 317, col 4:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 319, col 45:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 321, col 136:
+ring
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 326, col 4:
+linarith only [h_lt, h_geq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+........
+line 331, col 4:
+linarith only [h_lhs_lt, h_eq, h_leq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+.....
+line 334, col 49:
+have : z 0 ≥ 2 := hz_pos 0
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#5a68]
+  [apply] grind only
+  [apply] grind => instantiate only [#5a68]
+shortened proof!
+....
+line 336, col 6:
+linarith only [hpm_inv, hn_inv_pos, h_eq, h_leq]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+..
+line 337, col 19:
+norm_num
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 339, col 48:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......
+line 343, col 50:
+rw [← one_div, ← one_div]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 353, col 117:
+norm_num
+* Try this:
+  [apply] grind only
+.......
+line 359, col 4:
+rw [e, hn3, hn] at h_card_G
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+shortened proof!
+......
+line 366, col 84:
+rw [hn3]
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 371, col 8:
+exact h_eq_1
+* Try this:
+  [apply] grind only
+..
+line 372, col 112:
+rw [h3, h_card_val P]
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+..
+line 373, col 103:
+rw [h_card_val P, h_card_val Q]
+* Try these:
+  [apply] grind only [#b114]
+  [apply] grind only
+  [apply] grind => instantiate only [#b114]
+.
+line 374, col 8:
+exact absurd (by cases P; cases Q; congr) hPQ
+* Try these:
+  [apply] grind only [Sylow.ext]
+  [apply] grind => instantiate only [Sylow.ext]
+..........
+line 384, col 4:
+rw [h_range, h_perm] at h_mul
+* Try this:
+  [apply] grind only
+shortened proof!
+....................
+line 409, col 81:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 410, col 6:
+have h_odd : ¬ Even p := fun h ↦ ne_of_gt hp_gt_two ((Nat.Prime.even_iff Fact.out).mp h)
+* Try these:
+  [apply] grind only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff, #ce99]
+  [apply] grind only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff]
+  [apply] grind =>
+    instantiate only [Nat.prime_two, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow, = Nat.even_iff]
+    instantiate only [= Nat.even_iff]
+    cases #ce99
+shortened proof!
+...
+line 413, col 79:
+omega
+* Try this:
+  [apply] grind only
+..
+line 415, col 71:
+omega
+* Try this:
+  [apply] grind only
+.
+line 415, col 115:
+norm_num
+* Try this:
+  [apply] grind only
+.....
+line 424, col 59:
+omega
+* Try this:
+  [apply] grind only
+.
+line 425, col 4:
+exact hpm
+* Try this:
+  [apply] grind only
+...
+line 431, col 4:
+exact absurd hm (Nat.not_le_of_gt (Nat.le.step Nat.le.refl))
+* Try this:
+  [apply] grind only
+.
+line 432, col 4:
+exact Nat.succ_pos _
+* Try this:
+
+  [apply]   duper [*, Nat.ge_of_not_lt, Nat.one_lt_succ_succ, Nat.not_le_of_gt, Nat.add_one_le_iff] {preprocessing := full}
+.................................
+line 491, col 77:
+norm_num
+* Try this:
+  [apply] grind only
+......
+line 496, col 64:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 500, col 4:
+omega
+* Try this:
+  [apply] grind only
+.
+line 501, col 4:
+revert h_card_div
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 502, col 4:
+rfl
+* Try this:
+  [apply] grind only
+........
+line 516, col 119:
+linarith only [h5]
+* Try this:
+  [apply] grind only
+..
+line 518, col 8:
+rfl
+* Try this:
+  [apply] grind only
+.......
+line 523, col 72:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 523, col 97:
+linarith only [hc]
+* Try this:
+  [apply] grind only
+.
+line 524, col 6:
+change 9 ≤ 3 ^ m at h_pow
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 527, col 38:
+rw [hn]
+* Try this:
+  [apply] grind only
+shortened proof!
+.............
+line 559, col 4:
+intro i
+* Try this:
+  [apply] grind only
+shortened proof!
+........
+line 566, col 60:
+omega
+* Try this:
+  [apply] grind only
+..
+line 567, col 60:
+omega
+* Try this:
+  [apply] grind only
+..
+line 568, col 60:
+omega
+* Try this:
+  [apply] grind only
+......
+line 573, col 31:
+omega
+* Try this:
+  [apply] grind only
+...
+line 576, col 6:
+push_cast
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 579, col 60:
+omega
+* Try this:
+  [apply] grind only
+...
+line 582, col 6:
+rw [← mul_div_cancel_right₀ (z2 : ℚ) hD_pos, h_mul]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+......
+line 588, col 6:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 617, col 4:
+have h_eval : partitionTerm (if 1 = 1 then 1 else 2) 1 = 0 := by
+      rw [if_pos rfl, partitionTerm]
+      norm_num
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 625, col 44:
+linarith only [hn_gt, hpm]
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.
+line 625, col 76:
+linarith only [hn_gt]
+* Try this:
+  [apply] grind only
+...
+line 628, col 6:
+have h_pow := hpm_eq.trans (Sylow.card_eq_multiplicity P)
+* Try these:
+  [apply] grind only [!Sylow.dvd_card_of_dvd_card]
+  [apply] grind => instantiate only [!Sylow.dvd_card_of_dvd_card]
+shortened proof!
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean was killed (exit code 137), likely by the 8G MemoryMax cap

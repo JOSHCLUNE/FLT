@@ -1,0 +1,528 @@
+........
+line 73, col 4:
+rw [mul_zero, sub_zero, mul_one]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 80, col 4:
+rw [zero_mul, sub_zero, mul_one]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...........
+line 100, col 8:
+rw [div_mul_cancel₀ _ hM]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+......
+line 110, col 10:
+calc (1 + (M.1 0 0 - 1)) * (M.1 1 1 - 1) + (M.1 0 0 - 1)
+              = M.1 0 0 * M.1 1 1 - 1 := by ring
+            _ = M.1 0 0 * M.1 1 1 - (M.1 0 0 * M.1 1 1 - M.1 0 1 * M.1 1 0) := by rw [hd]
+            _ = M.1 0 1 * M.1 1 0 := by ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 114, col 8:
+rw [mul_div_cancel_right₀ _ hM]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 123, col 8:
+rw [mul_comm (M.1 1 0) ((M.1 1 1 - 1) / M.1 1 0), div_mul_cancel₀ _ hM]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 125, col 4:
+rw [eq_M]
+* Try these:
+  [apply] grind only [Subgroup.mul_mem, #692f, #d035]
+  [apply] grind only [Subgroup.mul_mem]
+  [apply] grind =>
+    instantiate only [#692f, #d035, Subgroup.mul_mem]
+    instantiate only [Subgroup.mul_mem]
+shortened proof!
+.......
+line 137, col 4:
+simp only [mul_zero, zero_mul, sub_zero] at hd
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 139, col 4:
+exact step g hg
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#0997]
+  [apply] grind only
+  [apply] grind => instantiate only [#0997]
+...............
+line 177, col 68:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 178, col 90:
+rw [Nat.cast_add, Nat.cast_one]
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 179, col 50:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 180, col 50:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..........
+line 192, col 6:
+have h_ker : _ ∈ MonoidHom.ker _ := MonoidHom.mem_ker.mpr h_eq_one
+* Try these:
+  [apply] grind only [Subgroup.mem_center_iff, !QuotientGroup.ker_mk', !CharP.exists, MonoidHom.mem_ker]
+  [apply] grind =>
+    instantiate only [Subgroup.mem_center_iff, !QuotientGroup.ker_mk', !CharP.exists]
+    instantiate only [MonoidHom.mem_ker]
+shortened proof!
+....
+line 198, col 51:
+ring
+* Try this:
+  [apply] grind only
+....
+line 203, col 121:
+rw [h_comm]
+* Try this:
+  [apply] grind only
+....
+line 210, col 4:
+apply ha
+* Try this:
+  [apply] grind only
+shortened proof!
+.................
+line 236, col 52:
+ring
+* Try this:
+  [apply] grind only
+..
+line 237, col 52:
+ring
+* Try this:
+  [apply] grind only
+..
+line 238, col 86:
+rw [Nat.cast_add, Nat.cast_one]
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 239, col 64:
+ring
+* Try this:
+  [apply] grind only
+...
+line 241, col 34:
+rw [this, map_one]
+* Try these:
+  [apply] grind only [FiniteField.card, = map_one]
+  [apply] grind =>
+    instantiate only [FiniteField.card, = map_one]
+    done
+........
+line 245, col 43:
+ring
+* Try this:
+  [apply] grind only
+........
+line 255, col 6:
+apply hb
+* Try this:
+  [apply] grind only
+shortened proof!
+..............
+line 267, col 49:
+exact Nat.Prime.odd_of_ne_two hp_prime (ne_of_gt hp_gt_2)
+* Try these:
+  [apply] grind only [FiniteField.card, Nat.Prime.odd_of_ne_two]
+  [apply] grind =>
+    instantiate only [FiniteField.card, Nat.Prime.odd_of_ne_two]
+    done
+..........
+line 272, col 12:
+rw [h_order_p' b hb]
+* Try these:
+  [apply] grind only [FiniteField.card, Nat.Prime.odd_of_ne_two, #202f]
+  [apply] grind only [FiniteField.card, Nat.Prime.odd_of_ne_two]
+  [apply] grind =>
+    instantiate only [#202f, FiniteField.card, Nat.Prime.odd_of_ne_two]
+    done
+shortened proof!
+.......................
+line 302, col 6:
+simp only [mul_one, mul_zero, one_mul, add_zero] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 309, col 6:
+simp only [mul_one, zero_mul, one_mul, add_zero] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 316, col 6:
+simp only [m01, mul_one, mul_zero, one_mul, add_zero, zero_add] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+........
+line 326, col 8:
+change g.val 0 0 * m.val 0 0 + g.val 0 1 * m.val 1 0 = m.val 0 0 * g.val 0 0 + m.val 0 1 * g.val 1 0
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 329, col 8:
+change g.val 0 0 * m.val 0 1 + g.val 0 1 * m.val 1 1 = m.val 0 0 * g.val 0 1 + m.val 0 1 * g.val 1 1
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 334, col 8:
+change g.val 1 0 * m.val 0 0 + g.val 1 1 * m.val 1 0 = m.val 1 0 * g.val 0 0 + m.val 1 1 * g.val 1 0
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 337, col 8:
+change g.val 1 0 * m.val 0 1 + g.val 1 1 * m.val 1 1 = m.val 1 0 * g.val 0 1 + m.val 1 1 * g.val 1 1
+* Try this:
+  [apply] grind only
+shortened proof!
+............
+line 357, col 8:
+simp only [mul_one, mul_zero, one_mul, add_zero] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 364, col 8:
+simp only [mul_one, zero_mul, one_mul, add_zero] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 371, col 8:
+simp only [eq_01, mul_one, mul_zero, one_mul, add_zero, zero_add] at h
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 377, col 52:
+exact (mul_one _).symm
+* Try this:
+  [apply] grind only
+..
+line 378, col 52:
+exact eq_01.trans (mul_zero _).symm
+* Try this:
+  [apply] grind only
+..
+line 379, col 52:
+exact eq_10.trans (mul_zero _).symm
+* Try this:
+  [apply] grind only
+..
+line 380, col 52:
+exact eq_11.trans (mul_one _).symm
+* Try this:
+  [apply] grind only
+.......
+line 388, col 8:
+exact hd
+* Try this:
+  [apply] grind only
+.....
+line 392, col 8:
+rw [hg1]
+* Try these:
+  [apply] grind only [Subgroup.one_mem]
+  [apply] grind => instantiate only [Subgroup.one_mem]
+shortened proof!
+..........
+line 402, col 6:
+simp only [neg_mul, mul_neg, one_mul, mul_one]
+* Try this:
+  [apply] grind only
+...
+line 406, col 4:
+apply Subtype.ext
+* Try this:
+
+  [apply]   duper [*, neg_one_sq] {preprocessing := full}
+shortened proof!
+...
+line 413, col 4:
+have h2 : (2 : F) = 0 :=
+      calc (2 : F) = 1 - (-1 : F) := by ring
+           _ = 1 - 1 := by rw [h0]
+           _ = 0 := by ring
+* Try these:
+  [apply] grind only [!CharP.neg_one_ne_one]
+  [apply] grind => instantiate only [!CharP.neg_one_ne_one]
+shortened proof!
+....................
+line 445, col 7:
+rw [mul_one, mul_one]
+* Try this:
+  [apply] grind only
+....
+line 450, col 6:
+exact Subtype.ext (Units.ext (congr_arg Subtype.val eq))
+* Try these:
+  [apply] grind only [Units.val_inj]
+  [apply] grind => instantiate only [Units.val_inj]
+...........
+line 464, col 96:
+rw [sq, mul_one]
+* Try these:
+  [apply] grind only [pow_two]
+  [apply] grind => instantiate only [pow_two]
+..
+line 466, col 79:
+rw [← mul_assoc]
+* Try this:
+  [apply] grind only
+.
+line 467, col 79:
+rw [mul_comm (Fintype.card F ^ 2 - 1) _]
+* Try this:
+  [apply] grind only
+..
+line 469, col 39:
+omega
+* Try this:
+  [apply] grind only
+....
+line 480, col 94:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 482, col 4:
+exact Eq.trans (mul_comm _ 2) h1
+* Try this:
+  [apply] grind only
+.....
+line 488, col 93:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 489, col 6:
+rw [h, zero_mul] at h_card_PSL
+* Try this:
+  [apply] grind only
+shortened proof!
+.........
+line 504, col 42:
+norm_num
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..___...........
+line 534, col 4:
+exact congr_arg slMap (hg (slMap.symm x))
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#7307]
+  [apply] grind only
+  [apply] grind => instantiate only [#7307]
+....
+line 538, col 4:
+exact hh (slMap x)
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#c60a]
+  [apply] grind only
+  [apply] grind => instantiate only [#c60a]
+...
+line 566, col 6:
+exact absurd rfl hc
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 567, col 6:
+decide
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 568, col 6:
+decide
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 570, col 34:
+simp only [mul_eq_zero, hc, false_or]
+* Try these:
+  [apply] grind only [zero_eq_mul]
+  [apply] grind => instantiate only [zero_eq_mul]
+.
+line 572, col 6:
+rw [show c * v 0 * (c * v 1) = c * c * (v 0 * v 1) by ring, hc2, one_mul]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 578, col 12:
+exact absurd ⟨rfl, rfl⟩ hab
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+________...
+line 588, col 86:
+exact isUnit_one
+* Try these:
+  [apply] grind only [isUnit_iff_ne_zero]
+  [apply] grind => instantiate only [isUnit_iff_ne_zero]
+.........._....
+line 616, col 38:
+rw [det_fin_two]
+* Try this:
+
+  [apply]   duper [*, empty_val', cons_val'] {preprocessing := full}
+shortened proof!
+.
+line 618, col 38:
+rw [det_fin_two]
+* Try this:
+
+  [apply]   duper [*, empty_val', cons_val'] {preprocessing := full}
+shortened proof!
+.....
+line 627, col 2:
+have h2 : M.1 0 1 = 0 := (add_left_cancel hL00).symm
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+............
+line 658, col 4:
+split at h0
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#a903, #114e]
+  [apply] grind only
+  [apply] grind => cases #a903 <;> cases #114e
+shortened proof!
+..
+line 664, col 4:
+split at h1
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 669, col 4:
+split at h1
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#919a, #8ab0, #96b9, #be96]
+  [apply] grind only
+  [apply] grind =>
+    ring
+    cases #919a
+    cases #8ab0
+    cases #96b9
+    · ring
+    · cases #be96
+shortened proof!
+.....
+line 676, col 4:
+contradiction
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.insert_eq_of_mem` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 680, col 57:
+rw [hsq _ hM11, mul_one]
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mul_eq_mul_right_iff, #6efe]
+  [apply] grind only [mul_eq_mul_right_iff]
+  [apply] grind =>
+    ring
+    instantiate only [#6efe, mul_eq_mul_right_iff]
+.
+line 681, col 48:
+ring
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 682, col 26:
+rw [h, one_mul]
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 683, col 6:
+contradiction
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+........
+line 693, col 8:
+exact fun N ↦ by rw [one_mul, mul_one]
+* Try this:
+  [apply] grind only
+......
+line 698, col 8:
+exact map_one sl2F3ToPermHom
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_one]
+  [apply] grind => instantiate only [= map_one]
+.._..._.....WARNING: FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean was killed (exit code 137), likely by the 8G MemoryMax cap

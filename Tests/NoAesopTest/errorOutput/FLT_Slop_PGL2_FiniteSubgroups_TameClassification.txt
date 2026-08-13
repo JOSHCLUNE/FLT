@@ -1,0 +1,310 @@
+.....
+line 66, col 4:
+exact orderOf_dvd_natCard (⟨g, hg⟩ : G)
+* Try these:
+  [apply] grind only [orderOf_dvd_natCard]
+  [apply] grind => instantiate only [orderOf_dvd_natCard]
+..
+line 69, col 4:
+obtain ⟨n, hpos, hn⟩ := isOfFinOrder_iff_pow_eq_one.mp (isOfFinOrder_of_finite (⟨g, hg⟩ : G))
+* Try these:
+  [apply] grind only [orderOf_eq_zero_iff, Fact.elim]
+  [apply] grind =>
+    instantiate only [orderOf_eq_zero_iff, Fact.elim]
+    ac
+shortened proof!
+................
+line 96, col 2:
+rcases hx_in with rfl | rfl
+* Try these:
+  [apply] grind only [Fact.out, Nat.prime_two, Nat.prime_dvd_prime_iff_eq, !Finite.one_lt_card_iff_nontrivial,
+    = Set.mem_insert_iff, = Set.mem_singleton_iff, #e2d4, #9188, #c82c, #e355, #c761]
+  [apply] grind only [Fact.out, Nat.prime_two, Nat.prime_dvd_prime_iff_eq, !Finite.one_lt_card_iff_nontrivial,
+    = Set.mem_insert_iff, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [Fact.out, Nat.prime_two, Nat.prime_dvd_prime_iff_eq, !Finite.one_lt_card_iff_nontrivial]
+    cases #e2d4 <;>
+      cases #9188 <;>
+        instantiate only [= Set.mem_insert_iff] <;>
+          instantiate only [= Set.mem_singleton_iff] <;> cases #c82c <;> cases #e355 <;> cases #c761
+shortened proof!
+.....................................__.............
+line 176, col 8:
+rw [linearIndependent_fin2]
+* Try these:
+  [apply] grind only [!Projectivization.linearIndependent_pair_iff_ne]
+  [apply] grind => instantiate only [!Projectivization.linearIndependent_pair_iff_ne]
+shortened proof!
+...................
+line 211, col 65:
+rw [hM]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 216, col 28:
+rw [h_center]
+* Try this:
+  [apply] grind only
+..
+line 221, col 16:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,
+    Matrix.cons_val_fin_one]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two]
+    instantiate only [Matrix.cons_val']
+    instantiate only [Matrix.cons_val_one, Matrix.cons_val_zero]
+    instantiate only [Matrix.cons_val_fin_one, Matrix.cons_val']
+    instantiate only [Matrix.cons_val_fin_one, Matrix.cons_val_one, Matrix.cons_val_zero]
+    ring
+shortened proof!
+..
+line 224, col 16:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_zero,
+    Matrix.cons_val_fin_one]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two]
+    instantiate only [Matrix.cons_val']
+    instantiate only [Matrix.cons_val_one, Matrix.cons_val_zero]
+    instantiate only [Matrix.cons_val_fin_one, Matrix.cons_val']
+    ring
+    instantiate only [Matrix.cons_val_fin_one, Matrix.cons_val_one]
+    instantiate only [Matrix.cons_val_fin_one]
+shortened proof!
+......
+line 232, col 6:
+calc z.val 0 1 = (z.val 0 0 + z.val 0 1) - z.val 0 0 := by ring
+      _ = z.val 0 0 - z.val 0 0 := by rw [eq2_00]
+      _ = 0 := by ring
+* Try this:
+  [apply] grind only
+..
+line 237, col 6:
+calc z.val 1 0 = (z.val 1 0 + z.val 1 1) - z.val 1 1 := by ring
+      _ = z.val 1 1 - z.val 1 1 := by rw [eq1_11]
+      _ = 0 := by ring
+* Try this:
+  [apply] grind only
+..
+line 242, col 6:
+calc z.val 1 1 = (z.val 0 1 + z.val 1 1) - z.val 0 1 := by ring
+      _ = (z.val 0 0 + z.val 0 1) - z.val 0 1 := by rw [← eq1_01]
+      _ = z.val 0 0 := by ring
+* Try this:
+  [apply] grind only
+.....
+line 248, col 48:
+exact (mul_one _).symm
+* Try this:
+  [apply] grind only
+..
+line 249, col 48:
+rw [mul_zero, hz_01]
+* Try this:
+  [apply] grind only
+..
+line 250, col 48:
+rw [mul_zero, hz_10]
+* Try this:
+  [apply] grind only
+..
+line 251, col 48:
+rw [mul_one, hz_11]
+* Try this:
+  [apply] grind only
+....
+line 257, col 6:
+rw [Projectivization.mk_rep y, hg₀, hgy]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.mk_rep]
+  [apply] grind => instantiate only [!Projectivization.mk_rep]
+................................
+line 303, col 39:
+rw [mul_one]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+..
+line 305, col 38:
+rw [mul_assoc]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+.
+line 307, col 31:
+rw [hz_val]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 313, col 65:
+rw [hg''_y, hg'_y]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 314, col 70:
+rw [h_g''_val]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 318, col 6:
+exact (sub_eq_zero.mp hc_eq).symm
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 320, col 6:
+exact absurd hy y.rep_nonzero
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Projectivization.rep_nonzero]
+  [apply] grind => instantiate only [Projectivization.rep_nonzero]
+...
+line 323, col 31:
+rw [hc1]
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....................
+line 362, col 6:
+rw [hf_mk, hf_mk]
+* Try these:
+  [apply] grind only [#fdc1]
+  [apply] grind only
+  [apply] grind => instantiate only [#fdc1]
+.......................................
+line 418, col 4:
+rcases hu with rfl | rfl
+* this parameter is redundant, environment already contains `Set.mem_insert_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_insert_iff, = Set.mem_singleton_iff, #679f, #da26, #2a2e, #71e1]
+  [apply] grind only [= Set.mem_insert_iff, = Set.mem_singleton_iff]
+  [apply] grind =>
+    cases #679f <;>
+      cases #da26 <;>
+        cases #2a2e <;>
+          instantiate only [= Set.mem_insert_iff] <;> instantiate only [= Set.mem_singleton_iff] <;> cases #71e1
+shortened proof!
+.........................................................
+line 519, col 8:
+exact absurd h_swap.2 (hk n h_swap.1)
+* Try these:
+  [apply] grind only [#167d]
+  [apply] grind only
+  [apply] grind => instantiate only [#167d]
+...
+line 522, col 4:
+omega
+* Try this:
+  [apply] grind only
+...
+line 532, col 33:
+rw [hfp]
+* Try these:
+  [apply] grind only [= Set.mem_insert_iff]
+  [apply] grind => instantiate only [= Set.mem_insert_iff]
+shortened proof!
+.
+line 533, col 33:
+rw [hfp]
+* Try these:
+  [apply] grind only [= Set.mem_insert_iff, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [= Set.mem_insert_iff]
+    instantiate only [= Set.mem_singleton_iff]
+shortened proof!
+..................................
+line 602, col 4:
+rcases hy1 with hy_x | hy_y
+* Try these:
+  [apply] grind only [#e359]
+  [apply] grind only
+  [apply] grind => instantiate only [#e359]
+shortened proof!
+.......
+line 614, col 6:
+exact h_inj g₁ x₁ y₁ hxy₁ (hx_y.trans hy_y.symm)
+* Try these:
+  [apply] grind only [#e359]
+  [apply] grind only
+  [apply] grind => instantiate only [#e359]
+....
+line 622, col 54:
+rw [sub_div, div_self hn0]
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Finset.mem_Ico` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 623, col 45:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_Ico` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 629, col 60:
+rw [sub_div, div_self hd0]
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Finset.mem_Ico` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 630, col 37:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Finset.mem_Ico` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 645, col 2:
+rw [← h_congr]
+* Try these:
+  [apply] grind only [!Subgroup.card_mul_index]
+  [apply] grind => instantiate only [!Subgroup.card_mul_index]
+shortened proof!
+...
+line 657, col 4:
+change s.r x (Quotient.out (e.symm (e (Quotient.mk s x))))
+* Try these:
+  [apply] grind only [!Quotient.mk_out, Setoid.comm', !Equiv.symm_apply_apply]
+  [apply] grind => instantiate only [!Quotient.mk_out, Setoid.comm', !Equiv.symm_apply_apply]
+shortened proof!
+.
+line 661, col 4:
+exact (Quotient.out_eq (e.symm i)).symm.trans ((Quotient.sound hij).trans (Quotient.out_eq
+      (e.symm j)))
+* Try this:
+
+  [apply]   duper [*, Quotient.out_eq, Quotient.eq] {preprocessing := full}
+...........WARNING: FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean was killed (exit code 137), likely by the 8G MemoryMax cap

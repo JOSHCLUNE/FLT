@@ -1,0 +1,7 @@
+........
+line 165, col 8:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.

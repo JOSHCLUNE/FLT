@@ -1,0 +1,7 @@
+..........
+line 134, col 60:
+exact IsUnit.mul hA hB
+* Try these:
+  [apply] grind only [= IsUnit.mul_iff]
+  [apply] grind => instantiate only [= IsUnit.mul_iff]
+....

@@ -1,0 +1,378 @@
+....
+line 65, col 4:
+exact isOfFinOrder_iff_pow_eq_one.mpr ⟨n, hn_pos, Subtype.ext_iff.mp hn_eq⟩
+* Try these:
+  [apply] grind only [!Subgroup.orderOf_coe, !orderOf_pos_iff, !orderOf_pos]
+  [apply] grind =>
+    instantiate only [!Subgroup.orderOf_coe]
+    instantiate only [!orderOf_pos_iff, !orderOf_pos]
+.....
+line 70, col 6:
+rw [h_dichotomy.1.mpr hp]
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 72, col 6:
+rw [h_dichotomy.2.mpr hcoprime.symm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+..................
+line 119, col 40:
+norm_num
+* Try this:
+  [apply] grind only
+...................
+line 144, col 2:
+exact h_bound
+* Try this:
+  [apply] grind only
+.....
+line 152, col 28:
+rw [ha1, one_mul, mul_one]
+* Try this:
+  [apply] grind only
+..
+line 153, col 28:
+rw [hb1, mul_one, one_mul]
+* Try this:
+  [apply] grind only
+......
+line 165, col 53:
+group
+* Try this:
+  [apply] grind only
+..
+line 167, col 34:
+group
+* Try this:
+  [apply] grind only
+......................................
+line 223, col 38:
+rw [← hy_eq]
+* Try this:
+  [apply] grind only
+..
+line 225, col 2:
+exact hy
+* Try this:
+  [apply] grind only
+...................
+line 283, col 6:
+exact h_dich.1.mpr h_p
+* Try this:
+  [apply] grind only
+..................
+line 302, col 15:
+omega
+* Try this:
+  [apply] grind only
+...
+line 305, col 2:
+omega
+* Try this:
+  [apply] grind only
+............
+line 341, col 4:
+omega
+* Try this:
+  [apply] grind only
+................
+line 356, col 78:
+omega
+* Try this:
+  [apply] grind only
+...................................
+line 441, col 6:
+rw [Finset.card_univ, Finset.card_univ, mul_comm]
+* Try these:
+  [apply] grind only [= Finset.card_univ]
+  [apply] grind => instantiate only [= Finset.card_univ]
+...
+line 445, col 2:
+rw [h_split, h_S]
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.....................
+line 479, col 33:
+exact Nat.lt_of_not_le h_gt
+* Try this:
+  [apply] grind only
+....
+line 483, col 33:
+exact Nat.le_of_lt_succ (Nat.lt_of_not_le h_lt)
+* Try this:
+  [apply] grind only
+.....
+line 518, col 77:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 519, col 30:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 523, col 6:
+convert hD_dvd using 1
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+....
+line 528, col 8:
+zify [hpm_ge2]
+* Try these:
+  [apply] grind only [Nat.succ_sub, !Int.natAbs_natCast]
+  [apply] grind =>
+    instantiate only [Nat.succ_sub, !Int.natAbs_natCast]
+    ring
+shortened proof!
+.....
+line 533, col 44:
+rw [add_comm (pm * a) 1, add_tsub_cancel_right]
+* Try this:
+  [apply] grind only
+.
+line 534, col 8:
+exact Nat.eq_one_of_dvd_one hg
+* Try these:
+  [apply] grind only [Nat.dvd_one]
+  [apply] grind => instantiate only [Nat.dvd_one]
+...
+line 539, col 72:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 543, col 4:
+have := Nat.le_of_dvd (by omega) hz₁_dvd
+* Try this:
+
+  [apply]   smt +mono [*, Nat.not_dvd_of_pos_of_lt]
+shortened proof!
+..
+line 545, col 32:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 549, col 6:
+exfalso
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 550, col 6:
+left
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+....
+line 552, col 55:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 554, col 8:
+omega
+* Try this:
+  [apply] grind only
+.
+line 555, col 8:
+omega
+* Try this:
+  [apply] grind only
+.
+line 556, col 8:
+rw [show 2 * (x + 3) - 2 = 2 * x + 4 by omega] at h_z1_le
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 559, col 6:
+right
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 560, col 6:
+exfalso
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+...
+line 566, col 83:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 570, col 6:
+have h2 : k * (pm - 1) = 2 * z₁ := by rw [mul_comm, ← hk]
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+..
+line 573, col 6:
+omega
+* Try this:
+  [apply] grind only
+..
+line 575, col 8:
+left
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 576, col 31:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 576, col 41:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 576, col 51:
+rw [mul_one]
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 577, col 6:
+right
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 578, col 6:
+omega
+* Try this:
+  [apply] grind only
+.
+line 579, col 4:
+have hz1_cases : z₁ = 1 ∨ z₁ = 2 := by omega
+* Try this:
+  [apply] grind only
+shortened proof!
+..........
+line 597, col 4:
+omega
+* Try this:
+  [apply] grind only
+...........................
+line 622, col 28:
+rw [hk]
+* Try this:
+  [apply] grind only
+................
+line 640, col 6:
+rw [mul_comm, h_P_sub, add_mul, one_mul]
+* Try this:
+  [apply] grind only
+......
+line 646, col 2:
+exact h_orbit_size_eq ▸ h_orbit_size ▸ h_dvd
+* Try this:
+  [apply] grind only
+..
+line 654, col 4:
+exfalso
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 655, col 4:
+exfalso
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 659, col 35:
+omega
+* Try this:
+  [apply] grind only
+...
+line 662, col 4:
+rw [mul_zero] at hk
+* Try these:
+  [apply] grind only [Nat.pos_iff_ne_zero, Nat.succ_sub, Nat.sub_add_cancel, Nat.succ_pred_eq_of_pos, Int.ofNat_inj,
+    Nat.mul_add_one]
+  [apply] grind =>
+    instantiate only [Nat.pos_iff_ne_zero, Nat.succ_sub, Nat.sub_add_cancel, Nat.succ_pred_eq_of_pos, Int.ofNat_inj]
+    instantiate only [Nat.mul_add_one]
+    lia
+shortened proof!
+...
+line 667, col 6:
+exfalso
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 668, col 6:
+have hk_exp : (pm + 2) * z₁ * n_p + pm * n_p + 2 * n_p = pm * n_p + 2 := by
+        calc (pm + 2) * z₁ * n_p + pm * n_p + 2 * n_p = (pm + 2) * (z₁ + 1) * n_p := by ring
+          _ = pm * n_p + 2 := hk
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 672, col 4:
+exact Nat.le_add_left 2 k
+* Try this:
+  [apply] grind only
+..........
+line 692, col 34:
+rw [← hk_eq]
+* Try this:
+  [apply] grind only
+shortened proof!
+._....
+line 697, col 6:
+rw [Nat.mul_zero] at ha
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 701, col 45:
+exact Nat.succ_pos'
+* Try this:
+  [apply] grind only
+.
+line 702, col 6:
+exact Nat.add_le_of_le_sub (le_of_lt hn_p_gt1) h_le
+* Try this:
+  [apply] grind only
+...
+line 706, col 89:
+omega
+* Try this:
+  [apply] grind only
+.....
+line 716, col 6:
+omega
+* Try this:
+  [apply] grind only
+...

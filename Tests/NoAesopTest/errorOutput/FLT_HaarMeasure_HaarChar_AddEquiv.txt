@@ -1,0 +1,114 @@
+.............
+line 79, col 50:
+exact funext hComm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 85, col 88:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.............
+line 143, col 15:
+ext
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mem_nhds_iff, = Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ, #5d5a, #9593, #294d]
+  [apply] grind only [mem_nhds_iff, = Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ]
+  [apply] grind =>
+    instantiate only [mem_nhds_iff]
+    cases #5d5a <;>
+      cases #9593 <;>
+        cases #294d <;>
+          instantiate only [= Set.mem_prod, = Set.mem_inter_iff] <;>
+            instantiate only [= Set.mem_prod] <;> instantiate only [← Set.mem_univ]
+shortened proof!
+........_...........
+line 160, col 65:
+simp [one_mem_X, one_mem_Y]
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_prod, = Set.mem_image]
+  [apply] grind =>
+    instantiate only [= Set.mem_prod]
+    instantiate only [= Set.mem_image]
+..........
+line 170, col 15:
+ext
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ, #295c, #8bbc]
+  [apply] grind only [= Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ]
+  [apply] grind =>
+    cases #295c <;>
+      instantiate only [= Set.mem_prod, = Set.mem_inter_iff] <;>
+        instantiate only [= Set.mem_prod] <;> instantiate only [← Set.mem_univ] <;> cases #8bbc
+shortened proof!
+........_...........
+line 187, col 62:
+simp [one_mem_X, one_mem_Y]
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_prod]
+  [apply] grind => instantiate only [= Set.mem_prod]
+.....
+line 192, col 6:
+exact hK'comp.prod hCcomp |>.measure_ne_top.symm.lt_top'
+* Try these:
+  [apply] grind only [IsCompact.measure_ne_top, IsCompact.prod, ←= top_unique]
+  [apply] grind =>
+    instantiate only [IsCompact.measure_ne_top]
+    instantiate only [IsCompact.prod]
+    instantiate only [←= top_unique]
+.....
+line 201, col 6:
+exact (isHaarMeasure_haarMeasure _).lt_top_of_isCompact <| hK'comp.prod hKcomp
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsCompact.measure_ne_top, IsCompact.prod, ←= top_unique]
+  [apply] grind =>
+    instantiate only [IsCompact.measure_ne_top]
+    instantiate only [IsCompact.prod]
+    instantiate only [←= top_unique]
+.....
+line 209, col 37:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 218, col 58:
+rw [ν_apply hXopen.measurableSet]
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsOpen.measurableSet, #dbd6]
+  [apply] grind only [IsOpen.measurableSet]
+  [apply] grind =>
+    instantiate only [#dbd6]
+    instantiate only [IsOpen.measurableSet]
+.
+line 219, col 48:
+rw [μ_apply hψYopen.measurableSet]
+* this parameter is redundant, environment already contains `Set.mem_prod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsOpen.measurableSet, #872f]
+  [apply] grind only [IsOpen.measurableSet]
+  [apply] grind =>
+    instantiate only [#872f]
+    instantiate only [IsOpen.measurableSet]
+...................................
+line 282, col 4:
+rfl
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......................................

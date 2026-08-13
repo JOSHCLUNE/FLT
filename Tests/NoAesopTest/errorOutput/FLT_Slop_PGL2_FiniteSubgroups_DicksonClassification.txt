@@ -1,0 +1,40 @@
+....
+line 72, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h1
+* Try these:
+  [apply] grind only [#32cb, #c521]
+  [apply] grind only
+  [apply] grind => cases #32cb <;> instantiate only [#c521]
+...
+line 75, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+* Try this:
+  [apply] grind only
+...
+line 78, col 8:
+exact Or.inl h1
+* Try this:
+  [apply] grind only
+.
+line 79, col 8:
+exact Or.inr <| Or.inl h2
+* Try these:
+  [apply] grind only [#52fb, #a0ba]
+  [apply] grind only
+  [apply] grind => cases #52fb <;> instantiate only [#a0ba]
+.
+line 80, col 8:
+exact Or.inr <| Or.inr <| Or.inl h3
+* Try this:
+  [apply] grind only
+.
+line 81, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+* Try this:
+  [apply] grind only
+.
+line 82, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h5
+* Try this:
+  [apply] grind only
+....

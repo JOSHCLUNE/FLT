@@ -1,0 +1,11 @@
+..
+line 46, col 28:
+simp
+* Try these:
+  [apply] grind only [= ContinuousLinearMap.comp_apply, = add_apply, = map_add]
+  [apply] grind =>
+    instantiate only [= ContinuousLinearMap.comp_apply, = add_apply]
+    instantiate only [= ContinuousLinearMap.comp_apply]
+    instantiate only [= ContinuousLinearMap.comp_apply, = add_apply]
+    instantiate only [= map_add]
+.........

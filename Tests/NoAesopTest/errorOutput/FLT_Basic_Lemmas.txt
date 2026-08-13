@@ -1,0 +1,50 @@
+..
+line 28, col 4:
+grind
+* Try this:
+
+  [apply]   duper [*, prime_def] {preprocessing := full}
+.
+line 30, col 4:
+rcases eq_or_ne p 3 with rfl | hp3
+* Try these:
+  [apply] grind only [= odd_iff, not_prime_one, IsUnit.dvd, Prime.nat_prime, #1475, #7dc0, #3a7e]
+  [apply] grind only [= odd_iff, not_prime_one, IsUnit.dvd, Prime.nat_prime]
+  [apply] grind =>
+    instantiate only [= odd_iff, not_prime_one, IsUnit.dvd, #1475]
+    instantiate only [Prime.nat_prime]
+    mbtc
+    cases #7dc0/2 <;> mbtc <;> cases #3a7e <;> lia
+shortened proof!
+...
+line 47, col 4:
+apply FermatLastTheoremFor.mono h3
+* Try this:
+
+  [apply]   duper [*, fermatLastTheoremThree, FermatLastTheoremFor, fermatLastTheoremFor_iff_int, FermatLastTheoremWith.mono]
+      {preprocessing := full}
+shortened proof!
+.
+line 51, col 4:
+apply FermatLastTheoremFor.mono h4
+* Try this:
+
+  [apply]   duper [*, fermatLastTheoremFour, FermatLastTheoremWith.mono, FermatLastTheoremWith, fermatLastTheoremFor_iff_rat]
+      {preprocessing := full}
+shortened proof!
+.
+line 55, col 4:
+apply FermatLastTheoremFor.mono hpn
+* Try these:
+  [apply] grind only [FermatLastTheoremFor.mono, #67c2]
+  [apply] grind only [FermatLastTheoremFor.mono]
+  [apply] grind =>
+    instantiate only [#67c2]
+    instantiate only [FermatLastTheoremFor.mono]
+shortened proof!
+......
+line 66, col 2:
+assumption_mod_cast
+* Try this:
+
+  [apply]   duper [*, pow_coe, add_coe] {preprocessing := full}

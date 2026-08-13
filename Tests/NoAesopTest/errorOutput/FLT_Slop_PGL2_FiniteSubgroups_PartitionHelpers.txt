@@ -1,0 +1,217 @@
+....
+line 69, col 74:
+omega
+* Try this:
+  [apply] grind only
+.........
+line 85, col 2:
+linarith only [h1, h3]
+* Try this:
+  [apply] grind only
+..................
+line 157, col 28:
+rw [ha1, one_mul, mul_one]
+* Try this:
+  [apply] grind only
+..
+line 158, col 28:
+rw [hb1, mul_one, one_mul]
+* Try this:
+  [apply] grind only
+.....
+line 171, col 6:
+rw [mul_assoc, ← mul_assoc yQ, ← h_comm_G zP hzP yQ hyQ, mul_assoc zP, ← mul_assoc yP]
+* Try these:
+  [apply] grind only [#90e2]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#90e2]
+    ac
+.......................................
+line 230, col 8:
+cases hR
+* Try these:
+  [apply] grind only [← Finset.notMem_empty]
+  [apply] grind => instantiate only [← Finset.notMem_empty]
+................
+line 254, col 2:
+rfl
+* Try this:
+  [apply] grind only
+.............
+line 282, col 4:
+rw [Matrix.det_fin_two]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 284, col 4:
+rw [Matrix.det_fin_two]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..............
+line 299, col 4:
+exact h3
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 304, col 4:
+calc d = 0 * β + d * 1 := by ring
+      _ = (c : K p) * (0 * b + 1 * d) := h4
+      _ = (c : K p) * d := by ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 308, col 66:
+rw [h, mul_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 310, col 33:
+exact h_mul
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 316, col 4:
+have h_eq : a * β = d * β := by
+      calc a * β = a * β + b * 1 - b := by ring
+        _ = 1 * b + β * d - b := by rw [h_01]
+        _ = d * β := by ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.....
+line 324, col 48:
+rw [h_zero]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+................
+line 340, col 8:
+rw [h_val, mul_zero]
+* Try this:
+  [apply] grind only
+.
+line 341, col 6:
+exact hb hc_val2
+* Try this:
+  [apply] grind only
+........
+line 349, col 6:
+rw [h_trace, h_det, h_ad]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...............
+line 381, col 39:
+rw [h, pow_zero]
+* Try this:
+  [apply] grind only
+.
+line 381, col 74:
+rw [h, pow_one]
+* Try this:
+  [apply] grind only
+......................_.....................................
+line 485, col 42:
+rw [hv]
+* Try this:
+  [apply] grind only
+..............................
+line 564, col 28:
+rw [hg1]
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+..
+line 565, col 28:
+rw [hh1]
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+......................................................................................
+line 688, col 4:
+exact h_idx ▸ (Nat.card_eq_fintype_card (α := Sylow p G)).symm ▸ Sylow.card_dvd_index P
+* Try these:
+  [apply] grind only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+......
+line 694, col 4:
+exact h_sq ▸ hk ▸ h_div
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 701, col 4:
+cases k
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 704, col 52:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 705, col 62:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 708, col 4:
+calc (p ^ m - 1) * p ^ m + (p ^ m - 1) = (p ^ m - 1) * (p ^ m + 1) := by rw [Nat.mul_add, mul_one]
+      _ = k * a * p ^ m + a := by rw [ha, Nat.add_mul, one_mul, mul_right_comm]
+* Try this:
+  [apply] grind only
+....
+line 713, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+* Try this:
+  [apply] grind only
+....
+line 715, col 112:
+exact le_of_not_gt h_not_lt
+* Try this:
+  [apply] grind only
+.
+line 716, col 4:
+rw [← h_div_eq, add_comm 1] at h_ge
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 720, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+* Try this:
+  [apply] grind only
+..
+line 722, col 4:
+exact h_mod_eq.symm
+* Try this:
+  [apply] grind only
+....
+line 726, col 81:
+norm_num
+* Try this:
+  [apply] grind only
+...
+line 728, col 2:
+rw [h_k_eq_one, one_mul] at hk
+* Try this:
+  [apply] grind only
+shortened proof!

@@ -1,0 +1,19 @@
+..
+line 40, col 75:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 64, col 2:
+rwa [← faithfulSMul_iff_algebraMap_injective R A]
+* Try this:
+
+  [apply]   duper [*, FaithfulSMul.algebraMap_injective] {preprocessing := full}
+.......................................
+line 146, col 2:
+simpa using hyzx.symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...

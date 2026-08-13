@@ -1,0 +1,6 @@
+.
+line 33, col 51:
+simp
+* Try these:
+  [apply] grind only [!Set.finite_singleton]
+  [apply] grind => instantiate only [!Set.finite_singleton]

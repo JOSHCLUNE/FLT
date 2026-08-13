@@ -1,0 +1,122 @@
+................_..._....
+line 82, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 94, col 56:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.............
+line 112, col 71:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........
+line 121, col 4:
+simpa [Subgroup.smul_def] using e
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 122, col 4:
+exact fun _ ↦ .const_smul hH _
+* Try this:
+
+  [apply]   duper [*, MeasurableSet.const_smul] {preprocessing := full}
+..............
+line 166, col 4:
+ring
+* Try this:
+  [apply] grind only
+..................
+line 218, col 81:
+simp [← ha₁, h]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#cf16]
+  [apply] grind only
+  [apply] grind => instantiate only [#cf16]
+.....
+line 224, col 6:
+ext
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#4967, #cf16]
+  [apply] grind only
+  [apply] grind => cases #4967 <;> instantiate only [#cf16]
+shortened proof!
+....
+line 227, col 6:
+ext
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#65c9, #aeeb]
+  [apply] grind only
+  [apply] grind => cases #65c9 <;> instantiate only [#aeeb]
+shortened proof!
+.............
+line 284, col 9:
+simp
+* Try these:
+  [apply] grind only [!Units.val_injective, !Units.isUnit, !IsUnit.unit_spec]
+  [apply] grind =>
+    instantiate only [!Units.val_injective, !Units.isUnit]
+    instantiate only [!IsUnit.unit_spec]
+....................
+line 324, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.................................
+line 407, col 57:
+simp
+* Try this:
+
+  [apply]   duper [*, Matrix.coe_units_inv] {preprocessing := full}
+......
+line 413, col 8:
+ext
+* Try these:
+  [apply] grind only [Ring.inverse_unit, #9dbf]
+  [apply] grind only [Ring.inverse_unit]
+  [apply] grind => cases #9dbf <;> instantiate only [Ring.inverse_unit]
+shortened proof!
+....
+line 418, col 4:
+ext
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, Matrix.isUnit_iff_isUnit_det, #56b6]
+  [apply] grind only [usr Set.mem_setOf_eq, Matrix.isUnit_iff_isUnit_det]
+  [apply] grind =>
+    cases #56b6 <;> instantiate only [usr Set.mem_setOf_eq] <;> instantiate only [Matrix.isUnit_iff_isUnit_det]
+shortened proof!
+....................
+line 456, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........................
+line 506, col 4:
+simp [IsUnimodularGroup.modularCharacter_eq_one]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsUnimodularGroup.modularCharacter_eq_one, MonoidHom.one_apply]
+  [apply] grind =>
+    instantiate only [IsUnimodularGroup.modularCharacter_eq_one, MonoidHom.one_apply]
+    instantiate only [MonoidHom.one_apply]
+........
+line 522, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........

@@ -1,0 +1,56 @@
+..
+line 48, col 54:
+exact fun i ↦ Set.BijOn.mapsTo
+* Try this:
+
+  [apply]   duper [*, Set.BijOn] {preprocessing := full}
+..
+line 50, col 29:
+exact fun i ↦ Set.BijOn.mapsTo ∘ Set.BijOn.equiv_symm
+* Try these:
+  [apply] grind only [Set.BijOn.mapsTo, Set.BijOn.equiv_symm]
+  [apply] grind =>
+    instantiate only [Set.BijOn.mapsTo]
+    instantiate only [Set.BijOn.equiv_symm]
+.......................
+line 120, col 29:
+exact fun i ↦ id
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 145, col 62:
+grind
+* Try these:
+  [apply] grind only [= symm_apply_apply, #99d2, #8b9a]
+  [apply] grind only [= symm_apply_apply]
+  [apply] grind => cases #99d2 <;> cases #8b9a <;> instantiate only [= symm_apply_apply]
+.....
+line 150, col 41:
+grind
+* Try these:
+  [apply] grind only [#dac2, #7d8a]
+  [apply] grind only
+  [apply] grind => cases #dac2 <;> cases #7d8a
+......
+line 192, col 21:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+....
+line 222, col 21:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+..................................._._........
+line 546, col 25:
+rw [Filter.tendsto_iff_comap]
+* Try this:
+
+  [apply]   duper [*, Filter.tendsto_comap, Filter.Tendsto] {preprocessing := full}
+shortened proof!
+...............

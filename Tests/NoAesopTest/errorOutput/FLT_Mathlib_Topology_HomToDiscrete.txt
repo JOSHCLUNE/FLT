@@ -1,0 +1,111 @@
+............
+line 34, col 4:
+simp_all only [Set.mem_singleton_iff]
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_def` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Exists.choose_spec, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [usr Exists.choose_spec, = Set.mem_singleton_iff]
+    done
+.
+line 35, col 4:
+intro eq i
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_def` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Classical.choose_spec, usr Exists.choose_spec, !Set.mem_singleton, Set.mem_preimage]
+  [apply] grind =>
+    instantiate only [Classical.choose_spec, usr Exists.choose_spec]
+    instantiate only [!Set.mem_singleton]
+    instantiate only [Set.mem_preimage]
+shortened proof!
+..
+line 43, col 2:
+use h '' U
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Homeomorph.isInducing, !Homeomorph.surjective, !Homeomorph.self_comp_symm,
+    !Homeomorph.continuous, Topology.IsInducing.isOpen_iff, continuous_def, !Homeomorph.image_preimage,
+    Set.preimage_comp, Set.preimage_eq_preimage, Homeomorph.image_eq_preimage_symm, #6147, #5755, #0811]
+  [apply] grind only [!Homeomorph.isInducing, !Homeomorph.surjective, !Homeomorph.self_comp_symm,
+    !Homeomorph.continuous, Topology.IsInducing.isOpen_iff, continuous_def, !Homeomorph.image_preimage,
+    Set.preimage_comp, Set.preimage_eq_preimage, Homeomorph.image_eq_preimage_symm]
+  [apply] grind =>
+    instantiate only [!Homeomorph.isInducing, !Homeomorph.surjective, !Homeomorph.self_comp_symm]
+    instantiate only [!Homeomorph.continuous, Topology.IsInducing.isOpen_iff]
+    instantiate only [continuous_def]
+    instantiate only [#6147]
+    instantiate only [#5755]
+    cases #0811 <;>
+      instantiate only [!Homeomorph.image_preimage, Set.preimage_comp, Set.preimage_eq_preimage] <;>
+        instantiate only [Homeomorph.image_eq_preimage_symm]
+shortened proof!
+..
+line 58, col 2:
+use h.symm '' U
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.preimage_comp, !Homeomorph.isOpen_preimage, #5a76]
+  [apply] grind only [Set.preimage_comp, !Homeomorph.isOpen_preimage]
+  [apply] grind =>
+    instantiate only [Set.preimage_comp]
+    instantiate only [!Homeomorph.isOpen_preimage, #5a76]
+shortened proof!
+..
+line 81, col 2:
+exact ⟨U, Uopen, by simp [Ueq]⟩
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.image_singleton]
+  [apply] grind =>
+    instantiate approx
+    instantiate only [Set.image_singleton]
+..
+line 87, col 2:
+refine ⟨U, Uopen, ?_⟩
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton, #5a76]
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton]
+  [apply] grind =>
+    instantiate only [Equiv.image_eq_preimage_symm, #5a76]
+    instantiate approx
+    instantiate only [Set.image_singleton]
+shortened proof!
+.
+line 101, col 2:
+refine discreteTopology_iff_isOpen_singleton.mpr ?_
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_sdiff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_forall_isOpen,
+    discreteTopology_iff_singleton_mem_nhds, !Set.inter_subset_right, DiscreteTopology.of_subset]
+  [apply] grind =>
+    instantiate only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_forall_isOpen,
+      discreteTopology_iff_singleton_mem_nhds, !Set.inter_subset_right]
+    instantiate only [DiscreteTopology.of_subset]
+shortened proof!
+.
+line 113, col 2:
+rw [Set.inter_comm]
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_sdiff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_forall_isOpen,
+    discreteTopology_iff_singleton_mem_nhds, !Set.inter_subset_left, DiscreteTopology.of_subset]
+  [apply] grind =>
+    instantiate only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_forall_isOpen,
+      discreteTopology_iff_singleton_mem_nhds, !Set.inter_subset_left]
+    instantiate only [DiscreteTopology.of_subset]
+shortened proof!

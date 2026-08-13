@@ -1,0 +1,69 @@
+..
+line 82, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 88, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 98, col 12:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 105, col 4:
+exact congr($(ih) (F g))
+* Try these:
+  [apply] grind only [= ContinuousLinearMap.comp_apply]
+  [apply] grind =>
+    instantiate only [= ContinuousLinearMap.comp_apply]
+    instantiate only [= ContinuousLinearMap.comp_apply]
+.
+line 115, col 52:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 116, col 27:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 126, col 28:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 143, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 151, col 74:
+rw [ih]
+* Try these:
+  [apply] grind only [#d923]
+  [apply] grind only
+  [apply] grind => instantiate only [#d923]
+...............
+line 226, col 58:
+simp
+* Try these:
+  [apply] grind only [CochainComplex.next]
+  [apply] grind => instantiate only [CochainComplex.next]
+....
+line 237, col 80:
+simp
+* Try these:
+  [apply] grind only [CochainComplex.next]
+  [apply] grind => instantiate only [CochainComplex.next]

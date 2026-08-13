@@ -1,0 +1,184 @@
+......
+line 137, col 42:
+ext
+* Try these:
+  [apply] grind only [#30ae, #ada3, #fb1f]
+  [apply] grind only
+  [apply] grind => cases #30ae <;> cases #30ae <;> cases #ada3 <;> instantiate only [#fb1f]
+shortened proof!
+..........
+line 159, col 22:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 164, col 33:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+...
+line 178, col 4:
+simp_all only [neg_inj, right_invt]
+* Try these:
+  [apply] grind only [#e9a1, #1c12]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#e9a1]
+    instantiate only [#1c12]
+..........
+line 208, col 31:
+simp [add_assoc]
+* Try these:
+  [apply] grind only [add_apply]
+  [apply] grind =>
+    instantiate only [add_apply]
+    instantiate only [add_apply]
+    ac
+............
+line 216, col 30:
+simp [add_comm]
+* Try these:
+  [apply] grind only [add_apply]
+  [apply] grind =>
+    instantiate only [add_apply]
+    ac
+.._.
+line 222, col 61:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+................
+line 269, col 20:
+ext
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.
+line 270, col 23:
+ext
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+................
+line 328, col 8:
+use U
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+..............
+line 349, col 24:
+ext
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.
+line 355, col 24:
+rw [adicCompletion_smul_def, adicCompletion_smul_def, smul_comm]
+* Try this:
+
+  [apply]   smt +mono [*]
+...
+line 369, col 6:
+exact ⟨U, hU, by simp +contextual [H]⟩
+* Try these:
+  [apply] grind only [#bda5, #13e2]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#bda5]
+    instantiate only [#13e2]
+...........................................
+line 484, col 4:
+simp [Units.ext_iff, ← IsScalarTower.algebraMap_apply, RingHom.toMonoidHom_eq_coe]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.........._.......
+line 543, col 31:
+simp only [Set.mem_setOf_eq] at hf hg
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, smul_add, #1b5f, #c99b]
+  [apply] grind only [usr Set.mem_setOf_eq, smul_add]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, smul_add]
+    instantiate only [#1b5f, #c99b]
+shortened proof!
+.
+line 544, col 18:
+simp
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, smul_zero]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [smul_zero]
+...............................................................................
+line 764, col 74:
+simp
+* Try this:
+  [apply] grind only
+....
+line 765, col 83:
+simp
+* Try this:
+  [apply] grind only
+...........
+line 774, col 60:
+simp
+* Try this:
+  [apply] grind only
+....
+line 776, col 69:
+simp
+* Try this:
+  [apply] grind only
+...........
+line 787, col 65:
+simp
+* Try this:
+  [apply] grind only
+.........
+line 794, col 6:
+simp [this]
+* Try this:
+  [apply] grind only
+..................
+line 880, col 21:
+ext
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.
+line 881, col 22:
+ext
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.......................................................
+line 1055, col 14:
+simpa using smul_mono_right g⁻¹ h
+* Try this:
+
+  [apply]   duper [*, smul_le_smul_left, eq_inv_smul_iff] {preprocessing := full}
+.
+line 1059, col 2:
+rw [← smul_le_smul_iff (g := g)]
+* Try this:
+
+  [apply]   duper [*, smul_le_smul_iff, smul_eq_iff_eq_inv_smul] {preprocessing := full}
+shortened proof!
+..
+line 1065, col 2:
+grw [← inv_smul_le_iff, smul_inf_le]
+* Try this:
+
+  [apply]   duper [*, inf_le_left, inv_smul_le_iff, le_inf, inf_comm] {preprocessing := full}
+shortened proof!
+...................................................................

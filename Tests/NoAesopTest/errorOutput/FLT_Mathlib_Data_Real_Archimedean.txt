@@ -1,0 +1,6 @@
+..
+line 22, col 2:
+grind
+* this parameter is redundant, environment already contains `Set.mem_Ico` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only

@@ -1,0 +1,20 @@
+....
+line 44, col 56:
+simp
+* Try this:
+
+  [apply]   duper [*, Finset.finite_toSet] {preprocessing := full}
+................................
+line 114, col 59:
+simpa [Subtype.val_inj] using! h
+* Try these:
+  [apply] grind only [usr Subtype.property, Subtype.coe_eta]
+  [apply] grind => instantiate only [usr Subtype.property, Subtype.coe_eta]
+....
+line 125, col 4:
+exact hX p
+* Try these:
+  [apply] grind only [#2982]
+  [apply] grind only
+  [apply] grind => instantiate only [#2982]
+.....................

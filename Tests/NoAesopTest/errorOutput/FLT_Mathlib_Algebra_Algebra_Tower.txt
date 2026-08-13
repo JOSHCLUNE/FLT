@@ -1,0 +1,18 @@
+..
+line 60, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.....
+line 113, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 125, col 27:
+simp
+* Try these:
+  [apply] grind only [AlgHom.commutes']
+  [apply] grind => instantiate only [AlgHom.commutes']

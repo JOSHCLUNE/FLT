@@ -1,0 +1,145 @@
+........
+line 69, col 18:
+aesop
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, Pi.smul_apply', SMulMemClass.smul_mem, #2554]
+  [apply] grind only [usr Set.mem_setOf_eq, Pi.smul_apply', SMulMemClass.smul_mem]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [Pi.smul_apply', #2554]
+    instantiate only [SMulMemClass.smul_mem]
+......_......_...........
+line 149, col 6:
+exact G.add_mem (hx ha₁) (hy ha₂)
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem, #7e17, #2557]
+  [apply] grind only [usr Set.mem_setOf_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, SetLike.mem_coe]
+    instantiate only [= Set.subset_def, AddMemClass.add_mem]
+    instantiate only [#7e17, #2557]
+    instantiate only [SetLike.mem_coe]
+...._.
+line 165, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 174, col 10:
+simp [G.zero_mem]
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, AddSubgroup.zero_mem]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [AddSubgroup.zero_mem]
+...................
+line 198, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, H⟩
+* Try these:
+  [apply] grind only [= Set.subset_def, #5dd8, #0789, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #5dd8]
+    instantiate only [#0789, #838e]
+shortened proof!
+.......
+line 208, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, U, hU, H⟩
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [= Set.subset_def, #ee07, #481b, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #ee07]
+    instantiate only [#481b, #838e]
+shortened proof!
+..............
+line 234, col 10:
+simp
+* Try this:
+
+  [apply]   duper [*, Set.sdiff_subset_iff, Std.le_refl] {preprocessing := full}
+.
+line 234, col 23:
+simpa
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.univ_subset_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Set.mem_singleton, = Set.mem_inter_iff]
+  [apply] grind => instantiate only [!Set.mem_singleton, = Set.mem_inter_iff]
+..
+line 238, col 2:
+obtain ⟨n, hn⟩ := wellFoundedGT_iff_monotone_chain_condition.mp ‹WellFoundedGT α› f
+* Try this:
+
+  [apply]   duper [*, iSup_eq_monotonicSequenceLimit] {preprocessing := full}
+shortened proof!
+.......
+line 256, col 17:
+simpa [f, this] using! hi
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 267, col 8:
+omega
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [#980b, #53ee, #2582]
+  [apply] grind only
+  [apply] grind => cases #980b <;> cases #53ee <;> cases #2582
+...
+line 271, col 20:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+..........................
+line 317, col 4:
+simp only [map_sum, map_smul]
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [map_sum, Submodule.sum_mem, map_smul, Submodule.smul_mem_smul, Submodule.mem_top, #2fa7, #bce0]
+  [apply] grind only [map_sum, Submodule.sum_mem, map_smul, Submodule.smul_mem_smul, Submodule.mem_top]
+  [apply] grind =>
+    instantiate only [map_sum]
+    instantiate only [Submodule.sum_mem]
+    cases #2fa7 <;>
+      instantiate only [#bce0, map_smul] <;>
+        instantiate only [Submodule.smul_mem_smul] <;> instantiate only [Submodule.mem_top]
+shortened proof!
+....
+line 326, col 2:
+exact (Submodule.mkQ_surjective _).comp hf
+* Try these:
+  [apply] grind only [!Submodule.mkQ_surjective, !LinearMap.coe_comp, !Function.Surjective.comp]
+  [apply] grind =>
+    instantiate only [!Submodule.mkQ_surjective, !LinearMap.coe_comp]
+    instantiate only [!Function.Surjective.comp]
+...........................
+line 373, col 4:
+exact t.2 (this ▸ zero_mem p)
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [Ideal.mem_primeCompl_iff, Ideal.IsPrime.mul_mem_iff_mem_or_mem,
+    Ideal.IsPrime.mem_or_mem_of_mul_eq_zero]
+  [apply] grind =>
+    instantiate only [Ideal.mem_primeCompl_iff]
+    instantiate only [Ideal.IsPrime.mul_mem_iff_mem_or_mem, Ideal.IsPrime.mem_or_mem_of_mul_eq_zero]
+..
+line 375, col 4:
+rw [mul_assoc, ← pow_succ, tsub_add_cancel_of_le, Nat.find_spec H]
+* Try these:
+  [apply] grind only [usr Nat.find_spec, mul_pow_sub_one]
+  [apply] grind =>
+    instantiate only [usr Nat.find_spec, mul_pow_sub_one]
+    ring
+shortened proof!
+.

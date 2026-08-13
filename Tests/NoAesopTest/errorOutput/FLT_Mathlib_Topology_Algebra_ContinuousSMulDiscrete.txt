@@ -1,0 +1,24 @@
+.......
+line 47, col 2:
+rwa [← continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   duper [*, continuousSMulDiscrete_iff] {preprocessing := full}
+.
+line 51, col 2:
+rwa [continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   duper [*, continuousSMulDiscrete_iff] {preprocessing := full}
+...
+line 58, col 4:
+exact h ▸ isOpen_empty
+* this parameter is redundant, environment already contains `Set.mem_compl_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.disjoint_left` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `MulAction.mem_fixedBy` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [isOpen_iff_forall_mem_open, = Set.mem_empty_iff_false]
+  [apply] grind =>
+    instantiate only [isOpen_iff_forall_mem_open]
+    instantiate only [= Set.mem_empty_iff_false]
+...

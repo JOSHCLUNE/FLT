@@ -1,0 +1,32 @@
+........
+line 30, col 53:
+simp [hp]
+* Try this:
+
+  [apply]   smt +mono [*]
+........
+line 36, col 60:
+simpa
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 37, col 27:
+rintro rfl
+* Try these:
+  [apply] grind only [= natDegree_zero]
+  [apply] grind => instantiate only [= natDegree_zero]
+shortened proof!
+...
+line 38, col 39:
+simp_all
+* Try these:
+  [apply] grind only [Polynomial.map_eq_zero]
+  [apply] grind => instantiate only [Polynomial.map_eq_zero]
+........
+line 45, col 56:
+simp [hp0]
+* Try these:
+  [apply] grind only [Polynomial.map_eq_zero]
+  [apply] grind => instantiate only [Polynomial.map_eq_zero]
+.................

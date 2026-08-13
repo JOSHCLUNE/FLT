@@ -1,0 +1,7 @@
+.
+line 26, col 2:
+rw [Set.countable_coe_iff]
+* Try this:
+
+  [apply]   duper [*, Filter.cofinite.sets.countable, Set.countable_coe_iff] {preprocessing := full}
+shortened proof!

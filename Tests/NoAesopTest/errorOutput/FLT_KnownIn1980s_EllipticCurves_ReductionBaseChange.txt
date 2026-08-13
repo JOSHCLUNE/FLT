@@ -1,0 +1,38 @@
+.......
+line 261, col 55:
+exact (E.map_a₁ _).symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 263, col 55:
+exact (E.map_a₂ _).symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 265, col 55:
+exact (E.map_a₃ _).symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 267, col 55:
+exact (E.map_a₄ _).symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 269, col 55:
+exact (E.map_a₆ _).symm
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 287, col 4:
+ext x
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.........................

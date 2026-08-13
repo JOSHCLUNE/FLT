@@ -1,0 +1,81 @@
+...
+line 76, col 18:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 86, col 4:
+induction bs with
+    | zero => simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+      Algebra.TensorProduct.includeRight_apply, mul_zero, zero_mul]
+    | tmul x y =>
+        simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+          mul_one, mul_comm]
+    | add x y _ _ =>
+        simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, mul_add, add_mul]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.punitProd_symm_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Algebra.TensorProduct.algebraMap_eq_includeRight, #a3b9]
+  [apply] grind only [!Algebra.TensorProduct.algebraMap_eq_includeRight]
+  [apply] grind =>
+    instantiate only [!Algebra.TensorProduct.algebraMap_eq_includeRight]
+    instantiate only [#a3b9]
+..
+line 98, col 14:
+simp only [smul_zero, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+      Algebra.TensorProduct.includeRight_apply, mul_zero]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [smul_zero]
+  [apply] grind => instantiate only [smul_zero]
+..
+line 103, col 8:
+rw [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.
+line 106, col 8:
+simp_all only [smul_def, AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, smul_add, mul_add]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mul_add, smul_add]
+  [apply] grind => instantiate only [mul_add, smul_add]
+.
+line 119, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*, Algebra.TensorProduct.comm_symm, Algebra.TensorProduct.comm_tmul] {preprocessing := full}
+..
+line 129, col 14:
+simp only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      map_zero, RingHom.id_apply]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 132, col 8:
+simp only [smul_tmul', smul_eq_mul, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+          LinearEquiv.coe_coe, comm_tmul, RingHom.id_apply, smul_def, comm_symm_tmul]
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 192, col 2:
+exact Function.leftInverse_iff_comp
+* Try these:
+  [apply] grind only [Function.leftInverse_iff_comp]
+  [apply] grind => instantiate only [Function.leftInverse_iff_comp]
+.......

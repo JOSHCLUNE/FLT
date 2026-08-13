@@ -1,0 +1,7 @@
+...
+line 49, col 37:
+exact hx
+* Try this:
+
+  [apply]   duper [*, WithAbs.equiv_symm_apply] {preprocessing := full}
+...................................

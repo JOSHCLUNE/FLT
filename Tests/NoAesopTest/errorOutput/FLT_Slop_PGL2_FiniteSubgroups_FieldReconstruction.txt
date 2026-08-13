@@ -1,0 +1,349 @@
+..........
+line 87, col 54:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_eq_zero_of_lt` annotated with `@[grind <=]`
+* Try this:
+  [apply] grind only
+..
+line 90, col 6:
+rw [hP_deg, Polynomial.natDegree_zero]
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+  [apply] grind => instantiate only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, = Polynomial.natDegree_zero]
+shortened proof!
+.....
+line 95, col 63:
+omega
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 96, col 21:
+ring
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+............
+line 116, col 6:
+exact hV_zero
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+............__........
+line 161, col 46:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 162, col 50:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 163, col 46:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+..
+line 164, col 46:
+ring
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+.....
+line 179, col 4:
+exact ne_of_gt (lt_trans (by norm_num : 1 < 2) Fact.out) h_order.symm
+* Try this:
+
+  [apply]   smt +mono [*, Fact.out]
+...........
+line 198, col 4:
+exact h_dvd
+* Try this:
+  [apply] grind only
+....
+line 203, col 64:
+rw [two_mul]
+* Try this:
+  [apply] grind only
+shortened proof!
+.....................
+line 245, col 99:
+rw [mul_one, zero_mul, sub_zero]
+* Try this:
+  [apply] grind only
+shortened proof!
+.......
+line 253, col 6:
+exact eq_of_sub_eq_zero (Eq.trans
+        (Eq.trans
+          (show a - b = ((1 : K p) * (1 : K p) + (a - b) * (1 : K p)) - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p)) by ring)
+          (congrArg (fun x ↦ x - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p))) h_00))
+        (sub_self _))
+* Try this:
+  [apply] grind only
+.
+line 258, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+................
+line 308, col 6:
+convert (Fintype.card_eq_nat_card.trans (GaloisField.card p m (ne_of_gt hm))).symm
+* Try these:
+  [apply] grind only [!GaloisField.card, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!GaloisField.card, Fintype.card_eq_nat_card]
+.........
+line 324, col 4:
+rw [mul_one, mul_zero, sub_zero]
+* Try this:
+  [apply] grind only
+shortened proof!
+..............
+line 344, col 4:
+rw [mul_one, mul_zero, sub_zero]
+* Try these:
+  [apply] grind only [= map_zero]
+  [apply] grind =>
+    ring
+    instantiate only [= map_zero]
+shortened proof!
+............
+line 363, col 10:
+rw [mul_one, mul_zero, sub_zero]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 369, col 4:
+rw [mul_one, mul_zero, sub_zero]
+* Try this:
+  [apply] grind only
+shortened proof!
+......
+line 375, col 40:
+rw [mul_one, mul_zero, add_zero]
+* Try this:
+  [apply] grind only
+..
+line 376, col 46:
+rw [zero_mul, add_zero, mul_div_cancel₀ b ha]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 377, col 48:
+rw [mul_one, mul_zero, add_zero]
+* Try this:
+  [apply] grind only
+..
+line 378, col 54:
+rw [zero_mul, mul_one, zero_add]
+* Try this:
+  [apply] grind only
+......
+line 393, col 25:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two_of]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two_of]
+    ring
+shortened proof!
+.......
+line 406, col 33:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two_of]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two_of]
+    ring
+shortened proof!
+.
+line 409, col 33:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two_of]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two_of]
+    ring
+shortened proof!
+.........................
+line 450, col 25:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two_of]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two_of]
+    ring
+shortened proof!
+.
+line 453, col 25:
+rw [Matrix.det_fin_two]
+* Try these:
+  [apply] grind only [Matrix.det_fin_two_of]
+  [apply] grind =>
+    instantiate only [Matrix.det_fin_two_of]
+    ring
+shortened proof!
+.........
+line 465, col 4:
+rw [mul_right_comm, div_mul_cancel₀ a (right_ne_zero_of_mul h_det), add_comm]
+* this parameter is redundant, environment already contains `Fin.val_succ` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [#e171]
+  [apply] grind only
+  [apply] grind => cases #e171 <;> ring
+............................
+line 527, col 45:
+rw [mul_one, mul_zero, sub_zero]
+* Try this:
+  [apply] grind only
+shortened proof!
+......
+line 530, col 71:
+rw [mul_one]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...............
+line 546, col 6:
+exact (sub_add_cancel γ β).symm
+* Try this:
+  [apply] grind only
+....
+line 558, col 45:
+rw [mul_zero, mul_one, zero_sub, neg_ne_zero]
+* Try this:
+  [apply] grind only
+shortened proof!
+...........................
+line 584, col 141:
+ring
+* Try this:
+  [apply] grind only
+....
+line 595, col 43:
+rw [mul_neg_one, mul_one, sub_neg_eq_add, add_comm, ← sub_eq_add_neg]
+* Try this:
+  [apply] grind only
+shortened proof!
+...................
+line 612, col 152:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 621, col 132:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 624, col 142:
+ring
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 634, col 4:
+intro heq
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...........
+line 647, col 152:
+ring
+* Try this:
+  [apply] grind only
+.........
+line 656, col 152:
+ring
+* Try this:
+  [apply] grind only
+.........
+line 665, col 132:
+ring
+* Try this:
+  [apply] grind only
+...
+line 668, col 132:
+ring
+* Try this:
+  [apply] grind only
+....
+line 680, col 6:
+exact absurd rfl hab
+* Try this:
+  [apply] grind only
+..
+line 682, col 8:
+exact absurd rfl hac
+* Try this:
+  [apply] grind only
+....
+line 686, col 8:
+exact absurd rfl hbc
+* Try this:
+  [apply] grind only
+...........................
+line 715, col 81:
+exact heq
+* Try this:
+  [apply] grind only
+..
+line 716, col 80:
+exact heq
+* Try this:
+  [apply] grind only
+..
+line 717, col 81:
+exact heq
+* Try this:
+  [apply] grind only
+..............
+line 733, col 121:
+ring
+* Try this:
+  [apply] grind only
+...
+line 736, col 121:
+ring
+* Try this:
+  [apply] grind only
+.
+line 741, col 59:
+norm_num
+* Try this:
+  [apply] grind only
+.......
+line 751, col 121:
+ring
+* Try this:
+  [apply] grind only
+...
+line 754, col 121:
+ring
+* Try this:
+  [apply] grind only
+.
+line 759, col 59:
+rw [mul_one]
+* Try this:
+  [apply] grind only
+shortened proof!
+......................WARNING: FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean produced errors (exit code 143)

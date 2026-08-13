@@ -1,0 +1,22 @@
+....................................................
+line 229, col 4:
+simp only [map_add, hv α β h, hw α β h]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [map_add, #1550, #81be]
+  [apply] grind only [map_add]
+  [apply] grind => instantiate only [#1550, #81be, map_add]
+...
+line 233, col 4:
+simp only [LinearMap.map_smul_of_tower, hv α β h]
+* Try these:
+  [apply] grind only [LinearMap.map_smul, #1550]
+  [apply] grind only [LinearMap.map_smul]
+  [apply] grind => instantiate only [#1550, LinearMap.map_smul]
+.......................................................................................
+line 493, col 4:
+exact IsModuleTopology.continuous_of_linearMap _
+* Try these:
+  [apply] grind only [IsModuleTopology.continuous_of_linearMap]
+  [apply] grind => instantiate only [IsModuleTopology.continuous_of_linearMap]
+.........................................

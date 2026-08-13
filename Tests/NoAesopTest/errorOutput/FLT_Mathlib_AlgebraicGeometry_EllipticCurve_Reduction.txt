@@ -1,0 +1,178 @@
+............
+line 100, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 103, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.......
+line 115, col 2:
+linear_combination
+    (-(algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+        Polynomial.X ^ 2) * e2p +
+    (-(2 * (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+            algebraMap A (Polynomial A) C.s +
+          algebraMap A (Polynomial A) W.a₁ *
+            (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄)) *
+        Polynomial.X) * e1p
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..........
+line 164, col 32:
+linear_combination (2 : k) * h2
+* Try this:
+  [apply] grind only
+..
+line 166, col 4:
+intro h0
+* Try these:
+  [apply] grind only [= map_neg, = map_mul]
+  [apply] grind =>
+    instantiate only [= map_neg]
+    instantiate only [= map_mul]
+    ring
+shortened proof!
+..__.....
+line 200, col 2:
+exact (nodePoly_map_splits_smul_iff (algebraMap R (IsLocalRing.ResidueField R)) W C).mpr hspl
+* Try this:
+
+  [apply]   smt +mono [*, nodePoly_map_splits_smul_iff]
+....
+line 210, col 2:
+exact hval
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 220, col 2:
+exact hval
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 233, col 4:
+linear_combination h1
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 234, col 79:
+norm_num
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 235, col 2:
+exact (pow_eq_zero_iff (by norm_num)).mp key.symm
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...........
+line 265, col 34:
+simp [h0] at hdeg
+* Try these:
+  [apply] grind only [= Polynomial.natDegree_zero]
+  [apply] grind => instantiate only [= Polynomial.natDegree_zero]
+..
+line 266, col 55:
+rw [hdeg]
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 270, col 39:
+rw [hab, h0, zero_mul]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 271, col 39:
+rw [hab, h0, mul_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+......
+line 277, col 62:
+lia
+* Try this:
+  [apply] grind only
+.
+line 278, col 47:
+lia
+* Try this:
+  [apply] grind only
+...............
+line 316, col 38:
+norm_num
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+................_.
+line 354, col 6:
+rw [map_mul, map_pow, Units.val_inv_eq_inv_val, map_inv₀]
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.val_inv_eq_inv_val, = map_mul, = map_pow, map_inv₀]
+  [apply] grind =>
+    instantiate only [!Units.val_inv_eq_inv_val, = map_mul]
+    instantiate only [= map_pow]
+    instantiate only [map_inv₀]
+.....
+line 359, col 46:
+norm_num
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 374, col 4:
+simp only [Units.val_inv_eq_inv_val]
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.val_inv_eq_inv_val]
+  [apply] grind =>
+    instantiate only [!Units.val_inv_eq_inv_val]
+    ring
+shortened proof!
+..........
+line 391, col 8:
+linear_combination hb₈ - D.r * hb₆
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 396, col 4:
+field
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+......
+line 405, col 8:
+linear_combination ha₂
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..........
+line 423, col 8:
+linear_combination ha₆
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+......................

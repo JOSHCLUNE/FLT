@@ -1,0 +1,306 @@
+...
+line 57, col 59:
+omega
+* Try this:
+  [apply] grind only
+.........
+line 71, col 57:
+norm_num
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 74, col 4:
+simp only [Multiset.mem_map] at h_eval
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Multiset.mem_map, #0de7, #4faa]
+  [apply] grind only [Multiset.mem_map]
+  [apply] grind =>
+    instantiate only [Multiset.mem_map]
+    cases #0de7 <;> instantiate only [#4faa]
+shortened proof!
+....
+line 81, col 40:
+norm_num
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 85, col 4:
+exact ⟨b', c', by rw [← sub_eq_zero, ← hbc']; ring⟩
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* generated tactic cannot close the goal
+  · instantiate only [#0a43]
+Initial goal
+case grind
+p : ℕ
+inst✝¹ : Fact (Nat.Prime p)
+inst✝ : Fact (p > 2)
+m : ℕ
+hm : m ≥ 1
+hpm : p ^ m ≥ 5
+a : K p
+ha : a ∈ FqInK p m
+h_card : Fintype.card (GaloisField p m) = p ^ m
+a' : GaloisField p m
+ha' : (galoisFieldRingHom p m) a' = a
+hp2 : (Polynomial.X ^ 2).degree = 2
+hq2 : (Polynomial.X ^ 2 - Polynomial.C a').degree = 2
+b' c' : GaloisField p m
+hbc' : b' ^ 2 + (c' ^ 2 - a') = 0
+h✝ : ∀ (a a_1 : GaloisField p m), ¬a ^ 2 + a_1 ^ 2 = a'
+⊢ False
+* Try these:
+  [apply] grind only [#0a43]
+  [apply] grind only
+  [apply] grind => instantiate only [#0a43]
+......
+line 92, col 4:
+rw [← map_pow, ← map_pow, ← map_add, hbc', ha']
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_add, = map_pow]
+  [apply] grind =>
+    instantiate only [= map_add]
+    instantiate only [= map_pow]
+...
+line 99, col 4:
+exact Or.inl (zero_pow two_ne_zero)
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 104, col 6:
+exact iff_of_false (fun h ↦ h_odd (Nat.even_pow.mp h).1) (by norm_num)
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Nat.even_pow, = Nat.even_iff]
+  [apply] grind => instantiate only [= Nat.even_pow, = Nat.even_iff]
+....
+line 107, col 57:
+rw [← pow_succ']
+* Try this:
+  [apply] grind only
+.....
+line 126, col 4:
+exact hbc ▸ hV_add _ _ (hV_contains_sq b hb) (hV_contains_sq c hc)
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 130, col 33:
+rw [hV_card]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 143, col 122:
+norm_num
+* Try these:
+  [apply] grind only [even_iff_two_dvd]
+  [apply] grind => instantiate only [even_iff_two_dvd]
+..
+line 144, col 132:
+norm_num
+* Try this:
+  [apply] grind only
+.......
+line 156, col 35:
+have := Fintype.card_pos (α := Sylow p G)
+* Try these:
+  [apply] grind only [Fintype.card_eq_nat_card, !Nat.card_pos]
+  [apply] grind =>
+    instantiate only [Fintype.card_eq_nat_card]
+    instantiate only [!Nat.card_pos]
+shortened proof!
+.....
+line 161, col 122:
+norm_num
+* Try these:
+  [apply] grind only [= Nat.even_iff]
+  [apply] grind => instantiate only [= Nat.even_iff]
+..
+line 163, col 64:
+omega
+* Try this:
+  [apply] grind only
+...........
+line 170, col 52:
+omega
+* Try this:
+  [apply] grind only
+..
+line 171, col 41:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 172, col 45:
+omega
+* Try these:
+  [apply] grind only [#7116]
+  [apply] grind only
+  [apply] grind => cases #7116 <;> lia
+......
+line 191, col 79:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 192, col 4:
+have h_odd : ¬ Even p := fun h ↦ ne_of_gt hp_gt_two ((Nat.Prime.even_iff Fact.out).mp h)
+* Try these:
+  [apply] grind only [Nat.prime_two, even_iff_two_dvd, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow]
+  [apply] grind =>
+    instantiate only [Nat.prime_two, even_iff_two_dvd, Fact.out, Nat.prime_dvd_prime_iff_eq, = Nat.even_pow]
+    instantiate only [even_iff_two_dvd]
+shortened proof!
+................
+line 208, col 34:
+rw [mul_comm 2 m]
+* Try this:
+  [apply] grind only
+........
+line 216, col 62:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 218, col 4:
+rw [hk, Nat.zero_mul, Nat.zero_add] at hn_p_gt1
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 219, col 4:
+rw [hk, Nat.one_mul]
+* Try this:
+  [apply] grind only
+....
+line 223, col 6:
+nlinarith only [ha, h_sub, hp_gt_one]
+* Try this:
+  [apply] grind only
+.....................
+line 249, col 86:
+positivity
+* Try this:
+  [apply] grind only
+...............................
+line 310, col 6:
+exact hS_card
+* Try this:
+  [apply] grind only
+_..............
+line 342, col 2:
+exact H x hx
+* Try these:
+  [apply] grind only [#f92d]
+  [apply] grind only
+  [apply] grind => instantiate only [#f92d]
+.....
+line 358, col 4:
+exact ⟨x + y, hV_add x y hx hy, mul_add v⁻¹ x y⟩
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_image, #c013, #7962]
+  [apply] grind only [= Set.mem_image]
+  [apply] grind =>
+    instantiate only [#c013, = Set.mem_image]
+    instantiate only [#7962]
+.
+line 359, col 4:
+exact ⟨0, hV_zero, mul_zero v⁻¹⟩
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_image, #c013, #963c]
+  [apply] grind only [= Set.mem_image]
+  [apply] grind =>
+    instantiate only [#c013, = Set.mem_image]
+    instantiate only [#963c]
+.
+line 360, col 4:
+exact ⟨v, hv, inv_mul_cancel₀ hv_ne⟩
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_image, #c013, #7c9f]
+  [apply] grind only [= Set.mem_image]
+  [apply] grind =>
+    ring
+    instantiate only [#c013, = Set.mem_image]
+    instantiate only [#7c9f]
+..
+line 362, col 4:
+exact ⟨c * x, hV_stable c hc hc' x hx, mul_left_comm v⁻¹ c x⟩
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_image, #04cb, #1dd8]
+  [apply] grind only [= Set.mem_image]
+  [apply] grind =>
+    instantiate only [#04cb, = Set.mem_image]
+    instantiate only [#1dd8]
+.........
+line 385, col 6:
+rw [mul_zero] at h1
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 388, col 124:
+exact Nat.card_pos
+* Try these:
+  [apply] grind only [!Nat.card_pos]
+  [apply] grind => instantiate only [!Nat.card_pos]
+......
+line 394, col 10:
+exact add_left_cancel hxy
+* Try this:
+  [apply] grind only
+......
+line 400, col 8:
+rw [mul_one] at h1
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 403, col 139:
+positivity
+* Try this:
+  [apply] grind only
+.......
+line 421, col 56:
+contradiction
+* Try this:
+  [apply] grind only
+.........
+line 432, col 4:
+omega
+* Try this:
+  [apply] grind only
+......................
+line 469, col 79:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 471, col 4:
+exact iff_of_false (fun h ↦ h_odd (Nat.even_pow.mp h).1) (by norm_num)
+* Try these:
+  [apply] grind only [= Nat.even_pow, = Nat.even_iff]
+  [apply] grind => instantiate only [= Nat.even_pow, = Nat.even_iff]
+...........
+line 485, col 66:
+exact hG_p
+* Try this:
+  [apply] grind only
+........
+line 495, col 2:
+rw [h_map_eq]
+* Try this:
+  [apply] grind only
+shortened proof!
+....

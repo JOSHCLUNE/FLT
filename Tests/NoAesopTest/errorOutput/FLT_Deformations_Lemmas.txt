@@ -1,0 +1,54 @@
+.....
+line 36, col 2:
+exact ⟨J, hJ, AddSubgroup.isOpen_mono (H₁ := I.toAddSubgroup) (H₂ := J.toAddSubgroup) hIJ hI⟩
+* Try this:
+
+  [apply]   duper [*, Ideal.isOpen_of_isOpen_subideal] {preprocessing := full}
+...................
+line 140, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]   smt +mono [*, *, ContinuousAlgHom.isLocalHom_toRingHom]
+...
+line 151, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]   smt +mono [*, *, ContinuousAlgHom.isLocalHom_toRingHom]
+.
+line 156, col 2:
+convert isLocalHom_equiv f
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!isLocalHom_toRingHom]
+  [apply] grind => instantiate only [!isLocalHom_toRingHom]
+shortened proof!
+.
+line 160, col 17:
+convert hx.map e.symm
+* Try these:
+  [apply] grind only [RingEquiv.toRingHom_eq_coe, !instIsLocalHomRingHomToRingHom_fLT, isUnit_of_map_unit]
+  [apply] grind =>
+    instantiate only [RingEquiv.toRingHom_eq_coe]
+    instantiate only [!instIsLocalHomRingHomToRingHom_fLT]
+    instantiate only [isUnit_of_map_unit]
+shortened proof!
+.....
+line 198, col 4:
+exact adjoin.mono _ _ _ (subset_adjoin _ _)
+* Try this:
+
+  [apply]   duper [*, subset_adjoin, adjoin_le_iff, subset_adjoin_of_subset_right] {preprocessing := full}
+.............
+line 223, col 65:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 304, col 49:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]

@@ -1,0 +1,18 @@
+............................................_.
+line 284, col 68:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 291, col 6:
+exact absurd hm (by omega)
+* Try this:
+  [apply] grind only
+.................
+line 348, col 2:
+push_cast
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+...

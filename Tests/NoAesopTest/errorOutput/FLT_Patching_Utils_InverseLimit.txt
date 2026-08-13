@@ -1,0 +1,70 @@
+.........
+line 42, col 15:
+simp [U, x.2, hu₁]
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_def` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.mem_iInter, Set.iInter_subtype, = Set.mem_preimage, #f924, #21fa]
+  [apply] grind only [Set.mem_iInter, Set.iInter_subtype, = Set.mem_preimage]
+  [apply] grind =>
+    instantiate only [Set.mem_iInter, Set.iInter_subtype]
+    instantiate only [= Set.mem_preimage, #f924, Set.mem_iInter]
+    instantiate only [#21fa]
+..
+line 43, col 20:
+simpa [U, z.2] using hz₁
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_def` annotated with `@[grind =]`
+* generated tactic cannot close the goal
+  · instantiate approx
+    instantiate only [= Finset.mem_coe, Set.mem_iInter]
+    instantiate only [#b2a9]
+    instantiate only [Set.mem_iInter]
+    instantiate only [= Set.mem_preimage]
+    cases #4ffe <;> instantiate only [#0e9b]
+Initial goal
+case grind
+ι : Type u_1
+inst✝³ : Preorder ι
+inst✝² : Nonempty ι
+inst✝¹ : IsDirected ι fun x1 x2 ↦ x1 ≥ x2
+α : ι → Type u_2
+f : (i j : ι) → i ≤ j → α i → α j
+inst✝ : (i : ι) → TopologicalSpace (α i)
+hf : ∀ (i j : ι) (h : i ≤ j), Continuous (f i j h)
+s : Set { v // ∀ (i j : ι) (h : i ≤ j), f i j h (v i) = v j }
+hs : ∀ (i : ι), Dense ((fun x ↦ ↑x i) '' s)
+t : Set ((i : ι) → α i)
+ht : IsOpen t
+x : { v // ∀ (i j : ι) (h : i ≤ j), f i j h (v i) = v j }
+hx : x ∈ Subtype.val ⁻¹' t
+I : Finset ι
+u : (a : ι) → Set (α a)
+hu₁ : ∀ a ∈ I, IsOpen (u a) ∧ ↑x a ∈ u a
+hu₂ : (↑I).pi u ⊆ t
+i : ιᵒᵈ
+hi : ∀ i_1 ∈ I, i_1 ≤ i
+U : Set (α i) := ⋂ j, f i ↑j ⋯ ⁻¹' u ↑j
+hU : IsOpen U
+z : { v // ∀ (i j : ι) (h : i ≤ j), f i j h (v i) = v j }
+hz₂ : z ∈ s
+hz₁ : (fun x ↦ ↑x i) z ∈ U
+h✝ : ↑z ∉ (↑I).pi u
+⊢ False
+* Try these:
+  [apply] grind only [= Finset.mem_coe, Set.mem_iInter, = Set.mem_preimage, #b2a9, #4ffe, #0e9b]
+  [apply] grind only [= Finset.mem_coe, Set.mem_iInter, = Set.mem_preimage]
+  [apply] grind =>
+    instantiate approx
+    instantiate only [= Finset.mem_coe, Set.mem_iInter]
+    instantiate only [#b2a9]
+    instantiate only [Set.mem_iInter]
+    instantiate only [= Set.mem_preimage]
+    cases #4ffe <;> instantiate only [#0e9b]
+...
+line 51, col 2:
+exact hg _
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.............

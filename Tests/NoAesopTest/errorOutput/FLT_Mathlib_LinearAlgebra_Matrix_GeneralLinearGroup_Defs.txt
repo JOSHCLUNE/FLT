@@ -1,0 +1,7 @@
+......__..__..
+line 56, col 49:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..__

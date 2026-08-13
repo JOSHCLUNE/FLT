@@ -1,0 +1,75 @@
+......
+line 68, col 2:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 84, col 54:
+grobner
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 89, col 30:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 91, col 34:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 92, col 56:
+linear_combination h2
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 95, col 28:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 96, col 28:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.........
+line 109, col 45:
+linear_combination hu6 - (C.u : K) ^ 2 * hu4
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.....
+line 120, col 4:
+exact E.eq_one_or_eq_negVariableChange_of_u_eq_one hc4 hc6 hu hC
+* Try this:
+
+  [apply]   duper [*, eq_one_or_eq_negVariableChange_of_u_eq_one] {preprocessing := full}
+........
+line 130, col 6:
+right
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+.
+line 131, col 6:
+left
+* Try this:
+
+  [apply]   duper [*, r_eq_zero_of_u_eq_one, negVariableChange_mul_self, negVariableChange_smul_self, VariableChange.mul_def]
+      {preprocessing := full}
+shortened proof!

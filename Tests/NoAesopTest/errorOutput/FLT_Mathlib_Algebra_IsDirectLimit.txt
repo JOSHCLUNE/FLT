@@ -1,0 +1,18 @@
+...
+line 83, col 2:
+rw [← Hg i k hik x, ← Hg (preimageIndex f g₁ (g₁ i x)) k hpk, h_eq]
+* Try these:
+  [apply] grind only [#5f16]
+  [apply] grind only
+  [apply] grind => instantiate only [#5f16]
+................_..........
+line 170, col 6:
+exact LinearMap.congr_arg (IsDirectLimit.compatibility (f := (f · · ·))
+      (g := (g₁ · ·)) i j hij x)
+* Try these:
+  [apply] grind only [isDirectLimit_iff, #4f96]
+  [apply] grind only [isDirectLimit_iff]
+  [apply] grind =>
+    instantiate only [isDirectLimit_iff]
+    instantiate only [#4f96]
+.

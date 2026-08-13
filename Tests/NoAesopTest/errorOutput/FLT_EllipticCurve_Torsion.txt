@@ -1,0 +1,13 @@
+..........
+line 71, col 4:
+simp [hn]
+* Try this:
+  [apply] grind only
+...
+line 88, col 6:
+ext
+* Try this:
+
+  [apply]   duper [*, map, map_id] {preprocessing := full}
+shortened proof!
+..

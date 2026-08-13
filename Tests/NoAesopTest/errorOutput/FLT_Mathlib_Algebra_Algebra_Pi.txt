@@ -1,0 +1,15 @@
+....
+line 48, col 37:
+simp [map_mul]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try these:
+  [apply] grind only [mul_apply, map_mul]
+  [apply] grind =>
+    instantiate only [mul_apply]
+    instantiate only [map_mul]
+............._......................

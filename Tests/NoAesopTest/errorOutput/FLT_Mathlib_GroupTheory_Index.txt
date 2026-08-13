@@ -1,0 +1,7 @@
+......
+line 42, col 28:
+rw [Subgroup.index_op]
+* Try these:
+  [apply] grind only [Subgroup.finiteIndex_iff, !Subgroup.index_op]
+  [apply] grind => instantiate only [Subgroup.finiteIndex_iff, !Subgroup.index_op]
+shortened proof!

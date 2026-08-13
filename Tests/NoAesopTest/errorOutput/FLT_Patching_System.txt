@@ -1,0 +1,38 @@
+.................
+line 72, col 27:
+rw [add_smul]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [add_smul, Submodule.add_mem]
+  [apply] grind =>
+    instantiate only [add_smul]
+    instantiate only [Submodule.add_mem]
+shortened proof!
+.
+line 73, col 23:
+exact smul_assoc a x n ▸ (I • N).smul_mem _ ‹_›
+* Try these:
+  [apply] grind only [smul_assoc, SMulMemClass.smul_mem]
+  [apply] grind =>
+    instantiate only [smul_assoc]
+    instantiate only [SMulMemClass.smul_mem]
+..............................................................................
+line 263, col 4:
+rfl
+* Try this:
+  [apply] grind only
+............._..........
+line 291, col 2:
+filter_upwards [ha] with j hj
+* Try these:
+  [apply] grind only [#e495, #0b47]
+  [apply] grind only
+  [apply] grind => cases #e495 <;> cases #0b47
+shortened proof!
+...................................................................................
+line 455, col 55:
+exact hf₀
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..

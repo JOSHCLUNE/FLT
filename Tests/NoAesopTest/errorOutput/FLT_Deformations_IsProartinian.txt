@@ -1,0 +1,13 @@
+._....
+line 50, col 2:
+rwa [isProartinian_iff_isArtinianRing]
+* Try these:
+  [apply] grind only [isProartinian_iff_isArtinianRing]
+  [apply] grind => instantiate only [isProartinian_iff_isArtinianRing]
+...........
+line 82, col 2:
+exact ⟨n, hn⟩
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..............

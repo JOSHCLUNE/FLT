@@ -1,0 +1,10 @@
+[{"tacticSucceeded": true,
+  "startLine": 33,
+  "startCol": 51,
+  "shortenedStepsCount": 0,
+  "parentName": "instCountableHeightOneSpectrumRingOfIntegers_fLT",
+  "oldText": "simp",
+  "message":
+  "Try these:\n  [apply] grind only [!Set.finite_singleton]\n  [apply] grind => instantiate only [!Set.finite_singleton]",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/NumberField/HeightOneSpectrum.lean"}]

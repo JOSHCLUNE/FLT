@@ -1,0 +1,46 @@
+.
+line 57, col 2:
+simp [baseChangeOfAlgebraMap, SemialgHom.toLinearMap_eq_coe, Algebra.ofId_apply]
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 87, col 6:
+ring
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 129, col 19:
+simp
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.inv_mul_cancel_left]
+  [apply] grind => instantiate only [!Units.inv_mul_cancel_left]
+.
+line 130, col 20:
+simp
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.mul_inv_cancel_left]
+  [apply] grind => instantiate only [!Units.mul_inv_cancel_left]
+..
+line 146, col 19:
+simp [mul_assoc]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.mul_inv_cancel_right]
+  [apply] grind => instantiate only [!Units.mul_inv_cancel_right]
+.
+line 147, col 20:
+simp [mul_assoc]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Units.mul_inv_cancel_right, Units.mul_inv_eq_iff_eq_mul]
+  [apply] grind => instantiate only [!Units.mul_inv_cancel_right, Units.mul_inv_eq_iff_eq_mul]
+.

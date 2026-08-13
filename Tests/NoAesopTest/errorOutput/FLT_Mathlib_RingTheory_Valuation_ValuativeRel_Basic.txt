@@ -1,0 +1,7 @@
+.........
+line 49, col 44:
+rwa [map_pow]
+* Try these:
+  [apply] grind only [= map_pow]
+  [apply] grind => instantiate only [= map_pow]
+.........

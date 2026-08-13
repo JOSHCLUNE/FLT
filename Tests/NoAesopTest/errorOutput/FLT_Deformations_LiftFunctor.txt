@@ -1,0 +1,8 @@
+................
+line 126, col 4:
+infer_instance
+* this parameter is redundant, environment already contains `Set.mem_toFinset` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [instIsUnramifiedAtConj]
+  [apply] grind => instantiate only [instIsUnramifiedAtConj]
+..........

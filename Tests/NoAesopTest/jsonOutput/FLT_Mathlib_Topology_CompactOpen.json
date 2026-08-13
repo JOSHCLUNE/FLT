@@ -1,0 +1,11 @@
+[{"tacticSucceeded": true,
+  "startLine": 31,
+  "startCol": 2,
+  "shortenedStepsCount": 16,
+  "parentName": "ContinuousMap.continuous_prodMk",
+  "oldText":
+  "simp_rw [continuous_iff_continuousAt, ContinuousAt, tendsto_nhds_compactOpen]",
+  "message":
+  "Try this:\n\n  [apply]   duper [*, continuous_prodMk] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Topology/CompactOpen.lean"}]

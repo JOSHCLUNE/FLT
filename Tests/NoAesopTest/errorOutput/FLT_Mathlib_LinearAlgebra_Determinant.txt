@@ -1,0 +1,13 @@
+.....................
+line 91, col 4:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...
+line 95, col 4:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+......

@@ -1,0 +1,7 @@
+.....
+line 45, col 18:
+exact H x hx m
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....

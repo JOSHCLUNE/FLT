@@ -1,0 +1,36 @@
+.......
+line 72, col 6:
+simp_all [add_lie]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [LieRingModule.add_lie, smul_add, #39c0]
+  [apply] grind only [LieRingModule.add_lie, smul_add]
+  [apply] grind =>
+    instantiate only [LieRingModule.add_lie]
+    instantiate only [#39c0, #39c0, smul_add]
+.._..
+line 85, col 4:
+exact @lieAlgebraSelfModule ..
+* Try these:
+  [apply] grind only [lieAlgebraSelfModule]
+  [apply] grind => instantiate only [lieAlgebraSelfModule]
+............._.
+line 154, col 10:
+simp_all only [add_lie, map_add]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [LieRingModule.add_lie, map_add]
+  [apply] grind =>
+    instantiate only [LieRingModule.add_lie]
+    instantiate only [map_add]
+....._.
+line 171, col 6:
+simp_all only [add_lie, map_add]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!lie_skew, map_add, LieRingModule.add_lie, LieRingModule.lie_add]
+  [apply] grind =>
+    instantiate only [!lie_skew, map_add, LieRingModule.add_lie]
+    instantiate only [map_add, LieRingModule.lie_add]
+..............

@@ -1,0 +1,141 @@
+.
+line 60, col 2:
+obtain ⟨C, hC⟩ := hg
+* Try this:
+
+  [apply]   duper [*, GrowthLE, LE.le.trans] {preprocessing := full}
+shortened proof!
+....
+line 70, col 18:
+simpa using h n
+* Try these:
+  [apply] grind only [#d1b8]
+  [apply] grind only
+  [apply] grind => instantiate only [#d1b8]
+....
+line 86, col 4:
+rw [Finset.sum_range_succ, ← Nat.add_assoc]
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Finset.sum_range_succ, #be7e, #3a8e7]
+  [apply] grind only [Finset.sum_range_succ]
+  [apply] grind =>
+    instantiate only [#be7e, Finset.sum_range_succ]
+    instantiate only [#be7e]
+    cases #3a8e7 <;> lia
+shortened proof!
+....
+line 107, col 4:
+simp
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+....
+line 116, col 4:
+simpa using this
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [= Finset.card_range]
+  [apply] grind =>
+    instantiate only [= Finset.card_range]
+    lia
+..
+line 119, col 4:
+have hne : n + n * c = n * (c + 1) := by ring
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.mul_add]
+  [apply] grind =>
+    instantiate only [Nat.mul_add]
+    lia
+shortened proof!
+..
+line 125, col 4:
+rw [add_mul, one_mul]
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 134, col 34:
+ring
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 136, col 36:
+omega
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 137, col 62:
+ring
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 151, col 12:
+intro n
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Fin.val_last` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_self_right` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.multichoose_one]
+  [apply] grind => instantiate only [Nat.multichoose_one]
+shortened proof!
+...
+line 155, col 14:
+simp [Nat.multichoose_zero_right]
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Fin.val_last` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `List.replicate_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.multichoose_zero_right]
+  [apply] grind => instantiate only [Nat.multichoose_zero_right]
+.....
+line 160, col 61:
+omega
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Exists.choose_spec` annotated with `[@[grind], @[grind]]`
+* Try this:
+  [apply] grind only
+.
+line 161, col 6:
+calc Nat.multichoose (k + 1) (n + 1) + Nat.multichoose (k + 2) n
+          ≤ (n + 2) ^ k + (n + 1) ^ (k + 1) := Nat.add_le_add (ih (n + 1)) ihn
+        _ ≤ (n + 2) ^ k + (n + 1) * (n + 2) ^ k := Nat.add_le_add_left h2 _
+        _ = (n + 2) ^ (k + 1) := by ring
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_self_right` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#6033]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#6033]
+    lia
+..
+line 168, col 49:
+omega
+* Try this:
+  [apply] grind only
+..

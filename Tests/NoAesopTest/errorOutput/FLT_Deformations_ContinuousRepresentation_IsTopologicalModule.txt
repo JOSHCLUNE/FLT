@@ -1,0 +1,6 @@
+..
+line 54, col 23:
+apply continuous_add
+* Try these:
+  [apply] grind only [continuous_add]
+  [apply] grind => instantiate only [continuous_add]

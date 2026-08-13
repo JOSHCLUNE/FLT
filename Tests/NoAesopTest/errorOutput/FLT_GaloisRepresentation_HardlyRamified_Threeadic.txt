@@ -1,0 +1,7 @@
+.
+line 37, col 42:
+decide
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Nat.odd_iff]
+  [apply] grind => instantiate only [= Nat.odd_iff]

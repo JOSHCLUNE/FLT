@@ -1,0 +1,14 @@
+....................................
+line 194, col 6:
+exact hr j
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....
+line 204, col 2:
+intro j _
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.......................

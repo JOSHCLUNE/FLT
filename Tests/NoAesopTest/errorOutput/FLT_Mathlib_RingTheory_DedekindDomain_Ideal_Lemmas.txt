@@ -1,0 +1,9 @@
+.
+line 33, col 6:
+rw [h, Ideal.comap_bot_of_injective e e.injective]
+* Try these:
+  [apply] grind only [Ideal.comap_bot_of_injective, !RingEquiv.injective]
+  [apply] grind =>
+    instantiate only [Ideal.comap_bot_of_injective]
+    instantiate only [!RingEquiv.injective]
+.......

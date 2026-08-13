@@ -1,0 +1,41 @@
+..
+line 38, col 2:
+exact lt_of_le_of_ne (Valuation.mem_integer_iff _ _ |>.1 ϖ.2) this
+* Try these:
+  [apply] grind only [!Valuation.integer.v_irreducible_lt_one]
+  [apply] grind => instantiate only [!Valuation.integer.v_irreducible_lt_one]
+..
+line 42, col 43:
+simp [h.ne_zero]
+* Try these:
+  [apply] grind only [!Valuation.integer.v_irreducible_pos]
+  [apply] grind => instantiate only [!Valuation.integer.v_irreducible_pos]
+..
+line 43, col 38:
+simp [h.ne_zero]
+* Try this:
+  [apply] grind only
+.
+line 44, col 2:
+omega
+* Try this:
+  [apply] grind only
+.........
+line 66, col 4:
+exact Finite.of_fintype (↥𝒪[K] ⧸ ⊤)
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Finite.of_subsingleton]
+  [apply] grind => instantiate only [Finite.of_subsingleton]
+..
+line 68, col 67:
+simp
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....................
+line 116, col 4:
+simpa using hi
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

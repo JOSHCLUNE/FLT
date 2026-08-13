@@ -1,0 +1,189 @@
+.....
+line 43, col 88:
+positivity
+* Try this:
+  [apply] grind only
+.........
+line 51, col 14:
+field_simp
+* Try these:
+  [apply] grind only [!inv_lt_one₀, !inv_pos_of_pos, inv_le_comm₀, ne_of_gt]
+  [apply] grind =>
+    instantiate only [!inv_lt_one₀, !inv_pos_of_pos, inv_le_comm₀, ne_of_gt]
+    instantiate only [ne_of_gt]
+    ring
+shortened proof!
+...
+line 56, col 30:
+simp
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Nat.cast_pos', = Set.mem_Ioi]
+  [apply] grind => instantiate only [!Nat.cast_pos', = Set.mem_Ioi]
+.
+line 56, col 40:
+simp only [Set.mem_Ioi]
+* Try these:
+  [apply] grind only [= Set.mem_Ioi]
+  [apply] grind => instantiate only [= Set.mem_Ioi]
+shortened proof!
+....
+line 61, col 39:
+simp
+* this parameter is redundant, environment already contains `Finset.mem_Ioc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.subset_def, Set.subset_compl_singleton_iff, = Set.mem_Ioi]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, Set.subset_compl_singleton_iff]
+    instantiate only [= Set.mem_Ioi]
+..
+line 63, col 4:
+simp only [Set.mem_Ioi, ne_eq]
+* Try these:
+  [apply] grind only [= Set.mem_Ioi]
+  [apply] grind =>
+    instantiate only [= Set.mem_Ioi]
+    linarith
+shortened proof!
+.......
+line 74, col 81:
+linarith
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+...
+line 77, col 4:
+ring
+* Try this:
+  [apply] grind only
+....
+line 85, col 26:
+positivity
+* Try this:
+  [apply] grind only
+.
+line 85, col 42:
+positivity
+* Try this:
+
+  [apply]   duper [*, Nat.cast_nonneg, Nat.cast_nonpos] {preprocessing := full}
+.
+line 85, col 56:
+field_simp
+* this parameter is redundant, environment already contains `Finset.mem_Ioc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.cast_eq_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_eq_zero]
+    ring
+shortened proof!
+...
+line 87, col 37:
+positivity
+* Try these:
+  [apply] grind only [Nat.cast_eq_zero]
+  [apply] grind => instantiate only [Nat.cast_eq_zero]
+.
+line 89, col 8:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_add_one_ne_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_add_one_ne_zero]
+    ring
+shortened proof!
+..
+line 91, col 71:
+simp
+* this parameter is redundant, environment already contains `Set.mem_Icc` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Nat.one_le_cast, !Nat.one_lt_cast]
+  [apply] grind => instantiate only [!Nat.one_le_cast, !Nat.one_lt_cast]
+shortened proof!
+..
+line 96, col 63:
+positivity
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Nat.one_le_cast, Stirling.stirlingSeq'_bounded_by_pos_constant, !one_le_pow₀]
+  [apply] grind =>
+    instantiate only [!Nat.one_le_cast, Stirling.stirlingSeq'_bounded_by_pos_constant, !one_le_pow₀]
+    linarith
+..
+line 98, col 58:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_ne_zero, Nat.one_le_iff_ne_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_ne_zero, Nat.one_le_iff_ne_zero]
+    ring
+..
+line 102, col 10:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_add_one_ne_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_add_one_ne_zero]
+    ring
+..
+line 104, col 60:
+positivity
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 104, col 76:
+positivity
+* Try these:
+  [apply] grind only [!Nat.factorial_pos, !Nat.cast_pos']
+  [apply] grind => instantiate only [!Nat.factorial_pos, !Nat.cast_pos']
+.....
+line 117, col 56:
+omega
+* Try this:
+
+  [apply]   duper [*, Nat.le_one_iff_eq_zero_or_eq_one] {preprocessing := full}
+.....
+line 123, col 58:
+ring_nf
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....._..
+line 134, col 2:
+exact h₁
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....._..
+line 144, col 2:
+exact h₁
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+....._...._.
+line 159, col 2:
+exact h₁.trans h₂
+* Try this:
+  [apply] grind only
+....._...._.
+line 174, col 2:
+exact h₂.trans h₁
+* Try this:
+  [apply] grind only
+....
+line 181, col 29:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 189, col 28:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.

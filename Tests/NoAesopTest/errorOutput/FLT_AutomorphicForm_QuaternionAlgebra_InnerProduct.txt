@@ -1,0 +1,99 @@
+....
+line 51, col 42:
+simp
+* Try these:
+  [apply] grind only [norm_nonneg]
+  [apply] grind => instantiate only [norm_nonneg]
+.
+line 51, col 52:
+simp
+* Try this:
+  [apply] grind only
+..................
+line 88, col 2:
+ring
+* Try this:
+  [apply] grind only
+....................._...........................................................................................................
+line 341, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 345, col 2:
+rw [← smul_le_smul_iff (g := g)]
+* Try this:
+
+  [apply]   duper [*, smul_le_smul_iff, smul_eq_iff_eq_inv_smul] {preprocessing := full}
+shortened proof!
+...
+line 356, col 2:
+simp
+* Try this:
+
+  [apply]   duper [*, le_sup_left, inv_smul_smul, sup_le_iff, le_sup_right] {preprocessing := full}
+...........................................
+line 422, col 89:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.........................
+line 506, col 16:
+exact mem _ hx
+* Try these:
+  [apply] grind only [#0e27]
+  [apply] grind only
+  [apply] grind => instantiate only [#0e27]
+...................................
+line 556, col 24:
+simp
+* Try this:
+  [apply] grind only
+.......
+line 561, col 27:
+simp
+* Try this:
+  [apply] grind only
+.......
+line 574, col 10:
+simp [← hf₁]
+* this parameter is redundant, environment already contains `DFinsupp.mem_support_toFun` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Equiv.refl_apply, #0053]
+  [apply] grind only [= Equiv.refl_apply]
+  [apply] grind => instantiate only [#0053, = Equiv.refl_apply]
+.........................
+line 594, col 8:
+generalize_proofs H
+* this parameter is redundant, environment already contains `DFinsupp.mem_support_toFun` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `DFinsupp.single_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `DFinsupp.mk_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Exists.choose_spec]
+  [apply] grind => instantiate only [usr Exists.choose_spec]
+shortened proof!
+................................................................................_......_.....
+line 796, col 27:
+grind
+* Try these:
+  [apply] grind only [#1465]
+  [apply] grind only
+  [apply] grind => instantiate only [#1465]
+...................................
+line 824, col 27:
+grind
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 833, col 72:
+simp
+* Try these:
+  [apply] grind only [Algebra.mem_top]
+  [apply] grind => instantiate only [Algebra.mem_top]
+.....................................................

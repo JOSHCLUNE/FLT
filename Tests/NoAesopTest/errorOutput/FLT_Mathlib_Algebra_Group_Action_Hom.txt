@@ -1,0 +1,7 @@
+..
+line 27, col 45:
+simp
+* Try this:
+
+  [apply]   smt +mono [*, smul_algebraMap, MulSemiringAction.toRingHom_apply]
+............................

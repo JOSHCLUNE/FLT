@@ -1,0 +1,23 @@
+.
+line 44, col 25:
+ext x
+* this parameter is redundant, environment already contains `ContinuousLinearMap.comp_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `add_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [ContinuousLinearMap.add_comp, ContinuousLinearMap.comp_add]
+  [apply] grind =>
+    instantiate only [ContinuousLinearMap.add_comp]
+    instantiate only [ContinuousLinearMap.comp_add]
+shortened proof!
+.
+line 45, col 26:
+ext x
+* this parameter is redundant, environment already contains `ContinuousLinearMap.comp_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `smul_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [ContinuousLinearMap.smul_comp, ContinuousLinearMap.comp_smulₛₗ]
+  [apply] grind =>
+    instantiate only [ContinuousLinearMap.smul_comp]
+    instantiate only [ContinuousLinearMap.comp_smulₛₗ]
+shortened proof!
+...

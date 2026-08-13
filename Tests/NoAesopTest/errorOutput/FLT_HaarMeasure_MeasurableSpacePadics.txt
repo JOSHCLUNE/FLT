@@ -1,0 +1,8 @@
+....
+line 39, col 19:
+simp
+* this parameter is redundant, environment already contains `Set.mem_setOf_eq` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [!norm_zero, Set.mem_setOf_eq]
+  [apply] grind => instantiate only [!norm_zero, Set.mem_setOf_eq]
+..............
