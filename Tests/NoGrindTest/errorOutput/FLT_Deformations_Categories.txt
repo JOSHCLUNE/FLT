@@ -1,0 +1,13 @@
+.........................
+line 245, col 6:
+exact isOpen_maximalIdeal_of_isProartinian
+* Try this:
+
+  [apply]   apply isOpen_maximalIdeal_of_isProartinian
+........
+line 265, col 27:
+rfl
+* Try this:
+
+  [apply]   rfl
+...

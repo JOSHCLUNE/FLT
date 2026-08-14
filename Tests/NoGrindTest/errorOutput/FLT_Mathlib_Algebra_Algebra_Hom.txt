@@ -1,0 +1,30 @@
+..
+line 45, col 4:
+cases g
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, DFunLike.coe_fn_eq]
+shortened proof!
+..
+line 102, col 2:
+rw [Algebra.smul_def, mul_one, map_one] at this
+* Try this:
+
+  [apply]   duper [*, Algebra.algebraMap_eq_smul_one, map_one, Algebra.smul_def', map_smul] {preprocessing := full}
+shortened proof!
+.
+line 129, col 22:
+simp
+* Try this:
+
+  [apply]   simp_all only [toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, toRingHom_toMonoidHom, OneHom.toFun_eq_coe,
+      MonoidHom.toOneHom_coe, MonoidHom.coe_coe, map_smul, RingHom.id_apply]
+.
+line 158, col 22:
+simp
+* Try this:
+
+  [apply]   simp_all only [RingHom.toMonoidHom_eq_coe, OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe,
+      RingHom.prod_apply, RingHom.coe_mk, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, MonoidHom.coe_mk, OneHom.coe_mk,
+      LinearMap.map_smulₛₗ, Prod.smul_mk]
+..

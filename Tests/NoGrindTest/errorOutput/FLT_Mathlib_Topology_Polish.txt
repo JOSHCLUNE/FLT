@@ -1,0 +1,36 @@
+....................
+line 49, col 6:
+grind [closure_mono]
+* Try this:
+
+  [apply]     subst hy s_preim_t
+    simp_all only [mem_preimage]
+    apply closure_mono
+    simp_all only [image_subset_iff, Std.le_refl]
+.......
+line 59, col 10:
+exact IsCompact.image s_cc hf
+* Try this:
+
+  [apply]     subst hy s_preim_t
+    simp_all only [mem_preimage]
+    apply IsCompact.image
+    · simp_all only
+    · simp_all only
+.
+line 60, col 8:
+rw [IsClosed.closure_eq this]
+* Try this:
+
+  [apply]     subst hy s_preim_t
+    simp_all only [mem_preimage, IsClosed.closure_eq, image_subset_iff, preimage_range, subset_univ]
+shortened proof!
+.
+line 62, col 4:
+rw [← hy]
+* Try this:
+
+  [apply]     subst hy s_preim_t
+    simp_all only [mem_preimage]
+shortened proof!
+..........

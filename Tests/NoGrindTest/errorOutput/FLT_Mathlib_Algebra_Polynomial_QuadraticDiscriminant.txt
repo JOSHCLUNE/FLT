@@ -1,0 +1,55 @@
+...............
+line 55, col 77:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, derivative_add, derivative_mul, derivative_C, zero_mul, derivative_X_pow_succ, Nat.cast_one,
+      map_add, map_one, pow_one, zero_add, derivative_X, mul_one, add_zero, Order.lt_two_iff, zero_le, P]
+..............
+line 74, col 49:
+simp [degree_eq_natDegree hp0, hdeg]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, natDegree_add_C, not_false_eq_true, degree_quadratic, OfNat.ofNat_ne_zero, p]
+.
+line 75, col 4:
+exact ⟨x, by simpa [hp] using hx⟩
+* Try this:
+
+  [apply]     simp_all only [ne_eq, natDegree_add_C, eval_add, eval_mul, eval_C, eval_pow, eval_X, p]
+    apply Exists.intro
+    · exact hx
+.
+line 76, col 4:
+rintro ⟨x, hx⟩
+* Try this:
+
+  [apply]     intro a_1
+    simp_all only [ne_eq, natDegree_add_C, p]
+    obtain ⟨w, h⟩ := a_1
+    apply Polynomial.Splits.of_degree_eq_two
+    · simp_all only [ne_eq, not_false_eq_true, degree_quadratic]
+    · simp_all only [eval_add, eval_mul, eval_C, eval_pow, eval_X]
+      exact h
+shortened proof!
+......
+line 93, col 19:
+linear_combination hx
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    duper [*, pow_two] {preprocessing := full}
+.
+line 93, col 44:
+ring
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply pow_two
+...
+line 96, col 4:
+exact ⟨x, by linear_combination hx⟩
+* Try this:
+
+  [apply]   duper [*, pow_two] {preprocessing := full}
+..........

@@ -1,0 +1,27 @@
+..
+line 60, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   rfl
+....
+line 109, col 26:
+simp [IsBiscalar.commutes]
+* Try this:
+
+  [apply]     simp_all only [toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, toRingHom_toMonoidHom, OneHom.toFun_eq_coe,
+      MonoidHom.toOneHom_coe, MonoidHom.coe_coe]
+    apply IsBiscalar.commutes
+.
+line 113, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   rfl
+...
+line 125, col 27:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, OneHom.toFun_eq_coe,
+      MonoidHom.toOneHom_coe, MonoidHom.coe_coe, AlgHom.commutes]

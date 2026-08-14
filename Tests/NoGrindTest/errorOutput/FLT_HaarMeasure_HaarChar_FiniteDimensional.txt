@@ -1,0 +1,68 @@
+....
+line 71, col 49:
+rw [feq, LinearMap.det_toLin', det_diagonal]
+* Try this:
+
+  [apply]   simp_all only [LinearMap.toMatrix'_toLin', LinearMap.det_toLin', det_diagonal]
+.........
+line 80, col 94:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 83, col 4:
+apply Units.val_inj.1
+* Try this:
+
+  [apply]     simp_all only [LinearMap.toMatrix'_toLin', LinearMap.det_toLin', det_diagonal]
+    ext : 1
+    simp_all only [LinearEquiv.coe_det, LinearMap.det_toLin', det_diagonal, Units.coe_prod, IsUnit.unit_spec]
+shortened proof!
+..
+line 86, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [LinearMap.toMatrix'_toLin', LinearMap.det_toLin', det_diagonal]
+    rfl
+..............................
+line 149, col 67:
+rfl
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearEquiv.toContinuousAddEquiv_coe, toContinuousLinearEquiv_toLin_coe, DFunLike.coe_fn_eq,
+      e, b]
+    rfl
+....
+line 154, col 4:
+rw [lhs_eq_one, rhs_eq_one]
+* Try this:
+
+  [apply]   simp_all only [toContinuousLinearEquiv_toLinearEquiv, e, b]
+...
+line 157, col 51:
+ext
+* Try this:
+
+  [apply]     simp_all only [toContinuousLinearEquiv_toLinearEquiv, forall_true_left, det_mul, P, b]
+    ext : 1
+    simp_all only [IsUnit.unit_spec, Units.val_mul]
+shortened proof!
+........
+line 172, col 6:
+simp only [ABe, Ae, Be, toContinuousLinearEquiv_toLinearEquiv,
+        LinearEquiv.det_toLinearEquiv, hAB',
+        MulHomClass.map_mul ringHaarChar hA.unit hB.unit ]
+* Try this:
+
+  [apply]   simp_all only [toContinuousLinearEquiv_toLinearEquiv, forall_true_left, det_mul,
+      ContinuousLinearEquiv.trans_toLinearEquiv, LinearEquiv.det_trans, map_mul, P, b, ABe, Be, Ae]
+.......................
+line 226, col 2:
+simp [h_eq, ρ', f, this, this₂]
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearEquiv.trans_toLinearEquiv, ContinuousLinearEquiv.toLinearEquiv_symm,
+      LinearEquiv.det_conj, ι, ec, e, h_eq, ρ', f]
+....

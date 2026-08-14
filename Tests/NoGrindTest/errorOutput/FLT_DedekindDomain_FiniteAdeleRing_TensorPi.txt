@@ -1,0 +1,101 @@
+.......
+line 45, col 4:
+simp only [← hS, f, Fintype.range_linearCombination, gens, (Surjective.range_comp
+    (Finset.equivFin S).symm.surjective Subtype.val), Subtype.range_val_subtype, Finset.setOf_mem]
+* Try this:
+
+  [apply]     subst hS
+    simp_all only [Fintype.range_linearCombination, EquivLike.range_comp, Subtype.range_coe_subtype, SetLike.setOf_mem_eq,
+      m, f, gens]
+..
+line 48, col 4:
+simp only [g, LinearEquiv.ker_comp, Submodule.ker_mkQ]
+* Try this:
+
+  [apply]     subst hS
+    simp_all only [Fintype.range_linearCombination, EquivLike.range_comp, Subtype.range_coe_subtype, SetLike.setOf_mem_eq,
+      LinearEquiv.ker_comp, Submodule.ker_mkQ, m, f, gens, g]
+...
+line 51, col 4:
+simp only [g, LinearMap.coe_comp, LinearEquiv.coe_coe, EquivLike.comp_surjective,
+      Submodule.mkQ_surjective]
+* Try this:
+
+  [apply]     subst hS
+    simp_all only [Fintype.range_linearCombination, EquivLike.range_comp, Subtype.range_coe_subtype, SetLike.setOf_mem_eq,
+      LinearEquiv.ker_comp, Submodule.ker_mkQ, LinearMap.coe_comp, LinearEquiv.coe_coe, EquivLike.comp_surjective, m, f,
+      gens, g]
+    apply Submodule.mkQ_surjective
+...........
+line 77, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Finset.mem_univ]
+    rfl
+..._....
+line 86, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, of_eq_same]
+....._....
+line 96, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, of_eq_same]
+......
+line 154, col 66:
+simp [m']
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.symm_apply_apply, m']
+...
+line 157, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [LinearEquiv.symm_apply_apply, zero_tmul, map_zero, Module.Basis.repr_symm_apply, m']
+    rfl
+shortened proof!
+........
+line 167, col 94:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.symm_apply_apply, zero_smul, Finsupp.single_zero, m']
+.
+line 169, col 35:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.symm_apply_apply, zero_smul, Finsupp.single_zero, m']
+...
+line 174, col 4:
+rw [ite_apply, Pi.zero_apply, Pi.smul_apply]
+* Try this:
+
+  [apply]     simp_all only [LinearEquiv.symm_apply_apply, m']
+    split
+    next h =>
+      subst h
+      simp_all only [Pi.smul_apply]
+    next h => simp_all only [Pi.zero_apply]
+...................
+line 224, col 4:
+ext i
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+...................................
+line 270, col 2:
+exact this
+* Try this:
+
+  [apply]     simp_all only [LinearMap.zero_comp, LinearMap.identityMapOfZeroModuleIsZero, LinearMap.comp_zero,
+      LinearMap.exact_zero_iff_surjective, LinearEquiv.coe_coe, Multiset.bijective_iff_map_univ_eq_univ,
+      Finset.univ_unique, PUnit.default_eq_unit, Finset.singleton_val, LinearMap.zero_apply, PUnit.zero_eq,
+      Multiset.map_singleton, g₁, i₁, i₂, f₁, g₂, i₃, f₂, g₃, i₄, f₃, g₄, i₅, f₄]
+    exact this

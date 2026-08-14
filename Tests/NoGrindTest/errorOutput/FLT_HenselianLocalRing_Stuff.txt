@@ -1,0 +1,30 @@
+...
+line 31, col 19:
+simp
+* Try this:
+
+  [apply]     simp_all only [one_smul]
+    rfl
+shortened proof!
+.
+line 33, col 6:
+simp [he.eq, ← mul_smul, mul_comm]
+* Try this:
+
+  [apply]   duper [*, IsIdempotentElem, Algebra.smul_def, smul_mul_smul_comm] {preprocessing := full}
+.
+line 34, col 20:
+simp
+* Try this:
+
+  [apply]     simp_all only [zero_smul]
+    rfl
+shortened proof!
+........
+line 63, col 2:
+constructor
+* Try this:
+
+  [apply]   apply Ideal.comap_liesOver
+shortened proof!
+.

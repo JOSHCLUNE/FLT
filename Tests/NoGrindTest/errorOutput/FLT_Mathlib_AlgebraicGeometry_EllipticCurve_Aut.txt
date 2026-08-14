@@ -1,0 +1,69 @@
+...................
+line 89, col 6:
+have ht : C.t = 0 := by grobner
+* Try this:
+
+  [apply]     simp_all only [ne_eq, mul_zero, add_zero, zero_mul, sub_zero, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow,
+      sub_eq_self, mul_eq_zero, or_false]
+    apply Or.inl
+    ext : 1
+    · ext : 1
+      simp_all only [Units.val_one]
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+shortened proof!
+........
+line 95, col 4:
+have hs : C.s = 0 := by grobner
+* Try this:
+
+  [apply]     simp_all only [ne_eq, add_eq_left, mul_eq_zero, false_or, zero_mul, sub_zero, mul_zero, add_zero, OfNat.ofNat_ne_zero,
+      not_false_eq_true, zero_pow]
+    apply Or.inl
+    ext : 1
+    · ext : 1
+      simp_all only [Units.val_one]
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+shortened proof!
+..........
+line 111, col 4:
+exact .inl (Units.val_eq_one.mp h)
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_pow, mul_one, Units.val_eq_one, true_or]
+.
+line 112, col 4:
+exact .inr (Units.ext h)
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_neg, mul_one, neg_neg, Units.val_eq_neg_one, or_true]
+..
+line 120, col 4:
+exact E.eq_one_or_eq_negVariableChange_of_u_eq_one hc4 hc6 hu hC
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply WeierstrassCurve.eq_one_or_eq_negVariableChange_of_u_eq_one
+    · simp_all only [ne_eq, not_false_eq_true]
+    · simp_all only [ne_eq, not_false_eq_true]
+    · simp_all only
+    · simp_all only
+..........
+line 131, col 6:
+left
+* Try this:
+
+  [apply]   duper [*, r_eq_zero_of_u_eq_one, negVariableChange_mul_self, negVariableChange_smul_self, VariableChange.mul_def]
+      {preprocessing := full}
+shortened proof!

@@ -1,0 +1,20 @@
+..
+line 26, col 4:
+exact .zero
+* Try this:
+
+  [apply]   simp_all only [natDegree_zero, zero_le, IsRoot.def, eval_zero, Splits.zero]
+...
+line 28, col 38:
+rw [hq, h, mul_zero]
+* Try this:
+
+  [apply]     subst hq h
+    simp_all only [mul_zero, natDegree_zero, zero_le, IsRoot.def, eval_zero, ne_eq, not_true_eq_false]
+...
+line 31, col 4:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+..

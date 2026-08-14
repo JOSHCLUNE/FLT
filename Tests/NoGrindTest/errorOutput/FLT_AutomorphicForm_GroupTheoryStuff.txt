@@ -1,0 +1,223 @@
+.......
+line 49, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 50, col 36:
+simp [ha'.dvd]
+* Try this:
+
+  [apply]   simp_all only [isUnit_iff_eq_one, ne_eq, one_ne_zero, not_false_eq_true, mul_one, coprime_one_left_eq_true, pow_zero,
+      dvd_refl, and_self]
+....
+line 54, col 33:
+ring
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 55, col 29:
+ring
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 86, col 54:
+simp
+* Try this:
+
+  [apply]     simp_all only [bot_subgroupOf, finiteIndex_bot_iff]
+    rfl
+shortened proof!
+....
+line 98, col 59:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [mem_subgroupOf, MonoidHom.mem_ker, MonoidHom.coe_comp, coe_subtype, Function.comp_apply]
+...
+line 106, col 71:
+aesop
+* Try this:
+
+  [apply]     intro x
+    simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, mem_map]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only
+.....
+line 128, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [Prod.fst_one, OneMemClass.coe_one, Prod.snd_one, mul_one, mk_eq_one]
+......
+line 138, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, prodToSupOfRight_apply_coe, OneMemClass.coe_one,
+      mul_one]
+.
+line 138, col 75:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, prodToSupOfRight_apply_coe, OneMemClass.coe_one,
+      one_mul]
+.
+line 160, col 26:
+rw [leftRel_apply, mem_ker, φ.map_mul,
+      ← h, ← map_mul, inv_mul_cancel, map_one]
+* Try this:
+
+  [apply]   duper [*, leftRel_eq, eq_iff] {preprocessing := full}
+.......
+line 173, col 66:
+simpa
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.ker_mk']
+...
+line 177, col 4:
+simp_all
+* Try this:
+
+  [apply]     subst hK₁' hφ
+    simp_all only [relIndex_bot_left, one_pow, MonoidHom.ker_one, le_top]
+..
+line 178, col 53:
+simp_all
+* Try this:
+
+  [apply]     subst hK₁'
+    simp_all only [Nat.coprime_zero_right, bot_le, relIndex_bot_left, pow_one]
+..
+line 179, col 29:
+simpa [hK₁'] using! hK₁K₂
+* Try this:
+
+  [apply]     subst hK₁'
+    simp_all only [relIndex_bot_left, bot_le, isFiniteRelIndex_bot_iff]
+    exact hK₁K₂
+.................
+line 252, col 54:
+simp [mem_ker.mp hx]
+* Try this:
+
+  [apply]   simp_all only [mem_ker, coe_comp, Function.comp_apply, map_one]
+.
+line 254, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext x : 2
+    simp_all only [coe_comp, Function.comp_apply, liftOfRightInverseAux'_comp_apply]
+shortened proof!
+.....
+line 296, col 76:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [mem_ker, coe_comp, Function.comp_apply, map_one]
+.
+line 300, col 2:
+rw [← toConjAct_inv, toConjAct_inv_smul]
+* Try this:
+
+  [apply]   duper [*, smul_def, toConjAct_ofConjAct, ofConjAct_inv, mul_inv_eq_iff_eq_mul, inv_mul_cancel_left]
+      {preprocessing := full}
+...
+line 310, col 2:
+rw [← ((Group.isUnit x).map f).mul_left_inj, iff_comm, ← ((Group.isUnit y).map f).mul_right_inj]
+* Try this:
+
+  [apply]   duper [*, map_inv_eq_iff, inv_eq_iff_eq_inv] {preprocessing := full}
+shortened proof!
+.......
+line 318, col 50:
+simp
+* Try this:
+
+  [apply]   simp_all only [coeHom_apply, Submonoid.mk_mul_mk, mul_inv, Submonoid.mk_eq_one]
+.
+line 318, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [coeHom_apply, Submonoid.mk_mul_mk, inv_mul, Submonoid.mk_eq_one]
+..
+line 327, col 25:
+ext
+* Try this:
+
+  [apply]     simp_all only [smul_eq_mul]
+    ext : 1
+    simp_all only [Units.val_mul, Units.val_smul]
+    apply smul_mul_assoc
+shortened proof!
+.
+line 335, col 2:
+simp [Group.dvd_natCard_iff_of_prime, hp]
+* Try this:
+
+  [apply]   duper [*, dvd_natCard_iff_of_prime, orderOf_dvd_natCard] {preprocessing := full}
+...
+line 347, col 65:
+grind
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      apply Exists.intro
+      · apply And.intro
+        on_goal 2 => apply And.intro
+        on_goal 3 => { exact right
+        }
+        · simp_all only
+        · simp_all only [not_false_eq_true]
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      apply Exists.intro
+      · apply And.intro
+        on_goal 2 => apply And.intro
+        on_goal 3 => { exact right
+        }
+        · simp_all only [not_false_eq_true]
+        · simp_all only
+...
+line 354, col 89:
+simp
+* Try this:
+
+  [apply]   simp_all only [MulOpposite.unop_mul, coe_mul, Int.reduceNeg, zpow_neg, zpow_one, mul_inv_rev, inv_mul_cancel_right,
+      inv_mul_cancel, one_mem]
+.X..
+line 364, col 2:
+exact mul_mem (zpow_mem hm _) (zpow_mem hn _)
+* Try this:
+
+  [apply]     apply MulMemClass.mul_mem
+    · apply zpow_mem
+      simp_all only
+    · apply zpow_mem
+      simp_all only
+...
+line 377, col 33:
+simpa using H
+* Try this:
+
+  [apply]   simp_all only [Units.isUnit_units_mul]
+..

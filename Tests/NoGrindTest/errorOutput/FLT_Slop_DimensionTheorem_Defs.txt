@@ -1,0 +1,42 @@
+....
+line 99, col 13:
+_
+* Try this:
+
+  [apply]   duper [*, Ideal.radical_eq_sInf, Ideal.IsRadical.radical_le_iff, Ideal.le_radical, Ideal.IsPrime.radical]
+      {preprocessing := full}
+shortened proof!
+...
+line 108, col 4:
+rw [← isNoetherianRing_iff]
+* Try this:
+
+  [apply]   apply Ideal.Quotient.isNoetherianRing
+shortened proof!
+..
+line 110, col 8:
+rw [Ideal.Quotient.algebraMap_eq]
+* Try this:
+
+  [apply]     simp_all only [Ideal.Quotient.algebraMap_eq]
+    apply Ideal.Quotient.mk_surjective
+shortened proof!
+...
+line 123, col 2:
+rw [I.radical_pow hn, h]
+* Try this:
+
+  [apply]   duper [*, Ideal.radical_pow] {preprocessing := full}
+..
+line 137, col 4:
+simpa using hIJ
+* Try this:
+
+  [apply]   simp_all only [Submodule.comap_id]
+.........
+line 163, col 4:
+simpa using hIJ
+* Try this:
+
+  [apply]   simp_all only [Submodule.comap_id]
+......

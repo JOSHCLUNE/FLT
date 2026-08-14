@@ -1,0 +1,76 @@
+.
+line 28, col 22:
+ext
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe, OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe]
+    ext x : 1
+    simp_all only [RingHom.pi_apply, RingHom.coe_mk, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, MonoidHom.coe_mk,
+      OneHom.coe_mk, LinearMap.map_smulₛₗ, smul_apply]
+shortened proof!
+.
+line 47, col 17:
+simp [Pi.one_def]
+* Try this:
+
+  [apply]     simp_all only [one_apply, map_one]
+    rfl
+.
+line 48, col 37:
+simp [map_mul]
+* Try this:
+
+  [apply]   simp_all only [mul_apply, map_mul]
+.
+line 49, col 18:
+simp [Pi.zero_def]
+* Try this:
+
+  [apply]     simp_all only [zero_apply, map_zero]
+    rfl
+.
+line 50, col 37:
+simp [map_add]
+* Try this:
+
+  [apply]   simp_all only [add_apply, map_add]
+.......X.X..._..
+line 131, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [MulHom.toFun_eq_coe, NonUnitalRingHom.coe_toMulHom, NonUnitalRingHom.comp_apply,
+      NonUnitalRingHom.single_apply, toNonUnitalRingHom_apply, single_piIndex_one]
+.
+line 141, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext i x : 1
+    simp_all only [RingHom.coe_comp, Function.comp_apply, evalRingHom_apply, RingHom.projPiIndex_apply,
+      RingHom.single_piIndex]
+shortened proof!
+...........
+line 150, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    obtain ⟨fst, snd⟩ := f
+    simp_all only
+    ext i x : 1
+    simp_all only [RingHom.coe_comp, Function.comp_apply, evalRingHom_apply, RingHom.projPiIndex_apply,
+      RingHom.single_piIndex]
+shortened proof!
+.
+line 163, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, AlgHom.coe_mk, Function.comp_apply, evalAlgHom_apply, RingHom.projPiIndex_apply,
+      RingHom.single_piIndex, RingHom.coe_coe]
+shortened proof!
+....

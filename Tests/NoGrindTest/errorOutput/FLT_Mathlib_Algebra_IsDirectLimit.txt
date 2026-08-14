@@ -1,0 +1,7 @@
+.............X.X....._........
+line 165, col 2:
+exact IsDirectLimit.lift_of (f · · ·) (g₁ · ·) (g₂ · ·) Hg x
+* Try this:
+
+  [apply]   simp_all only [implies_true, IsDirectLimit.lift_of]
+...

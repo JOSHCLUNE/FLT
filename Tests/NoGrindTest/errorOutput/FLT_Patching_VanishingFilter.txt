@@ -1,0 +1,59 @@
+.......
+line 45, col 4:
+simp only [Set.mem_inter_iff, ite_and, Pi.add_apply,
+      Pi.sub_apply, Pi.mul_apply, mul_ite, mul_zero, mul_one]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_setOf_eq, Set.mem_inter_iff, Pi.add_apply, Pi.sub_apply, Pi.mul_apply, mul_ite, mul_zero,
+      mul_one]
+    split
+    next h => simp_all only [Set.mem_inter_iff, ↓reduceIte, sub_self, add_zero]
+    next h =>
+      simp_all only [Set.mem_inter_iff, not_and]
+      split
+      next h_1 => simp_all only [not_true_eq_false, imp_false, ↓reduceIte, sub_zero, zero_add]
+      next h_1 => simp_all only [not_false_eq_true, implies_true, sub_self, add_zero]
+shortened proof!
+.......
+line 66, col 6:
+ext i
+* Try this:
+
+  [apply]     simp_all only [ite_not]
+    ext x : 1
+    simp_all only [Pi.mul_apply, mul_ite, ↓reduceIte, mul_zero, mul_one, Pi.zero_apply, ite_eq_left_iff, implies_true]
+shortened proof!
+....
+line 73, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [ite_not]
+    ext x : 1
+    simp_all only [Pi.one_apply, Pi.add_apply]
+    split
+    next h => simp_all only [zero_add]
+    next h => simp_all only [add_zero]
+shortened proof!
+....
+line 89, col 4:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Pi.mul_apply, dite_mul, IsUnit.val_inv_mul, zero_mul, dite_eq_ite]
+......
+line 98, col 4:
+aesop
+* Try this:
+
+  [apply]     simp_all only [mem_eventuallyProd, Pi.bot_apply, Submodule.mem_bot, Set.mem_setOf_eq]
+    ext x : 1
+    simp_all only [Submodule.mem_bot, Pi.mul_apply, mul_ite, mul_zero, mul_one, right_eq_ite_iff, implies_true]
+....
+line 102, col 4:
+aesop
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Pi.bot_apply, ↓reduceIte, zero_mem]
+...

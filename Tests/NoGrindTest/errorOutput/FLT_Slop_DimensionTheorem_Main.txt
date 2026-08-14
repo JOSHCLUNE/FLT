@@ -1,0 +1,14 @@
+...
+line 70, col 8:
+exact_mod_cast Nat.cast_le.mpr (growthDeg_le_minGenPrimary R)
+* Try this:
+
+  [apply]     simp_all only [Nat.cast_le]
+    apply DimensionTheorem.growthDeg_le_minGenPrimary
+...
+line 84, col 2:
+have := h1.symm.trans h2
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_inj]
+shortened proof!

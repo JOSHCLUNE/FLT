@@ -1,0 +1,68 @@
+.X..
+line 76, col 18:
+simp
+* Try this:
+
+  [apply]     intro a
+    simp_all only [smul_def, comm_symm, map_zero, smul_zero]
+.X..X..X..X..X.X.
+line 103, col 8:
+rw [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]     simp_all only [comm_symm]
+    rfl
+shortened proof!
+.X.
+line 119, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+.
+line 128, col 4:
+induction am with
+    | zero => simp only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      map_zero, RingHom.id_apply]
+    | tmul x y =>
+        simp only [smul_tmul', smul_eq_mul, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+          LinearEquiv.coe_coe, comm_tmul, RingHom.id_apply, smul_def, comm_symm_tmul]
+    | add x y hx hy =>
+      simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe,
+        RingHom.id_apply, smul_def, smul_add, map_add]
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply, smul_def, comm_symm,
+      comm_comm]
+.X.
+line 179, col 2:
+ext
+* Try this:
+
+  [apply]   apply LinearMap.baseChange_id
+shortened proof!
+.
+line 188, col 2:
+ext
+* Try this:
+
+  [apply]   apply LinearMap.baseChange_comp
+shortened proof!
+.
+line 192, col 2:
+exact Function.leftInverse_iff_comp
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      duper [*, Function.LeftInverse, Function.leftInverse_iff_comp] {preprocessing := full}
+    · intro a
+      duper [*, Function.LeftInverse, Function.leftInverse_iff_comp] {preprocessing := full}
+.......
+line 219, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, algebraMap_eval,
+      OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe, Algebra.TensorProduct.map_tmul, map_one,
+      AlgHom.coe_id, id_eq]

@@ -1,0 +1,120 @@
+.....
+line 39, col 16:
+simp only [map_zero]
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 40, col 23:
+simp only [map_add, *]
+* Try this:
+
+  [apply]   simp_all only [map_add]
+....
+line 45, col 18:
+simp only [map_zero, zero_mul, TensorProduct.zero_tmul]
+* Try this:
+
+  [apply]   simp_all only [map_zero, zero_mul, zero_tmul]
+.....
+line 50, col 16:
+simp only [map_zero]
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 51, col 23:
+simp only [map_add, *]
+* Try this:
+
+  [apply]   simp_all only [map_add]
+.
+line 52, col 20:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.lift_tmul, LinearMap.lTensor_tmul, mul_eq_mul_left_iff]
+    apply Or.inl
+    rfl
+.....
+line 60, col 16:
+simp only [map_zero]
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 61, col 23:
+simp only [map_add, *]
+* Try this:
+
+  [apply]   simp_all only [map_add]
+.
+line 63, col 8:
+simp only [Algebra.TensorProduct.lift_tmul, LinearMap.rTensor_tmul]
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.lift_tmul, LinearMap.rTensor_tmul, Algebra.ofId_apply, mul_eq_mul_right_iff]
+    apply Or.inl
+    rfl
+shortened proof!
+.
+line 65, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.TensorProduct.lift_tmul, Algebra.ofId_apply, map_one, one_mul]
+.....
+line 72, col 16:
+simp only [map_zero]
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 73, col 23:
+simp only [map_add, *]
+* Try this:
+
+  [apply]   simp_all only [map_add]
+.
+line 75, col 8:
+simp only [Algebra.TensorProduct.lift_tmul]
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.lift_tmul, LinearMap.lTensor_tmul, Algebra.ofId_apply, mul_eq_mul_left_iff]
+    apply Or.inl
+    rfl
+shortened proof!
+.
+line 77, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.TensorProduct.lift_tmul, Algebra.ofId_apply, map_one, mul_one]
+....
+line 87, col 14:
+simp only [map_zero]
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 88, col 21:
+simp only [map_add, *]
+* Try this:
+
+  [apply]   simp_all only [map_add]
+.
+line 89, col 18:
+simp
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.lift_tmul, map_mul]
+    rfl
+shortened proof!
+...
+line 93, col 4:
+simp
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_coe, Bialgebra.counitAlgHom_apply, AlgEquiv.commutes]
+    rfl
+shortened proof!

@@ -1,0 +1,14 @@
+.
+line 37, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [top_eq_univ, Filter.mem_sets, univ_mem]
+....X.X.X.X..X.X.X.X.
+line 95, col 4:
+rw [hℱ]
+* Try this:
+
+  [apply]   duper [*, iInf_le] {preprocessing := full}
+shortened proof!
+.X.X..

@@ -1,0 +1,232 @@
+...
+line 34, col 2:
+exact DoubleCoset.isOpen_doubleCoset H K hK i
+* Try this:
+
+  [apply]     apply DoubleCoset.isOpen_doubleCoset
+    simp_all only
+....
+line 43, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_mul]
+...............
+line 105, col 69:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, one_mem]
+.
+line 105, col 86:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul, mul_inv_cancel_left]
+....
+line 118, col 77:
+simp
+* Try this:
+
+  [apply]   duper [*, one_mem] {preprocessing := full}
+.
+line 118, col 86:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_mul_cancel_right, mul_one]
+...
+line 135, col 45:
+simp [this]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, map_mk, MonoidHom.id_apply, Set.mem_singleton_iff]
+..
+line 136, col 58:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.coe_mem, one_mul, and_self]
+..
+line 138, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul, Subgroup.subtype_apply, Subgroup.coe_mul, InvMemClass.coe_inv, mul_mul_inv_mul_cancel]
+.......
+line 149, col 45:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem, mul_inv_cancel_right, inv_mul_cancel_left, mul_one, and_self]
+.................
+line 194, col 6:
+exact mul_mem (mul_mem x.2 (inv_mem (eK hc))) (inv_mem a.2)
+* Try this:
+
+  [apply]     rename_i x_1
+    simp_all only [InvMemClass.coe_inv]
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := a
+    obtain ⟨w, h⟩ := x_1
+    obtain ⟨left, right⟩ := h
+    obtain ⟨w_1, h⟩ := right
+    obtain ⟨left_1, right⟩ := h
+    simp_all only
+    apply MulMemClass.mul_mem
+    · apply MulMemClass.mul_mem
+      · simp_all only
+      · simp_all only [inv_mem_iff]
+        apply eK
+        simp_all only
+    · simp_all only [inv_mem_iff]
+...............
+line 227, col 36:
+grind
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := x
+    simp_all only
+    apply Iff.intro
+    · intro a_1
+      obtain ⟨w, h⟩ := a_1
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      obtain ⟨left_2, right⟩ := right
+      simp_all only
+      duper [*] {preprocessing := full}
+    · intro a_1
+      obtain ⟨w, h⟩ := a_1
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      duper [*] {preprocessing := full}
+._..............
+line 255, col 8:
+simp [H₁, H₂]
+* Try this:
+
+  [apply]   simp_all only [Setoid.ker_def, Subgroup.smul_inf, smul_inv_smul, ConjAct.toConjAct_inv]
+................
+line 270, col 4:
+simp
+* Try this:
+
+  [apply]     simp_all only [Set.ncard_univ]
+    rfl
+shortened proof!
+...
+line 273, col 55:
+grind
+* Try this:
+
+  [apply]     intro a b a_1 b_1 a_2
+    ext x : 1
+    simp_all only [Set.mem_inter_iff, Set.mem_preimage, Set.mem_singleton_iff, Set.mem_empty_iff_false, iff_false,
+      not_and, Subtype.mk.injEq, not_false_eq_true, implies_true]
+...
+line 283, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [forall_const, exists_eq_right, ofLeft_mk]
+..
+line 285, col 6:
+exact ⟨x, by simp [h]⟩
+* Try this:
+
+  [apply]   simp_all only [ne_eq, IsEmpty.forall_iff, and_true, exists_apply_eq_apply]
+...X.
+line 289, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [forall_eq, forall_const, exists_eq_right]
+..
+line 291, col 6:
+exact ⟨x, by simp [h]⟩
+* Try this:
+
+  [apply]   simp_all only [forall_eq, ne_eq, IsEmpty.forall_iff, and_true, exists_apply_eq_apply]
+......
+line 297, col 6:
+suffices a = σ (ofLeft H K a) by simpa [ha]
+* Try this:
+
+  [apply]     simp_all only [forall_const, exists_eq_right, OneMemClass.coe_one, one_smul]
+    obtain ⟨w, h⟩ := ha
+    subst h
+    simp_all only
+shortened proof!
+......
+line 303, col 6:
+simpa [← e, DoubleCoset.eq] using hσ (mk H K a)
+* Try this:
+
+  [apply]     simp_all only [not_exists, Subtype.exists, exists_prop]
+    duper [*, ofRight_mk'', eq, ofLeft_mk, ofRight, ofLeft] {preprocessing := full}
+.
+line 304, col 4:
+simp
+* Try this:
+
+  [apply]     simp_all only [SetLike.coe_mem, QuotientGroup.mk_mul_of_mem, not_exists]
+    obtain ⟨val, property⟩ := x
+    obtain ⟨val_1, property_1⟩ := y
+    simp_all only
+    duper [*] {preprocessing := full}
+shortened proof!
+..........
+line 312, col 58:
+simpa [ha]
+* Try this:
+
+  [apply]   duper [*, ofRight, ofRight_mk''] {preprocessing := full}
+......
+line 317, col 31:
+grind
+* Try this:
+
+  [apply]   duper [*, ofRight, ofRight_mk''] {preprocessing := full}
+..
+line 317, col 51:
+grind
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 350, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [σLeft_mul]
+..
+line 351, col 46:
+simp
+* Try this:
+
+  [apply]   duper [*, one_mem] {preprocessing := full}
+.
+line 351, col 63:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul]
+.....
+line 358, col 74:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem, mul_one, and_self]
+...
+line 361, col 67:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem]
+.
+line 361, col 79:
+simp [hg]
+* Try this:
+
+  [apply]   simp_all only [mul_one, one_mul, and_self]
+...

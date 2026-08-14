@@ -1,0 +1,38 @@
+....................
+line 192, col 6:
+rfl
+* Try this:
+
+  [apply]   rfl
+...
+line 221, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+.......
+line 237, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toLinearMap_apply, map_zero, LinearEquiv.coe_coe]
+.......
+line 248, col 11:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toLinearMap_apply, LinearEquiv.coe_coe, map_add]
+...
+line 265, col 4:
+rfl
+* Try this:
+
+  [apply]   rfl
+...
+line 327, col 6:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe, Homeomorph.coe_toEquiv, toCompletion_mul, f]
+    rfl
+.........

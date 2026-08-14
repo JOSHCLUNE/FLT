@@ -1,0 +1,59 @@
+.............
+line 61, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, nonZeroDivisors.coe_ne_zero, not_false_eq_true, nnnorm_eq_zero, PadicInt.coe_eq_zero,
+      ENNReal.coe_inv, ENNReal.coe_eq_zero, H, K]
+.
+line 62, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, nonZeroDivisors.coe_ne_zero, not_false_eq_true, nnnorm_eq_zero, PadicInt.coe_eq_zero,
+      ENNReal.coe_inv, ENNReal.coe_ne_top, H, K]
+.
+line 63, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, nonZeroDivisors.coe_ne_zero, not_false_eq_true, nnnorm_eq_zero, PadicInt.coe_eq_zero,
+      ENNReal.coe_inv, H, K]
+....
+line 77, col 19:
+simp
+* Try this:
+
+  [apply]   simp_all only [Units.val_one, nnnorm_one]
+.
+line 78, col 19:
+simp
+* Try this:
+
+  [apply]     intro x_1 y
+    simp_all only [Units.val_mul, nnnorm_mul]
+....
+line 82, col 44:
+simp [this, g]
+* Try this:
+
+  [apply]     intro x
+    simp_all only [ContinuousMonoidHom.coe_toMonoidHom, MulHom.coe_mk, g]
+..........
+line 105, col 2:
+simpa [-volume_padicInt_smul, ← image_coe_smul_set] using Padic.volume_padicInt_smul x ((↑) '' s)
+* Try this:
+
+  [apply]   apply volume_padicInt_smul
+.
+line 114, col 71:
+simp
+* Try this:
+
+  [apply]   simp_all only [PadicInt.volume_univ, ne_eq, one_ne_zero, not_false_eq_true]
+.
+line 115, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_set_univ, PadicInt.volume_univ, ENNReal.coe_one, mul_one]

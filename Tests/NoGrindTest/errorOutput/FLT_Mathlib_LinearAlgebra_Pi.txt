@@ -1,0 +1,12 @@
+.....
+line 64, col 2:
+rw [Prod.IsProdSMul.map_smul x y]
+* Try this:
+
+  [apply]   duper [*, map_smul, smul_fst] {preprocessing := full}
+.
+line 68, col 2:
+rw [Prod.IsProdSMul.map_smul x y]
+* Try this:
+
+  [apply]   duper [*, smul_snd] {preprocessing := full}

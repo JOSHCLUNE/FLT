@@ -1,0 +1,10 @@
+Ran `hammer {disableGrind := true}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Done: 260 files processed, 6 with errors.
+
+tallySummaries.sh output:
+Total number of results: 18004
+Total number of successes: 2868
+Time taken: 91476s
+
+~15.9% success rate
+~25.4 hours

@@ -1,0 +1,230 @@
+..
+line 48, col 2:
+ext v
+* Try this:
+
+  [apply]     simp_all only [Filter.eventually_cofinite, SetLike.mem_coe]
+    ext x : 1
+    simp_all only [Set.mem_setOf_eq, Set.mem_inter_iff, Set.mem_preimage, Set.mem_pi, Set.mem_compl_iff, SetLike.mem_coe]
+    apply Iff.intro
+    · intro a
+      simp_all only [implies_true, true_and]
+      intro i a_1
+      apply a
+    · intro a i
+      obtain ⟨left, right⟩ := a
+      duper [*] {preprocessing := full}
+shortened proof!
+...
+line 62, col 62:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_cofinite, Set.mem_pi, Set.mem_univ, SetLike.mem_coe, forall_const, Set.mem_setOf_eq, s]
+....
+line 67, col 26:
+aesop
+* Try this:
+
+  [apply]     simp_all only [Filter.eventually_cofinite, SetLike.mem_coe, Filter.eventually_principal, Set.mem_setOf_eq, s]
+    intro x a
+    apply a
+    simp_all only [SetLike.mem_coe]
+    apply h
+.
+line 67, col 46:
+aesop
+* Try this:
+
+  [apply]     intro a i
+    simp_all only [s]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    simp_all only [inclusion_apply]
+.........................
+line 220, col 47:
+simp_all [Subgroup.mem_pi]
+* Try this:
+
+  [apply]     intro a
+    simp_all only [SetLike.mem_coe]
+    apply a
+    simp_all only [Set.mem_univ]
+..
+line 223, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_apply]
+    rfl
+shortened proof!
+.
+line 224, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+.
+line 225, col 21:
+ext
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+......
+line 236, col 30:
+fun_prop
+* Try this:
+
+  [apply]   apply RestrictedProduct.continuous_inclusion
+..
+line 263, col 2:
+ext f
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [Set.mem_setOf_eq, Set.mem_pi, Set.mem_univ, forall_const]
+shortened proof!
+....
+line 310, col 49:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_subtype, Subtype.val_injective]
+..
+line 312, col 6:
+simp only [mem_preimage, mem_image, embedProduct_apply, inv_mk, coeHom_apply, g,
+        unitsEquivUnitsType]
+* Try this:
+
+  [apply]     simp_all only [mem_preimage, mem_image, embedProduct_apply, MulEquiv.toEquiv_eq_coe, toFun_as_coe, EquivLike.coe_coe,
+      g]
+    obtain ⟨val, property⟩ := s
+    simp_all only
+    apply Iff.intro
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      subst right
+      exact left
+    · intro a
+      apply Exists.intro
+      · apply And.intro
+        · exact a
+        · rfl
+shortened proof!
+.........
+line 359, col 4:
+rintro _ ⟨x, hx, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [implies_true, map_one, Set.image_subset_iff, f, g, sMx, sM]
+    rfl
+shortened proof!
+.....
+line 368, col 4:
+rintro _ ⟨_, ⟨x, hx, rfl⟩, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [implies_true, map_one, SetLike.coe_sort_coe, Homeomorph.trans_apply, Homeomorph.homeomorph_mk_coe,
+      toMulEquiv_eq_coe, MulEquiv.toEquiv_eq_coe, EquivLike.coe_coe, Set.image_subset_iff, sM, f, g]
+    rfl
+shortened proof!
+.
+line 382, col 81:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_sum, Finset.sum_apply]
+...........
+line 471, col 6:
+rwa [Filter.le_principal_iff, hTval, ← Filter.mem_comap_iff_compl, hf,
+        ← Filter.le_principal_iff]
+* Try this:
+
+  [apply]   duper [*, compl_compl, Filter.compl_mem_comap, Filter.le_principal_iff, Filter.le_def] {preprocessing := full}
+.......
+line 481, col 10:
+apply Set.subset_preimage_image
+* Try this:
+
+  [apply]     subst hf
+    simp_all only [Filter.le_principal_iff, Filter.mem_comap, T]
+    obtain ⟨w, h⟩ := hS
+    obtain ⟨left, right⟩ := h
+    apply Set.subset_preimage_image
+..
+line 483, col 8:
+rw [Filter.eventually_comap] at hx
+* Try this:
+
+  [apply]     subst hf
+    simp_all [T]
+    intro x_1 a a_1 b
+    subst b
+    obtain ⟨w, h⟩ := hS
+    obtain ⟨left, right⟩ := h
+    apply hx
+    intro x_1 a_2
+    simp_all only [not_false_eq_true]
+shortened proof!
+...............
+line 552, col 64:
+simp [hTval]
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_cofinite, Filter.le_principal_iff, Filter.mem_cofinite, compl_compl,
+      Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true, I, T]
+..........
+line 562, col 4:
+apply hy.left i h
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_cofinite, Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not,
+      implies_true, Set.mem_union, I, T]
+.
+line 563, col 4:
+simp only [Set.mem_union, not_or] at h
+* Try this:
+
+  [apply]     simp_all only [Filter.eventually_cofinite, Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not,
+      implies_true, Set.mem_union, not_or, I, T]
+    obtain ⟨left, right⟩ := hy
+    obtain ⟨left_1, right_1⟩ := h
+    apply left_1
+    simp_all only
+shortened proof!
+......
+line 576, col 66:
+simp [hTval]
+* Try this:
+
+  [apply]   simp_all only [Filter.le_principal_iff, Filter.mem_cofinite, compl_compl, Filter.eventually_principal,
+      Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true, T]
+............
+line 587, col 67:
+(hI : i ∉ I)
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Filter.eventually_principal, Set.mem_compl_iff, Set.mem_setOf_eq, not_not, implies_true,
+      not_false_eq_true, Set.setOf_true, Set.union_univ, not_true_eq_false, Set.setOf_false, Set.union_empty,
+      Set.univ_inter, T]
+shortened proof!
+................
+line 642, col 33:
+aesop
+* Try this:
+
+  [apply]   simp_all only [eventually_principal, Set.mem_setOf_eq, implies_true]
+.........
+line 704, col 22:
+simp [Pi.single_eq_of_ne (Set.mem_compl_singleton_iff.mp hi)]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, ne_eq, not_false_eq_true, Pi.single_eq_of_ne, SetLike.mem_coe,
+      zero_mem, S]
+...

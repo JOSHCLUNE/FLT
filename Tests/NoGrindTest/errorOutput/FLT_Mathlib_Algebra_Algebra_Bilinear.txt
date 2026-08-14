@@ -1,0 +1,54 @@
+.
+line 57, col 2:
+simp [baseChangeOfAlgebraMap, SemialgHom.toLinearMap_eq_coe, Algebra.ofId_apply]
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 82, col 14:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_zero, map_zero]
+...X.
+line 109, col 2:
+simp [baseChangeRightOfAlgebraMap, AlgHom.changeScalars_apply]
+* Try this:
+
+  [apply]   rfl
+.
+line 129, col 19:
+simp
+* Try this:
+
+  [apply]   simp_all only [Units.inv_mul_cancel_left]
+.
+line 130, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [Units.mul_inv_cancel_left]
+.
+line 132, col 22:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.mul_smul_comm, RingHom.id_apply]
+.
+line 146, col 19:
+simp [mul_assoc]
+* Try this:
+
+  [apply]   simp_all only [Units.mul_inv_cancel_right]
+.
+line 147, col 20:
+simp [mul_assoc]
+* Try this:
+
+  [apply]   simp_all only [Units.inv_mul_cancel_right]
+.
+line 149, col 22:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.smul_mul_assoc, RingHom.id_apply]

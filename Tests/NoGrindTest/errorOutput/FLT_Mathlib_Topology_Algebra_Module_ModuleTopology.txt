@@ -1,0 +1,91 @@
+...............
+line 113, col 2:
+letI : TopologicalSpace (D ⊗[R] D) := moduleTopology R _
+* Try this:
+
+  [apply]   duper [*, continuous_mul_of_finite] {preprocessing := full}
+shortened proof!
+...
+line 134, col 76:
+fun_prop
+* Try this:
+
+  [apply]     simp_all only [smul_eq_mul]
+    duper [*, Algebra.smul_def, continuous_smul, continuousSMul_of_algebraMap] {preprocessing := full}
+..........
+line 164, col 4:
+simpa [← algebra_compatible_smul S]
+* Try this:
+
+  [apply]   simp_all only [algebraMap_smul]
+.............
+line 190, col 6:
+ext m
+* Try this:
+
+  [apply]     simp_all only [smul_assoc, RingHom.id_apply]
+    rfl
+shortened proof!
+..........
+line 261, col 6:
+exact fun U hU => ⟨U, ⟨⟨hU.1, hopen_mpr hU.2⟩, by simp⟩⟩
+* Try this:
+
+  [apply]     intro i a
+    obtain ⟨left, right⟩ := a
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only [and_self]
+...
+line 265, col 56:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 265, col 78:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.inter_subset_right]
+...
+line 271, col 85:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.inter_subset_left]
+.........................
+line 414, col 4:
+exact isClosed_singleton
+* Try this:
+
+  [apply]   simp_all only [Lean.Elab.WF.paramLet, ZeroHom.toFun_eq_coe, AddMonoidHom.toZeroHom_coe, LinearMap.coe_comp,
+      LinearMap.coe_mk, AddHom.coe_mk, LinearEquiv.coe_coe, Set.finite_singleton, Set.Finite.isClosed, g, f]
+...
+line 425, col 2:
+apply t2Space (R := K)
+* Try this:
+
+  [apply]   duper [*, t2Space] {preprocessing := full}
+..
+line 473, col 2:
+rw [IsModuleTopology.trans (A × B) A M]
+* Try this:
+
+  [apply]   duper [*, trans] {preprocessing := full}
+shortened proof!
+...
+line 480, col 2:
+infer_instance
+* Try this:
+
+  [apply]   simp_all only
+......
+line 537, col 2:
+exact isOpenMap_of_surjective hφ
+* Try this:
+
+  [apply]     apply IsModuleTopology.isOpenMap_of_surjective
+    simp_all only

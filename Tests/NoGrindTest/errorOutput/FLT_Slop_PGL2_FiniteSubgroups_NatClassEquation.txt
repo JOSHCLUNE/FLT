@@ -1,0 +1,90 @@
+..................
+line 75, col 6:
+exact y_eq ▸ hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 83, col 6:
+exact y_eq ▸ hy
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+...................
+line 110, col 30:
+rw [hg, h_conj]
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, Set.mem_setOf_eq]
+...............
+line 141, col 46:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 143, col 4:
+exact hw2 ▸ hw
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 151, col 44:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 179, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply,
+      Subgroup.map_toSubmonoid, Submonoid.map_coe_toMonoidHom, Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup,
+      Submonoid.mem_map, Subgroup.mem_toSubmonoid, K]
+....
+line 185, col 4:
+exact Set.mem_toFinset.mpr (Subgroup.one_mem K)
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, Subgroup.map_toSubmonoid, Submonoid.map_coe_toMonoidHom, Set.mem_toFinset,
+      Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup, one_mem, K]
+......
+line 205, col 6:
+constructor
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ge_iff_le, MulEquiv.toMonoidHom_eq_coe, ne_eq, forall_exists_index,
+      Set.fintypeCard_eq_ncard, Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, ↓existsAndEq, true_and,
+      exists_and_left]
+shortened proof!
+............
+line 228, col 6:
+simp only [S, Finset.mem_filter, Finset.mem_univ,
+        true_and, Set.mem_setOf_eq, implies_true]
+* Try this:
+
+  [apply]     intro x
+    simp_all only [Nat.card_eq_fintype_card, ge_iff_le, MulEquiv.toMonoidHom_eq_coe, ne_eq, forall_exists_index,
+      Set.fintypeCard_eq_ncard, Finset.mem_filter, Finset.mem_univ, true_and, Set.mem_setOf_eq, S]
+.....
+line 254, col 6:
+constructor
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+..............
+line 280, col 6:
+exact hH_card_ge i
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 282, col 6:
+exact fun K L hK hL hKL ↦ hdisjoint K L
+        ⟨i, hK.choose, hK.choose_spec⟩
+        ⟨i, hL.choose, hL.choose_spec⟩ hKL
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

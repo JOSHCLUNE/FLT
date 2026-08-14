@@ -1,0 +1,100 @@
+................
+line 71, col 14:
+exact zero_smul S n ▸ zero_mem _
+* Try this:
+
+  [apply]   simp_all only [zero_smul, zero_mem]
+..
+line 72, col 42:
+exact add_mem ‹_› ‹_›
+* Try this:
+
+  [apply]   duper [*, add_mem] {preprocessing := full}
+..............
+line 102, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AddSubgroup.mk.injEq]
+    rfl
+......
+line 108, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AddSubgroup.mk.injEq, α']
+    rfl
+....................
+line 164, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Ideal.Quotient.mk_eq_mk, implies_true, map_smul, UltraProduct.mapRingHom_π, Ideal.quotientMap_mk,
+      RingHom.id_apply, LinearMap.coe_restrictScalars, UltraProduct.π_smul]
+    rfl
+.........................
+line 241, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AddSubgroup.mk.injEq]
+    rfl
+......
+line 255, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.pi_apply, RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply,
+      AlgHom.commutes, Ideal.Quotient.mk_algebraMap, Pi.algebraMap_apply, f]
+........
+line 263, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, implies_true, f]
+............._........
+line 289, col 87:
+simp
+* Try this:
+
+  [apply]   simp_all only [↓existsAndEq, Filter.eventually_true]
+...
+line 292, col 2:
+rw [hi, hj]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..................................................
+line 408, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Submodule.Quotient.nontrivial_iff, ne_eq, LinearEquiv.coe_coe, LinearEquiv.trans_apply,
+      LinearEquiv.restrictScalars_apply, PatchingModule.mapEquiv_apply]
+    rfl
+......
+line 414, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Submodule.Quotient.nontrivial_iff, ne_eq, RingEquiv.toRingHom_eq_coe, RingHom.coe_coe,
+      PatchingAlgebra.mapEquiv_apply, AlgEquiv.toRingEquiv_toRingHom]
+    rfl
+....
+line 418, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Submodule.Quotient.nontrivial_iff, ne_eq, LinearEquiv.coe_coe, LinearEquiv.trans_apply,
+      LinearEquiv.restrictScalars_apply, PatchingModule.mapEquiv_apply]
+    rfl
+.......................
+line 455, col 55:
+exact hf₀
+* Try this:
+
+  [apply]     simp_all only [Set.mem_univ, RingHom.coe_comp, PrimeSpectrum.comap_comp, Function.comp_apply,
+      PrimeSpectrum.comap_asIdeal, Submodule.bot_coe, PrimeSpectrum.zeroLocus_singleton_zero, Set.univ_inter,
+      Ideal.coe_comap, f₀, p']
+    exact hf₀
+..

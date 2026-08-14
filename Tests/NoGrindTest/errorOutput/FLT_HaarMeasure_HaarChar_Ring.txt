@@ -1,0 +1,72 @@
+......._........
+line 65, col 4:
+simp [g, hu, int_f_ne_zero.symm]
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_mk, ne_eq, mul_zero, g]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [not_true_eq_false]
+.........
+line 73, col 54:
+exact hu₀
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 79, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousMap.coe_mk, ne_eq, Set.mem_preimage, Units.inv_mul_cancel_left, g]
+..
+line 88, col 60:
+ext
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [ContinuousAddEquiv.mulLeft_apply, Units.val_one, one_mul, ContinuousAddEquiv.refl_apply]
+shortened proof!
+.....
+line 104, col 8:
+simp [map_mul]
+* Try this:
+
+  [apply]     intro x
+    simp_all only [AlgEquiv.toEquiv_eq_coe, ContinuousAddEquiv.mulLeft_apply, ContinuousAddEquiv.coe_mk, AddEquiv.coe_mk,
+      EquivLike.coe_coe, ContinuousAlgEquiv.coe_toAlgEquiv, map_mul, MulEquiv.toMonoidHom_eq_coe, Units.coe_map,
+      MonoidHom.coe_coe, MulEquiv.coe_mk]
+.......
+line 116, col 2:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 123, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousAddEquiv.preimage_mulLeft_smul, nnreal_smul_coe_apply]
+..
+line 131, col 2:
+assumption_mod_cast
+* Try this:
+
+  [apply]   simp_all only [ne_eq, coe_inj]
+.....
+line 198, col 4:
+exact Set.injOn_of_injective (ContinuousAddEquiv.injective _)
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, AddSubgroup.coe_set_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      AddSubmonoid.coe_set_mk, AddSubsemigroup.coe_set_mk, ContinuousAddEquiv.mulLeft_apply, Units.mul_right_inj,
+      implies_true, Set.injOn_of_eq_iff_eq, u]
+..
+line 199, col 91:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, AddSubgroup.coe_set_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      AddSubmonoid.coe_set_mk, AddSubsemigroup.coe_set_mk, ContinuousAddEquiv.mulLeft_apply, Units.mul_inv_cancel_left, u]
+......

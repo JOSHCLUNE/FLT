@@ -1,0 +1,53 @@
+.
+line 135, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 142, col 4:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [map_zero, not_lt_zero]
+shortened proof!
+...
+line 147, col 2:
+rw [WeierstrassCurve.tateParameter_eq, h, map_inv₀]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_inv₀]
+    exact h
+............................................
+line 295, col 6:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_sum, Nat.cast_pow, c]
+shortened proof!
+.......
+line 303, col 48:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.mem_divisors, ne_eq, neg_mul, neg_add_rev, and_imp, OfNat.ofNat_ne_zero, not_false_eq_true, c]
+....
+line 308, col 2:
+refine tsum_congr fun m ↦ ?_
+* Try this:
+
+  [apply]   simp_all only [TateCurve.coeff_a₆Formal, Finset.sum_neg_distrib, neg_inj, neg_mul, Nat.cast_add, Nat.cast_one,
+      Int.cast_neg, c]
+shortened proof!
+......_..
+line 379, col 4:
+simpa [map_inv₀] using inv_lt_one_of_one_lt₀ hj
+* Try this:
+
+  [apply]     simp_all only [map_inv₀]
+    duper [*, valuation_tateParameter_lt_one, valuation_tateParameter_eq] {preprocessing := full}
+..

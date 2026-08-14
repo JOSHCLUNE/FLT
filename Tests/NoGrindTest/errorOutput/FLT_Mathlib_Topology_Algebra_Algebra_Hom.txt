@@ -1,0 +1,17 @@
+...
+line 56, col 4:
+congr
+* Try this:
+
+  [apply]     simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, DFunLike.coe_fn_eq, mk.injEq]
+    simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom]
+    apply DFunLike.ext
+    intro x
+    duper [*] {preprocessing := full}
+shortened proof!
+.
+line 92, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl

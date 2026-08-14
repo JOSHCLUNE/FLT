@@ -1,0 +1,68 @@
+..
+line 28, col 4:
+grind
+* Try this:
+
+  [apply]   duper [*, prime_def] {preprocessing := full}
+.
+line 30, col 4:
+rcases eq_or_ne p 3 with rfl | hp3
+* Try this:
+
+  [apply]   smt +mono [*, prime_def, Prime.odd_iff, factorization_eq_zero_iff]
+shortened proof!
+...
+line 47, col 4:
+apply FermatLastTheoremFor.mono h3
+* Try this:
+
+  [apply]   duper [*, fermatLastTheoremThree, FermatLastTheoremFor, fermatLastTheoremFor_iff_int, FermatLastTheoremWith.mono]
+      {preprocessing := full}
+shortened proof!
+.
+line 51, col 4:
+apply FermatLastTheoremFor.mono h4
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply FermatLastTheoremFor.mono
+    · exact h4
+    · apply fermatLastTheoremFour
+shortened proof!
+.
+line 55, col 4:
+apply FermatLastTheoremFor.mono hpn
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply FermatLastTheoremFor.mono
+    · exact hpn
+    · simp_all only
+shortened proof!
+...
+line 65, col 31:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 51:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 66, col 2:
+assumption_mod_cast
+* Try this:
+
+  [apply]     simp_all only [ne_eq, gt_iff_lt]
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    duper [*, add_coe, pow_coe] {preprocessing := full}

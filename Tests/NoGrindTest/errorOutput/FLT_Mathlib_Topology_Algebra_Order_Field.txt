@@ -1,0 +1,104 @@
+.............
+line 46, col 6:
+exact tendsto_pow_atTop_nhds_zero_iff.2 this
+* Try this:
+
+  [apply]   simp_all only [ne_eq, tendsto_pow_atTop_nhds_zero_iff]
+.....
+line 52, col 2:
+linarith [tendsto_nhds_unique hcontr tendsto_const_nhds, w.pos hx₀.1]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, tendsto_const_nhds_iff, map_eq_zero]
+..................
+line 79, col 72:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Real.log_pow, Real.log_zpow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, zero_div, lt_self_iff_false]
+.
+line 80, col 20:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Real.log_pow, Real.log_zpow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 80, col 61:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.........
+line 89, col 40:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, Real.log_zpow, Real.log_pow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 89, col 66:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, Real.log_zpow, Real.log_pow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, zero_div, lt_self_iff_false]
+.
+line 90, col 33:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+................
+line 118, col 66:
+linarith
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, map_eq_zero, ne_eq]
+    subst h₀
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+...............
+line 146, col 55:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+........

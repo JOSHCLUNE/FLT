@@ -1,0 +1,77 @@
+.
+line 65, col 23:
+continuity
+* Try this:
+
+  [apply]   apply continuous_const
+..
+line 68, col 8:
+sorry
+* Try this:
+
+  [apply]     intro y s
+    simp_all only [isOpen_discrete]
+..
+line 72, col 22:
+simp
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 73, col 42:
+simp
+* Try this:
+
+  [apply]     intro M
+    simp_all only [pow_zero, mul_one, Std.le_refl]
+..
+line 80, col 23:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_singleton_iff]
+.
+line 81, col 23:
+simp
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_singleton_iff, mul_one]
+.
+line 82, col 23:
+simp
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Set.mem_singleton_iff, inv_one]
+...
+line 86, col 24:
+sorry
+* Try this:
+
+  [apply]   simp_all only [isOpen_discrete, U]
+.
+line 87, col 27:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.finite_singleton, Set.Finite.isCompact, U]
+.
+line 88, col 29:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 104, col 4:
+rw [h]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 107, col 4:
+simp [ofComplex]
+* Try this:
+
+  [apply]     intro x
+    rfl

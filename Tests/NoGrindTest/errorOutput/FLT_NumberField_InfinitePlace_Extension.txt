@@ -1,0 +1,111 @@
+.
+line 67, col 2:
+simp_all [RingHom.ext_iff, ComplexEmbedding.isReal_iff]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [ne_eq, conjugate_comp]
+    exact hf
+.
+line 72, col 2:
+simp_all only [← hg, RingHom.ext_iff, RingHom.coe_comp, Function.comp_apply, not_forall,
+    ne_eq]
+* Try this:
+
+  [apply]     subst hg
+    simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [not_true_eq_false]
+shortened proof!
+.
+line 117, col 2:
+simp only [IsUnmixedExtension, not_and, not_not] at h
+* Try this:
+
+  [apply]     obtain ⟨left, right⟩ := h
+    subst left
+    simp_all only [not_and, true_and, not_not, forall_const]
+shortened proof!
+.
+line 134, col 56:
+aesop
+* Try this:
+
+  [apply]     simp_all only [not_and, not_not, Equiv.refl_apply, and_congr_right_iff, Classical.imp_iff_left_iff]
+    intro a
+    subst a
+    simp_all only [true_or]
+......
+line 171, col 14:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [conjugate_coe_eq, RingHom.coe_comp, Function.comp_apply, not_false_eq_true]
+.
+line 172, col 14:
+aesop
+* Try this:
+
+  [apply]     simp_all only [conjugate_coe_eq, star_star, RingHom.coe_comp, Function.comp_apply]
+    obtain ⟨val, property⟩ := w
+    obtain ⟨w, h⟩ := hv
+    subst property
+    simp_all only
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [not_true_eq_false]
+.
+line 176, col 2:
+simp_all only [← not_isComplex_iff_isReal]
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := w
+    subst property
+    simp_all only
+    apply NumberField.InfinitePlace.IsReal.comap
+    simp_all only
+shortened proof!
+.
+line 180, col 2:
+rw [← comap_mk, w.1.mk_embedding, w.2]
+* Try this:
+
+  [apply]   duper [*, mk_embedding] {preprocessing := full}
+..
+line 186, col 4:
+convert Or.inl <| hl ▸ congrArg InfinitePlace.embedding w.mk_embedding
+* Try this:
+
+  [apply]   duper [*, mk_embedding] {preprocessing := full}
+.
+line 188, col 4:
+convert! Or.inr <| hr ▸ congrArg InfinitePlace.embedding w.mk_embedding
+* Try this:
+
+  [apply]   duper [*, mk_embedding] {preprocessing := full}
+..
+line 229, col 14:
+exact Or.inl ⟨hl⟩
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := w
+    subst property
+    simp_all only
+    apply Or.inl
+    apply NumberField.InfinitePlace.Extension.IsLift.mk
+    simp_all only
+    exact hl
+.
+line 230, col 14:
+exact Or.inr ⟨hr⟩
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := w
+    subst property
+    simp_all only
+    apply Or.inr
+    apply NumberField.InfinitePlace.Extension.IsConjugateLift.mk
+    simp_all only
+    exact hr

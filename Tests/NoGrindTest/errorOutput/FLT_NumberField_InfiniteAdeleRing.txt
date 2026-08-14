@@ -1,0 +1,12 @@
+.....
+line 159, col 14:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_zero, AlgEquiv.coe_toAlgHom, map_zero]
+....
+line 166, col 21:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [TensorProduct.RightActions.smul_def, TensorProduct.comm_symm, AlgEquiv.coe_toAlgHom, smul_add, map_add]

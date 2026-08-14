@@ -1,0 +1,54 @@
+....
+line 44, col 56:
+simp
+* Try this:
+
+  [apply]   duper [*, Finset.finite_toSet] {preprocessing := full}
+..
+line 45, col 29:
+aesop
+* Try this:
+
+  [apply]     rename_i w left right
+    subst right
+    simp_all only [imp_false, Decidable.not_not, Set.mem_image, Subtype.exists, exists_and_right, exists_eq_right,
+      Subtype.coe_eta, exists_prop, and_true, SetLike.mem_coe, Nat.mem_primeFactors, ne_eq, Rat.den_ne_zero,
+      not_false_eq_true, true_and]
+    obtain ⟨val, property⟩ := w
+    simp_all only
+    exact left
+.....
+line 68, col 2:
+simp [p.2.ne_zero]
+* Try this:
+
+  [apply]     simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, ne_eq, Nat.pow_eq_zero, Int.natAbs_eq_zero, not_and,
+      Decidable.not_not]
+    intro a
+    duper [*, Subtype.property, Nat.Prime.ne_zero] {preprocessing := full}
+......
+line 78, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, ne_eq, one_pow]
+......
+line 87, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, one_pow]
+.....
+line 95, col 6:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, zero_mem, not_true_eq_false]
+............................
+line 140, col 34:
+simpa using hp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_pow, ZMod.natCast_val, Subtype.forall, mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, a,
+      padicNum_bar]
+.....

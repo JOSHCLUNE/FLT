@@ -1,0 +1,71 @@
+...........
+line 33, col 4:
+rw [← Set.mem_preimage] at hy
+* Try this:
+
+  [apply]   duper [*, Set.mem_preimage, Set.mem_singleton_iff] {preprocessing := full}
+shortened proof!
+...
+line 37, col 4:
+refine Set.mem_preimage.mp (by simp_all only [Set.mem_singleton_iff])
+* Try this:
+
+  [apply]     subst eq
+    duper [*, Set.mem_preimage, Set.mem_singleton_iff] {preprocessing := full}
+.....
+line 46, col 2:
+simp only [Set.mem_preimage, Function.comp_apply, Set.mem_image, EmbeddingLike.apply_eq_iff_eq,
+    exists_eq_right, Set.mem_singleton_iff]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_preimage, Function.comp_apply, Set.mem_image, EmbeddingLike.apply_eq_iff_eq, exists_eq_right,
+      Set.mem_singleton_iff]
+    apply Iff.intro
+    · intro a
+      duper [*, Set.mem_singleton_iff, Set.mem_preimage] {preprocessing := full}
+    · intro a
+      subst a
+      duper [*, Set.mem_singleton_iff, Set.mem_preimage] {preprocessing := full}
+shortened proof!
+.........
+line 65, col 6:
+simpa [Ueq]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_singleton_iff]
+......
+line 69, col 70:
+simp [eq]
+* Try this:
+
+  [apply]     subst eq
+    simp_all only [Homeomorph.symm_apply_apply]
+..
+line 81, col 2:
+exact ⟨U, Uopen, by simp [Ueq]⟩
+* Try this:
+
+  [apply]     apply Exists.intro
+    · apply And.intro
+      · exact Uopen
+      · simp_all only [Set.image_singleton, Equiv.apply_symm_apply]
+....
+line 101, col 2:
+refine discreteTopology_iff_isOpen_singleton.mpr ?_
+* Try this:
+
+  [apply]     rename_i inst_1
+    apply DiscreteTopology.of_subset
+    · exact inst_1
+    · simp_all only [Set.inter_subset_right]
+shortened proof!
+.
+line 113, col 2:
+rw [Set.inter_comm]
+* Try this:
+
+  [apply]     rename_i inst_1
+    apply DiscreteTopology.of_subset
+    · exact inst_1
+    · simp_all only [Set.inter_subset_left]
+shortened proof!

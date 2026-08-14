@@ -1,0 +1,139 @@
+........
+line 94, col 48:
+exact mul_ne_zero (pow_ne_zero 2 hD) hc₄
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_sub, map_pow, map_mul, mul_eq_zero, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff,
+      or_self]
+....
+line 100, col 49:
+rw [map_pow]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_sub, map_pow, map_mul, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff]
+shortened proof!
+......
+line 127, col 2:
+exact not_or.mpr ⟨pow_ne_zero 6 hD, hΔint⟩
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, or_self]
+..........
+line 152, col 4:
+exact (IsDiscreteValuationRing.maximalIdeal R).valuation_eq_one_iff_notMem.mpr
+      fun hmem ↦ hc₄res ((residue_eq_zero_iff W.c₄).mpr hmem)
+* Try this:
+
+  [apply]     simp_all only [map_sub, map_pow, map_mul, ne_eq, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not,
+      valuation_eq_one_iff_notMem, W]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    apply a
+    simp_all only
+..............
+line 181, col 38:
+simp only [← ResidueField.algebraMap_residue]
+* Try this:
+
+  [apply]     subst hr
+    simp_all only [Set.mem_range, not_exists, ResidueField.algebraMap_residue]
+...
+line 184, col 2:
+rw [← ha, ← hr, ← IsScalarTower.algebraMap_apply R S L, ← IsScalarTower.algebraMap_apply R K L]
+* Try this:
+
+  [apply]   duper [*, IsScalarTower.algebraMap_apply] {preprocessing := full}
+.........
+line 231, col 2:
+exact ⟨hA, hB⟩
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, and_self, P]
+..............
+line 282, col 61:
+rw [← hkey, h0, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [map_mul, map_add, map_sub, mul_zero, zero_eq_neg, residue_eq_zero_iff, mem_maximalIdeal,
+      mem_nonunits_iff, map_pow, neg_eq_zero, not_false_eq_true]
+......
+line 289, col 4:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+......
+line 294, col 4:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.....
+line 300, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hDmap) hc₄map
+* Try this:
+
+  [apply]   simp_all [c₄', κ', D]
+.........
+line 310, col 6:
+exact absurd hz hc₄0
+* Try this:
+
+  [apply]   simp_all only [map_add, map_sub, map_mul, ne_eq, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, not_not,
+      ResidueField.algebraMap_eq, not_true_eq_false, not_false_eq_true, map_pow, sub_eq_self, mul_eq_zero, c₄', κ', D]
+............
+line 330, col 2:
+rw [hκW_eq, hWc₄eq, show (0 : ResidueField R) ^ 2 + 0 = 0 from by ring, mul_zero, hκW0,
+    neg_zero, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [map_add, map_sub, map_mul, neg_mul, ne_eq, residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff,
+      not_not, ResidueField.algebraMap_eq, not_true_eq_false, not_false_eq_true, map_pow, sub_eq_self, mul_eq_zero,
+      OfNat.ofNat_ne_zero, pow_eq_zero_iff, or_self, even_two, Even.neg_pow, zero_pow, add_zero, mul_zero, neg_zero, c₄',
+      κ', D]
+....
+line 355, col 63:
+rw [← hkey, h0, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [map_mul, map_add, map_sub, ne_eq, mul_zero, zero_eq_neg, residue_eq_zero_iff, mem_maximalIdeal,
+      mem_nonunits_iff, map_pow, neg_eq_zero, not_false_eq_true]
+....
+line 359, col 36:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.
+line 360, col 10:
+rw [ResidueField.algebraMap_eq]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.........................................
+line 467, col 61:
+rw [← hkey, h0, mul_zero]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, neg_eq_zero,
+      residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, mul_zero, zero_eq_neg, not_false_eq_true, P, t', n']
+......
+line 477, col 40:
+rfl
+* Try this:
+
+  [apply]     simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, ne_eq, P,
+      t', n']
+    rfl
+..
+line 480, col 15:
+rw [h0, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, map_mul, map_add, map_sub, Set.mem_range, not_exists, map_pow, ne_eq,
+      map_zero, P, t', n']
+.
