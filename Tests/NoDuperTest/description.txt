@@ -1,0 +1,10 @@
+Ran `hammer {disableDuper := true}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Done: 260 files processed, 13 with errors.
+
+tallySummaries.sh output:
+Total number of results: 16591
+Total number of successes: 2841
+Time taken: 89889s
+
+~17.1% success rate
+~25.0 hours

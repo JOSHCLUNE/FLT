@@ -1,0 +1,14 @@
+.....
+line 73, col 57:
+rw [hP_map]
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.......................
+line 114, col 12:
+rw [hP_map]
+* Try this:
+  [apply] grind only
+shortened proof!
+..

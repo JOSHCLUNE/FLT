@@ -1,0 +1,242 @@
+..
+line 72, col 4:
+rw [pow_zero, Ideal.one_eq_top]
+* Try this:
+
+  [apply]   simp_all only [pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff]
+shortened proof!
+..
+line 75, col 2:
+rw [Module.length_eq_zero]
+* Try this:
+
+  [apply]   simp_all only [pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff, Module.length_eq_zero, ENat.toNat_zero]
+shortened proof!
+..
+line 81, col 4:
+haveI : Subsingleton (R ⧸ (maximalIdeal R ^ 0)) := by
+      rw [pow_zero, Ideal.one_eq_top]
+      exact Submodule.Quotient.subsingleton_iff.mpr rfl
+* Try this:
+
+  [apply]     simp_all only [pow_zero, Ideal.one_eq_top, Submodule.Quotient.subsingleton_iff, Module.length_eq_zero,
+      Nat.cast_eq_zero]
+    apply _private.FLT.Slop.DimensionTheorem.DimLeGrowth.0.DimensionTheorem.hilbertSamuel_zero
+shortened proof!
+........
+line 104, col 10:
+rw [Ideal.Quotient.algebraMap_eq]
+* Try this:
+
+  [apply]     simp_all only [Ideal.Quotient.algebraMap_eq]
+    apply Ideal.Quotient.mk_surjective
+shortened proof!
+.........
+line 123, col 4:
+exact Nat.zero_le _
+* Try this:
+
+  [apply]   simp_all only [Submodule.Quotient.nontrivial_iff, ne_eq, zero_le]
+......
+line 143, col 4:
+rw [Ideal.smul_eq_mul, Ideal.mul_top]
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.Quotient.nontrivial_iff,
+      Ideal.span_singleton_eq_top, not_false_eq_true, ge_iff_le, smul_eq_mul, Ideal.mul_top]
+...........
+line 158, col 50:
+rwa [smul_eq_mul] at hteq
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 167, col 4:
+simp [hφ, LinearMap.toSpanSingleton_apply, smul_eq_mul]
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.Quotient.nontrivial_iff,
+      Ideal.span_singleton_eq_top, not_false_eq_true, ge_iff_le, smul_eq_mul, Ideal.mul_top, implies_true,
+      Order.add_one_le_iff, LinearMap.coe_comp, Function.comp_apply, LinearMap.toSpanSingleton_apply, Submodule.mkQ_apply,
+      Ideal.Quotient.mk_eq_mk, map_mul, φ]
+....
+line 171, col 4:
+exact hcolon r hr
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.Quotient.nontrivial_iff,
+      Ideal.span_singleton_eq_top, not_false_eq_true, ge_iff_le, smul_eq_mul, Ideal.mul_top, implies_true,
+      Order.add_one_le_iff, LinearMap.coe_comp, Function.comp_apply, LinearMap.toSpanSingleton_apply, Submodule.mkQ_apply,
+      Ideal.Quotient.mk_eq_mk, map_mul, φ]
+....
+line 181, col 4:
+rw [Submodule.map_sup]
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.Quotient.nontrivial_iff,
+      Ideal.span_singleton_eq_top, not_false_eq_true, ge_iff_le, smul_eq_mul, Ideal.mul_top, implies_true,
+      Order.add_one_le_iff, LinearMap.coe_comp, Function.comp_apply, LinearMap.toSpanSingleton_apply, Submodule.mkQ_apply,
+      Ideal.Quotient.mk_eq_mk, map_mul, Submodule.map_sup, Submodule.mkQ_map_self, bot_le, sup_of_le_left, φ]
+shortened proof!
+....
+line 200, col 6:
+simpa using hkerle
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.Quotient.nontrivial_iff,
+      Ideal.span_singleton_eq_top, not_false_eq_true, ge_iff_le, smul_eq_mul, Ideal.mul_top, implies_true,
+      Order.add_one_le_iff, LinearMap.coe_comp, Function.comp_apply, LinearMap.toSpanSingleton_apply, Submodule.mkQ_apply,
+      Ideal.Quotient.mk_eq_mk, map_mul, Submodule.map_sup, Submodule.mkQ_map_self, bot_le, sup_of_le_left,
+      Submodule.comap_id, φ]
+............
+line 226, col 33:
+omega
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 227, col 6:
+exact (Ideal.radical_mono hJm).trans_eq (maximalIdeal.isMaximal R).isPrime.radical
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Ideal.radical_eq_sInf, sInf_le, usr Set.mem_setOf_eq, Ideal.IsMaximal.isPrime']
+  [apply] grind =>
+    instantiate only [Ideal.radical_eq_sInf]
+    instantiate only [sInf_le]
+    instantiate only [usr Set.mem_setOf_eq]
+    instantiate only [Ideal.IsMaximal.isPrime']
+..
+line 231, col 18:
+omega
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.find_spec` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+......
+line 240, col 4:
+exact hmain
+* Try this:
+
+  [apply]   simp_all only [mem_maximalIdeal, mem_nonunits_iff, ne_eq, ge_iff_le, smul_eq_mul, Ideal.mul_top, implies_true,
+      Order.add_one_le_iff, LinearMap.coe_comp, Function.comp_apply, LinearMap.toSpanSingleton_apply, Submodule.mkQ_apply,
+      Ideal.Quotient.mk_eq_mk, map_mul, Submodule.map_sup, Submodule.mkQ_map_self, bot_le, sup_of_le_left, φ]
+.........
+line 254, col 8:
+exact hlt
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 255, col 8:
+exact absurd ⟨m, hm, heq.symm⟩ hcon
+* Try this:
+
+  [apply]     simp_all only [not_exists, not_and, Nat.succ_eq_add_one, lt_self_iff_false]
+    smt +mono [*]
+....
+line 259, col 16:
+simp
+* Try this:
+
+  [apply]   simp_all only [not_exists, not_and, zero_add, Std.le_refl]
+.
+line 261, col 8:
+have h2 := hlt (j + 1) (by omega)
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#4bf3]
+  [apply] grind only
+  [apply] grind => instantiate only [#4bf3]
+shortened proof!
+..
+line 264, col 4:
+have h4 := hC (C + 1 + 1)
+* Try these:
+  [apply] grind only [#4e5d]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#4e5d]
+    lia
+shortened proof!
+..
+line 269, col 83:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+................
+line 296, col 4:
+exact hbot
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 303, col 40:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 305, col 2:
+intro q r _
+* Try this:
+
+  [apply]     intro x
+    simp_all only [ne_eq, bot_le, isMax_iff_eq_top]
+    ext x_1 : 2
+    simp_all only [mem_maximalIdeal, mem_nonunits_iff]
+shortened proof!
+........
+line 324, col 4:
+intro I hpI
+* Try this:
+
+  [apply]     intro I a
+    simp_all only [Set.mem_setOf_eq, Ideal.comap_map_quotientMk, sup_of_le_right]
+shortened proof!
+..
+line 329, col 4:
+intro i
+* Try these:
+  [apply] grind only [!Ideal.isPrime_map_quotientMk_of_isPrime, #4c3c]
+  [apply] grind only [!Ideal.isPrime_map_quotientMk_of_isPrime]
+  [apply] grind => instantiate only [#4c3c, !Ideal.isPrime_map_quotientMk_of_isPrime]
+shortened proof!
+.....
+line 341, col 8:
+rw [← hcomap _ (hmono i.castSucc), he, hcomap _ (hmono i.succ)]
+* Try these:
+  [apply] grind only [#4c3c, #7380]
+  [apply] grind only
+  [apply] grind => instantiate only [#4c3c, #7380]
+..
+line 344, col 35:
+rw [ringKrullDim]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_setOf_eq]
+    rfl
+...
+line 355, col 4:
+intro R _ _ _ h
+* Try this:
+
+  [apply]     intro R inst inst_1 inst_2 a
+    simp_all only [CharP.cast_eq_zero]
+    apply DimensionTheorem.ringKrullDim_le_zero_of_growthLE_zero
+    simp_all only
+shortened proof!
+.......................
+line 382, col 75:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, mem_maximalIdeal, mem_nonunits_iff, ne_eq, Submodule.span_singleton_le_iff_mem,
+      not_false_eq_true, Nat.cast_add, Nat.cast_one]
+shortened proof!
+.

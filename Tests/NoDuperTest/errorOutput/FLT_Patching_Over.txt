@@ -1,0 +1,39 @@
+...
+line 62, col 4:
+exact Submodule.smul_mono le_rfl le_top
+* Try this:
+
+  [apply]   simp_all only [map_top, range_mkQ, Std.le_refl]
+.....
+line 68, col 4:
+rw [eq_comm, Submodule.map_top, LinearMap.range_eq_top]
+* Try this:
+
+  [apply]   simp_all only [map_top, range_mkQ]
+shortened proof!
+..........
+line 92, col 60:
+simpa using congr(f.symm $hy)
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.symm_apply_apply]
+......
+line 98, col 55:
+simpa using congr(f $hy)
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.apply_symm_apply]
+..........
+line 128, col 4:
+exact Submodule.smul_mono le_rfl le_top
+* Try this:
+
+  [apply]   simp_all only [Submodule.map_top, Submodule.range_mkQ, Std.le_refl]
+................................................................................................................
+line 319, col 46:
+exact sM
+* Try this:
+
+  [apply]     intro i
+    apply sM
+..................

@@ -1,0 +1,50 @@
+..
+line 38, col 2:
+exact lt_of_le_of_ne (Valuation.mem_integer_iff _ _ |>.1 ϖ.2) this
+* Try these:
+  [apply] grind only [!Valuation.integer.v_irreducible_lt_one]
+  [apply] grind => instantiate only [!Valuation.integer.v_irreducible_lt_one]
+..
+line 42, col 43:
+simp [h.ne_zero]
+* Try these:
+  [apply] grind only [!Valuation.integer.v_irreducible_pos]
+  [apply] grind => instantiate only [!Valuation.integer.v_irreducible_pos]
+..
+line 43, col 38:
+simp [h.ne_zero]
+* Try this:
+  [apply] grind only
+.
+line 44, col 2:
+omega
+* Try this:
+  [apply] grind only
+..
+line 50, col 4:
+simp [hx₀]
+* Try this:
+
+  [apply]     subst hx₀
+    simp_all only [zero_mem, ZeroMemClass.coe_zero, map_zero, zero_le]
+......
+line 65, col 4:
+simp only [pow_zero, Ideal.one_eq_top]
+* Try this:
+
+  [apply]     simp_all only [pow_zero, Ideal.one_eq_top]
+    grind only [Finite.of_subsingleton]
+shortened proof!
+..
+line 68, col 67:
+simp
+* Try this:
+
+  [apply]   simp_all only [le_add_iff_nonneg_right, zero_le]
+.....................
+line 116, col 4:
+simpa using hi
+* Try this:
+
+  [apply]   simp_all only [Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring, OrderMonoidIso.toMulEquiv_eq_coe,
+      Units.coe_mapEquiv, OrderMonoidIso.coe_mulEquiv, valueGroup₀_equiv_withZeroMulInt_apply, Set.mem_setOf_eq]

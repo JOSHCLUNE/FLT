@@ -1,0 +1,75 @@
+.
+line 49, col 44:
+simp
+* Try this:
+
+  [apply]   simp_all only [vecCons_one_one, Matrix.diagonal_one']
+.
+line 49, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [Matrix.diagonal_mul_diagonal, Matrix.diagonal_eq_diagonal_iff, Fin.forall_fin_two, Fin.isValue,
+      Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_fin_one, mul_one, and_self]
+.
+line 54, col 43:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, unipotent_zero_zero, map_one, unipotent_zero_one, unipotent_one_zero, map_zero, zero_lt_one,
+      unipotent_one_one, and_self]
+.
+line 54, col 54:
+simp
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, unipotent_zero_zero, unipotent_one_one, sub_self, map_zero, zero_lt_one]
+.......__..........
+line 98, col 6:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [map_zero, nonpos_iff_eq_zero, map_eq_zero, ZeroMemClass.coe_eq_zero, dvd_refl]
+............
+line 112, col 54:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue]
+..
+line 128, col 20:
+exact unipotentMulDiag (Units.mk0 α (by simpa)) x
+* Try this:
+
+  [apply]     rename_i α_1
+    simp_all only [ne_eq]
+    obtain ⟨val, property⟩ := α
+    obtain ⟨val_1, property_1⟩ := x
+    apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag
+    · exact α_1
+    · exact val
+............
+line 153, col 31:
+simpa
+* Try this:
+
+  [apply]   simp_all only [ne_eq, ZeroMemClass.coe_eq_zero, not_false_eq_true]
+............
+line 168, col 55:
+simp [H]
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, Fin.isValue, map_div₀, div_one]
+...
+line 170, col 38:
+simp [h] at H
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, Fin.isValue, map_zero, zero_ne_one, and_false]
+...
+line 180, col 77:
+simpa
+* Try this:
+
+  [apply]   simp_all only [ne_eq, ZeroMemClass.coe_eq_zero, not_false_eq_true]
+..

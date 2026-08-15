@@ -1,0 +1,11 @@
+..
+line 29, col 4:
+apply S.mul_mem (SetLike.coe_mem x) h
+* Try this:
+
+  [apply]     simp_all only [Subsemiring.coe_carrier_toSubmonoid, coe_toSubsemiring, SetLike.mem_coe]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    apply MulMemClass.mul_mem
+    · simp_all only
+    · simp_all only

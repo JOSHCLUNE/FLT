@@ -1,0 +1,2097 @@
+[{"tacticSucceeded": false,
+  "startLine": 174,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_add",
+  "oldText": "simp only [e, ← Complex.exp_add]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 175,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_add",
+  "oldText": "ring_nf",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 179,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_neg",
+  "oldText": "ring_nf",
+  "message": "Try this:\n\n  [apply]   simp_all only [mul_neg]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 178,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_neg",
+  "oldText": "simp only [e, ← Complex.exp_neg]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 182,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_intMul",
+  "oldText": "simp only [e, ← Complex.exp_int_mul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 183,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_intMul",
+  "oldText": "ring_nf",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 186,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_sub_intCast_mul",
+  "oldText":
+  "rw [sub_eq_add_neg, e_add, mul_comm, ← neg_mul, ← Int.cast_neg, e_intMul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 190,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_intCast_mul_natAbs",
+  "oldText": "nth_rw 1 [← Int.natAbs_of_nonneg hn, e_intMul, zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 194,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.e_neg_intCast_mul_natAbs",
+  "oldText":
+  "rw [← neg_mul, ← Int.cast_neg, ← Int.ofNat_natAbs_of_nonpos hn, e_intMul, zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 199,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.norm_e",
+  "oldText": "ring_nf",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [mul_zero, sub_zero, zero_mul, add_zero, mul_one, sub_self, zero_sub]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 197,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.norm_e",
+  "oldText":
+  "simp only [e, Complex.norm_exp, Complex.mul_re, Complex.mul_im, Complex.I_re, Complex.I_im,\n    Complex.ofReal_re, Complex.ofReal_im, Complex.re_ofNat, Complex.im_ofNat]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 202,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.norm_e_lt_one",
+  "oldText": "simp [norm_e, Real.exp_lt_one_iff, Real.pi_pos, hw]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 205,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.norm_e_lt_norm_e",
+  "oldText": "simp [norm_e, norm_e, Real.exp_lt_exp, Real.pi_pos, h]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 207,
+  "startCol": 59,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.two_pi_I_ne_zero",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, mul_eq_zero, OfNat.ofNat_ne_zero, ofReal_eq_zero, Real.pi_ne_zero, or_self, I_ne_zero,\n      not_false_eq_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 215,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.periodPair",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,\n      one_ne_zero, not_false_eq_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 216,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.periodPair",
+  "oldText": "simpa using congrArg Complex.im h.symm",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,\n      real_smul, mul_one, Matrix.cons_val_zero]\n    subst h\n    simp_all only [ofReal_im, not_true_eq_false]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 215,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.periodPair",
+  "oldText": "refine linearIndependent_fin2.mpr ⟨by simp, fun a h ↦ hτ ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 227,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_lattice_prod",
+  "oldText":
+  "refine (((periodPair τ hτ).latticeEquivProd.symm.toEquiv.hasSum_iff).mpr h).congr_fun fun p ↦ ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 228,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_lattice_prod",
+  "oldText": "simp [Function.comp_apply, PeriodPair.latticeEquiv_symm_apply]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 265,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText": "ring",
+  "message": "Try these:\n  [apply] grind only\n  [apply] grind => ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 261,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText":
+  "have h := (hasSum_choose_mul_geometric_of_norm_lt_one 2 hr).mul_left (r ^ 2)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 262,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText":
+  "have heq : (fun n ↦ r ^ 2 * ((n + 2).choose 2 * r ^ n)) =\n      fun n ↦ (n + 2).choose 2 * r ^ (n + 2) := by\n    funext n\n    ring",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 264,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText": "funext n",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 266,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText": "rw [heq] at h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 267,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_choose_two_mul_geometric",
+  "oldText":
+  "simpa [Finset.sum_range_succ] using (hasSum_nat_add_iff (f := fun n ↦ n.choose 2 * r ^ n) 2).mp h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 276,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "rw [sub_eq_zero] at hr1",
+  "message":
+  "Try these:\n  [apply] grind only [!norm_sub_norm_le, Complex.norm_map_zero', !one_le_norm_one, !norm_sub_pos_iff]\n  [apply] grind =>\n    instantiate only [!norm_sub_norm_le, Complex.norm_map_zero', !one_le_norm_one]\n    instantiate only [!norm_sub_pos_iff]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 289,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "ring",
+  "message": "Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 285,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "ring",
+  "message": "Try these:\n  [apply] grind only\n  [apply] grind => ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 274,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText":
+  "have hr1 : (1 : ℂ) - r ≠ 0 := by\n    intro hr1\n    rw [sub_eq_zero] at hr1\n    simp [← hr1] at hr",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 275,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "intro hr1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 279,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText":
+  "have h3 := ((hasSum_choose_two_mul_geometric hr).mul_left 2).add\n    (hasSum_coe_mul_geometric_of_norm_lt_one hr)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 281,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText":
+  "have heq : (fun n : ℕ ↦ 2 * (((n.choose 2 : ℕ) : ℂ) * r ^ n) + (n : ℂ) * r ^ n) =\n      fun n : ℕ ↦ (n : ℂ) ^ 2 * r ^ n := by\n    funext n\n    rw [Nat.cast_choose_two]\n    ring",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 283,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "funext n",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 284,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "rw [Nat.cast_choose_two]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 286,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "rw [heq] at h3",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 287,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "rw [h3.tsum_eq]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 288,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_sq_mul_geometric_of_norm_lt_one",
+  "oldText": "field_simp",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 298,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_pow_succ",
+  "oldText":
+  "simpa [one_div, e] using EisensteinSeries.qExpansion_identity hk (⟨w, hw⟩ : UpperHalfPlane)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 306,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.sum_int_inv_sq",
+  "oldText":
+  "simp [sum_int_inv_pow_succ w hw le_rfl, tsum_coe_mul_geometric_of_norm_lt_one (norm_e_lt_one hw)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 319,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.sum_int_inv_cube",
+  "oldText": "ring",
+  "message": "Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 316,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.sum_int_inv_cube",
+  "oldText": "have h := sum_int_inv_pow_succ w hw one_le_two (k := 2)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 317,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.sum_int_inv_cube",
+  "oldText":
+  "simp only [Nat.reduceAdd, Nat.factorial_two, Nat.cast_ofNat] at h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 318,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.sum_int_inv_cube",
+  "oldText": "rw [h, tsum_sq_mul_geometric_of_norm_lt_one (norm_e_lt_one hw)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 325,
+  "startCol": 15,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_int_inv_pow",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [Int.cast_one, one_mul, zpow_natCast]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 324,
+  "startCol": 50,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_int_inv_pow",
+  "oldText": "exact_mod_cast hk",
+  "message": "Try this:\n\n  [apply]   simp_all only [Nat.ofNat_le_cast]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 329,
+  "startCol": 55,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_comp_neg",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [Equiv.neg_apply, Function.comp_apply]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 333,
+  "startCol": 74,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_int_inv_pow_sub",
+  "oldText": "simp [← sub_eq_add_neg]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [Int.cast_neg, inv_inj]\n    rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 333,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_int_inv_pow_sub",
+  "oldText":
+  "refine (summable_comp_neg (summable_int_inv_pow w hk)).congr fun m ↦ by simp [← sub_eq_add_neg]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 338,
+  "startCol": 2,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_sub",
+  "oldText": "refine tsum_congr fun m ↦ by simp [← sub_eq_add_neg]",
+  "message": "Try this:\n\n  [apply]     simp_all only [Int.cast_neg]\n    rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 337,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_sub",
+  "oldText": "rw [← tsum_comp_neg fun m : ℤ ↦ ((w + m) ^ k)⁻¹]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 346,
+  "startCol": 39,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg",
+  "oldText": "ring",
+  "message":
+  "this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 343,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg",
+  "oldText": "rw [← tsum_comp_neg fun m : ℤ ↦ ((-w + m) ^ k)⁻¹]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 344,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg",
+  "oldText": "refine tsum_congr fun m ↦ ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 345,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg",
+  "oldText": "push_cast",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 346,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg",
+  "oldText": "rw [show -w + -(m : ℂ) = -(w + m) by ring, hk.neg_pow]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 354,
+  "startCol": 39,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg_odd",
+  "oldText": "ring",
+  "message":
+  "this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 351,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg_odd",
+  "oldText": "rw [← tsum_neg, ← tsum_comp_neg fun m : ℤ ↦ -((-w + m) ^ k)⁻¹]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 352,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg_odd",
+  "oldText": "refine tsum_congr fun m ↦ ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 353,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg_odd",
+  "oldText": "push_cast",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 354,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_int_inv_pow_neg_odd",
+  "oldText":
+  "rw [show -w + -(m : ℂ) = -(w + m) by ring, hk.neg_pow, inv_neg, neg_neg]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 361,
+  "startCol": 54,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_pow",
+  "oldText": "rw [zero_add]",
+  "message": "Try this:\n\n  [apply]   simp_all only [zero_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 360,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_pow",
+  "oldText": "rw [two_mul_riemannZeta_eq_tsum_int_inv_pow_of_even hk hk2]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 361,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_pow",
+  "oldText":
+  "exact ((summable_int_inv_pow 0 hk).congr fun m ↦ by rw [zero_add]).hasSum",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 370,
+  "startCol": 2,
+  "shortenedStepsCount": 3,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_div_one_sub_inv_sq",
+  "oldText": "rcases eq_or_ne v 1 with rfl | hv1",
+  "message":
+  "Try these:\n  [apply] grind only [#6dd0, #6d83]\n  [apply] grind only\n  [apply] grind =>\n    cases #6dd0\n    · ring\n      ring\n    · cases #6d83 <;> ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 386,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText":
+  "exact mul_le_mul_of_nonneg_left h2 (pow_nonneg (norm_nonneg v) j)",
+  "message":
+  "Try these:\n  [apply] grind only [!norm_nonneg, !pow_nonneg, mul_le_mul_of_nonneg_left, !Complex.norm_nonneg]\n  [apply] grind => instantiate only [!norm_nonneg, !pow_nonneg, mul_le_mul_of_nonneg_left, !Complex.norm_nonneg]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 378,
+  "startCol": 34,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText": "linarith",
+  "message": "Try this:\n\n  [apply]   simp_all only [sub_pos]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 381,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText": "rw [norm_one] at h2",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [sub_pos, norm_one, tsub_le_iff_right, ge_iff_le]\n    grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 378,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText": "have h0 : (0 : ℝ) < 1 - a := by linarith",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 379,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText":
+  "have h1 : 1 - a ≤ ‖1 - v‖ := by\n    have h2 := norm_sub_norm_le (1 : ℂ) v\n    rw [norm_one] at h2\n    linarith",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 380,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText": "have h2 := norm_sub_norm_le (1 : ℂ) v",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 383,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText":
+  "have h2 : (1 - a) ^ k ≤ ‖1 - v‖ ^ k := pow_le_pow_left₀ h0.le h1 k",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 384,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_pow_div_one_sub_pow_le",
+  "oldText":
+  "rw [norm_div, norm_pow, norm_pow, div_le_div_iff₀\n    (lt_of_lt_of_le (pow_pos h0 k) h2) (pow_pos h0 k)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 393,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText":
+  "apply Summable.of_norm_bounded ((summable_geometric_of_lt_one (norm_nonneg x) hx).mul_left\n    (‖x * y‖ / (1 - ‖x * y‖) ^ k))",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 395,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText": "intro n",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 396,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText":
+  "have hva : ‖x ^ (n + 1) * y‖ ≤ ‖x * y‖ := by\n    rw [pow_succ, mul_assoc, norm_mul, norm_pow]\n    exact mul_le_of_le_one_left (norm_nonneg _) (pow_le_one₀ (norm_nonneg x) hx.le)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 397,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText": "rw [pow_succ, mul_assoc, norm_mul, norm_pow]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 398,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText":
+  "exact mul_le_of_le_one_left (norm_nonneg _) (pow_le_one₀ (norm_nonneg x) hx.le)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 399,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText": "refine (norm_pow_div_one_sub_pow_le hva hxy j k).trans ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 400,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText":
+  "rw [div_mul_eq_mul_div, mul_comm (‖x * y‖), ← norm_pow x, ← norm_mul, ← mul_assoc, ← pow_succ]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 401,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText": "gcongr",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 402,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_aux'",
+  "oldText":
+  "exact pow_le_of_le_one (norm_nonneg _) (hva.trans hxy.le) (Nat.one_le_iff_ne_zero.mp hj)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 415,
+  "startCol": 65,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_sq'",
+  "oldText": "simpa using h",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 417,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_sq'",
+  "oldText": "exact sum_int_inv_sq w h",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq]\n    apply TateCurve.Blueprint.sum_int_inv_sq\n    simp_all only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 414,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_sq'",
+  "oldText": "rcases hw.lt_or_gt with h | h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 415,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_sq'",
+  "oldText":
+  "rw [tsum_int_inv_pow_neg w even_two, sum_int_inv_sq (-w) (by simpa using h), e_neg,\n      inv_div_one_sub_inv_sq (e_ne_zero w)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 423,
+  "startCol": 70,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_sq",
+  "oldText": "ring",
+  "message": "Try these:\n  [apply] grind only\n  [apply] grind => ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 422,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_sq",
+  "oldText":
+  "simpa [Nat.cast_ofNat, riemannZeta_two,\n    show (2 : ℂ) * ((Real.pi : ℂ) ^ 2 / 6) = (Real.pi : ℂ) ^ 2 / 3 by ring] using\n      hasSum_int_inv_pow le_rfl even_two",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 430,
+  "startCol": 2,
+  "shortenedStepsCount": 3,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_pnat_of_zero",
+  "oldText": "rw [tsum_pnat_eq_tsum_succ]",
+  "message":
+  "Try this:\n\n  [apply]     apply tsum_pnat_eq_tsum_of_eq_zero\n    simp_all only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 439,
+  "startCol": 58,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_pnat_coe_mul_geometric",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [CharP.cast_eq_zero, pow_zero, mul_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 439,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_pnat_coe_mul_geometric",
+  "oldText":
+  "rw [tsum_pnat_of_zero (fun c : ℕ ↦ (c : ℂ) * x ^ c) (by simp),\n    tsum_coe_mul_geometric_of_norm_lt_one hx]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 445,
+  "startCol": 80,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_nat",
+  "oldText": "rw [mul_one]",
+  "message": "Try this:\n\n  [apply]   simp_all only [mul_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 445,
+  "startCol": 45,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_nat",
+  "oldText": "simpa using hq1",
+  "message": "Try this:\n\n  [apply]   simp_all only [mul_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 463,
+  "startCol": 66,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [pow_one, ArithmeticFunction.map_zero, CharP.cast_eq_zero, pow_zero, mul_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 460,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "intro c",
+  "message":
+  "Try these:\n  [apply] grind only [pow_mul]\n  [apply] grind => instantiate only [pow_mul]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 451,
+  "startCol": 68,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [pow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 451,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText":
+  "rw [← tsum_pnat_of_zero (fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2) (by simp)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 452,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText":
+  "have h1 : ∀ d : ℕ+, q ^ (d : ℕ) / (1 - q ^ (d : ℕ)) ^ 2\n      = ∑' c : ℕ+, (c : ℂ) ^ 1 * q ^ ((d : ℕ) * (c : ℕ)) := by\n    intro d\n    have hqd : ‖q ^ (d : ℕ)‖ < 1 := by\n      rw [norm_pow]\n      exact pow_lt_one₀ (norm_nonneg q) hq1 d.pos.ne'\n    rw [← tsum_pnat_coe_mul_geometric hqd]\n    apply tsum_congr\n    intro c\n    rw [pow_one, ← pow_mul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 454,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "intro d",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 455,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText":
+  "have hqd : ‖q ^ (d : ℕ)‖ < 1 := by\n      rw [norm_pow]\n      exact pow_lt_one₀ (norm_nonneg q) hq1 d.pos.ne'",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 456,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "rw [norm_pow]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 457,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "exact pow_lt_one₀ (norm_nonneg q) hq1 d.pos.ne'",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 458,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "rw [← tsum_pnat_coe_mul_geometric hqd]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 459,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText": "apply tsum_congr",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 462,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat",
+  "oldText":
+  "rw [tsum_congr h1, tsum_prod_pow_eq_tsum_sigma 1 hq1, sAn,\n    tsum_pnat_of_zero (fun n : ℕ ↦ ((σ 1 n : ℕ) : ℂ) * q ^ n) (by simp)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 471,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_int",
+  "oldText": "rw [zpow_neg, inv_div_one_sub_inv_sq (zpow_ne_zero _ hq0)]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, zpow_natCast, zpow_neg]\n    grind only [#d8cb, #5ddb, #4843]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 468,
+  "startCol": 45,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_int",
+  "oldText": "rw [zpow_natCast]",
+  "message": "Try this:\n\n  [apply]   simp_all only [ne_eq, zpow_natCast]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 467,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_int",
+  "oldText":
+  "have hpos : Summable fun n : ℕ ↦ q ^ (n : ℤ) / (1 - q ^ (n : ℤ)) ^ 2 :=\n    (summable_corr_nat hq1).congr fun n ↦ by rw [zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 469,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_int",
+  "oldText": "rw [summable_int_iff_summable_nat_and_neg]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 470,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_corr_int",
+  "oldText": "refine ⟨hpos, hpos.congr fun n ↦ ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 483,
+  "startCol": 48,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText": "push_cast",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, zpow_natCast, Nat.cast_add, Nat.cast_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 490,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "rw [show (fun n : ℕ ↦ q ^ ((n : ℤ)) / (1 - q ^ ((n : ℤ))) ^ 2)\n        = fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2 from funext fun n ↦ by rw [zpow_natCast],\n      tsum_V_nat hq1]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, zpow_natCast, neg_add_rev, Int.reduceNeg]\n    apply _private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_V_nat\n    simp_all only [Int.reduceNeg]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 478,
+  "startCol": 45,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText": "rw [zpow_natCast]",
+  "message": "Try this:\n\n  [apply]   simp_all only [ne_eq, zpow_natCast]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 493,
+  "startCol": 2,
+  "shortenedStepsCount": 4,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "have h2 : ∑' n : ℕ, q ^ (n + 1) / (1 - q ^ (n + 1)) ^ 2 = sAn 1 q := by\n    rw [← tsum_pnat_eq_tsum_succ (f := fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2),\n      tsum_pnat_of_zero (fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2) (by simp), tsum_V_nat hq1]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, zpow_natCast, neg_add_rev, Int.reduceNeg]\n    grind only [tsum_mul_left, Summable.tsum_eq_zero_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 477,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "have hpos : Summable fun n : ℕ ↦ q ^ (n : ℤ) / (1 - q ^ (n : ℤ)) ^ 2 :=\n    (summable_corr_nat hq1).congr fun n ↦ by rw [zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 479,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "have hterm : ∀ n : ℕ, q ^ (-((n : ℤ) + 1)) / (1 - q ^ (-((n : ℤ) + 1))) ^ 2\n      = q ^ (n + 1) / (1 - q ^ (n + 1)) ^ 2 := by\n    intro n\n    rw [zpow_neg, inv_div_one_sub_inv_sq (zpow_ne_zero _ hq0),\n      show ((n : ℤ) + 1) = ((n + 1 : ℕ) : ℤ) by push_cast; ring, zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 481,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText": "intro n",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 482,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "rw [zpow_neg, inv_div_one_sub_inv_sq (zpow_ne_zero _ hq0),\n      show ((n : ℤ) + 1) = ((n + 1 : ℕ) : ℤ) by push_cast; ring, zpow_natCast]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 484,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "have hneg : Summable fun n : ℕ ↦ q ^ (-((n : ℤ) + 1)) / (1 - q ^ (-((n : ℤ) + 1))) ^ 2 := by\n    apply Summable.congr _ fun n ↦ (hterm n).symm\n    apply (summable_nat_add_iff 1).mpr (summable_corr_nat hq1)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 485,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText": "apply Summable.congr _ fun n ↦ (hterm n).symm",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 486,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText": "apply (summable_nat_add_iff 1).mpr (summable_corr_nat hq1)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 487,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "rw [tsum_of_nat_of_neg_add_one (f := fun n : ℤ ↦ q ^ n / (1 - q ^ n) ^ 2) hpos hneg,\n    tsum_congr hterm]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 489,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.tsum_corr_int",
+  "oldText":
+  "have h1 : ∑' n : ℕ, q ^ ((n : ℤ)) / (1 - q ^ ((n : ℤ))) ^ 2 = sAn 1 q := by\n    rw [show (fun n : ℕ ↦ q ^ ((n : ℤ)) / (1 - q ^ ((n : ℤ))) ^ 2)\n        = fun n : ℕ ↦ q ^ n / (1 - q ^ n) ^ 2 from funext fun n ↦ by rw [zpow_natCast],\n      tsum_V_nat hq1]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 502,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_mul_lt_one",
+  "oldText": "rw [norm_mul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 503,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_mul_lt_one",
+  "oldText": "nlinarith [norm_nonneg q, norm_nonneg u]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 508,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_mul_inv_lt_one",
+  "oldText": "rw [norm_mul, norm_inv, ← div_eq_mul_inv]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 509,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.norm_mul_inv_lt_one",
+  "oldText": "exact (div_lt_one (hq0.trans hqu)).mpr hqu",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 514,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.zpow_neg_natCast_mul",
+  "oldText": "rw [mul_inv, inv_inv, zpow_neg, zpow_natCast]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [zpow_neg, zpow_natCast, mul_inv_rev, inv_inv]\n    grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 524,
+  "startCol": 19,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText": "rw [zpow_natCast]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, Nat.cast_add, Nat.cast_one]\n    rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 519,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText":
+  "have hu0 : u ≠ 0 := norm_pos_iff.mp ((norm_nonneg q).trans_lt hqu)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 520,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText": "refine summable_int_iff_summable_nat_and_neg.mpr ⟨?_, ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 522,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText":
+  "exact (summable_nat_add_iff 1).mp\n      ((summable_aux (hqu.trans hu1) (norm_mul_lt_one hqu hu1)).congr\n        fun n ↦ by rw [zpow_natCast])",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 526,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText":
+  "refine Summable.congr (f := fun n : ℕ ↦ q ^ n * u⁻¹ / (1 - q ^ n * u⁻¹) ^ 2)\n      ((summable_nat_add_iff 1).mp (((summable_aux (hqu.trans hu1)\n        (norm_mul_inv_lt_one (norm_pos_iff.mpr hq0) hqu))).congr fun n ↦ rfl)) fun n ↦ ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 529,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.summable_V",
+  "oldText":
+  "rw [zpow_neg_natCast_mul, inv_div_one_sub_inv_sq\n      (mul_ne_zero (pow_ne_zero _ hq0) (inv_ne_zero hu0))]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 537,
+  "startCol": 4,
+  "shortenedStepsCount": 2,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText":
+  "exact (show 0 < z.im - n * τ.im by nlinarith [show (n : ℝ) ≤ 0 by exact_mod_cast h]).ne'",
+  "message":
+  "this parameter is redundant, environment already contains `abs_mul` annotated with `@[grind =]`Try these:\n  [apply] grind only [LT.lt.ne, !sub_sub_cancel, lt_trichotomy, !Int.cast_pos, mul_neg_of_neg_of_pos]\n  [apply] grind =>\n    instantiate only [LT.lt.ne, !sub_sub_cancel, lt_trichotomy, !Int.cast_pos]\n    ring\n    instantiate only [mul_neg_of_neg_of_pos, LT.lt.ne]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 535,
+  "startCol": 47,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText": "simp [Complex.sub_im, Complex.mul_im]",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [sub_im, mul_im, intCast_re, intCast_im, zero_mul, add_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 535,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText":
+  "rw [show (z - n * τ).im = z.im - n * τ.im by simp [Complex.sub_im, Complex.mul_im]]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 536,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText": "rcases le_or_gt n 0 with h | h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 538,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText":
+  "exact (show z.im - n * τ.im < 0 by nlinarith [show (1 : ℝ) ≤ (n : ℝ) by exact_mod_cast h]).ne",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 538,
+  "startCol": 39,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText": "nlinarith [show (1 : ℝ) ≤ (n : ℝ) by exact_mod_cast h]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 538,
+  "startCol": 76,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.im_sub_int_mul_ne_zero",
+  "oldText": "exact_mod_cast h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 549,
+  "startCol": 28,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText": "norm_num",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [Int.cast_zero, zero_mul, zero_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 552,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText":
+  "simpa [Complex.mul_im] using mul_ne_zero (Int.cast_ne_zero.mpr hn) hτ.ne'",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero, mul_eq_zero, Int.cast_eq_zero, false_or]\n    apply Aesop.BuiltinRules.not_intro\n    intro a\n    simp_all only [lt_self_iff_false]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 550,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [zpow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero, mul_zero,\n      ↓reduceIte, zero_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 547,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText": "rcases eq_or_ne n 0 with rfl | hn",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 548,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText":
+  "rw [show ∑' m : ℤ, (((((0 : ℤ) : ℂ)) * τ + m) ^ 2)⁻¹ = ∑' m : ℤ, ((m : ℂ) ^ 2)⁻¹ from\n      tsum_congr fun m ↦ by norm_num, hasSum_int_inv_sq.tsum_eq]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 551,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.corrector_row_eval",
+  "oldText":
+  "rw [sum_int_inv_sq' _ (show ((n : ℂ) * τ).im ≠ 0 by\n        simpa [Complex.mul_im] using mul_ne_zero (Int.cast_ne_zero.mpr hn) hτ.ne'),\n      e_intMul, if_neg hn, add_zero]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 617,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "ring",
+  "message": "Try these:\n  [apply] grind only\n  [apply] grind => ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 598,
+  "startCol": 28,
+  "shortenedStepsCount": 1,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "congr 1",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, inv_inj]\n    grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 616,
+  "startCol": 43,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "ring",
+  "message": "Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 585,
+  "startCol": 67,
+  "shortenedStepsCount": 1,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "congr 1",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, inv_inj]\n    grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 573,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "have hq0 : e τ ≠ 0 := e_ne_zero τ",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 574,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "have hu1 : ‖e z‖ < 1 := norm_e_lt_one hz",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 575,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "have hqu : ‖e τ‖ < ‖e z‖ := norm_e_lt_norm_e hzτ",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 576,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "have hq1 : ‖e τ‖ < 1 := hqu.trans hu1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 578,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have h0 : HasSum (fun p : ℤ × ℤ ↦\n      ((z - (p.1 * τ + p.2)) ^ 2)⁻¹ - (((p.1 * τ + p.2 : ℂ)) ^ 2)⁻¹)\n      (℘[periodPair τ hτ.ne'] z) := by\n    refine hasSum_lattice_prod hτ.ne' (f := fun w ↦ ((z - w) ^ 2)⁻¹ - (w ^ 2)⁻¹) ?_\n    simpa only [one_div] using (periodPair τ hτ.ne').hasSum_weierstrassP z",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 581,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "refine hasSum_lattice_prod hτ.ne' (f := fun w ↦ ((z - w) ^ 2)⁻¹ - (w ^ 2)⁻¹) ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 582,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "simpa only [one_div] using (periodPair τ hτ.ne').hasSum_weierstrassP z",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 584,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hrowsummA : ∀ n : ℤ, Summable fun m : ℤ ↦ ((z - (n * τ + m)) ^ 2)⁻¹ := fun n ↦\n    (summable_int_inv_pow_sub (z - n * τ) le_rfl).congr fun m ↦ by congr 1; ring",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 586,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hrowsummB : ∀ n : ℤ, Summable fun m : ℤ ↦ (((n * τ + m : ℂ)) ^ 2)⁻¹ := fun n ↦\n    summable_int_inv_pow (n * τ) le_rfl",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 589,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hrowval : ∀ n : ℤ,\n      ∑' m : ℤ, (((z - (n * τ + m)) ^ 2)⁻¹ - (((n * τ + m : ℂ)) ^ 2)⁻¹)\n      = (2 * (Real.pi : ℂ) * I) ^ 2 * (e τ ^ (-n) * e z / (1 - e τ ^ (-n) * e z) ^ 2)\n        - ((2 * (Real.pi : ℂ) * I) ^ 2 * (e τ ^ n / (1 - e τ ^ n) ^ 2)\n            + if n = 0 then (Real.pi : ℂ) ^ 2 / 3 else 0) := by\n    intro n\n    rw [Summable.tsum_sub (hrowsummA n) (hrowsummB n), corrector_row_eval hτ n]\n    congr 1\n    rw [show ∑' m : ℤ, ((z - (n * τ + m)) ^ 2)⁻¹ = ∑' m : ℤ, (((z - n * τ) - m) ^ 2)⁻¹ from\n      tsum_congr fun m ↦ by congr 1; ring, tsum_int_inv_pow_sub,\n      sum_int_inv_sq' _ (im_sub_int_mul_ne_zero hτ hz hzτ n), e_sub_intCast_mul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 594,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "intro n",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 595,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "rw [Summable.tsum_sub (hrowsummA n) (hrowsummB n), corrector_row_eval hτ n]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 596,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "congr 1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 597,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "rw [show ∑' m : ℤ, ((z - (n * τ + m)) ^ 2)⁻¹ = ∑' m : ℤ, (((z - n * τ) - m) ^ 2)⁻¹ from\n      tsum_congr fun m ↦ by congr 1; ring, tsum_int_inv_pow_sub,\n      sum_int_inv_sq' _ (im_sub_int_mul_ne_zero hτ hz hzτ n), e_sub_intCast_mul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 601,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hT1 : Summable fun n : ℤ ↦\n      (2 * (Real.pi : ℂ) * I) ^ 2 * (e τ ^ (-n) * e z / (1 - e τ ^ (-n) * e z) ^ 2) :=\n    (summable_comp_neg (summable_V hq0 hqu hu1)).mul_left ((2 * (Real.pi : ℂ) * I) ^ 2)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 604,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hT2 : Summable fun n : ℤ ↦\n      (2 * (Real.pi : ℂ) * I) ^ 2 * (e τ ^ n / (1 - e τ ^ n) ^ 2) :=\n    Summable.mul_left _ (summable_corr_int hq0 hq1)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 607,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "have hT3 : Summable fun n : ℤ ↦ (if n = 0 then (Real.pi : ℂ) ^ 2 / 3 else 0) :=\n    (hasSum_ite_eq (0 : ℤ) ((Real.pi : ℂ) ^ 2 / 3)).summable",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 610,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText":
+  "rw [← h0.tsum_eq, h0.summable.tsum_prod' fun n ↦ (hrowsummA n).sub (hrowsummB n),\n    tsum_congr hrowval, Summable.tsum_sub hT1 (hT2.add hT3), Summable.tsum_add hT2 hT3,\n    tsum_mul_left, tsum_mul_left, tsum_ite_eq,\n    tsum_comp_neg fun n : ℤ ↦ e τ ^ n * e z / (1 - e τ ^ n * e z) ^ 2,\n    tsum_corr_int hq0 hq1, XAn,\n    show (2 * (Real.pi : ℂ) * I) ^ 2 = -4 * (Real.pi : ℂ) ^ 2 by\n      rw [mul_pow, mul_pow, Complex.I_sq]; ring]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 616,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "TateCurve.Blueprint.weierstrassP_q_expansion",
+  "oldText": "rw [mul_pow, mul_pow, Complex.I_sq]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 624,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_sq_div_one_sub_inv_cube",
+  "oldText":
+  "field_simp [sub_ne_zero.mpr (Ne.symm hv1), one_sub_inv_ne_zero hv1]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq, inv_pow]\n    grind only [pow_eq_zero_iff, sub_eq_zero, #2bfa]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 623,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_sq_div_one_sub_inv_cube",
+  "oldText": "norm_num",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_pow, sub_self, OfNat.ofNat_ne_zero, zero_pow,\n      div_zero, neg_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 622,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_sq_div_one_sub_inv_cube",
+  "oldText": "rcases eq_or_ne v 1 with rfl | hv1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 635,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_mul_one_add_inv_div_one_sub_inv_cube",
+  "oldText": "ring",
+  "message": "Try this:\n  [apply] grind only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 633,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_mul_one_add_inv_div_one_sub_inv_cube",
+  "oldText": "norm_num",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_mul, sub_self, OfNat.ofNat_ne_zero, zero_pow,\n      div_zero, neg_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 632,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_mul_one_add_inv_div_one_sub_inv_cube",
+  "oldText": "rcases eq_or_ne v 1 with rfl | hv1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 634,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.inv_mul_one_add_inv_div_one_sub_inv_cube",
+  "oldText":
+  "field_simp [sub_ne_zero.mpr (Ne.symm hv1), one_sub_inv_ne_zero hv1]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 644,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.div_sq_add_two_mul_div_cube",
+  "oldText": "field_simp [sub_ne_zero.mpr (Ne.symm hv1)]",
+  "message":
+  "Try these:\n  [apply] grind only [pow_eq_zero_iff, sub_eq_zero]\n  [apply] grind =>\n    instantiate only [pow_eq_zero_iff, sub_eq_zero]\n    ring",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 643,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.div_sq_add_two_mul_div_cube",
+  "oldText": "norm_num",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero, one_pow, mul_zero, add_zero,\n      one_mul]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 642,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.div_sq_add_two_mul_div_cube",
+  "oldText": "rcases eq_or_ne v 1 with rfl | hv1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 656,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText": "ring",
+  "message": "Try this:\n\n  [apply]   simp_all only [ne_eq, mul_neg, neg_neg]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 654,
+  "startCol": 79,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText": "simpa using h",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 657,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText": "exact sum_int_inv_cube w h",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ne_eq]\n    apply TateCurve.Blueprint.sum_int_inv_cube\n    simp_all only",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 654,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText": "norm_num",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ne_eq, mul_one, Nat.reduceAdd]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 653,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText": "rcases hw.lt_or_gt with h | h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 654,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.sum_int_inv_cube'",
+  "oldText":
+  "rw [tsum_int_inv_pow_neg_odd w ⟨1, by norm_num⟩, sum_int_inv_cube (-w) (by simpa using h),\n      e_neg, inv_mul_one_add_inv_div_one_sub_inv_cube (e_ne_zero w)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/KnownIn1980s/EllipticCurves/TateCurveConstruction.lean"}]

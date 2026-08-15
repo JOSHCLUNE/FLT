@@ -1,0 +1,71 @@
+..
+line 82, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 88, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 98, col 12:
+rfl
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+...
+line 104, col 4:
+rw [inv_inv, mul_inv_cancel_left]
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearMap.comp_apply, inv_inv, mul_inv_cancel_left]
+shortened proof!
+.
+line 115, col 52:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 116, col 27:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 122, col 2:
+subst h1
+* Try this:
+
+  [apply]     subst h1 h2
+    rfl
+shortened proof!
+.
+line 126, col 28:
+lia
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 143, col 12:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 151, col 74:
+rw [ih]
+* Try this:
+
+  [apply]   simp_all only
+...............
+line 226, col 58:
+simp
+* Try these:
+  [apply] grind only [CochainComplex.next]
+  [apply] grind => instantiate only [CochainComplex.next]
+.WARNING: FLT/Mathlib/RepresentationTheory/Homological/ContCohomology/Basic.lean was killed (exit code 137), likely by the 8G MemoryMax cap

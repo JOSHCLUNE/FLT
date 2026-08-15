@@ -1,0 +1,24 @@
+.
+line 27, col 21:
+ext a b
+* Try this:
+
+  [apply]     simp_all only
+    apply Monoid.ext
+    exact e
+shortened proof!
+..
+line 32, col 30:
+exact congr_fun (congr_fun e a) b
+* Try this:
+
+  [apply]   smt +mono [*]
+...........................
+line 166, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaModuleContinuousSMulOfT2Space_fLT
+shortened proof!
+.....WARNING: FLT/Patching/Utils/StructureFiniteness.lean was killed (exit code 137), likely by the 8G MemoryMax cap

@@ -1,0 +1,136 @@
+......
+line 40, col 6:
+rw [mul_one_div_pow_lt_iff _ (by linarith)]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, one_div, AbsoluteValue.map_mul, map_inv₀, AbsoluteValue.map_pow]
+    obtain ⟨left, right⟩ := hx₀
+    grind only [!one_le_pow₀, mul_inv_lt_iff₀]
+shortened proof!
+....
+line 45, col 6:
+have := abs_eq_self.2 (w.nonneg _) ▸ hw
+* Try these:
+  [apply] grind only [!AbsoluteValue.nonneg, tendsto_pow_atTop_nhds_zero_of_lt_one]
+  [apply] grind => instantiate only [!AbsoluteValue.nonneg, tendsto_pow_atTop_nhds_zero_of_lt_one]
+shortened proof!
+.....
+line 52, col 2:
+linarith [tendsto_nhds_unique hcontr tendsto_const_nhds, w.pos hx₀.1]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, tendsto_const_nhds_iff, map_eq_zero]
+.....
+line 67, col 4:
+exact this b hb₁ a ha hb₂.symm <| lt_of_le_of_ne (not_lt.1 hwlog) hb₂.symm
+* Try these:
+  [apply] grind only [#26f5]
+  [apply] grind only
+  [apply] grind => instantiate only [#26f5]
+............
+line 78, col 47:
+simp only [Nat.cast_pos, q.den_pos]
+* Try these:
+  [apply] grind only [!Rat.den_pos, !Nat.cast_pos]
+  [apply] grind => instantiate only [!Rat.den_pos, !Nat.cast_pos]
+.
+line 79, col 72:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 80, col 20:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 80, col 61:
+linarith
+* Try this:
+  [apply] grind only
+......
+line 86, col 28:
+simp only [Nat.cast_pos, q.den_pos]
+* Try these:
+  [apply] grind only [!Rat.den_pos, !Nat.cast_pos]
+  [apply] grind => instantiate only [!Rat.den_pos, !Nat.cast_pos]
+...
+line 89, col 40:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, Real.log_zpow, Real.log_pow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 89, col 66:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 90, col 33:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 91, col 2:
+exact not_lt_of_gt ((h _).1 h₀) h₁
+* Try these:
+  [apply] grind only [#b1d8]
+  [apply] grind only
+  [apply] grind => instantiate only [#b1d8]
+......
+line 101, col 72:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 101, col 86:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 102, col 40:
+linarith
+* Try this:
+  [apply] grind only
+.......
+line 118, col 66:
+linarith
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+.....
+line 124, col 10:
+rw [← one_lt_inv_iff₀, ← map_inv₀, not_lt] at h₂
+* Try these:
+  [apply] grind only [!AbsoluteValue.pos_iff, AbsoluteValue.ne_zero_iff, #8b08]
+  [apply] grind only [!AbsoluteValue.pos_iff, AbsoluteValue.ne_zero_iff]
+  [apply] grind => instantiate only [#8b08, !AbsoluteValue.pos_iff, AbsoluteValue.ne_zero_iff]
+shortened proof!
+......
+line 145, col 2:
+contrapose! hx
+* Try these:
+  [apply] grind only [Real.rpow_inv_eq, !AbsoluteValue.nonneg]
+  [apply] grind => instantiate only [Real.rpow_inv_eq, !AbsoluteValue.nonneg]
+shortened proof!
+......
+line 161, col 58:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 162, col 19:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 162, col 38:
+linarith
+* Try this:
+  [apply] grind only

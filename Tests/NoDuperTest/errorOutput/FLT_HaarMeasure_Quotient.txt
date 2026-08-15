@@ -1,0 +1,200 @@
+............
+line 47, col 8:
+simpa [haL]
+* Try this:
+
+  [apply]   simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall, Set.mem_preimage, ↓reduceDIte, Set.mem_union,
+      Set.mem_compl_iff, not_false_eq_true, or_true]
+.....
+line 53, col 10:
+simpa +contextual [haL, iff_iff_implies_and_implies]
+* Try this:
+
+  [apply]     simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall, imp_false, not_not, Set.mem_preimage, ↓reduceDIte,
+      Set.mem_image, Function.comp_apply, Subtype.exists, Set.inclusion_mk, exists_and_right, exists_eq_right]
+    apply Iff.intro
+    · intro a_1
+      simp_all only [forall_const, exists_const]
+    · intro a_1
+      obtain ⟨w, h⟩ := a_1
+      simp_all only [imp_self]
+..
+line 55, col 8:
+simp [haL, hV0, mt (interior_subset ·) haL]
+* this parameter is redundant, environment already contains `IsCompact.isClosed` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `IsOpen.interior_eq` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_preimage, !interior_subset, Set.mem_image, = Set.subset_def, #c616, #0f5b]
+  [apply] grind only [= Set.mem_preimage, !interior_subset, Set.mem_image, = Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.mem_preimage, !interior_subset, Set.mem_image]
+    instantiate only [= Set.subset_def]
+    instantiate only [#c616]
+    cases #0f5b
+..
+line 56, col 72:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall, ↓reduceDIte]
+....
+line 60, col 6:
+simp [hx]
+* Try this:
+
+  [apply]     simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall, not_false_eq_true, Set.indicator_of_notMem]
+    split
+    next h => simp_all only
+    next h => simp_all only [Std.le_refl]
+shortened proof!
+....
+line 63, col 25:
+grind
+* Try this:
+
+  [apply]   simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall]
+..
+line 64, col 38:
+grind
+* Try this:
+
+  [apply]     simp_all only [Set.preimage_compl, Set.mem_Icc, Subtype.forall]
+    split
+    next h => simp_all only [zero_le_one]
+    next h => simp_all only [Std.le_refl]
+....
+line 75, col 45:
+simp
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Pi.one_apply, zero_le_one]
+.._......
+line 87, col 47:
+simp [hf₁ _]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Function.comp_apply, not_false_eq_true, ENNReal.coe_toNNReal]
+...
+line 92, col 39:
+simp [Set.mem_smul_set_iff_inv_smul_mem]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!inv_inv, mem_leftCoset_iff, = mem_preimage]
+  [apply] grind => instantiate only [!inv_inv, mem_leftCoset_iff, = mem_preimage]
+.._.
+line 118, col 4:
+simp [mul_assoc]
+* Try this:
+
+  [apply]     simp_all only [Subgroup.coe_mul]
+    grind only [#56b1, #7f81]
+.........
+line 151, col 73:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.univ_nonempty]
+....._.......
+line 182, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ofQuotientIntegrand_mk, Pi.zero_apply, lintegral_const, zero_mul]
+......
+line 201, col 4:
+simp [Pairwise, Set.disjoint_iff, Set.eq_empty_iff_forall_notMem,
+      Set.mem_smul_set_iff_inv_smul_mem] at hs' ⊢
+* Try these:
+  [apply] grind only [Pairwise.mono, = Set.disjoint_left, = disjoint_comm, = Set.mem_preimage, Set.mem_inv_smul_set_iff,
+    #6a71, #362d, #eb10, #d858]
+  [apply] grind only [Pairwise.mono, = Set.disjoint_left, = disjoint_comm, = Set.mem_preimage, Set.mem_inv_smul_set_iff]
+  [apply] grind =>
+    instantiate only [Pairwise.mono]
+    cases #6a71 <;>
+      cases #362d <;>
+        cases #eb10 <;>
+          instantiate only [= Set.disjoint_left, = disjoint_comm] <;>
+            instantiate only [= Set.disjoint_left, = Set.mem_preimage] <;>
+              instantiate only [Set.mem_inv_smul_set_iff] <;> instantiate only [#d858]
+shortened proof!
+....
+line 224, col 82:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.indicator_empty, ofQuotientIntegrand_fun_zero, lintegral_const, zero_mul]
+..
+line 227, col 4:
+rw [lintegral_tsum fun _ ↦ (measurable_ofQuotientIntegrand _ _
+      (by exact measurable_const.indicator (hs _))).aemeasurable]
+* Try this:
+
+  [apply]     apply MeasureTheory.lintegral_tsum
+    intro i
+    apply Measurable.aemeasurable
+    apply MeasureTheory.Measure.measurable_ofQuotientIntegrand
+    apply Measurable.indicator
+    · apply measurable_one
+    · simp_all only
+....................
+line 277, col 4:
+simp [image_eq_zero_of_notMem_tsupport this]
+* Try this:
+
+  [apply]     simp_all only [SetLike.coe_sort_coe, Set.mem_preimage, NNReal.coe_eq_zero]
+    obtain ⟨val, property⟩ := a
+    simp_all only
+    apply image_eq_zero_of_notMem_tsupport
+    simp_all only [not_false_eq_true]
+.............
+line 289, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_mul_cancel_left]
+...........
+line 312, col 80:
+simp
+* Try these:
+  [apply] grind only [← Set.subset_univ]
+  [apply] grind => instantiate only [← Set.subset_univ]
+.......
+line 318, col 12:
+exact continuous_quotient_mk'
+* Try this:
+
+  [apply]   apply QuotientGroup.continuous_mk
+.
+line 319, col 23:
+exact continuous_quotient_mk'
+* Try this:
+
+  [apply]   apply QuotientGroup.continuous_mk
+.........
+line 329, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_inv_rev, inv_mul_cancel_right, inv_mem_iff, SetLike.coe_mem]
+....
+line 338, col 10:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.image_nonempty]
+........
+line 357, col 75:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.univ_nonempty]
+........._........
+line 377, col 72:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_inv, inv_inv]
+.........

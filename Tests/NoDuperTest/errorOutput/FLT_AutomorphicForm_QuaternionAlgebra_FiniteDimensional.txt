@@ -1,0 +1,11 @@
+.....
+line 66, col 6:
+ext x : 2
+* Try this:
+
+  [apply]     ext x i j v : 5
+    simp_all only [Units.coe_map, AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom,
+      MonoidHom.coe_coe, Function.comp_apply, Units.coe_mapEquiv, Algebra.TensorProduct.includeLeftRingHom_apply,
+      MulEquiv.coe_mk, AlgEquiv.toEquiv_eq_coe, EquivLike.coe_coe, WithRigidification.algEquiv_tmul, Matrix.smul_apply,
+      smul_eq_mul, one_mul]
+shortened proof!

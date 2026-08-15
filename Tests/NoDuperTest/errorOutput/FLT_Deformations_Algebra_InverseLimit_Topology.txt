@@ -1,0 +1,96 @@
+.
+line 43, col 2:
+continuity
+* Try this:
+
+  [apply]   apply continuous_induced_dom
+...
+line 51, col 2:
+rw [this]
+* Try this:
+
+  [apply]     simp_all only
+    apply Continuous.comp
+    · apply continuous_apply
+    · apply InverseLimit.val_continuous
+shortened proof!
+.....
+line 74, col 19:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.mul_apply, map_mul, implies_true]
+.
+line 75, col 19:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.one_apply, map_one, implies_true]
+.
+line 76, col 19:
+aesop
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Set.mem_setOf_eq, Pi.inv_apply, map_inv, implies_true]
+.....
+line 87, col 19:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.mul_apply, map_mul, implies_true]
+.
+line 88, col 19:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.one_apply, map_one, implies_true]
+.
+line 89, col 19:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.add_apply, map_add, implies_true]
+.
+line 90, col 20:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.zero_apply, map_zero, implies_true]
+.
+line 91, col 19:
+aesop
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Set.mem_setOf_eq, Pi.neg_apply, map_neg, implies_true]
+.....
+line 103, col 19:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.add_apply, map_add, implies_true]
+.
+line 104, col 20:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.mem_setOf_eq, Pi.zero_apply, map_zero, implies_true]
+.
+line 105, col 20:
+aesop
+* Try this:
+
+  [apply]     intro c x a
+    simp_all only [Set.mem_setOf_eq, Pi.smul_apply, map_smul, implies_true]
+..
+line 108, col 2:
+infer_instance
+* Try this:
+
+  [apply]     simp_all only [S]
+    apply IsTopologicalModule.mk

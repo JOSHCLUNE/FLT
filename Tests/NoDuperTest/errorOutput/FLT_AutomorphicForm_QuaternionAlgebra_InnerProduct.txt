@@ -1,0 +1,194 @@
+....
+line 51, col 42:
+simp
+* Try these:
+  [apply] grind only [norm_nonneg]
+  [apply] grind => instantiate only [norm_nonneg]
+.
+line 51, col 52:
+simp
+* Try this:
+  [apply] grind only
+..................
+line 88, col 2:
+ring
+* Try this:
+  [apply] grind only
+....................._.........................................
+line 200, col 65:
+simpa
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, ne_eq, Nat.cast_eq_zero, not_false_eq_true]
+...
+line 202, col 39:
+simpa
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, ne_eq, Nat.cast_eq_zero, not_false_eq_true]
+.............................................................
+line 334, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.one_apply, ENNReal.coe_one, one_mul]
+..
+line 341, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [MulDistribMulAction.toMonoidEnd_apply]
+    rfl
+.
+line 345, col 2:
+rw [← smul_le_smul_iff (g := g)]
+* Try these:
+  [apply] grind only [!inv_inv, inv_smul_le_iff]
+  [apply] grind =>
+    instantiate only [!inv_inv]
+    instantiate only [inv_smul_le_iff]
+shortened proof!
+...
+line 356, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_smul_smul, Std.le_refl]
+......
+line 367, col 2:
+trivial
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top]
+............
+line 392, col 57:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+...
+line 394, col 57:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+......................
+line 422, col 89:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.........................
+line 506, col 16:
+exact mem _ hx
+* Try these:
+  [apply] grind only [#0e27]
+  [apply] grind only
+  [apply] grind => instantiate only [#0e27]
+.
+line 507, col 20:
+exact algebraMap _
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk, Subalgebra.mk_algebraMap]
+.
+line 508, col 25:
+exact add ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk]
+.
+line 509, col 25:
+exact mul ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk]
+.......................................
+line 561, col 27:
+simp
+* Try this:
+  [apply] grind only
+.......X.
+line 575, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range, not_exists, Function.comp_apply]
+    ext i : 2
+    simp_all only [DFinsupp.mapRange_apply, DFinsupp.comapDomain_apply, DirectSum.zero_apply, Equiv.subtypeEquiv_apply,
+      ZeroMemClass.coe_zero, Equiv.refl_apply]
+shortened proof!
+.X.X.X.X...............
+line 591, col 8:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Finset.mem_map_mk, DFinsupp.mem_support_toFun, ne_eq, not_true_eq_false,
+      not_false_eq_true]
+..
+line 592, col 42:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Finset.mem_map_mk, DFinsupp.mem_support_toFun, ne_eq, not_false_eq_true]
+.X.X.
+line 595, col 8:
+rw [hf (H.choose_spec.2)]
+* this parameter is redundant, environment already contains `DFinsupp.mem_support_toFun` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `DFinsupp.single_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `DFinsupp.mk_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Exists.choose_spec]
+  [apply] grind => instantiate only [usr Exists.choose_spec]
+.X.X.X.X.........X.X...................
+line 630, col 28:
+simp [h₁]
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, usr Subtype.property, #c551]
+  [apply] grind only [usr Set.mem_setOf_eq, usr Subtype.property]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, usr Subtype.property, #c551]
+    done
+..............................................._......_.....
+line 796, col 27:
+grind
+* Try these:
+  [apply] grind only [#1465]
+  [apply] grind only
+  [apply] grind => instantiate only [#1465]
+..........
+line 805, col 35:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, algebraMap_mem, st]
+..
+line 805, col 74:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, Pi.smul_apply, Pi.sub_apply, Pi.algebraMap_apply, Algebra.algebraMap_self,
+      RingHom.id_apply, sub_self, smul_eq_mul, mul_zero, st]
+.......................
+line 824, col 27:
+grind
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 833, col 72:
+simp
+* Try these:
+  [apply] grind only [Algebra.mem_top]
+  [apply] grind => instantiate only [Algebra.mem_top]
+.
+line 833, col 82:
+aesop
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Setoid.ker_def, Setoid.refl]
+...........................................WARNING: FLT/AutomorphicForm/QuaternionAlgebra/InnerProduct.lean produced errors (exit code 143)

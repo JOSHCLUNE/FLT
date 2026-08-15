@@ -1,0 +1,240 @@
+....
+line 146, col 2:
+infer_instance
+* Try these:
+  [apply] grind only [ModuleTopology.iff, !eq_moduleTopology]
+  [apply] grind =>
+    instantiate only [ModuleTopology.iff]
+    instantiate only [!eq_moduleTopology]
+...........
+line 204, col 4:
+simpa [← hy2, this] using hy1
+* Try this:
+
+  [apply]     subst hy2
+    simp_all only [Set.mem_preimage, Function.comp_apply]
+..............
+line 231, col 2:
+grind
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.includeLeft_apply, Set.mem_inter_iff, Set.mem_range, Set.mem_singleton_iff, f]
+    apply Iff.intro
+    · intro a
+      obtain ⟨left, right⟩ := a
+      obtain ⟨w, h⟩ := left
+      subst h
+      simp_all only
+    · intro a
+      subst a
+      simp_all only [exists_apply_eq_apply, and_self]
+...........
+line 247, col 2:
+grind
+* Try these:
+  [apply] grind only [Rat.AdeleRing.zero_discrete, = Set.mem_inter_iff, = Set.mem_singleton_iff, = Set.mem_range,
+    Field.exists_primitive_element, #1d58, #deb0, #b7bc, #d9f7]
+  [apply] grind only [Rat.AdeleRing.zero_discrete, = Set.mem_inter_iff, = Set.mem_singleton_iff, = Set.mem_range,
+    Field.exists_primitive_element]
+  [apply] grind =>
+    instantiate only [#1d58, Rat.AdeleRing.zero_discrete, = Set.mem_inter_iff, = Set.mem_singleton_iff]
+    instantiate only [= Set.mem_range]
+    instantiate only [Field.exists_primitive_element]
+    cases #deb0
+    · cases #b7bc <;> instantiate only [#1d58]
+    · instantiate only [#d9f7]
+.......................
+line 281, col 4:
+simp [d, hq]
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeLeft_apply, ContinuousLinearEquiv.coe_toLinearEquiv,
+      IsModuleTopology.continuousLinearEquiv_apply, LinearEquiv.trans_apply,
+      TensorProduct.RightActions.Module.TensorProduct.comm_symm_apply_tmul, TensorProduct.AlgebraTensorModule.congr_tmul,
+      LinearEquiv.refl_apply, LinearEquiv.apply_symm_apply, TensorProduct.piScalarRight_apply,
+      TensorProduct.piScalarRightHom_tmul, π, d]
+.......
+line 289, col 29:
+ext
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearEquiv.toLinearEquiv_symm, AddMonoidHom.coe_comp, QuotientAddGroup.coe_mk',
+      LinearMap.toAddMonoidHom_coe, LinearEquiv.coe_coe, ContinuousLinearEquiv.coe_symm_toLinearEquiv,
+      EquivLike.surjective_comp, AddMonoidHom.liftOfSurjective, π, H, φ, f]
+    ext x : 1
+    simp_all only [Function.comp_apply, AddMonoidHom.liftOfRightInverse_comp_apply, AddMonoidHom.coe_comp,
+      QuotientAddGroup.coe_mk', LinearMap.toAddMonoidHom_coe, LinearEquiv.coe_coe,
+      ContinuousLinearEquiv.coe_symm_toLinearEquiv, IsModuleTopology.continuousLinearEquiv_symm_apply,
+      LinearEquiv.trans_symm, LinearEquiv.symm_symm, LinearEquiv.trans_apply]
+shortened proof!
+................._.
+line 322, col 21:
+cases rs
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+...._...._.._.
+line 342, col 4:
+exact RingHom.map_add (D𝔸ProdRight K D).toRingHom a b
+* Try this:
+
+  [apply]   simp_all only [map_add]
+....
+line 350, col 4:
+rfl
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [smul_eq_mul]
+    rfl
+...............
+line 398, col 34:
+positivity
+* Try this:
+  [apply] grind only
+.
+line 398, col 58:
+positivity
+* Try this:
+  [apply] grind only
+.
+line 399, col 4:
+simp [Nat.ne_zero_iff_zero_lt, Module.finrank_pos]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, inv_eq_zero, Nat.cast_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only [!Module.finrank_pos]
+..........
+line 409, col 38:
+positivity
+* Try this:
+  [apply] grind only
+......
+line 442, col 4:
+congr
+* Try this:
+
+  [apply]     simp_all only [u']
+    rfl
+...
+line 447, col 4:
+congr
+* Try this:
+
+  [apply]     simp_all only [u']
+    rfl
+.....
+line 466, col 62:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [InfinitePlace.not_isReal_iff_isComplex]
+......
+line 486, col 69:
+simpa using h
+* Try this:
+
+  [apply]   smt +mono [*, InfinitePlace.not_isReal_iff_isComplex]
+...X.X.X.X.X.X.X...X.....................................................................................
+line 747, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_smul]
+.......
+line 756, col 4:
+exact ⟨hpos, hfin⟩
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..............
+line 774, col 4:
+linarith
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...................
+line 797, col 70:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, AddSubgroup.mem_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      RingHom.coe_range, AddSubmonoid.mem_mk, AddSubsemigroup.mem_mk, Set.mem_range,
+      Algebra.TensorProduct.includeLeftRingHom_apply, ne_eq, EmbeddingLike.apply_eq_iff_eq, not_false_eq_true]
+.......
+line 828, col 79:
+fun_prop
+* Try these:
+  [apply] grind only [ContinuousOn.sub, continuousOn_fst, continuousOn_snd]
+  [apply] grind =>
+    instantiate only [ContinuousOn.sub]
+    instantiate only [continuousOn_fst, continuousOn_snd]
+.
+line 829, col 2:
+simpa [X]
+* Try this:
+
+  [apply]     simp_all only [Pi.sub_apply, Set.image_prod, Set.image2_sub]
+    exact this
+............................
+line 868, col 4:
+infer_instance
+* Try this:
+
+  [apply]   apply NumberField.AdeleRing.DivisionAlgebra.Aux.discrete_includeLeft_subgroup
+.....
+line 878, col 4:
+exact ⟨ht1, d, rfl⟩
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, Set.mem_inter_iff, Set.mem_range,
+      Algebra.TensorProduct.includeLeft_apply, exists_apply_eq_apply, and_self]
+..............
+line 905, col 26:
+simp only [Set.mem_range, exists_apply_eq_apply]
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.mem_range]
+  [apply] grind => instantiate only [= Set.mem_range]
+..................
+line 951, col 6:
+exact hc
+* Try these:
+  [apply] grind only [= Set.mem_range, #ebb2, #6f68]
+  [apply] grind only [= Set.mem_range]
+  [apply] grind =>
+    instantiate only [= Set.mem_range]
+    cases #ebb2 <;> instantiate only [#6f68]
+.........
+line 964, col 57:
+simp
+* Try this:
+
+  [apply]   simp_all only [Submonoid.coe_bot, Set.finite_singleton, Set.Finite.isClosed]
+...
+line 983, col 2:
+use ((Units.map (algebraMap ℝ (Dinf K D))) ρ)
+* this parameter is redundant, environment already contains `Ring.inverse_eq_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#f2c0]
+  [apply] grind only
+  [apply] grind => instantiate only [#f2c0]
+........
+line 994, col 4:
+exact_mod_cast hy
+* Try these:
+  [apply] grind only [NNReal.coe_inj]
+  [apply] grind => instantiate only [NNReal.coe_inj]
+......_.........................
+line 1074, col 2:
+exact this
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `IsCompact.isBounded` annotated with `@[grind ←]`
+* this parameter is redundant, environment already contains `Set.mem_univ` annotated with `@[grind ←]`
+* Try this:
+  [apply] grind only
+....

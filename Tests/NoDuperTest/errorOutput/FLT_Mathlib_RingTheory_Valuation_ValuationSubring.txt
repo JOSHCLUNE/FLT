@@ -1,0 +1,38 @@
+........
+line 38, col 84:
+aesop
+* Try this:
+
+  [apply]   simp_all only [one_ne_zero, not_false_eq_true]
+...
+line 41, col 4:
+rw [← one_mul (Valued.v _), ← hx, ← hu, ← Valued.v.map_mul, u.mul_inv, hu, hx, Valued.v.map_one]
+* Try this:
+
+  [apply]   simp_all only [Units.val_inv_eq_inv_val, map_inv₀, inv_one, Std.le_refl]
+...
+line 43, col 36:
+aesop
+* Try this:
+
+  [apply]     simp_all only [Units.val_inv_eq_inv_val]
+    obtain ⟨val, property⟩ := x
+    simp_all only [MulMemClass.mk_mul_mk]
+    ext : 1
+    simp_all only [OneMemClass.coe_one]
+    subst hu
+    simp_all only [Units.val_inv_eq_inv_val, map_inv₀, inv_one, Std.le_refl, Valuation.mem_valuationSubring_iff, ne_eq,
+      Units.ne_zero, not_false_eq_true, mul_inv_cancel₀]
+.
+line 43, col 46:
+aesop
+* Try this:
+
+  [apply]     simp_all only [Units.val_inv_eq_inv_val]
+    obtain ⟨val, property⟩ := x
+    simp_all only [MulMemClass.mk_mul_mk]
+    ext : 1
+    simp_all only [OneMemClass.coe_one]
+    subst hu
+    simp_all only [Units.val_inv_eq_inv_val, map_inv₀, inv_one, Std.le_refl, Valuation.mem_valuationSubring_iff, ne_eq,
+      Units.ne_zero, not_false_eq_true, inv_mul_cancel₀]

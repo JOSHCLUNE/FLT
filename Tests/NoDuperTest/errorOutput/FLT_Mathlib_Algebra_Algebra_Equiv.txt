@@ -1,0 +1,14 @@
+.
+line 24, col 37:
+rw [e.commutes, hc]
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [AlgEquivClass.commutes]
+  [apply] grind => instantiate only [AlgEquivClass.commutes]
+.
+line 25, col 25:
+rw [← hc, e.commutes]
+* Try this:
+
+  [apply]     subst hc
+    simp_all only [Set.mem_range, exists_apply_eq_apply, commutes]

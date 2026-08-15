@@ -1,0 +1,63 @@
+.
+line 105, col 25:
+ext x
+* Try this:
+
+  [apply]     simp_all only [map_add]
+    rfl
+shortened proof!
+.
+line 106, col 24:
+ext x
+* Try this:
+
+  [apply]     simp_all only [map_smul, RingHom.id_apply]
+    rfl
+shortened proof!
+.
+line 110, col 23:
+ext τ x
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.add_apply, map_add, add_apply]
+    rfl
+shortened proof!
+.
+line 111, col 22:
+ext τ x
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_smul, Pi.smul_apply, map_smul, smul_apply, RingHom.id_apply]
+    rfl
+shortened proof!
+.........
+line 154, col 8:
+ext g
+* Try this:
+
+  [apply]     simp_all only
+    obtain ⟨fst, snd⟩ := p
+    simp_all only
+    rfl
+shortened proof!
+.................
+line 216, col 65:
+omega
+* Try this:
+  [apply] grind only
+.
+line 239, col 52:
+omega
+* Try this:
+  [apply] grind only
+....
+line 247, col 53:
+omega
+* Try this:
+  [apply] grind only
+....
+line 252, col 44:
+omega
+* Try this:
+  [apply] grind only
+...............WARNING: FLT/Mathlib/RepresentationTheory/Homological/ContCohomology/CupProduct.lean was killed (exit code 137), likely by the 8G MemoryMax cap

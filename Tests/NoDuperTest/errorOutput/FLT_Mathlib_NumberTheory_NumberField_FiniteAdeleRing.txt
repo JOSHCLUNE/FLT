@@ -1,0 +1,11 @@
+...
+line 70, col 31:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    grind only [Ring.ne_bot_of_isMaximal_of_not_isField]
+shortened proof!

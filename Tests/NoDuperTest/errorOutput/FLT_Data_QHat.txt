@@ -1,0 +1,646 @@
+.
+line 45, col 18:
+simp
+* Try this:
+
+  [apply]   simp_all only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.zero_apply, ZMod.cast_zero, implies_true]
+.
+line 47, col 4:
+simp only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.neg_apply] at *
+* Try this:
+
+  [apply]   simp_all only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.neg_apply, ZMod.cast_neg, implies_true]
+shortened proof!
+.
+line 51, col 4:
+simp only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.add_apply] at *
+* Try this:
+
+  [apply]   simp_all only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.add_apply, ZMod.cast_add, implies_true]
+shortened proof!
+.
+line 55, col 4:
+simp only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.one_apply]
+* Try this:
+
+  [apply]   simp_all only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.one_apply, ZMod.cast_one, implies_true]
+shortened proof!
+.
+line 59, col 4:
+simp only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.mul_apply] at *
+* Try this:
+
+  [apply]   simp_all only [ZMod.castHom_apply, Set.mem_setOf_eq, Pi.mul_apply, ZMod.cast_mul, implies_true]
+shortened proof!
+.
+line 69, col 26:
+simp_all
+* Try this:
+
+  [apply]     intro a
+    simp_all only [ZMod.castHom_apply, SetLike.coe_eq_coe]
+...
+line 98, col 46:
+simp [h]
+* Try this:
+
+  [apply]   simp_all only [PNat.val_ofNat, one_val]
+..
+line 100, col 2:
+revert h2
+* this parameter is redundant, environment already contains `addLeftEmbedding_apply` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 109, col 4:
+simp [Nat.succ_eq_add_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, PNat.mk_coe, Order.lt_add_one_iff, le_sup_right]
+.
+line 110, col 4:
+simp [Nat.succ_eq_add_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, PNat.mk_coe, natCast_val, Order.lt_add_one_iff, le_sup_left]
+.........
+line 134, col 30:
+rw [sum_const, card_range, smul_eq_mul]
+* Try this:
+
+  [apply]   simp_all only [sum_const, card_range, smul_eq_mul]
+..
+line 137, col 4:
+simpa only [mem_range, Nat.lt_succ_iff] using hi
+* Try this:
+
+  [apply]   simp_all only [mem_range, Order.lt_add_one_iff]
+..
+line 139, col 2:
+rw [factorial_zero]
+* Try this:
+
+  [apply]   simp_all only [mem_range, lt_add_iff_pos_left, Order.lt_add_one_iff, _root_.zero_le, factorial_zero, one_lt_factorial,
+      and_self]
+shortened proof!
+.......
+line 151, col 4:
+omega
+* Try this:
+  [apply] grind only
+.
+line 155, col 20:
+positivity
+* Try this:
+
+  [apply]   apply Nat.factorial_pos
+..........
+line 169, col 8:
+simp only [lt_add_iff_pos_left, add_pos_iff, zero_lt_one, or_true]
+* Try this:
+
+  [apply]   simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast, lt_add_iff_pos_left, Order.lt_add_one_iff, _root_.zero_le]
+...
+line 172, col 8:
+positivity
+* Try this:
+
+  [apply]   simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast, _root_.zero_le]
+....
+line 175, col 32:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast]
+    apply pos_of_gt
+    · apply Nat.sum_factorial_lt_factorial_succ
+      simp_all only
+........
+line 184, col 8:
+omega
+* Try this:
+
+  [apply]   simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev, lt_add_iff_pos_left, add_pos_iff, Order.lt_two_iff,
+      _root_.zero_le, or_true]
+....
+line 191, col 31:
+omega
+* Try this:
+
+  [apply]   simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev, le_add_iff_nonneg_left, _root_.zero_le]
+..
+line 193, col 8:
+gcongr
+* Try this:
+
+  [apply]   simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev, le_add_iff_nonneg_left, _root_.zero_le,
+      add_lt_add_iff_left]
+...
+line 196, col 8:
+gcongr
+* Try this:
+
+  [apply]   simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev, mul_one, add_le_add_iff_right, Order.lt_add_one_iff,
+      _root_.zero_le, le_mul_iff_one_le_right]
+....
+line 200, col 8:
+ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 201, col 32:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev]
+    apply pos_of_gt
+    · exact hj
+..........
+line 215, col 6:
+apply le_of_dvd (zero_lt_succ a) this
+* Try this:
+
+  [apply]     simp_all only [Int.cast_negSucc, cast_add, cast_one, neg_add_rev, PNat.mk_coe, N]
+    apply Nat.le_of_dvd
+    · simp_all only [lt_add_iff_pos_left, Order.lt_add_one_iff, _root_.zero_le]
+    · simp_all only
+...
+line 222, col 2:
+rw [hy]
+* Try this:
+
+  [apply]   simp_all only [cast_mul, CharP.cast_eq_zero, zero_mul]
+shortened proof!
+...
+line 233, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, dvd_mul_left]
+.......
+line 240, col 4:
+simp [ha]
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, zero_val]
+...
+line 247, col 2:
+intro a ha
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [AddMonoidHom.coe_mulLeft]
+    apply ZHat.eq_zero_of_mul_eq_zero
+    · exact a_1
+shortened proof!
+.........
+line 261, col 26:
+omega
+* Try this:
+
+  [apply]     obtain ⟨left, right⟩ := hN
+    apply Nat.pos_of_ne_zero
+    simp_all only [ne_eq, not_false_eq_true]
+.
+line 262, col 4:
+exact eq_zero_of_mul_eq_zero _ _ hN.2
+* Try this:
+
+  [apply]     simp_all only [PNat.ne_zero, not_false_eq_true, true_and]
+    apply ZHat.eq_zero_of_mul_eq_zero
+    · exact hN
+....
+line 266, col 44:
+omega
+* Try this:
+
+  [apply]   simp_all only [cast_add, cast_one, lt_add_iff_pos_left, Order.lt_add_one_iff, _root_.zero_le]
+..
+line 270, col 35:
+simp only [PNat.mul_coe, dvd_mul_right]
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, dvd_mul_right]
+....
+line 273, col 36:
+simp only [PNat.mul_coe, dvd_mul_left]
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, dvd_mul_left]
+.
+line 274, col 2:
+rw [← hhj']
+* Try this:
+
+  [apply]     simp_all only [PNat.mul_coe, ZMod.natCast_val]
+    exact hhj'
+shortened proof!
+..
+line 281, col 4:
+intro ⟨y, hy⟩
+* Try this:
+
+  [apply]     intro a
+    obtain ⟨w, h⟩ := a
+    subst h
+    simp_all only [nat_mul_apply, CharP.cast_eq_zero, zero_mul]
+shortened proof!
+.....
+line 290, col 40:
+simp only [PNat.mul_coe, dvd_mul_right]
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, dvd_mul_right]
+..
+line 291, col 40:
+simp only [PNat.mul_coe, dvd_mul_right]
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, ZMod.castHom_apply, dvd_mul_right]
+.......
+line 297, col 55:
+simp
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, ZMod.natCast_val, ne_eq, PNat.ne_zero, not_false_eq_true]
+..
+line 300, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [PNat.mul_coe, ZMod.natCast_val, ZMod.cast_id', id_eq]
+.......
+line 310, col 51:
+simp [r]
+* Try this:
+
+  [apply]   simp_all only [ZMod.natCast_val, ZMod.cast_id', id_eq, sub_self, r]
+....
+line 313, col 18:
+linear_combination -hq
+* Try this:
+
+  [apply]   simp_all only [ZMod.natCast_val, sub_add_cancel, r]
+...
+line 330, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [PNat.val_ofNat, Nat.cast_one, ne_eq, one_ne_zero, not_false_eq_true, div_self, TensorProduct.tmul_zero]
+....
+line 335, col 4:
+simp only [← q.mul_den_eq_num, mul_assoc,
+      one_div, ne_eq, Nat.cast_eq_zero, Rat.den_ne_zero, not_false_eq_true,
+        mul_one, mul_inv_cancel₀]
+* Try these:
+  [apply] grind only [!Rat.num_div_den]
+  [apply] grind => instantiate only [!Rat.num_div_den]
+.....
+line 344, col 4:
+simp only [one_div, PNat.mul_coe, Nat.cast_mul, mul_inv_rev, zsmul_eq_mul, Int.cast_natCast,
+      ne_eq, Nat.cast_eq_zero, PNat.ne_zero, not_false_eq_true, mul_inv_cancel_left₀]
+* Try this:
+
+  [apply]     simp_all only [one_div, PNat.mul_coe, Nat.cast_mul, mul_inv_rev, zsmul_eq_mul, Int.cast_natCast, ne_eq,
+      Nat.cast_eq_zero, PNat.ne_zero, not_false_eq_true, mul_inv_cancel_left₀]
+    grind only [add_comm, PNat.ne_zero, Nat.cast_ne_zero]
+shortened proof!
+.
+line 355, col 2:
+refine ⟨fun H ↦ ?_, fun H ↦ ?_⟩
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+..........
+line 381, col 58:
+simp
+* Try this:
+
+  [apply]     intro a_1
+    simp_all only [LinearMap.rTensor_tmul, Algebra.linearMap_apply, algebraMap_int_eq, eq_intCast, Int.cast_one,
+      Int.cast_inj]
+...
+line 394, col 2:
+simp [Nat.lcm_comm]
+* Try this:
+
+  [apply]     simp_all only [PNat.lcm_coe]
+    apply Nat.dvd_antisymm
+    · apply Nat.lcm_dvd
+      · apply Nat.dvd_lcm_right
+      · apply Nat.dvd_lcm_left
+    · apply Nat.lcm_dvd
+      · apply Nat.dvd_lcm_right
+      · apply Nat.dvd_lcm_left
+....................................
+line 446, col 79:
+simp
+* Try these:
+  [apply] grind only [PNat.ne_zero]
+  [apply] grind => instantiate only [PNat.ne_zero]
+...._......
+line 460, col 31:
+rw [← hNz]
+* Try this:
+
+  [apply]   simp_all only [one_div, Algebra.TensorProduct.includeRight_apply, y]
+........___....
+line 475, col 39:
+simp [hN']
+* Try this:
+
+  [apply]   simp_all only [one_div, Algebra.TensorProduct.includeRight_apply, PNat.lcm_coe, ZHat.nat_mul_apply, PNat.mul_coe, ne_eq,
+      PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, y, L]
+...
+line 477, col 39:
+simp [hM']
+* Try this:
+
+  [apply]   simp_all only [one_div, Algebra.TensorProduct.includeRight_apply, PNat.lcm_coe, ZHat.nat_mul_apply, PNat.mul_coe, ne_eq,
+      PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, y, L]
+............................
+line 509, col 59:
+simpa
+* Try this:
+
+  [apply]     subst hz hw
+    simp_all only [PNat.mul_coe, ne_eq, PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, PNat.lcm_coe,
+      ZHat.nat_mul_apply, Nat.cast_mul, one_div, Algebra.TensorProduct.includeRight_apply, L, f, y]
+..
+line 510, col 28:
+simp
+* Try this:
+
+  [apply]     subst hz hw
+    simp_all only [PNat.mul_coe, ne_eq, PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, PNat.lcm_coe,
+      Nat.minFac_prime_iff, ZHat.nat_mul_apply, Nat.cast_mul, one_div, Algebra.TensorProduct.includeRight_apply, PNat.pos,
+      L, f, y]
+...............
+line 524, col 6:
+exact dvd_mul_right _ _
+* Try this:
+
+  [apply]     subst hz hw
+    simp_all only [PNat.mul_coe, ne_eq, PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, PNat.lcm_coe,
+      ZHat.nat_mul_apply, Nat.cast_mul, one_div, Algebra.TensorProduct.includeRight_apply, dvd_mul_right, L, y]
+...
+line 527, col 6:
+exact dvd_mul_right _ _
+* Try this:
+
+  [apply]     subst hz hw
+    simp_all only [PNat.mul_coe, ne_eq, PNat.ne_zero, not_false_eq_true, mul_div_cancel_left₀, PNat.lcm_coe,
+      ZHat.nat_mul_apply, Nat.cast_mul, one_div, Algebra.TensorProduct.includeRight_apply, dvd_mul_right, L, y]
+...
+line 530, col 4:
+have hNM' : N' = M' := by
+      apply mul_left_cancel (a := L)
+      conv_lhs =>
+        rw [hN, ← hN']
+      conv_rhs =>
+        rw [hM, ← hM']
+* this parameter is redundant, environment already contains `Equiv.sumCongr_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.trans_apply` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+___.X........
+line 573, col 6:
+exact l.reduced
+* Try this:
+
+  [apply]     subst hl
+    simp_all only [one_div, and_imp]
+    apply Rat.reduced
+.........
+line 582, col 46:
+simp
+* Try this:
+
+  [apply]     subst hl
+    simp_all only [one_div, and_imp, Nat.toPNat'_coe, Nat.cast_ite, Nat.cast_one, PNat.val_ofNat, ne_eq, one_ne_zero,
+      not_false_eq_true, div_self]
+......___..........
+line 599, col 4:
+simp
+* Try this:
+
+  [apply]     subst hNz hz
+    simp_all only [add_sub_cancel_right, one_div, AddSubgroup.mem_top, Int.cast_natCast, AddMonoidHom.mem_range,
+      AddMonoidHom.coe_coe, Algebra.TensorProduct.includeLeft_apply, exists_apply_eq_apply]
+...
+line 602, col 4:
+simp
+* Try this:
+
+  [apply]     subst hNz hz
+    simp_all only [add_sub_cancel_right, one_div, AddSubgroup.mem_top, AddMonoidHom.mem_range, AddMonoidHom.coe_coe,
+      Algebra.TensorProduct.includeRight_apply, exists_apply_eq_apply]
+...
+line 605, col 41:
+simp
+* Try this:
+
+  [apply]     subst hNz hz
+    simp_all only [add_sub_cancel_right, one_div, AddSubgroup.mem_top, Int.cast_natCast, ne_eq, Nat.cast_eq_zero,
+      PNat.ne_zero, not_false_eq_true, inv_mul_cancel₀]
+.....
+line 609, col 2:
+simp [hNz]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 633, col 20:
+simp [← hxq]
+* Try this:
+
+  [apply]     subst hxq
+    simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeLeft_apply, Units.coe_map, MonoidHom.coe_coe]
+....
+line 636, col 6:
+simp [Eq.comm] at hz
+* Try these:
+  [apply] grind only [Units.ne_zero]
+  [apply] grind => instantiate only [Units.ne_zero]
+.......
+line 643, col 8:
+exact_mod_cast Int.natAbs_ne_zero.mpr znez
+* Try this:
+
+  [apply]     subst hxq
+    simp_all only [ne_eq, Nat.cast_natAbs, Int.cast_abs, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeft_apply, abs_eq_zero, Int.cast_eq_zero, not_false_eq_true, zinvRat, a, b]
+.................
+line 663, col 8:
+unfold Nat.toPNat
+* Try this:
+
+  [apply]     subst hxq
+    simp_all only [ne_eq, Nat.cast_natAbs, Int.cast_abs, Units.mul_inv, one_div, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeft_apply, Units.coe_map_inv, Units.val_inv_eq_inv_val, zinvRat, a, b, zinvZHat, xinv]
+    rfl
+shortened proof!
+.
+line 665, col 6:
+rw [PNat.val_ofNat, Nat.cast_one, div_self one_ne_zero, this, ← h3, h1, h2]
+* Try this:
+
+  [apply]     subst hxq
+    simp_all only [ne_eq, Nat.cast_natAbs, Int.cast_abs, Units.mul_inv, one_div, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeft_apply, Units.coe_map_inv, Units.val_inv_eq_inv_val, PNat.val_ofNat, Nat.cast_one,
+      one_ne_zero, not_false_eq_true, div_self, zinvRat, a, b, zinvZHat, xinv]
+...
+line 669, col 6:
+exact Nat.coprime_one_left _
+* Try this:
+
+  [apply]     subst hxq
+    simp_all only [ne_eq, Nat.cast_natAbs, Int.cast_abs, Units.mul_inv, one_div, PNat.val_ofNat, Nat.cast_one,
+      one_ne_zero, not_false_eq_true, div_self, Units.coe_map, MonoidHom.coe_coe, Algebra.TensorProduct.includeLeft_apply,
+      Units.coe_map_inv, Units.val_inv_eq_inv_val, Nat.coprime_one_left_eq_true, zinvRat, a, b, zinvZHat, xinv]
+.......
+line 676, col 4:
+ext
+* Try this:
+
+  [apply]     subst hxq
+    simp_all [zinvZHat, zinvRat, a, b, xinv]
+    ext : 1
+    simp_all only [Units.coe_map, MonoidHom.coe_coe, eq_intCast, Algebra.TensorProduct.includeLeft_apply]
+shortened proof!
+.....
+line 681, col 6:
+norm_cast
+* Try this:
+
+  [apply]     subst hxz
+    rfl
+..
+line 683, col 6:
+rw [← hxz, ← MonoidHom.comp_apply, ← Units.map_comp]
+* Try this:
+
+  [apply]     subst hxz
+    ext : 1
+    simp_all only [Units.coe_map, MonoidHom.coe_coe, eq_intCast, map_intCast]
+shortened proof!
+.X.
+line 701, col 2:
+rw [← map_natCast (F := B →ₐ[R] TensorProduct R A B),
+    Algebra.TensorProduct.includeRight_apply]
+* Try these:
+  [apply] grind only [Algebra.TensorProduct.natCast_def']
+  [apply] grind => instantiate only [Algebra.TensorProduct.natCast_def']
+.........
+line 715, col 45:
+rw [mul_comm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.......
+line 722, col 36:
+field_simp
+* Try this:
+
+  [apply]   simp_all only [one_div, mul_inv_rev, ne_eq, Units.ne_zero, not_false_eq_true, div_mul_div_cancel₀', Nat.cast_eq_zero,
+      PNat.ne_zero, div_self, xinv]
+.
+line 722, col 51:
+field_simp
+* Try this:
+
+  [apply]   simp_all only [one_div, mul_inv_rev, ne_eq, Nat.cast_eq_zero, PNat.ne_zero, not_false_eq_true, div_mul_div_cancel₀',
+      Units.ne_zero, div_self, xinv]
+...............
+line 739, col 48:
+norm_cast
+* Try this:
+
+  [apply]     simp_all only [AddMonoidHom.mem_range, AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, one_div]
+    obtain ⟨w, h⟩ := hx
+    rfl
+.
+line 740, col 4:
+rw [Algebra.TensorProduct.includeRight_apply, hxinv, h, Algebra.TensorProduct.tmul_mul_tmul,
+      mul_one, one_div, inv_mul_cancel₀]
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.mem_range, AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, one_div,
+      Algebra.TensorProduct.tmul_mul_tmul, ne_eq, Nat.cast_eq_zero, PNat.ne_zero, not_false_eq_true, inv_mul_cancel₀,
+      mul_one]
+shortened proof!
+..........
+line 753, col 4:
+rw [Algebra.TensorProduct.includeRight_apply, this, map_natCast,
+      Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.one_tmul_natCast]
+* Try this:
+
+  [apply]   simp_all only [one_div, AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, map_natCast]
+.....
+line 758, col 16:
+rw [← Set.neg_singleton, Submodule.span_neg, ← hg]
+* Try this:
+
+  [apply]   simp_all only [one_div, Algebra.TensorProduct.includeRight_apply, AddMonoidHom.coe_coe, Ideal.mem_comap, map_natCast,
+      Ideal.span_singleton_neg, Int.neg_pos, forall_const, not_lt, J, I]
+....
+line 762, col 4:
+rw [Submodule.span_zero_singleton, Submodule.eq_bot_iff] at hg
+* Try these:
+  [apply] grind only [PNat.ne_zero, Ideal.mem_span_singleton]
+  [apply] grind => instantiate only [PNat.ne_zero, Ideal.mem_span_singleton]
+shortened proof!
+................
+line 781, col 6:
+simp only [ne_eq, Rat.intCast_eq_zero_iff, Int.ne_of_gt gpos, not_false_eq_true]
+* Try this:
+
+  [apply]     subst hz
+    simp_all only [one_div, AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, ne_eq, Int.cast_eq_zero, G, J,
+      I]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [Int.cast_zero, mul_zero, TensorProduct.tmul_zero, Submodule.span_zero_singleton]
+    grind only
+...
+line 783, col 18:
+rw[mul_comm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.....
+line 791, col 6:
+rw [hg, Ideal.submodule_span_eq]
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, Submodule.mem_span_singleton_self, J, I]
+shortened proof!
+.....................
+line 811, col 4:
+apply Ideal.mem_span_singleton_self
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, Submodule.span_singleton_le_iff_mem,
+      PNat.mk_coe, Submodule.mem_span_singleton_self, J, I, N, xg]
+...
+line 814, col 4:
+simp only [Int.coe_castRingHom, Int.cast_natCast, I, this]
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, Submodule.span_singleton_le_iff_mem,
+      PNat.mk_coe, map_natCast, J, I, N, xg]
+.......
+line 820, col 15:
+rw [mul_comm, ← smul_eq_mul, ha]
+* Try this:
+
+  [apply]     simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeRight_apply, Submodule.span_singleton_le_iff_mem,
+      PNat.mk_coe, Int.zsmul_eq_mul, J, I, N, xg]
+    grind only

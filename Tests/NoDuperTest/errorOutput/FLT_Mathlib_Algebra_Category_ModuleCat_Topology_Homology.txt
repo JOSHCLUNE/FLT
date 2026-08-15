@@ -1,0 +1,15 @@
+..
+line 68, col 44:
+rw [← w]
+* Try this:
+
+  [apply]     subst w
+    simp_all only [Category.assoc, Iso.hom_inv_id_assoc, comp_cokerπ]
+shortened proof!
+..........
+line 131, col 6:
+exact h₁ y τ
+* Try this:
+
+  [apply]     simp_all only [hom_comp, ContinuousLinearMap.comp_apply, hom_zero, zero_apply]
+    apply h₁

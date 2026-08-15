@@ -1,0 +1,56 @@
+....
+line 192, col 4:
+rw [integerMap_coe]
+* Try this:
+
+  [apply]     simp_all only [integerMap_coe]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    apply ValuativeExtension.valuation_algebraMap_lt_one
+    simp_all only
+shortened proof!
+..
+line 261, col 55:
+exact (E.map_a₁ _).symm
+* Try this:
+
+  [apply]   rfl
+..
+line 263, col 55:
+exact (E.map_a₂ _).symm
+* Try this:
+
+  [apply]   rfl
+..
+line 265, col 55:
+exact (E.map_a₃ _).symm
+* Try this:
+
+  [apply]   rfl
+..
+line 267, col 55:
+exact (E.map_a₄ _).symm
+* Try this:
+
+  [apply]   rfl
+..
+line 269, col 55:
+exact (E.map_a₆ _).symm
+* Try this:
+
+  [apply]   rfl
+....
+line 287, col 4:
+ext x
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+..................
+line 321, col 4:
+exact valuation_algebraMap_lt_one hk
+* Try this:
+
+  [apply]     apply ValuativeExtension.valuation_algebraMap_lt_one
+    simp_all only
+.......

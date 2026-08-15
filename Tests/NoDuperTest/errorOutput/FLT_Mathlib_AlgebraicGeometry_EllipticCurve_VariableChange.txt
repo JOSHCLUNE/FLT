@@ -1,0 +1,20 @@
+....
+line 48, col 24:
+decide
+* Try these:
+  [apply] grind only [= Nat.odd_iff]
+  [apply] grind => instantiate only [= Nat.odd_iff]
+._..........
+line 72, col 4:
+linear_combination -hv
+* Try this:
+  [apply] grind only
+._......
+line 107, col 2:
+rw [hρ, hVinv, hWinv] at hmv
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!

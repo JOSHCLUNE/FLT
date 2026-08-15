@@ -1,0 +1,142 @@
+.
+line 107, col 62:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.ofNat_pos]
+.
+line 112, col 20:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [Nat.reduceLeDiff]
+...._.
+line 120, col 6:
+exact gcd_dvd_left a b
+* Try this:
+
+  [apply]   smt +mono [*, Int.gcd_dvd_left, Int.coe_gcd, Int.gcd]
+.
+line 121, col 6:
+exact gcd_dvd_right a b
+* Try this:
+
+  [apply]   smt +mono [*, Int.coe_gcd, Int.gcd_dvd_right, Int.gcd]
+......
+line 127, col 6:
+rw [Int.pow_dvd_pow_iff hp.ne']
+* Try this:
+
+  [apply]   smt +mono [*, Int.pow_dvd_pow_iff, Int.gcd, Int.gcd_dvd_left, Int.coe_gcd, Int.gcd_comm]
+shortened proof!
+.
+line 129, col 6:
+rw [dvd_neg, Int.pow_dvd_pow_iff hp.ne']
+* Try this:
+
+  [apply]     simp_all only [add_sub_cancel, dvd_neg]
+    smt +mono [*, Int.gcd, Int.pow_dvd_pow_iff, Int.coe_gcd, Int.gcd_dvd_left]
+shortened proof!
+...
+line 133, col 2:
+apply Int.ofNat_dvd.1 at foo
+* Try these:
+  [apply] grind only [!Int.coe_gcd, Nat.dvd_antisymm, Int.natCast_dvd_natCast]
+  [apply] grind =>
+    instantiate only [!Int.coe_gcd, Nat.dvd_antisymm]
+    instantiate only [Int.natCast_dvd_natCast]
+shortened proof!
+....
+line 142, col 2:
+exact P.hFLT
+* Try this:
+
+  [apply]   apply FreyPackage.hFLT
+..
+line 149, col 37:
+omega
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [Nat.reduceLeDiff]
+..................
+line 172, col 4:
+have a0' := left_ne_zero_of_mul (a_eq ▸ hA)
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, mul_eq_zero, not_or, mul_eq_mul_left_iff,
+      pow_eq_zero_iff', false_and, or_false, exists_and_left, A, B, C]
+    obtain ⟨left, right⟩ := hC
+    smt +mono [*]
+shortened proof!
+...
+line 181, col 6:
+exact ⟨a, b, c, a0, b0, c0, ab, eb, H⟩
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#bb14]
+  [apply] grind only
+  [apply] grind => instantiate only [#bb14]
+...
+line 183, col 64:
+rwa [add_comm]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, Int.not_even_iff_odd, A, B, C]
+    smt +mono [*]
+.....
+line 189, col 10:
+exact fun h => ea (Int.even_pow.1 h).1
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, Int.not_even_iff_odd, A, B, C]
+    apply Odd.pow
+    simp_all only
+.
+line 190, col 10:
+exact fun h => eb (Int.even_pow.1 h).1
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, Int.not_even_iff_odd, A, B, C]
+    apply Odd.pow
+    simp_all only
+.....
+line 198, col 50:
+decide
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, Int.reduceDvd, A, B, C]
+...
+line 201, col 6:
+cases a_odd' a_mod (by decide)
+* Try these:
+  [apply] grind only [#af0b]
+  [apply] grind only
+  [apply] grind => instantiate only [#af0b]
+..
+line 203, col 11:
+rwa [Int.neg_gcd, Int.gcd_neg]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.natCast_eq_zero, not_false_eq_true, Int.two_dvd_ne_zero, Int.gcd_neg, Int.neg_gcd, A, B, C]
+..
+line 205, col 6:
+cases a_odd' a_mod (by decide)
+* Try these:
+  [apply] grind only [#af0b]
+  [apply] grind only
+  [apply] grind => instantiate only [#af0b]
+.
+line 206, col 6:
+exact ⟨a, b, c, a0, b0, c0, ab, a_mod, eb, H⟩
+* Try these:
+  [apply] grind only [#6f13]
+  [apply] grind only
+  [apply] grind => instantiate only [#6f13]
+......

@@ -1,0 +1,23 @@
+..
+line 27, col 60:
+decide
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Multiplicative.forall, ofAdd_eq_one, EmbeddingLike.apply_eq_iff_eq, one_ne_zero,
+      not_false_eq_true]
+.
+line 29, col 4:
+decide
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Multiplicative.forall, ofAdd_eq_one, EmbeddingLike.apply_eq_iff_eq, one_ne_zero,
+      not_false_eq_true]
+    rfl
+._.
+line 33, col 22:
+rcases keyM x
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+.__

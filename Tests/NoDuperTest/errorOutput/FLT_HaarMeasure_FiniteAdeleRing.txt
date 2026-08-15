@@ -1,0 +1,132 @@
+.........
+line 56, col 2:
+ext a i
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+...
+line 71, col 40:
+exact Valued.isOpen_integer (v.adicCompletion K)
+* Try this:
+
+  [apply]     simp_all only [Submonoid.coe_ofClass]
+    apply NumberField.isOpenAdicCompletionIntegers
+.
+line 81, col 7:
+exact Valued.isOpen_integer _
+* Try this:
+
+  [apply]   apply NumberField.isOpenAdicCompletionIntegers
+......
+line 125, col 2:
+refine Ideal.Quotient.subsingleton_iff.mp ?_
+* Try this:
+
+  [apply]   simp_all only [Module.FaithfullyFlat.subsingleton_tensorProduct_iff_left, Submodule.Quotient.subsingleton_iff]
+shortened proof!
+.
+line 131, col 2:
+refine ⟨fun H ↦ Module.FaithfullyFlat.smul_top_eq_top_iff (M := S).mp ?_, (· ▸ Ideal.map_top _)⟩
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Ideal.comap_map_eq_self_of_faithfullyFlat, Ideal.comap_eq_top_iff]
+  [apply] grind =>
+    instantiate only [!Ideal.comap_map_eq_self_of_faithfullyFlat]
+    instantiate only [Ideal.comap_eq_top_iff]
+shortened proof!
+...
+line 138, col 8:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1 a_2
+    simp_all only [Finsupp.mem_support_iff, ne_eq, not_not, mul_zero]
+.
+line 138, col 30:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1 a_2
+    simp_all only [Finsupp.mem_support_iff, ne_eq, not_not, mul_zero]
+.
+line 138, col 52:
+simp [mul_comm]
+* this parameter is redundant, environment already contains `Finsupp.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `MvPolynomial.mem_support_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_biUnion` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...........
+line 154, col 2:
+ext
+* Try this:
+
+  [apply]     simp_all only [v]
+    ext : 1
+    simp_all only [LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply, Algebra.linearMap_apply, map_one,
+      LinearMap.id_coe, id_eq]
+shortened proof!
+.......
+line 168, col 71:
+simpa [sub_eq_zero]
+* Try this:
+
+  [apply]     simp_all only [Submodule.mem_one, LinearMap.mem_ker, LinearMap.sub_apply, LinearMap.coe_comp, Function.comp_apply,
+      Algebra.linearMap_apply, LinearMap.id_coe, id_eq]
+    apply Iff.intro
+    · intro a_2
+      simp_all only [iff_true, sub_self]
+    · intro a_2
+      grind only
+..........
+line 182, col 52:
+simp [*]
+* Try this:
+
+  [apply]   simp_all only [Units.coeHom_apply, map_mul, Units.mul_inv, map_one]
+.
+line 182, col 71:
+simp [*]
+* Try this:
+
+  [apply]   simp_all only [Units.coeHom_apply, map_mul, Units.inv_mul, map_one]
+.
+line 182, col 85:
+ext
+* Try this:
+
+  [apply]   simp_all only [Units.map_mk, Units.coeHom_apply, Units.mk_val]
+shortened proof!
+..
+line 190, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [RingHom.toMonoidHom_eq_coe, MonoidHom.coe_range, isClosed_discrete]
+....
+line 194, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_range]
+    ext x : 1
+    simp_all only [Set.mem_range, SetLike.mem_coe, Submodule.mem_one]
+shortened proof!
+..
+line 195, col 84:
+ext
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [LinearMap.coe_comp, Function.comp_apply, Algebra.linearMap_apply, map_one, entryLinearMap_apply,
+      one_apply_eq, LinearMap.id_coe, id_eq]
+shortened proof!
+....
+line 198, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_range, RingHom.toMonoidHom_eq_coe]
+    rfl

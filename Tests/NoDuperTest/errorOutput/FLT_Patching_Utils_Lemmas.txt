@@ -1,0 +1,240 @@
+..
+line 36, col 2:
+exact Classical.skolem (p := fun i y ↦ x i * y = 1 ∧ y * x i = 1).symm
+* Try this:
+
+  [apply]     simp_all only [Pi.mul_apply, Pi.one_apply]
+    apply Iff.intro
+    · intro a i
+      obtain ⟨w, h⟩ := a
+      grind only [#1a1f, #5532, #0e27]
+    · intro a
+      grind => sorry
+..
+line 54, col 6:
+ext1
+* Try this:
+
+  [apply]     simp_all only [comap_map_quotientMk]
+    obtain ⟨val, property⟩ := J
+    simp_all only [sup_of_le_right]
+shortened proof!
+.
+line 67, col 17:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_setOf_eq, Pi.add_apply]
+    intro i
+    apply AddMemClass.add_mem
+    · simp_all only
+    · simp_all only
+.X.
+line 69, col 18:
+aesop
+* Try this:
+
+  [apply]     intro c x a
+    simp_all only [Set.mem_setOf_eq, Pi.smul_apply']
+    intro i
+    apply SMulMemClass.smul_mem
+    simp_all only
+.
+line 81, col 17:
+aesop
+* Try this:
+
+  [apply]     intro x y
+    simp_all only [Pi.add_apply, map_add]
+    rfl
+.
+line 82, col 18:
+aesop
+* Try this:
+
+  [apply]     intro m x
+    simp_all only [Pi.smul_apply', map_smul, RingHom.id_apply]
+    rfl
+...._......_.....
+line 129, col 34:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_bot, Std.le_refl]
+..
+line 142, col 45:
+simp
+* Try this:
+
+  [apply]   simp_all only [span_singleton_zero, coe_bot, Set.singleton_subset_iff, SetLike.mem_coe, ZeroMemClass.zero_mem]
+....
+line 149, col 6:
+exact G.add_mem (hx ha₁) (hy ha₂)
+* this parameter is redundant, environment already contains `Set.singleton_subset_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_setOf_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem, #7e17, #2557]
+  [apply] grind only [usr Set.mem_setOf_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem]
+  [apply] grind =>
+    instantiate only [usr Set.mem_setOf_eq, SetLike.mem_coe]
+    instantiate only [= Set.subset_def, AddMemClass.add_mem]
+    instantiate only [#7e17, #2557]
+    instantiate only [SetLike.mem_coe]
+...._.......
+line 174, col 10:
+simp [G.zero_mem]
+* Try this:
+
+  [apply]   simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_setOf_eq, mul_zero, zero_mul,
+      ZeroMemClass.zero_mem, implies_true]
+..
+line 175, col 10:
+simp
+* Try this:
+
+  [apply]     intro x_1 a_1
+    simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_setOf_eq, mul_neg, neg_mul, neg_mem_iff,
+      implies_true]
+...
+line 176, col 57:
+simpa
+* Try this:
+
+  [apply]   simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_setOf_eq, coe_mk', Set.singleton_subset_iff,
+      implies_true]
+..............
+line 198, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, H⟩
+* Try these:
+  [apply] grind only [= Set.subset_def, #5dd8, #0789, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #5dd8]
+    instantiate only [#0789, #838e]
+shortened proof!
+.......
+line 208, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, U, hU, H⟩
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [= Set.subset_def, #ee07, #481b, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #ee07]
+    instantiate only [#481b, #838e]
+shortened proof!
+..............
+line 234, col 10:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.union_sdiff_self, Set.singleton_union, Set.insert_eq_of_mem, Std.le_refl]
+.
+line 234, col 23:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.inter_singleton_of_mem, Set.mem_singleton_iff]
+.
+line 234, col 37:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.mem_inter_iff, Set.mem_sdiff, Set.mem_singleton_iff, not_false_eq_true, and_self]
+........
+line 256, col 4:
+exact ⟨i, by simpa [f, this] using! hi⟩
+* Try this:
+
+  [apply]     simp_all only [OrderHom.coe_mk, f]
+    simp_all only [f]
+    apply Exists.intro
+    · exact hi
+...
+line 260, col 6:
+refine (Set.ncard_mono (Set.subset_univ _)).trans ?_
+* Try this:
+
+  [apply]   simp_all only [pow_zero, Ideal.one_eq_top, Submodule.top_smul, Submodule.top_coe, Set.ncard_univ, tsub_zero,
+      le_add_iff_nonneg_right, zero_le, f]
+shortened proof!
+....
+line 267, col 8:
+omega
+* Try this:
+
+  [apply]     simp_all only [Nat.succ_eq_add_one, add_tsub_cancel_right, tsub_le_iff_right, f]
+    obtain ⟨w, h_1⟩ := H
+    smt +mono [*]
+...
+line 271, col 20:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 278, col 8:
+rw [this, hi, ← h, le_bot_iff] at hf
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, le_bot_iff, Submodule.bot_coe, Set.ncard_singleton, le_add_iff_nonneg_left, zero_le,
+      f]
+shortened proof!
+.....
+line 283, col 44:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.singleton_subset_iff, SetLike.mem_coe, zero_mem, f]
+.
+line 283, col 70:
+simp
+* Try this:
+
+  [apply]   simp_all only [tsub_self, zero_add, Set.ncard_singleton, Std.le_refl, f]
+.............
+line 317, col 4:
+simp only [map_sum, map_smul]
+* this parameter is redundant, environment already contains `Finset.mem_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [map_sum, Submodule.sum_mem, map_smul, Submodule.smul_mem_smul, Submodule.mem_top, #2fa7, #bce0]
+  [apply] grind only [map_sum, Submodule.sum_mem, map_smul, Submodule.smul_mem_smul, Submodule.mem_top]
+  [apply] grind =>
+    instantiate only [map_sum]
+    instantiate only [Submodule.sum_mem]
+    cases #2fa7 <;>
+      instantiate only [#bce0, map_smul] <;>
+        instantiate only [Submodule.smul_mem_smul] <;> instantiate only [Submodule.mem_top]
+shortened proof!
+....
+line 326, col 2:
+exact (Submodule.mkQ_surjective _).comp hf
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, Function.Surjective.of_comp_iff]
+    apply Submodule.mkQ_surjective
+........................
+line 370, col 4:
+intro h
+* Try this:
+
+  [apply]     simp_all only [Set.mem_setOf_eq, ne_eq, Nat.find_eq_zero, pow_zero, mul_one]
+    obtain ⟨val, property⟩ := t
+    obtain ⟨w, h⟩ := H
+    simp_all only
+    simp_all only [Ideal.mem_primeCompl_iff]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [zero_mem, not_true_eq_false]
+shortened proof!
+..
+line 375, col 4:
+rw [mul_assoc, ← pow_succ, tsub_add_cancel_of_le, Nat.find_spec H]
+* Try these:
+  [apply] grind only [usr Nat.find_spec, mul_pow_sub_one]
+  [apply] grind =>
+    instantiate only [usr Nat.find_spec, mul_pow_sub_one]
+    ring
+shortened proof!
+.

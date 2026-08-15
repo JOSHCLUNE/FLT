@@ -1,0 +1,66 @@
+.......
+line 54, col 33:
+rw [pb.natDegree_minpoly, pb.finrank]
+* Try these:
+  [apply] grind only [!PowerBasis.natDegree_minpoly, !minpoly.natDegree_le, PowerBasis.finrank]
+  [apply] grind =>
+    instantiate only [!PowerBasis.natDegree_minpoly, !minpoly.natDegree_le]
+    instantiate only [PowerBasis.finrank]
+.
+line 55, col 32:
+rw [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self]
+* Try this:
+
+  [apply]   simp_all only [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self, pb]
+...
+line 65, col 2:
+exact ⟨P, hP_monic, hP_map, hP_deg⟩
+* Try these:
+  [apply] grind only [#b78f]
+  [apply] grind only
+  [apply] grind => instantiate only [#b78f]
+....
+line 77, col 33:
+exact Ideal.map_comap_le
+* Try these:
+  [apply] grind only [!Ideal.map_comap_le]
+  [apply] grind => instantiate only [!Ideal.map_comap_le]
+.
+line 78, col 4:
+exact (hmax.eq_of_le hM.ne_top hle).symm
+* Try these:
+  [apply] grind only [Ideal.comap_eq_top_iff, Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal, Ideal.IsMaximal.ne_top]
+  [apply] grind =>
+    instantiate only [Ideal.comap_eq_top_iff, Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal]
+    instantiate only [Ideal.IsMaximal.ne_top]
+...
+line 94, col 2:
+exact hq.mul_unit (isUnit_C.mpr (isUnit_iff_ne_zero.mpr
+    (inv_ne_zero (leadingCoeff_ne_zero.mpr hq0))))
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Polynomial.Separable.mul_unit
+    · simp_all only
+    · simp_all only [isUnit_map_iff, isUnit_iff_ne_zero, ne_eq, inv_eq_zero, leadingCoeff_eq_zero, not_false_eq_true]
+.....................X....................
+line 203, col 25:
+rw [hSL_inj h]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, algebraMap_eq, OneMemClass.coe_one, one_mul, S, L, pK]
+    apply hSL_inj
+    simp_all only
+..
+line 205, col 47:
+rw [h, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_eq, map_zero, S, L, pK]
+...
+line 208, col 46:
+rw [h, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_eq, mem_nonZeroDivisors_iff_ne_zero, map_zero, pK, S, L]
+.

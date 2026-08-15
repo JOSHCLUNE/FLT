@@ -1,0 +1,63 @@
+.
+line 135, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 142, col 4:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [map_zero, not_lt_zero]
+shortened proof!
+...
+line 147, col 2:
+rw [WeierstrassCurve.tateParameter_eq, h, map_inv₀]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_inv₀]
+    exact h
+.........................
+line 268, col 2:
+exact tsum_congr fun m ↦ by push_cast; ring
+* Try this:
+
+  [apply]     simp_all only [TateCurve.coeff_a₄Formal, Int.reduceNeg, neg_mul, Finset.sum_neg_distrib, neg_inj, Nat.cast_add,
+      Nat.cast_one, Int.cast_neg, Int.cast_mul, Int.cast_ofNat, Int.cast_pow, Int.cast_add, Int.cast_natCast,
+      Int.cast_one]
+    grind only [#ac57, #dac9]
+.................
+line 295, col 6:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_sum, Nat.cast_pow, c]
+shortened proof!
+.....
+line 302, col 6:
+rw [neg_mul, Int.ediv_mul_cancel (h12 d)]
+* Try these:
+  [apply] grind only [#bbf4]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#bbf4]
+    lia
+..
+line 303, col 48:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 308, col 2:
+refine tsum_congr fun m ↦ ?_
+* Try this:
+
+  [apply]   simp_all only [TateCurve.coeff_a₆Formal, Finset.sum_neg_distrib, neg_inj, neg_mul, Nat.cast_add, Nat.cast_one,
+      Int.cast_neg, c]
+shortened proof!
+......_....

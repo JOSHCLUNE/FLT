@@ -1,0 +1,26 @@
+.......
+line 81, col 14:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, map_zero, RingHom.id_apply]
+.
+line 82, col 20:
+simp [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]     simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply,
+      map_moduleTensorEquiv_tmul]
+    rfl
+.
+line 83, col 13:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply, smul_add, map_add]
+.
+line 93, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]

@@ -1,0 +1,22 @@
+......
+line 74, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr h3
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, or_true]
+.
+line 75, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+* Try this:
+  [apply] grind only
+...
+line 78, col 8:
+exact Or.inl h1
+* Try this:
+  [apply] grind only
+........
+line 84, col 61:
+exact Subgroup.mem_zpowers 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, one_zpow, exists_const]

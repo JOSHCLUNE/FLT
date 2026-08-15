@@ -1,0 +1,8 @@
+..
+line 26, col 2:
+exact Valuation.integer.integers _
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := x
+    simp_all only [Valuation.mem_valuationSubring_iff]
+    apply Valuation.valuationSubring.integers

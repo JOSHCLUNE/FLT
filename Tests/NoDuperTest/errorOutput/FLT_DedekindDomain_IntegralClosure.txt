@@ -1,0 +1,100 @@
+......
+line 57, col 29:
+simpa using hI
+* Try this:
+
+  [apply]   simp_all only [Ideal.isUnit_iff]
+.........................
+line 105, col 4:
+simpa [hx]
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [under_asIdeal, ne_eq, map_zero, not_false_eq_true, zero_pow]
+....
+line 110, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [under_asIdeal, ne_eq, Submodule.zero_eq_bot, Submodule.span_eq_bot, Set.mem_singleton_iff, imp_false,
+      forall_eq, not_false_eq_true, Associates.factors_mk, ofAdd_neg, WithZero.coe_inv, inv_pow, Nat.cast_mul,
+      Int.ofAdd_mul, zpow_natCast, WithZero.coe_pow]
+.....
+line 128, col 2:
+infer_instance
+* Try this:
+
+  [apply]   apply FaithfulSMul.to_isTorsionFree
+..........
+line 144, col 4:
+constructor
+* Try this:
+
+  [apply]     simp_all only [under_asIdeal]
+    grind only [Ideal.liesOver_iff]
+shortened proof!
+..
+line 147, col 4:
+rwa [← @HeightOneSpectrum.ext_iff] at hxy
+* Try this:
+
+  [apply]     simp_all only [Set.mem_setOf_eq]
+    subst hx
+    simp_all only [under_asIdeal]
+    ext x_1 : 2
+    simp_all only
+...................
+line 193, col 6:
+rw [hyover, hbot]
+* Try this:
+
+  [apply]     subst hbot
+    simp_all only [Ideal.under_bot]
+shortened proof!
+.....
+line 198, col 17:
+simp
+* Try this:
+
+  [apply]     subst wcomap
+    simp_all only [under_asIdeal, Finset.coe_univ, Set.mem_univ, w', w]
+.
+line 199, col 4:
+exact fun _ _ ↦ rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+......
+line 264, col 16:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.trans_symm, TensorProduct.comm_symm, smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      LinearEquiv.coe_coe, LinearEquiv.trans_apply, map_zero, LinearEquiv.restrictScalars_symm_apply, RingHom.id_apply]
+..
+line 265, col 81:
+ring
+* Try this:
+  [apply] grind only
+.X.
+line 280, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+............
+line 318, col 30:
+simpa [Submonoid.smul_def] using hx
+* Try this:
+
+  [apply]     simp_all only [Algebra.linearMap_apply, Submonoid.mk_smul, LinearMap.coe_restrictScalars]
+    grind only [Submonoid.smul_def, algebraMap_smul]
+...
+line 322, col 6:
+simpa only [Submonoid.smul_def, smul_eq_mul, Algebra.smul_def] using he
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Submonoid.smul_def, algebraMap_smul]
+  [apply] grind =>
+    instantiate only [Submonoid.smul_def]
+    instantiate only [algebraMap_smul]

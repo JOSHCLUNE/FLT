@@ -1,0 +1,46 @@
+..
+line 29, col 68:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.top_eq_univ, Set.mem_univ]
+.
+line 30, col 2:
+exact IsPrimitiveRoot.card_rootsOfUnity hz
+* Try these:
+  [apply] grind only [!IsPrimitiveRoot.card_rootsOfUnity]
+  [apply] grind => instantiate only [!IsPrimitiveRoot.card_rootsOfUnity]
+..
+line 37, col 2:
+rw [pow_eq_pow_mod b h, pow_eq_pow_mod c h]
+* Try this:
+
+  [apply]     apply pow_eq_pow_of_modEq
+    on_goal 2 => { exact h
+    }
+    · simp_all only
+shortened proof!
+.
+line 42, col 2:
+rw [ZMod.castHom_apply, ZMod.cast_eq_val, ZMod.val_natCast]
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply]
+    grind only [ZMod.cast_eq_val, ZMod.val_natCast, ZMod.natCast_eq_natCast_iff, ZMod.natCast_mod]
+shortened proof!
+..........
+line 59, col 17:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_one, Units.val_one]
+    rfl
+shortened proof!
+.
+line 60, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_mul, Units.val_mul]
+    rfl
+shortened proof!

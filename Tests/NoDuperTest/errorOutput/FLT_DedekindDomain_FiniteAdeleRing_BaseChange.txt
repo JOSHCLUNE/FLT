@@ -1,0 +1,25 @@
+....................
+line 192, col 6:
+rfl
+* Try this:
+
+  [apply]   rfl
+...
+line 221, col 2:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+.......
+line 237, col 12:
+simp
+* Try this:
+
+  [apply]   smt +mono [*]
+..........
+line 265, col 4:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+............

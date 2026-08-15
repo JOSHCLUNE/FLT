@@ -1,0 +1,21 @@
+[{"tacticSucceeded": true,
+  "startLine": 26,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Valued.isUnit_valuationSubring_iff",
+  "oldText": "exact Valuation.integer.integers _",
+  "message":
+  "Try this:\n\n  [apply]     obtain ⟨val, property⟩ := x\n    simp_all only [Valuation.mem_valuationSubring_iff]\n    apply Valuation.valuationSubring.integers",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/Valued/ValuationTopology.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 25,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Valued.isUnit_valuationSubring_iff",
+  "oldText": "convert! Valuation.Integers.isUnit_iff_valuation_eq_one _",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/Valued/ValuationTopology.lean"}]

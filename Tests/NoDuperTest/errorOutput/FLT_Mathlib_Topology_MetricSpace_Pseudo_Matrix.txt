@@ -1,0 +1,7 @@
+.X...
+line 33, col 47:
+linarith
+* Try this:
+
+  [apply]   simp_all only [one_div, inv_pos, Nat.ofNat_pos]
+...

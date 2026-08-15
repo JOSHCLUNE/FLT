@@ -1,0 +1,1047 @@
+..
+line 55, col 65:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 58, col 67:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 61, col 66:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 64, col 67:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 67, col 65:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 70, col 65:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+..
+line 73, col 66:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceDvd, not_false_eq_true]
+...
+line 111, col 6:
+positivity
+* Try this:
+  [apply] grind only
+.....
+line 123, col 41:
+simp only [Set.mem_insert_iff, Set.mem_singleton_iff]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Set.mem_insert_iff, Set.mem_singleton_iff]
+..
+line 126, col 30:
+exact absurd (MulAction.injective g (hgx.trans hgy.symm)) hxy
+* Try this:
+
+  [apply]     subst hgy
+    simp_all only [gt_iff_lt, ne_eq, smul_left_cancel_iff]
+...
+line 129, col 30:
+exact absurd (MulAction.injective g (hgx.trans hgy.symm)) hxy
+* Try this:
+
+  [apply]     subst hgx
+    simp_all only [gt_iff_lt, ne_eq, smul_left_cancel_iff, not_true_eq_false]
+..
+line 135, col 22:
+rw [← Subgroup.coe_pow, pow_orderOf_eq_one, Subgroup.coe_one]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    obtain ⟨val, property⟩ := g
+    simp_all only [Subgroup.orderOf_mk, pow_orderOf_eq_one]
+.....
+line 140, col 60:
+rw [hab, h, mul_zero]
+* Try this:
+  [apply] grind only
+.....
+line 144, col 4:
+right
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 148, col 6:
+left
+* Try this:
+  [apply] grind only
+shortened proof!
+.......
+line 156, col 20:
+rw [h, orderOf_one] at hgb_ord
+* Try these:
+  [apply] grind only [orderOf_one, Fact.elim]
+  [apply] grind => instantiate only [orderOf_one, Fact.elim]
+shortened proof!
+.
+line 157, col 20:
+rw [h, orderOf_one] at hgp_ord
+* Try these:
+  [apply] grind only [orderOf_one]
+  [apply] grind => instantiate only [orderOf_one]
+shortened proof!
+.
+line 159, col 56:
+rw [← hgp_ord, pow_orderOf_eq_one]
+* Try these:
+  [apply] grind only [!pow_orderOf_eq_one]
+  [apply] grind => instantiate only [!pow_orderOf_eq_one]
+.
+line 160, col 12:
+rw [hgp_ord]
+* Try this:
+  [apply] grind only
+shortened proof!
+......
+line 165, col 69:
+exact (pow_pos (Nat.Prime.pos Fact.out) _).ne'
+* Try this:
+  [apply] grind only
+.............
+line 186, col 4:
+rintro g ⟨_, h1⟩ ⟨_, h2⟩
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [gt_iff_lt, ne_eq, orderOf_submonoid, not_false_eq_true, Nat.coprime_self, true_and]
+    obtain ⟨val, property⟩ := a
+    obtain ⟨left, right⟩ := a_1
+    simp_all only [Subgroup.mk_eq_one]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [Nat.not_ofNat_lt_one, orderOf_eq_one_iff, Submonoid.mk_eq_one]
+shortened proof!
+............
+line 209, col 4:
+rw [hq1, mul_one, one_mul]
+* Try this:
+
+  [apply]     subst hq1
+    simp_all only [Nat.card_eq_fintype_card, one_mem, mul_one, one_mul]
+....
+line 213, col 8:
+exact absurd (orderOf_eq_one_iff.mp h) hq1
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, isUnit_iff_eq_one, IsUnit.dvd, orderOf_eq_one_iff]
+.
+line 214, col 8:
+exact h
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, dvd_refl]
+.........
+line 224, col 50:
+rw [ha']
+* Try this:
+
+  [apply]     subst ha'
+    simp_all only [Nat.card_eq_fintype_card, Subtype.forall]
+.
+line 226, col 36:
+rw [hb']
+* Try this:
+
+  [apply]     subst ha'
+    simp_all only [Nat.card_eq_fintype_card, Subtype.forall]
+.....
+line 232, col 16:
+rw [pow_zero, inv_one, mul_one, one_mul, pow_zero, zpow_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, pow_zero, one_mul, inv_one, mul_one, zpow_one]
+...
+line 236, col 40:
+rw [ih]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card]
+..
+line 239, col 57:
+ring
+* Try this:
+  [apply] grind only
+...
+line 243, col 6:
+have hg3 : g^3 = 1 := hg_order ▸ pow_orderOf_eq_one g
+* Try these:
+  [apply] grind only [!pow_orderOf_eq_one, !orderOf_inv, orderOf_eq_one_iff, #e10f]
+  [apply] grind only [!pow_orderOf_eq_one, !orderOf_inv, orderOf_eq_one_iff]
+  [apply] grind =>
+    instantiate only [#e10f, !pow_orderOf_eq_one]
+    instantiate only [!orderOf_inv]
+    instantiate only [orderOf_eq_one_iff]
+    ac
+shortened proof!
+....
+line 250, col 6:
+rw [hq_ord] at h1
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...
+line 254, col 48:
+omega
+* Try this:
+  [apply] grind only
+..
+line 256, col 8:
+calc a^3 - 1 = (5 * (a / 5) + a % 5)^3 - 1 := congrArg (fun x ↦ x^3 - 1) hk
+        _ = _ := by ring
+* Try this:
+  [apply] grind only
+...
+line 259, col 85:
+omega
+* Try this:
+  [apply] grind only
+.
+line 260, col 6:
+rcases h_cases with hr | hr | hr | hr | hr
+* Try these:
+  [apply] grind only [#a038, #7b2d, #74cc, #5a5e, #d755]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#a038]
+    cases #7b2d <;> cases #74cc <;> cases #5a5e <;> cases #d755
+shortened proof!
+.
+line 261, col 8:
+omega
+* Try this:
+  [apply] grind only
+.
+line 262, col 8:
+exact ⟨a / 5, by omega⟩
+* Try these:
+  [apply] grind only [#a038]
+  [apply] grind only
+  [apply] grind => instantiate only [#a038]
+.
+line 263, col 8:
+omega
+* Try this:
+  [apply] grind only
+.
+line 264, col 8:
+omega
+* Try this:
+  [apply] grind only
+.
+line 265, col 8:
+omega
+* Try this:
+  [apply] grind only
+..
+line 268, col 38:
+rw [inv_mul_cancel, mul_one]
+* Try these:
+  [apply] grind only [inv_mul_eq_one]
+  [apply] grind =>
+    instantiate only [inv_mul_eq_one]
+    ac
+.
+line 269, col 32:
+rw [← mul_assoc]
+* Try this:
+  [apply] grind only
+.
+line 270, col 36:
+rw [ha, hk]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..........
+line 286, col 2:
+exact Subgroup.index_dvd_of_le (Subgroup.le_normalizer (H := (P : Subgroup G)))
+* Try these:
+  [apply] grind only [!Sylow.card_dvd_index, !Sylow.card_eq_index_normalizer]
+  [apply] grind => instantiate only [!Sylow.card_dvd_index, !Sylow.card_eq_index_normalizer]
+......
+line 296, col 6:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+* Try this:
+  [apply] grind only
+.
+line 297, col 4:
+rw [← Nat.card_eq_fintype_card, Sylow.card_eq_index_normalizer P, ← h_idx]
+* Try these:
+  [apply] grind only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+shortened proof!
+.....
+line 301, col 4:
+omega
+* Try this:
+  [apply] grind only
+...
+line 302, col 47:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.
+line 302, col 66:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.___........
+line 319, col 40:
+rw [Fintype.card_eq_nat_card, hn]
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, Nat.reduceDvd]
+shortened proof!
+......
+line 325, col 52:
+rw [Subgroup.orderOf_coe, hg]
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, orderOf_submonoid]
+..
+line 326, col 56:
+rw [Subgroup.orderOf_coe, hq_ord]
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, orderOf_submonoid]
+...
+line 330, col 16:
+rw [h, orderOf_one] at hg_ord
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, orderOf_one, OfNat.one_ne_ofNat]
+shortened proof!
+.
+line 331, col 16:
+rw [h, orderOf_one] at hq_ord_PGL
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, orderOf_submonoid, orderOf_one,
+      OfNat.one_ne_ofNat]
+shortened proof!
+.
+line 332, col 8:
+rw [hg_ord, hp3]
+* Try this:
+  [apply] grind only
+.
+line 333, col 44:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 334, col 8:
+rw [hq_ord_PGL, hp3]
+* Try this:
+
+  [apply]     subst hp3
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, orderOf_submonoid]
+    obtain ⟨val, property⟩ := g
+    obtain ⟨val_1, property_1⟩ := q
+    simp_all only [Subgroup.orderOf_mk]
+    rfl
+shortened proof!
+..........
+line 360, col 6:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+* Try this:
+  [apply] grind only
+.
+line 361, col 4:
+rw [← Nat.card_eq_fintype_card, Sylow.card_eq_index_normalizer P, ← h_idx]
+* Try these:
+  [apply] grind only [!Sylow.card_dvd_index, Nat.card_eq_fintype_card]
+  [apply] grind =>
+    instantiate only [!Sylow.card_dvd_index]
+    instantiate only [Nat.card_eq_fintype_card]
+shortened proof!
+.....
+line 365, col 4:
+omega
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 366, col 47:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.
+line 366, col 65:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.
+line 367, col 2:
+interval_cases k
+* Try this:
+
+  [apply]   smt +mono [*]
+shortened proof!
+........
+line 391, col 4:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 392, col 4:
+exact hpq rfl
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.card_eq_fintype_card, ne_eq, not_true_eq_false]
+...
+line 395, col 4:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.................
+line 421, col 8:
+rintro ⟨hxP, hx5⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Nat.card_eq_fintype_card, ne_eq, and_true]
+    obtain ⟨left, right⟩ := a
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [one_mem, orderOf_one, OfNat.one_ne_ofNat]
+shortened proof!
+......
+line 427, col 4:
+rw [← Nat.card_eq_fintype_card, hP_card P]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.add_one_sub_one, S5]
+......
+line 433, col 8:
+rintro ⟨hxQ, hx3⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Nat.card_eq_fintype_card, ne_eq, and_true, S5]
+    obtain ⟨left, right⟩ := a
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [one_mem, orderOf_one, OfNat.one_ne_ofNat]
+shortened proof!
+......
+line 439, col 4:
+rw [← Nat.card_eq_fintype_card, hQ_card Q]
+* Try these:
+  [apply] grind only [Nat.card_eq_fintype_card, #1f18]
+  [apply] grind only [Nat.card_eq_fintype_card]
+  [apply] grind =>
+    instantiate only [#1f18]
+    instantiate only [Nat.card_eq_fintype_card]
+..........
+line 451, col 8:
+exact hPQ (by ext y; exact Subgroup.ext_iff.mp (hzP.symm.trans hzQ) y)
+* Try these:
+  [apply] grind only [Sylow.ext]
+  [apply] grind => instantiate only [Sylow.ext]
+..
+line 453, col 6:
+rfl
+* Try this:
+  [apply] grind only
+..
+line 455, col 6:
+obtain ⟨P, hxP⟩ := Finset.mem_biUnion.mp hx
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Finset.mem_biUnion, Finset.mem_univ, Finset.mem_filter, true_and,
+      exists_and_right, and_self, S5, S3, U5, F5]
+shortened proof!
+..........
+line 468, col 8:
+exact hQQ (by ext y; exact Subgroup.ext_iff.mp (hzQ1.symm.trans hzQ2) y)
+* Try these:
+  [apply] grind only [Sylow.ext]
+  [apply] grind => instantiate only [Sylow.ext]
+..
+line 470, col 6:
+rfl
+* Try this:
+  [apply] grind only
+..
+line 472, col 6:
+obtain ⟨Q, hxQ⟩ := Finset.mem_biUnion.mp hx
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Finset.mem_biUnion, Finset.mem_univ, Finset.mem_filter, true_and,
+      exists_and_right, and_self, S5, S3, F5, U3, F3]
+shortened proof!
+...
+line 477, col 6:
+simp only [F1, Finset.mem_filter, Finset.mem_univ, true_and, Finset.mem_singleton, orderOf_eq_one_iff]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, orderOf_eq_one_iff, Finset.mem_filter, Finset.mem_univ, true_and,
+      Finset.mem_singleton, S5, S3, F5, F3, F1]
+.
+line 478, col 4:
+exact Finset.card_singleton 1
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Finset.card_singleton, S5, S3, F5, F3]
+...
+line 481, col 31:
+intro x hx5 hx3
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Nat.card_eq_fintype_card, orderOf_eq_one_iff, Finset.mem_filter, Finset.mem_univ, true_and,
+      Nat.reduceEqDiff, and_false, not_false_eq_true, S5, S3, F5, F3, F1]
+shortened proof!
+.....
+line 487, col 33:
+intro x hx5 hx1
+* Try these:
+  [apply] grind only [= Finset.mem_filter]
+  [apply] grind => instantiate only [= Finset.mem_filter]
+shortened proof!
+..
+line 489, col 33:
+intro x hx3 hx1
+* Try these:
+  [apply] grind only [= Finset.mem_filter]
+  [apply] grind => instantiate only [= Finset.mem_filter]
+shortened proof!
+....
+line 496, col 2:
+rw [h_card, hF1_card] at h_le
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.............
+line 517, col 8:
+rename_i x_val hx_mem
+* Try this:
+
+  [apply]     rename_i hx
+    simp_all only [Nat.card_eq_fintype_card, Set.mem_union, SetLike.mem_coe]
+    cases hx with
+    | inl h =>
+      apply Exists.intro
+      · apply And.intro
+        · exact h
+        · simp_all only [left_eq_mul, exists_eq_right, one_mem]
+    | inr h_1 =>
+      apply Exists.intro
+      · apply And.intro
+        · apply OneMemClass.one_mem
+        · simp_all only [one_mul, exists_eq_right']
+shortened proof!
+.
+line 521, col 8:
+exact ⟨1, H.one_mem, 1, K.one_mem, (mul_one 1).symm⟩
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card]
+    apply Exists.intro
+    · apply And.intro
+      · apply OneMemClass.one_mem
+      · simp_all only [one_mul, exists_eq_right', one_mem]
+.........
+line 529, col 35:
+rw [inv_inv]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, inv_inv]
+.
+line 530, col 8:
+group
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, mul_inv_rev, mul_inv_cancel_right]
+.
+line 531, col 4:
+exact ⟨⟨⟨h, hh⟩, ⟨k, hk⟩⟩, Subtype.ext rfl⟩
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, Subtype.mk.injEq, Prod.exists, Subtype.exists, exists_prop]
+    apply Exists.intro
+    · apply And.intro
+      · exact hh
+      · simp_all only [mul_right_inj, exists_eq_right]
+.........
+line 546, col 10:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+* Try this:
+  [apply] grind only
+.
+line 547, col 8:
+rw [← Nat.card_eq_fintype_card, Sylow.card_eq_index_normalizer P, ← h_idx]
+* Try these:
+  [apply] grind only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!Sylow.card_dvd_index, Fintype.card_eq_nat_card]
+shortened proof!
+.....
+line 551, col 8:
+omega
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 552, col 51:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 552, col 69:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.
+line 553, col 6:
+interval_cases k
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, Nat.add_eq_right, mul_eq_zero, OfNat.ofNat_ne_zero, false_or, or_self,
+      Nat.reduceEqDiff, ne_eq, not_false_eq_true, mul_eq_left₀]
+    smt +mono [*]
+shortened proof!
+.
+line 554, col 4:
+exact h_cases.resolve_left h_contra
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, false_or]
+........
+line 562, col 8:
+omega
+* Try this:
+  [apply] grind only
+...
+line 563, col 51:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, Nat.ofNat_pos]
+.
+line 563, col 70:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.___......
+line 572, col 92:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, pow_one, Nat.reduceDvd]
+..
+line 575, col 48:
+rw [hN₃.2, hP₅]
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true]
+    obtain ⟨left, right⟩ := hN₃
+    rfl
+shortened proof!
+.
+line 575, col 86:
+rw [hN₃.2, hP₅]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, Nat.reduceMul]
+..
+line 578, col 80:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, Nat.ofNat_pos]
+.
+line 578, col 94:
+rw [← h_card_sup, Subgroup.index_mul_card, hn, h_card_sup]
+* Try these:
+  [apply] grind only [!Subgroup.card_mul_index]
+  [apply] grind => instantiate only [!Subgroup.card_mul_index]
+.....
+line 586, col 115:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, pow_one]
+......
+line 589, col 145:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, OfNat.ofNat_ne_one, not_false_eq_true, Subgroup.mem_map,
+      Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right, not_le, Nat.succ_eq_add_one,
+      Nat.reduceAdd, Nat.reducePow, Nat.reduceDvd]
+.__.
+line 591, col 8:
+rw [← hP5'_card]
+* Try these:
+  [apply] grind only [!Subgroup.eq_of_le_of_card_ge]
+  [apply] grind => instantiate only [!Subgroup.eq_of_le_of_card_ge]
+shortened proof!
+........
+line 609, col 4:
+omega
+* Try this:
+  [apply] grind only
+...
+line 610, col 47:
+norm_num
+* Try this:
+
+  [apply]   smt +mono [*]
+.
+line 610, col 65:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.___......
+line 624, col 92:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, pow_one, Nat.reduceDvd]
+..
+line 627, col 48:
+rw [hN₅.2, hP₃]
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card]
+    obtain ⟨left, right⟩ := hN₅
+    rfl
+shortened proof!
+.
+line 627, col 86:
+rw [hN₅.2, hP₃]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceMul]
+..
+line 630, col 80:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.
+line 630, col 94:
+rw [← h_card_sup, Subgroup.index_mul_card, hn, h_card_sup]
+* Try these:
+  [apply] grind only [!Subgroup.card_mul_index]
+  [apply] grind => instantiate only [!Subgroup.card_mul_index]
+.....
+line 638, col 115:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, pow_one]
+......
+line 641, col 145:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, not_le, Nat.succ_eq_add_one, Nat.reduceAdd, Nat.reducePow, Nat.reduceDvd, not_false_eq_true]
+.__.
+line 643, col 8:
+rw [← hP3'_card]
+* Try these:
+  [apply] grind only [!Subgroup.eq_of_le_of_card_ge]
+  [apply] grind => instantiate only [!Subgroup.eq_of_le_of_card_ge]
+shortened proof!
+............
+line 675, col 2:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, forall_const, Nat.not_ofNat_le_one]
+..........
+line 699, col 2:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, forall_const, Nat.not_ofNat_le_one]
+.......
+line 737, col 4:
+exact Subgroup.card_eq_one.mp h_one
+* Try these:
+  [apply] grind only [!Subgroup.card_eq_one]
+  [apply] grind => instantiate only [!Subgroup.card_eq_one]
+..
+line 742, col 4:
+have h_PQ : (P : Subgroup G) = Q :=
+      SetLike.ext' <| Set.eq_of_subset_of_ncard_le (h_eq ▸ inf_le_right) <|
+        (((Nat.card_coe_set_eq _).symm : (Q : Set G).ncard = Nat.card (Q : Subgroup G)).trans <|
+          (hS Q).trans <| (hS P).symm.trans (Nat.card_coe_set_eq _)).le
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, ne_eq, dvd_refl, inf_eq_left, inf_of_le_left]
+    grind only [Sylow.ext_iff, !Sylow.card_eq_multiplicity, Sylow.is_maximal', IsPGroup.of_card]
+shortened proof!
+......
+line 770, col 4:
+exact (Finset.card_sdiff_of_subset h_sub).trans (by rw [Finset.card_singleton, hP_card])
+* Try these:
+  [apply] grind only [= Finset.card_sdiff_of_subset, = Finset.card_singleton]
+  [apply] grind =>
+    instantiate only [= Finset.card_sdiff_of_subset]
+    instantiate only [= Finset.card_singleton]
+...
+line 774, col 4:
+exact ⟨Set.mem_toFinset.mpr (Subgroup.one_mem N), fun P _ x hx ↦
+      Set.mem_toFinset.mpr <| hN P <| Set.mem_toFinset.mp (Finset.mem_sdiff.mp hx).1⟩
+* Try this:
+
+  [apply]     subst hn_sylow
+    simp_all only [Nat.card_eq_fintype_card, Finset.coe_univ, Set.mem_toFinset, SetLike.mem_coe, one_mem, Finset.mem_univ,
+      Set.subset_toFinset, Finset.coe_sdiff, Set.coe_toFinset, Finset.coe_singleton, Set.sdiff_subset_iff,
+      Set.singleton_union, Set.insert_eq_of_mem, forall_const, true_and, U]
+    intro x
+    apply hN
+...
+line 780, col 4:
+exact fun h ↦ let ⟨_, _, hP⟩ := Finset.mem_biUnion.mp h; (Finset.mem_sdiff.mp hP).2 (Finset.mem_singleton.mpr rfl)
+* Try this:
+
+  [apply]     subst hn_sylow
+    simp_all only [Nat.card_eq_fintype_card, Finset.coe_univ, Set.subset_toFinset, Finset.coe_insert, Finset.coe_biUnion,
+      Set.mem_univ, Finset.coe_sdiff, Set.coe_toFinset, Finset.coe_singleton, Set.iUnion_true, Finset.mem_biUnion,
+      Finset.mem_univ, Finset.mem_sdiff, Set.mem_toFinset, SetLike.mem_coe, one_mem, Finset.mem_singleton,
+      not_true_eq_false, and_false, exists_const, not_false_eq_true, U]
+.....
+line 794, col 55:
+rw [← hn, Subgroup.card_eq_card_quotient_mul_card_subgroup N]
+* Try these:
+  [apply] grind only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+  [apply] grind => instantiate only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+....
+line 798, col 6:
+exact absurd (eq_bot_iff.mpr fun x hx ↦ orderOf_eq_one_iff.mp <| Nat.dvd_one.mp <| h ▸
+        ((Nat.card_zpowers x).symm ▸ Subgroup.card_dvd_of_le (Subgroup.zpowers_le.mpr hx) : orderOf x ∣ Nat.card N)) hN_ne_bot
+* Try these:
+  [apply] grind only [!Subgroup.card_eq_one]
+  [apply] grind => instantiate only [!Subgroup.card_eq_one]
+.
+line 800, col 6:
+right
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 801, col 6:
+exact absurd (h ▸ hN_div : 3 ∣ 4) (by norm_num)
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ne_eq, Nat.reduceDvd]
+.
+line 802, col 6:
+left
+* Try this:
+  [apply] grind only
+shortened proof!
+...__.....
+line 810, col 6:
+rcases hGN_card with h | h
+* Try these:
+  [apply] grind only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+  [apply] grind => instantiate only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+shortened proof!
+...
+line 814, col 84:
+ring
+* Try this:
+  [apply] grind only
+.
+line 815, col 4:
+exact h4.symm ▸ Nat.mul_le_mul_left 3 (Nat.le_of_dvd (Nat.zero_lt_succ 3) hN_div)
+* Try these:
+  [apply] grind only [!Subgroup.card_eq_card_quotient_mul_card_subgroup, #f9ab]
+  [apply] grind only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+  [apply] grind =>
+    instantiate only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+    cases #f9ab
+.......
+line 821, col 100:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 834, col 4:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+._....
+line 848, col 4:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+._.........
+line 866, col 4:
+rw [hN_top, hn] at h_mul
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, mul_eq_left₀,
+      Subgroup.index_eq_one, Subgroup.index_top]
+shortened proof!
+................
+line 889, col 77:
+norm_num
+* Try this:
+  [apply] grind only
+...
+line 899, col 4:
+exact (MonoidHom.ker_eq_bot_iff hf).mp h
+* Try these:
+  [apply] grind only [MonoidHom.ker_eq_bot_iff]
+  [apply] grind => instantiate only [MonoidHom.ker_eq_bot_iff]
+........
+line 911, col 66:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reducePow]
+...
+line 914, col 6:
+show (Subgroup.normalizer (P : Set G)).index = 15
+* Try these:
+  [apply] grind only [!Sylow.coe_coe, !not_dvd_card_sylow, Subgroup.index_eq_card,
+    !Sylow.card_eq_card_quotient_normalizer, Nat.card_eq_fintype_card]
+  [apply] grind =>
+    instantiate only [!Sylow.coe_coe, !not_dvd_card_sylow, Subgroup.index_eq_card]
+    instantiate only [!Sylow.card_eq_card_quotient_normalizer, Nat.card_eq_fintype_card]
+shortened proof!
+..
+line 917, col 49:
+norm_num
+* Try this:
+  [apply] grind only
+......
+line 930, col 10:
+rw [h, Subgroup.card_bot, hP_card, hn]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_bot, Fintype.card_unique, one_mul, Nat.reduceEqDiff,
+      not_false_eq_true, P]
+shortened proof!
+..
+line 932, col 10:
+rw [h, Subgroup.card_top, hn, hP_card]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_top, Fintype.card_subtype_true, Nat.reduceMul, Nat.reduceEqDiff,
+      not_false_eq_true, P]
+shortened proof!
+....
+line 942, col 6:
+have : Fintype.card (Sylow 2 G) % 2 = 1 := by rw [← Nat.card_eq_fintype_card]; exact card_sylow_modEq_one 2 G
+* Try these:
+  [apply] grind only [!not_dvd_card_sylow, Nat.card_eq_fintype_card]
+  [apply] grind =>
+    instantiate only [!not_dvd_card_sylow]
+    instantiate only [Nat.card_eq_fintype_card]
+shortened proof!
+...
+line 944, col 49:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.
+line 944, col 68:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.___.....
+line 949, col 68:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, isUnit_iff_eq_one, IsUnit.dvd, Nat.reducePow]
+..
+line 952, col 6:
+exact absurd hP_card (by rw [h, Subgroup.card_bot]; norm_num)
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, isUnit_iff_eq_one, IsUnit.dvd, Subgroup.mem_bot, Fintype.card_unique,
+      OfNat.one_ne_ofNat]
+.
+line 953, col 6:
+exact absurd hP_card (by rw [h, Subgroup.card_top, hn]; norm_num)
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, isUnit_iff_eq_one, IsUnit.dvd, Subgroup.mem_top, Fintype.card_subtype_true,
+      Nat.reduceEqDiff]
+..
+line 955, col 54:
+rw [h3]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd, ne_eq, OfNat.ofNat_ne_one, not_false_eq_true]
+shortened proof!
+..
+line 957, col 4:
+exact h5
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd]
+.....
+line 965, col 132:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ne_eq, OfNat.ofNat_ne_one, not_false_eq_true, f]
+....
+line 969, col 83:
+rfl
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 970, col 53:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.

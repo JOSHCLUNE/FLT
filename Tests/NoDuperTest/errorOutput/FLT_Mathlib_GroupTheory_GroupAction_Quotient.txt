@@ -1,0 +1,17 @@
+....._....
+line 37, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_smul, inv_smul_smul]
+    rfl
+shortened proof!
+......
+line 42, col 4:
+congr 2
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.X.X.X..X.X...X..X.X...
