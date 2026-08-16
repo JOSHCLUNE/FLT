@@ -1,0 +1,34 @@
+.
+line 107, col 62:
+omega
+.
+line 112, col 20:
+linarith
+...._.....................
+line 149, col 37:
+omega
+........................
+line 181, col 6:
+exact ⟨a, b, c, a0, b0, c0, ab, eb, H⟩
+...
+line 183, col 64:
+rwa [add_comm]
+.....
+line 189, col 10:
+exact fun h => ea (Int.even_pow.1 h).1
+.
+line 190, col 10:
+exact fun h => eb (Int.even_pow.1 h).1
+.....
+line 198, col 50:
+decide
+...
+line 201, col 6:
+cases a_odd' a_mod (by decide)
+....
+line 205, col 6:
+cases a_odd' a_mod (by decide)
+.
+line 206, col 6:
+exact ⟨a, b, c, a0, b0, c0, ab, a_mod, eb, H⟩
+......

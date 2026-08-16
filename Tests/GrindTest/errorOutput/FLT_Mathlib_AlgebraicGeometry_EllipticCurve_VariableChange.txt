@@ -1,0 +1,10 @@
+....
+line 48, col 24:
+decide
+._..........
+line 72, col 4:
+linear_combination -hv
+._......
+line 107, col 2:
+rw [hρ, hVinv, hWinv] at hmv
+shortened proof!

@@ -1,0 +1,7 @@
+..
+line 33, col 75:
+rw [map_one]
+shortened proof!
+......
+line 37, col 2:
+exact ⟨u₀⁻¹, mul_left_cancel₀ (left_ne_zero_of_mul_eq_one h1) (h2.trans h1.symm)⟩

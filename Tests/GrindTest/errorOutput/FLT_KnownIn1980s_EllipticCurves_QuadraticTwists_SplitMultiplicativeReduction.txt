@@ -1,0 +1,79 @@
+..
+line 91, col 30:
+field_simp
+shortened proof!
+.
+line 92, col 31:
+rw [hw]
+shortened proof!
+...
+line 94, col 48:
+exact mul_ne_zero (pow_ne_zero 2 hD) hc₄
+...
+line 98, col 53:
+ring
+.
+line 100, col 49:
+rw [map_pow]
+shortened proof!
+.........................................
+line 230, col 2:
+rw [neg_eq_zero] at hB
+shortened proof!
+...........
+line 259, col 2:
+linear_combination hdisc
+    + (residue R c₄' * residue R t' - residue R (E.integralModel R).a₁ * residue R c₄') * hA
+    - 4 * residue R c₄' * hB
+...
+line 282, col 61:
+rw [← hkey, h0, mul_zero]
+.......
+line 289, col 37:
+exact hc₄0
+...
+line 292, col 4:
+rw [show (4 : ResidueField R) = 2 * 2 by norm_num, h2, mul_zero]
+...
+line 294, col 37:
+exact hDne
+.....
+line 300, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hDmap) hc₄map
+.....
+line 305, col 43:
+exact residue_integralModel_c₆_ne_zero E R
+..
+line 307, col 4:
+rcases mul_eq_zero.mp (show residue R c₄'
+        * (residue R t' + residue R (E.integralModel R).a₁) = 0 by linear_combination hA)
+      with hz | hz
+shortened proof!
+........
+line 325, col 4:
+linear_combination (residue R t') ^ 6 * hB
+      - (residue R t') ^ 6 * residue R n' * residue R c₄' * h2
+...
+line 330, col 2:
+rw [hκW_eq, hWc₄eq, show (0 : ResidueField R) ^ 2 + 0 = 0 from by ring, mul_zero, hκW0,
+    neg_zero, mul_zero]
+....
+line 355, col 63:
+rw [← hkey, h0, mul_zero]
+.....
+line 359, col 69:
+exact hc₄0
+..
+line 360, col 43:
+exact hDne
+.....
+line 365, col 4:
+linear_combination
+      (-(residue R (E.integralModel R).c₄ * residue R (E.integralModel R).c₆)) * hkey
+....................................
+line 467, col 61:
+rw [← hkey, h0, mul_zero]
+........
+line 480, col 15:
+rw [h0, map_zero]
+.

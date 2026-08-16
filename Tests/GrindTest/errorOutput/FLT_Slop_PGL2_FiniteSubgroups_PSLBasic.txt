@@ -1,0 +1,251 @@
+........
+line 73, col 4:
+rw [mul_zero, sub_zero, mul_one]
+...
+line 80, col 4:
+rw [zero_mul, sub_zero, mul_one]
+...........
+line 100, col 8:
+rw [div_mul_cancel₀ _ hM]
+shortened proof!
+......
+line 110, col 10:
+calc (1 + (M.1 0 0 - 1)) * (M.1 1 1 - 1) + (M.1 0 0 - 1)
+              = M.1 0 0 * M.1 1 1 - 1 := by ring
+            _ = M.1 0 0 * M.1 1 1 - (M.1 0 0 * M.1 1 1 - M.1 0 1 * M.1 1 0) := by rw [hd]
+            _ = M.1 0 1 * M.1 1 0 := by ring
+.
+line 114, col 8:
+rw [mul_div_cancel_right₀ _ hM]
+...
+line 123, col 8:
+rw [mul_comm (M.1 1 0) ((M.1 1 1 - 1) / M.1 1 0), div_mul_cancel₀ _ hM]
+shortened proof!
+.........
+line 137, col 4:
+simp only [mul_zero, zero_mul, sub_zero] at hd
+shortened proof!
+.
+line 139, col 4:
+exact step g hg
+...............
+line 177, col 68:
+ring
+..
+line 178, col 90:
+rw [Nat.cast_add, Nat.cast_one]
+shortened proof!
+..
+line 179, col 50:
+ring
+..
+line 180, col 50:
+ring
+......
+line 187, col 4:
+rw [h_one, map_one]
+.........
+line 198, col 51:
+ring
+....
+line 203, col 121:
+rw [h_comm]
+....
+line 210, col 4:
+apply ha
+shortened proof!
+.................
+line 236, col 52:
+ring
+..
+line 237, col 52:
+ring
+..
+line 238, col 86:
+rw [Nat.cast_add, Nat.cast_one]
+shortened proof!
+..
+line 239, col 64:
+ring
+...
+line 241, col 34:
+rw [this, map_one]
+........
+line 245, col 43:
+ring
+........
+line 255, col 6:
+apply hb
+shortened proof!
+................................................
+line 302, col 6:
+simp only [mul_one, mul_zero, one_mul, add_zero] at h
+shortened proof!
+.....
+line 309, col 6:
+simp only [mul_one, zero_mul, one_mul, add_zero] at h
+shortened proof!
+.....
+line 316, col 6:
+simp only [m01, mul_one, mul_zero, one_mul, add_zero, zero_add] at h
+shortened proof!
+........
+line 326, col 8:
+change g.val 0 0 * m.val 0 0 + g.val 0 1 * m.val 1 0 = m.val 0 0 * g.val 0 0 + m.val 0 1 * g.val 1 0
+shortened proof!
+..
+line 329, col 8:
+change g.val 0 0 * m.val 0 1 + g.val 0 1 * m.val 1 1 = m.val 0 0 * g.val 0 1 + m.val 0 1 * g.val 1 1
+shortened proof!
+....
+line 334, col 8:
+change g.val 1 0 * m.val 0 0 + g.val 1 1 * m.val 1 0 = m.val 1 0 * g.val 0 0 + m.val 1 1 * g.val 1 0
+shortened proof!
+..
+line 337, col 8:
+change g.val 1 0 * m.val 0 1 + g.val 1 1 * m.val 1 1 = m.val 1 0 * g.val 0 1 + m.val 1 1 * g.val 1 1
+shortened proof!
+............
+line 357, col 8:
+simp only [mul_one, mul_zero, one_mul, add_zero] at h
+shortened proof!
+.....
+line 364, col 8:
+simp only [mul_one, zero_mul, one_mul, add_zero] at h
+shortened proof!
+.....
+line 371, col 8:
+simp only [eq_01, mul_one, mul_zero, one_mul, add_zero, zero_add] at h
+shortened proof!
+.....
+line 377, col 52:
+exact (mul_one _).symm
+..
+line 378, col 52:
+exact eq_01.trans (mul_zero _).symm
+..
+line 379, col 52:
+exact eq_10.trans (mul_zero _).symm
+..
+line 380, col 52:
+exact eq_11.trans (mul_one _).symm
+.......
+line 388, col 8:
+exact hd
+................
+line 402, col 6:
+simp only [neg_mul, mul_neg, one_mul, mul_one]
+.......
+line 410, col 4:
+simp only [mul_neg, mul_one, neg_neg]
+....
+line 414, col 40:
+ring
+.
+line 415, col 27:
+rw [h0]
+.
+line 416, col 23:
+ring
+..
+line 417, col 39:
+omega
+....................
+line 445, col 7:
+rw [mul_one, mul_one]
+...............
+line 464, col 96:
+rw [sq, mul_one]
+..
+line 466, col 79:
+rw [← mul_assoc]
+.
+line 467, col 79:
+rw [mul_comm (Fintype.card F ^ 2 - 1) _]
+..
+line 469, col 39:
+omega
+....
+line 480, col 94:
+norm_num
+..
+line 482, col 4:
+exact Eq.trans (mul_comm _ 2) h1
+.....
+line 488, col 93:
+norm_num
+..
+line 489, col 6:
+rw [h, zero_mul] at h_card_PSL
+shortened proof!
+.........
+line 504, col 42:
+norm_num
+..___...........
+line 534, col 4:
+exact congr_arg slMap (hg (slMap.symm x))
+....
+line 538, col 4:
+exact hh (slMap x)
+....
+line 567, col 6:
+decide
+.
+line 568, col 6:
+decide
+..
+line 570, col 34:
+simp only [mul_eq_zero, hc, false_or]
+.
+line 572, col 6:
+rw [show c * v 0 * (c * v 1) = c * c * (v 0 * v 1) by ring, hc2, one_mul]
+..
+line 578, col 12:
+exact absurd ⟨rfl, rfl⟩ hab
+________...
+line 588, col 86:
+exact isUnit_one
+.........._............
+line 627, col 2:
+have h2 : M.1 0 1 = 0 := (add_left_cancel hL00).symm
+shortened proof!
+............
+line 658, col 4:
+split at h0
+shortened proof!
+..
+line 664, col 4:
+split at h1
+shortened proof!
+...
+line 669, col 4:
+split at h1
+shortened proof!
+.....
+line 676, col 4:
+contradiction
+......
+line 680, col 57:
+rw [hsq _ hM11, mul_one]
+.
+line 681, col 48:
+ring
+.
+line 682, col 26:
+rw [h, one_mul]
+.
+line 683, col 6:
+contradiction
+........
+line 693, col 8:
+exact fun N ↦ by rw [one_mul, mul_one]
+......
+line 698, col 8:
+exact map_one sl2F3ToPermHom
+.._..._..........
+line 715, col 38:
+norm_num
+....
+line 719, col 4:
+omega
+.......

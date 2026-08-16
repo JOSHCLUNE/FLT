@@ -1,0 +1,20 @@
+............
+line 106, col 4:
+rw [h]
+shortened proof!
+.....
+line 114, col 13:
+simpa
+..
+line 117, col 6:
+apply IH
+shortened proof!
+..
+line 121, col 4:
+exact hmul _ _ (htransvec _) IH
+....
+line 133, col 6:
+grind
+.......
+line 138, col 2:
+exact this.2

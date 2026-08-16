@@ -1,0 +1,55 @@
+.............................
+line 123, col 4:
+exact Nat.zero_le _
+..........................
+line 171, col 4:
+exact hcolon r hr
+..........................
+line 226, col 33:
+omega
+...
+line 231, col 18:
+omega
+......
+line 240, col 4:
+exact hmain
+.........
+line 254, col 8:
+exact hlt
+.
+line 255, col 8:
+exact absurd ⟨m, hm, heq.symm⟩ hcon
+....
+line 259, col 16:
+simp
+.
+line 261, col 8:
+have h2 := hlt (j + 1) (by omega)
+shortened proof!
+..
+line 264, col 4:
+have h4 := hC (C + 1 + 1)
+shortened proof!
+..
+line 269, col 83:
+omega
+................
+line 296, col 4:
+exact hbot
+.......
+line 303, col 40:
+omega
+.....
+line 307, col 2:
+exact this ▸ le_rfl
+...............
+line 332, col 29:
+exact hmono i
+.....
+line 341, col 8:
+rw [← hcomap _ (hmono i.castSucc), he, hcomap _ (hmono i.succ)]
+................................
+line 382, col 75:
+push_cast
+shortened proof!
+.

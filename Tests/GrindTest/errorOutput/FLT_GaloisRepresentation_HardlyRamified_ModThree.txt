@@ -1,0 +1,4 @@
+.
+line 32, col 42:
+decide
+.

@@ -1,0 +1,20 @@
+[{"tacticSucceeded": true,
+  "startLine": 32,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName": "GaloisRepresentation.IsHardlyRamified.mod_three",
+  "oldText": "decide",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/GaloisRepresentation/HardlyRamified/ModThree.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 35,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "GaloisRepresentation.IsHardlyRamified.mod_three",
+  "oldText": "sorry",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/GaloisRepresentation/HardlyRamified/ModThree.lean"}]

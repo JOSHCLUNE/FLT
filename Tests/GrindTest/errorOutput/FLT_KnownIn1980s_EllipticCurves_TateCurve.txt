@@ -1,0 +1,17 @@
+..................................
+line 268, col 41:
+ring
+..................
+line 296, col 6:
+ring
+.....
+line 302, col 6:
+rw [neg_mul, Int.ediv_mul_cancel (h12 d)]
+..
+line 303, col 48:
+norm_num
+....
+line 308, col 2:
+refine tsum_congr fun m ↦ ?_
+shortened proof!
+......_....

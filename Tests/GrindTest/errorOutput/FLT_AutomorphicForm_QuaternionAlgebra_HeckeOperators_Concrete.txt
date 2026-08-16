@@ -1,0 +1,79 @@
+....._................................__.........................................................................................................................................
+line 459, col 2:
+contradiction
+....................
+line 493, col 73:
+simp
+...............................
+line 536, col 6:
+lia
+...
+line 539, col 38:
+simpa
+..
+line 540, col 65:
+simp
+.
+line 541, col 4:
+simp at hx'
+..........
+line 550, col 67:
+simp
+....
+line 553, col 67:
+simp
+.....__.................
+line 590, col 8:
+simp_all
+..
+line 591, col 35:
+simp [h]
+....................................................
+line 641, col 34:
+decide
+.
+line 641, col 72:
+decide
+..............................................__.........................................
+line 814, col 6:
+rfl
+..................__......
+line 895, col 6:
+rfl
+...
+line 898, col 6:
+contradiction
+...
+line 901, col 6:
+contradiction
+.....
+line 904, col 45:
+rfl
+.......
+line 928, col 55:
+simp
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..
+line 932, col 6:
+simp [hx]
+..
+line 934, col 6:
+simp [hy]
+.............................(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+............(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..........._....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.................

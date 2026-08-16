@@ -1,0 +1,10 @@
+......
+line 43, col 38:
+simp [h.ne_zero]
+.
+line 44, col 2:
+omega
+...........
+line 68, col 67:
+simp
+.....................

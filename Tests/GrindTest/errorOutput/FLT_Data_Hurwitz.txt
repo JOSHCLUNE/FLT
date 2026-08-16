@@ -1,0 +1,47 @@
+....
+line 75, col 4:
+field_simp
+shortened proof!
+....______.__.__.__.__.........__._..................................
+line 377, col 26:
+ext
+shortened proof!
+_.__.__.____....__..
+line 418, col 2:
+field_simp
+shortened proof!
+..................................._....
+line 468, col 2:
+simp only [Set.mem_setOf]
+shortened proof!
+.
+line 475, col 2:
+apply lt_of_le_of_ne
+shortened proof!
+..
+line 491, col 44:
+norm_num
+....
+line 495, col 4:
+rw [abs_of_nonneg]
+shortened proof!
+.......................
+line 513, col 26:
+positivity
+_.
+line 514, col 19:
+use z
+..
+line 515, col 30:
+rw [h, Int.cast_sub, Int.cast_one, add_comm_sub]
+shortened proof!
+......_.....__.
+line 528, col 2:
+contrapose! H
+shortened proof!
+..........
+line 546, col 4:
+exact _root_.norm_nonneg (a - q * b).toQuaternion
+...........................................
+line 593, col 4:
+exact a.2.1

@@ -1,0 +1,9 @@
+...
+line 59, col 20:
+subst h
+shortened proof!
+....................................
+line 141, col 4:
+ext
+shortened proof!
+.............

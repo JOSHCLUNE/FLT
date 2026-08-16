@@ -1,0 +1,10 @@
+..........................
+line 138, col 8:
+simp +contextual
+.
+line 138, col 30:
+simp +contextual
+.
+line 138, col 52:
+simp [mul_comm]
+..............................................

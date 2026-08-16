@@ -1,0 +1,7 @@
+......
+line 44, col 2:
+lia
+..............
+line 73, col 2:
+rw [map_mul, ← sq]
+shortened proof!

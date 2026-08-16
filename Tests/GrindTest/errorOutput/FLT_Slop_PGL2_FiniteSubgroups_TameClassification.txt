@@ -1,0 +1,750 @@
+......................
+line 94, col 2:
+rw [hS]
+shortened proof!
+.....................................__...................
+line 180, col 83:
+exact ha.symm
+...................
+line 211, col 65:
+rw [hM]
+shortened proof!
+.....
+line 216, col 28:
+rw [h_center]
+....
+line 221, col 69:
+ring
+....
+line 224, col 69:
+ring
+......
+line 232, col 6:
+calc z.val 0 1 = (z.val 0 0 + z.val 0 1) - z.val 0 0 := by ring
+      _ = z.val 0 0 - z.val 0 0 := by rw [eq2_00]
+      _ = 0 := by ring
+..
+line 237, col 6:
+calc z.val 1 0 = (z.val 1 0 + z.val 1 1) - z.val 1 1 := by ring
+      _ = z.val 1 1 - z.val 1 1 := by rw [eq1_11]
+      _ = 0 := by ring
+..
+line 242, col 6:
+calc z.val 1 1 = (z.val 0 1 + z.val 1 1) - z.val 0 1 := by ring
+      _ = (z.val 0 0 + z.val 0 1) - z.val 0 1 := by rw [← eq1_01]
+      _ = z.val 0 0 := by ring
+.....
+line 248, col 48:
+exact (mul_one _).symm
+..
+line 249, col 48:
+rw [mul_zero, hz_01]
+..
+line 250, col 48:
+rw [mul_zero, hz_10]
+..
+line 251, col 48:
+rw [mul_one, hz_11]
+....................................
+line 303, col 39:
+rw [mul_one]
+..
+line 305, col 38:
+rw [mul_assoc]
+.
+line 307, col 31:
+rw [hz_val]
+......
+line 313, col 65:
+rw [hg''_y, hg'_y]
+.
+line 314, col 70:
+rw [h_g''_val]
+...
+line 318, col 6:
+exact (sub_eq_zero.mp hc_eq).symm
+....
+line 323, col 31:
+rw [hc1]
+....
+line 338, col 4:
+exact ⟨g', h1, h2, fun g'' h1' h2' ↦ h3 g'' ⟨h1', h2'⟩⟩
+................
+line 362, col 6:
+rw [hf_mk, hf_mk]
+..................
+line 387, col 6:
+exact sub_eq_zero.mpr hx_one
+...................
+line 416, col 4:
+rw [hS] at hu hv ⊢
+shortened proof!
+...............
+line 460, col 2:
+rcases hnx with hnx_x | hnx_y
+shortened proof!
+..................................
+line 519, col 8:
+exact absurd h_swap.2 (hk n h_swap.1)
+...
+line 522, col 4:
+omega
+...
+line 532, col 33:
+rw [hfp]
+shortened proof!
+.
+line 533, col 33:
+rw [hfp]
+shortened proof!
+..................................
+line 602, col 4:
+rcases hy1 with hy_x | hy_y
+shortened proof!
+.......
+line 614, col 6:
+exact h_inj g₁ x₁ y₁ hxy₁ (hx_y.trans hy_y.symm)
+....
+line 622, col 54:
+rw [sub_div, div_self hn0]
+..
+line 623, col 45:
+omega
+.........
+line 629, col 60:
+rw [sub_div, div_self hd0]
+..
+line 630, col 37:
+omega
+....................................
+line 713, col 4:
+rw [h_comp]
+......
+line 718, col 33:
+exact hnontriv_rep i
+...
+line 722, col 6:
+exact ⟨i, g, by rw [heq_rep i] at hg; exact hg⟩
+.
+line 723, col 39:
+rw [← heq_rep i, ← heq_rep j] at hg
+shortened proof!
+................
+line 773, col 4:
+exact ⟨pairStabilizer p G a b, ⟨i, g, hig⟩, hstab⟩
+.....
+line 784, col 6:
+omega
+............
+line 799, col 32:
+have := hd_ge i
+shortened proof!
+.........
+line 815, col 4:
+have h : (1 : ℚ) / d₁ = 1 / n := by linarith only [hsum]
+shortened proof!
+...
+line 820, col 51:
+push_cast
+shortened proof!
+.
+line 822, col 10:
+rw [div_mul_cancel₀ 1 (by positivity : (n : ℚ) ≠ 0), mul_one]
+.
+line 824, col 10:
+rw [show (1 : ℚ) / n = 1 / 2 + 1 / 2 * (1 / (d₁ : ℚ)) by linarith only [hsum]]
+.
+line 825, col 67:
+ring
+...
+line 828, col 43:
+push_cast
+shortened proof!
+..
+line 832, col 54:
+omega
+.
+line 833, col 29:
+omega
+.
+line 833, col 40:
+omega
+.
+line 834, col 4:
+omega
+......
+line 848, col 4:
+rw [div_eq_div_iff hn0 hc] at h
+shortened proof!
+._......
+line 856, col 20:
+norm_num
+..
+line 857, col 45:
+norm_num
+.
+line 857, col 71:
+positivity
+....
+line 863, col 6:
+calc (1 : ℚ) / n + 1 / 2 = (1 - (1 - 1 / (n : ℚ))) + 1 / 2 := by ring
+        _ = (1 - ((1 : ℚ) - 1 / d 0 + 1 / 2 * (1 - 1 / d 1))) + 1 / 2 := by rw [hsum']
+        _ = 1 / d 0 + 1 / (2 * (d 1 : ℚ)) := by ring
+......
+line 872, col 53:
+omega
+..
+line 873, col 49:
+have := hd 1
+shortened proof!
+.
+line 874, col 26:
+norm_num
+..
+line 875, col 51:
+norm_num
+.
+line 875, col 77:
+positivity
+.....
+line 879, col 29:
+norm_num
+..
+line 880, col 48:
+have := hd 1
+shortened proof!
+.
+line 880, col 78:
+linarith only [h_inv_sum]
+.......
+line 887, col 55:
+omega
+..
+line 888, col 55:
+norm_num
+.
+line 888, col 81:
+positivity
+.
+line 889, col 8:
+have := hd 1
+shortened proof!
+...
+line 890, col 30:
+norm_num
+....
+line 892, col 35:
+norm_num
+.
+line 892, col 49:
+rw [h1_q] at h_inv_sum
+shortened proof!
+....
+line 898, col 6:
+calc (1 : ℚ) / n + 1 / 2 = (1 - (1 - 1 / (n : ℚ))) + 1 / 2 := by ring
+        _ = (1 - (1 / 2 * (1 - 1 / d 0) + ((1 : ℚ) - 1 / d 1))) + 1 / 2 := by rw [hsum']
+        _ = 1 / (2 * (d 0 : ℚ)) + 1 / d 1 := by ring
+......
+line 907, col 57:
+have := hd 0
+shortened proof!
+..
+line 908, col 45:
+omega
+.
+line 909, col 26:
+norm_num
+..
+line 910, col 51:
+norm_num
+.
+line 910, col 77:
+positivity
+.....
+line 914, col 29:
+norm_num
+..
+line 915, col 48:
+have := hd 0
+shortened proof!
+.
+line 915, col 78:
+linarith only [h_inv_sum]
+.......
+line 922, col 55:
+omega
+..
+line 923, col 55:
+norm_num
+.
+line 923, col 81:
+positivity
+.
+line 924, col 8:
+have := hd 0
+shortened proof!
+...
+line 925, col 30:
+norm_num
+....
+line 927, col 35:
+norm_num
+.
+line 927, col 49:
+rw [h0_q] at h_inv_sum
+shortened proof!
+....
+line 933, col 6:
+calc (1 : ℚ) / n = 1 - (1 - 1 / (n : ℚ)) := by ring
+        _ = 1 - (1 / 2 * (1 - 1 / d 0) + 1 / 2 * (1 - 1 / d 1)) := by rw [hsum']
+        _ = 1 / (2 * (d 0 : ℚ)) + 1 / (2 * (d 1 : ℚ)) := by ring
+...
+line 936, col 53:
+have := hd 0
+shortened proof!
+...
+line 937, col 53:
+have := hd 1
+shortened proof!
+..
+line 941, col 6:
+calc (((2 * d 0) * (2 * d 1) : ℕ) : ℚ)
+        _ = (2 * (d 0 : ℚ)) * (2 * (d 1 : ℚ)) * ((1 : ℚ) / n * n) := by
+          rw [div_mul_cancel₀ 1 hn0]; push_cast; ring
+        _ = (2 * (d 0 : ℚ)) * (2 * (d 1 : ℚ)) *
+            ((1 / (2 * (d 0 : ℚ)) + 1 / (2 * (d 1 : ℚ))) * n) := by rw [← h_inv_sum]
+        _ = (n : ℚ) * ((2 * (d 1 : ℚ)) * ((1 : ℚ) / (2 * (d 0 : ℚ)) * (2 * (d 0 : ℚ))) +
+            (2 * (d 0 : ℚ)) * ((1 : ℚ) / (2 * (d 1 : ℚ)) * (2 * (d 1 : ℚ)))) := by ring
+        _ = (n : ℚ) * (2 * (d 1 : ℚ)) + (n : ℚ) * (2 * (d 0 : ℚ)) := by
+          rw [div_mul_cancel₀ 1 hd0_nz, div_mul_cancel₀ 1 hd1_nz]; ring
+....
+line 953, col 50:
+omega
+.
+line 953, col 61:
+have h := hdn 0
+shortened proof!
+..
+line 955, col 22:
+omega
+.
+line 955, col 41:
+have := hd 0
+shortened proof!
+.......
+line 975, col 39:
+change d 0 ≤ d 2 ∧ d 2 ≤ d 1
+shortened proof!
+...
+line 978, col 40:
+exact ⟨h20, h01⟩
+...
+line 981, col 37:
+change d 1 ≤ d 0 ∧ d 0 ≤ d 2
+shortened proof!
+....
+line 985, col 40:
+exact ⟨h12, h20⟩
+..
+line 987, col 39:
+change d 2 ≤ d 1 ∧ d 1 ≤ d 0
+shortened proof!
+....
+line 991, col 37:
+exact this.trans hsum
+......
+line 1000, col 46:
+exact Nat.cast_le.mpr (hσ.1.trans hσ.2)
+.
+line 1001, col 36:
+ring
+.....
+line 1003, col 45:
+positivity
+......
+line 1010, col 64:
+exact Nat.cast_le.mpr hσ.2
+.
+line 1011, col 36:
+ring
+...
+line 1013, col 24:
+norm_num
+...
+line 1014, col 77:
+norm_num
+.
+line 1015, col 18:
+positivity
+...
+line 1019, col 6:
+rw [div_eq_div_iff (by positivity : (n : ℚ) ≠ 0) (Nat.cast_ne_zero.mpr hx)] at h_inv
+shortened proof!
+.......
+line 1025, col 51:
+intro hsum'
+shortened proof!
+.......
+line 1031, col 52:
+norm_num
+..
+line 1032, col 51:
+norm_num
+.
+line 1033, col 20:
+positivity
+.
+line 1033, col 50:
+positivity
+..
+line 1034, col 29:
+omega
+.........
+line 1039, col 25:
+norm_num
+.
+line 1039, col 39:
+linarith only [hsum']
+.........
+line 1043, col 26:
+norm_num
+.
+line 1043, col 40:
+linarith only [hsum']
+.........
+line 1047, col 26:
+norm_num
+.
+line 1047, col 40:
+linarith only [hsum']
+....
+line 1058, col 6:
+exact mul_one 1
+.....
+line 1064, col 6:
+rw [← show Hi = Hi_sub from by injection (h_get_Hi.symm.trans h_get_sub)]
+shortened proof!
+............____....
+line 1084, col 48:
+exact h_sq x.toMul
+....__........
+line 1093, col 38:
+norm_num
+.
+line 1093, col 67:
+norm_num
+.....
+line 1098, col 38:
+norm_num
+.
+line 1098, col 67:
+norm_num
+.......
+line 1120, col 50:
+omega
+........
+line 1134, col 28:
+omega
+.....
+line 1140, col 44:
+rw [hg_ord, hk]
+........
+line 1150, col 30:
+rw [hn_eq]
+..........
+line 1158, col 30:
+exact ⟨c, by linarith only [hc]⟩
+.........
+line 1167, col 77:
+omega
+....
+line 1172, col 6:
+rw [this] at hx_ord
+shortened proof!
+.....
+line 1179, col 51:
+omega
+.
+line 1180, col 60:
+rw [hHa_card]
+....................
+line 1196, col 44:
+exact absurd hz_ord (by norm_num)
+...
+line 1197, col 71:
+revert hd
+shortened proof!
+..
+line 1198, col 63:
+norm_num
+.
+line 1199, col 6:
+omega
+...
+line 1201, col 22:
+rw [hz_unique _ h_conj_mem h_conj_ord]
+.....
+line 1207, col 53:
+omega
+....
+line 1214, col 6:
+exact absurd hz_ord (by norm_num)
+........
+line 1224, col 6:
+rw [Finset.card_insert_of_notMem (by
+            rw [Finset.mem_insert, Finset.mem_singleton]
+            rintro (h | h)
+
+            · exact hy_not_one (Subtype.ext_iff.mp h).symm
+
+            · exact hz_not_one (Subtype.ext_iff.mp h).symm),
+        Finset.card_insert_of_notMem (by
+            rw [Finset.mem_singleton]
+            exact fun h ↦ hz_not_b <| by
+              have h_eq : (y_sub : G) = z := Subtype.ext_iff.mp h
+              rw [← h_eq]; exact y_sub.property),
+        Finset.card_singleton]
+...
+line 1239, col 4:
+omega
+...
+line 1241, col 38:
+exact absurd hz_ord (by norm_num)
+........
+line 1256, col 66:
+norm_num
+...
+line 1260, col 4:
+rw [hH_norm, hn] at h_mul
+shortened proof!
+....
+line 1265, col 2:
+omega
+..
+line 1280, col 4:
+intro i
+shortened proof!
+..........
+line 1288, col 22:
+exact one_pos
+..
+line 1306, col 4:
+exact fun (i : Fin 2) ↦ match i with
+    | 0 => ⟨Ha, rfl, ha_cyc, ha_card, ha_norm⟩
+    | 1 => ⟨Hb, rfl, hb_cyc, hb_card, hb_norm⟩
+...__..__..
+line 1313, col 30:
+rw [ei]
+.
+line 1313, col 49:
+rw [ej]
+...._..
+line 1335, col 4:
+exact fun (i : Fin 2) ↦ match i with
+    | 0 => ⟨Ha, rfl, ha_cyc, ha_card, ha_norm⟩
+    | 1 => ⟨Hb, rfl, hb_cyc, hb_card, hb_norm⟩
+...__..__..
+line 1342, col 30:
+rw [e_i]
+.
+line 1342, col 50:
+rw [e_j]
+...._..
+line 1364, col 4:
+exact fun (i : Fin 3) ↦ match i with
+    | 0 => ⟨H2, rfl, h2_cyc, h2_card, h2_norm⟩
+    | 1 => ⟨H0, rfl, h0_cyc, h0_card, h0_norm⟩
+    | 2 => ⟨H1, rfl, h1_cyc, h1_card, h1_norm⟩
+...__..__..
+line 1372, col 41:
+rw [e_i]
+.
+line 1372, col 72:
+rw [e_j]
+.....
+line 1377, col 29:
+show (1 : ℕ) < 3
+shortened proof!
+..
+line 1378, col 29:
+show (2 : ℕ) < 3
+shortened proof!
+..
+line 1379, col 29:
+show (0 : ℕ) < 3
+shortened proof!
+..
+line 1397, col 4:
+exact fun (i : Fin 3) ↦ match i with
+    | 0 => ⟨H0, rfl, h0_cyc, h0_card, h0_norm⟩
+    | 1 => ⟨H1, rfl, h1_cyc, h1_card, h1_norm⟩
+    | 2 => ⟨H2, rfl, h2_cyc, h2_card, h2_norm⟩
+...__..__..
+line 1405, col 30:
+rw [e_i]
+.
+line 1405, col 50:
+rw [e_j]
+...._...
+line 1415, col 55:
+norm_num
+....
+line 1418, col 55:
+norm_num
+.....
+line 1426, col 62:
+norm_num
+.........
+line 1446, col 12:
+norm_num
+..
+line 1450, col 49:
+norm_num
+......
+line 1469, col 4:
+exact hfi
+..........
+line 1496, col 34:
+exact Nat.cast_pos.mpr (show Nat.card ↥G > 0 by omega)
+..
+line 1497, col 53:
+omega
+..
+line 1499, col 36:
+omega
+.
+line 1500, col 9:
+omega
+....
+line 1504, col 36:
+omega
+.
+line 1504, col 54:
+omega
+.
+line 1505, col 19:
+omega
+.
+line 1505, col 40:
+omega
+.
+line 1506, col 19:
+omega
+....
+line 1508, col 43:
+omega
+..
+line 1510, col 24:
+omega
+.....
+line 1516, col 50:
+omega
+.
+line 1517, col 16:
+omega
+.....
+line 1521, col 44:
+omega
+....._._....
+line 1538, col 10:
+fin_cases i
+shortened proof!
+_____......
+line 1550, col 8:
+have h1 := hnorm a
+shortened proof!
+.......
+line 1560, col 12:
+rw [hcard, hdb]
+.
+line 1560, col 33:
+rw [hnorm, hfb, hdb, one_mul]
+..
+line 1564, col 8:
+obtain ⟨k, hk⟩ : ∃ k, d a = 2 * k + 1 := h_odd
+shortened proof!
+.........
+line 1581, col 28:
+field_simp at h ⊢
+shortened proof!
+...._._....._.
+line 1601, col 8:
+rw [h_eval, Equiv.apply_symm_apply]
+.....
+line 1608, col 38:
+rw [hf2, hσ.1, hk_card] at hm
+shortened proof!
+...
+line 1613, col 12:
+rw [hcard, hσ.1]
+.
+line 1613, col 34:
+rw [hcard, hσ.2.1]
+.
+line 1613, col 58:
+rw [hcard, hk_d]
+.
+line 1614, col 12:
+rw [hnorm, hf2, hσ.1]
+.
+line 1614, col 39:
+rw [hnorm, hf2, hσ.2.1]
+.
+line 1614, col 68:
+rw [hnorm, hf2, hk_d]
+....
+line 1620, col 14:
+rw [hcard, hσ₁]
+.
+line 1620, col 35:
+rw [hnorm, hf2, hσ₁]
+...
+line 1626, col 14:
+rw [hcard, hσ₀]
+.
+line 1626, col 35:
+rw [hcard, hσ₁]
+.
+line 1626, col 56:
+rw [hcard, hσ₂]
+.
+line 1627, col 14:
+rw [hnorm, hf2, hσ₀]
+.
+line 1627, col 40:
+rw [hnorm, hf2, hσ₁]
+.
+line 1627, col 66:
+rw [hnorm, hf2, hσ₂]
+...
+line 1634, col 14:
+rw [hcard, hσ₀]
+.
+line 1634, col 35:
+rw [hcard, hσ₁]
+.
+line 1634, col 56:
+rw [hcard, hσ₂]
+.
+line 1635, col 14:
+rw [hnorm, hf2, hσ₀]
+.
+line 1635, col 40:
+rw [hnorm, hf2, hσ₁]
+.
+line 1635, col 66:
+rw [hnorm, hf2, hσ₂]
+....
+line 1654, col 28:
+omega
+...
+line 1657, col 30:
+omega
+..
+line 1659, col 30:
+omega
+.
+line 1661, col 14:
+obtain ⟨k, rfl⟩ := hn_even
+shortened proof!
+...

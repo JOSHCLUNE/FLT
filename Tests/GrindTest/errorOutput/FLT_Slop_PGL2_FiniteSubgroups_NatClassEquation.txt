@@ -1,0 +1,41 @@
+..................
+line 75, col 6:
+exact y_eq ▸ hy
+........
+line 83, col 6:
+exact y_eq ▸ hy
+..................
+line 110, col 4:
+exact ⟨g, Subtype.ext (by rw [hg, h_conj])⟩
+...............
+line 141, col 46:
+rw [hw_eq]
+..
+line 143, col 4:
+exact hw2 ▸ hw
+........
+line 151, col 44:
+rw [hw_eq]
+................
+line 205, col 6:
+constructor
+shortened proof!
+............
+line 228, col 6:
+simp only [S, Finset.mem_filter, Finset.mem_univ,
+        true_and, Set.mem_setOf_eq, implies_true]
+........
+line 258, col 8:
+exact ⟨i, hx, g, hxK⟩
+.
+line 260, col 8:
+rintro ⟨_, hx, _, _⟩
+shortened proof!
+.........
+line 272, col 6:
+ext x
+shortened proof!
+....
+line 280, col 6:
+exact hH_card_ge i
+.

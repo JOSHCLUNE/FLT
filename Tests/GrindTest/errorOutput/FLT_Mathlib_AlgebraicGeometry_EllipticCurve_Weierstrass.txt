@@ -1,0 +1,7 @@
+..
+line 44, col 34:
+ring
+....
+line 55, col 65:
+grobner
+...

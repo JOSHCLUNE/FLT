@@ -1,0 +1,71 @@
+.....
+line 43, col 88:
+positivity
+..........
+line 51, col 26:
+simp [add_comm]
+...
+line 56, col 30:
+simp
+.
+line 56, col 40:
+simp only [Set.mem_Ioi]
+shortened proof!
+....
+line 61, col 39:
+simp
+..
+line 63, col 4:
+simp only [Set.mem_Ioi, ne_eq]
+shortened proof!
+.......
+line 74, col 81:
+linarith
+...
+line 77, col 4:
+ring
+....
+line 85, col 26:
+positivity
+...
+line 85, col 68:
+rfl
+....
+line 89, col 8:
+field_simp
+shortened proof!
+...
+line 91, col 77:
+omega
+......
+line 102, col 10:
+field_simp
+..
+line 104, col 60:
+positivity
+.....
+line 117, col 36:
+simp [Set.ext_iff]
+shortened proof!
+.....
+line 123, col 58:
+ring_nf
+....._..
+line 134, col 2:
+exact h₁
+....._..
+line 144, col 2:
+exact h₁
+....._...._.
+line 159, col 2:
+exact h₁.trans h₂
+....._...._.
+line 174, col 2:
+exact h₂.trans h₁
+....
+line 181, col 29:
+omega
+.....
+line 189, col 28:
+omega
+.

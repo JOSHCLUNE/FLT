@@ -1,0 +1,43 @@
+......
+line 81, col 6:
+norm_cast
+....
+line 85, col 36:
+norm_num
+.....
+line 91, col 10:
+norm_num
+......
+line 97, col 6:
+norm_cast
+..
+line 99, col 35:
+norm_num
+.......
+line 110, col 4:
+ring
+......
+line 119, col 6:
+norm_num
+..
+line 124, col 2:
+ring
+.............
+line 154, col 34:
+ring
+........
+line 167, col 52:
+norm_num
+.
+line 168, col 24:
+norm_num
+..............
+line 181, col 8:
+exact hqbad.rec hab hc
+....
+line 186, col 6:
+exact h.2
+..
+line 189, col 6:
+exact h.2
+...

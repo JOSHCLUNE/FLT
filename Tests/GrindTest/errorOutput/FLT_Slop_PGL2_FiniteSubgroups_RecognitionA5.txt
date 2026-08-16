@@ -1,0 +1,368 @@
+..
+line 55, col 65:
+norm_num
+..
+line 58, col 67:
+norm_num
+..
+line 61, col 66:
+norm_num
+..
+line 64, col 67:
+norm_num
+..
+line 67, col 65:
+norm_num
+..
+line 70, col 65:
+norm_num
+..
+line 73, col 66:
+norm_num
+...
+line 111, col 6:
+positivity
+.....
+line 123, col 41:
+simp only [Set.mem_insert_iff, Set.mem_singleton_iff]
+............
+line 140, col 60:
+rw [hab, h, mul_zero]
+.....
+line 144, col 4:
+right
+shortened proof!
+..
+line 148, col 6:
+left
+shortened proof!
+..........
+line 157, col 52:
+exact hb_one hgp_ord.symm
+..
+line 160, col 12:
+rw [hgp_ord]
+shortened proof!
+......
+line 165, col 69:
+exact (pow_pos (Nat.Prime.pos Fact.out) _).ne'
+...........................
+line 209, col 4:
+rw [hq1, mul_one, one_mul]
+.....
+line 214, col 8:
+exact h
+.........
+line 224, col 50:
+rw [ha']
+.
+line 226, col 36:
+rw [hb']
+........
+line 236, col 40:
+rw [ih]
+..
+line 239, col 57:
+ring
+.........
+line 250, col 6:
+rw [hq_ord] at h1
+shortened proof!
+...
+line 254, col 48:
+omega
+..
+line 256, col 8:
+calc a^3 - 1 = (5 * (a / 5) + a % 5)^3 - 1 := congrArg (fun x ↦ x^3 - 1) hk
+        _ = _ := by ring
+...
+line 259, col 85:
+omega
+.
+line 260, col 6:
+rcases h_cases with hr | hr | hr | hr | hr
+shortened proof!
+.
+line 261, col 8:
+omega
+.
+line 262, col 8:
+exact ⟨a / 5, by omega⟩
+.
+line 263, col 8:
+omega
+.
+line 264, col 8:
+omega
+.
+line 265, col 8:
+omega
+...
+line 269, col 32:
+rw [← mul_assoc]
+.
+line 270, col 36:
+rw [ha, hk]
+................
+line 296, col 6:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+.......
+line 301, col 4:
+omega
+...
+line 302, col 47:
+norm_num
+.
+line 302, col 66:
+omega
+.___.........
+line 319, col 75:
+norm_num
+............
+line 330, col 47:
+norm_num at hg_ord
+..
+line 331, col 51:
+norm_num at hq_ord_PGL
+.
+line 332, col 8:
+rw [hg_ord, hp3]
+.
+line 333, col 44:
+norm_num
+...
+line 334, col 30:
+norm_num
+..........
+line 360, col 6:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+.......
+line 365, col 4:
+omega
+...
+line 366, col 47:
+norm_num
+.
+line 366, col 65:
+omega
+.
+line 367, col 2:
+interval_cases k
+shortened proof!
+........
+line 391, col 4:
+omega
+.
+line 392, col 4:
+exact hpq rfl
+...
+line 395, col 4:
+omega
+...................
+line 421, col 97:
+norm_num
+..............
+line 433, col 97:
+norm_num
+..................
+line 451, col 29:
+exact Subgroup.ext_iff.mp (hzP.symm.trans hzQ) y
+..
+line 453, col 6:
+rfl
+..
+line 455, col 6:
+obtain ⟨P, hxP⟩ := Finset.mem_biUnion.mp hx
+shortened proof!
+............
+line 468, col 29:
+exact Subgroup.ext_iff.mp (hzQ1.symm.trans hzQ2) y
+..
+line 470, col 6:
+rfl
+..
+line 472, col 6:
+obtain ⟨Q, hxQ⟩ := Finset.mem_biUnion.mp hx
+shortened proof!
+....
+line 478, col 4:
+exact Finset.card_singleton 1
+...
+line 481, col 31:
+intro x hx5 hx3
+shortened proof!
+.....
+line 487, col 33:
+intro x hx5 hx1
+shortened proof!
+..
+line 489, col 33:
+intro x hx3 hx1
+shortened proof!
+....
+line 496, col 2:
+rw [h_card, hF1_card] at h_le
+shortened proof!
+.....................................
+line 546, col 10:
+exact Nat.eq_of_mul_eq_mul_right (by norm_num) h
+.......
+line 551, col 8:
+omega
+...
+line 552, col 51:
+norm_num
+.
+line 552, col 69:
+omega
+.
+line 553, col 6:
+interval_cases k
+shortened proof!
+.
+line 554, col 4:
+exact h_cases.resolve_left h_contra
+........
+line 562, col 8:
+omega
+...
+line 563, col 51:
+norm_num
+.
+line 563, col 70:
+omega
+.___......
+line 572, col 92:
+norm_num
+...
+line 575, col 65:
+norm_num
+.
+line 575, col 86:
+rw [hN₃.2, hP₅]
+..
+line 578, col 80:
+norm_num
+......
+line 586, col 115:
+rfl
+......
+line 589, col 145:
+norm_num
+.__..........
+line 609, col 4:
+omega
+...
+line 610, col 47:
+norm_num
+.
+line 610, col 65:
+omega
+.___......
+line 624, col 92:
+norm_num
+...
+line 627, col 65:
+norm_num
+.
+line 627, col 86:
+rw [hN₅.2, hP₃]
+..
+line 630, col 80:
+norm_num
+......
+line 638, col 115:
+rfl
+......
+line 641, col 145:
+norm_num
+.__..............
+line 675, col 2:
+omega
+..........
+line 699, col 2:
+omega
+................
+line 770, col 4:
+exact (Finset.card_sdiff_of_subset h_sub).trans (by rw [Finset.card_singleton, hP_card])
+......
+line 780, col 4:
+exact fun h ↦ let ⟨_, _, hP⟩ := Finset.mem_biUnion.mp h; (Finset.mem_sdiff.mp hP).2 (Finset.mem_singleton.mpr rfl)
+..........
+line 800, col 6:
+right
+shortened proof!
+.
+line 801, col 6:
+exact absurd (h ▸ hN_div : 3 ∣ 4) (by norm_num)
+.
+line 802, col 6:
+left
+shortened proof!
+...__.....
+line 810, col 6:
+rcases hGN_card with h | h
+shortened proof!
+...
+line 814, col 84:
+ring
+........
+line 821, col 100:
+norm_num
+....
+line 834, col 4:
+omega
+._....
+line 848, col 4:
+omega
+._.........
+line 866, col 4:
+rw [hN_top, hn] at h_mul
+shortened proof!
+................
+line 889, col 77:
+norm_num
+...........
+line 911, col 66:
+rfl
+......
+line 917, col 49:
+norm_num
+.......
+line 930, col 50:
+norm_num
+...
+line 932, col 50:
+norm_num
+.......
+line 943, col 6:
+omega
+...
+line 944, col 49:
+norm_num
+.
+line 944, col 68:
+omega
+.___.....
+line 949, col 68:
+rfl
+....
+line 952, col 58:
+norm_num
+...
+line 953, col 62:
+norm_num
+..
+line 955, col 54:
+rw [h3]
+shortened proof!
+..
+line 957, col 4:
+exact h5
+.....
+line 965, col 132:
+norm_num
+......
+line 970, col 53:
+norm_num
+.

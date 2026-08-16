@@ -1,0 +1,170 @@
+.......................
+line 115, col 2:
+linear_combination
+    (-(algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+        Polynomial.X ^ 2) * e2p +
+    (-(2 * (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+            algebraMap A (Polynomial A) C.s +
+          algebraMap A (Polynomial A) W.a₁ *
+            (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄)) *
+        Polynomial.X) * e1p
+..........
+line 164, col 32:
+linear_combination (2 : k) * h2
+..
+line 166, col 4:
+intro h0
+shortened proof!
+..__...................
+line 233, col 4:
+linear_combination h1
+..
+line 234, col 79:
+norm_num
+.
+line 235, col 2:
+exact (pow_eq_zero_iff (by norm_num)).mp key.symm
+...........
+line 265, col 34:
+simp [h0] at hdeg
+..
+line 266, col 55:
+rw [hdeg]
+shortened proof!
+.....
+line 270, col 39:
+rw [hab, h0, zero_mul]
+..
+line 271, col 39:
+rw [hab, h0, mul_zero]
+......
+line 277, col 62:
+lia
+.
+line 278, col 47:
+lia
+...............
+line 316, col 38:
+norm_num
+................_......
+line 359, col 46:
+norm_num
+.....
+line 375, col 4:
+field
+....PANIC at _private.Lean.Meta.Tactic.Grind.Arith.CommRing.Proof.0.Lean.Meta.Grind.Arith.CommRing.mkImpEqExprProof Lean.Meta.Tactic.Grind.Arith.CommRing.Proof:227:2: assertion violation: d.p matches .num 0
+  
+backtrace:
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x939f205) [0x65444f689205]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x9396927) [0x65444f680927]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_panic_fn_borrowed+0x2b) [0x65444f680a0b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(panic spec at Lean.Meta.Grind.Arith.CommRing.mkImpEqExprProof+0x5fb) [0x65444db2acfb]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.mkImpEqExprProof [private]+0x2d4) [0x65444db2b694]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.mkImpEqExprProof [boxed, private]+0xa7) [0x65444db2d007]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/14>+0x525) [0x65444f69bf65]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.withProofContext.go [private]+0x190) [0x65444db36130]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.propagateEq+0x5b2) [0x65444db46ec2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.propagateEqs.process [private]+0x1b95) [0x65444dae6c45]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Array.forIn'Unsafe.loop [private] spec at Array.forIn'Unsafe.loop spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.CommRing.propagateEqs+0x343) [0x65444daf1773]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.CommRing.propagateEqs+0x383) [0x65444daf6533]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.propagateEqs [private]+0x64d) [0x65444daf73ad]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.checkRing+0x6e0) [0x65444daf9ad0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(WellFounded.opaqueFix₃ [arity↓] spec at Lean.Meta.Grind.Arith.CommRing.check+0xd5) [0x65444dafae25]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.check [λ]+0x35f) [0x65444dafbaff]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.check [boxed, λ]+0x3f) [0x65444dafc1af]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xf02) [0x65444f68d1a2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [λ, arity↓]+0xb) [0x65444973becb]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x65444f68cdf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x65444f68cdf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_profileit+0x83) [0x6544496369a3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [arity↓]+0x82) [0x65444973c082]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.CommRing.check [boxed]+0x6a) [0x65444dafc4aa]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x28d) [0x65444f699a6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.solverAction [λ]+0x62) [0x65444d30de82]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/10>+0x64c) [0x65444f69914c]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x6f) [0x65444d307adf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [boxed, λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x34) [0x65444d307b44]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/5>+0xb93) [0x65444f693723]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.withMVarContextImp [arity↓, private]+0x162) [0x6544499d9322]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0xf4) [0x65444d307d04]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.solverAction+0x1e5) [0x65444d30e7f5]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ring [boxed]+0x57) [0x65444e1c8f07]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x65444f69b214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x65444cdda946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x65444cddaa43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x65444f69b511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x65444cdda946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x65444cddaa43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x65444f69b511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x65444cdda946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x65444cddaa43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x65444f69b511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x65444cdda946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x65444cddaa43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x65444f69b511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [private]+0x264) [0x65444cddae74]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [boxed, private]+0x5b) [0x65444cddafab]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x65444f69b58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x65444d30013b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkAction [boxed, λ]+0x43) [0x65444d2f5e73]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x65444f69b58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.orElse+0x176) [0x65444d300bb6]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.mkFinish [boxed, λ]+0x43) [0x65444d313083]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x65444f69b58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x65444d30157e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.mkFinish [boxed, λ]+0x59) [0x65444d3132f9]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x65444f69b58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x65444d2ffd4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x65444d2ffe19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x65444f699dcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext+0xe63) [0x65444d2f4ca3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext [boxed]+0x39) [0x65444d2f5269]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x65444f69b214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x65444d30157e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertAll [boxed]+0x8f) [0x65444d2f586f]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x65444f69b214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x65444d30013b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.mkFinish [boxed, λ]+0x58) [0x65444d3135e8]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x65444f69b6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x65444d2ffd4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x65444d2ffe19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x668) [0x65444f699e48]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.group [arity↓]+0xee) [0x65444d30531e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0x4d) [0x65444d2f1aed]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x65444f69b214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x65444d2ffd4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x65444d2ffe19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x65444f699dcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x65444d2efbda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x65444d2f1894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x65444f69b6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x65444d30157e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x65444d30117e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x65444f699dcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x65444d2efbda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x65444d2f1894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x65444f69b6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x65444d30157e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x65444d30117e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x65444f699dcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x65444d2efbda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x65444d2f1894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x65444f69b6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x65444d30157e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed]+0x59) [0x65444d302029]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x65444f69b511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x65444d30013b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0xcd) [0x65444d2f1e6d]
+......
+line 391, col 8:
+linear_combination hb₈ - D.r * hb₆
+....
+line 396, col 4:
+field
+......
+line 405, col 8:
+linear_combination ha₂
+..........
+line 423, col 8:
+linear_combination ha₆
+......................

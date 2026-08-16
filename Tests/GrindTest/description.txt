@@ -1,0 +1,10 @@
+Ran `grind` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Done: 260 files processed, 0 with errors.
+
+tallySummaries.sh output:
+Total number of results: 20411
+Total number of successes: 1852
+Time taken: 16372s
+
+~9% success rate
+~4.5 hours

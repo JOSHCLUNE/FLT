@@ -1,0 +1,238 @@
+.........
+line 70, col 6:
+rw [h_dichotomy.1.mpr hp]
+shortened proof!
+.
+line 72, col 6:
+rw [h_dichotomy.2.mpr hcoprime.symm]
+shortened proof!
+..................
+line 119, col 40:
+norm_num
+...................
+line 144, col 2:
+exact h_bound
+.....
+line 152, col 28:
+rw [ha1, one_mul, mul_one]
+..
+line 153, col 28:
+rw [hb1, mul_one, one_mul]
+......
+line 165, col 53:
+group
+..
+line 167, col 34:
+group
+......................................
+line 223, col 38:
+rw [← hy_eq]
+..
+line 225, col 2:
+exact hy
+...................
+line 283, col 6:
+exact h_dich.1.mpr h_p
+......
+line 289, col 6:
+ext g
+shortened proof!
+..........
+line 302, col 15:
+omega
+...
+line 305, col 2:
+omega
+............
+line 341, col 4:
+omega
+..........
+line 350, col 58:
+omega
+......
+line 356, col 78:
+omega
+...................................
+line 441, col 6:
+rw [Finset.card_univ, Finset.card_univ, mul_comm]
+...
+line 445, col 2:
+rw [h_split, h_S]
+shortened proof!
+.....................
+line 479, col 33:
+exact Nat.lt_of_not_le h_gt
+.
+line 480, col 4:
+omega
+...
+line 483, col 33:
+exact Nat.le_of_lt_succ (Nat.lt_of_not_le h_lt)
+.
+line 484, col 4:
+omega
+....
+line 518, col 77:
+omega
+..
+line 519, col 30:
+omega
+....
+line 524, col 6:
+zify [hpm_ge2]
+shortened proof!
+.....
+line 528, col 24:
+ring
+.....
+line 533, col 44:
+rw [add_comm (pm * a) 1, add_tsub_cancel_right]
+....
+line 539, col 72:
+omega
+...
+line 543, col 30:
+omega
+.
+line 543, col 46:
+omega
+..
+line 545, col 32:
+omega
+...
+line 549, col 6:
+exfalso
+shortened proof!
+.
+line 550, col 6:
+left
+shortened proof!
+....
+line 552, col 55:
+omega
+..
+line 554, col 8:
+omega
+.
+line 555, col 8:
+omega
+.
+line 556, col 8:
+rw [show 2 * (x + 3) - 2 = 2 * x + 4 by omega] at h_z1_le
+shortened proof!
+.
+line 559, col 6:
+right
+shortened proof!
+.
+line 560, col 6:
+exfalso
+shortened proof!
+...
+line 566, col 83:
+omega
+.....
+line 570, col 6:
+have h2 : k * (pm - 1) = 2 * z₁ := by rw [mul_comm, ← hk]
+shortened proof!
+..
+line 573, col 6:
+omega
+.
+line 574, col 6:
+rcases eq_or_lt_of_le hpm_ge3 with rfl | hpm_gt
+shortened proof!
+.
+line 577, col 6:
+right
+shortened proof!
+.
+line 578, col 6:
+omega
+.
+line 579, col 4:
+have hz1_cases : z₁ = 1 ∨ z₁ = 2 := by omega
+shortened proof!
+..........
+line 597, col 4:
+omega
+...........................
+line 622, col 28:
+rw [hk]
+.........
+line 632, col 6:
+rw [h_orbits] at h2
+shortened proof!
+...
+line 636, col 6:
+omega
+...
+line 640, col 6:
+rw [mul_comm, h_P_sub, add_mul, one_mul]
+.
+line 641, col 4:
+rw [h_orbit_size_eq_aux, h_alg]
+shortened proof!
+....
+line 646, col 2:
+exact h_orbit_size_eq ▸ h_orbit_size ▸ h_dvd
+..
+line 654, col 4:
+exfalso
+shortened proof!
+.
+line 655, col 4:
+exfalso
+shortened proof!
+.....
+line 659, col 35:
+omega
+.....
+line 663, col 73:
+omega
+.
+line 663, col 84:
+omega
+.
+line 663, col 96:
+omega
+.
+line 664, col 4:
+omega
+...
+line 667, col 6:
+exfalso
+shortened proof!
+.
+line 668, col 6:
+have hk_exp : (pm + 2) * z₁ * n_p + pm * n_p + 2 * n_p = pm * n_p + 2 := by
+        calc (pm + 2) * z₁ * n_p + pm * n_p + 2 * n_p = (pm + 2) * (z₁ + 1) * n_p := by ring
+          _ = pm * n_p + 2 := hk
+shortened proof!
+.
+line 672, col 4:
+exact Nat.le_add_left 2 k
+..........
+line 692, col 34:
+rw [← hk_eq]
+shortened proof!
+._....
+line 697, col 6:
+rw [Nat.mul_zero] at ha
+shortened proof!
+.
+line 699, col 6:
+have h_le: pm ≤ n_p - 1 := by
+        rw [ha]
+        exact Nat.le_mul_of_pos_right pm (by exact Nat.succ_pos')
+shortened proof!
+...
+line 706, col 89:
+omega
+.....
+line 716, col 6:
+omega
+.
+line 717, col 6:
+nlinarith only [ha, Nat.sub_add_cancel (Nat.le_of_lt hn_p_gt1), hpm_ge3]
+..

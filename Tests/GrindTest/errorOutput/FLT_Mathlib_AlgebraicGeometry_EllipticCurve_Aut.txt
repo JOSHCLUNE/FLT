@@ -1,0 +1,29 @@
+......
+line 68, col 2:
+grobner
+.......
+line 84, col 54:
+grobner
+.......
+line 89, col 30:
+grobner
+...
+line 91, col 34:
+grobner
+....
+line 92, col 56:
+linear_combination h2
+...
+line 95, col 28:
+grobner
+..
+line 96, col 28:
+grobner
+.........
+line 109, col 45:
+linear_combination hu6 - (C.u : K) ^ 2 * hu4
+.............
+line 130, col 6:
+right
+shortened proof!
+..

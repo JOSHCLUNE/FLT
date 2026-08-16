@@ -1,0 +1,70 @@
+.................
+line 98, col 46:
+simp [h]
+..
+line 100, col 2:
+revert h2
+shortened proof!
+.................
+line 137, col 4:
+simpa only [mem_range, Nat.lt_succ_iff] using hi
+..........
+line 151, col 4:
+omega
+...........
+line 169, col 8:
+simp only [lt_add_iff_pos_left, add_pos_iff, zero_lt_one, or_true]
+...
+line 172, col 8:
+positivity
+............
+line 184, col 8:
+omega
+....
+line 191, col 31:
+omega
+..
+line 193, col 8:
+gcongr
+.......
+line 200, col 8:
+ring
+..
+line 201, col 32:
+positivity
+......................................
+line 261, col 26:
+omega
+.....
+line 266, col 44:
+omega
+........................................
+line 313, col 18:
+linear_combination -hq
+..........................................................................._......
+line 460, col 31:
+rw [← hNz]
+........___...................................
+line 509, col 59:
+simpa
+.......................
+line 530, col 4:
+have hNM' : N' = M' := by
+      apply mul_left_cancel (a := L)
+      conv_lhs =>
+        rw [hN, ← hN']
+      conv_rhs =>
+        rw [hM, ← hM']
+shortened proof!
+___........................___.....................
+line 609, col 2:
+simp [hNz]
+......................................................................
+line 715, col 45:
+rw [mul_comm]
+shortened proof!
+.................................................................
+line 783, col 18:
+rw[mul_comm]
+shortened proof!
+.....................................

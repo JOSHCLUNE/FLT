@@ -1,0 +1,19 @@
+.....
+line 72, col 22:
+simp
+.
+line 73, col 42:
+simp
+..
+line 80, col 23:
+simp
+.
+line 81, col 23:
+simp
+......
+line 88, col 29:
+simp
+.......
+line 104, col 4:
+rw [h]
+..

@@ -1,0 +1,367 @@
+..........
+line 87, col 54:
+omega
+....
+line 91, col 88:
+omega
+.....
+line 95, col 63:
+omega
+..
+line 96, col 21:
+ring
+.......
+line 103, col 4:
+exact sub_eq_zero.symm
+.....
+line 116, col 6:
+exact hV_zero
+............__........
+line 161, col 46:
+ring
+..
+line 162, col 50:
+ring
+..
+line 163, col 46:
+ring
+..
+line 164, col 46:
+ring
+......
+line 179, col 33:
+norm_num
+...........
+line 198, col 4:
+exact h_dvd
+....
+line 203, col 64:
+rw [two_mul]
+shortened proof!
+.....................
+line 245, col 99:
+rw [mul_one, zero_mul, sub_zero]
+shortened proof!
+.......
+line 253, col 6:
+exact eq_of_sub_eq_zero (Eq.trans
+        (Eq.trans
+          (show a - b = ((1 : K p) * (1 : K p) + (a - b) * (1 : K p)) - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p)) by ring)
+          (congrArg (fun x ↦ x - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p))) h_00))
+        (sub_self _))
+..........................
+line 324, col 4:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+..............
+line 344, col 4:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+............
+line 363, col 10:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+....
+line 369, col 4:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+......
+line 375, col 40:
+rw [mul_one, mul_zero, add_zero]
+..
+line 376, col 46:
+rw [zero_mul, add_zero, mul_div_cancel₀ b ha]
+..
+line 377, col 48:
+rw [mul_one, mul_zero, add_zero]
+..
+line 378, col 54:
+rw [zero_mul, mul_one, zero_add]
+........
+line 393, col 76:
+rw [mul_zero, sub_zero]
+shortened proof!
+.........
+line 406, col 68:
+exact mul_ne_zero_iff.mp h_det
+...
+line 409, col 68:
+exact mul_ne_zero_iff.mp h_det
+...........................
+line 450, col 76:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 453, col 76:
+rw [mul_zero, sub_zero]
+shortened proof!
+.........
+line 465, col 4:
+rw [mul_right_comm, div_mul_cancel₀ a (right_ne_zero_of_mul h_det), add_comm]
+............................
+line 527, col 45:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+......
+line 530, col 71:
+rw [mul_one]
+shortened proof!
+...............
+line 546, col 6:
+exact (sub_add_cancel γ β).symm
+....
+line 558, col 45:
+rw [mul_zero, mul_one, zero_sub, neg_ne_zero]
+shortened proof!
+...........................
+line 584, col 141:
+ring
+....
+line 595, col 43:
+rw [mul_neg_one, mul_one, sub_neg_eq_add, add_comm, ← sub_eq_add_neg]
+shortened proof!
+...................
+line 612, col 152:
+ring
+.........
+line 621, col 132:
+ring
+...
+line 624, col 142:
+ring
+..
+line 634, col 4:
+intro heq
+shortened proof!
+...........
+line 647, col 152:
+ring
+.........
+line 656, col 152:
+ring
+.........
+line 665, col 132:
+ring
+...
+line 668, col 132:
+ring
+....
+line 680, col 6:
+exact absurd rfl hab
+..
+line 682, col 8:
+exact absurd rfl hac
+....
+line 686, col 8:
+exact absurd rfl hbc
+...........................
+line 715, col 81:
+exact heq
+..
+line 716, col 80:
+exact heq
+..
+line 717, col 81:
+exact heq
+..............
+line 733, col 121:
+ring
+...
+line 736, col 121:
+ring
+.
+line 741, col 59:
+norm_num
+.......
+line 751, col 121:
+ring
+...
+line 754, col 121:
+ring
+.
+line 759, col 59:
+rw [mul_one]
+shortened proof!
+........................
+line 798, col 8:
+ring
+....
+line 803, col 8:
+have h_den : galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = den := by
+          change galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = galoisFieldRingHom p m (g.1 1 0)
+          ring
+shortened proof!
+......
+line 812, col 10:
+exact h
+........
+line 820, col 10:
+have h_num : galoisFieldRingHom p m (g.1 0 0) * 1 + galoisFieldRingHom p m (g.1 0 1) * 0 = num := by
+            change galoisFieldRingHom p m (g.1 0 0) * 1 + galoisFieldRingHom p m (g.1 0 1) * 0 = galoisFieldRingHom p m (g.1 0 0)
+            ring
+shortened proof!
+....
+line 828, col 10:
+have h_den : galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = den := by
+            change galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0 = galoisFieldRingHom p m (g.1 1 0)
+            ring
+shortened proof!
+..........
+line 842, col 10:
+change (galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1)) * galoisFieldRingHom p m (g.1 1 0) - (galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1)) * galoisFieldRingHom p m (g.1 0 0) = _
+shortened proof!
+.........
+line 852, col 8:
+ring
+....
+line 857, col 8:
+have h_den : galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1 = den := by
+          change galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1 = galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1)
+          ring
+shortened proof!
+............
+line 873, col 10:
+have h_num : galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1) * 1 = num := by
+            change galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1) * 1 = galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1)
+            ring
+shortened proof!
+....
+line 881, col 10:
+have h_den : galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1 = den := by
+            change galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1 = galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1)
+            ring
+shortened proof!
+........
+line 915, col 4:
+exact hP_fix
+...
+line 953, col 4:
+exact hm
+..
+line 955, col 6:
+exact hV_card
+..
+line 957, col 6:
+change v⁻¹ * x = v⁻¹ * y at hxy
+shortened proof!
+.
+line 959, col 4:
+exact ⟨0, hV_zero, mul_zero _⟩
+.
+line 960, col 4:
+exact ⟨v, hv, inv_mul_cancel₀ hv_ne⟩
+..
+line 962, col 4:
+exact ⟨c * x, hV_stable c hc hc_ne x hx, mul_left_comm v⁻¹ c x⟩
+.........
+line 977, col 6:
+exact ⟨a, ha, rfl⟩
+........................
+line 1006, col 8:
+rw [hv1]
+shortened proof!
+...................
+line 1052, col 10:
+rw [h_image] at h_pi
+shortened proof!
+.........
+line 1091, col 124:
+exact one_ne_zero
+.....
+line 1096, col 2:
+exact (calc b = 1 + (b + -a) + a - 1 := by ring
+            _ = 1 + a - 1 := by rw [← h_eq]
+            _ = a := by ring).symm
+....
+line 1108, col 4:
+have h2 := h 1
+shortened proof!
+.......
+line 1117, col 55:
+rw [div_eq_mul_inv, mul_comm]
+......
+line 1121, col 69:
+rw [h_ad]
+...
+line 1123, col 57:
+rw [Ring.inverse_eq_inv, mul_inv_rev, mul_comm]
+...__..............
+line 1151, col 12:
+rw [mul_inv_cancel₀ hc] at h_mul
+shortened proof!
+...........
+line 1190, col 4:
+rw [h] at h1
+shortened proof!
+....
+line 1194, col 29:
+ring
+...........
+line 1229, col 4:
+rw [hy_eq]
+...............................
+line 1314, col 2:
+rw [h_P, one_mul]
+....................
+line 1365, col 12:
+congr 1
+shortened proof!
+....
+line 1372, col 10:
+rw [Set.mem_setOf_eq, Finset.mem_insert, Set.mem_union, Set.mem_setOf_eq, Set.mem_setOf_eq]
+.
+line 1373, col 10:
+exact Set.disjoint_left.mpr fun x hx1 hx2 ↦ hy (hx1.symm ▸ hx2)
+...........
+line 1388, col 10:
+exact (h_fiber_card y hy).symm
+....
+line 1394, col 10:
+exact iff_of_true ⟨g, rfl⟩ (Set.mem_univ g)
+.....
+line 1416, col 50:
+omega
+.......................
+line 1439, col 4:
+have h_a_mul : normDilationParam p G hG_p P hP_fix g_a⁻¹ * a = 1 := by
+      rw [← h_ga, ← h_mul]
+shortened proof!
+.......................................
+line 1517, col 4:
+rw [mul_one] at h2
+shortened proof!
+.........
+line 1528, col 4:
+rw [mul_zero] at h2
+shortened proof!
+........
+line 1536, col 37:
+positivity
+.........
+line 1545, col 4:
+omega
+......
+line 1551, col 6:
+exact hα₀
+.....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..................
+line 1614, col 75:
+omega
+..................................................
+line 1721, col 2:
+exact ⟨g * k₀, h_map_eq ▸ hg_eq⟩
+...........
+line 1746, col 2:
+exact (ne_of_lt h_lt) h_card_eq
+...........
+line 1767, col 112:
+rw [hg₁]
+.
+line 1768, col 111:
+rw [← hg₂]
+.

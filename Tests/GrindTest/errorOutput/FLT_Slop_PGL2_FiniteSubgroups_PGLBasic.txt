@@ -1,0 +1,659 @@
+...........
+line 110, col 129:
+norm_num
+...
+line 111, col 138:
+exact hy
+........
+line 120, col 54:
+rw [← hc, h, zero_pow (by norm_num)]
+.....................
+line 140, col 52:
+rw [← hc, h, zero_pow (by norm_num)]
+..............
+line 153, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+..
+line 154, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+..
+line 155, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+..
+line 156, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+.......
+line 164, col 6:
+rw [mul_zero, add_zero, zero_mul, add_zero, mul_comm]
+..
+line 167, col 6:
+rw [mul_zero, zero_add, zero_mul, add_zero, mul_comm]
+..
+line 170, col 6:
+rw [mul_zero, add_zero, zero_mul, zero_add, mul_comm]
+..
+line 173, col 6:
+rw [mul_zero, zero_add, zero_mul, zero_add, mul_comm]
+........................................
+line 240, col 8:
+rw [h01, mul_one, zero_mul, mul_zero, one_mul, add_zero, zero_add] at h_eq
+shortened proof!
+........
+line 250, col 8:
+rw [h10, h01, map_zero, mul_zero, zero_mul, add_zero, add_zero, mul_comm]
+..
+line 253, col 8:
+rw [h01, map_zero, mul_zero, zero_mul, zero_add, add_zero, h00, mul_comm]
+..
+line 256, col 8:
+rw [h10, map_zero, mul_zero, zero_mul, add_zero, zero_add, h00, mul_comm]
+..
+line 259, col 8:
+rw [h01, h10, map_zero, mul_zero, zero_mul, zero_add, zero_add, mul_comm]
+.....
+line 269, col 4:
+change (f x).val = (f y).val
+shortened proof!
+......................
+line 301, col 6:
+exact zero_ne_one h_mul
+.............................
+line 342, col 4:
+ring
+..
+line 344, col 100:
+change (g.val - z • 1).det = 0 ↔ z^2 - T * z + D = 0
+shortened proof!
+.......
+line 352, col 8:
+change (1 : K p) - T * 0 + 0 = 1
+shortened proof!
+...
+line 355, col 80:
+norm_num
+.
+line 356, col 6:
+exact one_ne_zero (h1.symm.trans h2)
+..........
+line 368, col 4:
+change z^2 - T * z + D = 0 ↔ z = x ∨ z = y
+shortened proof!
+..
+line 376, col 4:
+change x = y ↔ T^2 = 4 * D
+shortened proof!
+........
+line 404, col 37:
+rw [ha]
+..
+line 406, col 28:
+rw [hwy]
+..
+line 408, col 22:
+rw [ha]
+.............
+line 433, col 72:
+ring
+.
+line 435, col 88:
+rw [← hvx, ← hwy]
+.................
+line 449, col 6:
+exfalso
+shortened proof!
+............................
+line 489, col 2:
+exact h_contra.elim h_ne hv0
+......
+line 501, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+shortened proof!
+...
+line 504, col 78:
+norm_num
+.
+line 505, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+..........
+line 518, col 4:
+have ht : g.val.trace = 2 * x := by
+      calc g.val.trace = (g.val.trace - x) + x := by rw [sub_add_cancel]
+        _ = y + x := rfl
+        _ = x + x := by rw [h_eq]
+        _ = 2 * x := by ring
+shortened proof!
+..
+line 531, col 4:
+calc y^2 - g.val.trace * y + g.val.det
+      _ = (g.val.trace - x)^2 - g.val.trace * (g.val.trace - x) + g.val.det := rfl
+      _ = x^2 - g.val.trace * x + g.val.det := by ring
+      _ = 0 := hx
+....
+line 539, col 4:
+ring
+..
+line 541, col 68:
+rw [expand, hx]
+.
+line 541, col 89:
+rw [expand, hy]
+.......
+line 553, col 4:
+rw [hl]
+....
+line 558, col 4:
+exact hv
+.............
+line 573, col 6:
+omega
+.....................
+line 586, col 4:
+exact hg ⟨lambda, sub_eq_zero.mp hA_zero⟩
+.....
+line 593, col 4:
+omega
+.........
+line 603, col 4:
+exact ⟨c, hc.symm⟩
+...................................
+line 643, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+shortened proof!
+...
+line 645, col 106:
+norm_num
+.
+line 646, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+..........
+line 658, col 8:
+ring
+.
+line 658, col 17:
+linear_combination -hlambda1
+..
+line 661, col 4:
+calc (g.val.trace)^2 = (2 * lambda1)^2 := by rw [← hlambda2.1, h]; ring
+      _ = 4 * g.val.det := by rw [← hlambda2.2, h]; ring
+....
+line 667, col 4:
+ring
+..
+line 670, col 42:
+rw [expand lambda1, hlambda1]
+.......
+line 680, col 6:
+have hlambda2_eq_zero : lambda2^2 - g.val.trace * lambda2 + g.val.det = 0 := by
+        calc lambda2^2 - g.val.trace * lambda2 + g.val.det = (g.val.trace - lambda1)^2 - g.val.trace * (g.val.trace - lambda1) + g.val.det := rfl
+          _ = lambda1^2 - g.val.trace * lambda1 + g.val.det := by ring
+          _ = 0 := hlambda1
+shortened proof!
+..............
+line 702, col 8:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_pos rfl]
+.
+line 703, col 6:
+rw [h_det_fin] at h_lin_indep
+shortened proof!
+._.......
+line 713, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), h, h', mul_zero, mul_zero, add_zero]
+....
+line 718, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+...............
+line 728, col 13:
+calc v2 0 * v1 1 = -(v1 0 * v2 1 - v2 0 * v1 1) + v1 0 * v2 1 := by ring
+                                     _ = -0 + 0 * v2 1 := by rw [h_det, h]
+                                     _ = 0 := by ring
+.......
+line 735, col 10:
+calc v1 0 * v2 1
+              = (v1 0 * v2 1 - v2 0 * v1 1) + v2 0 * v1 1 := by
+                ring
+            _ = 0 + 0 * v1 1 := by rw [h_det, h']
+            _ = 0 := by ring
+.......
+line 747, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+....
+line 753, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+..
+line 756, col 15:
+intro c0
+shortened proof!
+.......
+line 764, col 6:
+ring
+................
+line 782, col 86:
+ring
+.....
+line 788, col 86:
+ring
+....
+line 791, col 44:
+rw [h_diag]
+......
+line 798, col 37:
+rw [mul_one]
+..
+line 800, col 38:
+rw [← mul_assoc (P * Y)]
+.
+line 801, col 26:
+rw [← hP]
+.
+line 802, col 6:
+rw [h_eq]
+.........
+line 811, col 79:
+rw [← hlambda2.2, hc, mul_zero]
+........
+line 819, col 10:
+ring
+.
+line 820, col 8:
+rw [h_det] at hE
+shortened proof!
+..........
+line 831, col 10:
+ring
+.....
+line 836, col 10:
+ring
+.
+line 837, col 8:
+rw [h_left, h_right] at hE
+shortened proof!
+.....
+line 842, col 27:
+exact div_eq_one_iff_eq (pow_ne_zero n hl2_ne) |>.mp h
+..........
+line 853, col 8:
+ring
+....
+line 858, col 8:
+rw [hl_eq]
+shortened proof!
+....
+line 863, col 8:
+rw [hl_eq]
+shortened proof!
+....
+line 868, col 8:
+ring
+.........
+line 879, col 6:
+by_contra h_k0
+shortened proof!
+.........
+line 898, col 69:
+norm_num
+....
+line 903, col 6:
+calc (2 * 2 : K p) = 4 := by ring
+        _ = 0 := h4
+....
+line 909, col 4:
+exact h_discr
+...
+line 913, col 48:
+rw [div_eq_mul_inv]
+.
+line 914, col 48:
+ring
+.
+line 915, col 32:
+rw [mul_inv_cancel₀ h_two_ne]
+....
+line 920, col 4:
+calc 2 * (g.val i j - eig * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j) = 2 * g.val i j - (2 * eig) * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j := by ring
+      _ = 2 * g.val i j - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j := by rw [h2_eig]
+.......
+line 930, col 74:
+ring
+.
+line 935, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 0]
+.
+line 938, col 100:
+ring
+.
+line 939, col 126:
+rw [h_d]
+.
+line 940, col 22:
+ring
+..
+line 943, col 74:
+ring
+.
+line 948, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 1]
+.
+line 951, col 22:
+ring
+..
+line 954, col 74:
+ring
+.
+line 959, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 0, h_N_entry 1 1]
+.
+line 962, col 22:
+ring
+..
+line 965, col 74:
+ring
+.
+line 970, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 1, h_N_entry 1 1]
+.
+line 973, col 100:
+ring
+.
+line 974, col 126:
+rw [h_d]
+.
+line 975, col 22:
+ring
+.
+line 976, col 4:
+cases mul_eq_zero.mp hX with
+    | inl h4 => exact absurd h4 h_four_ne
+    | inr hX_eq => exact hX_eq
+...
+line 982, col 6:
+ext i j
+shortened proof!
+......................
+line 1004, col 6:
+simp only [zero_mul, zero_add, one_mul, mul_one] at h
+shortened proof!
+..
+line 1010, col 6:
+have h := congr_fun (congr_fun hE1 0) 1
+shortened proof!
+......
+line 1024, col 6:
+simp only [one_mul, zero_mul, add_zero, mul_one] at h
+shortened proof!
+....
+line 1032, col 43:
+ring
+..
+line 1036, col 32:
+ring
+..
+line 1040, col 32:
+ring
+..
+line 1044, col 32:
+ring
+.....................
+line 1074, col 4:
+refine ⟨iff_of_true hc1 ho, iff_of_false ?_ ?_⟩
+shortened proof!
+...
+line 1083, col 4:
+refine ⟨iff_of_false ?_ ?_, iff_of_true hc2 ho⟩
+shortened proof!
+.......................
+line 1128, col 8:
+exact hz_val_order.symm
+.....................
+line 1163, col 83:
+exact ne_of_gt hk
+...........
+line 1180, col 4:
+exact hk
+.........
+line 1193, col 4:
+rw [h_order_p] at h_pow
+shortened proof!
+...
+line 1206, col 70:
+rw [mul_zero, sub_zero]
+shortened proof!
+...............
+line 1222, col 59:
+ring
+.
+line 1224, col 20:
+ring
+................
+line 1238, col 66:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 1241, col 6:
+rw [Matrix.det_fin_two] at hM_det
+shortened proof!
+....
+line 1247, col 41:
+rw [h_a, zero_mul]
+.....
+line 1251, col 41:
+simp only [mul_one, mul_zero, add_zero]
+..
+line 1252, col 41:
+simp only [zero_mul, mul_zero, add_zero]
+...
+line 1258, col 64:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 1260, col 64:
+rw [mul_zero, sub_zero]
+shortened proof!
+..
+line 1263, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1268, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+........
+line 1278, col 4:
+rw [mul_zero, add_zero]
+.....
+line 1283, col 4:
+rw [zero_mul, zero_add]
+.
+line 1284, col 2:
+calc a₁ * d₁⁻¹
+    _ = a₁ * d₁⁻¹ * (c * c⁻¹) := by rw [mul_inv_cancel₀ (fun hc ↦ h₂ (by rw [ha2, hc, mul_zero, zero_mul])), mul_one]
+    _ = (a₁ * c) * (d₁⁻¹ * c⁻¹) := by ring
+    _ = (a₁ * c) * (d₁ * c)⁻¹ := by rw [← mul_inv]
+    _ = a₂ * d₂⁻¹ := by rw [← ha2, ← hd2]
+...
+line 1294, col 64:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 1296, col 64:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 1298, col 95:
+rw [mul_zero, sub_zero]
+shortened proof!
+.......
+line 1304, col 47:
+rw [mul_zero, add_zero]
+..
+line 1305, col 58:
+rfl
+..
+line 1306, col 40:
+rw [zero_mul, mul_zero, add_zero]
+..
+line 1307, col 47:
+rw [zero_mul, zero_add]
+...
+line 1313, col 61:
+rw [mul_zero, sub_zero]
+shortened proof!
+...
+line 1315, col 61:
+rw [mul_zero, sub_zero]
+shortened proof!
+..
+line 1316, col 39:
+rw [ha_eq, zero_mul]
+.....
+line 1318, col 121:
+rw [mul_zero, sub_zero]
+shortened proof!
+....
+line 1319, col 135:
+rw [mul_zero, sub_zero, mul_one]
+shortened proof!
+.........
+line 1327, col 44:
+rw [mul_zero, add_zero, mul_inv_cancel₀ ha]
+..
+line 1328, col 50:
+rw [mul_zero, zero_add]
+..
+line 1329, col 44:
+rw [mul_zero, zero_mul, add_zero]
+..
+line 1330, col 44:
+rw [zero_mul, zero_add, ← h_eq, mul_inv_cancel₀ ha]
+......................
+line 1352, col 6:
+ring
+...
+line 1357, col 72:
+rw [mul_one, mul_zero,
+          sub_zero]
+shortened proof!
+...........
+line 1370, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+....
+line 1377, col 8:
+rw [mul_one, mul_zero, sub_zero]
+shortened proof!
+......
+line 1384, col 8:
+rw [← mul_assoc, mul_comm a b, mul_assoc, mul_inv_cancel₀ (mul_ne_zero_iff.mp h_det).1, mul_one]
+....
+line 1389, col 42:
+rw [hAB]
+.......
+line 1397, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+..........
+line 1408, col 8:
+rw [mul_zero, sub_zero]
+.
+line 1409, col 6:
+rw [h_trace, h_det_val]
+shortened proof!
+....
+line 1421, col 41:
+rw [h_order]
+...
+line 1428, col 6:
+calc Nat.gcd p p = Nat.gcd p (orderOf g) := by rw [h_order]
+        _ = 1 := h_coprime
+.........
+line 1443, col 8:
+rw [mul_zero, mul_one, zero_sub, neg_ne_zero]
+shortened proof!
+.....
+line 1450, col 10:
+rw [zero_mul, zero_add, inv_mul_cancel₀ hv1]
+..
+line 1453, col 10:
+rw [one_mul, zero_mul, add_zero, hv0]
+....
+line 1457, col 8:
+rw [mul_one, zero_mul, sub_zero]
+shortened proof!
+.....
+line 1464, col 10:
+rw [zero_mul, add_zero, inv_mul_cancel₀ hv0]
+..
+line 1467, col 10:
+rw [neg_mul, neg_mul, one_mul]
+shortened proof!
+.................
+line 1489, col 58:
+ring
+..
+line 1490, col 58:
+ring
+..
+line 1491, col 58:
+ring
+..
+line 1492, col 58:
+ring
+..........
+line 1508, col 56:
+rw [h_comm]
+.......
+line 1520, col 27:
+rw [hg, one_mul, mul_one]
+..
+line 1521, col 27:
+rw [hh, mul_one, one_mul]
+........
+line 1532, col 53:
+rw [hz_order]
+....
+line 1538, col 4:
+rw [ha, Set.mem_singleton_iff] at hx_mem hy_mem
+shortened proof!
+..........
+line 1560, col 10:
+simp only [mul_one, sub_zero]
+shortened proof!
+...
+line 1564, col 8:
+simp only [mul_one, one_mul, zero_mul] at h
+shortened proof!
+.....
+line 1571, col 10:
+simp only [mul_one, mul_zero, sub_zero]
+shortened proof!
+...
+line 1575, col 8:
+simp only [mul_one, one_mul, zero_mul] at h
+shortened proof!
+.....
+line 1582, col 10:
+simp only [mul_one, sub_zero]
+shortened proof!
+...
+line 1586, col 8:
+simp only [mul_one, one_mul, eq_10, zero_add, add_zero] at h
+shortened proof!
+.......................
+line 1611, col 8:
+rw [mul_zero, add_zero, zero_mul, add_zero, mul_comm]
+..
+line 1614, col 8:
+rw [mul_zero, zero_add, zero_mul, add_zero, mul_comm]
+..
+line 1617, col 8:
+rw [mul_zero, add_zero, zero_mul, zero_add, mul_comm]
+..
+line 1620, col 8:
+rw [mul_zero, zero_add, zero_mul, zero_add, mul_comm]
+.......
+line 1630, col 8:
+simp only [mul_zero, sub_zero, ne_eq]
+shortened proof!
+..........

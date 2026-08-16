@@ -1,0 +1,21 @@
+[{"tacticSucceeded": false,
+  "startLine": 29,
+  "startCol": 36,
+  "shortenedStepsCount": 0,
+  "parentName": "Module.Finite.equivPi",
+  "oldText": "rw [Module.finrank_pi, Fintype.card_fin]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/Constructions.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 46,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "TensorProduct.AlgebraTensorModule.finiteEquivPi_symm_apply",
+  "oldText":
+  "simp [Algebra.TensorProduct.piScalarRight_symm_apply_of_algebraMap, Finset.univ_sum_single]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/Constructions.lean"}]

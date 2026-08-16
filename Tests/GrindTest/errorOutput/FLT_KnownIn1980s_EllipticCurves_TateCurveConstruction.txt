@@ -1,0 +1,302 @@
+......................
+line 264, col 4:
+funext n
+shortened proof!
+...........
+line 285, col 4:
+ring
+...
+line 288, col 2:
+field_simp
+shortened proof!
+......
+line 319, col 2:
+ring
+.
+line 324, col 50:
+exact_mod_cast hk
+............
+line 346, col 39:
+ring
+.....
+line 354, col 39:
+ring
+....
+line 370, col 2:
+rcases eq_or_ne v 1 with rfl | hv1
+shortened proof!
+..
+line 378, col 34:
+linarith
+....
+line 382, col 4:
+linarith
+..................
+line 423, col 70:
+ring
+......
+line 439, col 58:
+simp
+.
+line 445, col 45:
+simpa using hq1
+.
+line 445, col 80:
+rw [mul_one]
+..
+line 451, col 68:
+simp
+......................
+line 483, col 48:
+push_cast
+shortened proof!
+..........
+line 495, col 66:
+simp
+.
+line 496, col 2:
+rw [h1, h2]
+shortened proof!
+.......................
+line 549, col 28:
+norm_num
+............
+line 585, col 67:
+congr 1
+shortened proof!
+.......
+line 598, col 28:
+congr 1
+shortened proof!
+......
+line 616, col 43:
+ring
+.
+line 617, col 2:
+ring
+.
+line 622, col 2:
+rcases eq_or_ne v 1 with rfl | hv1
+shortened proof!
+.
+line 632, col 2:
+rcases eq_or_ne v 1 with rfl | hv1
+shortened proof!
+.
+line 642, col 2:
+rcases eq_or_ne v 1 with rfl | hv1
+shortened proof!
+...
+line 654, col 42:
+norm_num
+..
+line 656, col 4:
+ring
+.............
+line 699, col 56:
+norm_num
+.
+line 700, col 6:
+rw [div_eq_mul_inv, show z - (n * τ + m) = z - n * τ - m by ring]
+.....
+line 710, col 6:
+exact tsum_congr fun m ↦ by
+        rw [div_eq_mul_inv, show z - (n * τ + m) = z - n * τ - m by ring]
+.
+line 714, col 4:
+ring
+..
+line 722, col 2:
+ring
+..
+line 730, col 42:
+norm_num
+....
+line 733, col 2:
+ring
+..
+line 739, col 72:
+ring
+.
+line 740, col 29:
+norm_num
+.
+line 740, col 55:
+norm_num
+.........
+line 753, col 2:
+linarith
+.............
+line 783, col 6:
+rw [show ((-((n + 1 : ℕ) : ℤ)).natAbs) = ((-((n : ℤ) + 1)).natAbs) by omega]
+..
+line 788, col 8:
+rw [show ((n : ℤ)).natAbs = n by omega]
+.
+line 791, col 8:
+rw [show (-((n : ℤ) + 1)).natAbs = n + 1 by omega]
+..
+line 796, col 2:
+ring
+........................
+line 844, col 6:
+simp
+.........
+line 856, col 45:
+ring
+..
+line 860, col 6:
+rw [← mul_assoc, inv_mul_cancel₀ hC, one_mul]
+.
+line 861, col 2:
+ring
+..
+line 872, col 44:
+norm_num
+.
+line 872, col 58:
+norm_num
+.
+line 872, col 75:
+norm_num
+.
+line 873, col 56:
+norm_num
+..
+line 877, col 8:
+ring
+.
+line 878, col 6:
+ring
+.
+line 879, col 2:
+ring
+......
+line 892, col 49:
+norm_num
+..
+line 893, col 38:
+norm_num
+..
+line 894, col 47:
+norm_num
+..
+line 896, col 2:
+ring
+..
+line 904, col 42:
+norm_num
+....
+line 907, col 2:
+ring
+..
+line 913, col 27:
+norm_num
+.
+line 913, col 53:
+norm_num
+..
+line 924, col 44:
+norm_num
+.
+line 924, col 58:
+norm_num
+.
+line 924, col 75:
+norm_num
+.
+line 925, col 56:
+norm_num
+..
+line 929, col 8:
+ring
+.
+line 930, col 6:
+ring
+.
+line 931, col 2:
+ring
+..
+line 939, col 2:
+field_simp [Real.pi_ne_zero]
+..........
+line 957, col 4:
+linarith
+...
+line 958, col 77:
+simpa [him] using hz0
+...
+line 960, col 49:
+simpa [one_mul, him] using hzt
+.....
+line 963, col 2:
+omega
+...
+line 975, col 4:
+ring_nf at hDE ⊢
+shortened proof!
+...
+line 980, col 2:
+linear_combination hmain' / 4
+.............................
+line 1072, col 6:
+simp only [Function.comp_apply, Int.negSucc_eq]
+...
+line 1075, col 4:
+refine tsum_congr fun n ↦ by congr 1
+..
+line 1077, col 2:
+norm_num
+.
+line 1083, col 70:
+simp
+..........
+line 1102, col 6:
+field_simp
+shortened proof!
+...
+line 1105, col 4:
+rwa [show v⁻¹ * (v ^ 2 * ((1 - v) ^ 3)⁻¹) = v / (1 - v) ^ 3 by
+      rw [pow_two, mul_assoc, inv_mul_cancel_left₀ hv0, ← div_eq_mul_inv]] at h3
+...........
+line 1130, col 4:
+omega
+....
+line 1139, col 70:
+exact max_lt hx hxy
+...............
+line 1166, col 89:
+ring
+...........
+line 1197, col 8:
+simpa using hq1
+....
+line 1200, col 68:
+simp
+...........................
+line 1281, col 2:
+ring
+.................
+line 1326, col 2:
+ring
+.........
+line 1350, col 2:
+ring_nf
+.........
+line 1375, col 24:
+ring
+..
+line 1384, col 26:
+ring
+...........
+line 1404, col 60:
+simpa using hz
+..............................
+line 1483, col 2:
+ring
+......
+line 1494, col 6:
+exact .inl ⟨htr, by rw [hnorm]; exact hx0, by rw [hnorm]; exact hx1⟩
+...................
+line 1550, col 2:
+ring

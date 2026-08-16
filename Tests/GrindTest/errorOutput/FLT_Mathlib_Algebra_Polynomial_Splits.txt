@@ -1,0 +1,7 @@
+.....
+line 28, col 38:
+rw [hq, h, mul_zero]
+...
+line 31, col 4:
+lia
+..

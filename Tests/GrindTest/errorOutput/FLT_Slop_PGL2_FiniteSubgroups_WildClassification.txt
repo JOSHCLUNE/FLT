@@ -1,0 +1,265 @@
+........
+line 84, col 6:
+rw [nsmul_eq_mul, nsmul_eq_mul, Nat.cast_add, Nat.cast_one]
+shortened proof!
+...............................................
+line 169, col 4:
+exact ⟨h_comm, h_exp⟩
+.........................................
+line 226, col 4:
+exact h1
+..................................
+line 294, col 4:
+exact hdvd
+.
+line 295, col 2:
+exact ⟨m, Nat.card K, hm_ge, hK_coprime, ht_div, φ, hφ⟩
+.........__..
+line 311, col 53:
+linarith only [hpm_inv, hn_inv_pos]
+....
+line 314, col 43:
+omega
+...
+line 316, col 55:
+rw [← one_div, ← one_div]
+shortened proof!
+.
+line 317, col 4:
+omega
+....
+line 319, col 45:
+omega
+...
+line 321, col 136:
+ring
+..
+line 326, col 4:
+linarith only [h_lt, h_geq]
+........
+line 331, col 4:
+linarith only [h_lhs_lt, h_eq, h_leq]
+.....
+line 334, col 49:
+have : z 0 ≥ 2 := hz_pos 0
+shortened proof!
+....
+line 336, col 6:
+linarith only [hpm_inv, hn_inv_pos, h_eq, h_leq]
+..
+line 337, col 19:
+norm_num
+....
+line 339, col 48:
+omega
+.......
+line 343, col 50:
+rw [← one_div, ← one_div]
+shortened proof!
+.....
+line 353, col 117:
+norm_num
+.......
+line 359, col 4:
+rw [e, hn3, hn] at h_card_G
+shortened proof!
+......
+line 366, col 84:
+rw [hn3]
+shortened proof!
+.....
+line 371, col 8:
+exact h_eq_1
+..
+line 372, col 112:
+rw [h3, h_card_val P]
+..
+line 373, col 103:
+rw [h_card_val P, h_card_val Q]
+....
+line 374, col 43:
+congr
+..........
+line 384, col 4:
+rw [h_range, h_perm] at h_mul
+shortened proof!
+....................
+line 409, col 81:
+norm_num
+..
+line 411, col 6:
+exact iff_of_false (fun h ↦ h_odd (Nat.even_pow.mp h).1) (by norm_num)
+...
+line 413, col 79:
+omega
+..
+line 415, col 71:
+omega
+.
+line 415, col 115:
+norm_num
+.....
+line 424, col 59:
+omega
+.
+line 425, col 4:
+exact hpm
+...
+line 431, col 4:
+exact absurd hm (Nat.not_le_of_gt (Nat.le.step Nat.le.refl))
+.
+line 432, col 4:
+exact Nat.succ_pos _
+.................................
+line 491, col 77:
+norm_num
+......
+line 496, col 64:
+norm_num
+....
+line 500, col 4:
+omega
+.
+line 501, col 4:
+revert h_card_div
+shortened proof!
+.
+line 502, col 4:
+rfl
+........
+line 516, col 119:
+linarith only [h5]
+..
+line 518, col 8:
+rfl
+.......
+line 523, col 72:
+norm_num
+.
+line 523, col 97:
+linarith only [hc]
+.
+line 524, col 6:
+change 9 ≤ 3 ^ m at h_pow
+shortened proof!
+...
+line 527, col 38:
+rw [hn]
+shortened proof!
+.............
+line 559, col 4:
+intro i
+shortened proof!
+........
+line 566, col 60:
+omega
+..
+line 567, col 60:
+omega
+..
+line 568, col 60:
+omega
+......
+line 573, col 31:
+omega
+...
+line 576, col 6:
+push_cast
+shortened proof!
+...
+line 579, col 60:
+omega
+...
+line 582, col 6:
+rw [← mul_div_cancel_right₀ (z2 : ℚ) hD_pos, h_mul]
+....
+line 586, col 6:
+simp only [Nat.cast_one, mul_one]
+shortened proof!
+..
+line 590, col 6:
+rw [hz2_eq, h_n_eq, h_D_eq]
+shortened proof!
+...
+line 617, col 4:
+have h_eval : partitionTerm (if 1 = 1 then 1 else 2) 1 = 0 := by
+      rw [if_pos rfl, partitionTerm]
+      norm_num
+shortened proof!
+..
+line 625, col 44:
+linarith only [hn_gt, hpm]
+.
+line 625, col 76:
+linarith only [hn_gt]
+......
+line 629, col 78:
+linarith only [h_branch2a.1, h_pow]
+....
+line 632, col 33:
+norm_num
+..
+line 634, col 4:
+rfl
+.
+line 635, col 4:
+exact hn_eq.symm.trans h_branch2a.2.2
+.
+line 636, col 4:
+exact hG_p
+.
+line 637, col 4:
+exact hn_p_gt1
+.....
+line 656, col 76:
+omega
+........
+line 661, col 118:
+norm_num
+....
+line 662, col 89:
+omega
+..
+line 663, col 65:
+linarith only [hm, hpm]
+..
+line 665, col 6:
+by_contra h_m
+shortened proof!
+...
+line 670, col 72:
+norm_num
+.....
+line 674, col 8:
+rw [show (k * 2 + 1) ^ 2 = (k * 2 * (k + 1)) * 2 + 1 by ring, Nat.add_sub_cancel]
+..
+line 675, col 54:
+norm_num
+.
+line 676, col 6:
+ring
+.
+line 677, col 6:
+exact hG_p
+.
+line 678, col 6:
+exact hn_p_gt1
+...
+line 680, col 75:
+linarith only [hm, hpm]
+.
+line 680, col 131:
+linarith only [hm, hpm]
+......
+line 684, col 58:
+have := Nat.one_le_pow m p (by linarith only [h_odd.1])
+shortened proof!
+..
+line 686, col 4:
+have : (k + 1) ^ 2 - 1 = k * (k + 2) := by
+      rw [show (k + 1) ^ 2 = k * (k + 2) + 1 by ring, Nat.add_sub_cancel]
+shortened proof!
+....
+line 692, col 76:
+linarith only [h.1, h_pow]
+...........

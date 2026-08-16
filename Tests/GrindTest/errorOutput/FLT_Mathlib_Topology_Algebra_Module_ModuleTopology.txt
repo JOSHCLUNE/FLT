@@ -1,0 +1,19 @@
+......................................................
+line 261, col 6:
+exact fun U hU => ⟨U, ⟨⟨hU.1, hopen_mpr hU.2⟩, by simp⟩⟩
+...
+line 265, col 56:
+simp
+.
+line 265, col 78:
+simp
+...
+line 271, col 85:
+simp
+...............................
+line 474, col 2:
+infer_instance
+...
+line 480, col 2:
+infer_instance
+......

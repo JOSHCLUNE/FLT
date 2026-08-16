@@ -1,0 +1,20 @@
+.....................
+line 141, col 4:
+have hval : ((0 : 𝕜) - 1) / (r - 1) = (1 - r)⁻¹ := by
+      grind
+shortened proof!
+.....
+line 147, col 73:
+ring
+.....................
+line 200, col 91:
+ring
+.........
+line 236, col 2:
+simp only [Prod.fst_swap, Prod.snd_swap, mul_comm (p.2 : ℕ) (p.1 : ℕ)]
+..
+line 244, col 4:
+ring
+...
+line 247, col 4:
+ring

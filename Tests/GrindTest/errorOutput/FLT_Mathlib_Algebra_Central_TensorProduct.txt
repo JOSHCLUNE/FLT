@@ -1,0 +1,13 @@
+....................
+line 71, col 43:
+simp
+..
+line 72, col 49:
+simp_all
+....
+line 75, col 43:
+simp
+..
+line 76, col 49:
+simp_all
+.._...............

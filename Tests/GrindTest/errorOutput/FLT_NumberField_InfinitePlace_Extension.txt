@@ -1,0 +1,13 @@
+..
+line 72, col 2:
+simp_all only [← hg, RingHom.ext_iff, RingHom.coe_comp, Function.comp_apply, not_forall,
+    ne_eq]
+shortened proof!
+.
+line 117, col 2:
+simp only [IsUnmixedExtension, not_and, not_not] at h
+shortened proof!
+.
+line 134, col 56:
+aesop
+................

@@ -1,0 +1,567 @@
+...........
+line 112, col 4:
+contradiction
+................
+line 131, col 33:
+rw [one_mul]
+...
+line 133, col 32:
+group
+.
+line 134, col 24:
+rw [h_conj]
+.......
+line 143, col 38:
+rw [ih, ← mul_assoc]
+......
+line 151, col 6:
+rcases hx g with ⟨h1, _⟩ | ⟨h1, _⟩
+shortened proof!
+..
+line 154, col 6:
+rcases hx a with ⟨h1, _⟩ | ⟨h1, _⟩
+shortened proof!
+........_..._......
+line 173, col 55:
+omega
+........
+line 182, col 69:
+omega
+..
+line 183, col 37:
+omega
+...
+line 186, col 29:
+rw [hi]
+.
+line 189, col 32:
+rw [Nat.mod_eq_of_lt hk_nat_lt]
+..................._..
+line 218, col 6:
+exact hb_pow_mul k1 k2
+....
+line 222, col 77:
+rw [mul_assoc]
+.
+line 223, col 50:
+rw [hb_pow_mul_a]
+.
+line 224, col 52:
+rw [mul_assoc]
+.
+line 225, col 52:
+rw [hb_comm]
+.
+line 226, col 40:
+rw [← hb_pow_sub]
+......
+line 235, col 12:
+rw [mul_assoc]
+.
+line 236, col 54:
+rw [← mul_assoc (b ^ k1.val)]
+.
+line 237, col 52:
+rw [← mul_assoc a]
+.
+line 238, col 56:
+rw [hb_pow_mul_a]
+.
+line 239, col 56:
+rw [← mul_assoc a]
+..
+line 241, col 46:
+rw [one_mul]
+.
+line 242, col 46:
+rw [hb_comm]
+....................
+line 273, col 6:
+contradiction
+....._.....................................................
+line 360, col 23:
+exact h_two
+....
+line 365, col 6:
+rw [h_ord_eq, hx_ord]
+.
+line 367, col 6:
+exfalso
+shortened proof!
+...........................
+line 411, col 6:
+rw [hi] at hHK_opt
+shortened proof!
+.
+line 415, col 6:
+rw [hi] at hHK_opt
+shortened proof!
+.
+line 419, col 6:
+exfalso
+shortened proof!
+........
+line 434, col 2:
+omega
+.....
+line 452, col 12:
+rw [hP_card, hp_eq]
+......
+line 465, col 4:
+omega
+.............
+line 485, col 6:
+omega
+.
+line 487, col 6:
+exact h_three
+......
+line 495, col 6:
+rw [h_P_card P, h_norm_card P]
+....
+line 500, col 4:
+omega
+......................
+line 548, col 66:
+norm_num
+._....
+line 556, col 34:
+rw [hH_card]
+shortened proof!
+..........
+line 568, col 41:
+norm_num
+...
+line 573, col 8:
+rw [hk, pow_zero, hH_card] at h_card_le
+shortened proof!
+.
+line 576, col 8:
+rfl
+.
+line 578, col 8:
+norm_num at h1
+.....
+line 584, col 10:
+rw [hk, hk1, pow_one]
+shortened proof!
+..
+line 587, col 4:
+exact h_four
+.....
+line 599, col 2:
+exact Nat.noConfusion (show 9 = 0 from congrArg (· - 3) hH_norm)
+...
+line 606, col 56:
+norm_num
+..............
+line 623, col 6:
+rw [hH₁_card, hk] at h
+shortened proof!
+.....
+line 629, col 18:
+norm_num
+.
+line 631, col 6:
+have h_pos : 1 ≤ k := by
+        by_contra! hc
+        have h_zero : k = 0 := by omega
+        rw [h_zero, pow_zero] at hdvd_3
+        revert hdvd_3
+        norm_num
+shortened proof!
+.
+line 638, col 4:
+rw [hk1, pow_one] at hk
+shortened proof!
+...
+line 642, col 87:
+rw [hQ_card,
+        hH₁_card]
+.....
+line 647, col 2:
+rw [hsets, hH₁_norm, hN] at h_idx
+shortened proof!
+..........................
+line 686, col 8:
+exact hk_eq ▸ hy
+.......................
+line 710, col 2:
+have h_lt : (configs.get i).f * (configs.get i).d < N := h_small _ (List.get_mem configs i)
+shortened proof!
+................
+line 737, col 40:
+rw [← hK_eq, hK]
+....................
+line 764, col 8:
+rw [← mul_assoc (g * k) g⁻¹ g, h1, one_mul, inv_mul_cancel]
+...
+line 766, col 64:
+rw [hk_eq]
+...
+line 771, col 4:
+exact hk_center
+...............
+line 799, col 75:
+rw [h] at hk
+shortened proof!
+..
+line 800, col 57:
+norm_num
+.
+line 801, col 4:
+omega
+.......
+line 812, col 66:
+norm_num
+....
+line 815, col 80:
+rw [hQG_card,
+      pow_one]
+...
+line 820, col 66:
+norm_num
+........
+line 831, col 2:
+omega
+....
+line 843, col 124:
+intros
+shortened proof!
+....
+line 852, col 60:
+intros
+shortened proof!
+.
+line 853, col 25:
+norm_num
+..
+line 854, col 36:
+revert hK_dvd
+shortened proof!
+..
+line 860, col 14:
+exact x.property
+.
+line 862, col 14:
+rw [h2]
+shortened proof!
+.
+line 864, col 88:
+rw [h3,
+            pow_one]
+..
+line 866, col 80:
+norm_num
+.
+line 868, col 44:
+rw [h_sylow]
+shortened proof!
+..
+line 869, col 36:
+revert hK_dvd
+shortened proof!
+..
+line 870, col 36:
+revert hK_dvd
+shortened proof!
+.......
+line 886, col 6:
+simp only [List.mem_cons, List.mem_nil_iff] at hc
+shortened proof!
+...............
+line 919, col 4:
+exact map_one _
+.............
+line 933, col 4:
+revert hi
+shortened proof!
+...
+line 940, col 64:
+norm_num
+..
+line 943, col 9:
+rw [hH₂_card]
+shortened proof!
+....
+line 948, col 66:
+norm_num
+.
+line 949, col 4:
+norm_num
+...
+line 952, col 2:
+rw [hH₂_norm_card, hN] at h_mul
+shortened proof!
+...
+line 960, col 64:
+norm_num
+..
+line 963, col 9:
+rw [hH₁_card]
+shortened proof!
+....
+line 968, col 67:
+norm_num
+.
+line 969, col 4:
+norm_num
+...
+line 972, col 2:
+rw [hH₁_norm_card, hN] at h_mul
+shortened proof!
+...............
+line 1006, col 17:
+exact h
+............
+line 1026, col 12:
+exact hx.symm
+....................__..
+line 1066, col 56:
+norm_num
+.
+line 1066, col 70:
+omega
+........__..
+line 1085, col 56:
+norm_num
+.
+line 1085, col 70:
+omega
+......
+line 1095, col 70:
+norm_num
+....
+line 1099, col 69:
+norm_num
+.................
+line 1121, col 8:
+group
+.
+line 1123, col 93:
+group
+....
+line 1129, col 36:
+rw [hpq_eq_one, one_mul]
+...
+line 1133, col 4:
+rw [hp_order_H, hq_order_H]
+..
+line 1135, col 33:
+norm_num
+....
+line 1148, col 69:
+norm_num
+....
+line 1153, col 68:
+norm_num
+......
+line 1162, col 10:
+simp only [Set.disjoint_left, Set.mem_setOf_eq]
+shortened proof!
+........
+line 1187, col 2:
+linarith only [h_count, h_le]
+.....
+line 1196, col 79:
+norm_num
+......
+line 1203, col 60:
+norm_num
+..
+line 1207, col 40:
+norm_num
+..
+line 1218, col 50:
+omega
+..
+line 1221, col 34:
+norm_num
+..
+line 1224, col 33:
+norm_num
+...
+line 1230, col 12:
+intro c hc
+shortened proof!
+....
+line 1237, col 12:
+rw [h3, hN, h_fac3, pow_one]
+.
+line 1238, col 12:
+rw [h_n3]
+shortened proof!
+....
+line 1242, col 41:
+rw [h4]
+shortened proof!
+..........
+line 1253, col 36:
+exact absurd hg (by norm_num)
+.
+line 1254, col 6:
+simp only [Finset.mem_insert, Finset.mem_singleton] at hmem
+shortened proof!
+....
+line 1266, col 12:
+rw [h5, hN, h_fac5, pow_one]
+.
+line 1267, col 12:
+rw [h_n5]
+shortened proof!
+..
+line 1269, col 42:
+rw [hN, h_fac3]
+..
+line 1270, col 47:
+rw [h6]
+shortened proof!
+..
+line 1272, col 23:
+norm_num
+.
+line 1273, col 12:
+rw [h_n3, h6]
+shortened proof!
+..
+line 1275, col 42:
+rw [hN, h_fac5]
+..
+line 1276, col 47:
+rw [h10]
+shortened proof!
+..
+line 1278, col 24:
+norm_num
+.
+line 1279, col 12:
+rw [h_n5, h10]
+shortened proof!
+..
+line 1281, col 42:
+rw [hN, h_fac3]
+..
+line 1282, col 47:
+rw [h12]
+shortened proof!
+..
+line 1284, col 24:
+norm_num
+.
+line 1285, col 12:
+rw [h_n3, h12]
+shortened proof!
+..
+line 1288, col 37:
+rw [h15]
+shortened proof!
+....
+line 1292, col 73:
+norm_num
+..
+line 1294, col 73:
+norm_num
+.
+line 1295, col 12:
+rw [h15]
+shortened proof!
+..
+line 1297, col 42:
+rw [hN, h_fac5]
+..
+line 1298, col 47:
+rw [h20]
+shortened proof!
+..
+line 1300, col 24:
+norm_num
+.
+line 1301, col 12:
+rw [h_n5, h20]
+shortened proof!
+..
+line 1304, col 37:
+rw [h30]
+shortened proof!
+....
+line 1308, col 73:
+norm_num
+..
+line 1310, col 73:
+norm_num
+.
+line 1311, col 12:
+rw [h30]
+shortened proof!
+..
+line 1313, col 17:
+omega
+___..
+line 1317, col 22:
+omega
+..
+line 1319, col 6:
+exact absurd hN_card_div (by norm_num)
+..
+line 1321, col 17:
+omega
+___..
+line 1325, col 17:
+omega
+___..
+line 1330, col 17:
+omega
+___......
+line 1344, col 8:
+rw [← hk] at this
+shortened proof!
+..
+line 1346, col 42:
+omega
+.
+line 1347, col 6:
+rcases hk_cases with rfl | rfl
+shortened proof!
+.....
+line 1363, col 83:
+omega
+.......
+line 1373, col 65:
+norm_num
+.
+line 1374, col 4:
+omega
+......
+line 1387, col 65:
+norm_num
+.
+line 1388, col 4:
+norm_num
+....
+line 1394, col 4:
+omega
+..
+line 1398, col 4:
+omega
+................
+line 1416, col 4:
+omega
+.......
+line 1427, col 42:
+norm_num
+..__....
+line 1437, col 4:
+exact hn
+......
+line 1445, col 6:
+omega
+..
+line 1449, col 6:
+omega
+..............
+line 1467, col 4:
+omega
+.....
+line 1476, col 4:
+omega
+............

@@ -1,0 +1,43 @@
+........................................
+line 167, col 4:
+exact key
+............
+line 195, col 4:
+rw [hc, hv]
+...................
+line 221, col 4:
+rw [← hμ']
+shortened proof!
+....................................
+line 276, col 4:
+exact h
+..........
+line 289, col 2:
+exact haT ▸ a.2
+.................................................
+line 360, col 8:
+obtain ⟨g, rfl⟩ := hx
+shortened proof!
+...........
+line 375, col 8:
+exact ihx _ (ihy w hw)
+.....
+line 380, col 4:
+exact Or.inl hbot
+..........
+line 391, col 6:
+exact hall
+...
+line 397, col 4:
+have h2 := hWall (((φ w)⁻¹ • φ).smulRight v) w hwW
+shortened proof!
+..........
+line 418, col 18:
+rfl
+..
+line 420, col 27:
+rw [ha, hb, add_zero]
+...............................
+line 472, col 4:
+exact one_ne_zero hcontra
+........

@@ -1,0 +1,27 @@
+.............._......_..............._..........................
+line 198, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, H⟩
+shortened proof!
+.......
+line 208, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, U, hU, H⟩
+shortened proof!
+..............
+line 234, col 10:
+simp
+.
+line 234, col 23:
+simpa
+.
+line 234, col 37:
+simp_all
+.................
+line 267, col 8:
+omega
+...
+line 271, col 20:
+simp
+.............................................................
+line 376, col 4:
+rwa [Nat.one_le_iff_ne_zero]
+.

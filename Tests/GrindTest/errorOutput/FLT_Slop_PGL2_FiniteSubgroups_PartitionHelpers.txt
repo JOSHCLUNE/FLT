@@ -1,0 +1,165 @@
+....
+line 69, col 74:
+omega
+.........
+line 85, col 2:
+linarith only [h1, h3]
+..................
+line 157, col 28:
+rw [ha1, one_mul, mul_one]
+..
+line 158, col 28:
+rw [hb1, mul_one, one_mul]
+.....
+line 171, col 6:
+rw [mul_assoc, ← mul_assoc yQ, ← h_comm_G zP hzP yQ hyQ, mul_assoc zP, ← mul_assoc yP]
+......................................
+line 229, col 8:
+obtain ⟨R, hR, _⟩ := hx
+shortened proof!
+.....
+line 235, col 8:
+exact ⟨fun ⟨R, hR, hxR⟩ ↦ hR.elim (fun h ↦ Or.inl <| h ▸ hxR) (fun h ↦ Or.inr ⟨R, h, hxR⟩),
+               fun h ↦ h.elim (fun hxQ ↦ ⟨Q, Or.inl rfl, hxQ⟩) (fun ⟨R, hRs, hxR⟩ ↦ ⟨R, Or.inr hRs, hxR⟩)⟩
+...........
+line 254, col 2:
+rfl
+.............
+line 282, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 284, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+..............
+line 299, col 4:
+exact h3
+.....
+line 304, col 4:
+calc d = 0 * β + d * 1 := by ring
+      _ = (c : K p) * (0 * b + 1 * d) := h4
+      _ = (c : K p) * d := by ring
+..
+line 308, col 66:
+rw [h, mul_zero]
+...
+line 310, col 33:
+exact h_mul
+.....
+line 316, col 4:
+have h_eq : a * β = d * β := by
+      calc a * β = a * β + b * 1 - b := by ring
+        _ = 1 * b + β * d - b := by rw [h_01]
+        _ = d * β := by ring
+shortened proof!
+.....
+line 324, col 48:
+rw [h_zero]
+shortened proof!
+................
+line 340, col 8:
+rw [h_val, mul_zero]
+.
+line 341, col 6:
+exact hb hc_val2
+........
+line 349, col 6:
+rw [h_trace, h_det, h_ad]
+shortened proof!
+...............
+line 381, col 39:
+rw [h, pow_zero]
+.
+line 381, col 74:
+rw [h, pow_one]
+...............
+line 428, col 4:
+exact Set.mem_range_self y
+......._.....................................
+line 485, col 42:
+rw [hv]
+.......
+line 511, col 2:
+rw [one_mul] at h
+shortened proof!
+......................
+line 564, col 28:
+rw [hg1]
+shortened proof!
+..
+line 565, col 28:
+rw [hh1]
+shortened proof!
+.............
+line 583, col 8:
+rw [← mul_assoc, mul_assoc a b c, (h_comm_G c hc b hb).symm, ← mul_assoc a c b, mul_assoc]
+.............(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 603, col 8:
+exact (hm ▸ h_ord_div a ha).trans (pow_dvd_pow p (Nat.le_add_right m n))
+.
+line 604, col 8:
+exact (hn ▸ h_ord_div b hb).trans (pow_dvd_pow p (Nat.le_add_left n m))
+.................
+line 635, col 4:
+exact (Finset.mem_sdiff.mp (hS_def ▸ hQ)).2 (Finset.mem_singleton.mpr h_eq.symm)
+.......
+line 645, col 4:
+rw [h_bot, mul_one] at h_mul
+shortened proof!
+.................
+line 665, col 4:
+rw [hS_def, Finset.card_sdiff, Finset.inter_univ, Finset.card_univ, Finset.card_singleton]
+........................
+line 701, col 4:
+cases k
+shortened proof!
+..
+line 704, col 52:
+norm_num
+..
+line 705, col 62:
+norm_num
+..
+line 708, col 4:
+calc (p ^ m - 1) * p ^ m + (p ^ m - 1) = (p ^ m - 1) * (p ^ m + 1) := by rw [Nat.mul_add, mul_one]
+      _ = k * a * p ^ m + a := by rw [ha, Nat.add_mul, one_mul, mul_right_comm]
+....
+line 713, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+...
+line 715, col 68:
+rw [Nat.le_div_iff_mul_le hP_pos, one_mul]
+shortened proof!
+.
+line 716, col 4:
+rw [← h_div_eq, add_comm 1] at h_ge
+shortened proof!
+...
+line 720, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+..
+line 722, col 4:
+exact h_mod_eq.symm
+....
+line 726, col 81:
+norm_num
+...
+line 728, col 2:
+rw [h_k_eq_one, one_mul] at hk
+shortened proof!

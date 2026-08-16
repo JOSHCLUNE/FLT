@@ -1,0 +1,28 @@
+........
+line 81, col 46:
+simpa
+.
+line 82, col 2:
+convert hsc
+shortened proof!
+......
+line 105, col 15:
+simp
+.....
+line 111, col 59:
+simp
+....................................
+line 151, col 10:
+simp [hi]
+.
+line 152, col 8:
+simp +contextual only [↓reduceIte] at ih
+shortened proof!
+........_........
+line 170, col 8:
+simp_rw [dif_pos (Subtype.prop _)]
+shortened proof!
+..
+line 174, col 6:
+simp [g, dif_neg hjs] at hb
+....................................

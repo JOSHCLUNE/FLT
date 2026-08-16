@@ -1,0 +1,4 @@
+..............
+line 52, col 42:
+exact Set.preimage_mono hKA
+.

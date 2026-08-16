@@ -1,0 +1,19 @@
+........
+line 135, col 4:
+tauto
+................
+line 186, col 6:
+rw [Set.eq_empty_iff_forall_notMem]
+shortened proof!
+....
+line 218, col 2:
+ext x i
+shortened proof!
+.........
+line 235, col 2:
+exact ⟨x, hx⟩
+....
+line 245, col 2:
+use (x (f j))
+shortened proof!
+............................_....

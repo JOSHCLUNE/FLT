@@ -1,0 +1,10 @@
+...........
+line 65, col 2:
+exact ⟨P, hP_monic, hP_map, hP_deg⟩
+................................
+line 171, col 2:
+rw [hR, hkey, hsmul, ← map_mul, mul_comm]
+......................
+line 208, col 46:
+rw [h, map_zero]
+.

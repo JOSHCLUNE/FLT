@@ -1,0 +1,49 @@
+.......
+line 43, col 39:
+simp
+..........................
+line 136, col 58:
+simp
+.........................................
+line 227, col 36:
+grind
+._.......................
+line 263, col 39:
+exact Subsingleton.elim _ _
+...........
+line 273, col 55:
+grind
+.....
+line 285, col 6:
+exact ⟨x, by simp [h]⟩
+....
+line 289, col 6:
+simp
+..
+line 291, col 6:
+exact ⟨x, by simp [h]⟩
+........
+line 298, col 6:
+grind
+........
+line 304, col 10:
+grind
+................
+line 317, col 31:
+grind
+.
+line 317, col 41:
+grind
+.
+line 317, col 51:
+grind
+.
+line 317, col 61:
+grind
+........
+line 351, col 63:
+simp
+.........
+line 361, col 79:
+simp [hg]
+...

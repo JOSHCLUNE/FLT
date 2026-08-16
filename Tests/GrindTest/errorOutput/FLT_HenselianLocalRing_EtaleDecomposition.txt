@@ -1,0 +1,19 @@
+....................................
+line 83, col 17:
+simp [this]
+.
+line 83, col 57:
+simp [this]
+.........
+line 90, col 31:
+infer_instance
+..
+line 91, col 31:
+infer_instance
+........................
+line 138, col 73:
+simp
+.................................
+line 181, col 68:
+ring
+......

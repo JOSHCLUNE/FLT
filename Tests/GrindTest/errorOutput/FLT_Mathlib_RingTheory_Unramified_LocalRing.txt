@@ -1,0 +1,9 @@
+.....
+line 73, col 57:
+rw [hP_map]
+shortened proof!
+.......................
+line 114, col 12:
+rw [hP_map]
+shortened proof!
+..

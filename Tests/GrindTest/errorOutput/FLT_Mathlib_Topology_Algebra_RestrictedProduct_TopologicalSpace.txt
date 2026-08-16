@@ -1,0 +1,27 @@
+....._...
+line 62, col 62:
+simp_all
+.............................................
+line 263, col 2:
+ext f
+shortened proof!
+...........................................
+line 480, col 10:
+rw [hTval, Set.preimage_compl, Set.compl_subset_comm]
+shortened proof!
+.............
+line 539, col 2:
+exact ⟨fun ⟨t, ⟨I, hIf, s, hs, ht⟩, htU⟩ ↦ ⟨I, s, hIf, hs, by grw [ht, htU]⟩,
+    fun ⟨I, s, hIf, hs, hU⟩ ↦ ⟨I.pi s, ⟨I, hIf, s, hs, subset_rfl⟩, hU⟩⟩
+..............
+line 560, col 2:
+simp only [Set.mem_inter_iff, Set.mem_pi] at hy
+shortened proof!
+..................
+line 587, col 67:
+(hI : i ∉ I)
+shortened proof!
+..
+line 591, col 6:
+simp [Set.subset_def, or_iff_not_imp_right, forall_and]
+..........................

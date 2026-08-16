@@ -1,0 +1,36 @@
+........................................
+line 130, col 48:
+exact y.2
+........
+line 136, col 67:
+exact hc
+............
+line 168, col 4:
+rwa [← hq] at h
+..................
+line 198, col 75:
+ring
+.
+line 200, col 53:
+omega
+.....
+line 212, col 23:
+push_cast
+shortened proof!
+...
+line 217, col 12:
+push_cast
+shortened proof!
+...
+line 221, col 2:
+exact key n
+...
+line 230, col 45:
+rw [← Ideal.submodule_span_eq, hspan]
+...........
+line 242, col 6:
+simp [h0]
+.....
+line 249, col 35:
+omega
+...........

@@ -1,0 +1,11 @@
+......
+line 52, col 60:
+rw [hQ]
+shortened proof!
+...
+line 54, col 35:
+exact hgdvd'
+...
+line 56, col 82:
+exact hgdeg
+..

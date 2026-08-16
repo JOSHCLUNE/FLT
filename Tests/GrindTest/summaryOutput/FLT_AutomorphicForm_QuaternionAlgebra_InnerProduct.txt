@@ -1,0 +1,3 @@
+Total number of results: 448
+Total number of successes: 18
+Time taken: 1558s
