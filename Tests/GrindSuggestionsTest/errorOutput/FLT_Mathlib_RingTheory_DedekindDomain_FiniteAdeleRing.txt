@@ -1,0 +1,10 @@
+...........
+line 130, col 6:
+simp
+.
+line 131, col 6:
+simp [Pi.single_eq_of_ne' h]
+.................
+line 198, col 4:
+simp [Pi.single_eq_of_ne' h]
+........._....._..

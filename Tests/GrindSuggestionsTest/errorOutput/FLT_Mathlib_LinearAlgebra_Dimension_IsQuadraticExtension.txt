@@ -1,0 +1,14 @@
+.
+line 31, col 14:
+rwa [Algebra.algebraMap_eq_smul_one]
+....
+line 43, col 2:
+have h2 := finrank_eq_two K L
+shortened proof!
+.....
+line 54, col 33:
+exact (finrank_eq_two K L).symm
+.........
+line 73, col 2:
+rw [map_mul, ← sq]
+shortened proof!

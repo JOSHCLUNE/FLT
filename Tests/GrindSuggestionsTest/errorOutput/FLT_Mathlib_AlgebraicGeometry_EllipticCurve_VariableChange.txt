@@ -1,0 +1,18 @@
+....
+line 48, col 24:
+decide
+._......
+line 68, col 4:
+grind [a₁_ne_zero_or_a₃_ne_zero_of_two_eq_zero]
+....
+line 72, col 4:
+linear_combination -hv
+.
+line 83, col 2:
+ext
+shortened proof!
+....
+line 104, col 2:
+have hWinv : (W.baseChange L).map σ.toAlgHom.toRingHom = W.baseChange L :=
+    map_baseChange (W := W) σ.toAlgHom
+shortened proof!

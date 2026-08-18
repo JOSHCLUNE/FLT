@@ -1,0 +1,63 @@
+.......
+line 49, col 10:
+cases ha rfl
+......
+line 54, col 33:
+ring
+..
+line 55, col 29:
+ring
+....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.......
+line 98, col 59:
+simp_all
+...
+line 106, col 71:
+aesop
+.............
+line 160, col 26:
+rw [leftRel_apply, mem_ker, φ.map_mul,
+      ← h, ← map_mul, inv_mul_cancel, map_one]
+.......
+line 173, col 66:
+simpa
+.
+line 174, col 4:
+simpa [(MonoidHom.ker_eq_bot_iff _).mpr, QuotientGroup.kerLift_injective, -le_bot_iff,
+      Subgroup.map_le_iff_le_comap] using! this
+..
+line 177, col 4:
+simp_all
+.............
+line 203, col 4:
+simp [← map_mul, mul_assoc]
+shortened proof!
+.......
+line 252, col 54:
+simp [mem_ker.mp hx]
+.......
+line 296, col 76:
+simp_all
+........
+line 317, col 4:
+rintro ⟨x, rfl⟩
+shortened proof!
+........
+line 335, col 2:
+simp [Group.dvd_natCard_iff_of_prime, hp]
+...
+line 347, col 65:
+grind
+.......
+line 368, col 37:
+ext
+shortened proof!
+.
+line 377, col 33:
+simpa using H
+..

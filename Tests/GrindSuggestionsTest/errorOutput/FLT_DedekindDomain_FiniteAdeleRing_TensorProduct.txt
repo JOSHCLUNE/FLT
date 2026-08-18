@@ -1,0 +1,6 @@
+.............................
+line 156, col 4:
+simp [TensorProduct.localcomponent_id_apply]
+...
+line 160, col 4:
+simp [TensorProduct.localcomponent_id_apply]

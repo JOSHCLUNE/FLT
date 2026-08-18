@@ -1,0 +1,44 @@
+......
+line 68, col 2:
+grobner
+.......
+line 84, col 54:
+grobner
+..
+line 85, col 44:
+linear_combination -e2 + 3 * hr
+..
+line 87, col 6:
+linear_combination -e4 + (2 * E.a₂ - C.s * E.a₁ + 3 * C.r) * hr - C.s * C.t * h2
+...
+line 89, col 30:
+grobner
+...
+line 91, col 34:
+grobner
+....
+line 92, col 56:
+linear_combination h2
+...
+line 95, col 28:
+grobner
+..
+line 96, col 28:
+grobner
+.........
+line 109, col 45:
+linear_combination hu6 - (C.u : K) ^ 2 * hu4
+.....
+line 120, col 4:
+exact E.eq_one_or_eq_negVariableChange_of_u_eq_one hc4 hc6 hu hC
+......
+line 128, col 6:
+rw [← mul_assoc, negVariableChange_mul_self, one_mul]
+..
+line 130, col 6:
+right
+shortened proof!
+.
+line 131, col 6:
+left
+shortened proof!

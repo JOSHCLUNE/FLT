@@ -1,0 +1,72 @@
+...
+line 34, col 2:
+exact DoubleCoset.isOpen_doubleCoset H K hK i
+....
+line 43, col 39:
+simp
+..........................
+line 136, col 58:
+simp
+........................................
+line 227, col 6:
+have := SetLike.le_def.mp eK
+shortened proof!
+._.......................
+line 263, col 39:
+exact Subsingleton.elim _ _
+...........
+line 273, col 55:
+grind
+...
+line 283, col 6:
+simp
+..
+line 285, col 6:
+exact ⟨x, by simp [h]⟩
+....
+line 289, col 6:
+simp
+..
+line 291, col 6:
+exact ⟨x, by simp [h]⟩
+........
+line 298, col 6:
+grind
+.......
+line 304, col 4:
+simp
+shortened proof!
+................
+line 317, col 31:
+grind
+.
+line 317, col 41:
+grind
+.
+line 317, col 51:
+grind
+.
+line 317, col 61:
+grind
+.
+line 317, col 71:
+simp
+......
+line 351, col 46:
+simp
+.
+line 351, col 63:
+simp
+.
+line 353, col 52:
+rw [← σ_one, σLeft_σ]
+....
+line 358, col 74:
+simp
+...
+line 361, col 67:
+simp
+.
+line 361, col 79:
+simp [hg]
+...

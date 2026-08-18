@@ -1,0 +1,47 @@
+...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..
+line 109, col 4:
+rintro rfl
+shortened proof!
+.........
+line 123, col 44:
+ring
+...
+line 126, col 2:
+convert h using 2
+shortened proof!
+...........
+line 159, col 6:
+exact Set.mem_prod.mpr ⟨Set.mem_preimage.mpr (Set.mem_Iio.mpr (lt_of_le_of_lt h1 hp)),
+        Set.mem_preimage.mpr (Set.mem_Iio.mpr (lt_of_le_of_lt h2 hp))⟩
+.....
+line 170, col 41:
+ring
+.......
+line 188, col 2:
+exact tsum_congr fun N ↦ by rw [hF N]
+.....
+line 206, col 19:
+simpa using hn
+...
+line 209, col 6:
+rw [Polynomial.coeff_coe, PowerSeries.coeff_trunc, if_pos (Finset.mem_range.mp hn)]
+..
+line 211, col 2:
+refine valuation_evalInt_le_pow q hq fun m hm ↦ ?_
+shortened proof!
+.
+line 226, col 2:
+simpa using ValuativeExtension.mapValueGroupWithZero_strictMono (A := k) (B := l) hq
+............
+line 260, col 10:
+rw [map_pow, ValuativeExtension.mapValueGroupWithZero_valuation]
+....
+line 271, col 8:
+congr 1
+shortened proof!

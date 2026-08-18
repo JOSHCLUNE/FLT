@@ -1,0 +1,32 @@
+...
+line 48, col 2:
+exact h i
+.
+line 57, col 24:
+simp
+.
+line 67, col 50:
+simp
+..
+line 76, col 28:
+simp [mul_comm]
+..
+line 80, col 31:
+simp [mul_assoc]
+.
+line 90, col 47:
+simp
+..
+line 99, col 26:
+simp
+..
+line 100, col 30:
+simp [mul_smul]
+.................................
+line 175, col 80:
+rw [h]
+.....................
+line 257, col 4:
+intro i j h
+shortened proof!
+......................................

@@ -1,0 +1,5 @@
+.............
+line 52, col 4:
+rw [← hφ.injective.preimage_image A]
+shortened proof!
+.

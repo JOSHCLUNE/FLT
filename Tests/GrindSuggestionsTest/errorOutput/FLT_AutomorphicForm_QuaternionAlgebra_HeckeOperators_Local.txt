@@ -1,0 +1,22 @@
+.
+line 49, col 44:
+simp
+..........__......................
+line 112, col 54:
+simp [hx]
+.............(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 153, col 31:
+simpa
+...............
+line 170, col 38:
+simp [h] at H
+...
+line 180, col 77:
+simpa
+..

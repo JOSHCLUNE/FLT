@@ -1,0 +1,7 @@
+..
+line 24, col 4:
+rw [← hgen]
+shortened proof!
+.
+line 26, col 2:
+exact AlgEquiv.Algebra.isSeparable IntermediateField.topEquiv

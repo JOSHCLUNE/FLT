@@ -1,0 +1,7 @@
+.....
+line 39, col 4:
+exact Subgroup.index_comap_of_surjective _ (MulEquiv.inv' G).symm.surjective
+.
+line 42, col 28:
+rw [Subgroup.index_op]
+shortened proof!

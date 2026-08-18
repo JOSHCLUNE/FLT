@@ -1,0 +1,15 @@
+.............
+line 42, col 6:
+intro z hz
+shortened proof!
+...........
+line 62, col 4:
+rw [← hy]
+shortened proof!
+.....
+line 73, col 6:
+exact Completion.continuous_coe X
+..
+line 75, col 6:
+exact Completion.denseRange_coe
+...

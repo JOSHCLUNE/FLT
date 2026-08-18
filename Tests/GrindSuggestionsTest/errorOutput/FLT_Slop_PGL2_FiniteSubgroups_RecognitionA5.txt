@@ -1,0 +1,7 @@
+..
+line 55, col 65:
+norm_num
+..
+line 58, col 67:
+norm_num
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean produced errors (exit code 143)

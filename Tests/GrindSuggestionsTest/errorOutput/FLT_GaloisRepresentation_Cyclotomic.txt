@@ -1,0 +1,15 @@
+...
+line 30, col 2:
+exact IsPrimitiveRoot.card_rootsOfUnity hz
+.
+line 33, col 62:
+exact Iff.symm dvd_iff
+.
+line 37, col 2:
+rw [pow_eq_pow_mod b h, pow_eq_pow_mod c h]
+shortened proof!
+........
+line 55, col 4:
+apply rootsOfUnity.pow_eq_pow htD
+shortened proof!
+......

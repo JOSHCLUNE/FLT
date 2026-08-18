@@ -1,0 +1,6 @@
+..........
+line 71, col 4:
+simp [hn]
+......
+line 98, col 2:
+exact WeierstrassCurve.Affine.Point.map_map _ _ _

@@ -1,0 +1,12 @@
+..
+line 44, col 34:
+ring
+....
+line 55, col 65:
+grobner
+..
+line 60, col 50:
+linear_combination E.c_relation
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)

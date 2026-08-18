@@ -1,0 +1,27 @@
+..
+line 63, col 2:
+simp [baseChangeOfAlgebraMap, SemialgHom.toLinearMap_eq_coe]
+.
+line 69, col 2:
+simp [baseChangeOfAlgebraMap, SemialgHom.toLinearMap_eq_coe, Algebra.ofId_apply]
+....
+line 87, col 6:
+ring
+...
+line 129, col 19:
+simp
+.
+line 130, col 20:
+simp
+.
+line 132, col 22:
+simp
+.
+line 146, col 19:
+simp [mul_assoc]
+.
+line 147, col 20:
+simp [mul_assoc]
+.
+line 149, col 22:
+simp

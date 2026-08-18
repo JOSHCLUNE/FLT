@@ -1,0 +1,18 @@
+...
+line 99, col 2:
+intro p hp _
+shortened proof!
+...
+line 108, col 4:
+rw [← isNoetherianRing_iff]
+shortened proof!
+....
+line 111, col 2:
+exact Module.length_ne_top
+..
+line 123, col 2:
+rw [I.radical_pow hn, h]
+...........
+line 163, col 4:
+simpa using hIJ
+......

@@ -1,0 +1,16 @@
+.....................(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+................_...
+line 131, col 52:
+positivity
+..........
+line 147, col 4:
+simp [H, spectralNorm_zero]
+...........
+line 181, col 41:
+rw [hτ x hx, hσ x hx]
+._......
+line 208, col 4:
+exact (Subring.topEquiv (R := Kᵥ)).isField (Semifield.toIsField Kᵥ)
+.

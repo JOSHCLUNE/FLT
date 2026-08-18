@@ -1,0 +1,748 @@
+[{"tacticSucceeded": true,
+  "startLine": 49,
+  "startCol": 44,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.diag",
+  "oldText": "simp",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 49,
+  "startCol": 64,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.diag",
+  "oldText": "simp",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 54,
+  "startCol": 43,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotent_mem_localTameLevel",
+  "oldText": "simpa",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 54,
+  "startCol": 54,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotent_mem_localTameLevel",
+  "oldText": "simp",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 61,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_injective",
+  "oldText": "intro a b h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 62,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_injective",
+  "oldText":
+  "simpa [unipotentMulDiag, Matrix.mul_apply, unipotent_def, diag] using congr($h 0 1)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 67,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_inv_mul_unipotentMulDiag",
+  "oldText":
+  "trans (diag α)⁻¹ * unipotent (t₂ - t₁ : v.adicCompletion F) * diag α",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 68,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_inv_mul_unipotentMulDiag",
+  "oldText":
+  "simp [unipotentMulDiag, unipotent_inv, sub_eq_add_neg, ← unipotent_mul, mul_assoc]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 69,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_inv_mul_unipotentMulDiag",
+  "oldText": "simp only [← map_inv]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 70,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_inv_mul_unipotentMulDiag",
+  "oldText": "ext i j",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 71,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.unipotentMulDiag_inv_mul_unipotentMulDiag",
+  "oldText": "fin_cases i",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 85,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff'",
+  "oldText":
+  "simp only [mem_localPTameLevel, mem_localIwahoriLevel_iff_v, ne_eq, div_eq_zero_iff,\n    not_or] at hx",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 87,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff'",
+  "oldText":
+  "trans (Valued.v α.1)⁻¹ * Valued.v (x 0 1) ≤ 1 ∧ Valued.v (x 1 0) * Valued.v α.1 < 1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 88,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff'",
+  "oldText":
+  "simp [mem_localPTameLevel, mem_localIwahoriLevel_iff_v,\n      ← map_inv, Matrix.mul_apply, diag, mul_assoc, mul_left_comm (_⁻¹), hx]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 90,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff'",
+  "oldText": "simp [inv_mul_le_iff₀, Valuation.pos_iff]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 94,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "constructor",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 95,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "rintro ⟨b, rfl⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 95,
+  "startCol": 21,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "simpa using mul_le_of_le_one_right zero_le b.2",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 96,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "intro H",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 97,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "by_cases ha : a.1 = 0",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 98,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "simp_all",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 99,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText":
+  "exact ⟨⟨b / a, by simpa [mem_adicCompletionIntegers] using div_le_one_of_le₀ H zero_le⟩,\n      by ext; simp [← mul_div_assoc, ha]⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 99,
+  "startCol": 22,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText":
+  "simpa [mem_adicCompletionIntegers] using div_le_one_of_le₀ H zero_le",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 100,
+  "startCol": 9,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "ext",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 100,
+  "startCol": 14,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.adicCompletionIntegers_dvd_iff",
+  "oldText": "simp [← mul_div_assoc, ha]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 112,
+  "startCol": 54,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "simp [hx]",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 104,
+  "startCol": 22,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "simpa",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 104,
+  "startCol": 56,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "simpa",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 107,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "rw [conjBy_diag_mem_iff' (hx := hx)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 108,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText":
+  "simp only [mem_localPTameLevel, mem_localIwahoriLevel_iff_v, ne_eq, div_eq_zero_iff,\n    not_or] at hx",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 110,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText":
+  "have : Valued.v (x 1 0) * Valued.v α.1 < 1 := by\n    rw [← one_mul (1 : WithZero _)]\n    exact mul_lt_mul_of_lt_of_le_of_nonneg_of_pos (by simp [hx]) α.2 zero_le zero_lt_one",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 111,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "rw [← one_mul (1 : WithZero _)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 112,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText":
+  "exact mul_lt_mul_of_lt_of_le_of_nonneg_of_pos (by simp [hx]) α.2 zero_le zero_lt_one",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 113,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.GL2.localPTameLevel.conjBy_diag_mem_iff",
+  "oldText": "simp [this, adicCompletionIntegers_dvd_iff]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 128,
+  "startCol": 20,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText": "exact unipotentMulDiag (Units.mk0 α (by simpa)) x",
+  "message": null,
+  "goalIsProp": false,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 128,
+  "startCol": 60,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText": "simpa",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 129,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText": "intro a b",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 130,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText":
+  "simp only [Submodule.quotientRel_def, QuotientGroup.leftRel_apply,\n      unipotentMulDiag_inv_mul_unipotentMulDiag, Units.val_mk0, Ideal.mem_span_singleton]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 132,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText": "rw [dvd_sub_comm]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 133,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText": "rintro ⟨c, hc⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 134,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1",
+  "oldText":
+  "simpa [← AddSubgroupClass.coe_sub, hc, inv_mul_cancel_left₀, hα] using\n      GL2.localTameLevel_le_localPTameLevel _ _ (unipotent_mem_localTameLevel _ c.2)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 140,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1_injective",
+  "oldText": "rintro ⟨a⟩ ⟨b⟩ H",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 141,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1_injective",
+  "oldText": "refine Ideal.Quotient.eq.mpr ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 142,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1_injective",
+  "oldText": "rw [Ideal.mem_span_singleton, dvd_sub_comm]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 143,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.unipotentMulDiagU1_injective",
+  "oldText": "refine ⟨⟨α.1⁻¹ * (b - a), ?_⟩, by ext; simp [hα]⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 170,
+  "startCol": 38,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "simp [h] at H",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 153,
+  "startCol": 31,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "simpa",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 154,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "rw [← Set.image_univ, ← Ideal.Quotient.mk_surjective.range_eq, ← Set.range_comp]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 155,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "refine subset_antisymm (Set.range_subset_iff.mpr ?_) (Set.image_subset_iff.mpr ?_)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 156,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "exact fun a ↦ ⟨_, Set.mul_mem_mul (GL2.localTameLevel_le_localPTameLevel _ _\n      (unipotent_mem_localTameLevel _ a.2)) rfl, rfl⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 158,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "simp only [Set.mul_singleton, Set.image_mul_right, Set.subset_def, Set.mem_preimage]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 159,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "intro x hx",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 160,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "have H : Valued.v (x.1 0 0) = Valued.v α.1 ∧ Valued.v (x.1 0 1) ≤ 1 ∧\n      Valued.v (x.1 1 0) < Valued.v α.1 ∧ Valued.v (x.1 1 1) = 1 := by\n      simpa [diag, mul_inv_eq_iff_eq_mul₀, hα, mul_inv_lt_iff₀, Valuation.pos_iff] using\n        GL2.mem_localIwahoriLevel_iff_v.mp (localPTameLevel_le_localIwahoriLevel _ _ hx)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 162,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "simpa [diag, mul_inv_eq_iff_eq_mul₀, hα, mul_inv_lt_iff₀, Valuation.pos_iff] using\n        GL2.mem_localIwahoriLevel_iff_v.mp (localPTameLevel_le_localIwahoriLevel _ _ hx)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 164,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "refine ⟨⟨x 0 1 / x 1 1, by simp [mem_adicCompletionIntegers, H]⟩, QuotientGroup.eq.mpr ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 164,
+  "startCol": 31,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "simp [mem_adicCompletionIntegers, H]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 165,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "dsimp [unipotentMulDiag]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 166,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "convert (GL2.localPTameLevel.conjBy_diag_mem_iff _ _ (mul_mem (inv_mem\n      (GL2.localTameLevel_le_localPTameLevel _ _ <|\n      unipotent_mem_localTameLevel (x 0 1 / x 1 1) (by simp [H]))) hx) α hα).mpr ?_ using 1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 168,
+  "startCol": 55,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "simp [H]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 169,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "group",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 170,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "have h' : x 1 1 ≠ 0 := fun h ↦ by simp [h] at H",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 171,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText": "simp only [← map_inv]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 172,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.range_unipotentMulDiagU1",
+  "oldText":
+  "simpa [unipotent_inv, Matrix.mul_apply, -map_inv, diag,\n      unipotent_def, h', -dvd_zero] using! dvd_zero α",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 180,
+  "startCol": 77,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.bijOn_unipotentMulDiagU1",
+  "oldText": "simpa",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 181,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.bijOn_unipotentMulDiagU1",
+  "oldText": "convert (unipotentMulDiagU1_injective p α hα).bijOn_image",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 182,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.HeckeOperator.Local.bijOn_unipotentMulDiagU1",
+  "oldText": "rw [Set.image_univ, range_unipotentMulDiagU1]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Local.lean"}]

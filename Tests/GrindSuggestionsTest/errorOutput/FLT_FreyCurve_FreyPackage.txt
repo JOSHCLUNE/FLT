@@ -1,0 +1,47 @@
+.
+line 107, col 62:
+omega
+.
+line 112, col 20:
+linarith
+...._.
+line 120, col 6:
+exact gcd_dvd_left a b
+.
+line 121, col 6:
+exact gcd_dvd_right a b
+.......
+line 128, col 6:
+exact gcd_dvd_right a c
+..
+line 130, col 6:
+exact gcd_dvd_left a c
+.......
+line 141, col 2:
+rw [add_comm]
+shortened proof!
+..
+line 149, col 37:
+omega
+...........................
+line 183, col 64:
+rwa [add_comm]
+.....
+line 189, col 10:
+exact fun h => ea (Int.even_pow.1 h).1
+.
+line 190, col 10:
+exact fun h => eb (Int.even_pow.1 h).1
+.....
+line 198, col 50:
+decide
+...
+line 201, col 6:
+cases a_odd' a_mod (by decide)
+....
+line 205, col 6:
+cases a_odd' a_mod (by decide)
+....
+line 222, col 2:
+intro p hp5 hpp
+shortened proof!

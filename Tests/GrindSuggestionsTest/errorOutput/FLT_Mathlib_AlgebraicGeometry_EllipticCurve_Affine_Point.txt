@@ -1,0 +1,53 @@
+..
+line 60, col 2:
+field
+.
+line 69, col 2:
+have hu : (C.u : F) ≠ 0 := C.u.ne_zero
+shortened proof!
+..
+line 80, col 2:
+field
+..
+line 88, col 2:
+field
+.......
+line 111, col 6:
+rw [variableChange_negY]
+shortened proof!
+.....
+line 119, col 6:
+simpa [mul_right_inj' (pow_ne_zero 2 hu)] using hx
+.
+line 120, col 4:
+rw [W.toAffine.slope_of_X_ne hΦx, (C • W).toAffine.slope_of_X_ne hx]
+shortened proof!
+...
+line 134, col 2:
+refine ⟨fun h ↦ ?_, fun h ↦ ?_⟩
+shortened proof!
+.
+line 162, col 2:
+subst hx hy
+shortened proof!
+...
+line 168, col 4:
+rfl
+.
+line 169, col 4:
+simp [mapVariableChangeFun] at h
+.
+line 170, col 4:
+simp [mapVariableChangeFun] at h
+.
+line 171, col 4:
+rw [mapVariableChangeFun_some, mapVariableChangeFun_some] at h
+shortened proof!
+....._.....
+line 201, col 6:
+rw [add_of_Y_eq hxy.1 hxy.2, mapVariableChangeFun_zero]
+shortened proof!
+..
+line 206, col 6:
+simp only [variableChange_slope W C e₁ e₂ hxy, variableChange_addX, variableChange_addY]
+.....__

@@ -1,0 +1,462 @@
+..(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 65, col 4:
+rw [Subgroup.orderOf_coe ⟨g, hg⟩]
+shortened proof!
+....
+line 71, col 2:
+exact (fixedPoints_dichotomy p g hg_ne h_fin).2.mpr h_coprime
+.............
+line 94, col 2:
+rw [hS]
+shortened proof!
+.....................................__.............
+line 176, col 8:
+rw [linearIndependent_fin2]
+shortened proof!
+...................
+line 211, col 65:
+rw [hM]
+shortened proof!
+..
+line 212, col 65:
+rwa [← QuotientGroup.eq_one_iff]
+...
+line 216, col 28:
+rw [h_center]
+....
+line 221, col 69:
+ring
+....
+line 224, col 69:
+ring
+......
+line 232, col 6:
+calc z.val 0 1 = (z.val 0 0 + z.val 0 1) - z.val 0 0 := by ring
+      _ = z.val 0 0 - z.val 0 0 := by rw [eq2_00]
+      _ = 0 := by ring
+..
+line 237, col 6:
+calc z.val 1 0 = (z.val 1 0 + z.val 1 1) - z.val 1 1 := by ring
+      _ = z.val 1 1 - z.val 1 1 := by rw [eq1_11]
+      _ = 0 := by ring
+..
+line 242, col 6:
+calc z.val 1 1 = (z.val 0 1 + z.val 1 1) - z.val 0 1 := by ring
+      _ = (z.val 0 0 + z.val 0 1) - z.val 0 1 := by rw [← eq1_01]
+      _ = z.val 0 0 := by ring
+.....
+line 248, col 48:
+exact (mul_one _).symm
+..
+line 249, col 48:
+rw [mul_zero, hz_01]
+..
+line 250, col 48:
+rw [mul_zero, hz_10]
+..
+line 251, col 48:
+rw [mul_one, hz_11]
+....
+line 257, col 6:
+rw [Projectivization.mk_rep y, hg₀, hgy]
+.................
+line 286, col 22:
+rw [g₀.inv_val]
+...............
+line 303, col 39:
+rw [mul_one]
+..
+line 305, col 38:
+rw [mul_assoc]
+.
+line 307, col 31:
+rw [hz_val]
+......
+line 313, col 65:
+rw [hg''_y, hg'_y]
+.
+line 314, col 70:
+rw [h_g''_val]
+...
+line 318, col 6:
+exact (sub_eq_zero.mp hc_eq).symm
+.
+line 320, col 6:
+exact absurd hy y.rep_nonzero
+...
+line 323, col 31:
+rw [hc1]
+....
+line 338, col 4:
+exact ⟨g', h1, h2, fun g'' h1' h2' ↦ h3 g'' ⟨h1', h2'⟩⟩
+................
+line 362, col 6:
+rw [hf_mk, hf_mk]
+.
+line 364, col 6:
+rw [Units.val_mul, ← Matrix.mulVec_mulVec, hf_y, hf_y]
+.................
+line 387, col 6:
+exact sub_eq_zero.mpr hx_one
+................
+line 413, col 2:
+have h_eq : ∀ {u v : ProjectiveLine p}, u ≠ v → u ∈ S → v ∈ S → S = {u, v} := by
+    intro u v huv hu hv
+    obtain ⟨a, b, _, hS⟩ : ∃ a b, a ≠ b ∧ S = {a, b} := Set.ncard_eq_two.mp h2
+    rw [hS] at hu hv ⊢
+    rw [Set.mem_insert_iff, Set.mem_singleton_iff] at hu hv
+    rcases hu with rfl | rfl
+
+    · rcases hv with rfl | rfl
+      · exact absurd rfl huv
+
+      · rfl
+
+    · rcases hv with rfl | rfl
+      · ext z
+        rw [Set.mem_insert_iff, Set.mem_singleton_iff]
+        exact ⟨Or.symm, Or.symm⟩
+
+      · exact absurd rfl huv
+shortened proof!
+..............
+line 460, col 2:
+rcases hnx with hnx_x | hnx_y
+shortened proof!
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...........(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.......
+line 519, col 8:
+exact absurd h_swap.2 (hk n h_swap.1)
+...
+line 522, col 4:
+omega
+...
+line 532, col 33:
+rw [hfp]
+shortened proof!
+.
+line 533, col 33:
+rw [hfp]
+shortened proof!
+............................(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.....
+line 602, col 4:
+rcases hy1 with hy_x | hy_y
+shortened proof!
+...(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 614, col 6:
+exact h_inj g₁ x₁ y₁ hxy₁ (hx_y.trans hy_y.symm)
+..
+line 621, col 31:
+positivity
+..
+line 622, col 54:
+rw [sub_div, div_self hn0]
+..
+line 623, col 45:
+omega
+.......
+line 628, col 33:
+positivity
+..
+line 629, col 60:
+rw [sub_div, div_self hd0]
+..
+line 630, col 37:
+omega
+.
+line 633, col 2:
+exact ne_of_gt (by positivity)
+..
+line 645, col 2:
+rw [← h_congr]
+shortened proof!
+...
+line 657, col 4:
+change s.r x (Quotient.out (e.symm (e (Quotient.mk s x))))
+shortened proof!
+.
+line 661, col 4:
+exact (Quotient.out_eq (e.symm i)).symm.trans ((Quotient.sound hij).trans (Quotient.out_eq
+      (e.symm j)))
+.........
+line 687, col 4:
+rw [h_id, Subgroup.map_id]
+........
+line 698, col 4:
+rw [h_comp_id, Subgroup.map_id]
+........
+line 713, col 4:
+rw [h_comp]
+......
+line 718, col 33:
+exact hnontriv_rep i
+..(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 722, col 6:
+exact ⟨i, g, by rw [heq_rep i] at hg; exact hg⟩
+.
+line 723, col 39:
+rw [← heq_rep i, ← heq_rep j] at hg
+shortened proof!
+......(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....
+line 773, col 4:
+exact ⟨pairStabilizer p G a b, ⟨i, g, hig⟩, hstab⟩
+..(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 784, col 6:
+omega
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 799, col 32:
+have := hd_ge i
+shortened proof!
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..
+line 814, col 4:
+refine ⟨(Nat.cast_inj (R := ℚ)).mp ?_, rfl⟩
+shortened proof!
+..
+line 820, col 6:
+calc ((2 * d₁ : ℕ) : ℚ) = 2 * (d₁ : ℚ) := by push_cast; ring
+        _ = 2 * (d₁ : ℚ) * ((1 : ℚ) / n * n) := by
+          rw [div_mul_cancel₀ 1 (by positivity : (n : ℚ) ≠ 0), mul_one]
+        _ = 2 * (d₁ : ℚ) * ((1 / 2 + 1 / 2 * (1 / (d₁ : ℚ))) * n) := by
+          rw [show (1 : ℚ) / n = 1 / 2 + 1 / 2 * (1 / (d₁ : ℚ)) by linarith only [hsum]]
+        _ = n * ((d₁ : ℚ) + ((1 : ℚ) / (d₁ : ℚ)) * (d₁ : ℚ)) := by ring
+        _ = n * ((d₁ : ℚ) + 1) := by
+          rw [div_mul_cancel₀ 1 (by positivity : (d₁ : ℚ) ≠ 0)]
+        _ = ((n * (d₁ + 1) : ℕ) : ℚ) := by push_cast; ring
+..
+line 832, col 54:
+omega
+.
+line 833, col 29:
+omega
+.
+line 833, col 40:
+omega
+.
+line 834, col 4:
+omega
+....
+line 845, col 31:
+positivity
+..
+line 848, col 4:
+rw [div_eq_div_iff hn0 hc] at h
+shortened proof!
+._...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...
+line 856, col 20:
+norm_num
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 857, col 45:
+norm_num
+.
+line 857, col 71:
+positivity
+....
+line 863, col 6:
+calc (1 : ℚ) / n + 1 / 2 = (1 - (1 - 1 / (n : ℚ))) + 1 / 2 := by ring
+        _ = (1 - ((1 : ℚ) - 1 / d 0 + 1 / 2 * (1 - 1 / d 1))) + 1 / 2 := by rw [hsum']
+        _ = 1 / d 0 + 1 / (2 * (d 1 : ℚ)) := by ring
+......
+line 872, col 53:
+omega
+..
+line 873, col 49:
+have := hd 1
+shortened proof!
+.
+line 874, col 26:
+norm_num
+..
+line 875, col 51:
+norm_num
+.
+line 875, col 77:
+positivity
+.....
+line 879, col 29:
+norm_num
+..
+line 880, col 48:
+have := hd 1
+shortened proof!
+.
+line 880, col 78:
+linarith only [h_inv_sum]
+.......
+line 887, col 55:
+omega
+..
+line 888, col 55:
+norm_num
+.
+line 888, col 81:
+positivity
+.
+line 889, col 8:
+have := hd 1
+shortened proof!
+...
+line 890, col 30:
+norm_num
+..(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..
+line 892, col 35:
+norm_num
+.
+line 892, col 49:
+rw [h1_q] at h_inv_sum
+shortened proof!
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...
+line 898, col 6:
+calc (1 : ℚ) / n + 1 / 2 = (1 - (1 - 1 / (n : ℚ))) + 1 / 2 := by ring
+        _ = (1 - (1 / 2 * (1 - 1 / d 0) + ((1 : ℚ) - 1 / d 1))) + 1 / 2 := by rw [hsum']
+        _ = 1 / (2 * (d 0 : ℚ)) + 1 / d 1 := by ring
+......
+line 907, col 57:
+have := hd 0
+shortened proof!
+..
+line 908, col 45:
+omega
+.
+line 909, col 26:
+norm_num
+..
+line 910, col 51:
+norm_num
+.
+line 910, col 77:
+positivity
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean produced errors (exit code 143)

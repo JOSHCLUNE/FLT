@@ -1,0 +1,20 @@
+.....
+line 36, col 2:
+exact ⟨J, hJ, AddSubgroup.isOpen_mono (H₁ := I.toAddSubgroup) (H₂ := J.toAddSubgroup) hIJ hI⟩
+...................
+line 140, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+...
+line 151, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+.
+line 156, col 2:
+convert isLocalHom_equiv f
+shortened proof!
+.......
+line 198, col 4:
+exact adjoin.mono _ _ _ (subset_adjoin _ _)
+.............
+line 223, col 65:
+simp
+.......

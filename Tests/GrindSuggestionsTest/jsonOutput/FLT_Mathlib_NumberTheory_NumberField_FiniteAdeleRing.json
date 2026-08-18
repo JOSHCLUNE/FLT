@@ -1,0 +1,21 @@
+[{"tacticSucceeded": true,
+  "startLine": 70,
+  "startCol": 31,
+  "shortenedStepsCount": 1,
+  "parentName": "IsDedekindDomain.FiniteAdeleRing.HeightOneSpectrum.nonempty",
+  "oldText": "rintro rfl",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 70,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "IsDedekindDomain.FiniteAdeleRing.HeightOneSpectrum.nonempty",
+  "oldText":
+  "exact ⟨⟨I, inferInstance, by rintro rfl; exact hR (Ring.isField_iff_maximal_bot.mpr hI)⟩⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/NumberTheory/NumberField/FiniteAdeleRing.lean"}]

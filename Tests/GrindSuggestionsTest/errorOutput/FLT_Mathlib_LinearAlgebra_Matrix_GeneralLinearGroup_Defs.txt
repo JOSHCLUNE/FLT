@@ -1,0 +1,4 @@
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.WARNING: FLT/Mathlib/LinearAlgebra/Matrix/GeneralLinearGroup/Defs.lean produced errors (exit code 143)

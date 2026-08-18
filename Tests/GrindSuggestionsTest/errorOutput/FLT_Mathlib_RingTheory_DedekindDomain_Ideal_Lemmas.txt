@@ -1,0 +1,12 @@
+.
+line 33, col 6:
+rw [h, Ideal.comap_bot_of_injective e e.injective]
+...
+line 46, col 8:
+simp
+...
+line 50, col 8:
+simp
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)

@@ -1,0 +1,21 @@
+...
+line 59, col 20:
+subst h
+shortened proof!
+.
+line 69, col 4:
+rw [smul_add m (a : A) b, a.prop m, b.prop m]
+......
+line 87, col 4:
+exact add_assoc (a : A) b c
+....
+line 92, col 19:
+simp_all [nsmul_eq_smul, AddMonoid.nsmul_succ, smul_add, a.prop]
+.......
+line 106, col 4:
+exact add_comm (a : A) b
+..................
+line 141, col 4:
+ext
+shortened proof!
+.............

@@ -1,0 +1,14 @@
+..
+line 38, col 2:
+exact lt_of_le_of_ne (Valuation.mem_integer_iff _ _ |>.1 ϖ.2) this
+...
+line 43, col 2:
+rw [le_ofAdd_iff (show v ϖ.1 ≠ 0 by simp [h.ne_zero])]
+shortened proof!
+...........
+line 68, col 67:
+simp
+..............(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.......

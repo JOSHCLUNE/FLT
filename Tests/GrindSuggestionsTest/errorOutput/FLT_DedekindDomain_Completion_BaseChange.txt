@@ -1,0 +1,64 @@
+..........................
+line 153, col 68:
+simp
+..................
+line 225, col 2:
+rw [WithVal.valued_toVal]
+.........
+line 282, col 24:
+norm_num
+........
+line 292, col 6:
+apply ne_of_lt
+shortened proof!
+.............
+line 329, col 2:
+let Kv := adicCompletion K v
+shortened proof!
+.
+line 339, col 2:
+let := Extension.finite A K L B v
+shortened proof!
+..........
+line 390, col 8:
+simp
+...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.......................................................(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....................
+line 527, col 4:
+rwa [h]
+............................
+line 629, col 8:
+exact Subring.zero_mem _
+...................(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..
+line 690, col 6:
+rw [mem_completionIdeal_iff, hϖ]
+shortened proof!
+..(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 698, col 4:
+simp at hcomap
+.......
+line 715, col 47:
+simp_rw [← w.2]
+shortened proof!
+.....
+line 726, col 8:
+rw [Ideal.inertiaDeg'_algebra_tower v.asIdeal w.1.asIdeal (w.1.completionIdeal L),
+          inertiaDeg_asIdeal_completionIdeal, mul_one]
+.....................

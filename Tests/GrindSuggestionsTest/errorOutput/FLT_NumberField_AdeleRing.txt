@@ -1,0 +1,58 @@
+......................................................
+line 412, col 4:
+rw [← hz]
+shortened proof!
+....
+line 420, col 2:
+rw [Int.negSucc_eq] at h1
+shortened proof!
+...........................................................
+line 492, col 2:
+exact hy i
+........
+line 505, col 43:
+ext
+shortened proof!
+..
+line 507, col 2:
+ext
+shortened proof!
+.......
+line 561, col 2:
+intro v
+shortened proof!
+........................
+line 606, col 2:
+grind
+...........(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...........................................
+line 713, col 6:
+exact (x v).2
+....
+line 717, col 6:
+exact (x v).2
+...................
+line 740, col 4:
+cases ha
+shortened proof!
+................
+line 770, col 8:
+exact isOpenAdicCompletionIntegers ℚ
+...............
+line 786, col 4:
+rw [map_sub]
+shortened proof!
+.....
+line 838, col 14:
+rfl
+..
+line 840, col 21:
+simp_all
+....
+line 864, col 12:
+rfl
+..
+line 866, col 19:
+simp_all

@@ -1,0 +1,9 @@
+........
+line 59, col 4:
+simpa only [map_add, map_mul, aeval_C, aeval_X] using hab
+......
+line 64, col 53:
+lia
+.......
+line 76, col 2:
+lia

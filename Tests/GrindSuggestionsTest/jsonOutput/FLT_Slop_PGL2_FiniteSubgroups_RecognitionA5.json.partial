@@ -1,0 +1,42 @@
+[{"tacticSucceeded": true,
+  "startLine": 55,
+  "startCol": 65,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5.0.Dickson.factorization_60_2",
+  "oldText": "norm_num",
+  "message": "",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 55,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5.0.Dickson.factorization_60_2",
+  "oldText":
+  "exact Nat.factorization_eq_two (m := 15) rfl Nat.prime_two (by norm_num)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 58,
+  "startCol": 67,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5.0.Dickson.factorization_60_3",
+  "oldText": "norm_num",
+  "message": "",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 58,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "_private.FLT.Slop.PGL2.FiniteSubgroups.RecognitionA5.0.Dickson.factorization_60_3",
+  "oldText":
+  "exact Nat.factorization_eq_one (m := 20) rfl Nat.prime_three (by norm_num)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean"}]

@@ -1,0 +1,35 @@
+..
+line 28, col 4:
+grind
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 30, col 42:
+grind
+.
+line 32, col 4:
+refine Or.inr (Or.inr ⟨p, hp, ?_, hdvd⟩)
+shortened proof!
+...
+line 47, col 4:
+apply FermatLastTheoremFor.mono h3
+shortened proof!
+.
+line 51, col 4:
+apply FermatLastTheoremFor.mono h4
+shortened proof!
+.
+line 55, col 4:
+apply FermatLastTheoremFor.mono hpn
+shortened proof!
+...
+line 65, col 31:
+simp
+.
+line 65, col 41:
+simp
+.
+line 65, col 51:
+simp
+.

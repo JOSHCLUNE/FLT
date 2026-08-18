@@ -1,0 +1,26 @@
+...........
+line 123, col 4:
+ext
+shortened proof!
+..............................
+line 189, col 6:
+apply Set.bijOn_smul _ _ _ huU
+...
+line 192, col 6:
+exact Function.Injective.injOn Function.injective_id
+..........
+line 229, col 12:
+simp
+...............
+line 255, col 4:
+simp
+....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.........
+line 278, col 30:
+rwa [hs₁.finite_iff_finite]
+..
+line 279, col 30:
+rwa [hs₂.finite_iff_finite]
+..........

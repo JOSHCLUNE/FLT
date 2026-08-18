@@ -1,0 +1,18 @@
+.............
+line 71, col 40:
+exact Valued.isOpen_integer (v.adicCompletion K)
+.
+line 81, col 7:
+exact Valued.isOpen_integer _
+....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 123, col 2:
+have := ((TensorProduct.quotTensorEquivQuotSMul M I).trans
+    (Submodule.quotEquivOfEq _ _ H)).subsingleton
+shortened proof!
+..(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..WARNING: FLT/HaarMeasure/FiniteAdeleRing.lean produced errors (exit code 143)

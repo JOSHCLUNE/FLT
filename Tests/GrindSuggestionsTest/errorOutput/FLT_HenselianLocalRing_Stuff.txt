@@ -1,0 +1,6 @@
+.................
+line 63, col 20:
+simp [I.over_def J]
+.
+line 74, col 2:
+simpa [IsRadical, SetLike.le_def, Ideal.mem_radical_iff] using fun _ _ ↦ eq_zero_of_pow_eq_zero

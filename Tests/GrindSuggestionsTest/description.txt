@@ -1,0 +1,17 @@
+Ran `grind +suggestions` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Note: import Hammer was commented out of each file so Mathlib's default premise selection was used instead of LeanPremise
+Final output was: "Done: 260 files processed, 32 with errors."
+
+tallySummaries.sh output:
+Warning: summaryOutput/FLT_Mathlib_LinearAlgebra_Matrix_GeneralLinearGroup_Defs.txt has no results tally (timed out?); counting as 0
+Warning: summaryOutput/FLT_Mathlib_MeasureTheory_Group_ModularCharacter.txt has no results tally (timed out?); counting as 0
+Warning: summaryOutput/FLT_Mathlib_Topology_Algebra_RestrictedProduct_Equiv.txt has no results tally (timed out?); counting as 0
+Warning: summaryOutput/FLT_Mathlib_Topology_Algebra_RestrictedProduct_TopologicalSpace.txt has no results tally (timed out?); counting as 0
+Warning: summaryOutput/FLT_NumberField_DiscriminantBounds.txt has no results tally (timed out?); counting as 0
+Warning: summaryOutput/FLT_Patching_Ultraproduct.txt has no results tally (timed out?); counting as 0
+Total number of results: 12776
+Total number of successes: 1758
+Time taken: 158321s
+
+~13.8% success rate
+~44 hours

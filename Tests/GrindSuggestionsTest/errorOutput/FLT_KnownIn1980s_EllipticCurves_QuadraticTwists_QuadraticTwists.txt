@@ -1,0 +1,99 @@
+..
+line 197, col 2:
+ring
+..
+line 201, col 2:
+ring
+..
+line 205, col 2:
+ring
+..
+line 208, col 36:
+ring
+..
+line 211, col 36:
+ring
+..
+line 214, col 36:
+ring
+._..
+line 235, col 2:
+ring
+..
+line 250, col 2:
+exact (isUnit_iff_ne_zero.mpr (pow_ne_zero 6 hD)).mul E.isUnit_Δ
+..
+line 255, col 8:
+rw [Δ_quadraticTwistOf, h0]
+shortened proof!
+......__...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+__...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+..........(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....__.__................(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.__....................
+line 510, col 4:
+rw [hψ, baseChange_smul_baseChange, hDK]
+...............
+line 526, col 6:
+rw [hcase]
+shortened proof!
+.
+line 527, col 6:
+rw [hcase]
+shortened proof!
+...
+line 532, col 73:
+rw [hamap, hcoc]
+.
+line 535, col 43:
+rw [haC]
+.
+line 538, col 2:
+have : (E.baseChange L).negVariableChange * C₁ = C₁ := mul_left_cancel hchain
+shortened proof!
+..................
+line 578, col 4:
+exact ⟨ρK, smul_eq_of_baseChange_smul_eq L ρK (by rw [hρK]; exact hρ)⟩
+.........
+line 590, col 6:
+have hnn : (E.baseChange L).negVariableChange
+          * ((E.baseChange L).negVariableChange * ρ) = ρ := by
+        rw [← mul_assoc, (E.baseChange L).negVariableChange_mul_self, one_mul]
+shortened proof!
+...
+line 596, col 45:
+rw [hχK]
+shortened proof!
+..........................
+line 686, col 4:
+refine Affine.Point.some_eq_some (E.baseChange N) ?_ ?_
+shortened proof!
+..........
+line 715, col 10:
+ring
+..
+line 717, col 4:
+simp [← Affine.Point.zero_def]
+...
+line 721, col 6:
+simp only [map_add, map_mul, map_pow, hu, hr]
+shortened proof!
+..
+line 724, col 6:
+ring
+......
+line 751, col 4:
+exact E.quadraticTwistPointEquiv_map_of_not_fixed L M hσ P
+.......
+line 779, col 4:
+have hc := E.quadraticTwistPointEquiv_conj L hσ (Affine.Point.baseChange K L Q)
+shortened proof!
+.......

@@ -1,0 +1,16 @@
+.....
+line 52, col 2:
+apply of_nonunits_add
+shortened proof!
+..
+line 117, col 2:
+exact ⟨fun ⟨H⟩ ↦ ⟨H⟩, fun ⟨H⟩ ↦ ⟨H⟩⟩
+........
+line 227, col 73:
+infer_instance
+............
+line 264, col 4:
+exact IsResidueAlgebra.preimage_spec _ _
+.....
+line 271, col 2:
+simp [to_residueField_apply]

@@ -1,0 +1,30 @@
+.
+line 67, col 2:
+simp_all [RingHom.ext_iff, ComplexEmbedding.isReal_iff]
+.
+line 72, col 2:
+simp_all only [← hg, RingHom.ext_iff, RingHom.coe_comp, Function.comp_apply, not_forall,
+    ne_eq]
+shortened proof!
+.
+line 117, col 2:
+simp only [IsUnmixedExtension, not_and, not_not] at h
+shortened proof!
+.
+line 134, col 56:
+aesop
+.
+line 166, col 2:
+rw [isComplex_iff, ComplexEmbedding.isReal_iff, RingHom.ext_iff, not_forall] at hv ⊢
+shortened proof!
+.
+line 176, col 2:
+simp_all only [← not_isComplex_iff_isReal]
+shortened proof!
+...
+line 186, col 4:
+convert Or.inl <| hl ▸ congrArg InfinitePlace.embedding w.mk_embedding
+.
+line 188, col 4:
+convert! Or.inr <| hr ▸ congrArg InfinitePlace.embedding w.mk_embedding
+...

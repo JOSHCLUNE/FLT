@@ -1,0 +1,28 @@
+....
+line 38, col 42:
+simp
+..
+line 39, col 49:
+simp
+..............
+line 71, col 43:
+simp
+..
+line 72, col 49:
+simp_all
+....
+line 75, col 43:
+simp
+..
+line 76, col 49:
+simp_all
+.._...
+line 81, col 2:
+simpa [← TensorProduct.map_comp, ← LinearMap.comp_apply] using hxST
+..
+line 100, col 2:
+simp_all [Subalgebra.tensorProduct_inf_eq_range_map]
+..
+line 109, col 4:
+simpa [← Subalgebra.center_tensorProduct] using! hx
+........

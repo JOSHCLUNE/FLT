@@ -1,0 +1,51 @@
+............................
+line 117, col 4:
+exact LinearMap.mem_range_self _ c
+...........
+line 130, col 6:
+rw [Fintype.range_linearCombination R w]
+shortened proof!
+.......
+line 136, col 39:
+rw [Submodule.liftQ_apply]
+shortened proof!
+.....
+line 159, col 4:
+rw [hq, span_pow_eq_span_monomial, ← Ideal.submodule_span_eq]
+.....(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 167, col 4:
+have h := monomial_mem s a
+shortened proof!
+..................
+line 198, col 75:
+ring
+.
+line 200, col 53:
+omega
+.....
+line 212, col 23:
+push_cast
+shortened proof!
+...
+line 217, col 12:
+push_cast
+shortened proof!
+...
+line 221, col 2:
+exact key n
+...
+line 230, col 45:
+rw [← Ideal.submodule_span_eq, hspan]
+..........
+line 241, col 8:
+rfl
+.
+line 242, col 6:
+simp [h0]
+.....
+line 249, col 35:
+omega
+...........

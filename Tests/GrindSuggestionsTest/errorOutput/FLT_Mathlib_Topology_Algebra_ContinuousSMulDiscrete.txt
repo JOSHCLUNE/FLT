@@ -1,0 +1,7 @@
+.......
+line 47, col 2:
+rwa [← continuousSMulDiscrete_iff]
+.
+line 51, col 2:
+rwa [continuousSMulDiscrete_iff]
+......

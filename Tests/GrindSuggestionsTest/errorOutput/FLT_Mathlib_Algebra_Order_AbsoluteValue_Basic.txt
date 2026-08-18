@@ -1,0 +1,32 @@
+.
+line 30, col 2:
+rwa [IsAbsoluteValue.abv_inv v, _root_.inv_pos]
+.
+line 34, col 15:
+linarith [map_zero v ▸ hx ▸ hv]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 40, col 2:
+refine ⟨x⁻¹, ?_, ?_⟩
+shortened proof!
+...(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 66, col 14:
+rw [← hl]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 67, col 55:
+linarith
+.
+line 76, col 2:
+rwa [AbsoluteValue.pos_iff] at hv ⊢
+.
+line 82, col 30:
+rw [map_one, map_pow]
+.

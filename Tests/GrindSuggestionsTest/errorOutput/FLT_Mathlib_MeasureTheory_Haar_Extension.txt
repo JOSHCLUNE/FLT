@@ -1,0 +1,8 @@
+..
+line 60, col 2:
+exact H.inducedMeasure_lt_of_injOn μA μC hU h
+......
+line 74, col 4:
+apply (h Subgroup.isClosed_of_discrete).not_injOn_of_inducedMeasure_gt haar haar U hU
+shortened proof!
+....

@@ -1,0 +1,9 @@
+[{"tacticSucceeded": true,
+  "startLine": 22,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Fin.pairwise_forall_two",
+  "oldText": "simp [Function.Injective, Fin.forall_fin_two]",
+  "message": "",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Data/Fin/Basic.lean"}]

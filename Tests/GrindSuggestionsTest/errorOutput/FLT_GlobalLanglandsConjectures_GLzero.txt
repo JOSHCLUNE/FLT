@@ -1,0 +1,29 @@
+..
+line 67, col 8:
+rw [IsLocallyConstant]
+shortened proof!
+.
+line 70, col 19:
+simp [contMDiff_const]
+.
+line 72, col 22:
+simp
+.
+line 73, col 42:
+simp
+..
+line 80, col 23:
+simp
+.
+line 81, col 23:
+simp
+.....
+line 87, col 27:
+aesop
+.
+line 88, col 29:
+simp
+.......
+line 104, col 4:
+rw [h]
+..

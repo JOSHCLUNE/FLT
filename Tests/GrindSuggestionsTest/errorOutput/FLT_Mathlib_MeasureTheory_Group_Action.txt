@@ -1,0 +1,28 @@
+...
+line 34, col 22:
+fun_prop
+._....
+line 39, col 8:
+rintro ⟨y, hy, rfl⟩
+shortened proof!
+......
+line 45, col 8:
+exact hy
+.
+line 46, col 4:
+rw [this, ← map_apply (by fun_prop), IsMulLeftInvariant.map_mul_left_eq_self]
+shortened proof!
+...._....
+line 62, col 8:
+rintro ⟨y, hy, rfl⟩
+shortened proof!
+......
+line 68, col 8:
+exact hy
+..
+line 70, col 4:
+exact hφ.measurableSet_image.mpr hs
+..
+line 87, col 46:
+measurability
+...........

@@ -1,0 +1,736 @@
+......PANIC at Lean.Meta.Grind.Arith.Cutsat.checkDvds Lean.Meta.Tactic.Grind.Arith.Cutsat.Inv:70:6: assertion violation: c.d > 1
+    
+backtrace:
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x939f205) [0x5ecfce3aa205]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x9396927) [0x5ecfce3a1927]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_panic_fn_borrowed+0x2b) [0x5ecfce3a1a0b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(panic spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x3b) [0x5ecfcc6c85db]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Array.forIn'Unsafe.loop [private] spec at Array.forIn'Unsafe.loop spec at Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x3d4) [0x5ecfcc6c8dd4]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0xa1) [0x5ecfcc6ca6e1]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Array.forIn'Unsafe.loop [private] spec at Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x130) [0x5ecfcc6cacf0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x143) [0x5ecfcc6ca783]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0xd3) [0x5ecfcc6cd473]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x2a9) [0x5ecfcc6cdf69]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.checkInvariants+0xce) [0x5ecfcc6e0a3e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.reorderVars+0x30c) [0x5ecfcc6b9e2c]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.searchLiaAssignment [private]+0xb7) [0x5ecfcc6a0307]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.searchAssignment+0x4c2) [0x5ecfcc6a1642]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [λ]+0x138) [0x5ecfcc6a27d8]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [boxed, λ]+0x3f) [0x5ecfcc6a299f]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xf02) [0x5ecfce3ae1a2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [λ, arity↓]+0xb) [0x5ecfc845cecb]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x5ecfce3addf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x5ecfce3addf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_profileit+0x83) [0x5ecfc83579a3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [arity↓]+0x82) [0x5ecfc845d082]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [boxed]+0x6a) [0x5ecfcc6a2c9a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x28d) [0x5ecfce3baa6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.terminalAction [λ]+0x62) [0x5ecfcc0292e2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/10>+0x64c) [0x5ecfce3ba14c]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x6f) [0x5ecfcc028adf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [boxed, λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x34) [0x5ecfcc028b44]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/5>+0xb93) [0x5ecfce3b4723]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.withMVarContextImp [arity↓, private]+0x162) [0x5ecfc86fa322]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0xf4) [0x5ecfcc028d04]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.terminalAction+0xaf) [0x5ecfcc02957f]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.lia [boxed]+0x57) [0x5ecfccf61047]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [λ]+0xf7) [0x5ecfcbafb157]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed, λ]+0x44) [0x5ecfcbafb234]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.solverAction+0x657) [0x5ecfcc02fc67]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ring [boxed]+0x57) [0x5ecfccee9f07]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [private]+0x264) [0x5ecfcbafbe74]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [boxed, private]+0x5b) [0x5ecfcbafbfab]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x5ecfcc02113b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkAction [boxed, λ]+0x43) [0x5ecfcc016e73]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.orElse+0x176) [0x5ecfcc021bb6]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.mkFinish [boxed, λ]+0x43) [0x5ecfcc034083]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x5ecfcc02217e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x668) [0x5ecfce3bae48]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext+0xe63) [0x5ecfcc015ca3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext [boxed]+0x39) [0x5ecfcc016269]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertAll [arity↓]+0x8e) [0x5ecfcc0164be]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.splitNext [boxed, λ]+0x4d) [0x5ecfcc095e6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x668) [0x5ecfce3bae48]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.group [arity↓]+0xee) [0x5ecfcc02631e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0x4d) [0x5ecfcc012aed]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x5ecfcc010bda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x5ecfcc012894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x5ecfce3bc6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x5ecfcc02217e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x5ecfcc010bda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x5ecfcc012894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x5ecfce3bc6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed]+0x59) [0x5ecfcc023029]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x5ecfcc02113b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0xcd) [0x5ecfcc012e6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ungroup [arity↓]+0xed) [0x5ecfcc026e3d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ungroup [boxed]+0x4d) [0x5ecfcc02799d]
+..PANIC at Lean.Meta.Grind.Arith.Cutsat.checkDvds Lean.Meta.Tactic.Grind.Arith.Cutsat.Inv:70:6: assertion violation: c.d > 1
+    
+backtrace:
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x939f205) [0x5ecfce3aa205]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(+0x9396927) [0x5ecfce3a1927]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_panic_fn_borrowed+0x2b) [0x5ecfce3a1a0b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(panic spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x3b) [0x5ecfcc6c85db]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Array.forIn'Unsafe.loop [private] spec at Array.forIn'Unsafe.loop spec at Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x3d4) [0x5ecfcc6c8dd4]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0xa1) [0x5ecfcc6ca6e1]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Array.forIn'Unsafe.loop [private] spec at Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x130) [0x5ecfcc6cacf0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forInAux spec at Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x143) [0x5ecfcc6ca783]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.PersistentArray.forIn spec at Lean.Meta.Grind.Arith.Cutsat.checkDvds+0xd3) [0x5ecfcc6cd473]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.checkDvds+0x2a9) [0x5ecfcc6cdf69]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.checkInvariants+0xce) [0x5ecfcc6e0a3e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.reorderVars+0x30c) [0x5ecfcc6b9e2c]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.searchLiaAssignment [private]+0xb7) [0x5ecfcc6a0307]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.searchAssignment+0x4c2) [0x5ecfcc6a1642]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [λ]+0x138) [0x5ecfcc6a27d8]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [boxed, λ]+0x3f) [0x5ecfcc6a299f]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xf02) [0x5ecfce3ae1a2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [λ, arity↓]+0xb) [0x5ecfc845cecb]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x5ecfce3addf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/1>+0xb53) [0x5ecfce3addf3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(lean_profileit+0x83) [0x5ecfc83579a3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.profileitIOUnsafe [arity↓]+0x82) [0x5ecfc845d082]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Arith.Cutsat.check [boxed]+0x6a) [0x5ecfcc6a2c9a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x28d) [0x5ecfce3baa6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.terminalAction [λ]+0x62) [0x5ecfcc0292e2]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/10>+0x64c) [0x5ecfce3ba14c]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x6f) [0x5ecfcc028adf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [boxed, λ, arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0x34) [0x5ecfcc028b44]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/5>+0xb93) [0x5ecfce3b4723]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.withMVarContextImp [arity↓, private]+0x162) [0x5ecfc86fa322]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.MVarId.withContext [arity↓] spec at Lean.Meta.Grind.Action.terminalAction+0xf4) [0x5ecfcc028d04]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.terminalAction+0xaf) [0x5ecfcc02957f]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.lia [boxed]+0x57) [0x5ecfccf61047]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [λ]+0xf7) [0x5ecfcbafb157]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed, λ]+0x44) [0x5ecfcbafb234]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.solverAction+0x657) [0x5ecfcc02fc67]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ring [boxed]+0x57) [0x5ecfccee9f07]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso+0x1b6) [0x5ecfcbafb946]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andAlso [boxed]+0x43) [0x5ecfcbafba43]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [private]+0x264) [0x5ecfcbafbe74]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkActionCore.go [boxed, private]+0x5b) [0x5ecfcbafbfab]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x5ecfcc02113b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Solvers.mkAction [boxed, λ]+0x43) [0x5ecfcc016e73]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.orElse+0x176) [0x5ecfcc021bb6]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.mkFinish [boxed, λ]+0x43) [0x5ecfcc034083]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x65d) [0x5ecfce3bc58d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x5ecfcc02217e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x668) [0x5ecfce3bae48]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext+0xe63) [0x5ecfcc015ca3]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertNext [boxed]+0x39) [0x5ecfcc016269]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.assertAll [arity↓]+0x8e) [0x5ecfcc0164be]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.splitNext [boxed, λ]+0x4d) [0x5ecfcc095e6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x668) [0x5ecfce3bae48]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.group [arity↓]+0xee) [0x5ecfcc02631e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0x4d) [0x5ecfcc012aed]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x2e4) [0x5ecfce3bc214]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x5ecfcc010bda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x5ecfcc012894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x5ecfce3bc6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed, λ, arity↓]+0x4e) [0x5ecfcc02217e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro+0x35a) [0x5ecfcc010bda]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intro [boxed]+0x44) [0x5ecfcc012894]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x790) [0x5ecfce3bc6c0]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [arity↓]+0x1de) [0x5ecfcc02257e]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.loop [boxed]+0x59) [0x5ecfcc023029]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen+0x15b) [0x5ecfcc02113b]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.intros [boxed, λ]+0xcd) [0x5ecfcc012e6d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/13>+0x5e1) [0x5ecfce3bc511]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [λ]+0xfa) [0x5ecfcc020d4a]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.andThen [boxed, λ]+0x39) [0x5ecfcc020e19]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(<apply/11>+0x5ef) [0x5ecfce3badcf]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ungroup [arity↓]+0xed) [0x5ecfcc026e3d]
+/data/tryAtEachStep/.lake/build/bin/tryAtEachStep(Lean.Meta.Grind.Action.ungroup [boxed]+0x4d) [0x5ecfcc02799d]
+...
+line 110, col 129:
+norm_num
+...
+line 111, col 138:
+exact hy
+........
+line 120, col 54:
+rw [← hc, h, zero_pow (by norm_num)]
+.....................
+line 140, col 52:
+rw [← hc, h, zero_pow (by norm_num)]
+..........(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 153, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 154, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 155, col 82:
+rw [mul_zero, add_zero, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 156, col 82:
+rw [mul_zero, zero_add, mul_comm c⁻¹, mul_assoc, inv_mul_cancel₀ hc_ne, mul_one]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 164, col 6:
+rw [mul_zero, add_zero, zero_mul, add_zero, mul_comm]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 167, col 6:
+rw [mul_zero, zero_add, zero_mul, add_zero, mul_comm]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 170, col 6:
+rw [mul_zero, add_zero, zero_mul, zero_add, mul_comm]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 173, col 6:
+rw [mul_zero, zero_add, zero_mul, zero_add, mul_comm]
+....................
+line 212, col 6:
+intro x hx
+shortened proof!
+.....
+line 269, col 4:
+change (f x).val = (f y).val
+shortened proof!
+......................
+line 301, col 6:
+exact zero_ne_one h_mul
+.........
+line 317, col 4:
+rw [Projectivization.mk_eq_mk_iff] at h
+shortened proof!
+.....
+line 324, col 4:
+rw [Projectivization.mk_eq_mk_iff]
+shortened proof!
+........
+line 342, col 4:
+ring
+..
+line 344, col 100:
+change (g.val - z • 1).det = 0 ↔ z^2 - T * z + D = 0
+shortened proof!
+.......
+line 352, col 8:
+change (1 : K p) - T * 0 + 0 = 1
+shortened proof!
+...
+line 355, col 80:
+norm_num
+.
+line 356, col 6:
+exact one_ne_zero (h1.symm.trans h2)
+......
+line 362, col 6:
+rw [← h_eval]
+shortened proof!
+...
+line 368, col 4:
+change z^2 - T * z + D = 0 ↔ z = x ∨ z = y
+shortened proof!
+.
+line 375, col 2:
+have hxy : x = y ↔ (g.val.trace)^2 = 4 * g.val.det := by
+    change x = y ↔ T^2 = 4 * D
+    constructor <;> intro h
+    · apply sub_eq_zero.mp
+      change x = -x + T at h
+      calc T^2 - 4 * D = ((-x + T) - x)^2 - 4 * (x^2 - T * x + D) := by ring
+        _ = (x - x)^2 - 4 * 0 := by rw [hx, ← h]
+        _ = 0 := by ring
+    · change x = -x + T
+      have h_sq : (2 * x - T)^2 = 0 := by
+        calc (2 * x - T)^2 = 4 * (x^2 - T * x + D) + (T^2 - 4 * D) := by ring
+          _ = 4 * 0 + 0 := by rw [hx, sub_eq_zero.mpr h]
+          _ = 0 := by ring
+      calc x = x - (2 * x - T) := by rw [sq_eq_zero_iff.mp h_sq]; ring
+        _ = -x + T := by ring
+shortened proof!
+.....
+line 404, col 37:
+rw [ha]
+..
+line 406, col 28:
+rw [hwy]
+..
+line 408, col 22:
+rw [ha]
+.............
+line 433, col 72:
+ring
+.
+line 435, col 88:
+rw [← hvx, ← hwy]
+.................
+line 449, col 6:
+exfalso
+shortened proof!
+........
+line 463, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨c, hc.symm⟩
+...
+line 466, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨c, hc.symm⟩
+...
+line 470, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨x, hvx.symm⟩
+..
+line 472, col 6:
+exact (Projectivization.mk_eq_mk_iff' (K p) _ _ _ _).mpr ⟨y, hwy.symm⟩
+............
+line 489, col 2:
+exact h_contra.elim h_ne hv0
+......
+line 501, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+shortened proof!
+...
+line 504, col 78:
+norm_num
+.
+line 505, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+......
+line 512, col 4:
+rw [← h_eval]
+shortened proof!
+...
+line 518, col 4:
+have ht : g.val.trace = 2 * x := by
+      calc g.val.trace = (g.val.trace - x) + x := by rw [sub_add_cancel]
+        _ = y + x := rfl
+        _ = x + x := by rw [h_eq]
+        _ = 2 * x := by ring
+shortened proof!
+..
+line 531, col 4:
+calc y^2 - g.val.trace * y + g.val.det
+      _ = (g.val.trace - x)^2 - g.val.trace * (g.val.trace - x) + g.val.det := rfl
+      _ = x^2 - g.val.trace * x + g.val.det := by ring
+      _ = 0 := hx
+....
+line 539, col 4:
+ring
+.
+line 541, col 2:
+exact ncard_fixedPoints_eq_two_of_ne_eigenvalues p g x y h_ne (by rw [expand, hx]) (by rw [expand, hy])
+..
+line 548, col 4:
+rw [card_eigenvalues, if_pos h_discr]
+.....
+line 553, col 4:
+rw [hl]
+....
+line 558, col 4:
+exact hv
+.....
+line 565, col 4:
+exact hv
+........
+line 573, col 6:
+omega
+.....................
+line 586, col 4:
+exact hg ⟨lambda, sub_eq_zero.mp hA_zero⟩
+.....
+line 593, col 4:
+omega
+.........
+line 603, col 4:
+exact ⟨c, hc.symm⟩
+....................
+line 624, col 6:
+exact P.rep_nonzero hk
+...............
+line 643, col 6:
+change (1 : K p) - g.val.trace * 0 + 0 = 1
+shortened proof!
+...
+line 645, col 106:
+norm_num
+.
+line 646, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+......
+line 653, col 4:
+rw [← h_eval]
+shortened proof!
+...
+line 658, col 8:
+ring
+.
+line 658, col 17:
+linear_combination -hlambda1
+..
+line 661, col 4:
+calc (g.val.trace)^2 = (2 * lambda1)^2 := by rw [← hlambda2.1, h]; ring
+      _ = 4 * g.val.det := by rw [← hlambda2.2, h]; ring
+....
+line 667, col 4:
+ring
+..
+line 670, col 42:
+rw [expand lambda1, hlambda1]
+.......
+line 680, col 6:
+have hlambda2_eq_zero : lambda2^2 - g.val.trace * lambda2 + g.val.det = 0 := by
+        calc lambda2^2 - g.val.trace * lambda2 + g.val.det = (g.val.trace - lambda1)^2 - g.val.trace * (g.val.trace - lambda1) + g.val.det := rfl
+          _ = lambda1^2 - g.val.trace * lambda1 + g.val.det := by ring
+          _ = 0 := hlambda1
+shortened proof!
+..............
+line 702, col 8:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_neg (by norm_num : (1 : Fin 2) ≠ 0), if_pos rfl]
+.
+line 703, col 6:
+rw [h_det_fin] at h_lin_indep
+shortened proof!
+._.......
+line 713, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0), h, h', mul_zero, mul_zero, add_zero]
+....
+line 718, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+...............
+line 728, col 13:
+calc v2 0 * v1 1 = -(v1 0 * v2 1 - v2 0 * v1 1) + v1 0 * v2 1 := by ring
+                                     _ = -0 + 0 * v2 1 := by rw [h_det, h]
+                                     _ = 0 := by ring
+.......
+line 735, col 10:
+calc v1 0 * v2 1
+              = (v1 0 * v2 1 - v2 0 * v1 1) + v2 0 * v1 1 := by
+                ring
+            _ = 0 + 0 * v1 1 := by rw [h_det, h']
+            _ = 0 := by ring
+.......
+line 747, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+....
+line 753, col 10:
+rw [if_pos rfl, if_neg (by norm_num : (1 : Fin 2) ≠ 0)]
+shortened proof!
+..
+line 756, col 15:
+intro c0
+shortened proof!
+.......
+line 764, col 6:
+ring
+................
+line 782, col 86:
+ring
+.....
+line 788, col 86:
+ring
+....
+line 791, col 44:
+rw [h_diag]
+......
+line 798, col 37:
+rw [mul_one]
+..
+line 800, col 38:
+rw [← mul_assoc (P * Y)]
+.
+line 801, col 26:
+rw [← hP]
+.
+line 802, col 6:
+rw [h_eq]
+.........
+line 811, col 79:
+rw [← hlambda2.2, hc, mul_zero]
+........
+line 819, col 10:
+ring
+.
+line 820, col 8:
+rw [h_det] at hE
+shortened proof!
+..........
+line 831, col 10:
+ring
+.....
+line 836, col 10:
+ring
+.
+line 837, col 8:
+rw [h_left, h_right] at hE
+shortened proof!
+...............
+line 853, col 8:
+ring
+....
+line 858, col 8:
+rw [hl_eq]
+shortened proof!
+....
+line 863, col 8:
+rw [hl_eq]
+shortened proof!
+....
+line 868, col 8:
+ring
+.........
+line 879, col 6:
+by_contra h_k0
+shortened proof!
+.........
+line 898, col 69:
+norm_num
+....
+line 903, col 6:
+calc (2 * 2 : K p) = 4 := by ring
+        _ = 0 := h4
+....
+line 909, col 4:
+exact h_discr
+..
+line 912, col 4:
+calc 2 * eig = 2 * (g.val.trace / 2) := rfl
+      _ = 2 * (g.val.trace * (2 : K p)⁻¹) := by rw [div_eq_mul_inv]
+      _ = g.val.trace * (2 * (2 : K p)⁻¹) := by ring
+      _ = g.val.trace * 1 := by rw [mul_inv_cancel₀ h_two_ne]
+      _ = g.val 0 0 + g.val 1 1 := by rw [mul_one, Matrix.trace_fin_two]
+...
+line 920, col 4:
+calc 2 * (g.val i j - eig * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j) = 2 * g.val i j - (2 * eig) * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j := by ring
+      _ = 2 * g.val i j - (g.val 0 0 + g.val 1 1) * (1 : Matrix (Fin 2) (Fin 2) (K p)) i j := by rw [h2_eig]
+.......
+line 930, col 74:
+ring
+.
+line 935, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 0]
+.
+line 938, col 100:
+ring
+.
+line 939, col 126:
+rw [h_d]
+.
+line 940, col 22:
+ring
+..
+line 943, col 74:
+ring
+.
+line 948, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 1]
+.
+line 951, col 22:
+ring
+..
+line 954, col 74:
+ring
+.
+line 959, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 0, h_N_entry 1 1]
+.
+line 962, col 22:
+ring
+..
+line 965, col 74:
+ring
+.
+line 970, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 1, h_N_entry 1 1]
+.
+line 973, col 100:
+ring
+.
+line 974, col 126:
+rw [h_d]
+.
+line 975, col 22:
+ring
+.
+line 976, col 4:
+cases mul_eq_zero.mp hX with
+    | inl h4 => exact absurd h4 h_four_ne
+    | inr hX_eq => exact hX_eq
+...
+line 982, col 6:
+ext i j
+shortened proof!
+..........
+line 993, col 47:
+norm_num
+..
+line 995, col 47:
+norm_num
+..........
+line 1004, col 6:
+simp only [zero_mul, zero_add, one_mul, mul_one] at h
+shortened proof!
+..
+line 1010, col 6:
+have h := congr_fun (congr_fun hE1 0) 1
+shortened proof!
+......
+line 1024, col 6:
+simp only [one_mul, zero_mul, add_zero, mul_one] at h
+shortened proof!
+....
+line 1032, col 43:
+ring
+..
+line 1036, col 32:
+ring
+..
+line 1040, col 32:
+ring
+..
+line 1044, col 32:
+ring
+..................
+line 1071, col 2:
+by_cases h_discr : (g.val.trace)^2 = 4 * g.val.det
+shortened proof!
+............(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+........(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 1128, col 8:
+exact hz_val_order.symm
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+...........
+line 1160, col 4:
+exact orderOf_eq_prime_of_discrim_zero p g' h_non_scalar h_discr
+.....
+line 1163, col 83:
+exact ne_of_gt hk
+..(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+....WARNING: FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean produced errors (exit code 143)

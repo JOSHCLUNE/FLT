@@ -1,0 +1,20 @@
+.....
+line 33, col 6:
+congr 2
+shortened proof!
+.........
+line 40, col 35:
+obtain ⟨_, x, rfl⟩ := x
+shortened proof!
+..
+line 42, col 4:
+congr 2
+shortened proof!
+.......
+line 61, col 8:
+symm
+shortened proof!
+..
+line 62, col 44:
+exact ⟨fb * σ xb, by rw [← hb, ← mul_smul]⟩
+...

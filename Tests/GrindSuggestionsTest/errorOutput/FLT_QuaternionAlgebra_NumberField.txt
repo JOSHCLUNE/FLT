@@ -1,0 +1,70 @@
+.....
+line 114, col 2:
+obtain ⟨I, hI⟩ := Ideal.exists_maximal R
+shortened proof!
+............................
+line 246, col 2:
+obtain ⟨x', hx'⟩ := hx
+shortened proof!
+.........__.......
+line 278, col 6:
+apply v_le_one_of_mem_localFullLevel _ hb.1
+...
+line 281, col 6:
+apply v_le_one_of_mem_localFullLevel _ ha.1
+.....
+line 297, col 4:
+grind
+..
+line 300, col 4:
+simp only [le_antisymm_iff]
+shortened proof!
+.................
+line 315, col 25:
+simpa
+....
+line 317, col 25:
+simpa
+...................
+line 391, col 2:
+have := (GL2.localIwahoriLevel.char v ⟨x, hx⟩).ne_zero
+shortened proof!
+.
+line 398, col 2:
+have := (GL2.localIwahoriLevel.char v ⟨x, hx⟩).ne_zero
+shortened proof!
+......._........
+line 452, col 40:
+simp
+.........................
+line 503, col 56:
+simp [h'] at H
+...........
+line 512, col 23:
+simp [adicCompletionIntegers.isUnit_iff_valued_eq_one, H]
+...
+line 514, col 38:
+simp [h'] at H
+...
+line 521, col 2:
+rw [← Subgroup.normal_subgroupOf_iff_le_normalizer (GL2.localPTameLevel_le_localIwahoriLevel ..)]
+shortened proof!
+.
+line 558, col 17:
+simp
+............
+line 605, col 2:
+simp [H]
+...
+line 612, col 4:
+simp [ha]
+.
+line 613, col 4:
+simp [h]
+.......
+line 626, col 4:
+exact fun v ↦ M2.units_localFullLevel v ▸ GL2.localFullLevel.isOpen v
+......
+line 634, col 4:
+exact fun v ↦ M2.units_localFullLevel v ▸ GL2.localFullLevel.isOpen v
+.

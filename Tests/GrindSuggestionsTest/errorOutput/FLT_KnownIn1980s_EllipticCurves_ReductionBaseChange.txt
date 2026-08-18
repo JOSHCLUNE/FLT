@@ -1,0 +1,26 @@
+.
+line 189, col 4:
+by_contra h
+shortened proof!
+.....................
+line 302, col 4:
+exact adicValuation_eq_one_iff.mp hmul
+...
+line 305, col 4:
+exact valuation_algebraMap_eq_one hk
+..
+line 307, col 2:
+exact adicValuation_eq_one_iff.mpr hl
+....
+line 318, col 4:
+exact adicValuation_lt_one_iff.mp hbad
+...
+line 321, col 4:
+exact valuation_algebraMap_lt_one hk
+..
+line 323, col 2:
+exact adicValuation_lt_one_iff.mpr hl
+....(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.

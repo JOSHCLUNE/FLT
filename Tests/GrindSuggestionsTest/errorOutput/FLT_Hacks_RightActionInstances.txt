@@ -1,0 +1,16 @@
+.......
+line 86, col 4:
+induction bs with
+    | zero => simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+      Algebra.TensorProduct.includeRight_apply, mul_zero, zero_mul]
+    | tmul x y =>
+        simp only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+          mul_one, mul_comm]
+    | add x y _ _ =>
+        simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, mul_add, add_mul]
+.................
+line 192, col 2:
+exact Function.leftInverse_iff_comp
+.......

@@ -1,0 +1,9 @@
+[{"tacticSucceeded": true,
+  "startLine": 22,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Int.eq_floor",
+  "oldText": "grind",
+  "message": "",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Data/Real/Archimedean.lean"}]

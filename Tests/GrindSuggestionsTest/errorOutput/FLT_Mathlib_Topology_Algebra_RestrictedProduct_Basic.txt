@@ -1,0 +1,13 @@
+......
+line 133, col 4:
+rw [Set.ext_iff] at h
+shortened proof!
+...............
+line 184, col 6:
+rw [mulSupport_inv]
+shortened proof!
+....
+line 218, col 2:
+ext x i
+shortened proof!
+...WARNING: FLT/Mathlib/Topology/Algebra/RestrictedProduct/Basic.lean produced errors (exit code 143)

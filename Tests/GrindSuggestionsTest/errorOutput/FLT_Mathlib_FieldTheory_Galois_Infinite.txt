@@ -1,0 +1,35 @@
+............_...................................
+line 150, col 76:
+infer_instance
+.......(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 163, col 4:
+exact fun x ↦ ((Algebra.IsIntegral.isIntegral (R := K) x).map f).isAlgebraic
+..............................................
+line 228, col 2:
+exact Subgroup.finiteIndex_of_finite_quotient
+......
+line 238, col 4:
+refine ⟨_, inferInstance, H⟩
+...........
+line 252, col 41:
+simp
+.
+line 253, col 6:
+simpa using this.symm
+..........
+line 265, col 8:
+rw [← H', AlgEquiv.symm_apply_eq, H', ← this, H']
+..
+line 268, col 8:
+dsimp
+shortened proof!
+..
+line 275, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_mul]
+..
+line 279, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_add]
+.........__............

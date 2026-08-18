@@ -1,0 +1,7 @@
+.......(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 81, col 46:
+simpa
+.WARNING: FLT/Mathlib/RingTheory/SimpleRing/TensorProduct.lean produced errors (exit code 143)

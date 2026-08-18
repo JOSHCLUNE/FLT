@@ -1,0 +1,11 @@
+..
+line 49, col 11:
+rw [Completion.norm_coe]
+shortened proof!
+..
+line 59, col 4:
+exact Subtype.surjective_restrict (β := fun v => v.Completion) p |>.denseRange
+.............
+line 131, col 55:
+simpa using mem_placesOver_iff_comap L v
+....................

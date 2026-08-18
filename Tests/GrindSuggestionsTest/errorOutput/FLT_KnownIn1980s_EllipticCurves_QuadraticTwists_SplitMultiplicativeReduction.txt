@@ -1,0 +1,139 @@
+..
+line 91, col 30:
+field_simp
+shortened proof!
+.
+line 92, col 31:
+rw [hw]
+shortened proof!
+..
+line 94, col 4:
+rw [c₄_quadraticTwistOf, map_mul, map_pow]
+shortened proof!
+..
+line 98, col 6:
+rw [c₄_quadraticTwistOf, c₆_quadraticTwistOf]
+shortened proof!
+.
+line 100, col 49:
+rw [map_pow]
+shortened proof!
+...........
+line 146, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hD) (residue_integralModel_c₄_ne_zero E R)
+..........
+line 159, col 2:
+exact { badReduction := hΔval, multiplicativeReduction := hc₄val }
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.
+line 181, col 38:
+simp only [← ResidueField.algebraMap_residue]
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+.(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.(invalid MessageData.lazy, missing context)
+........
+line 230, col 2:
+rw [neg_eq_zero] at hB
+shortened proof!
+.....
+line 253, col 4:
+rw [hκ', hc₄']
+shortened proof!
+.....
+line 259, col 2:
+linear_combination hdisc
+    + (residue R c₄' * residue R t' - residue R (E.integralModel R).a₁ * residue R c₄') * hA
+    - 4 * residue R c₄' * hB
+...
+line 282, col 61:
+rw [← hkey, h0, mul_zero]
+......
+line 289, col 4:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+...
+line 292, col 4:
+rw [show (4 : ResidueField R) = 2 * 2 by norm_num, h2, mul_zero]
+..
+line 294, col 4:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.....
+line 300, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hDmap) hc₄map
+...
+line 304, col 4:
+exact mul_ne_zero (pow_ne_zero 3 hDmap)
+      (by rw [ResidueField.algebraMap_eq]; exact residue_integralModel_c₆_ne_zero E R)
+..
+line 307, col 4:
+rcases mul_eq_zero.mp (show residue R c₄'
+        * (residue R t' + residue R (E.integralModel R).a₁) = 0 by linear_combination hA)
+      with hz | hz
+shortened proof!
+..
+line 318, col 4:
+rw [hDdef, hκ', hc₄']
+shortened proof!
+..
+line 321, col 4:
+rw [c₄_quadraticTwistOf, ← hDdef, hc₄']
+...
+line 325, col 4:
+linear_combination (residue R t') ^ 6 * hB
+      - (residue R t') ^ 6 * residue R n' * residue R c₄' * h2
+...
+line 330, col 2:
+rw [hκW_eq, hWc₄eq, show (0 : ResidueField R) ^ 2 + 0 = 0 from by ring, mul_zero, hκW0,
+    neg_zero, mul_zero]
+....
+line 355, col 63:
+rw [← hkey, h0, mul_zero]
+....
+line 359, col 36:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.
+line 360, col 10:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.....
+line 365, col 4:
+linear_combination
+      (-(residue R (E.integralModel R).c₄ * residue R (E.integralModel R).c₆)) * hkey
+.
+line 367, col 4:
+exact nodePoly_quadraticTwistOf_map_splits_of_residue_of_two_eq_zero E R t' n' h2 hA hB
+...................................
+line 467, col 61:
+rw [← hkey, h0, mul_zero]
+.........

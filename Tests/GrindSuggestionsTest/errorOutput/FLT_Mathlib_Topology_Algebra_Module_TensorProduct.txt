@@ -1,0 +1,10 @@
+......
+line 86, col 6:
+rw [this]
+shortened proof!
+...........
+line 120, col 2:
+apply rTensor'_id_apply
+...
+line 149, col 2:
+apply rTensor'_comp_apply

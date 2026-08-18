@@ -1,0 +1,11 @@
+.....
+line 73, col 57:
+rw [hP_map]
+shortened proof!
+.......................
+line 114, col 12:
+rw [hP_map]
+shortened proof!
+..
+line 118, col 21:
+exact map_comp_mk (algebraMap R K) hpK

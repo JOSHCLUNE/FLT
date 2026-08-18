@@ -1,0 +1,9 @@
+[{"tacticSucceeded": true,
+  "startLine": 24,
+  "startCol": 2,
+  "shortenedStepsCount": 3,
+  "parentName": "Countable.of_module_finite",
+  "oldText": "obtain ⟨n, s, h⟩ := Module.Finite.exists_fin (R := R) (M := M)",
+  "message": "",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/LinearAlgebra/Countable.lean"}]

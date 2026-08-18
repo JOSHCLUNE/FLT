@@ -1,0 +1,12 @@
+[{"tacticSucceeded": true,
+  "startLine": 36,
+  "startCol": 2,
+  "shortenedStepsCount": 8,
+  "parentName":
+  "IsDedekindDomain.HeightOneSpectrum.intValuation_eq_coe_neg_multiplicity",
+  "oldText":
+  "classical\n  have hnb : Ideal.span {a} ≠ ⊥ := by\n    rwa [ne_eq, Ideal.span_singleton_eq_bot]\n  rw [intValuation_if_neg _ hnz, Ideal.count_associates_factors_eq hnb v.isPrime v.ne_bot]\n  nth_rw 1 [← normalize_eq v.asIdeal]\n  congr\n  symm\n  apply multiplicity_eq_of_emultiplicity_eq_some\n  rw [← UniqueFactorizationMonoid.emultiplicity_eq_count_normalizedFactors v.irreducible hnb]",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DedekindDomain/AdicValuation.lean"}]
