@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: William Coram, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.LinearAlgebra.FreeModule.Basic
 public import Mathlib.LinearAlgebra.TensorProduct.Defs

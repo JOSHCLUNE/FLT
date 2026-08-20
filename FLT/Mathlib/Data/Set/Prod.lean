@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Matthew Jasper, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.Data.Set.Operations
 

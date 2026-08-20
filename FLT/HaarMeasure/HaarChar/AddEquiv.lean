@@ -5,6 +5,7 @@ Authors: Kevin Buzzard, James Sundstrom, Ruben Van de Velde, Anatole Dedecker, B
 David Renshaw
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.TopologicalSpace
 public import Mathlib.MeasureTheory.Measure.Haar.MulEquivHaarChar

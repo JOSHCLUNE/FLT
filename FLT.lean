@@ -1,4 +1,5 @@
 module  -- shake: keep-all --deprecated_module: ignore
+import Hammer
 
 public import FLT.Assumptions.KnownIn1980s
 public import FLT.Assumptions.Mazur

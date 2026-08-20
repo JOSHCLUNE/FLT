@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Kevin Buzzard, Matthew Jasper
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Module.Submodule.Defs
 public import Mathlib.Algebra.Ring.Subring.Defs

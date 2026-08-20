@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Andrew Yang, Matthew Jasper
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.RingTheory.DedekindDomain.AdicValuation
 public import FLT.Mathlib.RingTheory.Localization.BaseChange -- removing this breaks a simp proof

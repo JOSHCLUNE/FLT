@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Salvatore Mercuri, Ruben Van de Velde
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.Algebra.Algebra.Hom
 public import FLT.Mathlib.Algebra.Algebra.Tower

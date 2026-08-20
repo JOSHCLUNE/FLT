@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.IsUniformGroup.Basic
 public import FLT.Mathlib.GroupTheory.Index

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, David Loeffler
 -/
 module
+import Hammer
 
 public import Mathlib.MeasureTheory.Measure.Haar.Unique
 public import Mathlib.NumberTheory.Padics.ProperSpace

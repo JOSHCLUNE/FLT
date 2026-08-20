@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Module.Torsion.Basic
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point

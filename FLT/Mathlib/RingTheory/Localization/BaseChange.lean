@@ -6,6 +6,7 @@ Authors: Matthew Jasper
 
 -- *TODO* should these simp lemmas be in mathlib?
 module
+import Hammer
 
 public import Mathlib.RingTheory.Localization.BaseChange
 

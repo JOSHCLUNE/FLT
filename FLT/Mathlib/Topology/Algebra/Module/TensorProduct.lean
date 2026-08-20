@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.LinearAlgebra.TensorProduct.FiniteFree
 public import Mathlib.Topology.Algebra.Module.ModuleTopology

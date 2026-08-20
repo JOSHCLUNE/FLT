@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, William Coram
 -/
 module
+import Hammer
 
 public import FLT.DedekindDomain.FiniteAdeleRing.TensorPi
 public import FLT.HaarMeasure.HaarChar.Ring

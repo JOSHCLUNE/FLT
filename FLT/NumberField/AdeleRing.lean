@@ -5,6 +5,7 @@ Authors: Kevin Buzzard, Salvatore Mercuri, Ruben Van de Velde, Matthew Jasper, B
 Yaël Dillies
 -/
 module
+import Hammer
 
 public import FLT.DedekindDomain.FiniteAdeleRing.BaseChange
 public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.AdeleRing

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Ruben Van de Velde, Kevin Buzzard, Matthew Jasper
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.Valued.ValuationTopology
 

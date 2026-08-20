@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Javier López-Contreras
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.MulAction
 public import Mathlib.Algebra.Module.Submodule.Defs

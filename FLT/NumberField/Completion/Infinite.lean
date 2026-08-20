@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Salvatore Mercuri
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.Algebra.Algebra.Bilinear
 public import FLT.Mathlib.LinearAlgebra.Dimension.Constructions

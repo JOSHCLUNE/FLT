@@ -6,6 +6,7 @@ Authors: Kevin Buzzard
 
 -- if I can get all imports as FLT.Mathlib then I can upstream
 module
+import Hammer
 
 public import FLT.Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 public import Mathlib.NumberTheory.NumberField.AdeleRing

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Claude
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.Aut
 public import FLT.Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point

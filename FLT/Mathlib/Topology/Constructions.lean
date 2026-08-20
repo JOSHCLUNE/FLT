@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Kevin Buzzard, Salvatore Mercuri, Pietro Monticone
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Constructions
 public import FLT.Mathlib.Algebra.Algebra.Pi

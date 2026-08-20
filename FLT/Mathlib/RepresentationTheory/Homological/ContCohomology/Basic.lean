@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Edison Xie
 -/
 module
+import Hammer
 
 public import Mathlib.RepresentationTheory.Homological.ContCohomology.Basic
 public import FLT.Mathlib.Algebra.Category.ModuleCat.Topology.Basic

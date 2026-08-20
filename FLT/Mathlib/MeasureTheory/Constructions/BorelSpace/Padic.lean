@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bryan Wang Peng Jun, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.MeasureTheory.Constructions.BorelSpace.Basic
 public import Mathlib.NumberTheory.Padics.PadicNumbers

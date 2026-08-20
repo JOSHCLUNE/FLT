@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Javier López-Contreras, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import FLT.Deformations.ContinuousRepresentation.IsTopologicalModule
 public import FLT.Deformations.Algebra.InverseLimit.Basic

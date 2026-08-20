@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, William Coram
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.LinearTopology
 public import Mathlib.Topology.Algebra.ValuativeRel.ValuativeTopology

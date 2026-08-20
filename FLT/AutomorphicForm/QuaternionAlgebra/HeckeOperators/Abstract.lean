@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Andrew Yang, Matthew Jasper
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Module.LinearMap.Defs
 public import Mathlib.Algebra.Ring.Action.Submonoid

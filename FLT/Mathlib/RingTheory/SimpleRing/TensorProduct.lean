@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Jujian Zhang, Yunzhou Xie
 -/
 module
+import Hammer
 
 -- All of this is in
 -- https://github.com/leanprover-community/mathlib4/pull/26377/

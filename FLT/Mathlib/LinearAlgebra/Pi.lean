@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Salvatore Mercuri, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Module.Equiv.Defs
 public import Mathlib.Topology.Algebra.RestrictedProduct.Basic

@@ -1,3 +1,4 @@
+import Hammer
 import FLT -- import the project files
 
 /-!

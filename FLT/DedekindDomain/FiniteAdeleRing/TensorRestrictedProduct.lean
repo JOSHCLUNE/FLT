@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Matthew Jasper
 -/
 module
+import Hammer
 
 public import FLT.DedekindDomain.FiniteAdeleRing.TensorPi
 public import Mathlib.RingTheory.Flat.Basic

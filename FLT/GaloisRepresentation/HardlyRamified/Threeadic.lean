@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 module
+import Hammer
 
 public import FLT.GaloisRepresentation.HardlyRamified.Defs
 -- public import FLT.GaloisRepresentation.HardlyRamified.ModThree -- will be needed for proof

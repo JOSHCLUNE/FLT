@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang, Kevin Buzzard, Michael Rothgang
 -/
 module
+import Hammer
 
 public import Mathlib.RingTheory.Regular.RegularSequence
 public import Mathlib.RingTheory.Support

@@ -5,6 +5,7 @@ Authors: Kevin Buzzard, Ruben Van de Velde, Pietro Monticone, Dagur Tómas Ásge
 Arend Mellendijk, Django Peeters
 -/
 module
+import Hammer
 
 public import Mathlib.Analysis.Normed.Field.Lemmas
 public import Mathlib.Data.PNat.Prime

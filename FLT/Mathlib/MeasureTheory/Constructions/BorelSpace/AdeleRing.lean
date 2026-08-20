@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bryan Wang Peng Jun
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.InfinitePlace
 public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.FiniteAdeleRing

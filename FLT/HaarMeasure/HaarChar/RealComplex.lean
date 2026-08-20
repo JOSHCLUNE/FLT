@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Javier López-Contreras
 -/
 module
+import Hammer
 
 public import FLT.HaarMeasure.HaarChar.Ring
 import Mathlib.Analysis.Complex.ReImTopology

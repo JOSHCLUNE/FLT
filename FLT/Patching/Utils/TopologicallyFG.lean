@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.RingTheory.FiniteType
 public import Mathlib.Topology.Algebra.Ring.Basic

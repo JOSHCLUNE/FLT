@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Salvatore Mercuri, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.RingTheory.DedekindDomain.FiniteAdeleRing
 public import FLT.Mathlib.Topology.Algebra.RestrictedProduct.TopologicalSpace

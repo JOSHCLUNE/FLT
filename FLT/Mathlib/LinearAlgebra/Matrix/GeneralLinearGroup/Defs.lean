@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bryan Wang
 -/
 module
+import Hammer
 
 public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
 

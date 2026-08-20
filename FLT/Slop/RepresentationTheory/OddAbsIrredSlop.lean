@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Zachary Feng, Y. Samanda Zhang
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Module.StablyFree.Basic
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure

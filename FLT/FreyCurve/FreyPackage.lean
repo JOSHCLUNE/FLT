@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Ruben Van de Velde, Pietro Monticone
 -/
 module
+import Hammer
 
 public import Mathlib.AlgebraicGeometry.EllipticCurve.Weierstrass
 public import Mathlib.Algebra.Field.ZMod

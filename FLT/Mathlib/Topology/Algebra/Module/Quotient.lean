@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Salvatore Mercuri, Kevin Buzzard, Pietro Monticone
 -/
 module
+import Hammer
 
 public import Mathlib.LinearAlgebra.Quotient.Pi
 public import Mathlib.Topology.Algebra.Module.Equiv

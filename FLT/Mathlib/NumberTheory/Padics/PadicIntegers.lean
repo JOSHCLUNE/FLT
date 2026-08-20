@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Kevin Buzzard, Pietro Monticone, Ruben Van de Velde
 -/
 module
+import Hammer
 
 public import Mathlib.NumberTheory.Padics.PadicIntegers
 import Mathlib.Algebra.CharZero.Infinite

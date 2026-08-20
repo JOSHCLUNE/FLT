@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Edison Xie
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.Module.Basic
 public import Mathlib.Topology.ContinuousMap.Algebra

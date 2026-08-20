@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Bryan Wang Peng Jun, Salvatore Mercuri, Pietro Monticone, Ruben Van de Velde
 -/
 module
+import Hammer
 
 public import FLT.HaarMeasure.HaarChar.Ring
 public import FLT.Mathlib.MeasureTheory.Constructions.BorelSpace.AdicCompletion

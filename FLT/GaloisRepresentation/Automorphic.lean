@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Edison Xie, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import FLT.AutomorphicForm.QuaternionAlgebra.HeckeOperators.Concrete
 public import FLT.DedekindDomain.IntegralClosure

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang, Kevin Buzzard, Ruben Van de Velde
 -/
 module
+import Hammer
 
 public import FLT.Patching.Utils.AdicTopology
 import FLT.Deformations.Lemmas

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Salvatore Mercuri
 -/
 module
+import Hammer
 
 public import FLT.NumberField.Completion.Infinite
 public import FLT.Mathlib.Topology.Algebra.Module.Equiv

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 module
+import Hammer
 
 public import FLT.KnownIn1980s.EllipticCurves.TateParameter
 

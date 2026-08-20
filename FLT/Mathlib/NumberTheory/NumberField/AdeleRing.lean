@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 module
+import Hammer
 
 -- can't upstream until we've imported the below!
 public import Mathlib.NumberTheory.NumberField.AdeleRing

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Matthew Jasper
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.Algebra.Module.Submodule.Basic
 public import Mathlib.Algebra.Lie.OfAssociative

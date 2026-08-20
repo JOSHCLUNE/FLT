@@ -5,6 +5,7 @@ Authors: Kevin Buzzard, Pietro Monticone, Salvatore Mercuri, Matthew Jasper, Rub
 William Coram
 -/
 module
+import Hammer
 
 public import FLT.Deformations.ContinuousRepresentation.IsTopologicalModule
 public import FLT.Mathlib.Algebra.Algebra.Tower

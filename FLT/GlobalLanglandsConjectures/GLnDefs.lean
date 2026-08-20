@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Jonas Bayer, Mario Carneiro
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Lie.BaseChange
 public import Mathlib.Algebra.Lie.UniversalEnveloping

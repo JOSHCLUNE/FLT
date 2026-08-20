@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Andrew Yang
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.MeasureTheory.Group.ModularCharacter
 public import FLT.Mathlib.Topology.Polish

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Duxing Yang
 -/
 module
+import Hammer
 
 public import FLT.KnownIn1980s.PGL2.Defs
 import FLT.Slop.PGL2.FiniteSubgroups.DicksonClassification

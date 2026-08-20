@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Bryan Wang, Andrew Yang
 -/
 module
+import Hammer
 
 public import FLT.QuaternionAlgebra.NumberField -- rigidifications of quat algs
 public import FLT.Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs

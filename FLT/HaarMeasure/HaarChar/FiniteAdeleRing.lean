@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Bryan Wang Peng Jun, Pietro Monticone
 -/
 module
+import Hammer
 
 public import FLT.DedekindDomain.FiniteAdeleRing.TensorProduct
 public import FLT.HaarMeasure.HaarChar.FiniteDimensional

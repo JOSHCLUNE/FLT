@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Salvatore Mercuri, Kevin Buzzard
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Instances.Matrix
 public import Mathlib.Analysis.Normed.Field.Basic

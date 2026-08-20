@@ -5,6 +5,7 @@ Authors: Matthew Jasper, Kevin Buzzard, Bhavik Mehta, Ruben Van de Velde, Bryan 
 Pietro Monticone
 -/
 module
+import Hammer
 
 public import FLT.Mathlib.Topology.Algebra.ContinuousMonoidHom
 public import FLT.Mathlib.Topology.Algebra.Group.Units

@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: David Ledvinka
 -/
 module
+import Hammer
 
 public import Mathlib.MeasureTheory.Group.Measure
 import FLT.Mathlib.MeasureTheory.Group.Action

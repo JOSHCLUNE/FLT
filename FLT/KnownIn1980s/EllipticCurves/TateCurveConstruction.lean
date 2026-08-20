@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, William Coram, Samuel Yin
 -/
 module
+import Hammer
 
 public import Mathlib.FieldTheory.RatFunc.AsPolynomial
 public import Mathlib.NumberTheory.ArithmeticFunction.Misc

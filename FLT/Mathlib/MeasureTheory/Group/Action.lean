@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Kevin Buzzard, Ruben Van de Velde, David Ledvinka
 -/
 module
+import Hammer
 
 public import Mathlib.GroupTheory.Index
 public import Mathlib.MeasureTheory.Group.Arithmetic

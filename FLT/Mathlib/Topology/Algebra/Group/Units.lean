@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard, Ruben Van de Velde
 -/
 module
+import Hammer
 
 public import Mathlib.Algebra.Group.Submonoid.Units
 public import Mathlib.Topology.Algebra.Constructions

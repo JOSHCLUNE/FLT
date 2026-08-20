@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Yaël Dillies, Kevin Buzzard
 -/
 module
+import Hammer
 
 public meta import Mathlib.Tactic.ToDual
 public import Mathlib.GroupTheory.Index

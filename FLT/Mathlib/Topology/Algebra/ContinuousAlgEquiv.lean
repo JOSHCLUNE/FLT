@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Salvatore Mercuri
 -/
 module
+import Hammer
 
 public import Mathlib.Topology.Algebra.Algebra.Equiv
 public import FLT.Mathlib.Algebra.Algebra.Tower
