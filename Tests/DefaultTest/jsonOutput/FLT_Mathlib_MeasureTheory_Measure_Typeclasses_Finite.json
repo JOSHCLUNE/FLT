@@ -1,0 +1,11 @@
+[{"tacticSucceeded": true,
+  "startLine": 29,
+  "startCol": 4,
+  "shortenedStepsCount": 1,
+  "parentName": "Topology.IsOpenEmbedding.isFiniteMeasureOnCompacts_comap",
+  "oldText": "rw [MeasurableEmbedding.comap_apply hφ.measurableEmbedding]",
+  "message":
+  "Try this:\n\n  [apply]   duper [*, IsCompact.measure_lt_top, continuous, IsOpenEmbedding.measurableEmbedding, IsFiniteMeasureOnCompacts.comap']\n      {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/MeasureTheory/Measure/Typeclasses/Finite.lean"}]

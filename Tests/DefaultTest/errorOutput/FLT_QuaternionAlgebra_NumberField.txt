@@ -1,0 +1,326 @@
+.....
+line 115, col 2:
+obtain ⟨I, hI⟩ := Ideal.exists_maximal R
+* Try this:
+
+  [apply]     apply IsDedekindDomain.FiniteAdeleRing.HeightOneSpectrum.nonempty
+    simp_all only [not_false_eq_true]
+shortened proof!
+.....
+line 125, col 62:
+simp
+* Try this:
+
+  [apply]   simp_all only [Function.comp_apply, AlgEquiv.apply_symm_apply, Algebra.TensorProduct.includeLeft_apply, algEquiv_tmul,
+      one_smul]
+.
+line 126, col 4:
+exact (algebraMap F _).injective
+* Try these:
+  [apply] grind only [!FaithfulSMul.algebraMap_injective]
+  [apply] grind => instantiate only [!FaithfulSMul.algebraMap_injective]
+.....
+line 144, col 2:
+dsimp at this
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.coe_ofBijective, Algebra.TensorProduct.lift_tmul, Algebra.ofId_apply, map_one, one_mul,
+      Algebra.norm_eq_det, Fintype.card_fin]
+shortened proof!
+.
+line 151, col 2:
+ext1
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe]
+    ext i j v : 3
+    simp_all only [Units.coe_map, AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom,
+      MonoidHom.coe_coe, AlgHom.commutes]
+shortened proof!
+.....
+line 222, col 2:
+simp only [RingHom.toMonoidHom_eq_coe, Units.ext_iff, Units.coe_map, MonoidHom.coe_coe,
+    RingHom.mapMatrix_apply]
+* Try this:
+
+  [apply]     intro a a_1 i j
+    subst a_1
+    simp_all only [RingHom.toMonoidHom_eq_coe, Units.coe_map, MonoidHom.coe_coe, RingHom.mapMatrix_apply,
+      ValuationSubring.coe_subtype, Matrix.map_apply]
+shortened proof!
+...
+line 238, col 35:
+simp
+* Try this:
+
+  [apply]     subst hy
+    simp_all only [RingHom.toMonoidHom_eq_coe, Matrix.GeneralLinearGroup.val_det_apply, Matrix.isUnits_det_units]
+..
+line 240, col 2:
+simpa [← hy, Matrix.det_fin_two] using hd
+* Try this:
+
+  [apply]     subst hy
+    simp_all only [Matrix.GeneralLinearGroup.val_det_apply, RingHom.toMonoidHom_eq_coe, Units.coe_map, MonoidHom.coe_coe,
+      RingHom.mapMatrix_apply, ValuationSubring.coe_subtype]
+    exact hd
+.......
+line 261, col 6:
+rw [Matrix.det_fin_two, Matrix.det_fin_two]
+* Try this:
+
+  [apply]     simp_all only [M]
+    rfl
+shortened proof!
+...
+line 265, col 4:
+ext i j
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe, M]
+    ext i j : 2
+    simp_all only [Units.coe_map, IsUnit.unit_spec, MonoidHom.coe_coe, RingHom.mapMatrix_apply,
+      ValuationSubring.coe_subtype, Matrix.map_apply, Matrix.of_apply]
+shortened proof!
+.......
+line 282, col 6:
+apply v_le_one_of_mem_localFullLevel _ hb.1
+* Try this:
+
+  [apply]     obtain ⟨left, right⟩ := ha
+    obtain ⟨left_1, right_1⟩ := hb
+    apply IsDedekindDomain.GL2.v_le_one_of_mem_localFullLevel
+    simp_all only [Fin.isValue]
+...
+line 285, col 6:
+apply v_le_one_of_mem_localFullLevel _ ha.1
+* Try this:
+
+  [apply]     obtain ⟨left, right⟩ := ha
+    obtain ⟨left_1, right_1⟩ := hb
+    apply IsDedekindDomain.GL2.v_le_one_of_mem_localFullLevel
+    simp_all only [Fin.isValue]
+.
+line 286, col 17:
+simp [one_mem]
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, Set.mem_ofPred_eq, one_mem, Units.val_one, ne_eq, one_ne_zero, not_false_eq_true,
+      Matrix.one_apply_ne, map_zero, zero_lt_one, and_self]
+....
+line 301, col 4:
+grind
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      simp_all only [Fin.isValue, and_self]
+    · intro a
+      simp_all only [Fin.isValue, and_self, and_true, true_and]
+      obtain ⟨left, right⟩ := a
+      obtain ⟨left_1, right⟩ := right
+      obtain ⟨left_2, right⟩ := right
+      obtain ⟨left_3, right⟩ := right
+      grind only
+..
+line 304, col 4:
+simp only [le_antisymm_iff]
+* Try these:
+  [apply] grind only [#4aaa]
+  [apply] grind only
+  [apply] grind => cases #4aaa
+shortened proof!
+................
+line 318, col 64:
+aesop
+* Try this:
+
+  [apply]     apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [Fin.isValue, map_zero, zero_le, mul_zero, zero_ne_one]
+.
+line 319, col 25:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, one_mul]
+...
+line 320, col 65:
+aesop
+* Try this:
+
+  [apply]     apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [Fin.isValue, map_zero, zero_le, zero_mul, zero_ne_one]
+.
+line 321, col 25:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, mul_one]
+..
+line 329, col 2:
+ext x
+* Try this:
+
+  [apply]     simp_all only [Fin.isValue, Valuation.restrict_lt_one_iff, Set.preimage_ofPred_eq]
+    rfl
+shortened proof!
+..
+line 338, col 2:
+ext x
+* Try this:
+
+  [apply]     simp_all only [Fin.isValue, Valuation.restrict_lt_one_iff, Set.preimage_ofPred_eq]
+    rfl
+shortened proof!
+....
+line 365, col 4:
+simp only [MulEquiv.symm_apply_apply]
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.symm_apply_apply]
+    obtain ⟨val, property⟩ := g
+    simp_all only
+    rfl
+shortened proof!
+.
+line 367, col 2:
+simp [this]
+* Try this:
+
+  [apply]   simp_all only [Matrix.of_apply]
+.
+line 385, col 19:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_one, Fin.isValue, Units.val_one, Matrix.one_apply_eq, ne_eq, one_ne_zero, not_false_eq_true,
+      div_self]
+..............._.....
+line 439, col 2:
+exact (Subgroup.comap_map_eq_self_of_injective Subtype.val_injective _).symm
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [MonoidHom.mem_ker, Subgroup.mem_subgroupOf, Subgroup.mem_map, Subgroup.subtype_apply,
+      SetLike.coe_eq_coe, exists_eq_right]
+...
+line 456, col 40:
+simp
+* Try this:
+
+  [apply]   simp_all only [Subgroup.range_subtype, Std.le_refl]
+......
+line 492, col 6:
+simp only [Fin.isValue, ne_eq, div_eq_zero_iff, not_or]
+* Try this:
+
+  [apply]     simp_all only [Fin.isValue, ne_eq, div_eq_zero_iff, not_or]
+    obtain ⟨left, right⟩ := H
+    obtain ⟨left_1, right⟩ := right
+    obtain ⟨left_2, right⟩ := right
+    apply And.intro
+    · apply Aesop.BuiltinRules.not_intro
+      intro a
+      simp_all only [Fin.isValue, map_zero, zero_ne_one]
+    · apply Aesop.BuiltinRules.not_intro
+      intro a
+      simp_all only [Fin.isValue, map_zero, zero_ne_one]
+shortened proof!
+................
+line 507, col 56:
+simp [h'] at H
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, map_zero, zero_ne_one, and_false]
+.
+line 508, col 8:
+ext1
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, MonoidHom.mem_ker, MonoidHom.coe_comp, QuotientGroup.coe_mk', Function.comp_apply,
+      QuotientGroup.eq_one_iff, iInf_pos, Subgroup.mem_iInf, RingHom.toMonoidHom_eq_coe, Fin.isValue,
+      Subgroup.subtype_apply]
+    ext : 1
+    simp_all only [Fin.isValue, Units.coe_map, IsUnit.unit_spec, MonoidHom.coe_coe, ValuationSubring.algebraMap_apply,
+      Units.val_mk0]
+shortened proof!
+............
+line 518, col 38:
+simp [h'] at H
+* Try this:
+
+  [apply]   simp_all only [RingHom.toMonoidHom_eq_coe, Fin.isValue, div_zero, map_zero, zero_ne_one, and_false]
+....
+line 526, col 2:
+infer_instance
+* Try this:
+
+  [apply]   apply
+      IsDedekindDomain.instNormalSubtypeGeneralLinearGroupFinOfNatNatAdicCompletionRingOfIntegersMemSubgroupLocalIwahoriLevelSubgroupOfLocalPTameLevel
+.
+line 562, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [mulSingle_one]
+.....
+line 581, col 2:
+simp [H]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, Pi.mulSingle_eq_of_ne, Units.val_one]
+....
+line 590, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.mulSingle_eq_same]
+...
+line 609, col 2:
+simp [H]
+* Try this:
+
+  [apply]   simp_all only [restrictedProduct_apply]
+...
+line 616, col 4:
+simp [ha]
+* Try this:
+
+  [apply]   simp_all only [map_mul, toAdicCompletion_finiteAdeleIncl_same, one_mul, mul_one]
+.
+line 617, col 4:
+simp [h]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_mul, not_false_eq_true, toAdicCompletion_finiteAdeleIncl_of_ne, mul_one, one_mul]
+......
+line 629, col 63:
+rfl
+* Try this:
+
+  [apply]   rfl
+.
+line 630, col 4:
+exact fun v ↦ M2.units_localFullLevel v ▸ GL2.localFullLevel.isOpen v
+* Try this:
+
+  [apply]     intro i
+    simp_all only [M2.units_localFullLevel]
+    apply IsDedekindDomain.GL2.localFullLevel.isOpen
+......
+line 638, col 4:
+exact fun v ↦ M2.units_localFullLevel v ▸ GL2.localFullLevel.isOpen v
+* Try this:
+
+  [apply]     intro i
+    simp_all only [M2.units_localFullLevel]
+    apply IsDedekindDomain.GL2.localFullLevel.isOpen
+.
+line 639, col 4:
+simp [M2.units_localFullLevel]
+* Try this:
+
+  [apply]   simp_all only [M2.units_localFullLevel, Std.le_refl, Filter.eventually_cofinite, not_true_eq_false, Set.ofPred_false,
+      Set.finite_empty]

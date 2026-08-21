@@ -1,0 +1,182 @@
+..
+line 37, col 48:
+simp_all [add_mem]
+* Try this:
+
+  [apply]     intro a_1 a_2 a_3
+    simp_all only [Set.mem_ofPred_eq, Pi.add_apply]
+    apply Submodule.add_mem
+    · simp_all only
+    · simp_all only
+.
+line 38, col 18:
+simp [zero_mem]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_ofPred_eq, Pi.zero_apply, zero_mem, eventually_true]
+..
+line 39, col 46:
+simp_all [Submodule.smul_mem]
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Set.mem_ofPred_eq, Pi.smul_apply']
+    apply Submodule.smul_mem
+    simp_all only
+...
+line 51, col 40:
+aesop
+* Try this:
+
+  [apply]   simp_all only [mem_eventuallyProd, implies_true, eventually_true]
+.........
+line 67, col 6:
+exact if_pos hi
+* Try this:
+
+  [apply]   simp_all only [↓reduceIte]
+.X.
+line 69, col 6:
+split_ifs
+* Try this:
+
+  [apply]     split
+    next h => simp_all only [sub_zero]
+    next h => simp_all only [sub_self, zero_mem]
+shortened proof!
+.X.
+line 70, col 42:
+aesop
+* Try this:
+
+  [apply]   simp_all only [mem_eventuallyProd, Pi.bot_apply, Submodule.mem_bot, zero_mem, implies_true, eventually_true]
+..
+line 71, col 11:
+simp_all
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Submodule.mem_pi', mem_eventuallyProd, eventually_true]
+........
+line 132, col 4:
+change UltraProduct.π A F _ = _
+* Try this:
+
+  [apply]     simp_all only [RingHom.coe_comp, Function.comp_apply]
+    rfl
+shortened proof!
+......
+line 159, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [LinearMap.map_smul_of_tower, Submodule.mkQ_apply]
+    rfl
+.
+line 167, col 38:
+simp [sub_eq_zero]
+* Try this:
+
+  [apply]     simp_all only [mem_eventuallyProd, Pi.bot_apply, Pi.sub_apply, Submodule.mem_bot]
+    apply Iff.intro
+    · intro a
+      grind only [sub_eq_zero, #d0d8, #06be]
+    · intro a
+      grind only [sub_eq_zero, #2ad7, #883b]
+.
+line 171, col 38:
+simp [sub_eq_zero]
+* Try this:
+
+  [apply]     simp_all only [mem_eventuallyProd, Pi.bot_apply, Pi.sub_apply, Submodule.mem_bot]
+    apply Iff.intro
+    · intro a
+      grind only [sub_eq_zero, #bdd2, #a63f]
+    · intro a
+      grind only [sub_eq_zero, #bc28, #fa08]
+....
+line 183, col 4:
+simp_all [sub_eq_zero]
+* Try this:
+
+  [apply]     simp_all only [Pi.bot_apply, Pi.sub_apply, Submodule.mem_bot, Pi.smul_apply']
+    duper [*, sub_eq_zero] {preprocessing := full}
+..........
+line 223, col 34:
+simpa using congr(f i $hi)
+* Try this:
+
+  [apply]   simp_all only [mem_eventuallyProd, Pi.bot_apply, Submodule.mem_bot, LinearMap.piMap'_apply, map_zero, zero_mem]
+.
+line 236, col 36:
+simp [show i a = 0 from ha]
+* Try this:
+
+  [apply]   simp_all only [mem_eventuallyProd, Pi.bot_apply, Submodule.mem_bot, RingHom.pi_apply, RingHom.coe_comp,
+      Function.comp_apply, Pi.evalRingHom_apply, map_zero, zero_mem]
+.....
+line 249, col 24:
+simp [hy]
+* Try this:
+
+  [apply]   simp_all only [map_πₗ]
+.....
+line 265, col 74:
+exact hi _
+* Try this:
+
+  [apply]   apply hi
+..
+line 267, col 2:
+exact ⟨a, UltraProduct.πₗ_eq_iff.mpr ha⟩
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, LinearMap.coe_restrictScalars, Function.comp_apply, πₗ_eq_iff, LinearMap.pi_apply]
+    apply Exists.intro
+    · exact ha
+.....
+line 275, col 44:
+simpa using hx
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_comp, LinearMap.coe_restrictScalars, Function.comp_apply, πₗ_eq_zero, LinearMap.pi_apply]
+.........
+line 282, col 4:
+exact ⟨a, UltraProduct.πₗ_eq_iff.mpr ha⟩
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, LinearMap.coe_restrictScalars, Function.comp_apply, πₗ_eq_iff, LinearMap.pi_apply]
+    apply Exists.intro
+    · exact ha
+.......
+line 295, col 2:
+filter_upwards [ha] with i hi
+* Try this:
+
+  [apply]   simp_all only [isUnit_map_iff]
+shortened proof!
+........................................
+line 358, col 6:
+simp only [LinearMap.pi_apply, dif_pos (Nonempty.intro (hi.choose)),
+        AlgEquiv.toLinearMap_apply, map_mul, Pi.mul_apply, g]
+* Try this:
+
+  [apply]     simp_all only [eventually_and, LinearMap.pi_apply, Pi.mul_apply, g]
+    obtain ⟨left, right⟩ := H
+    obtain ⟨w, h⟩ := hi
+    split
+    next h_1 => simp_all only [AlgEquiv.toLinearMap_apply, map_mul]
+    next h_1 => simp_all only [not_nonempty_iff, LinearMap.zero_apply, mul_zero]
+....................
+line 416, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [eventually_and, RingEquiv.toRingHom_eq_coe, RingEquiv.symm_comp, RingHomCompTriple.comp_eq]
+......
+line 444, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [eventually_and, RingEquiv.toRingHom_eq_coe, RingEquiv.symm_comp, RingHomCompTriple.comp_eq]
+..

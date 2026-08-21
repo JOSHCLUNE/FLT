@@ -1,0 +1,77 @@
+.X..
+line 76, col 18:
+simp
+* Try this:
+
+  [apply]     intro a
+    simp_all only [smul_def, comm_symm, map_zero, smul_zero]
+.X..X..X..
+line 94, col 8:
+simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe,
+          Algebra.TensorProduct.includeRight_apply, mul_add, add_mul]
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [add_mul, mul_add]
+  [apply] grind => instantiate only [add_mul, mul_add]
+..X.X.
+line 103, col 8:
+rw [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]     simp_all only [comm_symm]
+    rfl
+shortened proof!
+.X.X.
+line 128, col 4:
+induction am with
+    | zero => simp only [smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      map_zero, RingHom.id_apply]
+    | tmul x y =>
+        simp only [smul_tmul', smul_eq_mul, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+          LinearEquiv.coe_coe, comm_tmul, RingHom.id_apply, smul_def, comm_symm_tmul]
+    | add x y hx hy =>
+      simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe,
+        RingHom.id_apply, smul_def, smul_add, map_add]
+* Try this:
+
+  [apply]   simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe, RingHom.id_apply, smul_def, comm_symm,
+      comm_comm]
+.X.
+line 179, col 2:
+ext
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [LinearMap.coe_comp, LinearEquiv.coe_coe, _root_.LinearMap.baseChange_id, LinearMap.id_comp,
+      Function.comp_apply, LinearEquiv.apply_symm_apply, LinearMap.id_coe, id_eq]
+shortened proof!
+.
+line 188, col 2:
+ext
+* Try this:
+
+  [apply]   apply LinearMap.baseChange_comp
+shortened proof!
+.
+line 192, col 2:
+exact Function.leftInverse_iff_comp
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      duper [*, Function.leftInverse_iff_comp] {preprocessing := full}
+    · intro a
+      duper [*, Function.leftInverse_iff_comp] {preprocessing := full}
+.......
+line 219, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, algebraMap_eval,
+      OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe, Algebra.TensorProduct.map_tmul, map_one,
+      AlgHom.coe_id, id_eq]

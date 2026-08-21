@@ -1,0 +1,31 @@
+........
+line 84, col 6:
+rw [nsmul_eq_mul, nsmul_eq_mul, Nat.cast_add, Nat.cast_one]
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 88, col 49:
+rw [nsmul_eq_mul, CharP.cast_eq_zero (K p) p, zero_mul]
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.mem_ker, nsmul_eq_mul, CharP.cast_eq_zero, zero_mul]
+.........
+line 110, col 8:
+dsimp [n] at h_dvd_one
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, Nat.dvd_one, orderOf_eq_one_iff, orderOf_one, f, n]
+shortened proof!
+..
+line 115, col 32:
+rw [map_mul, map_inv, hxy, mul_inv_cancel]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, map_mul, map_inv, mul_inv_cancel, f]
+........................................................................
+line 226, col 4:
+exact h1
+* Try this:
+  [apply] grind only
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean was killed (exit code 137), likely by the 8G MemoryMax cap

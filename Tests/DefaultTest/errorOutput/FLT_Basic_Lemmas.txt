@@ -1,0 +1,67 @@
+..
+line 28, col 4:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or, or_true]
+..
+line 30, col 42:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or]
+..
+line 34, col 4:
+grind [not_prime_one]
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    grind only [= odd_iff, Prime.ne_one]
+...
+line 47, col 4:
+apply FermatLastTheoremFor.mono h3
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    duper [*, fermatLastTheoremFor_iff_rat, fermatLastTheoremFor_iff_int, fermatLastTheoremFor_iff_nat,
+      FermatLastTheoremWith.mono, fermatLastTheoremThree] {preprocessing := full}
+shortened proof!
+.
+line 51, col 4:
+apply FermatLastTheoremFor.mono h4
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply FermatLastTheoremFor.mono
+    · exact h4
+    · apply fermatLastTheoremFour
+shortened proof!
+.
+line 55, col 4:
+apply FermatLastTheoremFor.mono hpn
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    apply FermatLastTheoremFor.mono
+    · exact hpn
+    · simp_all only
+shortened proof!
+...
+line 65, col 31:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 51:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.

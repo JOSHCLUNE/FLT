@@ -1,0 +1,7 @@
+...
+line 72, col 31:
+rintro rfl
+* Try this:
+
+  [apply]   duper [*, Ring.isField_iff_maximal_bot] {preprocessing := full}
+shortened proof!

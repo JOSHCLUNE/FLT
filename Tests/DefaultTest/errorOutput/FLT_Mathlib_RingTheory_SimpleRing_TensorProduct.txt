@@ -1,0 +1,91 @@
+.
+line 57, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [span_eq_bot, Set.mem_singleton_iff, forall_eq]
+.
+line 63, col 2:
+ext x
+* Try this:
+
+  [apply]   apply map_bot
+shortened proof!
+.....
+line 81, col 46:
+simpa
+* Try this:
+
+  [apply]     subst hsc
+    simp_all only [exists_apply_eq_apply2, Function.comp_apply]
+.
+line 82, col 2:
+convert hsc
+* Try this:
+
+  [apply]     subst hsc
+    simp_all only [SetLike.coe_mem, ↓reduceDIte, Subtype.coe_eta]
+shortened proof!
+....X.X.X..X...X....X..X....X...X...X.....X...............
+line 151, col 10:
+simp [hi]
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+.
+line 152, col 8:
+simp +contextual only [↓reduceIte] at ih
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#01b5]
+  [apply] grind only
+  [apply] grind => instantiate only [#01b5]
+shortened proof!
+........_.........
+line 171, col 8:
+exact hkey
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+..
+line 174, col 6:
+simp [g, dif_neg hjs] at hb
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+.X.X.X..X.X.X.X.
+line 188, col 6:
+exact bot_le
+* Try this:
+
+  [apply]   simp_all only [bot_le]
+.X.X...X.X.X.X.X.X.X...X.X.X.X......
+line 215, col 4:
+simp
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Algebra.TensorProduct.includeRight_apply, TwoSidedIdeal.coe_bot, Set.image_singleton, tmul_zero,
+      Set.mem_singleton_iff, f]
+....
+line 219, col 43:
+simp [Algebra.TensorProduct.one_def]
+* Try this:
+
+  [apply]     simp_all only [TwoSidedIdeal.coe_top, Set.mem_univ, Algebra.TensorProduct.includeRight_apply, true_and, f]
+    rfl

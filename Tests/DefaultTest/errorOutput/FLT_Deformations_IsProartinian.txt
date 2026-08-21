@@ -1,0 +1,32 @@
+._....
+line 50, col 2:
+rwa [isProartinian_iff_isArtinianRing]
+* Try these:
+  [apply] grind only [isProartinian_iff_isArtinianRing]
+  [apply] grind => instantiate only [isProartinian_iff_isArtinianRing]
+....
+line 73, col 4:
+exact ⟨1, by simp [hI']⟩
+* Try this:
+
+  [apply]     subst hI'
+    simp_all only [Submodule.top_coe, isOpen_univ, le_top, exists_const]
+......
+line 82, col 2:
+exact ⟨n, hn⟩
+* Try this:
+
+  [apply]     simp_all only [Submodule.Quotient.nontrivial_iff, ne_eq, not_false_eq_true]
+    apply Exists.intro
+    · exact hn
+........
+line 95, col 2:
+exact ⟨n, trivial, hn⟩
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, true_and]
+    apply Exists.intro
+    · intro x a
+      apply hn
+      exact a
+......

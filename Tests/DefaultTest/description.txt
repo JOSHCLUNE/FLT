@@ -1,0 +1,10 @@
+Ran basic `hammer` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 8 with errors."
+
+tallySummaries.sh output:
+Total number of results: 16969
+Total number of successes: 3340
+Time taken: 86315s
+
+~19.7% success rate
+~24.0 hours

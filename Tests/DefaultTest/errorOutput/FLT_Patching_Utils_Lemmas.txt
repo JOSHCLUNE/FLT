@@ -1,0 +1,230 @@
+..X..
+line 54, col 6:
+ext1
+* Try this:
+
+  [apply]     simp_all only [comap_map_quotientMk]
+    obtain ⟨val, property⟩ := J
+    simp_all only [sup_of_le_right]
+shortened proof!
+.
+line 67, col 17:
+aesop
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_ofPred_eq, Pi.add_apply]
+    intro i
+    apply AddMemClass.add_mem
+    · simp_all only
+    · simp_all only
+.
+line 68, col 18:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.mem_ofPred_eq, Pi.zero_apply, zero_mem, implies_true]
+.
+line 69, col 18:
+aesop
+* Try this:
+
+  [apply]     intro c x a
+    simp_all only [Set.mem_ofPred_eq, Pi.smul_apply']
+    intro i
+    apply SMulMemClass.smul_mem
+    simp_all only
+.
+line 81, col 17:
+aesop
+* Try this:
+
+  [apply]     intro x y
+    simp_all only [Pi.add_apply, map_add]
+    rfl
+.
+line 82, col 18:
+aesop
+* Try this:
+
+  [apply]     intro m x
+    simp_all only [Pi.smul_apply', map_smul, RingHom.id_apply]
+    rfl
+...._......_.....
+line 129, col 34:
+simp
+* Try this:
+
+  [apply]   simp_all only [coe_bot, Std.le_refl]
+..
+line 142, col 45:
+simp
+* Try this:
+
+  [apply]   simp_all only [span_singleton_zero, coe_bot, Set.singleton_subset_iff, SetLike.mem_coe, ZeroMemClass.zero_mem]
+....
+line 149, col 6:
+exact G.add_mem (hx ha₁) (hy ha₂)
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem, #7e17, #2557]
+  [apply] grind only [usr Set.mem_ofPred_eq, SetLike.mem_coe, = Set.subset_def, AddMemClass.add_mem]
+  [apply] grind =>
+    instantiate only [usr Set.mem_ofPred_eq, SetLike.mem_coe]
+    instantiate only [= Set.subset_def, AddMemClass.add_mem]
+    instantiate only [#7e17, #2557]
+    instantiate only [SetLike.mem_coe]
+...._.
+line 165, col 2:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 174, col 10:
+simp [G.zero_mem]
+* Try this:
+
+  [apply]   simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_ofPred_eq, mul_zero, zero_mul,
+      ZeroMemClass.zero_mem, implies_true]
+..
+line 175, col 10:
+simp
+* Try this:
+
+  [apply]     intro x_1 a_1
+    simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_ofPred_eq, mul_neg, neg_mul, neg_mem_iff,
+      implies_true]
+...
+line 176, col 57:
+simpa
+* Try this:
+
+  [apply]   simp_all only [sub_zero, coe_ofRingCon, Set.mem_singleton_iff, Set.mem_ofPred_eq, coe_mk', Set.singleton_subset_iff,
+      implies_true]
+..............
+line 198, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, H⟩
+* this parameter is redundant, environment already contains `isCompact_univ` annotated with `@[grind .]`
+* Try these:
+  [apply] grind only [= Set.subset_def, #5dd8, #0789, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #5dd8]
+    instantiate only [#0789, #838e]
+shortened proof!
+.......
+line 208, col 4:
+rintro s₁ s₂ hs₁s₂ ⟨V, hV, U, hU, H⟩
+* this parameter is redundant, environment already contains `isCompact_univ` annotated with `@[grind .]`
+* this parameter is redundant, environment already contains `Set.subset_univ` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [= Set.subset_def, #ee07, #481b, #838e]
+  [apply] grind only [= Set.subset_def]
+  [apply] grind =>
+    instantiate only [= Set.subset_def, #ee07]
+    instantiate only [#481b, #838e]
+shortened proof!
+..............
+line 234, col 10:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.union_sdiff_self, Set.singleton_union, Set.insert_eq_of_mem, Std.le_refl]
+.
+line 234, col 23:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.inter_singleton_of_mem, Set.mem_singleton_iff]
+.
+line 234, col 37:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.mem_inter_iff, Set.mem_sdiff, Set.mem_singleton_iff, not_false_eq_true, and_self]
+.
+line 238, col 2:
+obtain ⟨n, hn⟩ := wellFoundedGT_iff_monotone_chain_condition.mp ‹WellFoundedGT α› f
+* Try this:
+
+  [apply]   duper [*, iSup_eq_monotonicSequenceLimit, sSup_range] {preprocessing := full}
+shortened proof!
+......
+line 257, col 4:
+exact ⟨i, by simpa [f, this] using! hi⟩
+* Try this:
+
+  [apply]     simp_all only [OrderHom.coe_mk, f]
+    simp_all only [f]
+    apply Exists.intro
+    · exact hi
+...
+line 261, col 6:
+refine (Set.ncard_mono (Set.subset_univ _)).trans ?_
+* Try this:
+
+  [apply]   simp_all only [pow_zero, Ideal.one_eq_top, Submodule.top_smul, Submodule.top_coe, Set.ncard_univ, tsub_zero,
+      le_add_iff_nonneg_right, zero_le, f]
+shortened proof!
+....
+line 268, col 8:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+...
+line 272, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, zero_add, f]
+......
+line 279, col 8:
+rw [this, hi, ← h, le_bot_iff] at hf
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, le_bot_iff, Submodule.bot_coe, Set.ncard_singleton, le_add_iff_nonneg_left, zero_le,
+      f]
+shortened proof!
+.....
+line 284, col 44:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.singleton_subset_iff, SetLike.mem_coe, zero_mem, f]
+.
+line 284, col 70:
+simp
+* Try this:
+
+  [apply]   simp_all only [tsub_self, zero_add, Set.ncard_singleton, Std.le_refl, f]
+..................
+line 327, col 2:
+exact (Submodule.mkQ_surjective _).comp hf
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, Function.Surjective.of_comp_iff]
+    apply Submodule.mkQ_surjective
+........................
+line 371, col 4:
+intro h
+* Try this:
+
+  [apply]     simp_all only [Set.mem_ofPred_eq, ne_eq, Nat.find_eq_zero, pow_zero, mul_one]
+    obtain ⟨val, property⟩ := t
+    obtain ⟨w, h⟩ := H
+    simp_all only
+    simp_all only [Ideal.mem_primeCompl_iff]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [zero_mem, not_true_eq_false]
+shortened proof!
+...
+line 377, col 4:
+rwa [Nat.one_le_iff_ne_zero]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_ofPred_eq, ne_eq, Nat.find_eq_zero, pow_zero, mul_one, Nat.le_find_iff, Order.lt_one_iff,
+      not_false_eq_true, implies_true]
+.

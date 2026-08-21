@@ -1,0 +1,24 @@
+....
+line 48, col 24:
+decide
+* Try this:
+
+  [apply]   smt +mono [*, Nat.not_even_iff_odd, Even.add_one, Nat.odd_add]
+._..........
+line 72, col 4:
+linear_combination -hv
+* Try this:
+  [apply] grind only
+._..
+line 96, col 2:
+exact (baseChange_smul_baseChange L C V).symm.trans h
+* Try this:
+
+  [apply]   duper [*, baseChange, map_variableChange, VariableChange.baseChange] {preprocessing := full}
+...
+line 106, col 2:
+have hmv := map_variableChange (W := V.baseChange L) (C := ρ) (φ := σ.toAlgHom.toRingHom)
+* Try this:
+
+  [apply]   duper [*, baseChange, map_variableChange] {preprocessing := full}
+shortened proof!
