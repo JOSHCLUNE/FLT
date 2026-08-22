@@ -6,5 +6,7 @@ Total number of results: 16969
 Total number of successes: 3340
 Time taken: 86315s
 
+Total shortenedStepsCount: 1447
+
 ~19.7% success rate
 ~24.0 hours

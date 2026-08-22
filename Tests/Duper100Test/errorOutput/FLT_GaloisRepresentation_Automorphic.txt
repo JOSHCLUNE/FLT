@@ -1,0 +1,8 @@
+.
+line 86, col 60:
+simp
+* Try this:
+
+  [apply]     intro v a
+    simp_all only [Pi.one_apply, one_pow]
+..

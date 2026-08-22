@@ -1,0 +1,48 @@
+.
+line 28, col 2:
+obtain ⟨z, hz⟩ : ∃ z : L, IsPrimitiveRoot z N :=
+    IsCyclotomicExtension.exists_isPrimitiveRoot L _ (show _ ∈ ⊤ by simp) (NeZero.ne N)
+* Try this:
+
+  [apply]   duper [*, card_rootsOfUnity] {preprocessing := full}
+shortened proof!
+.
+line 33, col 62:
+exact Iff.symm dvd_iff
+* Try this:
+
+  [apply]   duper [*, dvd_iff, Int.ofNat_dvd] {preprocessing := full}
+.
+line 37, col 2:
+rw [pow_eq_pow_mod b h, pow_eq_pow_mod c h]
+* Try this:
+
+  [apply]     apply pow_eq_pow_of_modEq
+    on_goal 2 => { exact h
+    }
+    · simp_all only
+shortened proof!
+..
+line 43, col 2:
+exact Nat.mod_modEq e.val D
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [ZMod.natCast_eq_natCast_iff, ZMod.natCast_mod]
+  [apply] grind => instantiate only [ZMod.natCast_eq_natCast_iff, ZMod.natCast_mod]
+..........
+line 59, col 17:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_one, Units.val_one]
+    rfl
+shortened proof!
+.
+line 60, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_mul, Units.val_mul]
+    rfl
+shortened proof!

@@ -1,0 +1,128 @@
+.
+line 71, col 18:
+simp_all [smul_comm]
+* Try this:
+
+  [apply]     intro c x a
+    simp_all only [AddSubsemigroup.mem_carrier, AddSubmonoid.mem_toSubsemigroup, mem_addSubmonoid]
+    intro m
+    duper [*, smul_comm] {preprocessing := full}
+..
+line 107, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [coe_smul, one_smul]
+shortened proof!
+.
+line 111, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [coe_smul]
+    simp_all only [mem_fixedPoints]
+    apply SemigroupAction.mul_smul
+shortened proof!
+.
+line 120, col 4:
+ext
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [coe_smul, coe_zero, smul_zero]
+shortened proof!
+.
+line 123, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := s
+    obtain ⟨val_1, property_1⟩ := a
+    ext : 1
+    simp_all only [coe_smul, coe_add, smul_add]
+shortened proof!
+.
+line 126, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [coe_smul, coe_add]
+    simp_all only [mem_fixedPoints]
+    apply add_smul
+shortened proof!
+.
+line 129, col 4:
+ext
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [coe_smul, zero_smul, coe_zero]
+shortened proof!
+....
+line 141, col 45:
+simp [mul_assoc]
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, smul_eq_mul]
+    grind only
+...
+line 143, col 80:
+simp [mul_assoc]
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, smul_eq_mul]
+    grind only [mul_inv_cancel]
+.X.X.X.X.X.X.X.X.X..X.X.X.X.X.X.X.X.X.X.X.X..X..X.X.X..X.
+line 229, col 4:
+congr!
+* Try this:
+
+  [apply]     simp_all only [Set.mul_singleton, Set.image_mul_right, Set.mem_image, Set.mem_preimage, SetLike.mem_coe,
+      Set.Finite.coe_toFinset]
+    simp_all only [Set.mul_singleton, Set.image_mul_right]
+    obtain ⟨val, property⟩ := a
+    simp_all only [Set.mul_singleton, Set.image_mul_right]
+    simp_all only [Set.mul_singleton, Set.image_mul_right, mem_fixedPoints, Subtype.forall, Subgroup.mk_smul]
+    rfl
+shortened proof!
+.
+line 230, col 4:
+exact Quotient.out_injective.injOn
+* Try this:
+
+  [apply]   simp_all only [Set.mul_singleton, Set.image_mul_right, Quotient.out_inj, implies_true, Set.injOn_of_eq_iff_eq]
+.X..X.X.X...X.
+line 249, col 6:
+ext
+* Try this:
+
+  [apply]     simp_all only [Set.singleton_mul, Set.image_mul_left, Set.mul_singleton, Set.image_mul_right]
+    obtain ⟨val, property⟩ := a
+    simp_all only [mem_fixedPoints, Subtype.forall, Subgroup.mk_smul]
+    grind only [inv_mul_cancel, mul_inv_cancel, = Set.mem_image, Set.mem_singleton_iff, = Set.mem_preimage,
+      SetLike.mem_coe, QuotientGroup.eq, #3f76, #abeb, #b615, #f115]
+shortened proof!
+.X.X.......X.X.X.X.X.X.
+line 278, col 30:
+rwa [hs₁.finite_iff_finite]
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.image_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.BijOn.finite_iff_finite]
+  [apply] grind => instantiate only [Set.BijOn.finite_iff_finite]
+.X.
+line 279, col 30:
+rwa [hs₂.finite_iff_finite]
+* this parameter is redundant, environment already contains `Set.mem_image` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.image_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.BijOn.finite_iff_finite]
+  [apply] grind => instantiate only [Set.BijOn.finite_iff_finite]
+.X...X.X.X.X.X.X.X

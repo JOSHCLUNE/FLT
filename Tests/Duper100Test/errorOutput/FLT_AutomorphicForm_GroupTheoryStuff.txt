@@ -1,0 +1,254 @@
+.......
+line 49, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_true_eq_false]
+.
+line 50, col 16:
+refine ⟨1, a, 0, by simp [ha'.dvd]⟩
+* Try this:
+
+  [apply]     simp_all only [isUnit_iff_eq_one, ne_eq, one_ne_zero, not_false_eq_true, exists_and_left]
+    subst ha'
+    apply Exists.intro
+    · apply Exists.intro
+      · apply And.intro
+        on_goal 2 => apply And.intro
+        on_goal 3 => apply Exists.intro
+        on_goal 3 => {
+          apply IsUnit.dvd
+          simp_all only [isUnit_iff_eq_one]
+          rfl
+        }
+        · simp_all only [mul_one]
+          rfl
+        · simp_all only [coprime_one_left_eq_true]
+        · exact b
+....
+line 54, col 33:
+ring
+* Try this:
+  [apply] grind only
+..
+line 55, col 29:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 86, col 54:
+simp
+* Try this:
+
+  [apply]     simp_all only [bot_subgroupOf, finiteIndex_bot_iff]
+    rfl
+shortened proof!
+..X..
+line 98, col 59:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [mem_subgroupOf, MonoidHom.mem_ker, MonoidHom.coe_comp, coe_subtype, Function.comp_apply]
+...
+line 106, col 71:
+aesop
+* Try this:
+
+  [apply]     intro x
+    simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, mem_map]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only
+.....
+line 128, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [Prod.fst_one, OneMemClass.coe_one, Prod.snd_one, mul_one, mk_eq_one]
+......
+line 138, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, prodToSupOfRight_apply_coe, OneMemClass.coe_one,
+      mul_one]
+.
+line 138, col 75:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_comp, coe_subtype, Function.comp_apply, prodToSupOfRight_apply_coe, OneMemClass.coe_one,
+      one_mul]
+........
+line 173, col 66:
+simpa
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.ker_mk']
+...
+line 177, col 4:
+simp_all
+* Try this:
+
+  [apply]     subst hK₁' hφ
+    simp_all only [relIndex_bot_left, one_pow, MonoidHom.ker_one, le_top]
+..
+line 178, col 53:
+simp_all
+* Try this:
+
+  [apply]     subst hK₁'
+    simp_all only [Nat.coprime_zero_right, bot_le, relIndex_bot_left, pow_one]
+..
+line 179, col 29:
+simpa [hK₁'] using! hK₁K₂
+* Try this:
+
+  [apply]     subst hK₁'
+    simp_all only [relIndex_bot_left, bot_le, isFiniteRelIndex_bot_iff]
+    exact hK₁K₂
+..........
+line 204, col 4:
+simp [hf _]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Function.RightInverse.eq_1, MonoidHom.map_mul, = Function.LeftInverse.eq_1, #ba2e]
+  [apply] grind only [= Function.RightInverse.eq_1, MonoidHom.map_mul, = Function.LeftInverse.eq_1]
+  [apply] grind =>
+    instantiate only [= Function.RightInverse.eq_1, MonoidHom.map_mul]
+    instantiate only [= Function.LeftInverse.eq_1]
+    instantiate only [#ba2e]
+......
+line 215, col 2:
+simp [hf _]
+* Try this:
+
+  [apply]   duper [*, Function.RightInverse.eq] {preprocessing := full}
+.
+line 253, col 54:
+simp [mem_ker.mp hx]
+* Try this:
+
+  [apply]   simp_all only [mem_ker, coe_comp, Function.comp_apply, map_one]
+.
+line 255, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext x : 2
+    simp_all only [coe_comp, Function.comp_apply, liftOfRightInverseAux'_comp_apply]
+shortened proof!
+.....
+line 297, col 76:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [mem_ker, coe_comp, Function.comp_apply, map_one]
+.
+line 301, col 2:
+rw [← toConjAct_inv, toConjAct_inv_smul]
+* Try this:
+
+  [apply]   smt +mono [*, smul_def, toConjAct_inv_smul, toConjAct_inv, toConjAct_ofConjAct]
+..
+line 306, col 2:
+simp [← map_mul, eq_comm]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+    ac
+..
+line 312, col 2:
+simp [← map_mul]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_div` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+  [apply] grind => instantiate only [inv_mul_cancel, mul_inv_cancel, map_mul_eq_one]
+.......
+line 320, col 50:
+simp
+* Try this:
+
+  [apply]   simp_all only [coeHom_apply, Submonoid.mk_mul_mk, mul_inv, Submonoid.mk_eq_one]
+.
+line 320, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [coeHom_apply, Submonoid.mk_mul_mk, inv_mul, Submonoid.mk_eq_one]
+..
+line 329, col 25:
+ext
+* Try this:
+
+  [apply]     simp_all only [smul_eq_mul]
+    ext : 1
+    simp_all only [Units.val_mul, Units.val_smul]
+    apply smul_mul_assoc
+shortened proof!
+....
+line 349, col 65:
+grind
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      apply Exists.intro
+      · apply And.intro
+        on_goal 2 => apply And.intro
+        on_goal 3 => { exact right
+        }
+        · simp_all only
+        · simp_all only [not_false_eq_true]
+    · intro a
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      obtain ⟨left_1, right⟩ := right
+      apply Exists.intro
+      · apply And.intro
+        on_goal 2 => apply And.intro
+        on_goal 3 => { exact right
+        }
+        · simp_all only [not_false_eq_true]
+        · simp_all only
+..X.X.X..
+line 366, col 2:
+exact mul_mem (zpow_mem hm _) (zpow_mem hn _)
+* Try this:
+
+  [apply]     apply MulMemClass.mul_mem
+    · apply Subgroup.zpow_mem
+      simp_all only
+    · apply Subgroup.zpow_mem
+      simp_all only
+...
+line 379, col 33:
+simpa using H
+* Try this:
+
+  [apply]   simp_all only [Units.isUnit_units_mul]
+..

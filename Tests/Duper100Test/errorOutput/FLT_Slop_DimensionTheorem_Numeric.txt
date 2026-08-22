@@ -1,0 +1,126 @@
+......
+line 70, col 18:
+simpa using h n
+* Try this:
+
+  [apply]   simp_all only [pow_zero, mul_one]
+...
+line 84, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.range_zero, Finset.sum_empty, add_zero, zero_mul, Std.le_refl]
+.....
+line 91, col 6:
+rw [Nat.succ_mul, ← Nat.add_assoc, Nat.add_sub_cancel]
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 92, col 4:
+rw [hsub] at key
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+....
+line 107, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_add, one_pow, mul_one, le_add_iff_nonneg_left, zero_le]
+....
+line 116, col 4:
+simpa using this
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Finset.card_range, smul_eq_mul]
+..
+line 119, col 4:
+have hne : n + n * c = n * (c + 1) := by ring
+* Try these:
+  [apply] grind only [Nat.mul_add_one]
+  [apply] grind =>
+    instantiate only [Nat.mul_add_one]
+    lia
+shortened proof!
+..
+line 125, col 4:
+rw [add_mul, one_mul]
+* this parameter is redundant, environment already contains `Finset.mem_sdiff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 134, col 34:
+ring
+* this parameter is redundant, environment already contains `Finset.mem_sdiff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 136, col 36:
+omega
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    grind only
+.
+line 137, col 62:
+ring
+* this parameter is redundant, environment already contains `Finset.mem_sdiff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 151, col 12:
+intro n
+* Try this:
+
+  [apply]     intro n
+    simp_all only [zero_add, Nat.multichoose_one, pow_zero, Std.le_refl]
+shortened proof!
+...
+line 155, col 14:
+simp [Nat.multichoose_zero_right]
+* Try this:
+
+  [apply]   simp_all only [Nat.multichoose_zero_right, zero_add, one_pow, Std.le_refl]
+.....
+line 160, col 61:
+omega
+* Try this:
+
+  [apply]   simp_all only [add_le_add_iff_left, Nat.one_le_ofNat]
+.
+line 161, col 6:
+calc Nat.multichoose (k + 1) (n + 1) + Nat.multichoose (k + 2) n
+          ≤ (n + 2) ^ k + (n + 1) ^ (k + 1) := Nat.add_le_add (ih (n + 1)) ihn
+        _ ≤ (n + 2) ^ k + (n + 1) * (n + 2) ^ k := Nat.add_le_add_left h2 _
+        _ = (n + 2) ^ (k + 1) := by ring
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_succ_self_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_succ` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#6033]
+  [apply] grind only
+  [apply] grind =>
+    instantiate only [#6033]
+    lia
+..
+line 168, col 49:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.sub_add_cancel]
+..
+line 170, col 2:
+simpa using multichoose_le_pow m n
+* Try this:
+
+  [apply]     simp_all only [le_add_iff_nonneg_left, zero_le, add_tsub_cancel_right]
+    apply _private.FLT.Slop.DimensionTheorem.Numeric.0.DimensionTheorem.multichoose_le_pow

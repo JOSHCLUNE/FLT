@@ -1,0 +1,64 @@
+.
+line 59, col 2:
+cases a
+* Try these:
+  [apply] grind only [Subtype.coe_inj]
+  [apply] grind => instantiate only [Subtype.coe_inj]
+shortened proof!
+.
+line 69, col 4:
+rw [smul_add m (a : A) b, a.prop m, b.prop m]
+* Try these:
+  [apply] grind only [smul_add, usr Subtype.property, #7643, #a49d]
+  [apply] grind only [smul_add, usr Subtype.property]
+  [apply] grind =>
+    instantiate only [smul_add, usr Subtype.property]
+    instantiate only [#7643, #a49d]
+.....
+line 87, col 4:
+ext
+* Try this:
+
+  [apply]   smt +mono [*, coe_add, ext, add_assoc]
+shortened proof!
+...
+line 92, col 14:
+simp
+* Try this:
+
+  [apply]   simp_all only [nsmul_eq_smul, zero_nsmul, smul_zero]
+...
+line 97, col 4:
+simp [zero_def]
+* Try this:
+
+  [apply]     simp_all only [nsmul_eq_smul, zero_nsmul]
+    rfl
+......
+line 111, col 35:
+rw [← smul_add, neg_add_cancel, smul_zero]
+* Try this:
+
+  [apply]   simp_all only [_root_.smul_neg, neg_add_cancel]
+...
+line 120, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [zsmul_eq_smul, zero_smul, smul_zero]
+....
+line 125, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [zsmul_eq_smul, zero_smul]
+    rfl
+shortened proof!
+.........
+line 143, col 4:
+ext
+* Try this:
+
+  [apply]   apply add_comm
+shortened proof!
+.............

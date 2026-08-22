@@ -1,0 +1,33 @@
+.
+line 24, col 38:
+simp [← map_smul, show _ = _ from hσ]
+* Try this:
+
+  [apply]     rename_i x
+    simp_all only [Subgroup.mk_smul]
+    simp_all only [mem_stabilizer_iff]
+    obtain ⟨val, property⟩ := i
+    obtain ⟨val_1, property_1⟩ := x
+    simp_all only [mem_stabilizer_iff]
+    simp_all only [Set.mem_range]
+    obtain ⟨w, h⟩ := property
+    subst h
+    simp_all only [map_smul]
+    duper [*, MulActionHom.map_smul, toPerm_apply] {preprocessing := full}
+...._....
+line 33, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_smul, inv_smul_smul]
+    rfl
+shortened proof!
+......
+line 38, col 4:
+congr 2
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.X.X.X...X...X..X.X..X.X

@@ -1,0 +1,57 @@
+..
+line 31, col 30:
+simp [← Subalgebra.coe_eq_zero, aeval_subalgebra_coe]
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [coe_aeval_mk_apply, minpoly.aeval, ZeroMemClass.coe_zero]
+......X......
+line 77, col 79:
+contradiction
+* Try this:
+
+  [apply]   simp_all only [not_true_eq_false]
+......
+line 87, col 4:
+simp at this
+* Try this:
+
+  [apply]   simp_all only [neZero_zero_iff_false]
+...
+line 89, col 67:
+simpa
+* Try this:
+
+  [apply]   simp_all only [zero_add, mul_one, one_mul, ne_eq, Nat.reduceAdd, eq_mpr_eq_cast, AlgEquiv.trans_apply,
+      EmbeddingLike.map_eq_zero_iff, not_false_eq_true, e']
+..
+line 90, col 40:
+simpa using this
+* Try this:
+
+  [apply]   simp_all only [zero_add, Nat.reduceAdd, Nat.reduceMul, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, mul_eq_left₀]
+..._.......
+line 108, col 60:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.coe_toAlgHom, Polynomial.degree_zero, Fintype.card_fin, Nat.cast_ofNat, WithBot.bot_ne_ofNat]
+.
+line 109, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.coe_toAlgHom, Matrix.charpoly_natDegree_eq_dim, Fintype.card_fin, Std.le_refl]
+...........
+line 122, col 6:
+lia
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd, Nat.reduceMul, Nat.reduceLeDiff]
+.........
+line 133, col 68:
+simp [mul_comm]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_mul]
+  [apply] grind => instantiate only [= map_mul]
