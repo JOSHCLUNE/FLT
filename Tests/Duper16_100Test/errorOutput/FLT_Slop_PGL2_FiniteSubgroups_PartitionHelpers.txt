@@ -1,0 +1,474 @@
+....
+line 69, col 74:
+omega
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+.........
+line 85, col 2:
+linarith only [h1, h3]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right,
+      ge_iff_le, Nat.not_ofNat_le_one, P']
+......
+line 132, col 4:
+obtain ⟨g', hg', rfl⟩ := Subgroup.mem_map.mp hg
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, Subtype.forall, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right]
+    obtain ⟨w, h⟩ := hg
+    simp_all only [gt_iff_lt]
+shortened proof!
+...........
+line 157, col 28:
+rw [ha1, one_mul, mul_one]
+* Try this:
+
+  [apply]     subst ha1
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_toSubmonoid, Sylow.coe_coe, SetLike.mem_coe, one_mem, one_mul, mul_one]
+..
+line 158, col 28:
+rw [hb1, mul_one, one_mul]
+* Try this:
+
+  [apply]     subst hb1
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_toSubmonoid, Sylow.coe_coe, SetLike.mem_coe, one_mem, mul_one, one_mul]
+......................................
+line 224, col 6:
+rw [Finset.sum_empty]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Finset.mem_univ, Sylow.coe_coe, Set.iUnion_true, Finset.notMem_empty, SetLike.mem_coe,
+      one_mem, not_true_eq_false, Set.sdiff_singleton_eq_self, Set.iUnion_of_empty, Set.iUnion_empty, Set.ncard_empty,
+      Set.ncard_sdiff_singleton_of_mem, Finset.sum_empty]
+shortened proof!
+..
+line 233, col 8:
+ext x
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Finset.mem_univ, Sylow.coe_coe, Set.iUnion_true, SetLike.mem_coe, one_mem,
+      Set.ncard_sdiff_singleton_of_mem, Finset.mem_insert, Set.iUnion_iUnion_eq_or_left]
+shortened proof!
+.........
+line 249, col 4:
+exact show Nat.card Q - 1 = Nat.card P - 1 from
+      congr_arg (· - 1) ((Sylow.card_eq_multiplicity Q).trans (Sylow.card_eq_multiplicity P).symm)
+* Try these:
+  [apply] grind only [!SetLike.coe_sort_coe, !Sylow.card_eq_multiplicity]
+  [apply] grind => instantiate only [!SetLike.coe_sort_coe, !Sylow.card_eq_multiplicity]
+..
+line 254, col 2:
+rfl
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Finset.mem_univ, Sylow.coe_coe, Set.iUnion_true, SetLike.mem_coe, one_mem,
+      Set.ncard_sdiff_singleton_of_mem, smul_eq_mul]
+........
+line 277, col 18:
+rfl
+* Try this:
+
+  [apply]     subst hg hh h_zero
+    simp_all only [gt_iff_lt, map_one, Fin.isValue, Units.val_one, Matrix.one_apply_eq,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one]
+.
+line 278, col 18:
+exact h_zero.symm
+* Try this:
+
+  [apply]     subst hg hh h_zero
+    simp_all only [gt_iff_lt, map_one, Fin.isValue, Units.val_one, ne_eq, zero_ne_one, not_false_eq_true,
+      Matrix.one_apply_ne, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val',
+      Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.cons_val_zero]
+.
+line 279, col 18:
+rfl
+* Try this:
+
+  [apply]     subst hg hh h_zero
+    simp_all only [gt_iff_lt, map_one, Fin.isValue, Units.val_one, ne_eq, one_ne_zero, not_false_eq_true,
+      Matrix.one_apply_ne, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val',
+      Matrix.cons_val_zero, Matrix.cons_val_fin_one, Matrix.cons_val_one]
+.
+line 280, col 18:
+rfl
+* Try this:
+
+  [apply]     subst hg hh h_zero
+    simp_all only [gt_iff_lt, map_one, Fin.isValue, Units.val_one, Matrix.one_apply_eq,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one]
+..
+line 282, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hg hh
+    simp_all only [gt_iff_lt, ne_eq, Matrix.det_fin_two_of, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+..
+line 284, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hg hh
+    simp_all only [gt_iff_lt, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, one_ne_zero, not_false_eq_true]
+shortened proof!
+......
+line 290, col 4:
+exact h_center
+* Try this:
+
+  [apply]     subst hg hh
+    simp_all only [gt_iff_lt, ne_eq, mul_inv_rev, MonoidHom.mem_range, RingHom.toMonoidHom_eq_coe, B, A]
+    obtain ⟨w, h⟩ := h_center
+    apply Exists.intro
+    · exact h
+........
+line 299, col 4:
+exact h3
+* Try this:
+  [apply] grind only
+.....
+line 304, col 4:
+calc d = 0 * β + d * 1 := by ring
+      _ = (c : K p) * (0 * b + 1 * d) := h4
+      _ = (c : K p) * d := by ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 308, col 66:
+rw [h, mul_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 310, col 33:
+exact h_mul
+* Try this:
+  [apply] grind only
+.....
+line 316, col 4:
+have h_eq : a * β = d * β := by
+      calc a * β = a * β + b * 1 - b := by ring
+        _ = 1 * b + β * d - b := by rw [h_01]
+        _ = d * β := by ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.....
+line 324, col 48:
+rw [h_zero]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+....
+line 328, col 16:
+exact h_ad.symm
+* Try this:
+
+  [apply]     subst hg hh h_ad hb
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, RingHom.toMonoidHom_eq_coe, map_one,
+      mul_inv_rev, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      zero_smul, Matrix.empty_vecMul, add_zero, mul_zero, zero_add, Matrix.empty_mul, Equiv.symm_apply_apply, one_smul,
+      Matrix.add_cons, Matrix.empty_add_empty, EmbeddingLike.apply_eq_iff_eq, Matrix.vecCons_inj, and_true, true_and,
+      Fin.isValue, Matrix.GeneralLinearGroup.coe_scalar, Units.val_mk0, Matrix.scalar_apply, Matrix.diagonal_apply_eq,
+      Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one, B, A]
+.
+line 329, col 16:
+exact hb.symm
+* Try this:
+
+  [apply]     subst hg hh h_ad hb
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, RingHom.toMonoidHom_eq_coe, map_one,
+      mul_inv_rev, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      zero_smul, Matrix.empty_vecMul, add_zero, mul_zero, zero_add, Matrix.empty_mul, Equiv.symm_apply_apply, one_smul,
+      Matrix.add_cons, Matrix.empty_add_empty, EmbeddingLike.apply_eq_iff_eq, Matrix.vecCons_inj, and_true, true_and,
+      Fin.isValue, Matrix.GeneralLinearGroup.coe_scalar, Units.val_mk0, Matrix.scalar_apply, zero_ne_one,
+      not_false_eq_true, Matrix.diagonal_apply_ne, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero, B, A]
+.
+line 330, col 16:
+rfl
+* Try this:
+
+  [apply]     subst hg hh h_ad hb
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, RingHom.toMonoidHom_eq_coe, map_one,
+      mul_inv_rev, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      zero_smul, Matrix.empty_vecMul, add_zero, mul_zero, zero_add, Matrix.empty_mul, Equiv.symm_apply_apply, one_smul,
+      Matrix.add_cons, Matrix.empty_add_empty, EmbeddingLike.apply_eq_iff_eq, Matrix.vecCons_inj, and_true, true_and,
+      Fin.isValue, Matrix.GeneralLinearGroup.coe_scalar, Units.val_mk0, Matrix.scalar_apply, one_ne_zero,
+      not_false_eq_true, Matrix.diagonal_apply_ne, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, B, A]
+.
+line 331, col 16:
+rfl
+* Try this:
+
+  [apply]     subst hg hh h_ad hb
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, RingHom.toMonoidHom_eq_coe, map_one,
+      mul_inv_rev, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      zero_smul, Matrix.empty_vecMul, add_zero, mul_zero, zero_add, Matrix.empty_mul, Equiv.symm_apply_apply, one_smul,
+      Matrix.add_cons, Matrix.empty_add_empty, EmbeddingLike.apply_eq_iff_eq, Matrix.vecCons_inj, and_true, true_and,
+      Fin.isValue, Matrix.GeneralLinearGroup.coe_scalar, Units.val_mk0, Matrix.scalar_apply, Matrix.diagonal_apply_eq,
+      Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one, Matrix.cons_val_fin_one, B, A]
+........
+line 339, col 8:
+change b = c_unit * 0 at h_val
+* Try this:
+
+  [apply]     subst hg hh h_ad h_val
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, Fin.isValue, Matrix.smul_apply,
+      zero_ne_one, not_false_eq_true, Matrix.one_apply_ne, smul_eq_mul, mul_zero, not_true_eq_false]
+shortened proof!
+.
+line 341, col 6:
+exact hb hc_val2
+* Try this:
+
+  [apply]     subst hg hh h_ad hc_val2
+    simp_all only [gt_iff_lt, ne_eq, Units.val_eq_one, Units.val_one, one_mul, not_true_eq_false]
+........
+line 349, col 6:
+rw [h_trace, h_det, h_ad]
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.......
+line 364, col 4:
+change (MulAut.conj k) g * (MulAut.conj k) h = (MulAut.conj k) h * (MulAut.conj k) g
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, conj_mul]
+shortened proof!
+.......
+line 381, col 39:
+rw [h, pow_zero]
+* Try this:
+
+  [apply]   simp_all only [Sylow.coe_coe, true_or, orderOf_submonoid, orderOf_eq_one_iff, OneMemClass.coe_one, orderOf_one,
+      pow_zero]
+.
+line 381, col 74:
+rw [h, pow_one]
+* Try this:
+
+  [apply]   simp_all only [Sylow.coe_coe, or_true, orderOf_submonoid, pow_one]
+.........
+line 414, col 4:
+rw [inv_one, mul_one, one_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, one_mul, inv_one, mul_one]
+......
+line 428, col 4:
+exact Set.mem_range_self y
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Sylow.coe_coe, SetLike.mem_coe, Subgroup.coe_subtype, Subtype.range_coe_subtype,
+      SetLike.setOfPred_mem_eq, Subgroup.subtype_apply, Subtype.coe_prop]
+.....
+line 435, col 4:
+rw [h_comm, mul_inv_cancel_right]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, Subtype.forall, forall_exists_index, MulMemClass.mk_mul_mk, Subtype.mk.injEq, mul_inv_cancel_right]
+.._..................................
+line 483, col 8:
+exact Subtype.ext (show i.val = 1 by
+          calc i.val = g.val⁻¹ * (g.val * i.val * g.val⁻¹) * g.val := by group
+            _ = g.val⁻¹ * 1 * g.val := by rw [hv]
+            _ = 1 := by group)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Sylow.coe_coe, Fintype.card_ofFinset, Subtype.forall,
+      Subgroup.mk_eq_one, Finset.mem_erase, Finset.mem_univ, and_true, conj_eq_one_iff, OneMemClass.coe_eq_one]
+..
+line 490, col 6:
+rw [Finset.card_erase_of_mem (Finset.mem_univ 1), Finset.card_univ, ← Nat.card_eq_fintype_card]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Sylow.coe_coe, Fintype.card_ofFinset, Subtype.forall,
+      Subgroup.mk_eq_one, Finset.mem_univ, Finset.card_erase_of_mem, Finset.card_univ]
+...
+line 510, col 2:
+have h := Nat.mul_lt_mul_of_pos_right hn_p_gt1 (Nat.card_pos (α := Subgroup.normalizer ((P : Subgroup G) : Set G)))
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Sylow.coe_coe, Nat.card_pos, lt_mul_iff_one_lt_left]
+shortened proof!
+...
+line 528, col 4:
+rw [Nat.sub_add_cancel (Nat.one_le_pow k p (Fact.out : Nat.Prime p).pos)]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le]
+    grind only [usr Nat.pow_pos, Nat.Prime.pos, Fact.out, dvd_pow_self, tsub_eq_iff_eq_add_of_le, !Nat.one_le_pow]
+shortened proof!
+..................
+line 564, col 28:
+rw [hg1]
+* Try this:
+
+  [apply]     subst hg1
+    simp_all only [one_mem, one_mul, mul_one]
+shortened proof!
+..
+line 565, col 28:
+rw [hh1]
+* Try this:
+
+  [apply]     subst hh1
+    simp_all only [one_mem, mul_one, one_mul]
+shortened proof!
+.........................
+line 596, col 75:
+simp only [orderOf_submonoid, Nat.card_zpowers, dvd_refl]
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, MulMemClass.mk_mul_mk, Subtype.mk.injEq, Subtype.exists, exists_and_right,
+      orderOf_submonoid, Nat.card_zpowers, dvd_refl]
+........
+line 605, col 6:
+exact le_sup_left
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, MulMemClass.mk_mul_mk, Subtype.mk.injEq, Subtype.exists, exists_and_right, le_sup_left]
+................
+line 635, col 4:
+exact (Finset.mem_sdiff.mp (hS_def ▸ hQ)).2 (Finset.mem_singleton.mpr h_eq.symm)
+* Try this:
+
+  [apply]     subst h_eq
+    simp_all only [gt_iff_lt, ne_eq, Finset.mem_sdiff, Finset.mem_univ, Finset.mem_singleton, not_true_eq_false,
+      and_false, S]
+........
+line 646, col 4:
+exact h_mul.symm
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Finset.mem_sdiff, Finset.mem_univ, Finset.mem_singleton, true_and, Subtype.forall,
+      Subgroup.mk_eq_one, Nat.card_eq_fintype_card, Fintype.card_ofFinset, Subgroup.mem_bot, Fintype.card_unique, S]
+.............
+line 661, col 6:
+exact (Finset.mem_sdiff.mp hQ).2 (Finset.mem_singleton.mpr (by rw [← inv_smul_smul g Q, hgQ_G, hj_eq_P, hgP]))
+* Try this:
+
+  [apply]     subst hj_eq_P hgQ_G
+    simp_all only [gt_iff_lt, ne_eq, Finset.mem_sdiff, Finset.mem_univ, Finset.mem_singleton, true_and, Subtype.forall,
+      Subgroup.mk_eq_one, Nat.card_eq_fintype_card, Fintype.card_ofFinset, Subgroup.mk_smul, inv_smul_smul, S]
+....................
+line 693, col 44:
+rw [Nat.sq_sub_sq, mul_comm]
+* Try these:
+  [apply] grind only [!Nat.one_le_pow, #7116, #7678]
+  [apply] grind only [!Nat.one_le_pow]
+  [apply] grind =>
+    instantiate only [!Nat.one_le_pow]
+    cases #7116 <;> cases #7678 <;> ring
+.
+line 694, col 4:
+exact h_sq ▸ hk ▸ h_div
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos, add_tsub_cancel_right,
+      dvd_mul_left]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    exact h_div
+......
+line 701, col 4:
+cases k
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos, add_tsub_cancel_right,
+      dvd_mul_left]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    exact left
+shortened proof!
+..
+line 704, col 52:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos, add_tsub_cancel_right,
+      dvd_mul_left, Nat.ofNat_pos]
+..
+line 705, col 62:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, mul_pos_iff_of_pos_right, add_tsub_cancel_right, dvd_mul_left,
+      Order.lt_one_iff]
+..
+line 708, col 4:
+calc (p ^ m - 1) * p ^ m + (p ^ m - 1) = (p ^ m - 1) * (p ^ m + 1) := by rw [Nat.mul_add, mul_one]
+      _ = k * a * p ^ m + a := by rw [ha, Nat.add_mul, one_mul, mul_right_comm]
+* Try this:
+  [apply] grind only
+....
+line 713, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+* Try this:
+  [apply] grind only
+....
+line 715, col 112:
+exact le_of_not_gt h_not_lt
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, mul_pos_iff_of_pos_right, add_tsub_cancel_right, dvd_mul_left,
+      not_lt]
+.
+line 716, col 4:
+rw [← h_div_eq, add_comm 1] at h_ge
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 720, col 100:
+rw [add_comm (p ^ m - 1), h_expand, add_comm a]
+* Try this:
+  [apply] grind only
+..
+line 722, col 4:
+exact h_mod_eq.symm
+* Try this:
+
+  [apply]     subst h_mod_eq
+    simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, mul_pos_iff_of_pos_right, add_tsub_cancel_right,
+      dvd_mul_left, Nat.add_right_cancel_iff, mul_eq_mul_right_iff, Nat.pow_eq_zero, ne_eq, tsub_lt_self_iff,
+      Order.lt_one_iff, and_self]
+....
+line 726, col 81:
+norm_num
+* Try this:
+
+  [apply]     subst h_a_eq
+    simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, mul_pos_iff_of_pos_right, add_tsub_cancel_right,
+      dvd_mul_left, Nat.add_right_cancel_iff, mul_eq_mul_right_iff, Nat.pow_eq_zero, ne_eq, tsub_lt_self_iff,
+      Order.lt_one_iff, and_self, Nat.one_lt_ofNat]
+...
+line 728, col 2:
+rw [h_k_eq_one, one_mul] at hk
+* Try this:
+
+  [apply]     subst h_a_eq h_k_eq_one
+    simp_all only [gt_iff_lt, ge_iff_le, one_mul, lt_add_iff_pos_left, add_tsub_cancel_right, dvd_refl, tsub_lt_self_iff,
+      Order.lt_one_iff, and_self, Std.le_refl, Nat.add_left_cancel_iff]
+shortened proof!

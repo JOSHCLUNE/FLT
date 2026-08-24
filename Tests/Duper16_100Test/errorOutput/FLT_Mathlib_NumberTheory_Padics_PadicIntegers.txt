@@ -1,0 +1,79 @@
+.
+line 40, col 60:
+simp [nnnorm]
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [coe_nnnorm, norm_p, NNReal.coe_inv, NNReal.coe_natCast]
+shortened proof!
+.
+line 43, col 2:
+simp [← norm_toNNReal]
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [coe_nnnorm, norm_units, NNReal.coe_one]
+.....
+line 64, col 2:
+rwa [← faithfulSMul_iff_algebraMap_injective R A]
+* Try this:
+
+  [apply]   apply FaithfulSMul.algebraMap_injective
+.........
+line 86, col 4:
+simp [hx]
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [Ideal.one_eq_top, zero_smul, Submodule.zero_eq_bot, Submodule.bot_toAddSubgroup, AddSubgroup.index_bot,
+      Nat.card_eq_zero_of_infinite, CharP.cast_eq_zero, coe_zero, nnnorm_zero, inv_zero]
+...........
+line 108, col 4:
+ext a
+* Try this:
+
+  [apply]     simp_all only [Ideal.one_eq_top, Submodule.pointwise_smul_toAddSubgroup, Submodule.top_toAddSubgroup,
+      AddSubgroup.relIndex_top_right, RingHom.toAddMonoidHom_eq_coe, z_q_coe, H_Q, K_Q]
+    ext x_1 : 1
+    simp_all only [AddSubgroup.mem_map, AddSubgroup.mem_top, AddMonoidHom.coe_coe, coe_coeRingHom, true_and,
+      AddSubgroup.mem_mk, Submodule.mem_toAddSubmonoid, Submodule.mem_one, algebraMap_apply]
+shortened proof!
+...
+line 115, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Ideal.one_eq_top, Submodule.pointwise_smul_toAddSubgroup, Submodule.top_toAddSubgroup,
+      AddSubgroup.relIndex_top_right, RingHom.toAddMonoidHom_eq_coe, z_q_coe, H_Q, K_Q]
+    rfl
+.
+line 116, col 2:
+rw [map_top, map_H_Q] at relIndex_preserved
+* Try this:
+
+  [apply]     simp_all only [Ideal.one_eq_top, Submodule.pointwise_smul_toAddSubgroup, Submodule.top_toAddSubgroup,
+      AddSubgroup.relIndex_top_right, RingHom.toAddMonoidHom_eq_coe, z_q_coe, H_Q, K_Q]
+    exact relIndex_in_z_p
+shortened proof!
+........
+line 141, col 4:
+simp only [mem_nonZeroDivisors_iff_ne_zero, ne_eq]
+* Try this:
+
+  [apply]     simp_all only [mem_nonZeroDivisors_iff_ne_zero, ne_eq, algebraMap_apply]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [coe_zero, zero_div]
+    duper [*, Units.ne_zero] {preprocessing := full}
+shortened proof!
+..
+line 146, col 2:
+ext
+* Try this:
+
+  [apply]     simp_all only [algebraMap_apply]
+    ext : 1
+    simp_all only [Units.val_div_eq_div_val, Units.val_mk0]
+shortened proof!
+...

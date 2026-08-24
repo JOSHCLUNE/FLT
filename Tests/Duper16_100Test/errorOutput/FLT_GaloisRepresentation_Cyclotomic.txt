@@ -1,0 +1,52 @@
+.
+line 28, col 2:
+obtain ⟨z, hz⟩ : ∃ z : L, IsPrimitiveRoot z N :=
+    IsCyclotomicExtension.exists_isPrimitiveRoot L _ (show _ ∈ ⊤ by simp) (NeZero.ne N)
+* Try this:
+
+  [apply]   duper [*, card_rootsOfUnity] {preprocessing := full}
+shortened proof!
+.
+line 33, col 62:
+exact Iff.symm dvd_iff
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      duper [*, dvd_iff] {preprocessing := full}
+    · intro a
+      duper [*, dvd_iff] {preprocessing := full}
+.
+line 37, col 2:
+rw [pow_eq_pow_mod b h, pow_eq_pow_mod c h]
+* Try this:
+
+  [apply]     apply pow_eq_pow_of_modEq
+    on_goal 2 => { exact h
+    }
+    · simp_all only
+shortened proof!
+.
+line 42, col 2:
+rw [ZMod.castHom_apply, ZMod.cast_eq_val, ZMod.val_natCast]
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply]
+    duper [*, ZMod.val_natCast, ZMod.intCast_cast, ZMod.natCast_mod, ZMod.natCast_val] {preprocessing := full}
+shortened proof!
+..........
+line 59, col 17:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_one, Units.val_one]
+    rfl
+shortened proof!
+.
+line 60, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [ZMod.castHom_apply, map_mul, Units.val_mul]
+    rfl
+shortened proof!

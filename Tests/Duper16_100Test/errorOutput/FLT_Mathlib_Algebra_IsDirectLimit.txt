@@ -1,0 +1,23 @@
+...
+line 83, col 2:
+rw [← Hg i k hik x, ← Hg (preimageIndex f g₁ (g₁ i x)) k hpk, h_eq]
+* Try these:
+  [apply] grind only [#5f16]
+  [apply] grind only
+  [apply] grind => instantiate only [#5f16]
+.........X.X.X....._.......
+line 164, col 2:
+dsimp [lift, IsDirectLimit.lift_of]
+* Try this:
+
+  [apply]   apply lift_of
+shortened proof!
+.
+line 169, col 6:
+simp only [LinearMap.coe_comp, Function.comp_apply]
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, Function.comp_apply]
+    grind only [isDirectLimit_iff, #4ee2]
+shortened proof!
+.

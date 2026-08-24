@@ -1,0 +1,96 @@
+..
+line 79, col 20:
+ext
+* Try this:
+
+  [apply]     ext i : 1
+    simp_all only [smul_apply', zero_apply, zero_smul]
+shortened proof!
+.
+line 80, col 20:
+ext
+* Try this:
+
+  [apply]     ext i : 1
+    simp_all only [smul_apply', zero_apply, smul_zero]
+shortened proof!
+.
+line 81, col 19:
+ext
+* Try this:
+
+  [apply]     ext i : 1
+    simp_all only [smul_apply', one_apply, one_smul]
+shortened proof!
+...
+line 83, col 23:
+ext
+* Try this:
+
+  [apply]     ext i : 1
+    simp_all only [smul_apply', add_apply, smul_add]
+shortened proof!
+.....
+line 91, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_apply', coe_single_apply, Pi.single_eq_same]
+.
+line 92, col 4:
+simp [single_eq_of_ne' _ _ hi]
+* Try this:
+
+  [apply]   simp_all only [smul_apply', coe_single_apply, ne_eq, not_false_eq_true, Pi.single_eq_of_ne', zero_smul]
+...
+line 99, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_apply', coe_single_apply, Pi.single_eq_same]
+.
+line 100, col 4:
+simp [single_eq_of_ne' _ _ hi]
+* Try this:
+
+  [apply]   simp_all only [smul_apply', coe_single_apply, ne_eq, not_false_eq_true, Pi.single_eq_of_ne', smul_zero]
+.
+line 104, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [single_smul, one_smul]
+....
+line 125, col 29:
+simp [r']
+* Try this:
+
+  [apply]   simp_all only [coe_single_apply, Pi.single_eq_same, r']
+...
+line 147, col 20:
+ext
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+.....
+line 194, col 6:
+rw [piSubringSubmodule, Submodule.coe_pi, Set.mem_univ_pi] at hr
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe]
+    apply hr
+    simp_all only [Set.mem_univ]
+shortened proof!
+...
+line 205, col 2:
+apply isOpen_set_pi Set.finite_univ
+* Try this:
+
+  [apply]     apply isOpen_set_pi
+    · simp_all only [Set.finite_univ]
+    · intro a a_1
+      simp_all only [Set.mem_univ]
+      apply hOpen
+shortened proof!
+.......................

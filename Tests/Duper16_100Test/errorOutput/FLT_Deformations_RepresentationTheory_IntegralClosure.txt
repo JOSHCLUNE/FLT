@@ -1,0 +1,33 @@
+.
+line 40, col 2:
+delta IntegralClosure
+* Try this:
+
+  [apply]   duper [*, Subalgebra.isDomain] {preprocessing := full}
+shortened proof!
+.
+line 43, col 2:
+delta IntegralClosure
+* Try this:
+
+  [apply]   duper [*, le_integralClosure_iff_isIntegral, integralClosure, integralClosure.AlgebraIsIntegral] {preprocessing := full}
+shortened proof!
+...........
+line 81, col 2:
+exact x.2
+* Try this:
+
+  [apply]   simp_all only [ValuationSubring.algebraMap_apply, ValuationSubring.mem_top, SetLike.coe_mem]
+......
+line 93, col 4:
+exact ⟨x, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [ValuationSubring.algebraMap_apply, Subtype.exists]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    apply Exists.intro
+    · apply Exists.intro
+      · rfl
+      · simp_all only
+.

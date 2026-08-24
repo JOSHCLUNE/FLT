@@ -1,0 +1,526 @@
+.........
+line 70, col 6:
+rw [h_dichotomy.1.mpr hp]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, imp_false, Set.ncard_eq_one, iff_true, Nat.coprime_self, orderOf_submonoid]
+    obtain ⟨val, property⟩ := g
+    obtain ⟨left, right⟩ := h_dichotomy
+    obtain ⟨w, h⟩ := left
+    simp_all only [Set.ncard_singleton, OfNat.one_ne_ofNat, false_iff, Order.lt_one_iff]
+shortened proof!
+.
+line 72, col 6:
+rw [h_dichotomy.2.mpr hcoprime.symm]
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+.....
+line 82, col 24:
+rw [← inv_mul_cancel_left h g, mul_inv_eq_one.mp heq, inv_mul_cancel]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, conj_eq_one_iff]
+......
+line 108, col 6:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Subtype.forall, Subgroup.mk_eq_one, Subgroup.mem_bot,
+      Fintype.card_unique, ge_iff_le, Nat.not_ofNat_le_one, not_false_eq_true]
+.......
+line 119, col 40:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Set.ncard_eq_one, iff_true, Nat.coprime_self, orderOf_submonoid, Nat.one_le_ofNat]
+.....
+line 127, col 6:
+intro _
+* Try this:
+
+  [apply]     intro a
+    simp_all only [gt_iff_lt, ne_eq, Subtype.forall, Subgroup.mk_eq_one, Finset.notMem_empty, not_false_eq_true,
+      Finset.coe_empty, Set.mem_empty_iff_false, Set.iUnion_of_empty, Set.iUnion_empty, Set.ncard_empty,
+      Finset.card_empty, mul_zero, Std.le_refl]
+shortened proof!
+........
+line 138, col 4:
+ext x
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, Subtype.forall, Subgroup.mk_eq_one, SetLike.mem_coe, Finset.coe_erase,
+      Finset.coe_univ, Set.mem_sdiff, Set.mem_univ, Set.mem_singleton_iff, true_and]
+    rfl
+shortened proof!
+...
+line 143, col 2:
+rw [Finset.card_erase_of_mem (Finset.mem_univ (1 : G)), Finset.card_univ, ← Nat.card_eq_fintype_card] at h_bound
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Subtype.forall, Subgroup.mk_eq_one, SetLike.mem_coe, Finset.coe_erase, Finset.coe_univ,
+      Set.mem_sdiff, Set.mem_univ, Set.mem_singleton_iff, true_and, Finset.mem_univ, Finset.card_erase_of_mem,
+      Finset.card_univ, Nat.card_eq_fintype_card]
+shortened proof!
+.....
+line 152, col 28:
+rw [ha1, one_mul, mul_one]
+* Try this:
+
+  [apply]     subst ha1
+    simp_all only [ne_eq, one_mem, one_mul, mul_one]
+..
+line 153, col 28:
+rw [hb1, mul_one, one_mul]
+* Try this:
+
+  [apply]     subst hb1
+    simp_all only [ne_eq, one_mem, mul_one, one_mul]
+......
+line 165, col 53:
+group
+* Try this:
+  [apply] grind only
+..
+line 167, col 34:
+group
+* Try this:
+  [apply] grind only
+...................
+line 186, col 4:
+rw [ha_pow, hb_pow, mul_one]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Subtype.exists, MulMemClass.mk_mul_mk, SubmonoidClass.mk_pow, Subgroup.mk_eq_one, one_mem,
+      mul_one, S]
+...............
+line 219, col 2:
+change g * y * g⁻¹ = _ at hy_eq
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_coe, MulAut.conj_apply, mul_left_inj, mul_right_inj]
+shortened proof!
+..........
+line 266, col 2:
+rintro h rfl
+* Try these:
+  [apply] grind only [!orderOf_eq_prime, orderOf_eq_prime_iff]
+  [apply] grind =>
+    instantiate only [!orderOf_eq_prime]
+    instantiate only [orderOf_eq_prime_iff]
+shortened proof!
+.......
+line 283, col 6:
+exact h_dich.1.mpr h_p
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Finset.mem_erase, ne_eq, not_false_eq_true, Finset.mem_univ,
+      and_self, Set.ncard_eq_one, iff_true, Nat.coprime_self, orderOf_submonoid]
+......
+line 289, col 6:
+ext g
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Finset.mem_erase, ne_eq, Finset.mem_univ, and_true,
+      orderOf_submonoid, Subtype.forall, Subgroup.mk_eq_one, Finset.coe_filter]
+shortened proof!
+.......
+line 299, col 15:
+rw [h_p] at h_cop
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, Finset.mem_erase, ne_eq, Finset.mem_univ, and_true,
+      orderOf_submonoid, Subtype.forall, Subgroup.mk_eq_one, Finset.mem_filter, Fintype.card_ofFinset, Set.mem_ofPred_eq,
+      not_false_eq_true, Nat.coprime_self, true_and, orderOf_eq_one_iff]
+shortened proof!
+...
+line 305, col 2:
+omega
+* Try this:
+  [apply] grind only
+............
+line 341, col 4:
+omega
+* Try this:
+  [apply] grind only
+...........
+line 351, col 4:
+subst h_k_eq_1
+* Try this:
+
+  [apply]     subst h_k_eq_1
+    simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, Order.add_one_le_iff, isUnit_iff_eq_one, IsUnit.dvd]
+    obtain ⟨left, right⟩ := h_dvd_both
+    have fwd : False := Nat.prime_one_false h1
+    clear h1
+    simp_all only [not_isEmpty_of_nonempty, Fintype.card_eq_zero, dvd_zero, not_lt_zero, nonpos_iff_eq_zero,
+      OfNat.ofNat_ne_zero, lt_self_iff_false, dvd_refl]
+shortened proof!
+....
+line 356, col 78:
+omega
+* Try this:
+  [apply] grind only
+............................................................
+line 479, col 33:
+exact Nat.lt_of_not_le h_gt
+* Try this:
+  [apply] grind only
+....
+line 483, col 33:
+exact Nat.le_of_lt_succ (Nat.lt_of_not_le h_lt)
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, gt_iff_lt, Set.fintypeCard_eq_ncard, not_le, Order.lt_two_iff]
+.....
+line 518, col 77:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, dvd_mul_right]
+    smt +mono [*]
+..
+line 519, col 30:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    apply Nat.ge_of_not_lt
+    simp_all only [Order.lt_two_iff, not_le]
+    apply Nat.lt_of_le_of_ne
+    · exact left
+    · apply Aesop.BuiltinRules.not_intro
+      intro a_1
+      subst a_1
+      simp_all only [Nat.not_ofNat_le_one]
+...
+line 523, col 6:
+convert hD_dvd using 1
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    smt +mono [*]
+shortened proof!
+...
+line 527, col 8:
+apply Nat.sub_eq_of_eq_add
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    smt +mono [*]
+shortened proof!
+...
+line 531, col 8:
+have hg : Nat.gcd (pm * a + 1) a ∣ pm * a + 1 - pm * a :=
+          Nat.dvd_sub (Nat.gcd_dvd_left _ _) (dvd_trans (Nat.gcd_dvd_right _ _) (dvd_mul_left a pm))
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right, Nat.coprime_mul_right_add_right, Nat.coprime_one_right_eq_true]
+shortened proof!
+...
+line 539, col 72:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right]
+...
+line 543, col 30:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right, tsub_pos_iff_lt]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    exact hpm_ge2
+.
+line 543, col 46:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, gt_iff_lt, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos,
+      add_tsub_cancel_right, dvd_mul_right]
+    obtain ⟨left, right⟩ := hn_p_gt1
+    grind only
+..
+line 545, col 32:
+omega
+* Try this:
+
+  [apply]     simp_all
+    obtain ⟨left, right⟩ := hn_p_gt1
+    exact hz₁_ge1
+...
+line 549, col 6:
+exfalso
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, mul_zero, zero_add, gt_iff_lt, lt_self_iff_false]
+shortened proof!
+.
+line 550, col 6:
+left
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, zero_add, mul_one, gt_iff_lt, lt_add_iff_pos_left, add_tsub_cancel_right,
+      dvd_refl, one_mul, OfNat.one_ne_ofNat, false_and, or_false]
+shortened proof!
+....
+line 552, col 55:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, zero_add, Nat.reduceAdd, gt_iff_lt, lt_add_iff_pos_left,
+      Order.lt_two_iff, zero_le, mul_pos_iff_of_pos_right, add_tsub_cancel_right, dvd_mul_right, Nat.sub_add_cancel]
+..
+line 554, col 8:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, le_add_iff_nonneg_left, zero_le, Nat.dvd_add_self_right, Nat.two_dvd_ne_zero,
+      Nat.add_one_sub_one, zero_add, Nat.reduceAdd, Nat.reduceSubDiff, mul_zero, gt_iff_lt, lt_add_iff_pos_left,
+      add_pos_iff, Nat.ofNat_pos, or_true, mul_pos_iff_of_pos_left, Order.lt_two_iff, add_tsub_cancel_right,
+      dvd_mul_right, mul_eq_zero, OfNat.ofNat_ne_zero, false_or, nonpos_iff_eq_zero, one_ne_zero]
+.
+line 555, col 8:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 556, col 8:
+rw [show 2 * (x + 3) - 2 = 2 * x + 4 by omega] at h_z1_le
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 559, col 6:
+right
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 560, col 6:
+exfalso
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+...
+line 566, col 83:
+omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 568, col 6:
+by_contra h
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, mul_one, gt_iff_lt, lt_add_iff_pos_left, add_tsub_cancel_right,
+      dvd_refl, one_mul]
+    smt +mono [*]
+shortened proof!
+..
+line 573, col 6:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, mul_zero, zero_le, mul_one, gt_iff_lt, lt_add_iff_pos_left,
+      add_tsub_cancel_right, dvd_refl, one_mul, dvd_zero, mul_eq_zero, OfNat.ofNat_ne_zero, false_or, zero_ne_one,
+      Nat.reduceEqDiff, false_and, and_false, Nat.add_left_cancel_iff, and_true, OfNat.zero_ne_ofNat, or_false,
+      nonpos_iff_eq_zero, one_ne_zero]
+..
+line 575, col 8:
+left
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, zero_add, Nat.one_le_ofNat, Std.le_refl, Nat.reduceDvd, not_false_eq_true,
+      Nat.add_one_sub_one, Nat.reduceLeDiff, mul_one, Nat.reduceMul, Nat.reduceSub, Nat.reduceAdd, gt_iff_lt,
+      Nat.one_lt_ofNat, dvd_refl, one_mul, ne_eq, OfNat.ofNat_ne_zero, mul_eq_left₀, and_self, Order.lt_two_iff, zero_le,
+      Nat.div_self, and_true, OfNat.one_ne_ofNat, Nat.reduceEqDiff, and_false, or_self, or_false]
+shortened proof!
+..
+line 576, col 15:
+left
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.not_odd_zero, Nat.sub_eq_zero_of_le, Nat.not_odd_iff_even, Nat.even_sub, even_iff_two_dvd]
+  [apply] grind =>
+    instantiate only [Nat.not_odd_zero, Nat.sub_eq_zero_of_le]
+    instantiate only [Nat.not_odd_iff_even]
+    instantiate only [Nat.even_sub]
+    instantiate only [even_iff_two_dvd]
+shortened proof!
+.
+line 577, col 6:
+right
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 578, col 6:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.two_dvd_ne_zero, mul_one, gt_iff_lt, lt_add_iff_pos_left, add_tsub_cancel_right, dvd_refl,
+      one_mul, Order.add_one_le_iff, Order.lt_two_iff, add_le_iff_nonpos_left, nonpos_iff_eq_zero, Nat.add_eq_zero_iff,
+      one_ne_zero, and_false]
+.
+line 579, col 4:
+have hz1_cases : z₁ = 1 ∨ z₁ = 2 := by omega
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.even_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+........
+line 595, col 6:
+by_contra hz
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, Subtype.exists, not_exists, Decidable.not_not]
+    obtain ⟨val, property⟩ := z
+    apply h_all
+shortened proof!
+.
+line 597, col 4:
+omega
+* Try this:
+
+  [apply]     intro h_orbits
+    simp_all only [gt_iff_lt, Subtype.exists, not_exists, Decidable.not_not, OfNat.one_ne_ofNat]
+...........................
+line 622, col 28:
+rw [hk]
+* Try this:
+
+  [apply]     subst hg
+    simp_all only [gt_iff_lt, inv_smul_smul, x₀]
+................
+line 640, col 6:
+rw [mul_comm, h_P_sub, add_mul, one_mul]
+* Try this:
+  [apply] grind only
+......
+line 646, col 2:
+exact h_orbit_size_eq ▸ h_orbit_size ▸ h_dvd
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Fintype.card_ofFinset, Set.fintypeCard_eq_ncard, Nat.card_eq_fintype_card]
+..
+line 654, col 4:
+exfalso
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, nonpos_iff_eq_zero, OfNat.ofNat_ne_zero]
+shortened proof!
+.
+line 655, col 4:
+exfalso
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, zero_add, Nat.not_ofNat_le_one]
+shortened proof!
+.....
+line 659, col 35:
+omega
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.reduceLeDiff, lt_add_iff_pos_left, add_pos_iff, CanonicallyOrderedAdd.mul_pos,
+      Order.lt_two_iff, zero_le, or_true]
+...
+line 662, col 4:
+rw [mul_zero] at hk
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Nat.reduceLeDiff, lt_add_iff_pos_left, add_pos_iff, CanonicallyOrderedAdd.mul_pos,
+      Order.lt_two_iff, zero_le, or_true, mul_zero, mul_eq_zero, Nat.add_eq_zero_iff, OfNat.ofNat_ne_zero, and_false,
+      false_or, nonpos_iff_eq_zero]
+    cases hk with
+    | inl h =>
+      subst h
+      simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+    | inr h_1 =>
+      subst h_1
+      simp_all only [nonpos_iff_eq_zero, OfNat.ofNat_ne_zero]
+shortened proof!
+.
+line 665, col 4:
+rw [Nat.mul_succ, mul_zero, zero_add] at hk
+* this parameter is redundant, environment already contains `List.getElem_cons_succ` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Nat.succ_pred_eq_of_pos, Nat.mul_succ, Nat.succ_mul]
+  [apply] grind =>
+    instantiate only [Nat.succ_pred_eq_of_pos]
+    instantiate only [Nat.mul_succ]
+    instantiate only [Nat.succ_mul]
+    lia
+shortened proof!
+.
+line 672, col 4:
+exact Nat.le_add_left 2 k
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Nat.reduceLeDiff, lt_add_iff_pos_left, add_pos_iff, CanonicallyOrderedAdd.mul_pos,
+      Order.lt_two_iff, zero_le, or_true, le_add_iff_nonneg_left]
+..........
+line 692, col 34:
+rw [← hk_eq]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, Sylow.coe_coe, z₁, pm]
+shortened proof!
+._.........
+line 701, col 45:
+exact Nat.succ_pos'
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, Sylow.coe_coe, Nat.two_dvd_ne_zero, lt_add_iff_pos_left,
+      Order.lt_add_one_iff, zero_le, z₁, pm]
+....
+line 706, col 89:
+omega
+* Try this:
+  [apply] grind only
+.....
+line 716, col 6:
+omega
+* Try this:
+  [apply] grind only
+.
+line 717, col 6:
+nlinarith only [ha, Nat.sub_add_cancel (Nat.le_of_lt hn_p_gt1), hpm_ge3]
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+..

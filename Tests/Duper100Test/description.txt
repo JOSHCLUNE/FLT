@@ -1,6 +1,9 @@
 Ran `hammer {duperPremises := 100}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
 Final output was: "Done: 261 files processed, 8 with errors."
 
+*NOTE* This test was run prior to commit c745fe6 in which duperPremises was split into
+duperPremisesShort and duperPremisesLong. Here, the duperPremises option is set to a uniform 100
+
 tallySummaries.sh output:
 Total number of results: 16929
 Total number of successes: 3286

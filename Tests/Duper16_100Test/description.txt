@@ -1,0 +1,12 @@
+Ran `hammer {duperPremisesShort := 16, duperPremisesLong := 100}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 8 with errors."
+
+tallySummaries.sh output:
+Total number of results: 16866
+Total number of successes: 3315
+Time taken: 86983s
+
+Total shortenedStepsCount: 1479
+
+~19.7% success rate
+~24.2 hours

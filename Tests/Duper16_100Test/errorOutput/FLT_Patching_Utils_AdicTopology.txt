@@ -1,0 +1,63 @@
+.....
+line 68, col 53:
+simpa using hx
+* Try this:
+
+  [apply]   simp_all only [Submodule.mem_iInf, not_forall]
+......
+line 77, col 2:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Submodule.zero_eq_bot, Submodule.bot_coe]
+.
+line 83, col 2:
+have := IsModuleTopology.toContinuousAdd R M
+* Try this:
+
+  [apply]     apply Submodule.isCompact_of_fg
+    simp_all only
+shortened proof!
+........
+line 125, col 4:
+simpa [SModEq.zero] using hx
+* Try this:
+
+  [apply]     simp_all only [smul_eq_mul, Ideal.mul_top, Submodule.mem_iInf]
+    intro i
+    duper [*, SModEq.zero] {preprocessing := full}
+.....
+line 135, col 49:
+simp
+* Try this:
+
+  [apply]     intro i j h
+    simp_all only [Ideal.Quotient.algebraMap_eq, Ideal.quotientMap_mk, RingHom.id_apply]
+.................
+line 159, col 82:
+simp
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [Set.mem_singleton_iff, Pi.zero_apply, nhds_discrete, Filter.pure_zero, Filter.mem_zero, f]
+....................
+line 182, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [implies_true, exists_prop, forall_const, Set.insert_pi, Set.singleton_pi, Set.mem_inter_iff,
+      Set.mem_preimage, Function.eval, Set.mem_singleton_iff, and_self, f]
+.....
+line 189, col 6:
+simp [hx₂, H] at hx₁
+* Try this:
+
+  [apply]   simp_all only [implies_true, exists_prop, forall_const, Ideal.quotientMap_mk, RingHom.id_apply, f]
+..
+line 202, col 2:
+refine ⟨isAdic_iff.mpr ⟨isOpen_maximalIdeal_pow R, ?_⟩⟩
+* Try this:
+
+  [apply]   simp_all only
+shortened proof!
+.......

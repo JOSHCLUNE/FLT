@@ -1,0 +1,151 @@
+........
+line 64, col 4:
+simp
+* Try this:
+
+  [apply]     intro r a
+    simp_all only [ENat.natCast_lt_top, Nat.succ_eq_add_one, List.mem_replicate, ne_eq, Nat.add_eq_zero_iff, one_ne_zero,
+      and_false, not_false_eq_true, true_and, zero_mem]
+.
+line 65, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [ENat.natCast_lt_top, Nat.succ_eq_add_one, List.length_replicate, lt_add_iff_pos_right, Order.lt_one_iff]
+....
+line 72, col 2:
+exact ⟨_, hs₁, by simpa, by simp⟩
+* Try this:
+
+  [apply]     simp_all
+    apply Exists.intro
+    · apply And.intro
+      intro r a
+      on_goal 2 => apply And.intro
+      on_goal 2 => { exact hs₁
+      }
+      simp_all only [List.mem_map]
+      obtain ⟨w, h⟩ := a
+      obtain ⟨left, right⟩ := h
+      subst right
+      simp_all only [isUnit_map_iff, not_false_eq_true]
+      · simp_all only [List.length_map]
+....
+line 82, col 11:
+simpa using Order.krullDim_nonneg.trans_eq h
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Order.krullDim_eq_bot_iff, not_isEmpty_of_nonempty]
+..
+line 85, col 11:
+simp
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, WithBot.coe_top, le_top]
+........
+line 95, col 13:
+simp
+* Try these:
+  [apply] grind only [CharP.cast_eq_zero]
+  [apply] grind =>
+    instantiate only [CharP.cast_eq_zero]
+    lia
+...
+line 99, col 6:
+apply Submodule.Quotient.nontrivial_iff.2
+* Try these:
+  [apply] grind only [!nontrivial_quotSMulTop_of_mem_maximalIdeal, = List.mem_cons, #52ff]
+  [apply] grind only [!nontrivial_quotSMulTop_of_mem_maximalIdeal, = List.mem_cons]
+  [apply] grind =>
+    instantiate only [!nontrivial_quotSMulTop_of_mem_maximalIdeal]
+    instantiate only [#52ff]
+    instantiate only [= List.mem_cons]
+shortened proof!
+..........................
+line 138, col 8:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [ENat.WithBot.coe_eq_natCast, List.mem_cons, mem_maximalIdeal, mem_nonunits_iff, forall_eq_or_imp,
+      Submodule.Quotient.nontrivial_iff, ne_eq, WithBot.bot_add, bot_le, top_ne_bot, not_false_eq_true, f]
+..
+line 140, col 6:
+simp at this
+* Try this:
+
+  [apply]   simp_all only [ENat.WithBot.coe_eq_natCast, List.mem_cons, mem_maximalIdeal, mem_nonunits_iff, forall_eq_or_imp,
+      Submodule.Quotient.nontrivial_iff, ne_eq, WithBot.bot_add, bot_le, le_bot_iff, WithBot.zero_ne_bot, f]
+.....
+line 145, col 6:
+cases (ENat.natCast_lt_top n).not_ge this
+* Try this:
+
+  [apply]   simp_all only [ENat.WithBot.coe_eq_natCast, List.mem_cons, mem_maximalIdeal, mem_nonunits_iff, forall_eq_or_imp,
+      Submodule.Quotient.nontrivial_iff, ne_eq, WithBot.coe_top, top_le_iff, ENat.natCast_ne_top, f]
+......
+line 152, col 46:
+simp_all
+* Try this:
+
+  [apply]     intro r a
+    simp_all only [ENat.WithBot.coe_eq_natCast, List.mem_cons, mem_maximalIdeal, mem_nonunits_iff, forall_eq_or_imp,
+      Submodule.Quotient.nontrivial_iff, ne_eq, Order.add_one_le_iff, not_false_eq_true, f]
+....
+line 160, col 2:
+exact Module.depth_le_krullDim_support _ _
+* Try this:
+
+  [apply]   apply Module.depth_le_krullDim_support
+.............
+line 180, col 4:
+simp only [map_smul] at h
+* Try this:
+
+  [apply]     simp_all only [map_smul, Finsupp.coe_smul, Pi.smul_apply, smul_eq_mul, I, b]
+    apply H
+    simp_all only [smul_eq_mul]
+shortened proof!
+...
+line 197, col 12:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [List.length_eq_zero_iff, IsWeaklyRegular.nil]
+..
+line 200, col 13:
+simp at hn
+* Try this:
+
+  [apply]   simp_all only [List.length_nil, Nat.right_eq_add, Nat.add_eq_zero_iff, one_ne_zero, and_false]
+...
+line 203, col 54:
+simp
+* Try this:
+
+  [apply]   simp_all only [List.length_cons, Nat.add_right_cancel_iff, smul_eq_mul, Ideal.mul_top]
+......
+line 212, col 4:
+exact IH (by simp_all)
+* Try this:
+
+  [apply]   simp_all only [List.length_cons, Nat.add_right_cancel_iff, Submodule.Quotient.nontrivial_iff, ne_eq,
+      Ideal.span_singleton_eq_top, Ideal.Quotient.algebraMap_eq, List.length_map]
+........
+line 227, col 2:
+refine ⟨s, Sequence.isWeaklyRegular_of_free.mpr hs, hs', rfl⟩
+* Try this:
+
+  [apply]     simp_all
+    duper [*, Sequence.isWeaklyRegular_of_free] {preprocessing := full}
+...
+line 234, col 8:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [top_ne_bot, not_false_eq_true]
+...........
+line 249, col 10:
+simp
+* Try this:
+  [apply] grind only
+....._.....

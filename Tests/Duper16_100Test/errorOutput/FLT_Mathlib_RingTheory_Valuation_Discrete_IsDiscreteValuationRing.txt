@@ -1,0 +1,30 @@
+..
+line 33, col 75:
+rw [map_one]
+* Try this:
+
+  [apply]   simp_all only [map_one]
+shortened proof!
+...
+line 34, col 70:
+exact hu₀
+* Try this:
+
+  [apply]   exact hu₀
+..
+line 36, col 4:
+rw [← map_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, map_one]
+* Try this:
+
+  [apply]   simp_all only [map_units_inv, ne_eq, FaithfulSMul.algebraMap_eq_zero_iff, Units.ne_zero, not_false_eq_true,
+      mul_inv_cancel₀]
+.
+line 37, col 2:
+exact ⟨u₀⁻¹, mul_left_cancel₀ (left_ne_zero_of_mul_eq_one h1) (h2.trans h1.symm)⟩
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#7505]
+  [apply] grind only
+  [apply] grind =>
+    ring
+    instantiate only [#7505]

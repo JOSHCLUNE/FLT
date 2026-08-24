@@ -1,0 +1,15 @@
+..
+line 47, col 4:
+exact map_mul (InfiniteAdeleRing.ringEquiv_mixedSpace K).symm _ _
+* Try this:
+
+  [apply]     simp_all only [RingEquiv.toEquiv_eq_coe, RingEquiv.coe_toEquiv_symm, Prod.algebraMap_apply, Equiv.toFun_as_coe,
+      RingEquiv.coe_coe_toEquiv_symm, map_mul, RingHom.id_apply]
+    obtain ⟨fst, snd⟩ := x
+    rfl
+..X.X.X..X...X.....X.X.X......
+line 106, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [eq_ratCast, map_ratCast]
