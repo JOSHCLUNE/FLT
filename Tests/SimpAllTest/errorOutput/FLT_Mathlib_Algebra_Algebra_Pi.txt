@@ -1,0 +1,22 @@
+..
+line 28, col 27:
+simp
+..
+line 48, col 37:
+simp [map_mul]
+..
+line 50, col 37:
+simp [map_add]
+..........._..
+line 131, col 17:
+simp
+..
+line 141, col 24:
+simp
+............
+line 150, col 24:
+simp
+..
+line 163, col 24:
+simp
+....

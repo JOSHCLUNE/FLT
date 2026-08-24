@@ -1,0 +1,7 @@
+.........
+line 60, col 4:
+simp
+.
+line 64, col 10:
+rw [show ((r • x : (valuation K).integer) : K) = (r : K) * (x : K) from rfl, map_mul]
+.....

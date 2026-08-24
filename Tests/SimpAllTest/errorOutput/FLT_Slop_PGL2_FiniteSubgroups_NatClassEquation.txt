@@ -1,0 +1,44 @@
+..................
+line 75, col 6:
+exact y_eq ▸ hy
+........
+line 83, col 6:
+exact y_eq ▸ hy
+...................
+line 110, col 30:
+rw [hg, h_conj]
+...............
+line 141, col 46:
+rw [hw_eq]
+..
+line 143, col 4:
+exact hw2 ▸ hw
+........
+line 151, col 44:
+rw [hw_eq]
+..........
+line 185, col 4:
+exact Set.mem_toFinset.mpr (Subgroup.one_mem K)
+......
+line 205, col 6:
+constructor
+shortened proof!
+.................
+line 254, col 6:
+constructor
+shortened proof!
+..........
+line 273, col 6:
+simp only [Finset.mem_filter, Finset.mem_univ, Finset.mem_erase, ne_eq, true_and, and_true]
+.
+line 274, col 4:
+rw [this, Finset.card_erase_of_mem (Finset.mem_univ 1),
+      Nat.card_eq_fintype_card, Finset.card_univ]
+...
+line 280, col 6:
+exact hH_card_ge i
+.
+line 282, col 6:
+exact fun K L hK hL hKL ↦ hdisjoint K L
+        ⟨i, hK.choose, hK.choose_spec⟩
+        ⟨i, hL.choose, hL.choose_spec⟩ hKL

@@ -1,0 +1,15 @@
+.....
+line 73, col 57:
+rw [hP_map]
+shortened proof!
+.............
+line 94, col 10:
+rw [hpK, hP_monic.natDegree_map, hP_deg, hpbar_deg]
+.....
+line 101, col 4:
+rfl
+.....
+line 114, col 12:
+rw [hP_map]
+shortened proof!
+..

@@ -1,0 +1,24 @@
+.........
+line 136, col 4:
+rw [not_mem_mulSupport] at hi
+shortened proof!
+.
+line 138, col 4:
+rw [not_mem_mulSupport] at hi
+shortened proof!
+......
+line 155, col 2:
+exact inv_ne_one
+...........
+line 190, col 6:
+simp_all
+.....
+line 219, col 2:
+simp [hcomponent]
+..................
+line 255, col 6:
+exact ⟨Classical.choice inferInstance, fun _ ↦ hsurj⟩
+........................_..
+line 337, col 23:
+simp
+..

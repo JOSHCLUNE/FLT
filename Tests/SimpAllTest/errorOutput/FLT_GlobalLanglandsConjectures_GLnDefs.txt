@@ -1,0 +1,25 @@
+..
+line 67, col 6:
+simp
+..
+line 69, col 8:
+simp
+..
+line 71, col 8:
+simp_all
+.
+line 72, col 6:
+simp_all [add_lie]
+.._..............
+line 152, col 10:
+simp only [zero_lie, map_zero]
+._.
+line 154, col 10:
+simp_all only [add_lie, map_add]
+....
+line 169, col 6:
+simp only [zero_lie, map_zero]
+._.
+line 171, col 6:
+simp_all only [add_lie, map_add]
+..............

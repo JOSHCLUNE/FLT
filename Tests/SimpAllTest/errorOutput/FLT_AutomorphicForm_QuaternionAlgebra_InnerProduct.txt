@@ -1,0 +1,182 @@
+....
+line 51, col 42:
+simp
+.
+line 51, col 52:
+simp
+....................
+line 108, col 6:
+simp
+..................._.........................................
+line 204, col 65:
+simpa
+...
+line 206, col 39:
+simpa
+.........
+line 216, col 6:
+exact ⟨_, rfl⟩
+.................
+line 264, col 26:
+positivity
+.
+line 264, col 82:
+positivity
+..........
+line 275, col 4:
+rfl
+........
+line 283, col 4:
+rfl
+................
+line 339, col 2:
+simp
+....
+line 352, col 2:
+simp
+...
+line 362, col 2:
+simp
+......
+line 373, col 2:
+trivial
+.................................
+line 421, col 10:
+trivial
+..
+line 423, col 8:
+simp
+...........................
+line 512, col 16:
+exact mem _ hx
+.
+line 513, col 20:
+exact algebraMap _
+.
+line 514, col 25:
+exact add ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+.
+line 515, col 25:
+exact mul ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+.....
+line 523, col 49:
+simp [H]
+.
+line 524, col 20:
+simp
+...........
+line 547, col 51:
+exact ⟨φ _ _ _, hμ' _ _ _⟩
+..
+line 548, col 50:
+simp
+...........
+line 559, col 4:
+simp +contextual [ha, ← sub_eq_zero (a := _ • _) (b := _ • _), ← sub_smul, hμ,
+      sub_eq_zero (a := a _)]
+..
+line 563, col 24:
+simp
+....
+line 566, col 25:
+simp
+...
+line 568, col 27:
+simp
+.......
+line 582, col 10:
+simp [← hf₁]
+.
+line 583, col 20:
+ext
+shortened proof!
+..
+line 584, col 28:
+simp
+.................
+line 599, col 8:
+simpa
+..
+line 600, col 42:
+simpa
+.............
+line 611, col 4:
+simp
+.....................
+line 637, col 10:
+simpa using hμ
+..
+line 638, col 28:
+simp [h₁]
+.........
+line 653, col 46:
+simp
+.......
+line 714, col 12:
+simp
+.
+line 715, col 25:
+simp only [smul_add, *]
+............
+line 765, col 12:
+simp
+.
+line 766, col 25:
+simp only [*, map_add, zero_add]
+...
+line 771, col 4:
+simp_all
+...
+line 774, col 12:
+simp
+........
+line 784, col 12:
+simp
+.
+line 785, col 21:
+simp only [map_add, smul_add, *]
+.._...
+line 797, col 26:
+simp
+..._.....
+line 804, col 27:
+grind
+....Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.....
+line 813, col 35:
+simp
+..
+line 813, col 74:
+simp
+...
+line 815, col 77:
+simpa using hj
+.........
+line 823, col 27:
+simpa using hk
+.
+line 823, col 55:
+simpa using hk
+.................
+line 841, col 72:
+simp
+.
+line 841, col 82:
+aesop
+...........
+line 865, col 4:
+simp [H] at this
+...........
+line 874, col 6:
+simp
+..........
+line 886, col 77:
+exact bot_le
+....................WARNING: FLT/AutomorphicForm/QuaternionAlgebra/InnerProduct.lean produced errors (exit code 0)

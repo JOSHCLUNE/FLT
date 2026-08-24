@@ -1,0 +1,14 @@
+...............
+line 55, col 77:
+norm_num
+..............
+line 74, col 49:
+simp [degree_eq_natDegree hp0, hdeg]
+..
+line 75, col 17:
+simpa [hp] using hx
+...
+line 78, col 4:
+simp [hp, IsRoot]
+shortened proof!
+.....................

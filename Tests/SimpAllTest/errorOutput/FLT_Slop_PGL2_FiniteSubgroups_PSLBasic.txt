@@ -1,0 +1,302 @@
+......
+line 71, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 78, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+...........
+line 101, col 8:
+rw [div_mul_cancel₀ _ hM]
+shortened proof!
+........
+line 113, col 82:
+rw [hd]
+..
+line 115, col 8:
+rw [mul_div_cancel_right₀ _ hM]
+....
+line 125, col 8:
+ring
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.......
+line 138, col 4:
+simp only [mul_zero, zero_mul, sub_zero] at hd
+shortened proof!
+...............
+line 178, col 18:
+change (1 : F) * 1 + (((n : ℕ) : F) * a) * 0 = 1
+shortened proof!
+....
+line 180, col 18:
+change (0 : F) * 1 + 1 * 0 = 0
+shortened proof!
+.
+line 181, col 18:
+change (0 : F) * a + 1 * 1 = 1
+shortened proof!
+......
+line 188, col 4:
+rw [h_one, map_one]
+....
+line 193, col 6:
+have h_ker : _ ∈ MonoidHom.ker _ := MonoidHom.mem_ker.mpr h_eq_one
+shortened proof!
+..
+line 198, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+...
+line 204, col 121:
+rw [h_comm]
+..
+line 208, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two] at h_eq
+shortened proof!
+................
+line 237, col 20:
+change (1 : F) * 1 + 0 * b = 1
+shortened proof!
+.
+line 238, col 20:
+change (1 : F) * 0 + 0 * 1 = 0
+shortened proof!
+....
+line 240, col 20:
+change (((n : ℕ) : F) * b) * 0 + 1 * 1 = 1
+shortened proof!
+...
+line 242, col 34:
+rw [this, map_one]
+......
+line 246, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+......
+line 254, col 6:
+simp only [Matrix.mul_apply, Fin.sum_univ_two] at h_eq
+shortened proof!
+......
+line 265, col 34:
+rw [this]
+shortened proof!
+..........
+line 270, col 34:
+rw [this]
+shortened proof!
+.............................
+line 302, col 6:
+change (1 : F) * m.val 0 0 + 1 * m.val 1 0 = m.val 0 0 * 1 + m.val 0 1 * 0 at h
+shortened proof!
+....
+line 309, col 6:
+change (1 : F) * m.val 0 0 + 0 * m.val 1 0 = m.val 0 0 * 1 + m.val 0 1 * 1 at h
+shortened proof!
+....
+line 316, col 6:
+change (1 : F) * m.val 0 1 + 1 * m.val 1 1 = m.val 0 0 * 1 + m.val 0 1 * 1 at h
+shortened proof!
+...............................
+line 357, col 8:
+change (1 : F) * g.val 0 0 + 1 * g.val 1 0 = g.val 0 0 * 1 + g.val 0 1 * 0 at h
+shortened proof!
+....
+line 364, col 8:
+change (1 : F) * g.val 0 0 + 0 * g.val 1 0 = g.val 0 0 * 1 + g.val 0 1 * 1 at h
+shortened proof!
+....
+line 371, col 8:
+change (1 : F) * g.val 0 1 + 1 * g.val 1 1 = g.val 0 0 * 1 + g.val 0 1 * 1 at h
+shortened proof!
+....
+line 378, col 18:
+change g.val 0 0 = g.val 0 0 * 1
+shortened proof!
+.
+line 379, col 18:
+change g.val 0 1 = g.val 0 0 * 0
+shortened proof!
+.
+line 380, col 18:
+change g.val 1 0 = g.val 0 0 * 0
+shortened proof!
+.
+line 381, col 18:
+change g.val 1 1 = g.val 0 0 * 1
+shortened proof!
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..
+line 392, col 44:
+rw [hc, h, one_smul]
+shortened proof!
+.
+line 393, col 8:
+rw [hg1]
+shortened proof!
+..
+line 395, col 46:
+rw [hc, h, neg_smul, one_smul]
+shortened proof!
+.
+line 396, col 8:
+rw [hg_1]
+shortened proof!
+..
+line 400, col 6:
+intro m
+shortened proof!
+...
+line 407, col 4:
+apply Subtype.ext
+shortened proof!
+.....
+line 416, col 27:
+rw [h0]
+.
+line 417, col 23:
+ring
+..
+line 418, col 39:
+omega
+......
+line 432, col 17:
+change x.val * x.inv = 1
+shortened proof!
+.
+line 433, col 17:
+exact mul_one (1 : F)
+.....
+line 439, col 17:
+change x.inv * x.val = 1
+shortened proof!
+.
+line 440, col 17:
+exact mul_one (1 : F)
+..
+line 443, col 7:
+change Matrix.det (Matrix.diagonal ![x.val, 1]) = x.val
+shortened proof!
+........................
+line 481, col 94:
+norm_num
+......
+line 489, col 6:
+have hC : 0 < Fintype.card F * (Fintype.card F ^ 2 - 1) := mul_pos (lt_of_lt_of_le (by norm_num : 0 < 5) hcard) (Nat.sub_pos_of_lt (by nlinarith only [hcard]))
+shortened proof!
+.......
+line 504, col 4:
+rw [hH, h_idx] at h
+shortened proof!
+..___...........
+line 535, col 4:
+exact congr_arg slMap (hg (slMap.symm x))
+...
+line 538, col 4:
+rw [map_mul, map_mul, slMap.apply_symm_apply]
+shortened proof!
+.......
+line 571, col 34:
+simp only [mul_eq_zero, hc, false_or]
+....
+line 579, col 12:
+exact absurd ⟨rfl, rfl⟩ hab
+________...
+line 589, col 86:
+exact isUnit_one
+.
+line 589, col 108:
+rw [h, mulVec_zero]
+........._....
+line 617, col 38:
+rw [det_fin_two]
+shortened proof!
+.
+line 619, col 38:
+rw [det_fin_two]
+shortened proof!
+.....
+line 628, col 2:
+have h2 : M.1 0 1 = 0 := (add_left_cancel hL00).symm
+shortened proof!
+.............
+line 660, col 6:
+rename_i h
+shortened proof!
+..
+line 662, col 8:
+contradiction
+._...
+line 666, col 6:
+contradiction
+.
+line 667, col 6:
+rename_i h
+shortened proof!
+....
+line 671, col 6:
+rename_i h
+shortened proof!
+._.....
+line 677, col 4:
+contradiction
+......
+line 681, col 57:
+rw [hsq _ hM11, mul_one]
+..
+line 683, col 26:
+rw [h, one_mul]
+.
+line 684, col 6:
+contradiction
+........
+line 694, col 8:
+exact fun N ↦ by rw [one_mul, mul_one]
+.
+line 695, col 8:
+exact fun N ↦ by rw [neg_mul, mul_neg, one_mul, mul_one]
+....
+line 699, col 8:
+exact map_one sl2F3ToPermHom
+.._..._..........
+line 716, col 37:
+norm_num
+...........WARNING: FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean produced errors (exit code 0)

@@ -1,0 +1,10 @@
+.
+line 27, col 7:
+simp
+.
+line 27, col 16:
+simp
+..
+line 35, col 7:
+simp [Matrix.GeneralLinearGroup.diagonal]
+..__..__....__

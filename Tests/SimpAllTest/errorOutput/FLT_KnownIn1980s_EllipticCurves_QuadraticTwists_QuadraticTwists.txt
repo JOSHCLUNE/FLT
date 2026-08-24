@@ -1,0 +1,57 @@
+............._.......
+line 255, col 37:
+ring
+......__...__.................__.__.................__................................
+line 522, col 30:
+rw [ha, mul_assoc, inv_mul_cancel, mul_one]
+.........
+line 532, col 73:
+rw [hamap, hcoc]
+.
+line 535, col 43:
+rw [haC]
+..
+line 539, col 2:
+exact mul_right_cancel (this.trans (one_mul C₁).symm)
+...................
+line 578, col 54:
+rw [hρK]
+shortened proof!
+........
+line 589, col 6:
+rw [hmapmul, hmapinv, hcoc, hρmap, mul_inv_rev, (E.baseChange L).negVariableChange_inv]
+shortened proof!
+...
+line 596, col 45:
+rw [hχK]
+shortened proof!
+............
+line 633, col 4:
+rw [hres] at h
+shortened proof!
+......
+line 675, col 4:
+exact (f.commutes _).symm
+.......
+line 686, col 4:
+refine Affine.Point.some_eq_some (E.baseChange N) ?_ ?_
+shortened proof!
+...............
+line 721, col 6:
+simp only [map_add, map_mul, map_pow, hu, hr]
+shortened proof!
+...........
+line 762, col 2:
+simpa using hfix x
+.....Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.......
+line 788, col 17:
+rw [hQ, AddEquiv.apply_symm_apply]
+WARNING: FLT/KnownIn1980s/EllipticCurves/QuadraticTwists/QuadraticTwists.lean produced errors (exit code 0)

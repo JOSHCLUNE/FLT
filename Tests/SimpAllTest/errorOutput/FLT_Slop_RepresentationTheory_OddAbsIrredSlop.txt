@@ -1,0 +1,98 @@
+.
+line 82, col 4:
+change (ρ 1).baseChange l = 1
+shortened proof!
+..................................
+line 167, col 4:
+exact key
+......
+line 187, col 4:
+rw [Module.End.mem_eigenspace_iff, one_smul]
+.....
+line 193, col 4:
+simp only [Module.End.mul_apply] at hc
+shortened proof!
+.................
+line 219, col 4:
+rw [LinearMap.mem_ker]
+shortened proof!
+..
+line 224, col 4:
+exfalso
+shortened proof!
+...
+line 230, col 6:
+rw [htop]
+shortened proof!
+..................
+line 266, col 10:
+have h := f.map_smul (algebraMap k A μ) v
+shortened proof!
+.....
+line 274, col 4:
+have h := LinearMap.congr_fun hμ v
+shortened proof!
+......
+line 285, col 8:
+change T (g v) = g (T v)
+shortened proof!
+...
+line 289, col 2:
+exact haT ▸ a.2
+.................
+line 319, col 36:
+rw [h]
+shortened proof!
+..
+line 321, col 4:
+rwa [Subalgebra.mem_restrictScalars] at this
+................
+line 336, col 58:
+rw [hspan]
+shortened proof!
+....
+line 341, col 4:
+exact hrange T
+.
+line 342, col 2:
+exact hle hxspan
+........
+line 361, col 8:
+exact hW g
+...
+line 365, col 10:
+simp [Module.algebraMap_end_apply]
+......
+line 373, col 8:
+intro w hw
+shortened proof!
+..
+line 378, col 14:
+rw [h]
+shortened proof!
+..
+line 380, col 4:
+exact Or.inl hbot
+..........
+line 391, col 6:
+exact hall
+..
+line 395, col 6:
+simp [LinearMap.smulRight_apply, LinearMap.smul_apply, smul_eq_mul,
+        inv_mul_cancel₀ hφ0]
+..
+line 398, col 4:
+rwa [hTw] at h2
+...
+line 411, col 4:
+by_contra hV
+shortened proof!
+..........
+line 434, col 16:
+rw [map_zero]
+shortened proof!
+...............
+line 467, col 4:
+intro hzero
+shortened proof!
+........

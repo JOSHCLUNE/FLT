@@ -1,0 +1,18 @@
+.
+line 30, col 2:
+rwa [IsAbsoluteValue.abv_inv v, _root_.inv_pos]
+...........
+line 66, col 14:
+rw [← hl]
+..
+line 67, col 55:
+linarith
+.
+line 76, col 2:
+rwa [AbsoluteValue.pos_iff] at hv ⊢
+.
+line 82, col 30:
+rw [map_one, map_pow]
+.
+line 88, col 15:
+rw [map_one, map_pow]

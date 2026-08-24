@@ -1,0 +1,4 @@
+.
+line 29, col 36:
+rw [Module.finrank_pi, Fintype.card_fin]
+.

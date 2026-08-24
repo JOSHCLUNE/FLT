@@ -1,0 +1,14 @@
+..
+line 56, col 2:
+exact Set.mem_singleton _
+.......
+line 78, col 45:
+rw [hIk]
+shortened proof!
+...................
+line 112, col 8:
+exact_mod_cast hle
+.
+line 113, col 53:
+rw [hfr]
+shortened proof!

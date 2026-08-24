@@ -1,0 +1,110 @@
+..
+line 73, col 4:
+rw [pow_zero, Ideal.one_eq_top]
+shortened proof!
+..
+line 76, col 2:
+rw [Module.length_eq_zero]
+shortened proof!
+...
+line 83, col 6:
+rw [pow_zero, Ideal.one_eq_top]
+shortened proof!
+...................
+line 127, col 4:
+exact Nat.zero_le _
+......
+line 147, col 4:
+rw [Ideal.smul_eq_mul, Ideal.mul_top]
+........Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+....
+line 171, col 4:
+simp [hφ, LinearMap.toSpanSingleton_apply, smul_eq_mul]
+....
+line 175, col 4:
+exact hcolon r hr
+....
+line 185, col 4:
+rw [Submodule.map_sup]
+shortened proof!
+....
+line 204, col 6:
+simpa using hkerle
+.....................
+line 244, col 4:
+exact hmain
+.........
+line 258, col 8:
+exact hlt
+.....
+line 263, col 16:
+simp
+..
+line 265, col 35:
+omega
+............Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+....
+line 300, col 4:
+exact hbot
+............
+line 311, col 2:
+exact this ▸ le_rfl
+........
+line 328, col 4:
+intro I hpI
+shortened proof!
+.....
+line 336, col 10:
+rw [Ideal.mk_ker]
+shortened proof!
+.....................................
+line 386, col 75:
+push_cast
+shortened proof!
+.WARNING: FLT/Slop/DimensionTheorem/DimLeGrowth.lean produced errors (exit code 0)

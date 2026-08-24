@@ -1,0 +1,11 @@
+..
+line 45, col 4:
+cases g
+shortened proof!
+....
+line 129, col 22:
+simp
+.
+line 158, col 22:
+simp
+..

@@ -1,0 +1,9 @@
+.
+line 86, col 60:
+simp
+.
+line 95, col 62:
+simp
+.
+line 95, col 82:
+simp

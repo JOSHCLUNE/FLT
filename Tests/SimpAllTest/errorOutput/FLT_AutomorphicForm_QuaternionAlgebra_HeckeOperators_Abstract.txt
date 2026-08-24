@@ -1,0 +1,28 @@
+....
+line 108, col 4:
+push_cast
+shortened proof!
+.....
+line 121, col 4:
+exact smul_zero _
+..
+line 124, col 4:
+exact smul_add _ _ _
+....
+line 130, col 4:
+exact zero_smul _ _
+............................
+line 191, col 6:
+simp only [Function.comp_def, Quotient.out_eq]
+shortened proof!
+..........
+line 229, col 12:
+simp
+.
+line 230, col 4:
+exact Quotient.out_injective.injOn
+.............
+line 254, col 4:
+rw [H₁, H₂, Set.image_singleton, Set.bijOn_singleton]
+shortened proof!
+.........................

@@ -1,0 +1,464 @@
+.....................
+line 96, col 21:
+ring
+............
+line 116, col 6:
+exact hV_zero
+....
+line 127, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+shortened proof!
+.
+line 132, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+shortened proof!
+.....__........
+line 161, col 46:
+ring
+....
+line 163, col 46:
+ring
+..
+line 164, col 46:
+ring
+......
+line 179, col 33:
+norm_num
+.......
+line 194, col 6:
+exact hP (g • P)
+....
+line 198, col 4:
+exact h_dvd
+........................
+line 245, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+........
+line 255, col 123:
+ring
+........................
+line 322, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+.........................
+line 361, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 367, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+......
+line 375, col 40:
+rw [mul_one, mul_zero, add_zero]
+....
+line 377, col 48:
+rw [mul_one, mul_zero, add_zero]
+..
+line 378, col 54:
+rw [zero_mul, mul_one, zero_add]
+......
+line 393, col 25:
+rw [Matrix.det_fin_two]
+shortened proof!
+.....
+line 399, col 2:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero,
+    Matrix.cons_val_one, mul_zero, zero_add, mul_one] at h0
+shortened proof!
+.
+line 406, col 33:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 409, col 33:
+rw [Matrix.det_fin_two]
+shortened proof!
+.........................
+line 450, col 25:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 453, col 25:
+rw [Matrix.det_fin_two]
+shortened proof!
+......
+line 461, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, mul_zero, add_zero, one_mul]
+.....
+line 468, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, mul_zero, add_zero, zero_mul]
+..
+line 471, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, zero_mul, zero_add, one_mul]
+.
+line 479, col 27:
+rw [Matrix.det_fin_two]
+shortened proof!
+..........
+line 490, col 4:
+exact h_zero.symm ▸ map_zero _
+...............
+line 528, col 99:
+rw [Matrix.det_fin_two]
+shortened proof!
+...
+line 530, col 71:
+rw [mul_one]
+shortened proof!
+......
+line 536, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one, zero_add, one_mul]
+..
+line 539, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one, zero_add]
+......
+line 545, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, one_mul]
+shortened proof!
+..
+line 549, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, zero_add]
+.....
+line 559, col 99:
+rw [Matrix.det_fin_two]
+shortened proof!
+.......
+line 566, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, one_mul, mul_one, mul_zero, add_zero]
+..
+line 569, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, add_zero]
+......
+line 575, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, zero_add]
+..
+line 578, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_mul, zero_add]
+......
+line 584, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, one_mul]
+shortened proof!
+..
+line 587, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, add_zero]
+.....
+line 596, col 97:
+rw [Matrix.det_fin_two]
+shortened proof!
+.......
+line 603, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, one_mul, mul_one, mul_zero, add_zero]
+..
+line 606, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, add_zero]
+......
+line 612, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+shortened proof!
+..
+line 615, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+.........
+line 624, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one]
+shortened proof!
+......
+line 635, col 111:
+rw [h1] at heq
+shortened proof!
+..
+line 636, col 115:
+rw [Matrix.det_fin_two]
+shortened proof!
+..........
+line 650, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, add_zero, mul_one]
+.........
+line 659, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+.........
+line 668, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one]
+shortened proof!
+....
+line 680, col 6:
+exact absurd rfl hab
+..
+line 682, col 8:
+exact absurd rfl hac
+....
+line 686, col 8:
+exact absurd rfl hbc
+........
+line 699, col 4:
+rcases heq with ⟨c, hc⟩
+shortened proof!
+......
+line 707, col 4:
+rw [mul_one] at h1
+shortened proof!
+.....
+line 712, col 4:
+rw [mul_one] at h0
+shortened proof!
+..
+line 715, col 35:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+shortened proof!
+.
+line 716, col 34:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+shortened proof!
+.
+line 717, col 35:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+shortened proof!
+..
+line 719, col 4:
+exact (mul_inv_cancel_left h g).symm
+...........
+line 733, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+shortened proof!
+..
+line 736, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+shortened proof!
+.
+line 741, col 59:
+norm_num
+.......
+line 751, col 121:
+ring
+..
+line 754, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+shortened proof!
+.
+line 759, col 59:
+rw [mul_one]
+shortened proof!
+........................
+line 798, col 8:
+ring
+......
+line 805, col 10:
+ring
+.
+line 806, col 8:
+rw [h_den, h, mul_zero]
+......
+line 812, col 10:
+exact h
+..........
+line 822, col 12:
+ring
+.......
+line 830, col 12:
+ring
+.
+line 831, col 10:
+rw [h_den]
+shortened proof!
+....................
+line 852, col 8:
+ring
+......
+line 859, col 10:
+ring
+.
+line 860, col 8:
+rw [h_den, h, mul_zero]
+..............
+line 875, col 12:
+ring
+.......
+line 883, col 12:
+ring
+.
+line 884, col 10:
+rw [h_den]
+shortened proof!
+........
+line 915, col 4:
+exact hP_fix
+...
+line 953, col 4:
+exact hm
+..
+line 955, col 6:
+exact hV_card
+..
+line 957, col 6:
+change v⁻¹ * x = v⁻¹ * y at hxy
+shortened proof!
+.
+line 959, col 4:
+exact ⟨0, hV_zero, mul_zero _⟩
+..................
+line 983, col 6:
+exact Subgroup.mem_map.mpr ⟨a, ha, rfl⟩
+...........
+line 998, col 13:
+exact h0
+.
+line 999, col 13:
+exact hv1
+....
+line 1003, col 13:
+exact mul_one (v 0)
+.
+line 1005, col 8:
+change v 0 * 0 = v 1
+shortened proof!
+.......
+line 1014, col 13:
+exact mul_one (v 1)
+............
+line 1052, col 10:
+rw [h_image] at h_pi
+shortened proof!
+.....
+line 1083, col 6:
+rw [h, ← mul_assoc, mul_inv_cancel₀ hc, one_mul]
+...
+line 1091, col 6:
+simp only [Matrix.det_fin_two, Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, sub_zero, ne_eq]
+shortened proof!
+.....Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+....
+line 1108, col 4:
+have h2 := h 1
+shortened proof!
+...........
+line 1121, col 4:
+intro _
+shortened proof!
+...
+line 1123, col 57:
+rw [Ring.inverse_eq_inv, mul_inv_rev, mul_comm]
+...__........
+line 1145, col 12:
+have h1x_simp : g₁ * translationPGL p x = g₁ := by
+              rw [← mul_one (g₁ * translationPGL p x), ← inv_mul_cancel g₁, ← mul_assoc, h1x, one_mul]
+shortened proof!
+..
+line 1151, col 12:
+rw [mul_inv_cancel₀ hc] at h_mul
+shortened proof!
+...........
+line 1190, col 4:
+rw [h] at h1
+shortened proof!
+...
+line 1194, col 8:
+exact congrArg _ (by ring)
+..........
+line 1228, col 4:
+change (g : PGLOf (K p)) * G.subtype y * (g : PGLOf (K p))⁻¹ = (g : PGLOf (K p)) * translationPGL p x * (g : PGLOf (K p))⁻¹
+shortened proof!
+...............................
+line 1314, col 2:
+rw [h_P, one_mul]
+...................
+line 1360, col 8:
+calc
+          (∑ y ∈ (∅ : Finset (K p)), Set.ncard {g : (Subgroup.normalizer ((P : Subgroup G) : Set G)) | normDilationParam p G hG_p P hP_fix g = y})
+            = 0 := Finset.sum_empty
+          _ = Set.ncard (∅ : Set ((Subgroup.normalizer ((P : Subgroup G) : Set G)))) := Eq.symm (Set.ncard_empty ((Subgroup.normalizer ((P : Subgroup G) : Set G))))
+          _ = Set.ncard {g : (Subgroup.normalizer ((P : Subgroup G) : Set G)) | normDilationParam p G hG_p P hP_fix g ∈ (∅ : Finset (K p))} := by
+            congr 1
+            ext g
+            rw [Set.mem_empty_iff_false, Set.mem_ofPred_eq]
+            exact (iff_false_intro (Finset.notMem_empty _)).symm
+....
+line 1372, col 10:
+rw [Set.mem_ofPred_eq, Finset.mem_insert, Set.mem_union, Set.mem_ofPred_eq, Set.mem_ofPred_eq]
+.....
+line 1379, col 12:
+ext x
+shortened proof!
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.
+line 1383, col 10:
+simp only [Finset.sum_const, smul_eq_mul]
+..
+line 1386, col 10:
+intro y hy
+shortened proof!
+.................................
+line 1440, col 6:
+rw [← h_ga, ← h_mul]
+..
+line 1442, col 4:
+exact h_a_mul
+...................
+line 1474, col 4:
+rw [h_eq_zero, Set.ncard_singleton 0, h_card]
+....
+line 1478, col 6:
+exact h_card_eq.symm.trans (Nat.card_eq_one_iff_unique.mpr ⟨h_card, ⟨1, H.one_mem⟩⟩)
+......
+line 1494, col 2:
+rfl
+.....
+line 1512, col 4:
+obtain ⟨x, hx⟩ := h
+shortened proof!
+......
+line 1525, col 4:
+obtain ⟨x, hx⟩ := h_eq
+shortened proof!
+...
+line 1532, col 4:
+exact Nat.card_pos
+.....
+line 1536, col 37:
+positivity
+...............
+line 1551, col 6:
+exact hα₀
+.........................................
+line 1639, col 6:
+let B := dilationPGL p v₀⁻¹ (inv_ne_zero hv₀_ne)
+shortened proof!
+..............................
+line 1716, col 4:
+exact (congrArg (fun y ↦ y * (g * k₀)⁻¹) (mul_assoc g k₀ x) |>.trans <|
+      congrArg (fun y ↦ (g * (k₀ * x)) * y) (mul_inv_rev g k₀) |>.trans <|
+      (mul_assoc (g * (k₀ * x)) k₀⁻¹ g⁻¹).symm |>.trans <|
+      congrArg (fun y ↦ y * g⁻¹) (mul_assoc g (k₀ * x) k₀⁻¹)).symm
+............
+line 1746, col 2:
+exact (ne_of_lt h_lt) h_card_eq
+......
+line 1761, col 4:
+simp only [MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom, MulAut.conj_apply, MulAut.conj_symm_apply]
+shortened proof!
+....
+line 1767, col 112:
+rw [hg₁]
+.
+line 1768, col 111:
+rw [← hg₂]
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean produced errors (exit code 0)

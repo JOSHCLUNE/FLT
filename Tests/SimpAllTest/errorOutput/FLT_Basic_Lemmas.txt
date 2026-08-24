@@ -1,0 +1,19 @@
+..
+line 28, col 4:
+grind
+..
+line 30, col 42:
+grind
+..........
+line 57, col 4:
+exact H _ hp5 hpp
+...
+line 65, col 31:
+simp
+.
+line 65, col 41:
+simp
+.
+line 65, col 51:
+simp
+.

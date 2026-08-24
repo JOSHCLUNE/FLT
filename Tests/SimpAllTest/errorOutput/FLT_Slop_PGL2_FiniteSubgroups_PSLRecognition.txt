@@ -1,0 +1,117 @@
+........Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+........
+line 81, col 40:
+norm_num
+.................
+line 99, col 4:
+exact Or.inl (zero_pow two_ne_zero)
+......
+line 104, col 67:
+norm_num
+..................
+line 143, col 122:
+norm_num
+..
+line 144, col 132:
+norm_num
+.............
+line 161, col 122:
+norm_num
+....
+line 163, col 121:
+exact dvd_mul_right (p ^ m) _
+.......
+line 169, col 4:
+simp only [Subgroup.mem_top, Nat.card_subtype_true]
+....
+line 171, col 41:
+norm_num
+........
+line 191, col 79:
+norm_num
+...
+line 193, col 65:
+norm_num
+............
+line 205, col 63:
+change Nat.gcd (k * p ^ m + 1) (p ^ m) = 1
+shortened proof!
+...........
+line 216, col 62:
+norm_num
+..
+line 218, col 4:
+rw [hk, Nat.zero_mul, Nat.zero_add] at hn_p_gt1
+shortened proof!
+.
+line 219, col 4:
+rw [hk, Nat.one_mul]
+....
+line 223, col 6:
+nlinarith only [ha, h_sub, hp_gt_one]
+....................................................
+line 310, col 6:
+exact hS_card
+_..............
+line 342, col 2:
+exact H x hx
+......
+line 359, col 4:
+exact ⟨0, hV_zero, mul_zero v⁻¹⟩
+..........
+line 383, col 6:
+obtain ⟨u, hu⟩ := hb
+shortened proof!
+...
+line 388, col 124:
+exact Nat.card_pos
+......
+line 394, col 10:
+exact add_left_cancel hxy
+......
+line 400, col 8:
+rw [mul_one] at h1
+shortened proof!
+...
+line 403, col 139:
+positivity
+.......
+line 421, col 56:
+contradiction
+...............................
+line 469, col 79:
+norm_num
+...
+line 471, col 65:
+norm_num
+...........
+line 485, col 66:
+exact hG_p
+......
+line 493, col 4:
+simp only [MonoidHom.comp_apply, MulEquiv.coe_toMonoidHom, MulAut.conj_apply]
+shortened proof!
+.
+line 495, col 2:
+rw [h_map_eq]
+shortened proof!
+....WARNING: FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean produced errors (exit code 0)

@@ -1,0 +1,43 @@
+.....
+line 78, col 4:
+exact top_ne_bot
+...................
+line 110, col 2:
+simp
+...........
+line 124, col 4:
+exact top_ne_bot
+................
+line 228, col 4:
+dsimp at *
+shortened proof!
+.
+line 230, col 18:
+simp
+.
+line 232, col 4:
+dsimp at *
+shortened proof!
+..........
+line 274, col 41:
+simp
+.
+line 274, col 54:
+simp
+.............
+line 321, col 20:
+simp [← hy, ← hz]
+..
+line 329, col 2:
+rfl
+.................
+line 395, col 6:
+rfl
+.................................
+line 468, col 6:
+filter_upwards with i
+shortened proof!
+....
+line 478, col 2:
+simpa using this
+..............................................

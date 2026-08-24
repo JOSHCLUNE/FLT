@@ -1,0 +1,63 @@
+.......
+line 68, col 18:
+aesop
+......._......_.....
+line 129, col 34:
+simp
+..
+line 142, col 45:
+simp
+........_.......
+line 174, col 10:
+simp [G.zero_mem]
+..
+line 175, col 10:
+simp
+...
+line 176, col 57:
+simpa
+.....................................
+line 234, col 10:
+simp
+.
+line 234, col 23:
+simpa
+.
+line 234, col 37:
+simp_all
+.............
+line 262, col 6:
+simp [Set.ncard_univ]
+.......
+line 272, col 20:
+simp
+......
+line 279, col 8:
+rw [this, hi, ← h, le_bot_iff] at hf
+shortened proof!
+.....
+line 284, col 44:
+simp
+.
+line 284, col 70:
+simp
+...........Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..................................
+line 377, col 4:
+rwa [Nat.one_le_iff_ne_zero]
+.WARNING: FLT/Patching/Utils/Lemmas.lean produced errors (exit code 0)

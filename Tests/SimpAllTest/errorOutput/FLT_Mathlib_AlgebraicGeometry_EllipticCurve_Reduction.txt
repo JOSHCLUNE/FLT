@@ -1,0 +1,81 @@
+....
+line 71, col 2:
+rw [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self] at h
+shortened proof!
+.......
+line 100, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+....
+line 103, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+..........
+line 133, col 4:
+rw [map_pow]
+shortened proof!
+.........
+line 167, col 4:
+refine neg_ne_zero.mpr (mul_ne_zero hc₄ hc₆) ?_
+shortened proof!
+..__...................
+line 233, col 4:
+linear_combination h1
+..
+line 234, col 79:
+norm_num
+..
+line 235, col 29:
+norm_num
+.............
+line 266, col 55:
+rw [hdeg]
+shortened proof!
+.....................
+line 308, col 14:
+simpa using ‹IsIntegral R W›
+........
+line 316, col 38:
+norm_num
+......
+line 336, col 4:
+rwa [hD, one_smul] at hsub
+......
+line 340, col 4:
+rwa [← hW₁eq, one_smul] at hsub
+...._.
+line 354, col 6:
+rw [map_mul, map_pow, Units.val_inv_eq_inv_val, map_inv₀]
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.
+line 359, col 2:
+exact (pow_eq_one_iff_of_nonneg zero_le (by norm_num)).mp h12
+....
+line 374, col 4:
+simp only [Units.val_inv_eq_inv_val]
+shortened proof!
+...
+line 379, col 4:
+simp only [Units.val_inv_eq_inv_val]
+shortened proof!
+.........
+line 395, col 4:
+simp only [Units.val_inv_eq_inv_val]
+shortened proof!
+.........
+line 411, col 4:
+simp only [Units.val_inv_eq_inv_val]
+shortened proof!
+................
+line 452, col 4:
+simp only [Units.val_inv_eq_inv_val, map_pow, map_inv₀, hvu, inv_one, one_pow, one_mul]
+............WARNING: FLT/Mathlib/AlgebraicGeometry/EllipticCurve/Reduction.lean produced errors (exit code 0)

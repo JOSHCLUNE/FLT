@@ -1,0 +1,20 @@
+..
+line 34, col 76:
+simp
+....
+line 70, col 26:
+simp
+.
+line 70, col 36:
+simp
+.......................
+line 160, col 17:
+convert hx.map e.symm
+shortened proof!
+...............
+line 215, col 65:
+simp
+.
+line 215, col 75:
+simp
+......

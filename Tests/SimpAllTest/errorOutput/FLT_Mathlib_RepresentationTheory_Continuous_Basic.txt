@@ -1,0 +1,12 @@
+.
+line 46, col 23:
+ext
+shortened proof!
+.
+line 47, col 24:
+ext
+shortened proof!
+.....
+line 54, col 34:
+simp
+..

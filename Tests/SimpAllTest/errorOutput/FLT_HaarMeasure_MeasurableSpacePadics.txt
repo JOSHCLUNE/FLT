@@ -1,0 +1,11 @@
+....
+line 39, col 19:
+simp
+...
+line 72, col 28:
+simp
+.........
+line 97, col 2:
+suffices (comap (Coe.ringHom (p := p)) volume).addHaarScalarFactor volume = 1 by
+    simp [-coe_coeRingHom, this]
+shortened proof!

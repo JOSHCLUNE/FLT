@@ -1,0 +1,224 @@
+.......
+line 137, col 47:
+apply h
+..
+line 142, col 51:
+simp
+........
+line 159, col 22:
+simp
+.
+line 162, col 23:
+simp only [Subgroup.coe_top, isOpen_univ, Subgroup.mem_top,
+    Pi.zero_apply, imp_self, implies_true, and_self]
+.
+line 164, col 33:
+simp
+.
+line 175, col 22:
+simp [left_invt]
+...
+line 179, col 33:
+simp [trivial_central_char]
+.
+line 191, col 18:
+simp [left_invt]
+.....
+line 197, col 29:
+simp [trivial_central_char]
+......
+line 210, col 30:
+simp
+...
+line 211, col 30:
+simp
+...
+line 215, col 36:
+simp
+....._............
+line 256, col 66:
+simp
+..
+line 263, col 24:
+simp only [groupSMul_apply, mul_one]
+....
+line 269, col 25:
+simp
+..
+line 270, col 28:
+simp
+..............
+line 325, col 22:
+simp [left_invt]
+...
+line 329, col 8:
+simp_all only [implies_true, and_self]
+.
+line 330, col 37:
+simp only [trivial_central_char]
+..
+line 341, col 24:
+simp [smul_apply]
+....
+line 343, col 25:
+simp [smul_apply]
+..
+line 344, col 28:
+simp [smul_apply, smul_add]
+....
+line 346, col 25:
+simp [smul_apply]
+..
+line 349, col 29:
+simp [smul_apply]
+..
+line 366, col 20:
+simp
+...
+line 369, col 23:
+simp +contextual [H]
+.
+line 370, col 31:
+simp
+..
+line 371, col 26:
+simp
+..
+line 372, col 27:
+simp
+............
+line 432, col 18:
+simp
+.....
+line 439, col 18:
+simp
+.......
+line 451, col 4:
+simp
+..
+line 453, col 2:
+simp only [pow_card_eq_one', map_one, MonoidHom.one_apply]
+......................_......
+line 530, col 6:
+simp [← mul_smul]
+...
+line 544, col 18:
+simp
+......
+line 557, col 30:
+simp
+..
+line 576, col 45:
+rintro g _ ⟨x, hx, rfl⟩
+shortened proof!
+...........
+line 632, col 8:
+simp [-Subgroup.inclusion_mk]
+.......
+line 655, col 2:
+rfl
+...........
+line 678, col 6:
+simp
+........
+line 701, col 6:
+exact one_smul _ _
+................................
+line 765, col 65:
+simp
+.
+line 765, col 74:
+simp
+...
+line 766, col 74:
+simp
+.
+line 766, col 83:
+simp
+..........
+line 775, col 43:
+simp
+.
+line 775, col 60:
+simp
+...
+line 777, col 52:
+simp
+.
+line 777, col 69:
+simp
+...
+line 781, col 6:
+have := ℒ.apply_mul_eq_χA_smul _ f.2
+shortened proof!
+..
+line 783, col 50:
+simp
+.....
+line 788, col 65:
+simp
+..
+line 789, col 32:
+simp
+.......
+line 795, col 6:
+simp [this]
+....
+line 822, col 32:
+simp
+.
+line 823, col 19:
+simp
+..
+line 831, col 59:
+simp
+........
+line 871, col 61:
+simp
+..
+line 871, col 76:
+simp
+..
+line 881, col 26:
+simp
+..
+line 882, col 27:
+simp
+............Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.................................
+line 1029, col 4:
+simp
+........
+line 1053, col 4:
+simp
+...
+line 1062, col 2:
+simp
+...
+line 1068, col 2:
+simp
+..........
+line 1100, col 17:
+simp
+...............
+line 1162, col 19:
+dsimp
+shortened proof!
+.
+line 1163, col 19:
+dsimp
+shortened proof!
+............................
+line 1209, col 4:
+simpa
+.
+line 1210, col 4:
+simp [h]
+..........WARNING: FLT/AutomorphicForm/QuaternionAlgebra/Basic.lean produced errors (exit code 0)

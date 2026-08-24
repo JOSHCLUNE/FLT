@@ -1,0 +1,30 @@
+....
+line 72, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h1
+.
+line 73, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h2
+.
+line 74, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr h3
+.
+line 75, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+...
+line 78, col 8:
+exact Or.inl h1
+.
+line 79, col 8:
+exact Or.inr <| Or.inl h2
+.
+line 80, col 8:
+exact Or.inr <| Or.inr <| Or.inl h3
+.
+line 81, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+.
+line 82, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h5
+....
+line 84, col 61:
+exact Subgroup.mem_zpowers 1

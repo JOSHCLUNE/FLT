@@ -1,0 +1,40 @@
+............
+line 77, col 59:
+simp
+..........
+line 115, col 17:
+simp +contextual only [Set.mem_ofPred, Pi.mul_apply, map_mul, implies_true]
+.
+line 116, col 17:
+simp +contextual only [Set.mem_ofPred, Pi.add_apply, RingHom.map_add, implies_true]
+.
+line 117, col 17:
+simp
+.
+line 118, col 18:
+simp
+.
+line 119, col 17:
+simp +contextual only [Set.mem_ofPred, Pi.neg_apply, RingHom.map_neg, implies_true]
+.............................
+line 187, col 8:
+exact hb j hij
+..................
+line 222, col 2:
+simp [componentMap, UltraProduct.mapRingHom_π]
+.........................
+line 280, col 2:
+simp only [Pi.evalRingHom_apply, RingHom.pi_apply, RingHom.coe_comp, Function.comp_apply, hz]
+..
+line 299, col 4:
+simp [UltraProduct.mapRingHom_π]
+....
+line 320, col 52:
+infer_instance
+.....
+line 334, col 36:
+simp
+.........................................................
+line 463, col 2:
+simpa using this
+....................

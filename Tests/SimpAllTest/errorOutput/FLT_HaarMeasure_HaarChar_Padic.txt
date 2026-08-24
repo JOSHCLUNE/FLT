@@ -1,0 +1,21 @@
+.............
+line 61, col 4:
+simp
+.
+line 62, col 4:
+simp
+.
+line 63, col 4:
+simp
+....
+line 78, col 19:
+simp
+.
+line 79, col 19:
+simp
+...............
+line 115, col 71:
+simp
+.
+line 116, col 8:
+simp

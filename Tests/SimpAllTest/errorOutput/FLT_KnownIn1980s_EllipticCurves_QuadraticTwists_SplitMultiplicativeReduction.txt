@@ -1,0 +1,55 @@
+........
+line 94, col 48:
+exact mul_ne_zero (pow_ne_zero 2 hD) hc₄
+....
+line 100, col 49:
+rw [map_pow]
+shortened proof!
+......
+line 127, col 2:
+exact not_or.mpr ⟨pow_ne_zero 6 hD, hΔint⟩
+........................
+line 181, col 38:
+simp only [← ResidueField.algebraMap_residue]
+............
+line 231, col 2:
+exact ⟨hA, hB⟩
+..............
+line 282, col 61:
+rw [← hkey, h0, mul_zero]
+......
+line 289, col 4:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+......
+line 294, col 4:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.....
+line 300, col 4:
+exact mul_ne_zero (pow_ne_zero 2 hDmap) hc₄map
+.........
+line 310, col 6:
+exact absurd hz hc₄0
+............
+line 330, col 2:
+rw [hκW_eq, hWc₄eq, show (0 : ResidueField R) ^ 2 + 0 = 0 from by ring, mul_zero, hκW0,
+    neg_zero, mul_zero]
+....
+line 355, col 63:
+rw [← hkey, h0, mul_zero]
+....
+line 359, col 36:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.
+line 360, col 10:
+rw [ResidueField.algebraMap_eq]
+shortened proof!
+.........................................
+line 467, col 61:
+rw [← hkey, h0, mul_zero]
+........
+line 480, col 15:
+rw [h0, map_zero]
+.

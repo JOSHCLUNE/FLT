@@ -1,0 +1,6 @@
+..
+line 32, col 16:
+simp
+........
+line 41, col 23:
+simp_all

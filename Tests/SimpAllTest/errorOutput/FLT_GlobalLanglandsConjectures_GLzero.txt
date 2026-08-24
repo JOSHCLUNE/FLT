@@ -1,0 +1,33 @@
+...
+line 69, col 8:
+sorry
+..
+line 73, col 22:
+simp
+.
+line 74, col 42:
+simp
+..
+line 81, col 23:
+simp
+.
+line 82, col 23:
+simp
+.
+line 83, col 23:
+simp
+...
+line 87, col 24:
+sorry
+..
+line 89, col 29:
+simp
+......Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..WARNING: FLT/GlobalLanglandsConjectures/GLzero.lean produced errors (exit code 0)

@@ -1,0 +1,70 @@
+...............
+line 204, col 4:
+simpa [← hy2, this] using hy1
+........................................................................._.._...._...._.._.
+line 342, col 4:
+exact RingHom.map_add (D𝔸ProdRight K D).toRingHom a b
+...............
+line 389, col 2:
+simp [MulEquivClass.map_mul]
+..............................
+line 466, col 62:
+simpa using h
+......
+line 486, col 69:
+simpa using h
+.................
+line 543, col 8:
+simp only [LinearEquiv.map_zero, zero_mul]
+...
+line 547, col 8:
+simp only [LinearEquiv.map_zero, mul_zero]
+......................
+line 608, col 4:
+simpa
+.....
+line 614, col 4:
+simpa
+..................................................
+line 747, col 6:
+simp
+.......
+line 756, col 4:
+exact ⟨hpos, hfin⟩
+.........
+line 768, col 2:
+rw [hρ]
+shortened proof!
+...................
+line 797, col 70:
+simpa
+.
+line 797, col 80:
+simpa
+........................................
+line 878, col 4:
+exact ⟨ht1, d, rfl⟩
+..............
+line 905, col 26:
+simp only [Set.mem_range, exists_apply_eq_apply]
+................
+line 948, col 6:
+refine Subgroup.mem_subgroupOf.mpr ?_
+shortened proof!
+.........
+line 964, col 57:
+simp
+...........
+line 994, col 4:
+exact_mod_cast hy
+......
+line 1004, col 6:
+ext
+shortened proof!
+...................
+line 1048, col 2:
+simp [ha]
+......
+line 1074, col 2:
+exact this
+....

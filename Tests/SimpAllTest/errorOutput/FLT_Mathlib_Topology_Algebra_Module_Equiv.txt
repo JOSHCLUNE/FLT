@@ -1,0 +1,7 @@
+.........
+line 134, col 40:
+rw[Matrix.det_mul]
+shortened proof!
+....
+line 147, col 2:
+simp

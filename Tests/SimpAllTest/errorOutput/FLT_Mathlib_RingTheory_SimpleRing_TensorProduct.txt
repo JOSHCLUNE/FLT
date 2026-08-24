@@ -1,0 +1,57 @@
+.
+line 57, col 39:
+simp
+.......
+line 81, col 46:
+simpa
+.
+line 82, col 2:
+convert hsc
+shortened proof!
+......
+line 105, col 15:
+simp
+..
+line 108, col 6:
+aesop
+...
+line 111, col 59:
+simp
+....
+line 115, col 75:
+simp_all
+..
+line 116, col 72:
+simp
+....
+line 120, col 82:
+simp [eq1, eq2]
+...
+line 123, col 60:
+simp [eq]
+........
+line 130, col 46:
+simp_all
+............
+line 148, col 10:
+convert (hT'_mem x)
+shortened proof!
+.........._................
+line 179, col 2:
+simp +contextual [main]
+....
+line 188, col 6:
+exact bot_le
+.........
+line 197, col 14:
+simp
+..
+line 199, col 50:
+simp
+......
+line 205, col 4:
+exact hx
+......
+line 215, col 4:
+simp
+....

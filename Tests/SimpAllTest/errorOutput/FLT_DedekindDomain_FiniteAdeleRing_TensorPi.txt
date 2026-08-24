@@ -1,0 +1,20 @@
+.........................._....
+line 87, col 6:
+simp
+....._....
+line 97, col 6:
+simp
+..........
+line 159, col 4:
+simp
+........
+line 168, col 94:
+simp
+.
+line 170, col 35:
+simp
+.......................
+line 226, col 4:
+simp only [LinearMap.pi_apply, LinearMap.coe_comp, Function.comp_apply, LinearMap.proj_apply,
+      LinearMap.rTensor_tmul]
+...................................

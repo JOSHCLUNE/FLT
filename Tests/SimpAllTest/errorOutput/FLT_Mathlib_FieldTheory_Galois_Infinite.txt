@@ -1,0 +1,30 @@
+............_...................
+line 122, col 2:
+rw [map_smul, inv_smul_smul]
+.......................................................................................
+line 254, col 41:
+simp
+.
+line 255, col 6:
+simpa using this.symm
+..........Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+....Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.
+line 273, col 8:
+rw [← H' _ _ hσ₂, H]
+.....
+line 282, col 22:
+simp
+........__.........
+line 306, col 69:
+simp
+...
+line 309, col 2:
+simp only [smul_eq_mul, Set.mem_ofPred_eq, mul_smul, this, hσ]
+WARNING: FLT/Mathlib/FieldTheory/Galois/Infinite.lean produced errors (exit code 0)

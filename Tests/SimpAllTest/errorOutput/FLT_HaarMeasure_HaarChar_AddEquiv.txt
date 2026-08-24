@@ -1,0 +1,22 @@
+................................
+line 143, col 20:
+simp
+........_...........
+line 160, col 65:
+simp [one_mem_X, one_mem_Y]
+..................._...........
+line 187, col 62:
+simp [one_mem_X, one_mem_Y]
+..................................................................
+line 335, col 26:
+simp
+..
+line 336, col 27:
+simp
+..
+line 337, col 28:
+exact map_mul (φ i) _ _
+..............
+line 363, col 2:
+simpa [← Finset.coe_subset, Set.coe_toFinset] using hsupp
+...........

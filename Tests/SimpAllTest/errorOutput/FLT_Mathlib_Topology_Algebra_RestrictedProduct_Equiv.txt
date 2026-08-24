@@ -1,0 +1,53 @@
+..........
+line 67, col 26:
+simp
+...............
+line 102, col 26:
+simp [AddEquiv.restrictedProductCongrRight]
+.
+line 120, col 8:
+filter_upwards [hφ]
+shortened proof!
+.................
+line 193, col 26:
+simp [Equiv.restrictedProductCongrLeft']
+...
+line 204, col 4:
+simp
+..
+line 224, col 26:
+simp [Equiv.restrictedProductCongrLeft']
+...
+line 235, col 4:
+simp
+..........
+line 353, col 63:
+simp
+...
+line 370, col 63:
+simp
+...
+line 388, col 63:
+simp
+....
+line 430, col 4:
+simp
+...........
+line 475, col 4:
+filter_upwards [yz.1.2, yz.2.2] with i using Set.mk_mem_prod
+._._..
+line 501, col 40:
+simp
+.......
+line 551, col 56:
+exact hf.ge
+..
+line 554, col 4:
+filter_upwards [hx] with j hj ⟨i, hi⟩ _ using hj i hi
+......
+line 614, col 5:
+aesop
+..
+line 615, col 24:
+simp
+...

@@ -1,0 +1,34 @@
+...........
+line 74, col 19:
+aesop
+.
+line 75, col 19:
+aesop
+.
+line 76, col 19:
+aesop
+.....
+line 87, col 19:
+aesop
+.
+line 88, col 19:
+aesop
+.
+line 89, col 19:
+aesop
+.
+line 90, col 20:
+aesop
+.
+line 91, col 19:
+aesop
+.....
+line 103, col 19:
+aesop
+.
+line 104, col 20:
+aesop
+.
+line 105, col 20:
+aesop
+..

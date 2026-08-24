@@ -1,0 +1,25 @@
+.....
+line 27, col 4:
+simp [this]
+...
+line 30, col 53:
+simp [hp]
+.....
+line 34, col 53:
+simp [this]
+..
+line 36, col 6:
+exact (aeval_algHom_apply F⟮x⟯.val ..).symm.trans (by simpa)
+...
+line 37, col 39:
+simp_all
+...
+line 38, col 39:
+simp_all
+........
+line 45, col 56:
+simp [hp0]
+..
+line 47, col 8:
+exact map_dvd _ ⟨_, hq.trans (mul_comm _ _)⟩
+...............

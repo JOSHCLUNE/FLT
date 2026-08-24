@@ -1,0 +1,25 @@
+.............
+line 104, col 4:
+rw [inv_inv, mul_inv_cancel_left]
+shortened proof!
+.
+line 115, col 52:
+lia
+..
+line 116, col 27:
+lia
+.....
+line 126, col 28:
+lia
+........
+line 151, col 74:
+rw [ih]
+...
+line 166, col 6:
+rwa [hx g⁻¹] at h1
+............
+line 227, col 58:
+simp
+....
+line 238, col 80:
+simp

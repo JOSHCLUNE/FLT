@@ -1,0 +1,33 @@
+....................
+line 126, col 2:
+refine Ideal.Quotient.subsingleton_iff.mp ?_
+shortened proof!
+..
+line 133, col 2:
+rw [Ideal.smul_top_eq_map, H, Submodule.restrictScalars_top]
+...
+line 139, col 8:
+simp +contextual
+.
+line 139, col 30:
+simp +contextual
+..............................
+line 183, col 52:
+simp [*]
+.
+line 183, col 71:
+simp [*]
+.
+line 183, col 85:
+ext
+shortened proof!
+..
+line 191, col 4:
+simp
+.....
+line 195, col 11:
+simp
+...
+line 196, col 89:
+simp
+....

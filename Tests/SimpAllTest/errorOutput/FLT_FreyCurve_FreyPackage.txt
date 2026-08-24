@@ -1,0 +1,16 @@
+.
+line 107, col 62:
+omega
+....._...........................................................
+line 198, col 50:
+decide
+....
+line 201, col 29:
+decide
+..
+line 203, col 11:
+rwa [Int.neg_gcd, Int.gcd_neg]
+...
+line 205, col 29:
+decide
+.......

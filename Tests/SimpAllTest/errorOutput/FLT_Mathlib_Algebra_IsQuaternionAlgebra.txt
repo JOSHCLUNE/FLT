@@ -1,0 +1,22 @@
+..............
+line 77, col 79:
+contradiction
+......
+line 87, col 4:
+simp at this
+...
+line 89, col 67:
+simpa
+..
+line 90, col 40:
+simpa using this
+..._.......
+line 108, col 60:
+simp_all
+.
+line 109, col 6:
+simp
+...........
+line 122, col 6:
+lia
+.........

@@ -1,0 +1,95 @@
+...
+line 48, col 2:
+exact h i
+.
+line 57, col 24:
+simp
+.
+line 67, col 50:
+simp
+.....
+line 90, col 47:
+simp
+..
+line 99, col 26:
+simp
+....
+line 105, col 25:
+simp
+..
+line 106, col 25:
+simp
+.
+line 114, col 27:
+simp
+...
+line 115, col 57:
+simp
+....
+line 131, col 20:
+simp
+.
+line 132, col 28:
+simp
+.
+line 133, col 23:
+simp
+.....
+line 137, col 58:
+simp
+.......
+line 145, col 32:
+simp
+..
+line 162, col 26:
+simp
+..
+line 163, col 26:
+simp
+...
+line 176, col 80:
+rw [h]
+..
+line 204, col 22:
+simp
+.
+line 205, col 28:
+simp
+.
+line 206, col 27:
+simp
+............
+line 242, col 28:
+simp
+..
+line 243, col 30:
+simp
+.
+line 244, col 16:
+intros
+shortened proof!
+....
+line 262, col 31:
+simp
+..
+line 263, col 33:
+simp
+......
+line 337, col 4:
+simp
+..
+line 345, col 4:
+simp
+..
+line 353, col 4:
+simp
+..
+line 366, col 11:
+simp
+..
+line 368, col 11:
+simp
+....
+line 376, col 29:
+simp
+................

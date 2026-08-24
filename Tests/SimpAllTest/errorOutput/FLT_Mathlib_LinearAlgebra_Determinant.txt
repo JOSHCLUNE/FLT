@@ -1,0 +1,22 @@
+..
+line 37, col 2:
+simp
+..
+line 43, col 2:
+simp
+.........
+line 82, col 9:
+simp
+...
+line 84, col 9:
+simp
+.....
+line 91, col 4:
+rfl
+...
+line 95, col 4:
+rfl
+..
+line 101, col 2:
+simp [LinearMap.det_toLin', Finset.prod_const, Finset.card_univ, Fintype.card_fin]
+....

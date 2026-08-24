@@ -1,0 +1,60 @@
+.....................
+line 146, col 40:
+simp
+....
+line 153, col 54:
+simp_all
+.
+line 153, col 68:
+simp
+....
+line 162, col 21:
+simp_all
+.
+line 162, col 35:
+simp
+......................
+line 282, col 24:
+norm_num
+.
+line 284, col 41:
+norm_num
+....
+line 289, col 4:
+rw [valuedAdicCompletion_eq_valuation' v (algebraMap A K x)]
+shortened proof!
+............
+line 313, col 2:
+simp
+................
+line 390, col 8:
+simp
+.............
+line 413, col 10:
+exact mul_comm _ _
+........
+line 422, col 10:
+exact isClosed_closure
+......
+line 431, col 8:
+simp
+.............
+line 460, col 21:
+simp
+.........................
+line 498, col 6:
+simp
+.............
+line 527, col 4:
+rwa [h]
+..........................
+line 627, col 8:
+exact hx
+.
+line 628, col 8:
+rw [hx', Pi.single_eq_of_ne' h]
+shortened proof!
+...................................
+line 719, col 4:
+simp at hcomap
+.............................

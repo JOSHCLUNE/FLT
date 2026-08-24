@@ -1,0 +1,52 @@
+.......
+line 49, col 10:
+cases ha rfl
+..
+line 50, col 36:
+simp [ha'.dvd]
+..................
+line 98, col 59:
+simp_all
+........
+line 128, col 17:
+simp
+......
+line 138, col 39:
+simp
+.
+line 138, col 75:
+simp
+........
+line 173, col 66:
+simpa
+...
+line 177, col 4:
+simp_all
+..
+line 178, col 53:
+simp_all
+...................
+line 253, col 54:
+simp [mem_ker.mp hx]
+..
+line 256, col 4:
+simp only [comp_apply, liftOfRightInverseAux'_comp_apply]
+.....
+line 297, col 76:
+simp_all
+............
+line 320, col 50:
+simp
+.
+line 320, col 59:
+simp
+..........
+line 356, col 89:
+simp
+.
+line 357, col 78:
+simp
+.....
+line 379, col 33:
+simpa using H
+..

@@ -1,0 +1,4 @@
+......
+line 84, col 2:
+have := h1.symm.trans h2
+shortened proof!

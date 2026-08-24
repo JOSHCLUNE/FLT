@@ -1,0 +1,40 @@
+.
+line 49, col 44:
+simp
+.
+line 49, col 64:
+simp
+.
+line 54, col 43:
+simpa
+.
+line 54, col 54:
+simp
+.......__..........
+line 98, col 6:
+simp_all
+.....
+line 104, col 22:
+simpa
+.
+line 104, col 56:
+simpa
+......
+line 112, col 54:
+simp [hx]
+...
+line 128, col 60:
+simpa
+............
+line 153, col 31:
+simpa
+............
+line 168, col 55:
+simp [H]
+...
+line 170, col 38:
+simp [h] at H
+...
+line 180, col 77:
+simpa
+..

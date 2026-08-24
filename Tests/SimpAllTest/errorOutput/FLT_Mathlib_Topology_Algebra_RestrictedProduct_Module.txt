@@ -1,0 +1,31 @@
+...
+line 79, col 25:
+simp
+..
+line 80, col 25:
+simp
+..
+line 81, col 24:
+simp
+....
+line 83, col 28:
+simp
+.....
+line 91, col 4:
+simp
+.
+line 92, col 4:
+simp [single_eq_of_ne' _ _ hi]
+...
+line 99, col 4:
+simp
+.
+line 100, col 4:
+simp [single_eq_of_ne' _ _ hi]
+.
+line 104, col 2:
+simp
+........
+line 147, col 25:
+rfl
+...................................

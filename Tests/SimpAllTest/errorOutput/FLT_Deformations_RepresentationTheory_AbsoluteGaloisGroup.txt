@@ -1,0 +1,14 @@
+......
+line 63, col 60:
+simp
+..............................._...
+line 131, col 52:
+positivity
+.
+line 131, col 68:
+aesop
+...................
+line 181, col 34:
+dsimp
+shortened proof!
+._.......

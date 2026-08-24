@@ -1,0 +1,56 @@
+........
+line 64, col 4:
+simp
+.
+line 65, col 4:
+simp
+.....
+line 72, col 20:
+simpa
+.
+line 72, col 30:
+simp
+....
+line 82, col 11:
+simpa using Order.krullDim_nonneg.trans_eq h
+..
+line 85, col 11:
+simp
+........
+line 95, col 13:
+simp
+.......
+line 103, col 6:
+rw [Ideal.span_le, Set.singleton_subset_iff]
+shortened proof!
+..........................
+line 138, col 8:
+exact top_ne_bot
+..
+line 140, col 6:
+simp at this
+.....
+line 145, col 6:
+cases (ENat.natCast_lt_top n).not_ge this
+......
+line 152, col 46:
+simp_all
+.....................
+line 197, col 12:
+simp_all
+..
+line 200, col 13:
+simp at hn
+...
+line 203, col 54:
+simp
+......
+line 212, col 4:
+exact IH (by simp_all)
+...........
+line 234, col 8:
+exact top_ne_bot
+...........
+line 249, col 10:
+simp
+....._.....

@@ -1,0 +1,137 @@
+..........
+line 71, col 6:
+norm_num
+..
+line 73, col 6:
+norm_num
+.....
+line 82, col 24:
+rw [← inv_mul_cancel_left h g, mul_inv_eq_one.mp heq, inv_mul_cancel]
+......
+line 108, col 6:
+norm_num
+.......
+line 119, col 40:
+norm_num
+.....
+line 127, col 6:
+intro _
+shortened proof!
+............
+line 143, col 2:
+rw [Finset.card_erase_of_mem (Finset.mem_univ (1 : G)), Finset.card_univ, ← Nat.card_eq_fintype_card] at h_bound
+shortened proof!
+.....
+line 152, col 28:
+rw [ha1, one_mul, mul_one]
+..
+line 153, col 28:
+rw [hb1, mul_one, one_mul]
+...........................
+line 186, col 4:
+rw [ha_pow, hb_pow, mul_one]
+...............
+line 219, col 2:
+change g * y * g⁻¹ = _ at hy_eq
+shortened proof!
+...................
+line 283, col 6:
+exact h_dich.1.mpr h_p
+......
+line 289, col 6:
+ext g
+shortened proof!
+.......
+line 299, col 15:
+rw [h_p] at h_cop
+shortened proof!
+.....................................................................
+line 445, col 2:
+rw [h_split, h_S]
+shortened proof!
+.........................
+line 483, col 33:
+exact Nat.le_of_lt_succ (Nat.lt_of_not_le h_lt)
+....................
+line 531, col 8:
+have hg : Nat.gcd (pm * a + 1) a ∣ pm * a + 1 - pm * a :=
+          Nat.dvd_sub (Nat.gcd_dvd_left _ _) (dvd_trans (Nat.gcd_dvd_right _ _) (dvd_mul_left a pm))
+shortened proof!
+...
+line 539, col 72:
+omega
+.........
+line 549, col 6:
+exfalso
+shortened proof!
+.
+line 550, col 6:
+left
+shortened proof!
+....
+line 552, col 55:
+omega
+..
+line 554, col 8:
+omega
+...........
+line 561, col 55:
+rw [tsub_add_cancel_of_le hpm_ge3]
+..............
+line 573, col 6:
+omega
+..
+line 575, col 8:
+left
+shortened proof!
+......
+line 576, col 51:
+rw [mul_one]
+......
+line 577, col 46:
+rw [mul_one]
+.
+line 578, col 6:
+omega
+....
+line 581, col 6:
+exfalso
+shortened proof!
+.
+line 582, col 6:
+right
+shortened proof!
+..........
+line 597, col 4:
+omega
+...........................
+line 622, col 28:
+rw [hk]
+......................
+line 646, col 2:
+exact h_orbit_size_eq ▸ h_orbit_size ▸ h_dvd
+..
+line 654, col 4:
+exfalso
+shortened proof!
+.
+line 655, col 4:
+exfalso
+shortened proof!
+.....
+line 659, col 35:
+omega
+.....
+line 663, col 73:
+omega
+......
+line 667, col 6:
+exfalso
+shortened proof!
+.....
+line 672, col 4:
+exact Nat.le_add_left 2 k
+............_.........
+line 701, col 45:
+exact Nat.succ_pos'
+............

@@ -1,0 +1,150 @@
+[{"tacticSucceeded": true,
+  "startLine": 54,
+  "startCol": 8,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "rw [hQ, ← derivative_map]",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 52,
+  "startCol": 60,
+  "shortenedStepsCount": 1,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "rw [hQ]",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 56,
+  "startCol": 82,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "exact hgdeg",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 47,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "by_contra hns",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 48,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "obtain ⟨g, hgmonic, hgdeg, hgdvd, hgdvd'⟩ :=\n    exists_monic_dvd_dvd_derivative_of_not_separable (hmonic.map _).ne_zero hns",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 50,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "obtain ⟨Q, hQmonic, hQ⟩ := hmonic.exists_monic_map_eq_of_monic_dvd_map hgmonic hgdvd",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 51,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "have hinj : Function.Injective (algebraMap R K) := IsFractionRing.injective R K",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 52,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "have hdvdP : Q ∣ P := (map_dvd_map _ hinj hQmonic).mp (by rw [hQ]; exact hgdvd)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 53,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "have hdvdP' : Q ∣ derivative P := (map_dvd_map _ hinj hQmonic).mp\n    (by rw [hQ, ← derivative_map]; exact hgdvd')",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 55,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "refine not_isUnit_of_natDegree_pos (Q.map (residue R))\n    (by rw [hQmonic.natDegree_map, ← hQmonic.natDegree_map (algebraMap R K), hQ]; exact hgdeg)\n    (((separable_def _).mp hsep).isUnit_of_dvd' (map_dvd _ hdvdP) ?_)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 56,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText":
+  "rw [hQmonic.natDegree_map, ← hQmonic.natDegree_map (algebraMap R K), hQ]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 58,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "rw [derivative_map]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 59,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Polynomial.Monic.separable_map_algebraMap_of_separable_map_residue",
+  "oldText": "exact map_dvd _ hdvdP'",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/DiscreteValuationRing/Separable.lean"}]

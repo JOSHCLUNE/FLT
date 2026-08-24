@@ -1,0 +1,26 @@
+.....
+line 68, col 53:
+simpa using hx
+......
+line 77, col 2:
+rfl
+....
+line 86, col 4:
+simp [hs]
+.................
+line 135, col 49:
+simp
+.................
+line 159, col 82:
+simp
+....................
+line 182, col 42:
+simp
+.....
+line 189, col 6:
+simp [hx₂, H] at hx₁
+..
+line 202, col 2:
+refine ⟨isAdic_iff.mpr ⟨isOpen_maximalIdeal_pow R, ?_⟩⟩
+shortened proof!
+.......

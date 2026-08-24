@@ -1,0 +1,15 @@
+.................
+line 86, col 4:
+simp [hx]
+..Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+...........................
+line 147, col 2:
+simpa using hyzx.symm
+...WARNING: FLT/Mathlib/NumberTheory/Padics/PadicIntegers.lean produced errors (exit code 0)

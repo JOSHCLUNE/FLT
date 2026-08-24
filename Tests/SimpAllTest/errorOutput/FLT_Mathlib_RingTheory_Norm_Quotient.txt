@@ -1,0 +1,8 @@
+......
+line 40, col 2:
+rw [hcp] at hCH
+shortened proof!
+.........
+line 81, col 4:
+simp only [← ResidueField.algebraMap_residue]
+.

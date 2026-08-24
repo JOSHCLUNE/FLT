@@ -1,0 +1,286 @@
+....
+line 179, col 2:
+ring_nf
+.......
+line 199, col 2:
+ring_nf
+...
+line 207, col 59:
+simp
+..
+line 215, col 42:
+simp
+.............................
+line 324, col 50:
+exact_mod_cast hk
+.
+line 325, col 15:
+simp
+.
+line 329, col 55:
+simp
+..................
+line 361, col 54:
+rw [zero_add]
+..
+line 371, col 4:
+norm_num
+....
+line 378, col 34:
+linarith
+...................
+line 415, col 65:
+simpa using h
+.........
+line 439, col 58:
+simp
+.
+line 445, col 45:
+simpa using hq1
+.
+line 445, col 80:
+rw [mul_one]
+..
+line 451, col 68:
+simp
+...........
+line 463, col 66:
+simp
+..
+line 468, col 45:
+rw [zpow_natCast]
+.....
+line 478, col 45:
+rw [zpow_natCast]
+....
+line 483, col 48:
+push_cast
+shortened proof!
+.......
+line 491, col 69:
+rw [zpow_natCast]
+...
+line 495, col 66:
+simp
+...............
+line 535, col 47:
+simp [Complex.sub_im, Complex.mul_im]
+....
+line 537, col 70:
+exact_mod_cast h
+......
+line 549, col 28:
+norm_num
+.
+line 550, col 4:
+simp
+.............................
+line 623, col 4:
+norm_num
+....
+line 633, col 4:
+norm_num
+....
+line 643, col 4:
+norm_num
+.....
+line 654, col 42:
+norm_num
+.
+line 654, col 79:
+simpa using h
+.
+line 656, col 4:
+ring
+.............
+line 699, col 56:
+norm_num
+..............
+line 730, col 42:
+norm_num
+.......
+line 740, col 29:
+norm_num
+.
+line 740, col 55:
+norm_num
+.......
+line 751, col 36:
+exact_mod_cast hd2
+........
+line 770, col 10:
+simp [zero_pow hj]
+....
+line 773, col 66:
+simp
+...
+line 783, col 6:
+rw [show ((-((n + 1 : ℕ) : ℤ)).natAbs) = ((-((n : ℤ) + 1)).natAbs) by omega]
+..
+line 788, col 8:
+rw [show ((n : ℤ)).natAbs = n by omega]
+......
+line 806, col 53:
+simp [Complex.mul_im]
+.....
+line 810, col 37:
+exact_mod_cast h
+...
+line 813, col 6:
+rw [him]
+shortened proof!
+.....
+line 834, col 4:
+rw [PeriodPair.sumInvPow_zero] at h
+shortened proof!
+.....
+line 842, col 30:
+norm_num
+.
+line 844, col 6:
+simp
+.....
+line 851, col 4:
+rwa [hrowval n] at h
+....
+line 856, col 45:
+ring
+..
+line 860, col 6:
+rw [← mul_assoc, inv_mul_cancel₀ hC, one_mul]
+...
+line 872, col 44:
+norm_num
+.
+line 872, col 58:
+norm_num
+.
+line 872, col 75:
+norm_num
+.
+line 873, col 56:
+norm_num
+..........
+line 892, col 49:
+norm_num
+....
+line 894, col 47:
+norm_num
+....
+line 904, col 42:
+norm_num
+......
+line 913, col 27:
+norm_num
+.
+line 913, col 53:
+norm_num
+..
+line 924, col 44:
+norm_num
+.
+line 924, col 58:
+norm_num
+.
+line 924, col 75:
+norm_num
+.
+line 925, col 56:
+norm_num
+................
+line 957, col 4:
+linarith
+..
+line 958, col 39:
+nlinarith [show 0 < (m : ℝ) * τ.im by simpa [him] using hz0]
+..
+line 960, col 4:
+nlinarith [show (m : ℝ) * τ.im < 1 * τ.im by simpa [one_mul, him] using hzt]
+..
+line 961, col 21:
+exact_mod_cast hm_pos_real
+.....................
+line 1031, col 17:
+simp
+.
+line 1032, col 21:
+simp
+.
+line 1033, col 18:
+simp
+.
+line 1034, col 21:
+simp
+.........
+line 1058, col 4:
+simpa using congrArg PNat.natPred hab
+..
+line 1062, col 30:
+simp [Nat.succPNat_coe, Nat.succ_eq_add_one]
+.......
+line 1075, col 4:
+refine tsum_congr fun n ↦ by congr 1
+..
+line 1077, col 2:
+norm_num
+.
+line 1083, col 70:
+simp
+..
+line 1088, col 91:
+simp
+..
+line 1094, col 4:
+norm_num
+.........
+line 1104, col 41:
+simp
+.................
+line 1139, col 70:
+exact max_lt hx hxy
+.....
+line 1142, col 52:
+positivity
+...
+line 1144, col 37:
+positivity
+....
+line 1149, col 71:
+positivity
+.........
+line 1184, col 43:
+rw [(Nat.mem_divisorsAntidiagonal.mp hp).1]
+.....
+line 1197, col 8:
+simpa using hq1
+....
+line 1200, col 68:
+simp
+.....................
+line 1271, col 66:
+rw [zpow_natCast]
+.....
+line 1279, col 6:
+rw [zpow_zero, one_mul]
+............
+line 1314, col 74:
+rw [zpow_natCast]
+.....
+line 1323, col 6:
+rw [zpow_zero, one_mul]
+................
+line 1363, col 2:
+norm_num
+.............
+line 1400, col 39:
+simpa [Metric.mem_ball, dist_eq_norm] using hz
+...
+line 1404, col 60:
+simpa using hz
+......................................
+line 1494, col 38:
+exact hx0
+..
+line 1494, col 64:
+exact hx1
+...................

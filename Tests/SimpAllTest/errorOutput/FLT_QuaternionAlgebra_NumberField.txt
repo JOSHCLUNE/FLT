@@ -1,0 +1,70 @@
+.............
+line 125, col 62:
+simp
+......
+line 144, col 2:
+dsimp at this
+shortened proof!
+..
+line 151, col 8:
+simp
+..........
+line 238, col 35:
+simp
+..............__...........
+line 286, col 17:
+simp [one_mem]
+........................
+line 319, col 25:
+simpa
+....
+line 321, col 25:
+simpa
+............
+line 366, col 9:
+simp
+.
+line 367, col 2:
+simp [this]
+.
+line 385, col 19:
+simp
+..............._........
+line 456, col 40:
+simp
+........
+line 493, col 25:
+simp [h'] at H
+.
+line 493, col 53:
+simp [h'] at H
+................
+line 507, col 56:
+simp [h'] at H
+..
+line 508, col 14:
+simp
+............
+line 518, col 38:
+simp [h'] at H
+.....
+line 562, col 17:
+simp
+.....
+line 581, col 2:
+simp [H]
+....
+line 590, col 2:
+simp
+...
+line 609, col 2:
+simp [H]
+...
+line 616, col 4:
+simp [ha]
+.
+line 617, col 4:
+simp [h]
+..............
+line 639, col 4:
+simp [M2.units_localFullLevel]

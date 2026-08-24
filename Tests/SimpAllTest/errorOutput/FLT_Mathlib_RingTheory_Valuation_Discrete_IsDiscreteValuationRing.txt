@@ -1,0 +1,8 @@
+..
+line 33, col 75:
+rw [map_one]
+shortened proof!
+.....
+line 36, col 4:
+rw [← map_mul, ← Units.val_mul, mul_inv_cancel, Units.val_one, map_one]
+.

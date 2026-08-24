@@ -1,0 +1,92 @@
+[{"tacticSucceeded": true,
+  "startLine": 37,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText": "rfl",
+  "message": "",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 35,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText": "have : IsDomain R := .of_faithfulSMul R S",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 36,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText":
+  "have hmax : IsLocalRing.maximalIdeal S ∈ p.primesOver S := by\n    rw [IsLocalRing.primesOver_eq S hp0]; rfl",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 37,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText": "rw [IsLocalRing.primesOver_eq S hp0]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 38,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText": "have : (IsLocalRing.maximalIdeal S).LiesOver p := hmax.2",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 39,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText":
+  "have heq (q : p.primesOver S) : q.1 = IsLocalRing.maximalIdeal S :=\n    IsLocalRing.eq_maximalIdeal (q.2.1.isMaximal (ne_bot_of_mem_primesOver hp0 q.2))",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 41,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText":
+  "have : Subsingleton (p.primesOver S) := ⟨fun q q' ↦ Subtype.ext ((heq q).trans (heq q').symm)⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 42,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Ideal.ramificationIdx_mul_inertiaDeg_eq_finrank_of_isLocalRing",
+  "oldText":
+  "rw [← sum_ramification_inertia_eq_finrank p S,\n    Fintype.sum_subsingleton _ (⟨IsLocalRing.maximalIdeal S, hmax⟩ : p.primesOver S)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/RingTheory/RamificationInertia/Basic.lean"}]

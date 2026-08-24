@@ -1,0 +1,74 @@
+...
+line 44, col 6:
+simp
+...
+line 46, col 34:
+fun_prop
+.........._..._.............
+line 103, col 6:
+simp
+...............................
+line 160, col 64:
+simp
+......
+line 191, col 10:
+simp
+.
+line 191, col 20:
+simp
+....................
+line 224, col 11:
+simp [ha₁]
+..
+line 225, col 11:
+simp
+...
+line 227, col 11:
+simp [ha₂]
+..
+line 228, col 11:
+simp
+..........
+line 284, col 4:
+ext
+shortened proof!
+...
+line 293, col 37:
+simp
+..
+line 299, col 37:
+simp
+...................
+line 331, col 37:
+simp
+..................
+line 360, col 9:
+simp [← MulOpposite.unop_injective.eq_iff]
+.
+line 362, col 4:
+simp
+......
+line 373, col 2:
+exact Measure.haarScalarFactor_self _
+.
+line 398, col 44:
+simpa
+...
+line 407, col 57:
+simp
+.......
+line 413, col 13:
+simp
+.......
+line 427, col 62:
+simp
+..................
+line 456, col 4:
+rfl
+.................
+line 476, col 14:
+simp
+.......................
+line 555, col 2:
+simp
+..

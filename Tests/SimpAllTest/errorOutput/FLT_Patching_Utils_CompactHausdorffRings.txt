@@ -1,0 +1,22 @@
+..........
+line 69, col 6:
+simp
+..
+line 71, col 6:
+grind
+.......
+line 74, col 20:
+grind
+.
+line 74, col 41:
+grind
+..............................
+line 116, col 52:
+exact hW1
+..................
+line 141, col 22:
+simp
+.
+line 142, col 21:
+simp [smul_add]
+.............

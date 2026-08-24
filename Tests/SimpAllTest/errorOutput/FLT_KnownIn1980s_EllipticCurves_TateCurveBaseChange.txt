@@ -1,0 +1,27 @@
+.......
+line 110, col 4:
+simp at hx
+..............................
+line 170, col 30:
+push_cast
+shortened proof!
+...
+line 175, col 18:
+simp at hx
+....
+line 188, col 2:
+exact tsum_congr fun N ↦ by rw [hF N]
+.....
+line 206, col 19:
+simpa using hn
+.............
+line 244, col 4:
+rw [map_sum]
+shortened proof!
+....
+line 260, col 10:
+rw [map_pow, ValuativeExtension.mapValueGroupWithZero_valuation]
+....
+line 271, col 8:
+congr 1
+shortened proof!

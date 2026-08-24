@@ -1,0 +1,7 @@
+....
+line 46, col 8:
+simp
+...
+line 50, col 8:
+simp
+.

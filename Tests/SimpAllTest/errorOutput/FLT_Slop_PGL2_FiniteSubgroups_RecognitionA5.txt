@@ -1,0 +1,394 @@
+..
+line 55, col 65:
+norm_num
+..
+line 58, col 67:
+norm_num
+..
+line 61, col 66:
+norm_num
+..
+line 64, col 67:
+norm_num
+..
+line 67, col 65:
+norm_num
+..
+line 70, col 65:
+norm_num
+..
+line 73, col 66:
+norm_num
+...
+line 111, col 6:
+positivity
+.....
+line 123, col 41:
+simp only [Set.mem_insert_iff, Set.mem_singleton_iff]
+............
+line 140, col 60:
+rw [hab, h, mul_zero]
+.........
+line 148, col 6:
+left
+shortened proof!
+.........
+line 157, col 20:
+rw [h, orderOf_one] at hgp_ord
+shortened proof!
+........
+line 165, col 37:
+rw [Nat.card_zpowers, hgb_ord]
+shortened proof!
+..............
+line 187, col 4:
+rw [h1] at h2
+shortened proof!
+............
+line 209, col 4:
+rw [hq1, mul_one, one_mul]
+....
+line 213, col 8:
+exact absurd (orderOf_eq_one_iff.mp h) hq1
+.
+line 214, col 8:
+exact h
+.........
+line 224, col 50:
+rw [ha']
+.
+line 226, col 36:
+rw [hb']
+.....
+line 232, col 16:
+rw [pow_zero, inv_one, mul_one, one_mul, pow_zero, zpow_one]
+...
+line 236, col 40:
+rw [ih]
+.......
+line 244, col 39:
+rw [hg3, inv_one, one_mul, mul_one]
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+_.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..............
+line 296, col 43:
+norm_num
+..........
+line 302, col 47:
+norm_num
+..___........
+line 319, col 40:
+rw [Fintype.card_eq_nat_card, hn]
+shortened proof!
+......
+line 325, col 52:
+rw [Subgroup.orderOf_coe, hg]
+..
+line 326, col 56:
+rw [Subgroup.orderOf_coe, hq_ord]
+...
+line 330, col 16:
+rw [h, orderOf_one] at hg_ord
+shortened proof!
+.
+line 331, col 16:
+rw [h, orderOf_one] at hq_ord_PGL
+shortened proof!
+.
+line 332, col 8:
+rw [hg_ord, hp3]
+.
+line 333, col 44:
+norm_num
+..............
+line 360, col 43:
+norm_num
+..........
+line 366, col 47:
+norm_num
+..
+line 367, col 2:
+interval_cases k
+shortened proof!
+........
+line 391, col 4:
+omega
+.
+line 392, col 4:
+exact hpq rfl
+...
+line 395, col 4:
+omega
+...................
+line 421, col 97:
+norm_num
+......
+line 427, col 4:
+rw [← Nat.card_eq_fintype_card, hP_card P]
+........
+line 433, col 97:
+norm_num
+......
+line 439, col 4:
+rw [← Nat.card_eq_fintype_card, hQ_card Q]
+............
+line 451, col 29:
+exact Subgroup.ext_iff.mp (hzP.symm.trans hzQ) y
+..
+line 453, col 6:
+rfl
+...............
+line 468, col 29:
+exact Subgroup.ext_iff.mp (hzQ1.symm.trans hzQ2) y
+..
+line 470, col 6:
+rfl
+.......
+line 478, col 4:
+exact Finset.card_singleton 1
+.....
+line 482, col 92:
+norm_num
+.......
+line 488, col 94:
+norm_num
+....
+line 490, col 94:
+norm_num
+...............................
+line 529, col 35:
+rw [inv_inv]
+.
+line 530, col 8:
+group
+...........
+line 546, col 47:
+norm_num
+..........
+line 552, col 51:
+norm_num
+..___.
+line 554, col 4:
+exact h_cases.resolve_left h_contra
+...........
+line 563, col 51:
+norm_num
+..___......
+line 572, col 92:
+norm_num
+....
+line 575, col 86:
+rw [hN₃.2, hP₅]
+..
+line 578, col 80:
+norm_num
+......
+line 586, col 115:
+rfl
+......
+line 589, col 145:
+norm_num
+.__.............
+line 610, col 47:
+norm_num
+..___......
+line 624, col 92:
+norm_num
+....
+line 627, col 86:
+rw [hN₅.2, hP₃]
+..
+line 630, col 80:
+norm_num
+......
+line 638, col 115:
+rfl
+......
+line 641, col 145:
+norm_num
+.__..............
+line 675, col 2:
+omega
+..........
+line 699, col 2:
+omega
+.................
+line 770, col 56:
+rw [Finset.card_singleton, hP_card]
+..................
+line 800, col 115:
+rfl
+.
+line 801, col 6:
+exact absurd (h ▸ hN_div : 3 ∣ 4) (by norm_num)
+...
+line 802, col 114:
+rfl
+...__.....___...........
+line 821, col 100:
+norm_num
+....._....._.........
+line 866, col 4:
+rw [hN_top, hn] at h_mul
+shortened proof!
+................
+line 889, col 77:
+norm_num
+...........
+line 911, col 66:
+rfl
+......
+line 917, col 49:
+norm_num
+..Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+...
+line 930, col 10:
+rw [h, Subgroup.card_bot, hP_card, hn]
+shortened proof!
+..
+line 932, col 10:
+rw [h, Subgroup.card_top, hn, hP_card]
+shortened proof!
+..........
+line 944, col 49:
+norm_num
+..___.....
+line 949, col 68:
+rfl
+..
+line 952, col 6:
+exact absurd hP_card (by rw [h, Subgroup.card_bot]; norm_num)
+.
+line 953, col 6:
+exact absurd hP_card (by rw [h, Subgroup.card_top, hn]; norm_num)
+..
+line 955, col 54:
+rw [h3]
+shortened proof!
+..
+line 957, col 4:
+exact h5
+.....
+line 965, col 132:
+norm_num
+......
+line 970, col 53:
+norm_num
+.WARNING: FLT/Slop/PGL2/FiniteSubgroups/RecognitionA5.lean produced errors (exit code 0)

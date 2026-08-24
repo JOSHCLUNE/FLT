@@ -1,0 +1,227 @@
+....._.......
+line 126, col 4:
+simp
+......
+line 142, col 8:
+simp
+.
+line 143, col 8:
+simp [h]
+....
+line 146, col 8:
+simp [hv]
+..............__...........
+line 193, col 45:
+simp
+..
+line 195, col 2:
+simp
+....
+line 208, col 2:
+simp
+......
+line 232, col 2:
+dsimp
+....
+line 242, col 43:
+simp [hv]
+..................
+line 275, col 6:
+rfl
+..
+line 277, col 12:
+exact ((mul_right_injective g₁).comp Quotient.out_injective).injOn
+.......
+line 282, col 47:
+simp
+..
+line 284, col 4:
+simp
+...................
+line 315, col 12:
+exact ((mul_left_injective g₂).comp Quotient.out_injective).injOn
+....
+line 319, col 6:
+simp
+....
+line 322, col 47:
+simp
+..
+line 324, col 4:
+simp
+....
+line 343, col 4:
+simpa
+.............
+line 404, col 6:
+simp_all
+....
+line 409, col 6:
+simp_all
+.
+line 410, col 24:
+simp +contextual
+.
+line 414, col 23:
+simp +contextual
+.............................
+line 460, col 2:
+contradiction
+....
+line 469, col 59:
+simp
+................
+line 494, col 73:
+simp
+.........
+line 508, col 2:
+simp at this
+.........................
+line 540, col 38:
+simpa
+.
+line 541, col 45:
+simp
+.
+line 541, col 65:
+simp
+.
+line 542, col 4:
+simp at hx'
+......
+line 548, col 77:
+simp [hx]
+...
+line 551, col 47:
+simp
+.
+line 551, col 67:
+simp
+...
+line 554, col 47:
+simp
+.
+line 554, col 67:
+simp
+.....__........
+line 572, col 82:
+simp
+.........
+line 592, col 8:
+simp_all
+..
+line 593, col 35:
+simp [h]
+....................................................
+line 643, col 34:
+decide
+.
+line 643, col 72:
+decide
+..............................
+line 727, col 55:
+simpa
+...
+line 735, col 55:
+simpa
+.
+line 744, col 21:
+simp [hα]
+....
+line 749, col 19:
+simp [hα]
+........__...
+line 761, col 6:
+rfl
+..
+line 769, col 61:
+simpa
+.............
+line 788, col 49:
+simpa
+.....
+line 794, col 2:
+simp
+.
+line 800, col 32:
+simp [hα, hβ]
+.........
+line 809, col 15:
+simp
+........
+line 818, col 6:
+rfl
+...........
+line 830, col 36:
+simp [hα, hβ]
+.......__......
+line 899, col 6:
+rfl
+...
+line 902, col 6:
+contradiction
+...
+line 905, col 6:
+contradiction
+.....
+line 908, col 45:
+rfl
+......
+line 932, col 45:
+simp
+.
+line 932, col 55:
+simp
+.
+line 933, col 4:
+simp
+..
+line 936, col 6:
+simp [hx]
+..
+line 938, col 6:
+simp [hy]
+................
+line 985, col 4:
+dsimp [WeightTwoAutomorphicForm.LevelStruct.formTensorScalar,
+      WeightTwoAutomorphicForm.LevelStruct.formTensor]
+shortened proof!
+..
+line 989, col 4:
+dsimp [WeightTwoAutomorphicForm.LevelStruct.formTensorScalar,
+      WeightTwoAutomorphicForm.LevelStruct.formTensor]
+shortened proof!
+....
+line 1004, col 12:
+simp
+.
+line 1005, col 19:
+simp only [*, map_add, smul_add]
+.......
+line 1018, col 12:
+simp
+.
+line 1019, col 19:
+simp only [*, map_add, smul_add]
+.......
+line 1031, col 12:
+simp
+.
+line 1032, col 19:
+simp only [*, map_add, smul_add]
+....
+line 1036, col 13:
+simp
+...
+line 1037, col 22:
+simp
+...._.
+line 1048, col 4:
+simp
+...............Tactic `simp` failed with a nested error:
+(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+.......WARNING: FLT/AutomorphicForm/QuaternionAlgebra/HeckeOperators/Concrete.lean produced errors (exit code 0)

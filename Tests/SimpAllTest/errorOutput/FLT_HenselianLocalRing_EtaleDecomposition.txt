@@ -1,0 +1,52 @@
+....................................
+line 83, col 17:
+simp [this]
+.
+line 83, col 57:
+simp [this]
+........
+line 90, col 4:
+simp only [Fin.cons_succ]
+shortened proof!
+.
+line 91, col 4:
+simp only [Fin.cons_succ]
+shortened proof!
+...
+line 93, col 4:
+simpa
+......
+line 105, col 29:
+simp at heP'
+........
+line 131, col 13:
+simp only [Nat.reduceAdd, Pi.one_apply, mul_one, Subsingleton.pairwise]
+.
+line 132, col 13:
+simp
+..
+line 133, col 84:
+ext
+....
+line 138, col 73:
+simp
+.............
+line 157, col 85:
+simp
+.....
+line 165, col 42:
+simpa [← hψe''] using hQ' i
+......
+line 171, col 71:
+simpa [Ideal.span_le]
+...
+line 173, col 48:
+simpa [Ideal.span_le]
+......
+line 181, col 68:
+ring
+....
+line 187, col 4:
+simp only [AlgEquiv.symm_trans_self, RingEquiv.toRingHom_eq_coe,
+      AlgEquiv.toRingEquiv_toRingHom, AlgEquiv.refl_toRingHom, Ideal.comap_id]
+shortened proof!

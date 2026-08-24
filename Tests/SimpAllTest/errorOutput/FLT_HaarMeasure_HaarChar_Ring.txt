@@ -1,0 +1,28 @@
+......._.................
+line 73, col 54:
+exact hu₀
+........
+line 79, col 41:
+simp
+...
+line 88, col 65:
+simp
+.....
+line 104, col 8:
+simp [map_mul]
+.......
+line 116, col 2:
+simp
+..
+line 123, col 2:
+simp
+..
+line 131, col 2:
+assumption_mod_cast
+.....
+line 198, col 4:
+exact Set.injOn_of_injective (ContinuousAddEquiv.injective _)
+..
+line 199, col 91:
+simp
+......

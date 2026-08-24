@@ -1,0 +1,11 @@
+.
+line 42, col 2:
+intro ⟨P, hP⟩
+shortened proof!
+...
+line 66, col 60:
+simp [h] at hn
+.....
+line 71, col 4:
+simp [hn]
+......

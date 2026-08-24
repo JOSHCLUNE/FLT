@@ -1,0 +1,12 @@
+Ran `simp_all` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 28 with errors."
+
+tallySummaries.sh output:
+Total number of results: 20165
+Total number of successes: 2460
+Time taken: 13364s
+
+Total shortenedStepsCount: 987
+
+~12.2% success rate
+~3.7 hours

@@ -1,0 +1,21 @@
+....
+line 57, col 28:
+simp
+..
+line 58, col 29:
+simp
+....
+line 72, col 77:
+simp
+...
+line 76, col 47:
+simp
+.........................
+line 144, col 8:
+intro i h
+shortened proof!
+..._..
+line 155, col 6:
+by_cases h : i ∈ S
+shortened proof!
+.._.._.............................

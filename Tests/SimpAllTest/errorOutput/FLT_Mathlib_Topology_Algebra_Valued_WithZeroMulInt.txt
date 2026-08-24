@@ -1,0 +1,9 @@
+.........
+line 50, col 4:
+simp [hx₀]
+.........
+line 68, col 67:
+simp
+.....................
+line 116, col 4:
+simpa using hi

@@ -1,0 +1,10 @@
+[{"tacticSucceeded": false,
+  "startLine": 37,
+  "startCol": 42,
+  "shortenedStepsCount": 0,
+  "parentName": "GaloisRepresentation.IsHardlyRamified.three_adic",
+  "oldText": "decide",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/GaloisRepresentation/HardlyRamified/Threeadic.lean"}]

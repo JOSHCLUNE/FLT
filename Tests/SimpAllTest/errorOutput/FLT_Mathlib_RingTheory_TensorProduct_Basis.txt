@@ -1,0 +1,12 @@
+..
+line 62, col 4:
+conv =>
+      lhs
+      arg 2
+      intro j
+      rw [Pi.single_comm, Pi.single_apply_smul]
+shortened proof!
+....
+line 75, col 2:
+exact rightBaseChange_repr A b i 1
+....

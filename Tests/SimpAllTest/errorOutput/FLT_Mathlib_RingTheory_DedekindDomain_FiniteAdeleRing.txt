@@ -1,0 +1,21 @@
+...........
+line 125, col 6:
+simp
+.
+line 126, col 6:
+simp [Pi.single_eq_of_ne' h]
+...........
+line 172, col 4:
+simp [Pi.single_eq_of_ne hq]
+.....
+line 192, col 4:
+simp [Pi.single_eq_same]
+.
+line 193, col 4:
+simp [Pi.single_eq_of_ne' h]
+........._..
+line 211, col 29:
+simp +contextual
+..._..
+line 215, col 27:
+simp +contextual

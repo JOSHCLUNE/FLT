@@ -1,0 +1,197 @@
+.............
+line 88, col 49:
+rw [nsmul_eq_mul, CharP.cast_eq_zero (K p) p, zero_mul]
+..........
+line 111, col 8:
+exact Nat.dvd_one.mp h_dvd_one
+..
+line 115, col 32:
+rw [map_mul, map_inv, hxy, mul_inv_cancel]
+...............................
+line 169, col 4:
+exact ⟨h_comm, h_exp⟩
+...................................
+line 213, col 4:
+exact hc ▸ heq
+......Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+......................
+line 280, col 4:
+change Nat.card (Fin m → ZMod p) = _
+shortened proof!
+.......
+line 290, col 6:
+exact Nat.card_congr ⟨fun x ↦ x.1, fun x ↦ ⟨x, trivial⟩, fun _ ↦ rfl, fun _ ↦ rfl⟩
+....
+line 294, col 4:
+exact hdvd
+..........__......
+line 314, col 43:
+omega
+.....
+line 317, col 4:
+omega
+..............................................
+line 353, col 117:
+norm_num
+...............
+line 366, col 84:
+rw [hn3]
+shortened proof!
+.....
+line 371, col 8:
+exact h_eq_1
+..
+line 372, col 112:
+rw [h3, h_card_val P]
+..
+line 373, col 103:
+rw [h_card_val P, h_card_val Q]
+...
+line 374, col 34:
+cases Q
+shortened proof!
+.............
+line 388, col 50:
+rw [hn3, Fintype.card_fin]
+..................
+line 409, col 81:
+norm_num
+...
+line 411, col 67:
+norm_num
+......
+line 415, col 115:
+norm_num
+......
+line 425, col 4:
+exact hpm
+...
+line 431, col 4:
+exact absurd hm (Nat.not_le_of_gt (Nat.le.step Nat.le.refl))
+.
+line 432, col 4:
+exact Nat.succ_pos _
+.................................
+line 491, col 77:
+norm_num
+.
+line 492, col 4:
+exact h_eq ▸ h_idx P ▸ h_dvd P
+.....
+line 496, col 64:
+norm_num
+....
+line 500, col 4:
+omega
+.
+line 501, col 4:
+revert h_card_div
+shortened proof!
+.
+line 502, col 4:
+rfl
+..........
+line 518, col 8:
+rfl
+.......
+line 523, col 72:
+norm_num
+......
+line 527, col 38:
+rw [hn]
+shortened proof!
+.............
+line 559, col 4:
+intro i
+shortened proof!
+...............
+line 571, col 6:
+rw [h_n_nat, Nat.cast_mul, Nat.cast_mul]
+.....
+line 575, col 6:
+rw [Nat.cast_add, Nat.cast_mul, Nat.cast_sub h2pm]
+shortened proof!
+...
+line 579, col 60:
+omega
+.................
+line 618, col 6:
+rw [if_pos rfl, partitionTerm]
+shortened proof!
+.......
+line 625, col 76:
+linarith only [hn_gt]
+..........
+line 632, col 33:
+norm_num
+..
+line 634, col 4:
+rfl
+.
+line 635, col 4:
+exact hn_eq.symm.trans h_branch2a.2.2
+.
+line 636, col 4:
+exact hG_p
+.
+line 637, col 4:
+exact hn_p_gt1
+....
+line 656, col 48:
+rw [hm, pow_zero] at h_pow
+shortened proof!
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+......
+line 661, col 118:
+norm_num
+......
+line 663, col 65:
+linarith only [hm, hpm]
+..
+line 665, col 6:
+by_contra h_m
+shortened proof!
+...
+line 670, col 72:
+norm_num
+........
+line 675, col 54:
+norm_num
+..
+line 677, col 6:
+exact hG_p
+.
+line 678, col 6:
+exact hn_p_gt1
+...
+line 680, col 75:
+linarith only [hm, hpm]
+.
+line 680, col 131:
+linarith only [hm, hpm]
+........
+line 684, col 115:
+omega
+.........
+line 692, col 48:
+rw [hm, pow_zero] at h_pow
+shortened proof!
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.........WARNING: FLT/Slop/PGL2/FiniteSubgroups/WildClassification.lean produced errors (exit code 0)

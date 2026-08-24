@@ -1,0 +1,23 @@
+.................................
+line 253, col 6:
+simp [hF n h]
+.........
+line 271, col 8:
+rw [sub_sub_cancel]
+.._.
+line 284, col 68:
+ring
+.....
+line 289, col 6:
+simp [PowerSeries.coeff_zero_eq_constantCoeff, h0]
+.
+line 290, col 6:
+simp [h1, PowerSeries.coeff_X]
+.
+line 291, col 6:
+exact absurd hm (by omega)
+................
+line 347, col 2:
+simp only [key, map_mul]
+shortened proof!
+...

@@ -1,0 +1,13 @@
+........
+line 55, col 32:
+rw [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self]
+..................................................
+line 201, col 29:
+rw [hmem, map_zero]
+....
+line 205, col 47:
+rw [h, map_zero]
+...
+line 208, col 46:
+rw [h, map_zero]
+.

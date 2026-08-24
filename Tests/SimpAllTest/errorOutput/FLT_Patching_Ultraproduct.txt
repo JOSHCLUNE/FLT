@@ -1,0 +1,38 @@
+...
+line 38, col 18:
+simp [zero_mem]
+.....
+line 51, col 40:
+aesop
+.........
+line 67, col 6:
+exact if_pos hi
+.._..
+line 70, col 42:
+aesop
+..
+line 71, col 11:
+simp_all
+................................
+line 223, col 34:
+simpa using congr(f i $hi)
+.
+line 236, col 36:
+simp [show i a = 0 from ha]
+.....
+line 249, col 24:
+simp [hy]
+............
+line 275, col 44:
+simpa using hx
+................
+line 295, col 2:
+filter_upwards [ha] with i hi
+shortened proof!
+............................................................
+line 416, col 37:
+simp
+......
+line 444, col 37:
+simp
+..

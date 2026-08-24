@@ -1,0 +1,93 @@
+..
+line 106, col 32:
+exact map_add (F (σ x)) τ₁ τ₂
+..
+line 107, col 31:
+exact map_smul (F (σ x)) c τ
+..................
+line 171, col 32:
+exact map_add (resolutionCLM ρ2 ρ3 (f (σ g)) n) _ _
+..
+line 172, col 31:
+exact map_smul (resolutionCLM ρ2 ρ3 (f (σ g)) n) c _
+................
+line 249, col 53:
+omega
+....
+line 254, col 44:
+omega
+....
+line 262, col 4:
+abel
+.......................
+line 366, col 2:
+refine h.trans ?_
+shortened proof!
+..
+line 396, col 2:
+exact map_zero (cupCochain f hp m l r hr σ : ↥((homogeneousCochains (.of ρ2)).X l) →L[k]
+    ↥((homogeneousCochains (.of ρ3)).X r))
+.....Tactic `simp` failed with a nested error:
+(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+....
+line 425, col 2:
+rw [hτ, cupCochain_apply_zero] at h
+shortened proof!
+..................
+line 490, col 72:
+simp
+.
+line 491, col 72:
+simp
+.
+line 492, col 61:
+simp
+.
+line 504, col 61:
+simp
+.
+line 507, col 67:
+simp
+.
+line 508, col 67:
+simp
+....
+line 528, col 80:
+simp
+.
+line 529, col 6:
+rfl
+......
+line 535, col 4:
+rw [h1]
+shortened proof!
+...Tactic `simp` failed with a nested error:
+(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+.....
+line 553, col 80:
+simp
+.
+line 554, col 6:
+rfl
+.
+line 555, col 4:
+rw [h0, (cupKerCLM f hp m 0 r hr σ).map_zero]
+shortened proof!
+...Tactic `simp` failed with a nested error:
+(deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+...
+line 563, col 48:
+omega
+..WARNING: FLT/Mathlib/RepresentationTheory/Homological/ContCohomology/CupProduct.lean produced errors (exit code 0)

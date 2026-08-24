@@ -1,0 +1,704 @@
+..........................
+line 99, col 6:
+exfalso
+shortened proof!
+.
+line 101, col 6:
+rfl
+...
+line 106, col 6:
+exfalso
+shortened proof!
+.....................
+line 141, col 41:
+rw [ha0, zero_smul] at ha
+shortened proof!
+......
+line 147, col 65:
+rw [h_span]
+shortened proof!
+...
+line 149, col 32:
+rw [← hu_eq, Fin.sum_univ_two]
+shortened proof!
+....__..................
+line 181, col 56:
+rw [ha0, zero_smul] at ha
+shortened proof!
+..
+line 186, col 6:
+rw [h_span]
+shortened proof!
+...
+line 190, col 6:
+rw [← hu_eq, Fin.sum_univ_two]
+shortened proof!
+.......
+line 197, col 22:
+simp only [Units.val_mul, h_g_eq, Matrix.mul_smul, Matrix.smul_mul,
+      Matrix.mul_one, Matrix.one_mul]
+.....
+line 213, col 65:
+rw [hM]
+shortened proof!
+..
+line 214, col 65:
+rwa [← QuotientGroup.eq_one_iff]
+...
+line 218, col 28:
+rw [h_center]
+...
+line 223, col 41:
+change (1:K p)*1 - 1*0 = 1
+shortened proof!
+...
+line 226, col 41:
+change (1:K p)*1 - 0*1 = 1
+shortened proof!
+......
+line 234, col 6:
+calc z.val 0 1 = (z.val 0 0 + z.val 0 1) - z.val 0 0 := by ring
+      _ = z.val 0 0 - z.val 0 0 := by rw [eq2_00]
+      _ = 0 := by ring
+..
+line 239, col 6:
+calc z.val 1 0 = (z.val 1 0 + z.val 1 1) - z.val 1 1 := by ring
+      _ = z.val 1 1 - z.val 1 1 := by rw [eq1_11]
+      _ = 0 := by ring
+..
+line 244, col 6:
+calc z.val 1 1 = (z.val 0 1 + z.val 1 1) - z.val 0 1 := by ring
+      _ = (z.val 0 0 + z.val 0 1) - z.val 0 1 := by rw [← eq1_01]
+      _ = z.val 0 0 := by ring
+....
+line 250, col 14:
+change z.val 0 0 = z.val 0 0 * 1
+shortened proof!
+.
+line 251, col 14:
+change z.val 0 1 = z.val 0 0 * 0
+shortened proof!
+.
+line 252, col 14:
+change z.val 1 0 = z.val 0 0 * 0
+shortened proof!
+.
+line 253, col 14:
+change z.val 1 1 = z.val 0 0 * 1
+shortened proof!
+....
+line 259, col 6:
+rw [Projectivization.mk_rep y, hg₀, hgy]
+......
+line 270, col 8:
+rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ hd_ne_zero, one_smul,
+            g₀.val_inv]
+.
+line 273, col 8:
+rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ hd_ne_zero, one_smul,
+            g₀.inv_val]
+..........
+line 288, col 22:
+rw [g₀.inv_val]
+.
+line 289, col 4:
+rw [h_diff, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_one, Matrix.one_mul]
+..........
+line 301, col 4:
+rw [hg''_mk, hg'_mk, mul_inv_cancel]
+....
+line 305, col 39:
+rw [mul_one]
+.
+line 306, col 38:
+rw [inv_mul_cancel]
+.
+line 307, col 38:
+rw [mul_assoc]
+.
+line 309, col 31:
+rw [hz_val]
+.
+line 310, col 25:
+rw [Matrix.smul_mul, Matrix.one_mul]
+.....
+line 315, col 65:
+rw [hg''_y, hg'_y]
+.
+line 316, col 70:
+rw [h_g''_val]
+......
+line 324, col 2:
+calc g''.val = c • g'.val := h_g''_val
+  _ = (1 : K p) • g'.val := by rw [hc1]
+  _ = g'.val := one_smul _ _
+...................
+line 363, col 6:
+change (QuotientGroup.mk (f g₁) : PGLOf (K p)) * (QuotientGroup.mk (f g₂) : PGLOf (K p)) = (g₁ : PGLOf (K p)) *
+        (g₂ : PGLOf (K p))
+shortened proof!
+..........
+line 381, col 6:
+change (QuotientGroup.mk 1 : PGLOf (K p)) = 1
+shortened proof!
+.
+line 383, col 6:
+rw [Units.val_one, Matrix.one_mulVec]
+....Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+...........
+line 403, col 44:
+rw [hf_y, one_smul]
+...........
+line 424, col 8:
+exact absurd rfl huv
+.
+line 426, col 8:
+rfl
+.....
+line 433, col 8:
+exact absurd rfl huv
+............................................
+line 507, col 6:
+exact h_all q
+....
+line 511, col 12:
+rw [Finset.card_singleton]
+...........
+line 524, col 4:
+rw [H_top, Subgroup.index_top]
+shortened proof!
+...
+line 535, col 33:
+rw [hfp]
+shortened proof!
+.
+line 536, col 33:
+rw [hfp]
+shortened proof!
+...........
+line 562, col 44:
+rw [← mul_assoc h h⁻¹, mul_inv_cancel, one_mul,
+          mul_assoc, mul_inv_cancel, mul_one]
+........
+line 581, col 22:
+rw [← inv_smul_smul (g : PGLOf (K p)) x, h, inv_smul_smul]
+...................
+line 608, col 84:
+rw [hx_x, hy_y]
+...................................
+line 664, col 4:
+exact (Quotient.out_eq (e.symm i)).symm.trans ((Quotient.sound hij).trans (Quotient.out_eq
+      (e.symm j)))
+......
+line 688, col 13:
+have hx : (((MulAut.conj (1 : G)).toMonoidHom) x : G) = 1 * x * 1⁻¹ := rfl
+shortened proof!
+.
+line 690, col 4:
+rw [h_id, Subgroup.map_id]
+.......
+line 700, col 47:
+rfl
+.
+line 701, col 4:
+rw [h_comp_id, Subgroup.map_id]
+.....
+line 711, col 6:
+have h1 : (((MulAut.conj g2).toMonoidHom.comp (MulAut.conj g1).toMonoidHom) x : G) = g2 * (g1
+          * x * g1⁻¹) * g2⁻¹ := rfl
+shortened proof!
+.
+line 716, col 4:
+rw [h_comp]
+.....
+line 721, col 15:
+rw [← heq_rep i]
+shortened proof!
+....
+line 725, col 22:
+rw [heq_rep i] at hg
+shortened proof!
+.
+line 726, col 39:
+rw [← heq_rep i, ← heq_rep j] at hg
+shortened proof!
+..........................................
+line 817, col 4:
+refine ⟨(Nat.cast_inj (R := ℚ)).mp ?_, rfl⟩
+shortened proof!
+...
+line 823, col 51:
+push_cast
+shortened proof!
+........
+line 831, col 43:
+push_cast
+shortened proof!
+...
+line 836, col 29:
+omega
+..
+line 837, col 4:
+omega
+..
+line 847, col 4:
+rwa [Fin.sum_univ_two] at hsum
+....
+line 851, col 4:
+rw [div_eq_div_iff hn0 hc] at h
+shortened proof!
+._.....
+line 858, col 79:
+exact Nat.cast_le.mpr (hd 1)
+...
+line 860, col 45:
+norm_num
+......
+line 866, col 71:
+ring
+.
+line 867, col 76:
+rw [hsum']
+.............
+line 878, col 51:
+norm_num
+......
+line 882, col 29:
+norm_num
+.............
+line 891, col 55:
+norm_num
+......
+line 893, col 30:
+norm_num
+..
+line 894, col 38:
+norm_cast
+..
+line 895, col 35:
+norm_num
+.......
+line 901, col 71:
+ring
+.
+line 902, col 78:
+rw [hsum']
+.............
+line 913, col 51:
+norm_num
+......
+line 917, col 29:
+norm_num
+....
+line 918, col 78:
+linarith only [h_inv_sum]
+.........
+line 926, col 55:
+norm_num
+......
+line 928, col 30:
+norm_num
+..
+line 929, col 38:
+norm_cast
+..
+line 930, col 35:
+norm_num
+.......
+line 936, col 53:
+ring
+.
+line 937, col 70:
+rw [hsum']
+.............
+line 946, col 38:
+push_cast
+shortened proof!
+.
+line 948, col 68:
+rw [← h_inv_sum]
+........
+line 956, col 61:
+have h := hdn 0
+shortened proof!
+............
+line 978, col 69:
+exact ⟨h02, h21⟩
+...
+line 981, col 40:
+exact ⟨h20, h01⟩
+....
+line 984, col 67:
+exact ⟨h10, h02⟩
+....
+line 988, col 40:
+exact ⟨h12, h20⟩
+...
+line 990, col 69:
+exact ⟨h21, h10⟩
+....
+line 994, col 37:
+exact this.trans hsum
+............
+line 1006, col 45:
+positivity
+......
+line 1013, col 64:
+exact Nat.cast_le.mpr hσ.2
+......
+line 1017, col 67:
+rw [hd₀]
+shortened proof!
+.
+line 1018, col 18:
+positivity
+.....
+line 1023, col 6:
+push_cast
+shortened proof!
+.................
+line 1034, col 42:
+rw [hd₀]
+shortened proof!
+.
+line 1035, col 42:
+rw [h₁]
+shortened proof!
+.
+line 1036, col 20:
+positivity
+...
+line 1037, col 29:
+omega
+.........
+line 1042, col 25:
+norm_num
+..........
+line 1046, col 26:
+norm_num
+..........
+line 1050, col 26:
+norm_num
+.....
+line 1061, col 6:
+exact mul_one 1
+......
+line 1067, col 37:
+injection (h_get_Hi.symm.trans h_get_sub)
+.._..
+line 1073, col 4:
+simp only [MulEquiv.coe_toMonoidHom, MulAut.conj_apply]
+shortened proof!
+......____....
+line 1087, col 48:
+exact h_sq x.toMul
+....__.....
+line 1095, col 51:
+rw [← Nat.card_eq_fintype_card]
+shortened proof!
+..
+line 1096, col 38:
+norm_num
+.
+line 1096, col 67:
+norm_num
+.....
+line 1101, col 38:
+norm_num
+.
+line 1101, col 67:
+norm_num
+....................
+line 1143, col 44:
+rw [hg_ord, hk]
+.
+line 1144, col 18:
+rw [Nat.gcd_eq_right ⟨2, mul_comm 2 k⟩]
+shortened proof!
+......
+line 1153, col 30:
+rw [hn_eq]
+...
+line 1156, col 50:
+rw [hx_ord]
+...............
+line 1169, col 46:
+rw [hz_ord]
+......
+line 1175, col 6:
+rw [this] at hx_ord
+shortened proof!
+...
+line 1179, col 20:
+rw [h_z_zsq, one_zpow, one_mul]
+..
+line 1182, col 51:
+omega
+.
+line 1183, col 60:
+rw [hHa_card]
+........
+line 1192, col 86:
+rw [hz_ord]
+..
+line 1193, col 17:
+calc (y * z * y⁻¹) * (y * z * y⁻¹) = y * (z * z) * y⁻¹ := by group
+          _ = 1 := by rw [hz2]; group
+..
+line 1197, col 8:
+have hz_one : z = 1 := calc z = y⁻¹ * (y * z * y⁻¹) * y := by group
+          _ = 1 := by rw [orderOf_eq_one_iff.mp h]; group
+shortened proof!
+..
+line 1200, col 57:
+rw [h] at hd
+shortened proof!
+..
+line 1201, col 63:
+norm_num
+....
+line 1204, col 22:
+rw [hz_unique _ h_conj_mem h_conj_ord]
+....
+line 1210, col 10:
+rw [← Nat.card_eq_fintype_card, hHb_card]
+shortened proof!
+...
+line 1216, col 6:
+rw [h, orderOf_one] at hz_ord
+shortened proof!
+............
+line 1233, col 14:
+exact hz_not_one (Subtype.ext_iff.mp h).symm
+.......
+line 1241, col 4:
+rw [hs_card, ← Nat.card_eq_fintype_card, hHb_norm] at h_bound
+shortened proof!
+..
+line 1244, col 2:
+rw [hz_bot, orderOf_one] at hz_ord
+shortened proof!
+........
+line 1259, col 66:
+norm_num
+........
+line 1268, col 2:
+omega
+..
+line 1283, col 4:
+intro i
+shortened proof!
+.
+line 1285, col 4:
+rintro K L ⟨i, g, _, hK', rfl⟩ ⟨j, h, _, hL', rfl⟩ hKL
+shortened proof!
+.
+line 1289, col 4:
+intro x hx
+shortened proof!
+..
+line 1309, col 4:
+exact fun (i : Fin 2) ↦ match i with
+    | 0 => ⟨Ha, rfl, ha_cyc, ha_card, ha_norm⟩
+    | 1 => ⟨Hb, rfl, hb_cyc, hb_card, hb_norm⟩
+.
+line 1313, col 4:
+rintro K L ⟨i, g, Hi, hK, rfl⟩ ⟨j, h, Hj, hL, rfl⟩ hKL
+shortened proof!
+...._..
+line 1338, col 4:
+exact fun (i : Fin 2) ↦ match i with
+    | 0 => ⟨Ha, rfl, ha_cyc, ha_card, ha_norm⟩
+    | 1 => ⟨Hb, rfl, hb_cyc, hb_card, hb_norm⟩
+.
+line 1342, col 4:
+rintro K_sub L_sub ⟨i, g, Hi, hK, rfl⟩ ⟨j, h, Hj, hL, rfl⟩ hKL
+shortened proof!
+...._.....__..__.
+line 1375, col 4:
+exact hdisj _ _ ⟨![2, 0, 1] i, g, by rw [e_i]⟩ ⟨![2, 0, 1] j, h, by rw [e_j]⟩ hKL
+.....
+line 1380, col 29:
+show (1 : ℕ) < 3
+shortened proof!
+..
+line 1381, col 29:
+show (2 : ℕ) < 3
+shortened proof!
+..
+line 1382, col 29:
+show (0 : ℕ) < 3
+shortened proof!
+.....__..__.
+line 1408, col 4:
+exact hdisj _ _ ⟨i, g, by rw [e_i]⟩ ⟨j, h, by rw [e_j]⟩ hKL
+...._.....
+line 1419, col 50:
+exact Nat.cast_le.mpr hd
+....
+line 1422, col 50:
+exact Nat.cast_le.mpr hd
+...
+line 1429, col 62:
+norm_num
+...
+line 1432, col 6:
+rw [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+.......
+line 1452, col 10:
+rw [Finset.card_erase_of_mem (Finset.mem_univ i),
+            Finset.card_univ, Fintype.card_fin]
+shortened proof!
+.
+line 1456, col 10:
+rw [Finset.sum_const, nsmul_eq_mul]
+...
+line 1461, col 48:
+exact Nat.cast_le.mpr (hd i)
+..
+line 1472, col 4:
+exact hfi
+...............
+line 1502, col 36:
+omega
+.
+line 1503, col 9:
+omega
+.
+line 1504, col 6:
+simp only [Fin.sum_univ_one] at heq
+shortened proof!
+..
+line 1507, col 36:
+omega
+.
+line 1507, col 54:
+omega
+.
+line 1508, col 19:
+omega
+.
+line 1508, col 40:
+omega
+.
+line 1509, col 19:
+omega
+....
+line 1511, col 43:
+omega
+.
+line 1513, col 6:
+exact hcyc ⟨0, by omega⟩
+.
+line 1515, col 6:
+rw [hcard]
+shortened proof!
+.
+line 1517, col 6:
+rw [hnorm, r1.2, r1.1]
+.
+line 1519, col 6:
+exact fun K L hK hL hKL ↦ hdisj K L ⟨⟨0, by omega⟩, hK.choose, hK.choose_spec⟩
+        ⟨⟨0, by omega⟩, hL.choose, hL.choose_spec⟩ hKL
+.
+line 1522, col 6:
+intro x hx
+shortened proof!
+...._._....______.............
+line 1554, col 56:
+omega
+....
+line 1558, col 17:
+simp only [MulEquiv.coe_toMonoidHom, MulAut.conj_apply, inv_one, mul_one,
+            one_mul, MonoidHom.id_apply]
+.
+line 1560, col 8:
+rw [this, Subgroup.map_id]
+.........
+line 1568, col 102:
+linarith only [hk, h_ge]
+.............._._....._.
+line 1604, col 8:
+rw [h_eval, Equiv.apply_symm_apply]
+..........
+line 1616, col 12:
+rw [hcard, hσ.1]
+.
+line 1616, col 34:
+rw [hcard, hσ.2.1]
+.
+line 1616, col 58:
+rw [hcard, hk_d]
+.
+line 1617, col 12:
+rw [hnorm, hf2, hσ.1]
+.
+line 1617, col 39:
+rw [hnorm, hf2, hσ.2.1]
+.
+line 1617, col 68:
+rw [hnorm, hf2, hk_d]
+....
+line 1623, col 14:
+rw [hcard, hσ₁]
+.
+line 1623, col 35:
+rw [hnorm, hf2, hσ₁]
+...
+line 1629, col 14:
+rw [hcard, hσ₀]
+.
+line 1629, col 35:
+rw [hcard, hσ₁]
+.
+line 1629, col 56:
+rw [hcard, hσ₂]
+.
+line 1630, col 14:
+rw [hnorm, hf2, hσ₀]
+.
+line 1630, col 40:
+rw [hnorm, hf2, hσ₁]
+.
+line 1630, col 66:
+rw [hnorm, hf2, hσ₂]
+...
+line 1637, col 14:
+rw [hcard, hσ₀]
+.
+line 1637, col 35:
+rw [hcard, hσ₁]
+.
+line 1637, col 56:
+rw [hcard, hσ₂]
+.
+line 1638, col 14:
+rw [hnorm, hf2, hσ₀]
+.
+line 1638, col 40:
+rw [hnorm, hf2, hσ₁]
+.
+line 1638, col 66:
+rw [hnorm, hf2, hσ₂]
+.......
+line 1660, col 30:
+omega
+..
+line 1662, col 30:
+omega
+.....WARNING: FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean produced errors (exit code 0)

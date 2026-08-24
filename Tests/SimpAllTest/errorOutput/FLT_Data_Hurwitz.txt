@@ -1,0 +1,86 @@
+..........______.__.__.__.__.........__._...........
+line 344, col 12:
+simp
+.
+line 345, col 17:
+simpa
+..
+line 348, col 12:
+simp
+.
+line 349, col 17:
+simpa
+..
+line 352, col 12:
+simp
+.
+line 353, col 17:
+simpa
+..
+line 356, col 12:
+simp
+.
+line 357, col 17:
+simpa
+..
+line 361, col 15:
+simp
+...
+line 365, col 15:
+simp
+.
+line 366, col 17:
+simp [← Int.neg_ofNat_succ]
+..
+line 369, col 15:
+simp
+.
+line 370, col 17:
+simp [← Int.neg_ofNat_succ]
+..
+line 373, col 15:
+simp
+.
+line 374, col 17:
+simp [← Int.neg_ofNat_succ]
+.__.__.__.____....__.........................
+line 450, col 44:
+positivity
+.
+line 450, col 60:
+positivity
+............._......
+line 475, col 2:
+simp
+........._............__......
+line 501, col 4:
+rw [abs_of_nonneg]
+shortened proof!
+.......................
+line 519, col 26:
+positivity
+_.
+line 520, col 19:
+use z
+........._.....__...
+line 536, col 4:
+simpa [this]
+...
+line 539, col 2:
+norm_num
+..........
+line 552, col 4:
+exact _root_.norm_nonneg (a - q * b).toQuaternion
+...........
+line 569, col 4:
+rw [Eq.comm]
+shortened proof!
+....................
+line 590, col 32:
+apply eq_sub_of_add_eq
+shortened proof!
+......
+line 596, col 4:
+rw [hr, add_zero] at hqr
+shortened proof!
+..

@@ -1,0 +1,9 @@
+.
+line 44, col 25:
+ext x
+shortened proof!
+.
+line 45, col 26:
+ext x
+shortened proof!
+...

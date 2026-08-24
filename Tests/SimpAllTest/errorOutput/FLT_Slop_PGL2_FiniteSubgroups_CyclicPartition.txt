@@ -1,0 +1,603 @@
+..........
+line 111, col 4:
+rw [h_eq, Subgroup.index_top] at hH_index
+shortened proof!
+................
+line 131, col 33:
+rw [one_mul]
+....
+line 134, col 24:
+rw [h_conj]
+....
+line 140, col 6:
+simp only [pow_zero, inv_one, one_mul, mul_one]
+..........
+line 151, col 52:
+exact absurd h1 hg
+...
+line 154, col 52:
+exact absurd h1 ha
+..
+line 157, col 49:
+group
+.
+line 157, col 93:
+group
+....._..._.
+line 167, col 32:
+rw [zpow_natCast, hb_pow_n]
+..................
+line 186, col 29:
+rw [hi]
+.
+line 189, col 32:
+rw [Nat.mod_eq_of_lt hk_nat_lt]
+.
+line 190, col 41:
+rw [ZMod.val_natCast]
+..........
+line 202, col 26:
+rw [sub_add_cancel]
+.
+line 203, col 54:
+group
+......._..
+line 218, col 6:
+exact hb_pow_mul k1 k2
+.....
+line 223, col 50:
+rw [hb_pow_mul_a]
+..
+line 225, col 52:
+rw [hb_comm]
+.
+line 226, col 40:
+rw [← hb_pow_sub]
+.........
+line 238, col 56:
+rw [hb_pow_mul_a]
+...
+line 241, col 46:
+rw [one_mul]
+.
+line 242, col 46:
+rw [hb_comm]
+....................
+line 273, col 6:
+contradiction
+....._..................................................
+line 358, col 10:
+exfalso
+shortened proof!
+.
+line 360, col 23:
+exact h_two
+....
+line 365, col 6:
+rw [h_ord_eq, hx_ord]
+.
+line 367, col 6:
+exfalso
+shortened proof!
+.................
+line 398, col 8:
+exfalso
+shortened proof!
+..............
+line 419, col 6:
+exfalso
+shortened proof!
+.............
+line 452, col 12:
+rw [hP_card, hp_eq]
+...............
+line 477, col 10:
+exact fun y ↦ ⟨
+            fun hy ↦ by rw [Subgroup.mem_bot.mp hy, mul_one, mul_inv_cancel, Subgroup.mem_bot],
+            fun hy ↦
+                Subgroup.mem_bot.mpr (mul_left_cancel (mul_right_cancel
+                    (by rw [Subgroup.mem_bot.mp hy, mul_one, mul_inv_cancel])))
+          ⟩
+...
+line 485, col 6:
+omega
+.
+line 487, col 6:
+exact h_three
+......
+line 495, col 6:
+rw [h_P_card P, h_norm_card P]
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..
+line 499, col 4:
+rw [Nat.card_eq_fintype_card] at h_sylow
+shortened proof!
+........
+line 519, col 4:
+rw [Fintype.card_fin, ← Nat.card_eq_fintype_card, h_sylow]
+..
+line 523, col 47:
+simp only [Equiv.toFun_as_coe, Equiv.permCongr_apply, Equiv.Perm.mul_apply, Equiv.symm_apply_apply]
+............
+line 548, col 66:
+norm_num
+._....
+line 556, col 34:
+rw [hH_card]
+shortened proof!
+..........
+line 568, col 41:
+norm_num
+...
+line 573, col 8:
+rw [hk, pow_zero, hH_card] at h_card_le
+shortened proof!
+.
+line 576, col 8:
+rfl
+.
+line 578, col 8:
+norm_num at h1
+.....
+line 584, col 10:
+rw [hk, hk1, pow_one]
+shortened proof!
+..
+line 587, col 4:
+exact h_four
+.....
+line 599, col 2:
+exact Nat.noConfusion (show 9 = 0 from congrArg (· - 3) hH_norm)
+...
+line 606, col 56:
+norm_num
+..............
+line 623, col 6:
+rw [hH₁_card, hk] at h
+shortened proof!
+.....
+line 629, col 18:
+norm_num
+...
+line 633, col 8:
+have h_zero : k = 0 := by omega
+shortened proof!
+..
+line 638, col 4:
+rw [hk1, pow_one] at hk
+shortened proof!
+...
+line 642, col 87:
+rw [hQ_card,
+        hH₁_card]
+....
+line 646, col 50:
+rw [hH₁_eq_Q, Sylow.coe_coe]
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+...............
+line 673, col 28:
+rw [show y * h_el * y⁻¹ = g from hk_eq]
+..
+line 675, col 18:
+group
+...
+line 679, col 4:
+exact ⟨fun hz ↦ Subgroup.mem_map.mpr ⟨z, hz, by
+        change 1 * z * 1⁻¹ = z
+        rw [inv_one, mul_one, one_mul]⟩,
+      fun hz ↦ by
+        obtain ⟨y, hy, hk_eq⟩ := Subgroup.mem_map.mp hz
+        change 1 * y * 1⁻¹ = z at hk_eq
+        rw [inv_one, mul_one, one_mul] at hk_eq
+        exact hk_eq ▸ hy⟩
+.....
+line 693, col 20:
+group
+....
+line 697, col 4:
+exact hg_ne_one (Subgroup.mem_bot.mp h_inter)
+.........
+line 704, col 27:
+exact Subgroup.mem_map.mpr ⟨x * n * x⁻¹, hxn, rfl⟩
+..
+line 707, col 4:
+rw [h_norm_top, ← hN]
+shortened proof!
+....
+line 712, col 2:
+omega
+................
+line 737, col 40:
+rw [← hK_eq, hK]
+..
+line 740, col 18:
+rw [← hk_order, h, orderOf_one]
+................
+line 762, col 6:
+exact absurd (show k = 1 by
+        rw [← one_mul k, ← inv_mul_cancel g, mul_assoc, ← mul_one (g * k), ← inv_mul_cancel g]
+        rw [← mul_assoc (g * k) g⁻¹ g, h1, one_mul, inv_mul_cancel]) hk_ne_one
+...
+line 766, col 64:
+rw [hk_eq]
+..
+line 769, col 4:
+exact Subgroup.one_mem (Subgroup.center G)
+.
+line 771, col 4:
+exact hk_center
+.......
+line 786, col 4:
+exact Subgroup.mem_top g
+.......
+line 799, col 50:
+obtain ⟨k, hk⟩ := h_dvd
+shortened proof!
+..
+line 800, col 57:
+norm_num
+........
+line 812, col 66:
+norm_num
+....
+line 815, col 80:
+rw [hQG_card,
+      pow_one]
+...
+line 820, col 66:
+norm_num
+.......
+line 830, col 6:
+exact Subgroup.mem_top g
+.
+line 831, col 2:
+omega
+...........
+line 853, col 25:
+norm_num
+.
+line 854, col 18:
+rw [h] at hK_dvd
+shortened proof!
+..
+line 860, col 14:
+exact x.property
+.
+line 862, col 14:
+rw [h2]
+shortened proof!
+.
+line 864, col 88:
+rw [h3,
+            pow_one]
+..
+line 866, col 80:
+norm_num
+.
+line 868, col 44:
+rw [h_sylow]
+shortened proof!
+.
+line 869, col 18:
+rw [h] at hK_dvd
+shortened proof!
+.
+line 870, col 18:
+rw [h] at hK_dvd
+shortened proof!
+.........
+line 888, col 8:
+norm_num
+.
+line 889, col 8:
+norm_num
+.
+line 890, col 8:
+norm_num
+.
+line 891, col 8:
+exact nomatch h_false
+..
+line 895, col 65:
+rw [← Nat.card_eq_fintype_card,
+            h_sylow, Fintype.card_fin]
+.............
+line 919, col 4:
+exact map_one _
+..............
+line 933, col 15:
+simp only [List.length_cons, List.length_nil]
+shortened proof!
+...
+line 940, col 64:
+norm_num
+..
+line 943, col 9:
+rw [hH₂_card]
+shortened proof!
+....
+line 948, col 66:
+norm_num
+.
+line 949, col 4:
+norm_num
+.....
+line 953, col 39:
+norm_num
+...
+line 960, col 64:
+norm_num
+..
+line 963, col 9:
+rw [hH₁_card]
+shortened proof!
+....
+line 968, col 67:
+norm_num
+.
+line 969, col 4:
+norm_num
+.....
+line 973, col 39:
+norm_num
+..............
+line 1005, col 17:
+exact absurd (orderOf_eq_one_iff.mp h) hx1
+.
+line 1006, col 17:
+exact h
+.....
+line 1013, col 19:
+rfl
+.....
+line 1024, col 12:
+change orderOf x = p at hx
+shortened proof!
+.........
+line 1038, col 2:
+simp only [h_card_P, Finset.sum_const, Finset.card_univ, nsmul_eq_mul, Nat.cast_id]
+shortened proof!
+..........__..
+line 1066, col 56:
+norm_num
+.
+line 1066, col 70:
+omega
+........__..
+line 1085, col 56:
+norm_num
+.
+line 1085, col 70:
+omega
+......
+line 1095, col 70:
+norm_num
+....
+line 1099, col 69:
+norm_num
+...........
+line 1116, col 6:
+revert h
+shortened proof!
+.....
+line 1123, col 93:
+group
+....
+line 1129, col 36:
+rw [hpq_eq_one, one_mul]
+...
+line 1133, col 4:
+rw [hp_order_H, hq_order_H]
+......
+line 1148, col 69:
+norm_num
+....
+line 1153, col 68:
+norm_num
+....
+line 1159, col 10:
+simp only [Set.disjoint_singleton_right]
+shortened proof!
+..
+line 1163, col 10:
+intro x hx
+shortened proof!
+.............
+line 1196, col 79:
+norm_num
+......
+line 1203, col 60:
+norm_num
+..
+line 1207, col 40:
+norm_num
+....
+line 1221, col 34:
+norm_num
+..
+line 1224, col 33:
+norm_num
+...
+line 1230, col 12:
+intro c hc
+shortened proof!
+....
+line 1237, col 12:
+rw [h3, hN, h_fac3, pow_one]
+.
+line 1238, col 12:
+rw [h_n3]
+shortened proof!
+....
+line 1242, col 41:
+rw [h4]
+shortened proof!
+........
+line 1252, col 28:
+change (1 : G ⧸ N) = g at hg'
+shortened proof!
+...
+line 1257, col 8:
+rw [h2] at h15
+shortened proof!
+.
+line 1259, col 8:
+rw [h3] at h15
+shortened proof!
+.
+line 1261, col 8:
+rw [h5] at h15
+shortened proof!
+....
+line 1266, col 12:
+rw [h5, hN, h_fac5, pow_one]
+.
+line 1267, col 12:
+rw [h_n5]
+shortened proof!
+..
+line 1269, col 42:
+rw [hN, h_fac3]
+..
+line 1270, col 47:
+rw [h6]
+shortened proof!
+...
+line 1273, col 12:
+rw [h_n3, h6]
+shortened proof!
+..
+line 1275, col 42:
+rw [hN, h_fac5]
+..
+line 1276, col 47:
+rw [h10]
+shortened proof!
+...
+line 1279, col 12:
+rw [h_n5, h10]
+shortened proof!
+..
+line 1281, col 42:
+rw [hN, h_fac3]
+..
+line 1282, col 47:
+rw [h12]
+shortened proof!
+...
+line 1285, col 12:
+rw [h_n3, h12]
+shortened proof!
+..
+line 1288, col 37:
+rw [h15]
+shortened proof!
+.......
+line 1295, col 12:
+rw [h15]
+shortened proof!
+..
+line 1297, col 42:
+rw [hN, h_fac5]
+..
+line 1298, col 47:
+rw [h20]
+shortened proof!
+...
+line 1301, col 12:
+rw [h_n5, h20]
+shortened proof!
+..
+line 1304, col 37:
+rw [h30]
+shortened proof!
+.......
+line 1311, col 12:
+rw [h30]
+shortened proof!
+..___.
+line 1317, col 6:
+obtain h := (by omega : Nat.card N = 11)
+shortened proof!
+..___..___..___............
+line 1349, col 8:
+rw [mul_zero] at hk
+shortened proof!
+.
+line 1351, col 8:
+rw [mul_one] at hk
+shortened proof!
+............
+line 1373, col 65:
+norm_num
+.......
+line 1387, col 65:
+norm_num
+.
+line 1388, col 4:
+norm_num
+..
+line 1391, col 4:
+rw [h_bot,
+      Nat.card_eq_one_iff_unique.mpr ⟨⟨fun x y ↦ Subtype.ext (by rw [Subgroup.mem_bot.mp x.2,
+          Subgroup.mem_bot.mp y.2])⟩, ⟨1, Subgroup.one_mem ⊥⟩⟩] at hP_card
+shortened proof!
+.
+line 1396, col 4:
+rw [h_top, Nat.card_congr ⟨Subtype.val, fun g ↦ ⟨g, Subgroup.mem_top g⟩, fun _ ↦ rfl,
+      fun _ ↦ rfl⟩, hN] at hP_card
+shortened proof!
+.............
+line 1413, col 46:
+rw [h_top]
+shortened proof!
+.
+line 1414, col 8:
+rfl
+.
+line 1416, col 4:
+omega
+.......
+line 1427, col 42:
+norm_num
+..__....
+line 1437, col 4:
+exact hn
+....
+line 1443, col 6:
+rw [Nat.card_eq_one_iff_unique.mpr ⟨⟨fun x y ↦ Subtype.ext (by rw [Subgroup.mem_bot.mp x.2,
+        Subgroup.mem_bot.mp y.2])⟩, ⟨1, Subgroup.one_mem ⊥⟩⟩] at hK_card
+shortened proof!
+.
+line 1447, col 6:
+rw [Nat.card_congr ⟨Subtype.val, fun g ↦ ⟨g, Subgroup.mem_top g⟩, fun _ ↦ rfl, fun _ ↦ rfl⟩,
+        hN] at hK_card
+shortened proof!
+...........
+line 1464, col 46:
+rw [h_top]
+shortened proof!
+.
+line 1465, col 8:
+rfl
+.
+line 1467, col 4:
+omega
+........
+line 1483, col 84:
+rfl
+..
+line 1487, col 12:
+intro _ _
+shortened proof!
+....WARNING: FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean produced errors (exit code 0)

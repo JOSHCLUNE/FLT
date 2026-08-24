@@ -1,0 +1,7 @@
+..
+line 50, col 46:
+simp
+...........
+line 73, col 4:
+simp [key, zpow_ofNat]
+....

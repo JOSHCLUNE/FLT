@@ -1,0 +1,731 @@
+...
+line 79, col 50:
+exact h_ndvd (dvd_zero p)
+...
+line 90, col 26:
+exact h_ndvd (dvd_zero p)
+..
+line 93, col 44:
+exact h_ndvd (dvd_zero p)
+...
+line 110, col 129:
+norm_num
+.
+line 110, col 146:
+norm_num at h
+..
+line 111, col 138:
+exact hy
+........
+line 120, col 54:
+rw [← hc, h, zero_pow (by norm_num)]
+.......
+line 125, col 71:
+rw [smul_smul, mul_inv_cancel₀ hc_ne, one_smul]
+..............
+line 140, col 52:
+rw [← hc, h, zero_pow (by norm_num)]
+......................
+line 158, col 6:
+rw [Units.val_mul, hy_eq, ← Matrix.mul_assoc, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.one_mul]
+.....................
+line 193, col 40:
+rw [← mul_assoc, mul_inv_cancel, one_mul]
+.............
+line 214, col 104:
+norm_num [Matrix.det_fin_two]
+.......
+line 225, col 104:
+norm_num [Matrix.det_fin_two]
+.........
+line 239, col 8:
+change x.val 0 0 * 1 + x.val 0 1 * 1 = 1 * x.val 0 1 + 1 * x.val 1 1 at h_eq
+shortened proof!
+....................
+line 270, col 4:
+rw [h]
+............
+line 290, col 53:
+rw [MulAut.conj_apply, inv_one, mul_one, one_mul]
+............................
+line 328, col 12:
+rw [← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.one_mulVec]
+..
+line 330, col 20:
+rw [hc, h, zero_smul, Matrix.mulVec_zero]
+...........
+line 345, col 100:
+change (g.val - z • 1).det = 0 ↔ z^2 - T * z + D = 0
+shortened proof!
+......
+line 352, col 8:
+simp only [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, Polynomial.coeff_C_mul, Polynomial.coeff_X, Polynomial.coeff_C]
+shortened proof!
+...
+line 356, col 80:
+norm_num
+.
+line 357, col 6:
+exact one_ne_zero (h1.symm.trans h2)
+.....
+line 362, col 8:
+simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+.
+line 363, col 6:
+rw [← h_eval]
+shortened proof!
+........
+line 373, col 34:
+rw [hx, sub_zero]
+...._...Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.....
+line 387, col 30:
+rw [hx, sub_eq_zero.mpr h]
+.
+line 388, col 22:
+ring
+..
+line 389, col 37:
+rw [sq_eq_zero_iff.mp h_sq]
+shortened proof!
+...
+line 393, col 4:
+rw [hxy.mpr h_disc, Set.pair_eq_singleton, Set.ncard_singleton]
+.
+line 394, col 4:
+exact Set.ncard_pair (mt hxy.mp h_disc)
+.....
+line 405, col 37:
+rw [ha]
+..
+line 407, col 28:
+rw [hwy]
+..
+line 409, col 22:
+rw [ha]
+.
+line 411, col 2:
+have h_zero : (x - y) • v = 0 := by rw [sub_smul, h_eq, sub_self]
+shortened proof!
+...........
+line 436, col 88:
+rw [← hvx, ← hwy]
+...
+line 439, col 45:
+rw [← h_comb]
+..
+line 440, col 39:
+exact sub_self _
+..
+line 442, col 90:
+rw [Fin.sum_univ_two]
+shortened proof!
+..
+line 445, col 4:
+right
+shortened proof!
+..
+line 448, col 6:
+left
+shortened proof!
+..............................
+line 489, col 2:
+rw [← sub_eq_zero, ← sub_smul, smul_eq_zero, sub_eq_zero] at h_contra
+shortened proof!
+.....
+line 501, col 6:
+simp only [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, Polynomial.coeff_C_mul, Polynomial.coeff_X, Polynomial.coeff_C]
+shortened proof!
+...
+line 505, col 78:
+norm_num
+.
+line 506, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+.....
+line 512, col 6:
+simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+.
+line 513, col 4:
+rw [← h_eval]
+shortened proof!
+.....
+line 520, col 53:
+rw [sub_add_cancel]
+.
+line 522, col 24:
+rw [h_eq]
+.....
+line 526, col 44:
+rw [hx]
+.
+line 527, col 36:
+rw [zero_add, ht]
+............
+line 542, col 68:
+rw [expand, hx]
+.
+line 542, col 89:
+rw [expand, hy]
+.......
+line 554, col 4:
+rw [hl]
+....
+line 559, col 4:
+exact hv
+...........
+line 572, col 64:
+rw [Module.finrank_pi, Fintype.card_fin]
+...........
+line 583, col 16:
+change A 0 0 * (1 : K p) + A 0 1 * (0 : K p) = 0 at h_eval
+shortened proof!
+.
+line 584, col 16:
+change A 0 0 * (0 : K p) + A 0 1 * (1 : K p) = 0 at h_eval
+shortened proof!
+.
+line 585, col 16:
+change A 1 0 * (1 : K p) + A 1 1 * (0 : K p) = 0 at h_eval
+shortened proof!
+.
+line 586, col 16:
+change A 1 0 * (0 : K p) + A 1 1 * (1 : K p) = 0 at h_eval
+shortened proof!
+.................
+line 607, col 4:
+exact Set.ncard_singleton _
+................................
+line 643, col 6:
+simp only [Polynomial.coeff_add, Polynomial.coeff_sub, Polynomial.coeff_X_pow, Polynomial.coeff_C_mul, Polynomial.coeff_X, Polynomial.coeff_C]
+shortened proof!
+...
+line 646, col 106:
+norm_num
+.
+line 647, col 4:
+exact one_ne_zero (h1.symm.trans h2)
+.....
+line 653, col 6:
+simp only [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_mul, Polynomial.eval_X, Polynomial.eval_C]
+.
+line 654, col 4:
+rw [← h_eval]
+shortened proof!
+................
+line 671, col 42:
+rw [expand lambda1, hlambda1]
+..........
+line 685, col 6:
+rw [expand lambda2, hlambda2_eq_zero]
+.............
+line 702, col 8:
+change (if (0 : Fin 2) = 0 then v1 0 else v2 0) * (if (1 : Fin 2) = 0 then v1 1 else v2 1) - (if (1 : Fin 2) = 0 then v1 0 else v2 0) * (if (0 : Fin 2) = 0 then v1 1 else v2 1) = _
+shortened proof!
+.
+line 704, col 6:
+rw [h_det_fin] at h_lin_indep
+shortened proof!
+._....
+line 711, col 10:
+change ∑ i : Fin 2, (if i = 0 then v2 1 else -v1 1) * (![v1, v2] i 0) = 0
+shortened proof!
+.....
+line 719, col 37:
+norm_num
+.......
+line 723, col 15:
+exact h
+.
+line 724, col 15:
+change -v1 1 = 0 at c1
+shortened proof!
+.....
+line 727, col 13:
+exact h
+.
+line 728, col 13:
+exact (mul_eq_zero.mp <|
+          by calc v2 0 * v1 1 = -(v1 0 * v2 1 - v2 0 * v1 1) + v1 0 * v2 1 := by ring
+                                     _ = -0 + 0 * v2 1 := by rw [h_det, h]
+                                     _ = 0 := by ring).resolve_left h'
+.....
+line 734, col 13:
+exact h'
+.
+line 735, col 13:
+exact (mul_eq_zero.mp <| by
+          calc v1 0 * v2 1
+              = (v1 0 * v2 1 - v2 0 * v1 1) + v2 0 * v1 1 := by
+                ring
+            _ = 0 + 0 * v1 1 := by rw [h_det, h']
+            _ = 0 := by ring).resolve_left h
+........
+line 748, col 37:
+norm_num
+......
+line 754, col 37:
+norm_num
+...
+line 757, col 8:
+use 0
+shortened proof!
+....
+line 762, col 6:
+rw [Matrix.det_fin_two]
+shortened proof!
+........................
+line 791, col 4:
+calc g.val = (g.val * P.val) * (P⁻¹).val := h_g.symm
+      _ = (P.val * Y.val) * (P⁻¹).val := by rw [h_diag]
+      _ = (P * Y * P⁻¹).val := rfl
+....
+line 798, col 6:
+have h_eq : P * Y = g * P := by
+        calc P * Y = P * Y * 1 := by rw [mul_one]
+          _ = P * Y * (P⁻¹ * P) := by rw [inv_mul_cancel]
+          _ = (P * Y * P⁻¹) * P := by rw [← mul_assoc (P * Y)]
+          _ = g * P := by rw [← hP]
+shortened proof!
+.........
+line 812, col 79:
+rw [← hlambda2.2, hc, mul_zero]
+.......
+line 819, col 10:
+change (1 : K p) * 1 - 0 * 1 = 1
+shortened proof!
+.
+line 821, col 8:
+rw [h_det] at hE
+shortened proof!
+..........
+line 832, col 10:
+ring
+.....
+line 837, col 10:
+ring
+.
+line 838, col 8:
+rw [h_left, h_right] at hE
+shortened proof!
+......................................
+line 880, col 6:
+by_contra h_k0
+shortened proof!
+.........
+line 899, col 69:
+norm_num
+......
+line 906, col 4:
+exact h_two_ne (mul_self_eq_zero.mp h22)
+...
+line 910, col 4:
+exact h_discr
+.....
+line 916, col 32:
+rw [mul_inv_cancel₀ h_two_ne]
+......
+line 922, col 97:
+rw [h2_eig]
+........
+line 936, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 0]
+..
+line 940, col 126:
+rw [h_d]
+.
+line 941, col 22:
+ring
+...
+line 949, col 12:
+rw [h_N_entry 0 0, h_N_entry 0 1, h_N_entry 1 1]
+....
+line 960, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 0, h_N_entry 1 1]
+....
+line 971, col 12:
+rw [h_N_entry 1 0, h_N_entry 0 1, h_N_entry 1 1]
+..
+line 975, col 126:
+rw [h_d]
+.
+line 976, col 22:
+ring
+.
+line 977, col 4:
+cases mul_eq_zero.mp hX with
+    | inl h4 => exact absurd h4 h_four_ne
+    | inr hX_eq => exact hX_eq
+.....
+line 985, col 6:
+ring
+..........
+line 994, col 47:
+norm_num
+..
+line 996, col 47:
+norm_num
+..........
+line 1005, col 6:
+simp only [zero_mul, zero_add, one_mul, mul_one] at h
+shortened proof!
+.........
+line 1017, col 54:
+rw [h]
+.
+line 1018, col 28:
+ring
+......
+line 1025, col 6:
+simp only [one_mul, zero_mul, add_zero, mul_one] at h
+shortened proof!
+...
+line 1033, col 6:
+calc g.val 0 0 = g.val 0 0 * 1 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 0 := rfl
+.
+line 1036, col 6:
+calc g.val 0 1 = 0 := h01
+        _ = g.val 0 0 * 0 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 0 1 := rfl
+.
+line 1040, col 6:
+calc g.val 1 0 = 0 := h10
+        _ = g.val 0 0 * 0 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 1 0 := rfl
+.
+line 1044, col 6:
+calc g.val 1 1 = g.val 0 0 := h00_11
+        _ = g.val 0 0 * 1 := by ring
+        _ = g.val 0 0 * (1 : Matrix (Fin 2) (Fin 2) (K p)) 1 1 := rfl
+.....
+line 1051, col 4:
+change x.val * (g ^ p).val = (g ^ p).val * x.val
+shortened proof!
+.........
+line 1066, col 4:
+change x.val * g.val = g.val * x.val
+shortened proof!
+.......
+line 1077, col 6:
+rw [hc1] at h
+shortened proof!
+.
+line 1079, col 6:
+intro h
+shortened proof!
+....
+line 1085, col 6:
+intro h
+shortened proof!
+..
+line 1089, col 6:
+rw [h] at ho
+shortened proof!
+...
+line 1103, col 4:
+exact ⟨Classical.arbitrary _, fun g hg ↦ by rw [h_trivial g hg, one_smul]⟩
+..........
+line 1115, col 6:
+rw [pow_zero, orderOf_eq_one_iff] at hk
+shortened proof!
+.......
+line 1128, col 8:
+rw [h, orderOf_one] at hz_val_order
+shortened proof!
+..........
+line 1154, col 8:
+change x.val * g'.val = g'.val * x.val
+shortened proof!
+.................
+line 1176, col 4:
+rw [h_zero, pow_zero] at hk
+shortened proof!
+..
+line 1180, col 4:
+rw [Subgroup.orderOf_coe]
+shortened proof!
+....
+line 1189, col 4:
+rw [hg, one_pow]
+.....
+line 1194, col 4:
+rw [h_order_p] at h_pow
+shortened proof!
+.
+line 1207, col 19:
+rw [Matrix.det_fin_two]
+shortened proof!
+.............Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.
+line 1223, col 6:
+calc M.val 1 0 = M.val 1 0 * 1 + M.val 1 1 * 0 := by ring
+        _ = (c : K p) * 0 := hc1.symm
+        _ = 0 := by ring
+..............
+line 1239, col 15:
+rw [Matrix.det_fin_two]
+shortened proof!
+...
+line 1242, col 6:
+rw [Matrix.det_fin_two] at hM_det
+shortened proof!
+....
+line 1248, col 41:
+rw [h_a, zero_mul]
+....
+line 1252, col 11:
+change a * 1 = a * 1 + b * 0
+shortened proof!
+.
+line 1253, col 11:
+change a * 0 = 0 * 1 + d * 0
+shortened proof!
+.
+line 1259, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 1261, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1264, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1269, col 4:
+rw [Matrix.det_fin_two]
+shortened proof!
+........
+line 1279, col 4:
+rw [mul_zero, add_zero]
+.....
+line 1284, col 4:
+rw [zero_mul, zero_add]
+...
+line 1286, col 73:
+rw [ha2, hc, mul_zero, zero_mul]
+...
+line 1289, col 24:
+rw [← ha2, ← hd2]
+.
+line 1295, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 1297, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 1299, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+.......
+line 1305, col 47:
+rw [mul_zero, add_zero]
+..
+line 1306, col 58:
+rfl
+..
+line 1307, col 40:
+rw [zero_mul, mul_zero, add_zero]
+..
+line 1308, col 47:
+rw [zero_mul, zero_add]
+.
+line 1314, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+.
+line 1316, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1317, col 39:
+rw [ha_eq, zero_mul]
+...
+line 1319, col 70:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1320, col 76:
+rw [Matrix.det_fin_two]
+shortened proof!
+.........
+line 1328, col 44:
+rw [mul_zero, add_zero, mul_inv_cancel₀ ha]
+..
+line 1329, col 50:
+rw [mul_zero, zero_add]
+..
+line 1330, col 44:
+rw [mul_zero, zero_mul, add_zero]
+..
+line 1331, col 44:
+rw [zero_mul, zero_add, ← h_eq, mul_inv_cancel₀ ha]
+.
+line 1332, col 4:
+rw [Units.val_mul, h_mat, ← Matrix.mul_assoc, ← Units.val_mul, inv_mul_cancel, Units.val_one, Matrix.one_mul]
+...........
+line 1343, col 4:
+rw [hX_one]
+shortened proof!
+..........
+line 1358, col 13:
+rw [Matrix.det_fin_two]
+shortened proof!
+................
+line 1376, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+..........
+line 1390, col 42:
+rw [hAB]
+.
+line 1391, col 42:
+rw [Matrix.mul_smul]
+.
+line 1392, col 24:
+rw [show (B⁻¹).val * B.val = 1 from congr_arg Units.val (inv_mul_cancel B)]
+..
+line 1394, col 4:
+rw [h_center]
+shortened proof!
+..
+line 1398, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+..........
+line 1409, col 8:
+rw [mul_zero, sub_zero]
+.........
+line 1422, col 41:
+rw [h_order]
+..
+line 1428, col 4:
+have h_gcd_eq_one : Nat.gcd p p = 1 := by
+      calc Nat.gcd p p = Nat.gcd p (orderOf g) := by rw [h_order]
+        _ = 1 := h_coprime
+shortened proof!
+......
+line 1442, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+....
+line 1450, col 10:
+change 0 * v 0 + (v 1)⁻¹ * v 1 = 1
+shortened proof!
+.
+line 1453, col 10:
+change 1 * v 0 + 0 * v 1 = 0
+shortened proof!
+..
+line 1456, col 8:
+rw [Matrix.det_fin_two]
+shortened proof!
+....
+line 1464, col 10:
+change (v 0)⁻¹ * v 0 + 0 * v 1 = 1
+shortened proof!
+.
+line 1467, col 10:
+change (-(v 1) * (v 0)⁻¹) * v 0 + 1 * v 1 = 0
+shortened proof!
+................
+line 1490, col 12:
+change (1 * 1 + x * 0 : K p) = 1 * 1 + y * 0
+shortened proof!
+...
+line 1492, col 12:
+change (0 * 1 + 1 * 0 : K p) = 0 * 1 + 1 * 0
+shortened proof!
+.
+line 1493, col 12:
+change (0 * y + 1 * 1 : K p) = 0 * x + 1 * 1
+shortened proof!
+........
+line 1508, col 2:
+calc g * h = k⁻¹ * ((k * g * k⁻¹) * (k * h * k⁻¹)) * k := by group
+    _ = k⁻¹ * ((k * h * k⁻¹) * (k * g * k⁻¹)) * k := by rw [h_comm]
+    _ = h * g := by group
+......
+line 1521, col 27:
+rw [hg, one_mul, mul_one]
+..
+line 1522, col 27:
+rw [hh, mul_one, one_mul]
+........
+line 1533, col 53:
+rw [hz_order]
+....
+line 1539, col 4:
+rw [ha, Set.mem_singleton_iff] at hx_mem hy_mem
+shortened proof!
+........
+line 1559, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1564, col 8:
+change (g : Matrix (Fin 2) (Fin 2) F) 0 0 * 1 + (g : Matrix (Fin 2) (Fin 2) F) 0 1 * 1 = 1 * (g : Matrix (Fin 2) (Fin 2) F) 0 0 + 0 * (g : Matrix (Fin 2) (Fin 2) F) 1 0 at h
+shortened proof!
+...
+line 1570, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1575, col 8:
+change (g : Matrix (Fin 2) (Fin 2) F) 1 0 * 1 + (g : Matrix (Fin 2) (Fin 2) F) 1 1 * 1 = 0 * (g : Matrix (Fin 2) (Fin 2) F) 0 1 + 1 * (g : Matrix (Fin 2) (Fin 2) F) 1 1 at h
+shortened proof!
+...
+line 1581, col 10:
+rw [Matrix.det_fin_two]
+shortened proof!
+..
+line 1586, col 8:
+change (g : Matrix (Fin 2) (Fin 2) F) 1 0 * 1 + (g : Matrix (Fin 2) (Fin 2) F) 1 1 * 1 = 1 * (g : Matrix (Fin 2) (Fin 2) F) 0 0 + 1 * (g : Matrix (Fin 2) (Fin 2) F) 1 0 at h
+shortened proof!
+......
+line 1594, col 8:
+simp only [mul_zero, sub_zero] at hdet
+shortened proof!
+...
+line 1598, col 18:
+rfl
+.
+line 1599, col 18:
+exact eq_01
+.
+line 1600, col 18:
+exact eq_10
+.
+line 1601, col 18:
+exact eq_11
+...................
+line 1625, col 6:
+rw [hg]
+shortened proof!
+......
+line 1636, col 6:
+change Matrix.diagonal ![(g.1 : Matrix (Fin 2) (Fin 2) F) 0 0, (g.1 : Matrix (Fin 2) (Fin 2) F) 0 0] = _
+shortened proof!
+......WARNING: FLT/Slop/PGL2/FiniteSubgroups/PGLBasic.lean produced errors (exit code 0)

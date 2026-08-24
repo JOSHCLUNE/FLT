@@ -1,0 +1,9 @@
+......
+line 44, col 2:
+lia
+......
+line 55, col 4:
+trivial
+.........
+line 74, col 2:
+exact hα.symm

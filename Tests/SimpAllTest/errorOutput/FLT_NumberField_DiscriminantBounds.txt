@@ -1,0 +1,22 @@
+.....
+line 43, col 88:
+positivity
+.............
+line 56, col 30:
+simp
+......
+line 61, col 39:
+simp
+...................
+line 85, col 42:
+positivity
+..
+line 85, col 68:
+rfl
+................................_..
+line 134, col 2:
+exact h₁
+....._..
+line 144, col 2:
+exact h₁
+....._...._......_...._...........

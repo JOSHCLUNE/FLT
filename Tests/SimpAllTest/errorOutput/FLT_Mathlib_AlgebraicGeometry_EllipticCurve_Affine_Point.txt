@@ -1,0 +1,27 @@
+......
+line 71, col 63:
+linear_combination hX
+...
+line 74, col 2:
+exact hxy ⟨rfl, mul_left_cancel₀ (pow_ne_zero 3 hu) (by linear_combination hY)⟩
+............
+line 112, col 6:
+exact fun h ↦ hy (mul_left_cancel₀ (pow_ne_zero 3 hu) (by linear_combination h))
+.....
+line 119, col 6:
+simpa [mul_right_inj' (pow_ne_zero 2 hu)] using hx
+......._.
+line 162, col 2:
+subst hx hy
+shortened proof!
+...
+line 168, col 4:
+rfl
+.....
+line 173, col 4:
+have hx : x₁ = x₂ := mul_left_cancel₀ (pow_ne_zero 2 hu) (by linear_combination hX)
+shortened proof!
+....._.......
+line 203, col 8:
+rw [hxy.1]
+........__

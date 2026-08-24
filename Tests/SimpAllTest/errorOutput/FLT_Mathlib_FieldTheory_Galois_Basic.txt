@@ -1,0 +1,17 @@
+......
+line 64, col 4:
+exact Or.inl h1
+.....
+line 79, col 4:
+exact AlgEquiv.one_apply x
+.
+line 80, col 4:
+exact hx
+........
+line 119, col 17:
+simp
+.......___...
+line 138, col 2:
+simp only [MonoidHom.coe_mk, OneHom.coe_mk]
+shortened proof!
+........

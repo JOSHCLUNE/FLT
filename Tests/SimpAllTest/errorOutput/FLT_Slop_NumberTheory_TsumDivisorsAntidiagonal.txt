@@ -1,0 +1,17 @@
+.................
+line 136, col 6:
+simp only [one_pow] at h1
+shortened proof!
+.....
+line 143, col 4:
+rwa [hval] at hlim
+.....
+line 147, col 73:
+ring
+................................
+line 244, col 4:
+ring
+..
+line 246, col 4:
+push_cast
+shortened proof!

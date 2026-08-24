@@ -1,0 +1,54 @@
+..............
+line 79, col 2:
+simp at h
+....
+line 87, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+..........
+line 107, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+...................
+line 151, col 4:
+rw [Valuation.ne_zero_iff]
+shortened proof!
+..
+line 154, col 4:
+rw [mul_ne_zero_iff]
+shortened proof!
+..............................................
+line 236, col 4:
+exact Subtype.coe_prop x
+.................
+line 261, col 2:
+rwa [ha]
+............._.........
+line 330, col 2:
+exact Module.finrank_self _
+..........................................
+line 395, col 6:
+rw [RingHom.coe_range]
+shortened proof!
+.........
+line 412, col 4:
+exact IsLocalization.to_map_ne_zero_of_mem_nonZeroDivisors K (fun _ ↦ id) hz
+....................................
+line 483, col 2:
+simp [hπ]
+....
+line 497, col 2:
+omega
+..
+line 503, col 36:
+simp [hx]
+...............
+line 526, col 4:
+simp only [hx₀, Ideal.zero_mem]
+....
+line 530, col 39:
+rw [hu, h, pow_zero, one_mul] at hn
+shortened proof!
+.......................
+line 563, col 4:
+simp only [Ideal.span_singleton_eq_bot] at h
+shortened proof!
+........................

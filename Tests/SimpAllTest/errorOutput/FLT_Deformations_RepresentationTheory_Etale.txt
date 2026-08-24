@@ -1,0 +1,40 @@
+.....
+line 39, col 16:
+simp only [map_zero]
+.
+line 40, col 23:
+simp only [map_add, *]
+....
+line 45, col 18:
+simp only [map_zero, zero_mul, TensorProduct.zero_tmul]
+.....
+line 50, col 16:
+simp only [map_zero]
+.
+line 51, col 23:
+simp only [map_add, *]
+......
+line 60, col 16:
+simp only [map_zero]
+.
+line 61, col 23:
+simp only [map_add, *]
+...
+line 65, col 6:
+simp
+.....
+line 72, col 16:
+simp only [map_zero]
+.
+line 73, col 23:
+simp only [map_add, *]
+...
+line 77, col 6:
+simp
+....
+line 87, col 14:
+simp only [map_zero]
+.
+line 88, col 21:
+simp only [map_add, *]
+......

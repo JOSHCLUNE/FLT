@@ -1,0 +1,12 @@
+..
+line 31, col 4:
+rw [RingHom.comp_apply, RingHom.comp_apply, mk_C, map_of,
+      Polynomial.coe_mapRingHom, Polynomial.map_C, mk_C]
+.
+line 33, col 4:
+rw [RingHom.comp_apply, RingHom.comp_apply, ← root, map_root,
+      Polynomial.coe_mapRingHom, Polynomial.map_X, ← root]
+.....
+line 59, col 4:
+simpa only [map_add, map_mul, aeval_C, aeval_X] using hab
+.............

@@ -1,0 +1,4 @@
+....._..........._......
+line 107, col 2:
+rw [hρ, hVinv, hWinv] at hmv
+shortened proof!

@@ -1,0 +1,27 @@
+....
+line 68, col 2:
+simp
+...
+line 86, col 24:
+simp
+...
+line 102, col 42:
+simp [h]
+..
+line 106, col 4:
+rw [h]
+shortened proof!
+.....
+line 114, col 13:
+simpa
+.
+line 116, col 6:
+simp only [← Matrix.mul_assoc, List.prod_cons, List.map]
+shortened proof!
+..
+line 121, col 4:
+exact hmul _ _ (htransvec _) IH
+.......
+line 135, col 16:
+simp
+....

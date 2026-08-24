@@ -1,0 +1,7 @@
+.......
+line 81, col 14:
+simp
+..
+line 83, col 13:
+simp_all
+.

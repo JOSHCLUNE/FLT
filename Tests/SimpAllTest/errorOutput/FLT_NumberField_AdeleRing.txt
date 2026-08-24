@@ -1,0 +1,58 @@
+.....
+line 161, col 14:
+simp
+..........
+line 178, col 21:
+simp_all
+...................
+line 314, col 14:
+simp
+......
+line 323, col 21:
+simp_all
+..............
+line 412, col 4:
+rw [← hz]
+shortened proof!
+.....................................
+line 460, col 8:
+simp [this, zero_lt_one]
+..............
+line 479, col 4:
+simp only [Set.mem_preimage, map_zero, Set.mem_image,
+      EmbeddingLike.map_eq_zero_iff, exists_eq_right]
+shortened proof!
+............
+line 492, col 2:
+exact hy i
+.........
+line 505, col 48:
+simp [hf, hxₐ]
+...........................Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+.Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+..........................
+line 635, col 22:
+simp [-algebraMap.coe_inj]
+..........................................................._.....................................
+line 838, col 14:
+rfl
+..
+line 840, col 21:
+simp_all
+....
+line 864, col 12:
+rfl
+..
+line 866, col 19:
+simp_all
+WARNING: FLT/NumberField/AdeleRing.lean produced errors (exit code 0)
