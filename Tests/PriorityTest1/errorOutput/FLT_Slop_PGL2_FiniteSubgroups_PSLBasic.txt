@@ -1,0 +1,707 @@
+.....
+line 61, col 2:
+exact H.inv_mem (H.pow_mem (Subgroup.sq_mem_of_index_two hH g) n)
+* Try this:
+
+  [apply]     simp_all only [inv_mem_iff]
+    apply pow_mem
+    apply Subgroup.sq_mem_of_index_two
+    simp_all only
+.
+line 71, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [det_fin_two_of, mul_one, mul_zero, sub_zero]
+shortened proof!
+.
+line 78, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [det_fin_two_of, mul_one, zero_mul, sub_zero]
+shortened proof!
+...........
+line 101, col 8:
+rw [div_mul_cancel₀ _ hM]
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top, Fin.isValue, ne_eq, isUnit_iff_ne_zero, not_false_eq_true, IsUnit.div_mul_cancel,
+      add_sub_cancel, H]
+shortened proof!
+......
+line 111, col 10:
+calc (1 + (M.1 0 0 - 1)) * (M.1 1 1 - 1) + (M.1 0 0 - 1)
+              = M.1 0 0 * M.1 1 1 - 1 := by ring
+            _ = M.1 0 0 * M.1 1 1 - (M.1 0 0 * M.1 1 1 - M.1 0 1 * M.1 1 0) := by rw [hd]
+            _ = M.1 0 1 * M.1 1 0 := by ring
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 115, col 8:
+rw [mul_div_cancel_right₀ _ hM]
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top, Fin.isValue, ne_eq, isUnit_iff_ne_zero, not_false_eq_true, IsUnit.mul_div_cancel_right,
+      H]
+...
+line 124, col 8:
+rw [mul_comm (M.1 1 0) ((M.1 1 1 - 1) / M.1 1 0), div_mul_cancel₀ _ hM]
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 126, col 4:
+rw [eq_M]
+* this parameter is redundant, environment already contains `Set.mem_union` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Subgroup.mul_mem, #692f, #d035]
+  [apply] grind only [Subgroup.mul_mem]
+  [apply] grind =>
+    instantiate only [#692f, #d035, Subgroup.mul_mem]
+    instantiate only [Subgroup.mul_mem]
+shortened proof!
+.......
+line 138, col 4:
+simp only [mul_zero, zero_mul, sub_zero] at hd
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top, Fin.isValue, ne_eq, zero_mul, mul_zero, sub_self, zero_ne_one, H]
+shortened proof!
+.
+line 140, col 4:
+exact step g hg
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top, Fin.isValue, ne_eq, not_false_eq_true, H]
+............
+line 176, col 8:
+simp only [Matrix.mul_apply, Fin.sum_univ_two]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, vecMul_cons, head_cons, one_smul, tail_cons,
+      smul_cons, smul_eq_mul, mul_zero, mul_one, smul_empty, empty_vecMul, add_zero, add_cons, empty_add_empty, zero_smul,
+      zero_add, empty_mul, Equiv.symm_apply_apply, of_apply, cons_val', cons_val_fin_one, Nat.cast_add, Nat.cast_one]
+    grind only
+shortened proof!
+......
+line 188, col 4:
+rw [h_one, map_one]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_one]
+....
+line 193, col 6:
+have h_ker : _ ∈ MonoidHom.ker _ := MonoidHom.mem_ker.mpr h_eq_one
+* Try this:
+
+  [apply]   simp_all only [ne_eq, QuotientGroup.mk'_apply, QuotientGroup.eq_one_iff]
+shortened proof!
+..
+line 198, col 8:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, det_fin_two_of, mul_one, sub_zero, one_ne_zero, not_false_eq_true]
+shortened proof!
+...
+line 204, col 121:
+rw [h_comm]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue, Units.val_mul, SpecialLinearGroup.coe_GL_coe_matrix,
+      GeneralLinearGroup.val_mkOfDetNeZero, M]
+..
+line 208, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two] at h_eq
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, vecMul_cons, head_cons, one_smul,
+      tail_cons, smul_cons, smul_eq_mul, mul_one, smul_empty, empty_vecMul, add_zero, add_cons, zero_add, empty_add_empty,
+      zero_smul, empty_mul, Equiv.symm_apply_apply, of_apply, cons_val', cons_val_zero, cons_val_fin_one, add_eq_left, M]
+shortened proof!
+................
+line 237, col 20:
+change (1 : F) * 1 + 0 * b = 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, of_apply, cons_val', cons_val_zero, cons_val_fin_one, mul_one,
+      cons_val_one, zero_mul, add_zero, Nat.cast_add, Nat.cast_one]
+shortened proof!
+.
+line 238, col 20:
+change (1 : F) * 0 + 0 * 1 = 0
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, of_apply, cons_val', cons_val_zero, cons_val_fin_one, cons_val_one,
+      mul_zero, mul_one, add_zero, Nat.cast_add, Nat.cast_one]
+shortened proof!
+.
+line 239, col 20:
+change (((n : ℕ) : F) * b) * 1 + 1 * b = (((n + 1 : ℕ) : F) * b)
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, Fin.isValue, of_apply, cons_val', cons_val_zero, cons_val_fin_one, cons_val_one,
+      mul_one, one_mul, Nat.cast_add, Nat.cast_one]
+    grind only
+shortened proof!
+.
+line 240, col 20:
+change (((n : ℕ) : F) * b) * 0 + 1 * 1 = 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, of_apply, cons_val', cons_val_zero, cons_val_fin_one, cons_val_one,
+      mul_zero, mul_one, zero_add, Nat.cast_add, Nat.cast_one]
+shortened proof!
+...
+line 242, col 34:
+rw [this, map_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, map_one]
+......
+line 246, col 8:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, det_fin_two_of, mul_one, mul_zero, sub_zero, one_ne_zero, not_false_eq_true]
+shortened proof!
+......
+line 254, col 6:
+simp only [Matrix.mul_apply, Fin.sum_univ_two] at h_eq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Fin.isValue, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, vecMul_cons, head_cons,
+      one_smul, tail_cons, zero_smul, empty_vecMul, add_zero, smul_cons, smul_eq_mul, mul_one, smul_empty, add_cons,
+      empty_add_empty, empty_mul, Equiv.symm_apply_apply, of_apply, cons_val', cons_val_zero, cons_val_fin_one, zero_add,
+      left_eq_add]
+shortened proof!
+......
+line 265, col 34:
+rw [this]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_comap, Set.mem_preimage, map_one, SetLike.mem_coe, one_mem]
+shortened proof!
+.......
+line 268, col 49:
+exact Nat.Prime.odd_of_ne_two hp_prime (ne_of_gt hp_gt_2)
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq]
+    grind only [Fact.out, CharP.cast_eq_zero_iff, FiniteField.card, = Nat.odd_iff, usr Nat.pow_pos, = ZMod.natCast_mod,
+      Nat.dvd_prime, #6301, #6a86, #8209, #a9af]
+...
+line 270, col 34:
+rw [this]
+* Try this:
+
+  [apply]     subst hb
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_comap, Set.mem_preimage, map_one, SetLike.mem_coe, one_mem]
+shortened proof!
+......
+line 273, col 12:
+rw [h_order_p' b hb]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, not_false_eq_true]
+    grind only [Fact.out, FiniteField.card, Nat.Prime.odd_of_ne_two]
+shortened proof!
+......
+line 283, col 4:
+rw [QuotientGroup.eq_one_iff, Subgroup.mem_center_iff] at h
+* Try this:
+
+  [apply]   smt +mono [*, SpecialLinearGroup.toGL_mem_center_iff, ProjGenLinGroup.mk_eq_one, SpecialLinearGroup.toPGL_ker]
+shortened proof!
+............
+line 302, col 6:
+change (1 : F) * m.val 0 0 + 1 * m.val 1 0 = m.val 0 0 * 1 + m.val 0 1 * 0 at h
+* Try this:
+
+  [apply]   simp_all only [cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue, of_apply,
+      cons_val', cons_val_zero, cons_val_fin_one, one_mul, cons_val_one, mul_one, mul_zero, add_zero, add_eq_left]
+shortened proof!
+....
+line 309, col 6:
+change (1 : F) * m.val 0 0 + 0 * m.val 1 0 = m.val 0 0 * 1 + m.val 0 1 * 1 at h
+* Try this:
+
+  [apply]   simp_all only [cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue, of_apply,
+      cons_val', cons_val_zero, cons_val_fin_one, one_mul, cons_val_one, mul_zero, add_zero, mul_one, left_eq_add]
+shortened proof!
+....
+line 316, col 6:
+change (1 : F) * m.val 0 1 + 1 * m.val 1 1 = m.val 0 0 * 1 + m.val 0 1 * 1 at h
+* Try this:
+
+  [apply]   simp_all only [cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue, of_apply,
+      cons_val', cons_val_zero, cons_val_fin_one, mul_zero, cons_val_one, one_mul, zero_add, mul_one, add_zero]
+shortened proof!
+........
+line 327, col 8:
+change g.val 0 0 * m.val 0 0 + g.val 0 1 * m.val 1 0 = m.val 0 0 * g.val 0 0 + m.val 0 1 * g.val 1 0
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 330, col 8:
+change g.val 0 0 * m.val 0 1 + g.val 0 1 * m.val 1 1 = m.val 0 0 * g.val 0 1 + m.val 0 1 * g.val 1 1
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 335, col 8:
+change g.val 1 0 * m.val 0 0 + g.val 1 1 * m.val 1 0 = m.val 1 0 * g.val 0 0 + m.val 1 1 * g.val 1 0
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 338, col 8:
+change g.val 1 0 * m.val 0 1 + g.val 1 1 * m.val 1 1 = m.val 1 0 * g.val 0 1 + m.val 1 1 * g.val 1 1
+* Try this:
+  [apply] grind only
+shortened proof!
+...........
+line 357, col 8:
+change (1 : F) * g.val 0 0 + 1 * g.val 1 0 = g.val 0 0 * 1 + g.val 0 1 * 0 at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      of_apply, cons_val', cons_val_zero, cons_val_fin_one, one_mul, cons_val_one, mul_one, mul_zero, add_zero,
+      add_eq_left]
+shortened proof!
+....
+line 364, col 8:
+change (1 : F) * g.val 0 0 + 0 * g.val 1 0 = g.val 0 0 * 1 + g.val 0 1 * 1 at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      of_apply, cons_val', cons_val_zero, cons_val_fin_one, one_mul, cons_val_one, mul_zero, add_zero, mul_one,
+      left_eq_add]
+shortened proof!
+....
+line 371, col 8:
+change (1 : F) * g.val 0 1 + 1 * g.val 1 1 = g.val 0 0 * 1 + g.val 0 1 * 1 at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      of_apply, cons_val', cons_val_zero, cons_val_fin_one, mul_zero, cons_val_one, one_mul, zero_add, mul_one, add_zero]
+shortened proof!
+....
+line 378, col 18:
+change g.val 0 0 = g.val 0 0 * 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      Matrix.smul_apply, one_apply_eq, smul_eq_mul, mul_one]
+shortened proof!
+.
+line 379, col 18:
+change g.val 0 1 = g.val 0 0 * 0
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      Matrix.smul_apply, ne_eq, zero_ne_one, not_false_eq_true, one_apply_ne, smul_eq_mul, mul_zero]
+shortened proof!
+.
+line 380, col 18:
+change g.val 1 0 = g.val 0 0 * 0
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      Matrix.smul_apply, ne_eq, one_ne_zero, not_false_eq_true, one_apply_ne, smul_eq_mul, mul_zero]
+shortened proof!
+.
+line 381, col 18:
+change g.val 1 1 = g.val 0 0 * 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd, empty_mul, Equiv.symm_apply_apply, Fin.isValue,
+      Matrix.smul_apply, one_apply_eq, smul_eq_mul, mul_one]
+shortened proof!
+.......
+line 389, col 8:
+exact hd
+* this parameter is redundant, environment already contains `Equiv.refl_apply` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 392, col 44:
+rw [hc, h, one_smul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Fin.isValue, one_smul, mul_one, one_mul, Matrix.smul_apply, ne_eq, one_ne_zero,
+      not_false_eq_true, one_apply_ne, smul_eq_mul, mul_zero, zero_ne_one, one_apply_eq, one_pow,
+      Matrix.SpecialLinearGroup.coe_one]
+shortened proof!
+.
+line 393, col 8:
+rw [hg1]
+* Try this:
+
+  [apply]     subst hg1
+    simp_all only [gt_iff_lt, mul_one, one_mul, implies_true, Matrix.SpecialLinearGroup.coe_one, Fin.isValue, ne_eq,
+      one_ne_zero, not_false_eq_true, one_apply_ne, zero_ne_one, one_apply_eq, one_smul, one_pow, one_mem]
+shortened proof!
+..
+line 395, col 46:
+rw [hc, h, neg_smul, one_smul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Fin.isValue, neg_smul, one_smul, mul_neg, mul_one, neg_of, neg_cons, neg_empty, neg_zero,
+      neg_mul, one_mul, Matrix.smul_apply, ne_eq, one_ne_zero, not_false_eq_true, one_apply_ne, smul_eq_mul, mul_zero,
+      zero_ne_one, one_apply_eq, even_two, Even.neg_pow, one_pow, Matrix.neg_apply, SpecialLinearGroup.coe_neg,
+      Matrix.SpecialLinearGroup.coe_one]
+shortened proof!
+.
+line 396, col 8:
+rw [hg_1]
+* Try this:
+
+  [apply]     subst hg_1
+    simp_all only [gt_iff_lt, mul_neg, mul_one, neg_mul, one_mul, implies_true, Fin.isValue, neg_smul, one_smul, neg_of,
+      neg_cons, neg_empty, neg_zero, Matrix.smul_apply, ne_eq, one_ne_zero, not_false_eq_true, one_apply_ne, smul_eq_mul,
+      mul_zero, zero_ne_one, one_apply_eq, SpecialLinearGroup.coe_neg, Matrix.SpecialLinearGroup.coe_one, even_two,
+      Even.neg_pow, one_pow, Matrix.neg_apply, Subgroup.mem_zpowers]
+shortened proof!
+..
+line 400, col 6:
+intro m
+* Try this:
+
+  [apply]     intro g
+    simp_all only [gt_iff_lt, mul_neg, mul_one, neg_mul, one_mul]
+shortened proof!
+...
+line 407, col 4:
+apply Subtype.ext
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, even_two, Even.neg_pow, one_pow]
+shortened proof!
+...
+line 414, col 4:
+have h2 : (2 : F) = 0 :=
+      calc (2 : F) = 1 - (-1 : F) := by ring
+           _ = 1 - 1 := by rw [h0]
+           _ = 0 := by ring
+* Try these:
+  [apply] grind only [!CharP.neg_one_ne_one]
+  [apply] grind => instantiate only [!CharP.neg_one_ne_one]
+shortened proof!
+......
+line 432, col 17:
+change x.val * x.inv = 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, cons_val_zero, Units.val_inv_eq_inv_val, ne_eq, Units.ne_zero, not_false_eq_true,
+      mul_inv_cancel₀]
+shortened proof!
+.
+line 433, col 17:
+exact mul_one (1 : F)
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, cons_val_one, cons_val_fin_one, Units.val_inv_eq_inv_val, mul_one]
+.....
+line 439, col 17:
+change x.inv * x.val = 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Units.val_inv_eq_inv_val, Fin.isValue, cons_val_zero, ne_eq, Units.ne_zero, not_false_eq_true,
+      inv_mul_cancel₀]
+shortened proof!
+.
+line 440, col 17:
+exact mul_one (1 : F)
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Units.val_inv_eq_inv_val, Fin.isValue, cons_val_one, cons_val_fin_one, mul_one]
+.
+line 442, col 7:
+ext
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Units.val_inv_eq_inv_val]
+    ext : 1
+    simp_all only [GeneralLinearGroup.val_det_apply, det_diagonal, Fin.prod_univ_two, Fin.isValue, cons_val_zero,
+      cons_val_one, cons_val_fin_one, mul_one]
+shortened proof!
+....
+line 451, col 6:
+exact Subtype.ext (Units.ext (congr_arg Subtype.val eq))
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_sub` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Units.ext_iff]
+  [apply] grind => instantiate only [Units.ext_iff]
+..
+line 453, col 6:
+exact ⟨⟨⟨x.1, (x⁻¹ : Matrix.SpecialLinearGroup (Fin 2) F).1, congr_arg Subtype.val (mul_inv_cancel x), congr_arg Subtype.val (inv_mul_cancel x)⟩, Units.ext x.prop⟩, Subtype.ext rfl⟩
+* Try this:
+
+  [apply]     simp_all
+    apply Exists.intro
+    · apply Exists.intro
+      ext i j : 1
+      simp_all only
+      apply congrFun'
+      on_goal 2 => { apply Matrix.SpecialLinearGroup.coeToGL_det
+      }
+      simp_all only [SpecialLinearGroup.coe_GL_coe_matrix]
+      rfl
+..
+line 456, col 4:
+have e : (⊤ : Subgroup Fˣ) ≃ Fˣ := ⟨fun x ↦ x.1, fun x ↦ ⟨x, trivial⟩, fun _ ↦ Subtype.ext rfl, fun _ ↦ rfl⟩
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Nat.card_units, !Subgroup.card_top, Nat.card_eq_fintype_card]
+  [apply] grind =>
+    instantiate only [!Nat.card_units, !Subgroup.card_top]
+    instantiate only [Nat.card_eq_fintype_card]
+shortened proof!
+......
+line 465, col 96:
+rw [sq, mul_one]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, MonoidHom.mem_ker, Nat.card_eq_fintype_card, Subgroup.mem_top, Fintype.card_subtype_true,
+      mul_one, mul_eq_mul_left_iff]
+    grind only [#9a89]
+..
+line 467, col 79:
+rw [← mul_assoc]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 468, col 79:
+rw [mul_comm (Fintype.card F ^ 2 - 1) _]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 470, col 2:
+exact Nat.eq_of_mul_eq_mul_right (by omega) h_iso
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, MonoidHom.mem_ker, Nat.card_eq_fintype_card, Subgroup.mem_top, Fintype.card_subtype_true,
+      mul_eq_mul_right_iff]
+    cases h_iso with
+    | inl h => simp_all only
+    | inr h_1 => simp_all only [Fintype.card_ne_zero]
+....
+line 481, col 94:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, MonoidHom.mem_range, nonempty_subtype, ↓existsAndEq, exists_const,
+      Nat.card_eq_fintype_card, Nat.reduceLeDiff]
+..
+line 483, col 4:
+exact Eq.trans (mul_comm _ 2) h1
+* Try this:
+  [apply] grind only
+....
+line 489, col 6:
+have hC : 0 < Fintype.card F * (Fintype.card F ^ 2 - 1) := mul_pos (lt_of_lt_of_le (by norm_num : 0 < 5) hcard) (Nat.sub_pos_of_lt (by nlinarith only [hcard]))
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Nat.card_eq_fintype_card, Fintype.card_ne_zero]
+shortened proof!
+.......
+line 504, col 4:
+rw [hH, h_idx] at h
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Nat.card_eq_fintype_card, mul_eq_mul_right_iff, OfNat.ofNat_ne_zero, or_false,
+      SetLike.coe_sort_coe, Std.le_refl]
+shortened proof!
+..___...........
+line 535, col 4:
+exact congr_arg slMap (hg (slMap.symm x))
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.symm_toRingEquiv, RingEquiv.symm_mk, AlgEquiv.toEquiv_eq_coe, AlgEquiv.symm_toEquiv_eq_symm,
+      RingEquiv.toRingHom_eq_coe, AlgEquiv.symm_symm, MulEquiv.symm_mk, Equiv.symm_mk, MulEquiv.coe_mk, Equiv.coe_fn_mk,
+      map_mul, slMap, e]
+....
+line 539, col 4:
+exact hh (slMap x)
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.symm_toRingEquiv, RingEquiv.symm_mk, AlgEquiv.toEquiv_eq_coe, AlgEquiv.symm_toEquiv_eq_symm,
+      RingEquiv.toRingHom_eq_coe, AlgEquiv.symm_symm, MulEquiv.coe_mk, Equiv.coe_fn_mk, slMap, e]
+....
+line 568, col 6:
+decide
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 569, col 6:
+decide
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 571, col 34:
+simp only [mul_eq_zero, hc, false_or]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue, mul_eq_zero, false_or]
+.
+line 573, col 6:
+rw [show c * v 0 * (c * v 1) = c * c * (v 0 * v 1) by ring, hc2, one_mul]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 579, col 12:
+exact absurd ⟨rfl, rfl⟩ hab
+* Try this:
+
+  [apply]   simp_all only [and_self, not_true_eq_false]
+________...
+line 589, col 86:
+exact isUnit_one
+* Try this:
+
+  [apply]   simp_all only [ne_eq, isUnit_iff_ne_zero, one_ne_zero, not_false_eq_true]
+.
+line 589, col 108:
+rw [h, mulVec_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mulVec_zero]
+........._...
+line 611, col 4:
+exact (p1Proj_mulVec_rep_proj M.1 _ (sl2_mulVec_ne_zero N (p1Rep x) (p1Rep_ne_zero x))).symm
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.refl_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!p1Proj_mulVec_rep_proj, p1Rep_ne_zero, sl2_mulVec_ne_zero]
+  [apply] grind => instantiate only [!p1Proj_mulVec_rep_proj, p1Rep_ne_zero, sl2_mulVec_ne_zero]
+.
+line 617, col 38:
+rw [det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [det_fin_two_of, mul_one, mul_zero, sub_zero]
+shortened proof!
+.
+line 619, col 38:
+rw [det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [det_fin_two_of, mul_one, sub_zero]
+shortened proof!
+.....
+line 628, col 2:
+have h2 : M.1 0 1 = 0 := (add_left_cancel hL00).symm
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, add_right_inj, add_zero, left_eq_add, true_and, zero_add]
+shortened proof!
+............
+line 659, col 4:
+split at h0
+* Try these:
+  [apply] grind only [one_ne_zero, mul_eq_zero, !mul_div_cancel_left₀, #a6e0, #9f64, #8c7b, #114e]
+  [apply] grind only [one_ne_zero, mul_eq_zero, !mul_div_cancel_left₀]
+  [apply] grind =>
+    instantiate only [one_ne_zero, mul_eq_zero, !mul_div_cancel_left₀]
+    instantiate only [mul_eq_zero, !mul_div_cancel_left₀]
+    instantiate only [mul_eq_zero, !mul_div_cancel_left₀]
+    instantiate only [mul_eq_zero, !mul_div_cancel_left₀]
+    instantiate only [!mul_div_cancel_left₀]
+    cases #a6e0
+    · cases #9f64 <;> cases #8c7b
+    · cases #114e
+shortened proof!
+..
+line 665, col 4:
+split at h1
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 670, col 4:
+split at h1
+* Try these:
+  [apply] grind only [mul_eq_zero, #be96]
+  [apply] grind only [mul_eq_zero]
+  [apply] grind =>
+    instantiate only [mul_eq_zero]
+    cases #be96
+shortened proof!
+.....
+line 677, col 4:
+contradiction
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, ↓reduceIte, ne_eq, zero_mul, mul_eq_zero, or_false, Fin.reduceEq]
+......
+line 681, col 57:
+rw [hsq _ hM11, mul_one]
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, ↓reduceIte, ne_eq, zero_mul, one_ne_zero, not_false_eq_true, mul_one]
+.
+line 682, col 48:
+ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 683, col 26:
+rw [h, one_mul]
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, ↓reduceIte, ne_eq, zero_mul, one_ne_zero, not_false_eq_true, one_mul]
+.
+line 684, col 6:
+contradiction
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, ↓reduceIte, ne_eq, zero_mul, mul_eq_zero, or_false, Fin.reduceEq]
+........
+line 694, col 8:
+exact fun N ↦ by rw [one_mul, mul_one]
+* Try this:
+
+  [apply]     intro g
+    simp_all only [map_one, Matrix.SpecialLinearGroup.coe_one, Fin.isValue, ne_eq, one_ne_zero, not_false_eq_true,
+      one_apply_ne, zero_ne_one, one_apply_eq, mul_one, one_mul]
+.
+line 695, col 8:
+exact fun N ↦ by rw [neg_mul, mul_neg, one_mul, mul_one]
+* Try this:
+
+  [apply]     intro g
+    simp_all only [SpecialLinearGroup.coe_neg, Matrix.SpecialLinearGroup.coe_one, Fin.isValue, Matrix.neg_apply, ne_eq,
+      one_ne_zero, not_false_eq_true, one_apply_ne, neg_zero, zero_ne_one, one_apply_eq, mul_neg, mul_one, neg_mul,
+      one_mul]
+...X.
+line 699, col 8:
+exact map_one sl2F3ToPermHom
+* Try this:
+
+  [apply]   simp_all only [mul_one, one_mul, implies_true, Fin.isValue, Matrix.SpecialLinearGroup.coe_one, ne_eq, one_ne_zero,
+      not_false_eq_true, one_apply_ne, zero_ne_one, one_apply_eq, map_one]
+.._..._..........
+line 716, col 37:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.lt_add_one, F, f]
+...WARNING: FLT/Slop/PGL2/FiniteSubgroups/PSLBasic.lean was killed (exit code 137), likely by the 8G MemoryMax cap

@@ -1,0 +1,76 @@
+....
+line 68, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [List.map_map, List.map_inj_left, Function.comp_apply, RingHom.mapMatrix_apply, map_toMatrix,
+      implies_true]
+...
+line 86, col 24:
+simp
+* Try this:
+
+  [apply]   simp_all only [RingHom.mapMatrix_apply, Matrix.map_mul, mapMatrix_map_toMatrix_prod', map_zero, diagonal_map,
+      List.map_map]
+...
+line 102, col 42:
+simp [h]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [det_diagonal, det_mul, det_toMatrix_prod, one_mul, mul_one]
+..
+line 106, col 4:
+rw [h]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [det_diagonal, det_mul, det_toMatrix_prod, one_mul, mul_one]
+shortened proof!
+.....
+line 114, col 13:
+simpa
+* Try this:
+
+  [apply]     subst h
+    simp_all only [det_diagonal, det_mul, det_toMatrix_prod, one_mul, mul_one, List.map_nil, List.prod_nil]
+.
+line 116, col 6:
+simp only [← Matrix.mul_assoc, List.prod_cons, List.map]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [det_diagonal, det_mul, det_toMatrix_prod, one_mul, mul_one, List.map_cons, List.prod_cons]
+shortened proof!
+.
+line 120, col 4:
+simp only [Matrix.mul_assoc, List.prod_cons, List.map] at IH ⊢
+* Try this:
+
+  [apply]     subst h
+    simp_all only [det_diagonal, det_mul, det_toMatrix_prod, one_mul, mul_one, List.map_cons, List.prod_cons]
+    grind only [Matrix.mul_assoc, #145f, #d211]
+shortened proof!
+.....
+line 134, col 6:
+intro t
+* Try this:
+
+  [apply]     intro t
+    simp_all only [det_diagonal, IsUnit.prod_iff, Finset.mem_univ, forall_const, TransvectionStruct.det, isUnit_one,
+      and_self, Q]
+shortened proof!
+.
+line 136, col 6:
+intro A B QA QB
+* Try this:
+
+  [apply]     intro A B a a_1
+    simp_all only [det_diagonal, IsUnit.prod_iff, Finset.mem_univ, forall_const, det_mul, IsUnit.mul_iff, and_self, Q]
+shortened proof!
+.
+line 138, col 2:
+exact this.2
+* Try this:
+
+  [apply]   simp_all only [det_diagonal, IsUnit.prod_iff, Finset.mem_univ, forall_const, true_and, Q]

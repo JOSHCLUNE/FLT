@@ -1,0 +1,39 @@
+...
+line 40, col 6:
+ext
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [Set.mem_preimage, Set.mem_singleton_iff, Set.mem_iUnion, Set.mem_prod, Set.mem_ofPred_eq,
+      exists_eq_right']
+shortened proof!
+.
+line 41, col 6:
+exact isOpen_iUnion fun _ ↦
+        .prod (ContinuousSMulDiscrete.isOpen_smul_eq _ _ _) (isOpen_discrete _)
+* Try this:
+
+  [apply]     apply isOpen_iUnion
+    intro i
+    apply IsOpen.prod
+    · apply ContinuousSMulDiscrete.isOpen_smul_eq
+    · simp_all only [isOpen_discrete]
+..
+line 47, col 2:
+rwa [← continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   grind only [continuousSMulDiscrete_iff]
+.
+line 51, col 2:
+rwa [continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   grind only [continuousSMulDiscrete_iff]
+...
+line 58, col 4:
+exact h ▸ isOpen_empty
+* Try this:
+
+  [apply]   simp_all only [isOpen_empty]
+...

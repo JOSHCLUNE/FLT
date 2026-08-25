@@ -1,0 +1,368 @@
+....
+line 75, col 4:
+field_simp
+* Try this:
+  [apply] grind only
+shortened proof!
+....______.__.__.__.__....
+line 200, col 12:
+rw [nsmulRec, zero, zero_smul]
+* Try this:
+
+  [apply]     simp_all only [zero_nsmul]
+    exact zero
+...
+line 217, col 4:
+rw [zsmulRec, nsmul, Int.ofNat_eq_natCast, natCast_zsmul]
+* Try this:
+
+  [apply]     simp_all only [Int.ofNat_eq_natCast, natCast_zsmul]
+    apply nsmul
+..__.
+line 281, col 2:
+ext
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+..
+line 289, col 12:
+rw [npowRec, one, pow_zero]
+* Try this:
+
+  [apply]     simp_all only [pow_zero]
+    exact one
+...
+line 302, col 12:
+rw [Nat.unaryCast, zero, Nat.cast_zero]
+* Try this:
+
+  [apply]     simp_all only [Nat.cast_zero]
+    exact zero
+.
+line 303, col 17:
+rw [Nat.unaryCast, add, one, Nat.cast_add, Nat.cast_one, ih]
+* Try this:
+
+  [apply]     simp_all only [Nat.cast_add, Nat.cast_one]
+    duper [*, nsmul_one, Nat.unaryCast, Nat.unaryCast] {preprocessing := full}
+.X.X.X..
+line 344, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_zero, zero_re, CharP.cast_eq_zero]
+.
+line 345, col 17:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_add, Nat.cast_one, add_re, one_re]
+..
+line 348, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_zero, zero_im_o]
+.
+line 349, col 17:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_add, Nat.cast_one, add_im_o, one_im_o, add_zero]
+..
+line 352, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_zero, zero_im_i]
+.
+line 353, col 17:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_add, Nat.cast_one, add_im_i, one_im_i, add_zero]
+..
+line 356, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_zero, zero_im_oi]
+.
+line 357, col 17:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_add, Nat.cast_one, add_im_oi, one_im_oi, add_zero]
+..X.X..
+line 365, col 15:
+simp
+* Try this:
+
+  [apply]   simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast, natCast_im_o]
+.X..
+line 369, col 15:
+simp
+* Try this:
+
+  [apply]   simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast, natCast_im_i]
+.X..
+line 373, col 15:
+simp
+* Try this:
+
+  [apply]   simp_all only [Int.ofNat_eq_natCast, Int.cast_natCast, natCast_im_oi]
+.
+line 374, col 17:
+simp [← Int.neg_ofNat_succ]
+* Try this:
+
+  [apply]   simp_all only [Int.cast_negSucc, Nat.cast_add, Nat.cast_one, neg_add_rev, add_im_oi, neg_im_oi, one_im_oi, neg_zero,
+      natCast_im_oi, add_zero]
+.
+line 380, col 26:
+ext
+* Try this:
+
+  [apply]     simp_all only [sub_neg_eq_add, neg_neg]
+    grind only
+shortened proof!
+_.__.__.____....__..
+line 422, col 2:
+field_simp
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 426, col 35:
+simp [norm]
+* Try this:
+
+  [apply]   rfl
+.
+line 428, col 34:
+simp [norm]
+* Try this:
+
+  [apply]   rfl
+.
+line 431, col 2:
+rw [← Int.cast_inj (α := 𝓞)]
+* Try this:
+
+  [apply]   apply norm_mul
+shortened proof!
+..
+line 438, col 2:
+positivity
+* Try this:
+
+  [apply]   grind only [!Even.pow_nonneg, = Nat.even_iff]
+..
+line 443, col 4:
+rintro rfl
+* Try this:
+
+  [apply]     intro a
+    subst a
+    rfl
+shortened proof!
+..
+line 445, col 2:
+rw [← Int.cast_eq_zero (α := ℝ), coe_norm] at h
+* Try this:
+
+  [apply]   duper [*, norm, norm_eq_zero] {preprocessing := full}
+shortened proof!
+....
+line 473, col 2:
+simp only [Set.mem_ofPred]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_ofPred_eq]
+    apply Exists.intro
+    · apply Exists.intro
+      · apply Exists.intro
+        · apply Exists.intro
+          · apply Or.inl
+            rfl
+shortened proof!
+..
+line 481, col 4:
+calc
+      _ ≤ (4 : ℝ)⁻¹ + 4⁻¹ + 4⁻¹ + 4⁻¹ := by gcongr
+      _ = 1 := by norm_num
+* this parameter is redundant, environment already contains `Set.mem_ofPred_eq` annotated with `@[grind]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+..
+line 485, col 2:
+have invs : (1 : ℝ) - 4⁻¹ = 4⁻¹ + 4⁻¹ + 4⁻¹ := by norm_num
+* this parameter is redundant, environment already contains `Set.mem_ofPred_eq` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [le_of_not_gt, lt_or_lt_iff_ne, #787d, #7f24, #6f84]
+  [apply] grind only [le_of_not_gt, lt_or_lt_iff_ne]
+  [apply] grind =>
+    instantiate only [le_of_not_gt]
+    instantiate only [lt_or_lt_iff_ne]
+    cases #787d
+    · linarith
+    · cases #7f24
+      · linarith
+      · cases #6f84 <;> linarith
+shortened proof!
+..
+line 497, col 44:
+norm_num
+* Try this:
+  [apply] grind only
+....
+line 501, col 4:
+rw [abs_of_nonneg]
+* Try this:
+
+  [apply]   simp_all only [inv_pow, inv_inj, one_div, abs_inv, Nat.abs_ofNat]
+shortened proof!
+.......................
+line 519, col 26:
+positivity
+* Try this:
+
+  [apply]     rename_i z_1
+    simp_all only [inv_pow, inv_inj, inv_nonneg, Nat.ofNat_nonneg, x, y, z_1, w]
+_.
+line 520, col 19:
+use z
+* Try this:
+
+  [apply]     rename_i z_1 h_1
+    subst h
+    simp_all only [inv_pow, inv_inj, add_sub_cancel_left, abs_inv, Nat.abs_ofNat, add_left_inj, Int.cast_inj, exists_eq',
+      x, y, z_1, w]
+..
+line 521, col 30:
+rw [h, Int.cast_sub, Int.cast_one, add_comm_sub]
+* this parameter is redundant, environment already contains `abs_div` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 526, col 6:
+use x', y', z', w', Or.inr ?_
+* Try this:
+
+  [apply]     simp_all only [inv_pow, inv_inj, round_intCast_add, round_two_inv, Int.cast_add, Int.cast_one,
+      add_sub_add_left_eq_sub, and_self, x, y, z, w]
+    apply Exists.intro
+    · apply Exists.intro
+      · apply Exists.intro
+        · apply Exists.intro
+          · apply Or.inr
+            ext : 1
+            · simp_all only [add_left_inj, Int.cast_inj]
+              rfl
+            · simp_all only [add_left_inj, Int.cast_inj]
+              rfl
+            · simp_all only [add_left_inj, Int.cast_inj]
+              rfl
+            · simp_all only [add_left_inj, Int.cast_inj]
+              rfl
+shortened proof!
+.....__.
+line 534, col 2:
+contrapose! H
+* Try these:
+  [apply] grind only [= abs.eq_1, = max_def, #39e9, #70cb, #ecd1, #635e, #b7a9, #4eb8, #232d]
+  [apply] grind only [= abs.eq_1, = max_def]
+  [apply] grind =>
+    instantiate only [= abs.eq_1]
+    instantiate only [= max_def]
+    cases #39e9
+    · cases #70cb <;> ring <;> linarith
+    · cases #ecd1
+      · cases #635e <;> ring <;> linarith
+      · cases #b7a9
+        · cases #4eb8 <;> ring <;> linarith
+        · cases #232d <;> ring <;> linarith
+shortened proof!
+..........
+line 552, col 4:
+exact _root_.norm_nonneg (a - q * b).toQuaternion
+* Try this:
+
+  [apply]   simp_all only [ne_eq, toQuaternion_eq_zero_iff, not_false_eq_true, _root_.norm_nonneg, b', q', a']
+....
+line 559, col 4:
+dsimp only [b', q']
+* Try this:
+
+  [apply]   simp_all only [ne_eq, toQuaternion_eq_zero_iff, not_false_eq_true, isUnit_iff_ne_zero, IsUnit.div_mul_cancel, b', q',
+      a']
+shortened proof!
+..
+line 563, col 4:
+rw [← norm_pos_iff] at hb'
+* Try this:
+
+  [apply]   simp_all only [ne_eq, toQuaternion_eq_zero_iff, not_false_eq_true, norm_pos_iff, mul_lt_iff_lt_one_left, b', q', a']
+shortened proof!
+...
+line 569, col 4:
+rw [Eq.comm]
+* Try this:
+
+  [apply]     subst h_bot
+    simp_all only [Submodule.span_zero_singleton]
+shortened proof!
+...
+line 573, col 4:
+simp only [ne_eq, nonempty_subtype, S]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, nonempty_subtype, S]
+    apply Submodule.exists_mem_ne_zero_of_ne_bot
+    simp_all only [ne_eq, not_false_eq_true]
+shortened proof!
+....
+line 578, col 4:
+rintro _ ⟨_, rfl⟩
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [ne_eq, nonempty_subtype, Subtype.exists, exists_prop, S]
+    obtain ⟨w, h⟩ := this
+    obtain ⟨w_1, h_1⟩ := a
+    obtain ⟨left, right⟩ := h
+    obtain ⟨left_1, right_1⟩ := h_1
+    obtain ⟨left_1, right_2⟩ := left_1
+    subst right_1
+    apply Hurwitz.norm_nonneg
+shortened proof!
+...........
+line 590, col 32:
+apply eq_sub_of_add_eq
+* Try this:
+
+  [apply]   simp_all only [ne_eq, nonempty_subtype, smul_eq_mul, add_sub_cancel_left, S]
+shortened proof!
+......
+line 596, col 4:
+rw [hr, add_zero] at hqr
+* Try this:
+
+  [apply]     subst hr
+    simp_all only [ne_eq, nonempty_subtype, add_zero, zero_mem, smul_eq_mul, exists_apply_eq_apply, S]
+shortened proof!
+.
+line 598, col 4:
+rw [Submodule.span_singleton_le_iff_mem]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, nonempty_subtype, Submodule.span_singleton_le_iff_mem, S]
+    obtain ⟨val, property⟩ := a
+    obtain ⟨w, h⟩ := this
+    obtain ⟨left, right⟩ := property
+    obtain ⟨left_1, right_1⟩ := h
+    simp_all only
+shortened proof!

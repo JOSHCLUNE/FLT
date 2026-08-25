@@ -1,0 +1,219 @@
+...
+line 57, col 59:
+omega
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+.........
+line 71, col 57:
+norm_num
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 74, col 4:
+simp only [Multiset.mem_map] at h_eval
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, Polynomial.map_sub, Polynomial.map_pow, Polynomial.map_X,
+      Polynomial.Monic.leadingCoeff, map_one, one_mul, Multiset.mem_map]
+    obtain ⟨w, h⟩ := h_eval
+    obtain ⟨left, right⟩ := h
+    grind only [#de90]
+shortened proof!
+....
+line 81, col 40:
+norm_num
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 84, col 4:
+simp only [Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_C] at hbc'
+* Try this:
+
+  [apply]     subst ha'
+    simp_all only [gt_iff_lt, ge_iff_le, Polynomial.degree_pow, Polynomial.degree_X, nsmul_eq_mul, Nat.cast_ofNat,
+      mul_one, Polynomial.eval_pow, Polynomial.eval_X, Polynomial.eval_sub, Polynomial.eval_C]
+    grind only [#13ea]
+shortened proof!
+......
+line 92, col 4:
+rw [← map_pow, ← map_pow, ← map_add, hbc', ha']
+* Try this:
+
+  [apply]     subst ha' hbc'
+    simp_all only [gt_iff_lt, ge_iff_le, map_add, map_pow]
+...
+line 99, col 4:
+exact Or.inl (zero_pow two_ne_zero)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, pow_eq_zero_iff', ne_eq, Nat.pow_eq_zero, not_and, Decidable.not_not, true_and,
+      OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, not_true_eq_false, false_and, or_false]
+.....
+line 104, col 6:
+exact iff_of_false (fun h ↦ h_odd (Nat.even_pow.mp h).1) (by norm_num)
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, Nat.not_even_iff_odd, Nat.not_even_one, iff_false]
+    apply Odd.pow
+    simp_all only
+....
+line 107, col 57:
+rw [← pow_succ']
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 126, col 4:
+exact hbc ▸ hV_add _ _ (hV_contains_sq b hb) (hV_contains_sq c hc)
+* Try this:
+
+  [apply]     subst hbc
+    simp_all only [gt_iff_lt, ge_iff_le, ne_eq]
+....
+line 130, col 33:
+rw [hV_card]
+* Try this:
+  [apply] grind only
+shortened proof!
+....
+line 143, col 122:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Nat.not_even_one, not_false_eq_true]
+..
+line 144, col 132:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Order.lt_two_iff, zero_le]
+........
+line 156, col 78:
+omega
+* Try this:
+  [apply] grind only
+.....
+line 161, col 122:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Nat.not_even_one, not_false_eq_true]
+..
+line 163, col 64:
+omega
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, not_lt, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 163, col 121:
+exact dvd_mul_right (p ^ m) _
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, dvd_mul_right]
+.......
+line 169, col 4:
+simp only [Subgroup.mem_top, Nat.card_subtype_true]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Subgroup.mem_top, nonempty_subtype, exists_const, Nat.card_subtype_true]
+..
+line 170, col 52:
+omega
+* Try this:
+  [apply] grind only
+..
+line 171, col 41:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Order.lt_two_iff, zero_le, Nat.div_dvd_iff_dvd_mul]
+..
+line 172, col 45:
+omega
+* Try these:
+  [apply] grind only [!Nat.one_le_pow]
+  [apply] grind =>
+    instantiate only [!Nat.one_le_pow]
+    lia
+......
+line 191, col 79:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Nat.one_le_ofNat]
+..
+line 193, col 4:
+exact iff_of_false (fun h ↦ h_odd (Nat.even_pow.mp h).1) (by norm_num)
+* Try these:
+  [apply] grind only [= Nat.even_pow, = Nat.even_iff]
+  [apply] grind => instantiate only [= Nat.even_pow, = Nat.even_iff]
+.........
+line 202, col 17:
+rw [mul_comm, ← hP, ← hk, Nat.sub_add_cancel hn_p_gt1.le]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, P]
+    grind only
+...
+line 205, col 63:
+change Nat.gcd (k * p ^ m + 1) (p ^ m) = 1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos, Nat.coprime_mul_right_add_left,
+      Nat.coprime_one_left_eq_true]
+shortened proof!
+...
+line 208, col 34:
+rw [mul_comm 2 m]
+* Try this:
+  [apply] grind only
+..
+line 210, col 44:
+rw [Nat.sq_sub_sq, mul_comm]
+* Try these:
+  [apply] grind only [!Nat.one_le_pow]
+  [apply] grind =>
+    instantiate only [!Nat.one_le_pow]
+    ring
+......
+line 216, col 62:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, lt_add_iff_pos_left, CanonicallyOrderedAdd.mul_pos, Order.lt_two_iff, Std.le_refl]
+..
+line 218, col 4:
+rw [hk, Nat.zero_mul, Nat.zero_add] at hn_p_gt1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, zero_mul, zero_add, lt_self_iff_false]
+shortened proof!
+.
+line 219, col 4:
+rw [hk, Nat.one_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, zero_add, one_mul, lt_add_iff_pos_left, dvd_mul_left, Nat.add_left_cancel_iff]
+....
+line 223, col 6:
+nlinarith only [ha, h_sub, hp_gt_one]
+* Try this:
+  [apply] grind only
+.....................
+line 249, col 86:
+positivity
+* Try this:
+  [apply] grind only
+......................WARNING: FLT/Slop/PGL2/FiniteSubgroups/PSLRecognition.lean was killed (exit code 137), likely by the 8G MemoryMax cap

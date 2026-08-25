@@ -1,0 +1,15 @@
+Ran `hammer {aesopGrindPriority := 10, aesopDuperPriority := 5, aesopSmtPriority := 4}` on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 8 with errors."
+
+*NOTE* This test was run after commit c745fe6 in which duperPremises was split into
+duperPremisesShort and duperPremisesLong.
+
+tallySummaries.sh output:
+Total number of results: 16986
+Total number of successes: 3302
+Time taken: 87437s
+
+Total shortenedStepsCount: 1432
+
+~19.4% success rate
+~24.3 hours

@@ -1,0 +1,19 @@
+...
+line 38, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.toMonoidHom_eq_coe]
+    ext x : 1
+    simp_all only [mem_op, mem_comap, MonoidHom.coe_coe, MulEquiv.inv'_symm_apply, comp_apply, inv_mem_iff]
+shortened proof!
+..
+line 42, col 28:
+rw [Subgroup.index_op]
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only [Subgroup.finiteIndex_iff, !Subgroup.index_op]
+shortened proof!

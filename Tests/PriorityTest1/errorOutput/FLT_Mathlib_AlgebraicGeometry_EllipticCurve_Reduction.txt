@@ -1,0 +1,253 @@
+....
+line 71, col 2:
+rw [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self] at h
+* Try this:
+
+  [apply]   simp_all only [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self, map_mul, map_add, map_sub, Polynomial.aeval_sub,
+      AdjoinRoot.mk_C, map_pow, AdjoinRoot.mk_X, AdjoinRoot.algebraMap_eq]
+shortened proof!
+.......
+line 100, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+* Try this:
+
+  [apply]   simp_all only [inv_pow, Units.val_mul, Units.inv_pow_eq_pow_inv, Units.val_pow_eq_pow_val]
+....
+line 103, col 4:
+simpa only [Units.val_mul, Units.val_pow_eq_pow_val] using this
+* Try this:
+
+  [apply]   simp_all only [inv_pow, Units.val_mul, Units.inv_pow_eq_pow_inv]
+.......
+line 115, col 2:
+linear_combination
+    (-(algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+        Polynomial.X ^ 2) * e2p +
+    (-(2 * (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄) *
+            algebraMap A (Polynomial A) C.s +
+          algebraMap A (Polynomial A) W.a₁ *
+            (algebraMap A (Polynomial A) W.b₂ ^ 2 - 24 * algebraMap A (Polynomial A) W.b₄)) *
+        Polynomial.X) * e1p
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 133, col 4:
+rw [map_pow]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_pow, map_units_inv, inv_pow, inv_eq_zero, OfNat.ofNat_ne_zero, not_false_eq_true,
+      pow_eq_zero_iff]
+shortened proof!
+......
+line 164, col 32:
+linear_combination (2 : k) * h2
+* Try this:
+  [apply] grind only
+..
+line 166, col 4:
+intro h0
+* Try these:
+  [apply] grind only [= map_neg, = map_mul]
+  [apply] grind =>
+    instantiate only [= map_neg]
+    instantiate only [= map_mul]
+    ring
+shortened proof!
+..__.........
+line 210, col 2:
+exact hval
+* Try this:
+
+  [apply]   smt +mono [*]
+....
+line 220, col 2:
+exact hval
+* Try this:
+
+  [apply]     simp_all only [mem_maximalIdeal, mem_nonunits_iff]
+    exact hval
+......
+line 233, col 4:
+linear_combination h1
+* Try this:
+
+  [apply]   simp_all only [residue_eq_zero_iff, mem_maximalIdeal, mem_nonunits_iff, sub_sub_cancel]
+..
+line 234, col 79:
+norm_num
+* Try this:
+  [apply] grind only
+.
+line 235, col 2:
+exact (pow_eq_zero_iff (by norm_num)).mp key.symm
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...........
+line 265, col 34:
+simp [h0] at hdeg
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, Polynomial.Splits.zero, not_true_eq_false, P]
+..
+line 266, col 55:
+rw [hdeg]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_eq, ne_eq, Order.lt_two_iff, zero_le, P]
+shortened proof!
+.....
+line 270, col 39:
+rw [hab, h0, zero_mul]
+* Try this:
+
+  [apply]     subst h0
+    simp_all only [ResidueField.algebraMap_eq, ne_eq, zero_mul, P]
+..
+line 271, col 39:
+rw [hab, h0, mul_zero]
+* Try this:
+
+  [apply]     subst h0
+    simp_all only [ResidueField.algebraMap_eq, ne_eq, mul_zero, P]
+......
+line 277, col 62:
+lia
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 278, col 47:
+lia
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.......
+line 308, col 14:
+simpa using ‹IsIntegral R W›
+* Try this:
+
+  [apply]   simp_all only [one_smul]
+........
+line 316, col 38:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [one_smul, Units.val_inv_eq_inv_val, map_inv₀, inv_pow, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+....
+line 335, col 37:
+rw [hD]
+* Try this:
+
+  [apply]     subst hD
+    apply WeierstrassCurve.instIsIntegralOfIsMinimal
+shortened proof!
+.
+line 336, col 4:
+rwa [hD, one_smul] at hsub
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [one_smul]
+..
+line 337, col 37:
+rw [← hD, inv_smul_smul]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [inv_smul_smul]
+........_.
+line 354, col 6:
+rw [map_mul, map_pow, Units.val_inv_eq_inv_val, map_inv₀]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, map_eq_zero, Units.val_inv_eq_inv_val, inv_pow, map_mul, map_inv₀, map_pow]
+....
+line 359, col 2:
+exact (pow_eq_one_iff_of_nonneg zero_le (by norm_num)).mp h12
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, map_eq_zero, pow_eq_one_iff, OfNat.ofNat_ne_zero, or_false]
+....
+line 374, col 4:
+simp only [Units.val_inv_eq_inv_val]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, Units.ne_zero, not_false_eq_true, Units.val_inv_eq_inv_val, inv_pow, OfNat.ofNat_ne_zero,
+      pow_eq_zero_iff, mul_inv_cancel_left₀]
+shortened proof!
+...
+line 379, col 4:
+simp only [Units.val_inv_eq_inv_val]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, Units.ne_zero, not_false_eq_true, Units.val_inv_eq_inv_val, inv_pow, OfNat.ofNat_ne_zero,
+      pow_eq_zero_iff, mul_inv_cancel_left₀]
+shortened proof!
+......
+line 391, col 8:
+linear_combination hb₈ - D.r * hb₆
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 395, col 4:
+simp only [Units.val_inv_eq_inv_val]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, Units.ne_zero, not_false_eq_true, Units.val_inv_eq_inv_val, inv_pow, OfNat.ofNat_ne_zero,
+      pow_eq_zero_iff, mul_inv_cancel_left₀]
+shortened proof!
+......
+line 405, col 8:
+linear_combination ha₂
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 411, col 4:
+simp only [Units.val_inv_eq_inv_val]
+* Try this:
+
+  [apply]     subst hD
+    simp_all only [ne_eq, Units.ne_zero, not_false_eq_true, Units.val_inv_eq_inv_val, inv_pow, OfNat.ofNat_ne_zero,
+      pow_eq_zero_iff, mul_inv_cancel_left₀]
+shortened proof!
+......
+line 423, col 8:
+linear_combination ha₆
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..........
+line 452, col 4:
+simp only [Units.val_inv_eq_inv_val, map_pow, map_inv₀, hvu, inv_one, one_pow, one_mul]
+* Try this:
+
+  [apply]     subst hD hDC₀
+    simp_all only [Units.val_inv_eq_inv_val, inv_pow, map_inv₀, map_pow, one_pow, inv_one, one_mul]
+..
+line 454, col 25:
+rw [hΔeq]
+* Try this:
+
+  [apply]     subst hD hDC₀
+    simp_all only
+    apply WeierstrassCurve.HasMultiplicativeReduction.badReduction
+shortened proof!
+.
+line 456, col 8:
+rw [hc₄eq]
+* Try this:
+
+  [apply]     subst hD hDC₀
+    simp_all only
+    apply WeierstrassCurve.HasMultiplicativeReduction.multiplicativeReduction
+shortened proof!
+.......

@@ -1,0 +1,7 @@
+...
+line 38, col 4:
+rwa [ne_eq, Ideal.span_singleton_eq_bot]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Submodule.span_eq_bot, Set.mem_singleton_iff, imp_false, forall_eq, not_false_eq_true]
+......

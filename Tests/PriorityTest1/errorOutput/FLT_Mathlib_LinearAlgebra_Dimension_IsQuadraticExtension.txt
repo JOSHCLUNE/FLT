@@ -1,0 +1,29 @@
+.
+line 31, col 14:
+rwa [Algebra.algebraMap_eq_smul_one]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Algebra.algebraMap_eq_smul_one]
+  [apply] grind => instantiate only [Algebra.algebraMap_eq_smul_one]
+.....
+line 44, col 2:
+lia
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, Subalgebra.bot_eq_top_of_finrank_eq_one, OfNat.ofNat_ne_one]
+......
+line 55, col 4:
+trivial
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Nat.succ_eq_add_one, Nat.reduceAdd, Submodule.mem_top]
+........
+line 73, col 2:
+rw [map_mul, ← sq]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [pow_two, map_mul]
+  [apply] grind => instantiate only [pow_two, map_mul]
+shortened proof!

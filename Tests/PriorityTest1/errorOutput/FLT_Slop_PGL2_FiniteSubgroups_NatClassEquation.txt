@@ -1,0 +1,140 @@
+........
+line 64, col 4:
+have h2 := SetLike.ext_iff.mp h
+      (a.out * ((a.out⁻¹ * b.out) * x * (a.out⁻¹ * b.out)⁻¹) * a.out⁻¹)
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [inv_mul_cancel, mul_inv_rev, Subgroup.mem_map_equiv, = map_mul, MulAut.conj_symm_apply,
+    !inv_mul_cancel_left]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel, mul_inv_rev, Subgroup.mem_map_equiv]
+    instantiate only [= map_mul, MulAut.conj_symm_apply, !inv_mul_cancel_left]
+    ac
+shortened proof!
+..........
+line 99, col 71:
+group
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, mul_inv_rev, inv_inv]
+    obtain ⟨val, property⟩ := a
+    subst hg
+    simp_all only [MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq]
+    obtain ⟨w, h⟩ := property
+    grind only
+..
+line 101, col 58:
+group
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!mul_inv_cancel_left, mul_assoc, !mul_inv_cancel_right]
+  [apply] grind => instantiate only [!mul_inv_cancel_left, mul_assoc, !mul_inv_cancel_right]
+...
+line 107, col 85:
+group
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!mul_inv_cancel_left, mul_assoc, !mul_inv_cancel_right]
+  [apply] grind => instantiate only [!mul_inv_cancel_left, mul_assoc, !mul_inv_cancel_right]
+..
+line 109, col 31:
+group
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [mul_inv_rev, mul_inv_cancel, !inv_inv]
+  [apply] grind =>
+    instantiate only [mul_inv_rev, mul_inv_cancel, !inv_inv]
+    ac
+.
+line 110, col 4:
+exact ⟨g, Subtype.ext (by rw [hg, h_conj])⟩
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#db8f]
+  [apply] grind only
+  [apply] grind => instantiate only [#db8f]
+...............
+line 141, col 46:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..
+line 143, col 4:
+exact hw2 ▸ hw
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+........
+line 151, col 44:
+rw [hw_eq]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 179, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply,
+      Subgroup.map_toSubmonoid, Submonoid.map_coe_toMonoidHom, Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup,
+      Submonoid.mem_map, Subgroup.mem_toSubmonoid, K]
+..........
+line 205, col 6:
+constructor
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ge_iff_le, MulEquiv.toMonoidHom_eq_coe, ne_eq, forall_exists_index,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, ↓existsAndEq, true_and, exists_and_left]
+shortened proof!
+............
+line 228, col 6:
+simp only [S, Finset.mem_filter, Finset.mem_univ,
+        true_and, Set.mem_ofPred_eq, implies_true]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, = Finset.mem_filter, ← Finset.mem_univ]
+  [apply] grind =>
+    instantiate only [usr Set.mem_ofPred_eq, = Finset.mem_filter]
+    instantiate only [← Finset.mem_univ]
+.....
+line 254, col 6:
+constructor
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.........
+line 272, col 6:
+ext x
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Finset.mem_filter, = Finset.mem_erase, ← Finset.mem_univ, #b374]
+  [apply] grind only [= Finset.mem_filter, = Finset.mem_erase, ← Finset.mem_univ]
+  [apply] grind =>
+    cases #b374 <;> instantiate only [= Finset.mem_filter, = Finset.mem_erase] <;> instantiate only [← Finset.mem_univ]
+shortened proof!
+.
+line 274, col 4:
+rw [this, Finset.card_erase_of_mem (Finset.mem_univ 1),
+      Nat.card_eq_fintype_card, Finset.card_univ]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Finset.card_erase_of_mem, Nat.card_eq_fintype_card, = Finset.card_univ, ← Finset.mem_univ]
+  [apply] grind =>
+    instantiate only [= Finset.card_erase_of_mem, Nat.card_eq_fintype_card]
+    instantiate only [= Finset.card_univ, ← Finset.mem_univ]
+...
+line 280, col 6:
+exact hH_card_ge i
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+.
+line 282, col 6:
+exact fun K L hK hL hKL ↦ hdisjoint K L
+        ⟨i, hK.choose, hK.choose_spec⟩
+        ⟨i, hL.choose, hL.choose_spec⟩ hKL
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}

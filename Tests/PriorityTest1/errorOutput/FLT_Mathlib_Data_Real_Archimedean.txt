@@ -1,0 +1,7 @@
+..
+line 22, col 2:
+grind
+* Try this:
+
+  [apply]     simp_all only [sub_nonneg, true_and]
+    grind only

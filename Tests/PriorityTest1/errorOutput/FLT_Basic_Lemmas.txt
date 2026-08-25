@@ -1,0 +1,50 @@
+..
+line 28, col 4:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or, or_true]
+..
+line 30, col 42:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or]
+.
+line 32, col 4:
+refine Or.inr (Or.inr ⟨p, hp, ?_, hdvd⟩)
+* Try these:
+  [apply] grind only [= odd_iff, Prime.ne_one, #1475]
+  [apply] grind only [= odd_iff, Prime.ne_one]
+  [apply] grind =>
+    instantiate only [= odd_iff, Prime.ne_one, #1475]
+    lia
+shortened proof!
+..
+line 45, col 2:
+obtain h3 | h4 | ⟨p, hpp, hp5, hpn⟩ := Nat.three_dvd_or_four_dvd_or_prime_dvd hn
+* Try this:
+
+  [apply]   duper [*, of_odd_primes, fermatLastTheoremThree, FermatLastTheorem, fermatLastTheoremFor_iff_rat,
+      fermatLastTheoremFor_iff_nat, fermatLastTheoremFor_iff_int, Nat.three_dvd_or_four_dvd_or_prime_dvd._proof_3]
+      {preprocessing := full}
+shortened proof!
+...
+line 65, col 31:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.
+line 65, col 51:
+simp
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, ne_zero, not_false_eq_true]
+.

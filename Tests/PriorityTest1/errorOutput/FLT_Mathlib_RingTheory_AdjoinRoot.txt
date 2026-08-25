@@ -1,0 +1,18 @@
+.X.X.
+line 33, col 4:
+rw [RingHom.comp_apply, RingHom.comp_apply, ← root, map_root,
+      Polynomial.coe_mapRingHom, Polynomial.map_X, ← root]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [RingHom.coe_comp, Function.comp_apply, mk_X, map_root, coe_mapRingHom, map_X]
+....X.X.X.X.X.X.X.
+line 64, col 53:
+lia
+* Try this:
+  [apply] grind only
+.X.X.X.X.X..
+line 76, col 2:
+lia
+* Try this:
+  [apply] grind only

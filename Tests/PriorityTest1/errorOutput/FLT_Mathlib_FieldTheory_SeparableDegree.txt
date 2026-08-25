@@ -1,0 +1,13 @@
+..
+line 24, col 4:
+rw [← hgen]
+* Try this:
+
+  [apply]   grind only [IntermediateField.isSeparable_adjoin_simple_iff_isSeparable]
+shortened proof!
+.
+line 26, col 2:
+exact AlgEquiv.Algebra.isSeparable IntermediateField.topEquiv
+* Try this:
+
+  [apply]   grind only [IntermediateField.isSeparable_top]
