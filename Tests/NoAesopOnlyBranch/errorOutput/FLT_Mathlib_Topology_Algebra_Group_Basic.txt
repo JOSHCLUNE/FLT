@@ -1,0 +1,12 @@
+.....
+line 30, col 48:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_one, SetLike.mem_coe, one_mem]
+.
+line 31, col 55:
+simpa using hU
+* Try this:
+
+  [apply]   simp_all only [map_one]

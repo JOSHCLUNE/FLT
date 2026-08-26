@@ -1,0 +1,209 @@
+.....
+line 66, col 4:
+exact orderOf_dvd_natCard (⟨g, hg⟩ : G)
+* Try these:
+  [apply] grind only [orderOf_dvd_natCard]
+  [apply] grind => instantiate only [orderOf_dvd_natCard]
+.................
+line 94, col 2:
+rw [hS]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ne_eq, Set.mem_singleton_iff, not_false_eq_true,
+      Set.finite_singleton, Set.ncard_insert_of_notMem, Set.ncard_singleton, Nat.reduceAdd, Set.mem_insert_iff]
+    cases hx_in with
+    | inl h =>
+      cases hy_in with
+      | inl h_1 =>
+        subst h h_1
+        simp_all only [not_true_eq_false]
+      | inr h_2 =>
+        subst h h_2
+        simp_all only [not_false_eq_true]
+    | inr h_1 =>
+      cases hy_in with
+      | inl h =>
+        subst h_1 h
+        grind only [= Set.mem_insert_iff, = Set.mem_singleton_iff, #95ec, #3668]
+      | inr h_2 =>
+        subst h_1 h_2
+        simp_all only [not_true_eq_false]
+shortened proof!
+.....................
+line 141, col 41:
+rw [ha0, zero_smul] at ha
+* Try this:
+
+  [apply]     subst ha0
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      zero_smul, Matrix.cons_val_zero]
+shortened proof!
+......
+line 147, col 65:
+rw [h_span]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.range_cons, Matrix.range_empty, Set.union_empty,
+      Set.union_singleton, Submodule.mem_top]
+shortened proof!
+...
+line 149, col 32:
+rw [← hu_eq, Fin.sum_univ_two]
+* Try this:
+
+  [apply]     subst hu_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.range_cons, Matrix.range_empty, Set.union_empty,
+      Set.union_singleton, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Submodule.mem_top]
+shortened proof!
+....__.............
+line 177, col 8:
+rw [linearIndependent_fin2]
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Projectivization.linearIndependent_pair_iff_ne]
+  [apply] grind => instantiate only [!Projectivization.linearIndependent_pair_iff_ne]
+shortened proof!
+..
+line 186, col 6:
+rw [h_span]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.range_cons, Matrix.range_empty, Set.union_empty,
+      Set.union_singleton, Submodule.mem_top]
+shortened proof!
+...
+line 190, col 6:
+rw [← hu_eq, Fin.sum_univ_two]
+* Try this:
+
+  [apply]     subst hu_eq
+    simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Matrix.range_cons, Matrix.range_empty, Set.union_empty,
+      Set.union_singleton, Fin.sum_univ_two, Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Submodule.mem_top]
+shortened proof!
+.......
+line 197, col 22:
+simp only [Units.val_mul, h_g_eq, Matrix.mul_smul, Matrix.smul_mul,
+      Matrix.mul_one, Matrix.one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Units.val_mul, Algebra.mul_smul_comm, mul_one, Algebra.smul_mul_assoc, one_mul]
+.....
+line 213, col 65:
+rw [hM]
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+..
+line 214, col 65:
+rwa [← QuotientGroup.eq_one_iff]
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff]
+...
+line 218, col 28:
+rw [h_center]
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Units.val_mul, Matrix.GeneralLinearGroup.val_mkOfDetNeZero, M]
+...
+line 223, col 41:
+change (1:K p)*1 - 1*0 = 1
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one,
+      Matrix.cons_val_one, mul_one, mul_zero, sub_zero]
+shortened proof!
+...
+line 226, col 41:
+change (1:K p)*1 - 0*1 = 1
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, Matrix.cons_val', Matrix.cons_val_zero, Matrix.cons_val_fin_one,
+      Matrix.cons_val_one, mul_one, sub_zero]
+shortened proof!
+......
+line 234, col 6:
+calc z.val 0 1 = (z.val 0 0 + z.val 0 1) - z.val 0 0 := by ring
+      _ = z.val 0 0 - z.val 0 0 := by rw [eq2_00]
+      _ = 0 := by ring
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, add_eq_right, add_eq_left]
+..
+line 239, col 6:
+calc z.val 1 0 = (z.val 1 0 + z.val 1 1) - z.val 1 1 := by ring
+      _ = z.val 1 1 - z.val 1 1 := by rw [eq1_11]
+      _ = 0 := by ring
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, add_eq_right, add_zero, zero_add]
+..
+line 244, col 6:
+calc z.val 1 1 = (z.val 0 1 + z.val 1 1) - z.val 0 1 := by ring
+      _ = (z.val 0 0 + z.val 0 1) - z.val 0 1 := by rw [← eq1_01]
+      _ = z.val 0 0 := by ring
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, zero_add, add_zero]
+....
+line 250, col 14:
+change z.val 0 0 = z.val 0 0 * 1
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, zero_add, add_zero, Matrix.smul_apply, Matrix.one_apply_eq,
+      smul_eq_mul, mul_one]
+shortened proof!
+.
+line 251, col 14:
+change z.val 0 1 = z.val 0 0 * 0
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, zero_add, add_zero, Matrix.smul_apply, ne_eq, zero_ne_one,
+      not_false_eq_true, Matrix.one_apply_ne, smul_eq_mul, mul_zero]
+shortened proof!
+.
+line 252, col 14:
+change z.val 1 0 = z.val 0 0 * 0
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, zero_add, add_zero, Matrix.smul_apply, ne_eq, one_ne_zero,
+      not_false_eq_true, Matrix.one_apply_ne, smul_eq_mul, mul_zero]
+shortened proof!
+.
+line 253, col 14:
+change z.val 1 1 = z.val 0 0 * 1
+* Try this:
+
+  [apply]   simp_all only [QuotientGroup.eq_one_iff, Fin.isValue, zero_add, add_zero, Matrix.smul_apply, Matrix.one_apply_eq,
+      smul_eq_mul, mul_one]
+shortened proof!
+....
+line 259, col 6:
+rw [Projectivization.mk_rep y, hg₀, hgy]
+* Try this:
+
+  [apply]     subst hg₀
+    simp_all only [QuotientGroup.eq_one_iff, Projectivization.mk_rep]
+......
+line 270, col 8:
+rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, inv_mul_cancel₀ hd_ne_zero, one_smul,
+            g₀.val_inv]
+* Try this:
+
+  [apply]     subst hg₀
+    simp_all only [QuotientGroup.eq_one_iff, ne_eq, Units.inv_eq_val_inv, Matrix.coe_units_inv, Algebra.mul_smul_comm,
+      Algebra.smul_mul_assoc, Matrix.mul_inv_of_invertible, not_false_eq_true, smul_inv_smul₀]
+.
+line 273, col 8:
+rw [Matrix.smul_mul, Matrix.mul_smul, smul_smul, mul_inv_cancel₀ hd_ne_zero, one_smul,
+            g₀.inv_val]
+* Try this:
+
+  [apply]     subst hg₀
+    simp_all only [QuotientGroup.eq_one_iff, ne_eq, Units.inv_eq_val_inv, Matrix.coe_units_inv, Algebra.mul_smul_comm,
+      Algebra.smul_mul_assoc, Matrix.inv_mul_of_invertible, not_false_eq_true, inv_smul_smul₀]
+..............WARNING: FLT/Slop/PGL2/FiniteSubgroups/TameClassification.lean was killed (exit code 137), likely by the 8G MemoryMax cap

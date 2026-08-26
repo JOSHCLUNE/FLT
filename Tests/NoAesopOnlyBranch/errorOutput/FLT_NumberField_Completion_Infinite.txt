@@ -1,0 +1,72 @@
+.
+line 44, col 16:
+simp [← wv.2, InfinitePlace.comap]
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := wv
+    subst property
+    simp_all only
+    rfl
+.
+line 49, col 11:
+rw [Completion.norm_coe]
+* Try this:
+
+  [apply]     simp_all only [norm_ofCompletion, UniformSpace.Completion.norm_coe]
+    obtain ⟨val, property⟩ := wv
+    subst property
+    exact hx
+shortened proof!
+.X....
+line 67, col 33:
+simp [← h, InfinitePlace.comap]
+* Try this:
+
+  [apply]     subst h
+    obtain ⟨val, property⟩ := wv
+    rfl
+....
+line 74, col 33:
+simp [← h, InfinitePlace.comap]
+* Try this:
+
+  [apply]     subst h
+    rfl
+...
+line 112, col 52:
+simp [← h, InfinitePlace.comap]
+* Try this:
+
+  [apply]     subst h
+    rfl
+.............
+line 157, col 22:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toLinearMap_apply, baseChangeRightOfAlgebraMap_apply, baseChange_of_algebraMap_tmul_left,
+      Pi.map_apply]
+..
+line 167, col 2:
+simp [baseChange_surjective L v]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.coe_toLinearMap, baseChangeRightOfAlgebraMap_coe]
+    apply NumberField.InfinitePlace.Completion.baseChange_surjective
+.X.
+line 191, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+.....
+line 214, col 2:
+simp_rw [(piEquiv L v).map_smul x y, Pi.smul_def, RingHom.smul_toAlgebra]
+* Try this:
+
+  [apply]     simp_all only [_root_.map_smul, Pi.smul_apply, RingHom.coe_toSemialgHom]
+    obtain ⟨val, property⟩ := wv
+    subst property
+    simp_all only
+    rfl
+shortened proof!

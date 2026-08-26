@@ -1,0 +1,7 @@
+.
+line 22, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, exists_apply_eq_apply]
+.......

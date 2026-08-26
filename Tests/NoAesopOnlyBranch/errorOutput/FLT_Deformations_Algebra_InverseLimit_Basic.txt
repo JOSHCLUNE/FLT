@@ -1,0 +1,254 @@
+...
+line 48, col 2:
+exact h i
+* Try this:
+
+  [apply]   simp_all only
+.
+line 57, col 24:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [map_one]
+.
+line 67, col 50:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [map_mul, prop]
+..
+line 76, col 28:
+simp [mul_comm]
+* Try this:
+
+  [apply]     simp_all only [mul_def, Pi.mul_apply]
+    apply mul_comm
+..
+line 80, col 31:
+simp [mul_assoc]
+* Try this:
+
+  [apply]     simp_all only [mul_def, Pi.mul_apply]
+    apply mul_assoc
+.
+line 90, col 47:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [map_smul, prop]
+..
+line 99, col 26:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, Pi.smul_apply, one_smul]
+....
+line 105, col 25:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_def, one_def, Pi.mul_apply, Pi.one_apply, one_mul]
+..
+line 106, col 25:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_def, one_def, Pi.mul_apply, Pi.one_apply, mul_one]
+.
+line 114, col 27:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.pow_apply, map_pow, prop]
+..
+line 115, col 50:
+ext i
+* Try this:
+
+  [apply]     simp_all only [pow_zero]
+    rfl
+shortened proof!
+....
+line 131, col 20:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.inv_apply, map_inv, prop]
+.
+line 132, col 28:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.div_apply, map_div, prop]
+.
+line 133, col 23:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.pow_apply, map_zpow, prop]
+....
+line 137, col 51:
+ext i
+* Try this:
+
+  [apply]     simp_all only [zpow_ofNat, pow_zero]
+    rfl
+shortened proof!
+......
+line 145, col 25:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [mul_def, Pi.mul_apply, Pi.inv_apply, inv_mul_cancel, one_def, Pi.one_apply]
+shortened proof!
+..
+line 162, col 26:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_def, zero_def, Pi.mul_apply, Pi.zero_apply, zero_mul]
+..
+line 163, col 26:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_def, zero_def, Pi.mul_apply, Pi.zero_apply, mul_zero]
+...
+line 176, col 80:
+rw [h]
+* Try this:
+
+  [apply]   simp_all only [one_def, Pi.one_apply]
+..
+line 204, col 22:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.inv_apply, map_inv₀, prop]
+.
+line 205, col 28:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.div_apply, map_div₀, prop]
+.
+line 206, col 27:
+simp
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.pow_apply, map_zpow₀, prop]
+....
+line 210, col 62:
+rfl
+* Try this:
+
+  [apply]   rfl
+.......
+line 242, col 21:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [Pi.natCast_apply, Nat.cast_zero, zero_def, Pi.zero_apply]
+shortened proof!
+.
+line 243, col 23:
+ext i
+* Try this:
+
+  [apply]     ext i_1 : 1
+    simp_all only [Pi.natCast_apply, Nat.cast_add, Nat.cast_one, add_def, one_def, Pi.add_apply, Pi.one_apply]
+shortened proof!
+.
+line 244, col 16:
+intros
+* Try this:
+
+  [apply]     intro i_1 j h
+    simp_all only [Pi.one_apply, map_one]
+shortened proof!
+...
+line 262, col 24:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Int.cast_natCast]
+    rfl
+shortened proof!
+.
+line 263, col 26:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Int.cast_negSucc, Nat.cast_add, Nat.cast_one, neg_add_rev]
+    rfl
+shortened proof!
+..
+line 285, col 34:
+simp [left_distrib]
+* Try this:
+
+  [apply]     simp_all only [mul_def, add_def, Pi.mul_apply, Pi.add_apply]
+    grind only [mul_add]
+..
+line 286, col 35:
+simp [right_distrib]
+* Try this:
+
+  [apply]     simp_all only [mul_def, add_def, Pi.mul_apply, Pi.add_apply]
+    grind only [add_mul]
+..
+line 337, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, zero_def, Pi.smul_apply, Pi.zero_apply, smul_zero]
+..
+line 345, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, Pi.smul_apply, zero_smul, zero_def, Pi.zero_apply]
+..
+line 353, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, add_def, Pi.smul_apply, Pi.add_apply, smul_add]
+..
+line 366, col 11:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, mul_def, Pi.smul_apply, Pi.mul_apply, smul_mul']
+..
+line 368, col 11:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, one_def, Pi.smul_apply, Pi.one_apply, smul_one]
+..
+line 375, col 32:
+simp [add_smul]
+* Try this:
+
+  [apply]     simp_all only [smul_def, Pi.smul_apply, add_def, Pi.add_apply]
+    apply add_smul
+..
+line 376, col 29:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_def, Pi.smul_apply, zero_smul, zero_def, Pi.zero_apply]
+................

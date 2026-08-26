@@ -1,0 +1,36 @@
+..
+line 27, col 30:
+exact congr_fun (congr_fun e a) b
+* Try this:
+
+  [apply]     simp_all only
+    duper [*] {preprocessing := full}
+..
+line 32, col 30:
+exact congr_fun (congr_fun e a) b
+* Try this:
+
+  [apply]   duper [*, Equiv.coe_mulLeft] {preprocessing := full}
+...........................
+line 166, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaModuleContinuousSMulOfT2Space_fLT
+shortened proof!
+.........
+line 201, col 2:
+simp [e]
+* Try this:
+
+  [apply]   simp_all only [Equiv.toFun_as_coe, Homeomorph.coe_prodCongr, Homeomorph.refl_apply, Equiv.coe_toHomeomorph,
+      Function.comp_apply, Prod.map_fst, id_eq, Prod.map_snd, Equiv.symm_apply_apply, e, this]
+..............
+line 245, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaAlgebraContinuousSMulOfT2Space_fLT
+shortened proof!

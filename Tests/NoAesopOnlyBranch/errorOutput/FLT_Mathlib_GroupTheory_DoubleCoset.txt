@@ -1,0 +1,228 @@
+......
+line 43, col 4:
+refine ⟨e x, eH hx, e y, eK hy, by simp⟩
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    grind only [SetLike.le_def, Subgroup.mem_comap, #0447, #f6d0]
+....
+line 68, col 7:
+simp [Set.mem_smul_set_iff_inv_smul_mem]
+* Try this:
+
+  [apply]     simp_all only [mul_singleton, image_mul_right, mem_preimage]
+    apply Iff.intro
+    · intro a
+      duper [*, mem_rightCoset_iff] {preprocessing := full}
+    · intro a
+      duper [*, mem_rightCoset_iff] {preprocessing := full}
+...........
+line 105, col 69:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, one_mem]
+.
+line 105, col 86:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul, mul_inv_cancel_left]
+....
+line 118, col 77:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.mem_coe, one_mem]
+.
+line 118, col 86:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_mul_cancel_right, mul_one]
+...
+line 136, col 45:
+simp [this]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, map_mk, MonoidHom.id_apply, Set.mem_singleton_iff]
+..
+line 137, col 58:
+simp
+* Try this:
+
+  [apply]   simp_all only [SetLike.coe_mem, one_mul, and_self]
+..
+line 139, col 64:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul, Subgroup.subtype_apply, Subgroup.coe_mul, InvMemClass.coe_inv, mul_mul_inv_mul_cancel]
+.......
+line 150, col 45:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem, mul_inv_cancel_right, inv_mul_cancel_left, mul_one, and_self]
+................
+line 195, col 45:
+simp [← mul_assoc, e]
+* Try these:
+  [apply] grind only [!Subgroup.coe_inv, !mul_inv_cancel_right]
+  [apply] grind =>
+    instantiate only [!Subgroup.coe_inv, !mul_inv_cancel_right]
+    ac
+..
+line 197, col 4:
+simp [mul_assoc, eq_inv_mul_iff_mul_eq, e]
+* Try these:
+  [apply] grind only [inv_mul_cancel]
+  [apply] grind =>
+    instantiate only [inv_mul_cancel]
+    ac
+.
+line 198, col 4:
+simp [e, mul_assoc]
+* Try these:
+  [apply] grind only [!mul_inv_cancel_right, mul_inv_cancel]
+  [apply] grind =>
+    instantiate only [!mul_inv_cancel_right, mul_inv_cancel]
+    ac
+.............
+line 229, col 36:
+grind
+* Try these:
+  [apply] grind only [#bd83, #ecd4, #9a55, #c41f, #658c]
+  [apply] grind only
+  [apply] grind =>
+    cases #bd83
+    cases #ecd4
+    · instantiate only [#9a55]
+    · instantiate only [#c41f, #658c]
+._..............
+line 258, col 8:
+simp [H₁, H₂]
+* Try this:
+
+  [apply]   simp_all only [Setoid.ker_def, Subgroup.smul_inf, smul_inv_smul, ConjAct.toConjAct_inv]
+.........
+line 266, col 39:
+exact Subsingleton.elim _ _
+* Try these:
+  [apply] grind only [= Set.mem_preimage, = Set.mem_singleton_iff, #fcc9]
+  [apply] grind only [= Set.mem_preimage, = Set.mem_singleton_iff]
+  [apply] grind => cases #fcc9 <;> instantiate only [= Set.mem_preimage] <;> instantiate only [= Set.mem_singleton_iff]
+.......
+line 273, col 4:
+simp
+* Try this:
+
+  [apply]     simp_all only [Set.ncard_univ]
+    rfl
+shortened proof!
+...
+line 276, col 55:
+grind
+* Try these:
+  [apply] grind only [= Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_preimage, = Set.mem_singleton_iff,
+    #590c]
+  [apply] grind only [= Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_preimage, = Set.mem_singleton_iff]
+  [apply] grind =>
+    cases #590c <;>
+      instantiate only [= Set.mem_inter_iff, = Set.mem_empty_iff_false] <;>
+        instantiate only [= Set.mem_preimage] <;> instantiate only [= Set.mem_singleton_iff]
+..
+line 286, col 4:
+obtain rfl | h := eq_or_ne x (DoubleCoset.mk H K 1)
+* Try this:
+
+  [apply]   duper [*, mem_doubleCoset_self, mem_quotToDoubleCoset_iff, quotToDoubleCoset, ofLeft_mk] {preprocessing := full}
+shortened proof!
+...
+line 292, col 4:
+obtain rfl | h := eq_or_ne x ↑(1 : G)
+* Try this:
+
+  [apply]   duper [*, QuotientGroup.out_eq'] {preprocessing := full}
+shortened proof!
+........
+line 302, col 6:
+grind
+* Try these:
+  [apply] grind only [#e1f2, #4be7]
+  [apply] grind only
+  [apply] grind => cases #e1f2 <;> instantiate only [#4be7]
+........
+line 308, col 10:
+grind
+* Try this:
+  [apply] grind only
+..........
+line 316, col 58:
+simpa [ha]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+......
+line 321, col 31:
+grind
+* Try these:
+  [apply] grind only [#c8ed]
+  [apply] grind only
+  [apply] grind => instantiate only [#c8ed]
+.
+line 321, col 41:
+grind
+* Try these:
+  [apply] grind only [#86b1, #b91e]
+  [apply] grind only
+  [apply] grind => instantiate only [#86b1, #b91e]
+.
+line 321, col 51:
+grind
+* Try these:
+  [apply] grind only [#435a]
+  [apply] grind only
+  [apply] grind => instantiate only [#435a]
+.
+line 321, col 61:
+grind
+* Try this:
+  [apply] grind only
+.....
+line 354, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [σLeft_mul]
+..
+line 355, col 46:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem]
+.
+line 355, col 63:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mul]
+.....
+line 362, col 74:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem, mul_one, and_self]
+...
+line 365, col 67:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_mem]
+.
+line 365, col 79:
+simp [hg]
+* Try this:
+
+  [apply]   simp_all only [mul_one, one_mul, and_self]
+...

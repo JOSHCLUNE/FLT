@@ -1,0 +1,137 @@
+.....
+line 78, col 4:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [top_ne_bot, not_false_eq_true]
+..........
+line 94, col 2:
+obtain ⟨f, hf⟩ := exists_finsupp_surjective R M i
+* Try this:
+
+  [apply]   apply finite_quotient_smul
+shortened proof!
+......
+line 110, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Fintype.card_pi, Finset.prod_const, Finset.card_univ, Fintype.card_fin, f']
+.....X.X..X...
+line 124, col 4:
+exact top_ne_bot
+* Try this:
+
+  [apply]   simp_all only [top_ne_bot, not_false_eq_true]
+................
+line 228, col 4:
+dsimp at *
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_restrictScalars, Set.mem_ofPred_eq, Pi.add_apply, map_add]
+shortened proof!
+.
+line 230, col 18:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_restrictScalars, Set.mem_ofPred_eq, Pi.zero_apply, map_zero, implies_true]
+.
+line 232, col 4:
+dsimp at *
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_restrictScalars, Set.mem_ofPred_eq, Pi.smul_apply, map_smul]
+shortened proof!
+.......
+line 243, col 7:
+simp
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_restrictScalars, SetLike.mem_coe, Set.mem_iInter, Set.mem_ofPred_eq]
+    rfl
+shortened proof!
+..
+line 274, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [nhds_discrete, pure_zero, prod_zero, tendsto_zero, eventually_map, smul_zero, eventually_true]
+.
+line 274, col 54:
+simp
+* Try this:
+
+  [apply]     intro a
+    simp_all only [nhds_discrete, pure_zero, tendsto_zero, eventually_zero, smul_zero]
+.............
+line 321, col 20:
+simp [← hy, ← hz]
+* Try this:
+
+  [apply]   simp_all only [ofPi_apply]
+..
+line 329, col 2:
+rfl
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_comp, LinearMap.coe_restrictScalars, Function.comp_apply, ofPi_apply, LinearMap.pi_apply,
+      LinearMap.id_coe, id_eq, UltraProduct.map_πₗ, mapQ_apply]
+............
+line 380, col 2:
+exact (Submodule.mkQ_surjective _).comp (hf _)
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, Function.Surjective.of_comp_iff]
+    apply Submodule.mkQ_surjective
+.....
+line 395, col 6:
+rfl
+* Try this:
+
+  [apply]   simp_all only [LinearMap.id_comp, LinearMap.comp_id]
+............................
+line 461, col 6:
+simp only [LinearMap.coe_restrictScalars, mapQ_id,
+        UltraProduct.map_πₗ, LinearMap.id_coe, id_eq, fs]
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, LinearMap.coe_restrictScalars, mapQ_id,
+      UltraProduct.map_πₗ, LinearMap.id_coe, id_eq, s, fs]
+.....
+line 468, col 6:
+filter_upwards with i
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, UltraProduct.map_πₗ, factor_comp_apply,
+      eventually_true, s]
+shortened proof!
+....
+line 478, col 2:
+simpa using this
+* Try this:
+
+  [apply]   simp_all only [nonempty_subtype, Set.mem_preimage, Set.mem_singleton_iff, map_apply, s]
+.....
+line 494, col 4:
+exact IsModuleTopology.continuous_of_linearMap _
+* Try this:
+
+  [apply]   apply IsModuleTopology.continuous_of_linearMap
+........
+line 507, col 4:
+exact Module.finite_of_finite (R ⧸ α.1)
+* Try these:
+  [apply] grind only [Module.Finite.exists_fin', Module.finite_iff_finite]
+  [apply] grind =>
+    instantiate only [Module.Finite.exists_fin', Module.finite_iff_finite]
+    done
+...
+line 510, col 2:
+rw [← LinearMap.range_eq_top, mapQ, range_liftQ, LinearMap.range_eq_top]
+* Try this:
+
+  [apply]     simp_all only [mapQ_id, LinearMap.id_coe]
+    grind only [Module.Finite.exists_fin', !Function.surjective_id]
+shortened proof!
+.............................

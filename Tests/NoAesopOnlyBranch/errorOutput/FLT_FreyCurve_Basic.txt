@@ -1,0 +1,142 @@
+...
+line 78, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₁, eq_intCast]
+    rfl
+...
+line 81, col 6:
+norm_cast
+* Try this:
+
+  [apply]   simp_all only [Int.cast_sub, Int.cast_pow, Int.cast_one, Int.cast_ofNat]
+....
+line 85, col 36:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Int.reducePow]
+.
+line 87, col 53:
+linarith [P.hp5]
+* Try this:
+
+  [apply]   duper [*, pp, Nat.Prime.two_le] {preprocessing := full}
+....
+line 91, col 10:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [add_neg_cancel]
+.
+line 92, col 10:
+rw [Nat.Prime.even_iff P.pp]
+* Try this:
+
+  [apply]     simp_all only [Nat.not_even_iff_odd]
+    apply FreyPackage.hp_odd
+shortened proof!
+.
+line 94, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₃, eq_intCast]
+    rfl
+...
+line 97, col 6:
+norm_cast
+* Try this:
+
+  [apply]   simp_all only [neg_mul, Int.cast_neg, Int.cast_mul, Int.cast_pow, Int.cast_ofNat]
+..
+line 99, col 35:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Int.reducePow]
+..
+line 103, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, map_a₆, eq_intCast]
+    rfl
+.
+line 106, col 2:
+trans (P.a ^ P.p) ^ 2 * (P.b ^ P.p) ^ 2 * (P.c ^ P.p) ^ 2 / 2 ^ 8
+* Try this:
+
+  [apply]   duper [*, freyCurve, Δ] {preprocessing := full}
+shortened proof!
+..
+line 116, col 4:
+apply div_ne_zero
+* Try this:
+
+  [apply]     simp_all
+    intro a
+    cases a with
+    | inl h =>
+      cases h with
+      | inl h_1 => duper [*, ha0] {preprocessing := full}
+      | inr h_2 => duper [*, hb0] {preprocessing := full}
+    | inr h_1 => duper [*, hc0] {preprocessing := full}
+shortened proof!
+..
+line 124, col 2:
+ring
+* Try this:
+
+  [apply]   grind only
+.......
+line 140, col 2:
+ring
+* Try these:
+  [apply] grind only [sq, mul_pow]
+  [apply] grind => instantiate only [sq, mul_pow]
+......
+line 154, col 34:
+ring
+* Try this:
+  [apply] grind only
+........
+line 167, col 52:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or]
+.
+line 168, col 24:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or]
+..............
+line 181, col 8:
+exact hqbad.rec hab hc
+* Try this:
+
+  [apply]   simp_all only [or_self]
+....
+line 186, col 6:
+exact h.2
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or, false_or]
+..
+line 189, col 6:
+exact h.2
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, pow_eq_zero_iff, mul_eq_zero, not_or, false_or]
+...
+line 193, col 2:
+exact dvd_mul_of_dvd_left (dvd_mul_left _ _) _
+* Try these:
+  [apply] grind only [!dvd_of_mul_left_dvd, !dvd_of_mul_right_dvd, dvd_rfl]
+  [apply] grind =>
+    instantiate only [!dvd_of_mul_left_dvd]
+    instantiate only [!dvd_of_mul_right_dvd]
+    instantiate only [dvd_rfl]

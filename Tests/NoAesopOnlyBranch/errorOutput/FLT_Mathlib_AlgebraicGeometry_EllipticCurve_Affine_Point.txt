@@ -1,0 +1,85 @@
+......
+line 71, col 63:
+linear_combination hX
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...
+line 74, col 2:
+exact hxy ⟨rfl, mul_left_cancel₀ (pow_ne_zero 3 hu) (by linear_combination hY)⟩
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.....
+line 95, col 2:
+simp only [addY, variableChange_negAddY, variableChange_addX, variableChange_negY]
+* Try this:
+
+  [apply]   smt +mono [*, variableChange_negAddY, variableChange_addX, variableChange_negY]
+.......
+line 112, col 6:
+exact fun h ↦ hy (mul_left_cancel₀ (pow_ne_zero 3 hu) (by linear_combination h))
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.....
+line 119, col 6:
+simpa [mul_right_inj' (pow_ne_zero 2 hu)] using hx
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 121, col 4:
+have h1 := sub_ne_zero.mpr hΦx
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...
+line 134, col 2:
+refine ⟨fun h ↦ ?_, fun h ↦ ?_⟩
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 162, col 2:
+subst hx hy
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 168, col 4:
+rfl
+* Try this:
+  [apply] grind only
+....
+line 172, col 4:
+injection h with hX hY
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+.
+line 182, col 2:
+subst h
+* Try this:
+
+  [apply]     subst h
+    rfl
+shortened proof!
+.
+line 187, col 2:
+subst h
+* Try this:
+
+  [apply]     subst h
+    rfl
+shortened proof!
+._.......
+line 203, col 8:
+rw [hxy.1]
+* Try this:
+
+  [apply]   simp_all only [negY]
+........__

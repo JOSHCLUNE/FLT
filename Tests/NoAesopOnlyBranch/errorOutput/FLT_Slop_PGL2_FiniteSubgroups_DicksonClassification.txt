@@ -1,0 +1,63 @@
+....
+line 72, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, exists_prop, exists_and_left, ge_iff_le, true_or, or_true]
+.
+line 73, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h2
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]
+.
+line 74, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr h3
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, or_true]
+.
+line 75, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+* Try this:
+
+  [apply]     rename_i left
+    subst left
+    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or,
+      or_true]
+...
+line 78, col 8:
+exact Or.inl h1
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or]
+.
+line 79, col 8:
+exact Or.inr <| Or.inl h2
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]
+.
+line 80, col 8:
+exact Or.inr <| Or.inr <| Or.inl h3
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]
+.
+line 81, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inl h4
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]
+.
+line 82, col 8:
+exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h5
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]
+..
+line 84, col 4:
+exact Or.inl ⟨⟨1, fun x ↦ by rw [Subsingleton.elim x 1]; exact Subgroup.mem_zpowers 1⟩⟩
+* Try these:
+  [apply] grind only [isCyclic_of_subsingleton]
+  [apply] grind => instantiate only [isCyclic_of_subsingleton]

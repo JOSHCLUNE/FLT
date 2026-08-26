@@ -1,0 +1,68 @@
+.......
+line 54, col 33:
+rw [pb.natDegree_minpoly, pb.finrank]
+* Try this:
+
+  [apply]     simp_all only [PowerBasis.natDegree_minpoly, pb]
+    duper [*, PowerBasis.natDegree_minpoly, PowerBasis.finrank] {preprocessing := full}
+.
+line 55, col 32:
+rw [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self]
+* Try this:
+
+  [apply]   simp_all only [AdjoinRoot.aeval_eq, AdjoinRoot.mk_self, pb]
+...
+line 65, col 2:
+exact ⟨P, hP_monic, hP_map, hP_deg⟩
+* this parameter is redundant, environment already contains `Multiset.mem_cons` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#b78f]
+  [apply] grind only
+  [apply] grind => instantiate only [#b78f]
+....
+line 77, col 33:
+exact Ideal.map_comap_le
+* Try these:
+  [apply] grind only [Ideal.map_le_iff_le_comap]
+  [apply] grind => instantiate only [Ideal.map_le_iff_le_comap]
+.
+line 78, col 4:
+exact (hmax.eq_of_le hM.ne_top hle).symm
+* Try these:
+  [apply] grind only [Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal, Ideal.IsMaximal.ne_top]
+  [apply] grind =>
+    instantiate only [Ideal.IsMaximal.eq_of_le, !Ideal.exists_maximal]
+    instantiate only [Ideal.IsMaximal.ne_top]
+...................X.....
+line 166, col 4:
+rw [IsScalarTower.algebraMap_apply R K (AdjoinRoot (P.map (algebraMap R K))),
+      algebraMap_eq, ← mk_C]
+* Try this:
+
+  [apply]     simp_all only [mk_C]
+    rfl
+...
+line 171, col 2:
+rw [hR, hkey, hsmul, ← map_mul, mul_comm]
+* Try these:
+  [apply] grind only [= map_mul]
+  [apply] grind => instantiate only [= map_mul]
+...............
+line 201, col 29:
+rw [hmem, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_eq, mem_maximalIdeal, mem_nonunits_iff, map_zero, S, L, pK]
+....
+line 205, col 47:
+rw [h, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_eq, map_zero, S, L, pK]
+...
+line 208, col 46:
+rw [h, map_zero]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_eq, mem_nonZeroDivisors_iff_ne_zero, map_zero, pK, S, L]
+.

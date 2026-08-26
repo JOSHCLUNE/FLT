@@ -1,0 +1,142 @@
+......
+line 133, col 4:
+rw [Set.ext_iff] at h
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_empty_iff_false` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Set.inter_subset_right, = Set.subset_def, Set.mem_inter_iff, Set.mem_empty_iff_false, #dffa]
+  [apply] grind only [!Set.inter_subset_right, = Set.subset_def, Set.mem_inter_iff, Set.mem_empty_iff_false]
+  [apply] grind =>
+    instantiate only [!Set.inter_subset_right]
+    instantiate only [= Set.subset_def]
+    instantiate only [#dffa]
+    instantiate only [Set.mem_inter_iff, Set.mem_empty_iff_false]
+shortened proof!
+.
+line 136, col 4:
+rw [not_mem_mulSupport] at hi
+* Try this:
+
+  [apply]   simp_all only [not_mem_mulSupport, mul_apply, one_mul, mul_one]
+shortened proof!
+.
+line 138, col 4:
+rw [not_mem_mulSupport] at hi
+* Try this:
+
+  [apply]   simp_all only [not_mem_mulSupport, mul_apply, mul_one, one_mul]
+shortened proof!
+......
+line 155, col 2:
+exact inv_ne_one
+* Try this:
+
+  [apply]   simp_all only [inv_apply, ne_eq, inv_eq_one, Set.mem_ofPred_eq]
+......
+line 186, col 6:
+rw [Set.eq_empty_iff_forall_notMem]
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= Set.subset_def, = Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_singleton_iff, #b702,
+    #533d]
+  [apply] grind only [= Set.subset_def, = Set.mem_inter_iff, = Set.mem_empty_iff_false, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [= Set.subset_def]
+    cases #b702 <;>
+      instantiate only [= Set.mem_inter_iff, = Set.mem_empty_iff_false] <;>
+        instantiate only [#533d] <;> instantiate only [= Set.mem_singleton_iff]
+shortened proof!
+....
+line 218, col 2:
+ext x i
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.domRestrict_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9a91, #b3b5, #025b]
+  [apply] grind only
+  [apply] grind => cases #9a91 <;> cases #b3b5 <;> instantiate only [#025b]
+shortened proof!
+....
+line 225, col 35:
+(hj : j ≠ i)
+* Try this:
+
+  [apply]     intro a_1 a_2
+    simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, ↓reduceDIte]
+    exact a_2
+shortened proof!
+....
+line 235, col 2:
+exact ⟨x, hx⟩
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [exists_apply_eq_apply]
+....
+line 245, col 2:
+use (x (f j))
+* Try this:
+
+  [apply]     subst hy' hx
+    simp_all only [nonempty_subtype, exists_apply_eq_apply]
+shortened proof!
+....
+line 255, col 6:
+exact ⟨Classical.choice inferInstance, fun _ ↦ hsurj⟩
+* Try this:
+
+  [apply]     subst hf
+    simp_all only [nonempty_subtype, Subtype.exists, exists_prop, implies_true, exists_const]
+..
+line 257, col 6:
+obtain ⟨y, hy, hne⟩ := hsurj
+* Try this:
+
+  [apply]     subst hf
+    simp_all only [nonempty_subtype, Set.mem_image, not_exists, not_and, Subtype.exists, exists_prop, forall_exists_index,
+      and_imp]
+    obtain ⟨w, h⟩ := hsurj
+    obtain ⟨left, right⟩ := h
+    duper [*] {preprocessing := full}
+shortened proof!
+..........
+line 282, col 17:
+intros
+* Try this:
+
+  [apply]     intro x y
+    rfl
+shortened proof!
+.
+line 291, col 17:
+intros
+* Try this:
+
+  [apply]     intro x y
+    rfl
+shortened proof!
+.
+line 292, col 17:
+intros
+* Try this:
+
+  [apply]     intro x y
+    rfl
+shortened proof!
+....
+line 315, col 2:
+aesop
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, Set.mem_ofPred_eq]
+    rfl
+.._.
+line 337, col 18:
+ext
+* Try this:
+
+  [apply]     simp_all only [Pi.single_zero]
+    rfl
+shortened proof!
+..

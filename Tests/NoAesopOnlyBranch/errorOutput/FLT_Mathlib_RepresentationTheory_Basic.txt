@@ -1,0 +1,32 @@
+..
+line 42, col 63:
+simp
+* Try this:
+
+  [apply]   simp_all only [mul_inv_cancel, map_one, toMatrix_one]
+..
+line 43, col 63:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_mul_cancel, map_one, toMatrix_one]
+.
+line 45, col 19:
+aesop
+* Try this:
+
+  [apply]     simp_all only [map_one, toMatrix_one, inv_one]
+    rfl
+...
+line 46, col 62:
+norm_cast
+* Try this:
+
+  [apply]   rfl
+.
+line 53, col 17:
+aesop
+* Try this:
+
+  [apply]   simp_all only [map_one, baseChange_one]
+.

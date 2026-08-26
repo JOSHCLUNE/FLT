@@ -1,0 +1,99 @@
+...........
+line 33, col 4:
+rw [← Set.mem_preimage] at hy
+* Try this:
+
+  [apply]   duper [*, Set.mem_preimage, Set.mem_singleton_iff] {preprocessing := full}
+shortened proof!
+.
+line 35, col 4:
+intro eq i
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Classical.choose_spec, usr Exists.choose_spec, !Set.mem_singleton, Set.mem_preimage]
+  [apply] grind =>
+    instantiate only [Classical.choose_spec, usr Exists.choose_spec]
+    instantiate only [!Set.mem_singleton]
+    instantiate only [Set.mem_preimage]
+shortened proof!
+..
+line 43, col 2:
+use h '' U
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Homeomorph.isInducing, Topology.IsInducing.isOpen_iff, Set.preimage_comp, #0811, #5755]
+  [apply] grind only [!Homeomorph.isInducing, Topology.IsInducing.isOpen_iff, Set.preimage_comp]
+  [apply] grind =>
+    instantiate only [!Homeomorph.isInducing]
+    instantiate only [Topology.IsInducing.isOpen_iff]
+    cases #0811 <;> instantiate only [#5755] <;> instantiate only [Set.preimage_comp]
+shortened proof!
+..
+line 58, col 2:
+use h.symm '' U
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.preimage_comp, !Homeomorph.isOpen_preimage, #5a76]
+  [apply] grind only [Set.preimage_comp, !Homeomorph.isOpen_preimage]
+  [apply] grind =>
+    instantiate only [Set.preimage_comp]
+    instantiate only [!Homeomorph.isOpen_preimage, #5a76]
+shortened proof!
+..
+line 81, col 2:
+exact ⟨U, Uopen, by simp [Ueq]⟩
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Set.image_singleton]
+  [apply] grind =>
+    instantiate approx
+    instantiate only [Set.image_singleton]
+..
+line 87, col 2:
+refine ⟨U, Uopen, ?_⟩
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton, #5a76]
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton]
+  [apply] grind =>
+    instantiate only [Equiv.image_eq_preimage_symm, #5a76]
+    instantiate approx
+    instantiate only [Set.image_singleton]
+shortened proof!
+.
+line 102, col 2:
+refine discreteTopology_iff_isOpen_singleton.mpr ?_
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_singleton_mem_nhds,
+    !Set.inter_subset_right, discreteTopology_iff_forall_isOpen, discreteTopology_iff_nhds_ne,
+    discreteTopology_iff_nhds, discreteTopology_iff_forall_isClosed, DiscreteTopology.of_subset]
+  [apply] grind =>
+    instantiate only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_singleton_mem_nhds,
+      !Set.inter_subset_right, discreteTopology_iff_forall_isOpen, discreteTopology_iff_nhds_ne,
+      discreteTopology_iff_nhds, discreteTopology_iff_forall_isClosed]
+    instantiate only [DiscreteTopology.of_subset]
+shortened proof!
+.
+line 114, col 2:
+rw [Set.inter_comm]
+* this parameter is redundant, environment already contains `Set.mem_inter_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_singleton_mem_nhds,
+    !Set.inter_subset_left, discreteTopology_iff_forall_isOpen, discreteTopology_iff_nhds_ne, discreteTopology_iff_nhds,
+    discreteTopology_iff_forall_isClosed, DiscreteTopology.of_subset]
+  [apply] grind =>
+    instantiate only [discreteTopology_iff_isOpen_singleton, discreteTopology_iff_singleton_mem_nhds,
+      !Set.inter_subset_left, discreteTopology_iff_forall_isOpen, discreteTopology_iff_nhds_ne,
+      discreteTopology_iff_nhds, discreteTopology_iff_forall_isClosed]
+    instantiate only [DiscreteTopology.of_subset]
+shortened proof!

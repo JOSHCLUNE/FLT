@@ -1,0 +1,12 @@
+Ran `hammer` after locally removing the Aesop-only branch (Aesop with no subprocedures) on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 8 with errors."
+
+tallySummaries.sh output:
+Total number of results: 16769
+Total number of successes: 3184
+Time taken: 86863s
+
+Total shortenedStepsCount: 1256
+
+~19.0% success rate
+~24.1 hours

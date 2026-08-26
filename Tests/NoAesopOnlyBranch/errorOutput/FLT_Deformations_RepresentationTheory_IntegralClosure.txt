@@ -1,0 +1,21 @@
+.
+line 40, col 2:
+delta IntegralClosure
+* Try this:
+
+  [apply]   duper [*, Subalgebra.isDomain] {preprocessing := full}
+shortened proof!
+.
+line 43, col 2:
+delta IntegralClosure
+* Try this:
+
+  [apply]   duper [*, le_integralClosure_iff_isIntegral, integralClosure, integralClosure.AlgebraIsIntegral] {preprocessing := full}
+shortened proof!
+...........
+line 81, col 2:
+exact x.2
+* Try this:
+
+  [apply]   simp_all only [ValuationSubring.algebraMap_apply, ValuationSubring.mem_top, SetLike.coe_mem]
+.......

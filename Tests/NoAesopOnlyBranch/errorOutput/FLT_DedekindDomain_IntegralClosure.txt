@@ -1,0 +1,91 @@
+......
+line 58, col 29:
+simpa using hI
+* Try this:
+
+  [apply]   simp_all only [Ideal.isUnit_iff]
+................
+line 80, col 6:
+exact (Ideal.IsDedekindDomain.ramificationIdx_eq_normalizedFactors_count _ _ hp_bot').symm
+* Try these:
+  [apply] grind only [!Ideal.IsDedekindDomain.ramificationIdx_eq_normalizedFactors_count]
+  [apply] grind => instantiate only [!Ideal.IsDedekindDomain.ramificationIdx_eq_normalizedFactors_count]
+.............
+line 108, col 4:
+simpa [hx]
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [ne_eq, map_zero, not_false_eq_true, zero_pow]
+....
+line 113, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, under_asIdeal, Submodule.zero_eq_bot, Submodule.span_eq_bot, Set.mem_singleton_iff, imp_false,
+      forall_eq, not_false_eq_true, Associates.factors_mk, ofAdd_neg, WithZero.coe_inv, inv_pow, Nat.cast_mul,
+      Int.ofAdd_mul, zpow_natCast, WithZero.coe_pow]
+....
+line 130, col 2:
+have : Nontrivial A := (IsFractionRing.nontrivial_iff_nontrivial A K).mpr inferInstance
+* Try this:
+
+  [apply]   duper [*, Module.isTorsionFree_iff_algebraMap_injective, FaithfulSMul.algebraMap_injective, IsDomain.of_faithfulSMul]
+      {preprocessing := full}
+shortened proof!
+..........
+line 147, col 4:
+constructor
+* Try this:
+
+  [apply]     simp_all only [under_asIdeal]
+    grind only [Ideal.liesOver_iff]
+shortened proof!
+............
+line 200, col 79:
+simp
+* Try this:
+
+  [apply]   simp_all only [Extension.equivPrimesOver_apply]
+......
+line 266, col 16:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.trans_symm, TensorProduct.comm_symm, smul_zero, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      LinearEquiv.coe_coe, LinearEquiv.trans_apply, map_zero, LinearEquiv.restrictScalars_symm_apply, RingHom.id_apply]
+..
+line 267, col 81:
+ring
+* Try this:
+  [apply] grind only
+.
+line 268, col 15:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.trans_symm, TensorProduct.comm_symm, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom,
+      LinearEquiv.coe_coe, LinearEquiv.trans_apply, LinearEquiv.restrictScalars_symm_apply, RingHom.id_apply, smul_add,
+      map_add]
+.
+line 282, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+............
+line 320, col 30:
+simpa [Submonoid.smul_def] using hx
+* Try these:
+  [apply] grind only [LinearMap.restrictScalars_apply, Submonoid.smul_def, algebraMap_smul]
+  [apply] grind =>
+    instantiate only [LinearMap.restrictScalars_apply, Submonoid.smul_def]
+    instantiate only [algebraMap_smul]
+...
+line 324, col 6:
+simpa only [Submonoid.smul_def, smul_eq_mul, Algebra.smul_def] using he
+* Try these:
+  [apply] grind only [Submonoid.smul_def, algebraMap_smul]
+  [apply] grind =>
+    instantiate only [Submonoid.smul_def]
+    instantiate only [algebraMap_smul]

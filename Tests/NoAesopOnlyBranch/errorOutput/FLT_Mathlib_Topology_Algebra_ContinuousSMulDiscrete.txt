@@ -1,0 +1,26 @@
+....
+line 40, col 11:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, Set.mem_singleton_iff, Set.mem_iUnion, Set.mem_prod, Set.mem_ofPred_eq,
+      exists_eq_right']
+...
+line 47, col 2:
+rwa [← continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   duper [*, continuousSMulDiscrete_iff] {preprocessing := full}
+.
+line 51, col 2:
+rwa [continuousSMulDiscrete_iff]
+* Try this:
+
+  [apply]   duper [*, continuousSMulDiscrete_iff] {preprocessing := full}
+...
+line 58, col 4:
+exact h ▸ isOpen_empty
+* Try this:
+
+  [apply]   simp_all only [isOpen_empty]
+...

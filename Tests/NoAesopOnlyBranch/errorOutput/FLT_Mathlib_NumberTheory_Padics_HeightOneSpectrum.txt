@@ -1,0 +1,47 @@
+..
+line 39, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [eq_intCast, map_intCast, Int.cast_eq]
+...._.......
+line 66, col 77:
+simp
+* Try this:
+
+  [apply]   simp_all only [algebraMap_int_eq, RingHom.coe_comp, Int.coe_castRingHom, RingHom.coe_coe, Function.comp_apply,
+      IsIntegralClosure.intEquiv_apply_coe, Algebra.algebraMap_self, RingHom.id_apply]
+.
+line 67, col 2:
+simp [-Nat.cast_natAbs]
+* Try this:
+
+  [apply]     simp_all only [MonoidHom.id_apply, Nat.cast_natAbs, Int.cast_abs, Int.cast_eq, Algebra.norm_self]
+    grind only [Int.natAbs_eq_iff_associated, !Int.associated_natAbs, Int.abs_eq_natAbs]
+....
+line 87, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, Int.cast_zero]
+..............
+line 118, col 4:
+simp [withValEquiv, Valuation.IsEquiv.uniformEquiv]
+* Try this:
+
+  [apply]     simp_all only [WithVal.toVal_zero, Function.comp_apply, WithVal.equiv_apply, Padic.eq_padicNorm, map_zero,
+      NNReal.coe_zero, cast_eq_zero]
+    rfl
+..
+line 122, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    rfl
+.......
+line 136, col 4:
+congr 1
+* Try this:
+
+  [apply]   rfl

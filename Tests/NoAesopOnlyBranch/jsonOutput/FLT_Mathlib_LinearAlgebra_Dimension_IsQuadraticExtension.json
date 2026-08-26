@@ -1,0 +1,222 @@
+[{"tacticSucceeded": true,
+  "startLine": 31,
+  "startCol": 14,
+  "shortenedStepsCount": 0,
+  "parentName": "linearIndependent_one_of_notMem_range_algebraMap",
+  "oldText": "rwa [Algebra.algebraMap_eq_smul_one]",
+  "message":
+  "Try this:\n\n  [apply]     subst ha\n    simp_all only [Set.mem_range, not_exists]\n    duper [*, algebraMap_smul, Algebra.algebraMap_eq_smul_one] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 44,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Algebra.IsQuadraticExtension.exists_notMem_range_algebraMap",
+  "oldText": "lia",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [Set.mem_range, Subalgebra.bot_eq_top_of_finrank_eq_one, OfNat.ofNat_ne_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 39,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Algebra.IsQuadraticExtension.exists_notMem_range_algebraMap",
+  "oldText": "by_contra! h",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 40,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Algebra.IsQuadraticExtension.exists_notMem_range_algebraMap",
+  "oldText":
+  "have hbot : (⊥ : Subalgebra K L) = ⊤ :=\n    Algebra.eq_top_iff.mpr fun x ↦ Algebra.mem_bot.mpr (h x)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 42,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Algebra.IsQuadraticExtension.exists_notMem_range_algebraMap",
+  "oldText": "have h1 := Subalgebra.bot_eq_top_iff_finrank_eq_one.mp hbot",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 43,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Algebra.IsQuadraticExtension.exists_notMem_range_algebraMap",
+  "oldText": "have h2 := finrank_eq_two K L",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 55,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "trivial",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [Set.mem_range, not_exists, Nat.succ_eq_add_one, Nat.reduceAdd, Submodule.mem_top]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 59,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText":
+  "rw [← hcd, hd, zero_smul, add_zero, Algebra.algebraMap_eq_smul_one]",
+  "message":
+  "Try this:\n\n  [apply]     subst hcd hd\n    simp_all only [Set.mem_range, not_exists, Nat.succ_eq_add_one, Nat.reduceAdd, zero_smul, add_zero]\n    duper [*, algebraMap_eq_smul_one] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 51,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText":
+  "have hli := linearIndependent_one_of_notMem_range_algebraMap K L hθ",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 52,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText":
+  "have hmem : θ' ∈ Submodule.span K (Set.range ![(1 : L), θ]) := by\n    rw [hli.span_eq_top_of_card_eq_finrank\n      (by rw [Fintype.card_fin]; exact (finrank_eq_two K L).symm)]\n    trivial",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 53,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText":
+  "rw [hli.span_eq_top_of_card_eq_finrank\n      (by rw [Fintype.card_fin]; exact (finrank_eq_two K L).symm)]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 54,
+  "startCol": 10,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "rw [Fintype.card_fin]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 54,
+  "startCol": 33,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "exact (finrank_eq_two K L).symm",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 56,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText":
+  "rw [Matrix.range_cons_cons_empty, Submodule.mem_span_pair] at hmem",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 57,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "obtain ⟨c, d, hcd⟩ := hmem",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 58,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "refine ⟨d, c, fun hd ↦ hθ' ⟨c, ?_⟩, ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 60,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "Algebra.IsQuadraticExtension.exists_eq_algebraMap_add_algebraMap_mul",
+  "oldText": "rw [← hcd, Algebra.smul_def, Algebra.smul_def, mul_one]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 73,
+  "startCol": 2,
+  "shortenedStepsCount": 1,
+  "parentName": "notMem_range_algebraMap_of_not_isSquare",
+  "oldText": "rw [map_mul, ← sq]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [map_mul]\n    duper [*, pow_two] {preprocessing := full}",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 71,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "notMem_range_algebraMap_of_not_isSquare",
+  "oldText": "rintro ⟨c, rfl⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 72,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "notMem_range_algebraMap_of_not_isSquare",
+  "oldText": "refine hd ⟨c, FaithfulSMul.algebraMap_injective K L ?_⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/Dimension/IsQuadraticExtension.lean"}]

@@ -1,0 +1,13 @@
+.........
+line 134, col 40:
+rw[Matrix.det_mul]
+* Try this:
+
+  [apply]   simp_all only [det_mul, IsUnit.mul_iff, and_self]
+shortened proof!
+....
+line 147, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Matrix.toContinousLinearEquiv_apply, Matrix.toLin_toMatrix, LinearEquiv.coe_coe, coe_toLinearEquiv]

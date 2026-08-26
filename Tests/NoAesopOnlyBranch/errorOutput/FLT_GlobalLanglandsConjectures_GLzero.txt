@@ -1,0 +1,81 @@
+.
+line 66, col 23:
+continuity
+* Try these:
+  [apply] grind only [continuous_of_discreteTopology]
+  [apply] grind => instantiate only [continuous_of_discreteTopology]
+.
+line 68, col 8:
+rw [IsLocallyConstant]
+* Try these:
+  [apply] grind only [IsLocallyConstant.of_constant]
+  [apply] grind =>
+    instantiate only [IsLocallyConstant.of_constant]
+    done
+shortened proof!
+..
+line 73, col 22:
+simp
+* Try this:
+
+  [apply]     intro g x y
+    simp_all only
+.
+line 74, col 42:
+simp
+* Try this:
+
+  [apply]     intro M
+    simp_all only [pow_zero, mul_one, Std.le_refl]
+..
+line 81, col 23:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_singleton_iff]
+.
+line 82, col 23:
+simp
+* Try this:
+
+  [apply]     intro a b a_1 a_2
+    simp_all only [Set.mem_singleton_iff, mul_one]
+.
+line 83, col 23:
+simp
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Set.mem_singleton_iff, inv_one]
+...
+line 87, col 24:
+sorry
+* Try this:
+
+  [apply]   simp_all only [isOpen_discrete, U]
+.
+line 88, col 27:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Set.finite_singleton, Set.Finite.isCompact, U]
+.
+line 89, col 29:
+simp
+* Try this:
+
+  [apply]     intro u x y
+    simp_all only
+.......
+line 105, col 4:
+rw [h]
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 108, col 4:
+simp [ofComplex]
+* Try this:
+
+  [apply]     intro x
+    rfl

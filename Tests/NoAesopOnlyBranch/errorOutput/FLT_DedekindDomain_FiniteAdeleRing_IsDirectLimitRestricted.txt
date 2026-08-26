@@ -1,0 +1,35 @@
+.
+line 37, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [top_eq_univ, Filter.mem_sets, univ_mem]
+.....
+line 86, col 4:
+refine ⟨Sₖ, hik, hjk, ?_⟩
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [inclusionLinearMap_apply, #96af]
+  [apply] grind only [inclusionLinearMap_apply]
+  [apply] grind =>
+    instantiate only [inclusionLinearMap_apply, #96af]
+    instantiate only [inclusionLinearMap_apply]
+shortened proof!
+......
+line 95, col 4:
+rw [hℱ]
+* Try this:
+
+  [apply]     subst hℱ
+    simp_all only [SetLike.mem_coe]
+    apply iInf_le
+shortened proof!
+.
+line 98, col 4:
+dsimp [inclusionLinearMap, RestrictedProduct.inclusion, RestrictedProduct.inclusion]
+* Try this:
+
+  [apply]     subst hℱ
+    rfl
+shortened proof!
+..

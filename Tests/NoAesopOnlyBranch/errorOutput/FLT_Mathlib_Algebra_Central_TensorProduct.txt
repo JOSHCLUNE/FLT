@@ -1,0 +1,71 @@
+....X..X....X..
+line 64, col 53:
+simp
+* Try this:
+
+  [apply]   simp_all only [range_subtype, LinearMap.range_id, le_top]
+.
+line 65, col 40:
+simp
+* Try this:
+
+  [apply]   simp_all only [range_subtype, LinearMap.range_id, le_top]
+.......X.X.
+line 72, col 49:
+simp_all
+* Try this:
+
+  [apply]     intro a a_1
+    subst hux
+    simp_all only [map_add, qS]
+....X.
+line 76, col 20:
+simp_all [qT]
+* Try this:
+
+  [apply]     subst hux
+    simp_all only [TensorProduct.map_tmul, LinearMap.id_coe, id_eq, subtype_apply, LinearMap.coe_comp, coe_subtype,
+      Function.comp_apply, projectionOnto_apply_left, qS, qT]
+.
+line 76, col 49:
+simp_all
+* Try this:
+
+  [apply]     intro a a_1
+    subst hux
+    simp_all only [map_add, qT, qS]
+.._...
+line 81, col 2:
+simpa [← TensorProduct.map_comp, ← LinearMap.comp_apply] using hxST
+* Try these:
+  [apply] grind only [TensorProduct.map_map]
+  [apply] grind => instantiate only [TensorProduct.map_map]
+...X.
+line 109, col 4:
+simpa [← Subalgebra.center_tensorProduct] using! hx
+* Try these:
+  [apply] grind only [!Subalgebra.center_tensorProduct, Subalgebra.mem_center_iff]
+  [apply] grind =>
+    instantiate only [!Subalgebra.center_tensorProduct, Subalgebra.mem_center_iff]
+    instantiate only [Subalgebra.mem_center_iff]
+....
+line 112, col 43:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, map_zero, zero_mem]
+....
+line 116, col 2:
+simp [-TensorProduct.tmul_smul, TensorProduct.smul_tmul, Algebra.smul_def kb (1 : B)]
+* Try this:
+
+  [apply]     rename_i x
+    simp_all only [AlgHom.toRingHom_eq_coe, RingHom.coe_coe, Algebra.TensorProduct.algebraMap_apply,
+      Algebra.algebraMap_self, RingHom.id_apply, Subalgebra.mk_algebraMap, Algebra.TensorProduct.map_tmul,
+      Subalgebra.coe_val, AlgHom.commutes]
+    simp_all only [algebraMap_mem]
+    obtain ⟨val, property⟩ := a
+    obtain ⟨val_1, property_1⟩ := x
+    simp_all only
+    simp_all only [Subalgebra.center_eq_top, Algebra.mem_top]
+    grind only [Algebra.algebraMap_eq_smul_one, TensorProduct.smul_tmul]

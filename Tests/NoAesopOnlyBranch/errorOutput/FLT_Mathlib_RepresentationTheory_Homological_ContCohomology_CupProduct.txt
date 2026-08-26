@@ -1,0 +1,121 @@
+.
+line 106, col 25:
+ext x
+* Try this:
+
+  [apply]     simp_all only [map_add]
+    rfl
+shortened proof!
+.
+line 107, col 24:
+ext x
+* Try this:
+
+  [apply]     simp_all only [map_smul, RingHom.id_apply]
+    rfl
+shortened proof!
+.
+line 111, col 23:
+ext τ x
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.add_apply, map_add, add_apply]
+    rfl
+shortened proof!
+.
+line 112, col 22:
+ext τ x
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_smul, Pi.smul_apply, map_smul, smul_apply, RingHom.id_apply]
+    rfl
+shortened proof!
+........
+line 154, col 8:
+funext p
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+...
+line 171, col 25:
+ext g
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.add_apply, map_add]
+    rfl
+shortened proof!
+.
+line 172, col 24:
+ext g
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_smul, Pi.smul_apply, map_smul, RingHom.id_apply]
+    rfl
+shortened proof!
+...........
+line 218, col 65:
+omega
+* Try this:
+  [apply] grind only
+.
+line 241, col 52:
+omega
+* Try this:
+  [apply] grind only
+....
+line 249, col 53:
+omega
+* Try this:
+
+  [apply]   simp_all only [add_zero, Nat.add_left_cancel_iff]
+..
+line 252, col 6:
+rw [d_hom_succ_apply, d_hom_zero]
+* Try this:
+
+  [apply]     simp_all only [Nat.reduceAdd]
+    rfl
+..
+line 254, col 44:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd, add_zero, Nat.add_left_cancel_iff]
+..
+line 259, col 6:
+rw [cupPair_zero, cupZeroSucc_const_apply]
+* Try this:
+
+  [apply]     simp_all only [Nat.reduceAdd, Nat.add_zero, cupPair_zero]
+    rfl
+..
+line 262, col 4:
+abel
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd, Nat.add_zero, cupPair_zero, sub_add_sub_cancel]
+.................
+line 342, col 53:
+omega
+* Try this:
+
+  [apply]     subst hr
+    rfl
+.............
+line 409, col 92:
+omega
+* Try this:
+
+  [apply]     subst hr
+    rfl
+...........
+line 435, col 42:
+omega
+* Try this:
+
+  [apply]     subst hr
+    simp_all only [CochainComplex.of_d, ConcreteCategory.hom_ofHom]
+    rfl
+........WARNING: FLT/Mathlib/RepresentationTheory/Homological/ContCohomology/CupProduct.lean was killed (exit code 137), likely by the 8G MemoryMax cap

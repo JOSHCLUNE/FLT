@@ -1,0 +1,14 @@
+..................
+line 120, col 2:
+apply rTensor'_id_apply
+* Try this:
+
+  [apply]     simp_all only [id_apply]
+    apply ContinuousLinearMap.rTensor'_id_apply
+...
+line 149, col 2:
+apply rTensor'_comp_apply
+* Try this:
+
+  [apply]     simp_all only [comp_apply]
+    apply ContinuousLinearMap.rTensor'_comp_apply

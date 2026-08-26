@@ -1,0 +1,126 @@
+....
+line 50, col 10:
+cases ha rfl
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_true_eq_false]
+..
+line 51, col 36:
+simp [isCoprime_one_left, ha'.dvd]
+* this parameter is redundant, environment already contains `isUnit_one` annotated with `@[grind ←]`
+* Try these:
+  [apply] grind only [isUnit_iff_dvd_one, isCoprime_one_left]
+  [apply] grind => instantiate only [isUnit_iff_dvd_one, isCoprime_one_left]
+....
+line 55, col 33:
+ring
+* Try this:
+  [apply] grind only
+..
+line 56, col 29:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 78, col 6:
+simpa
+* Try this:
+
+  [apply]   simp_all only [map_neg, sub_neg_eq_add, mul_coeff_zero, coeff_add, coeff_X_zero, coeff_C_zero, zero_add]
+...._...
+line 84, col 24:
+lia
+* Try this:
+
+  [apply]   simp_all only [lt_add_iff_pos_left, Order.lt_add_one_iff, zero_le]
+.
+line 85, col 8:
+simp [hp']
+* Try this:
+
+  [apply]   simp_all only [lt_add_iff_pos_left, Order.lt_add_one_iff, zero_le]
+...
+line 91, col 83:
+simp [H.2]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, orderOf_eq_one_iff, not_false_eq_true]
+.
+line 97, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.constRingHom_eq_algebraMap, Pi.algebraMap_apply, Algebra.algebraMap_self,
+      RingHomCompTriple.comp_apply, Finset.prod_const, Finset.card_univ]
+..
+line 103, col 2:
+grind
+* this parameter is redundant, environment already contains `Finset.mem_pi` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Equiv.piCongrLeft_apply_apply` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#9155, #d7fc, #fa26, #abb9]
+  [apply] grind only
+  [apply] grind =>
+    cases #9155
+    · instantiate only [#d7fc, #fa26]
+    · instantiate only [#abb9]
+...............
+line 130, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Matrix.det_algebraMap, algebraMap_self, RingHom.id_apply]
+.._..
+line 140, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_lt_coe, zero_le]
+...
+line 148, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_mul, zero_le, zero_lt_one]
+.......
+line 181, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [symm_comp_self, Measure.map_id]
+..
+line 195, col 85:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_apply, smul_symm_apply]
+.......
+line 231, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [Homeomorph.homeomorph_mk_coe, ContinuousMulEquiv.toMulEquiv_eq_coe, MulEquiv.toEquiv_eq_coe,
+      EquivLike.coe_coe, MulEquivClass.coe_toMulEquiv]
+    rfl
+shortened proof!
+.
+line 253, col 4:
+simp only [continuous_def]
+* Try this:
+
+  [apply]     intro a
+    obtain ⟨val, property⟩ := a
+    duper [*, Submonoid.separatelyContinuousMul, continuous_induced_rng, SeparatelyContinuousMul.continuous_const_mul]
+      {preprocessing := full}
+shortened proof!
+.
+line 257, col 4:
+simp only [continuous_def]
+* Try this:
+
+  [apply]     intro a
+    obtain ⟨val, property⟩ := a
+    duper [*, continuous_id', Continuous.mul_const, Submonoid.separatelyContinuousMul, continuous_induced_rng]
+      {preprocessing := full}
+shortened proof!
+....

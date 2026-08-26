@@ -1,0 +1,22 @@
+._....
+line 50, col 2:
+rwa [isProartinian_iff_isArtinianRing]
+* Try these:
+  [apply] grind only [isProartinian_iff_isArtinianRing]
+  [apply] grind => instantiate only [isProartinian_iff_isArtinianRing]
+....
+line 73, col 4:
+exact ⟨1, by simp [hI']⟩
+* Try this:
+
+  [apply]     subst hI'
+    simp_all only [Submodule.top_coe, isOpen_univ, le_top, exists_const]
+......
+line 82, col 2:
+exact ⟨n, hn⟩
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#228e]
+  [apply] grind only
+  [apply] grind => instantiate only [#228e]
+..............
