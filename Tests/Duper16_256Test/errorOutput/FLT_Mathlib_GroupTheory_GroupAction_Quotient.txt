@@ -1,0 +1,35 @@
+....._....
+line 33, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_smul, inv_smul_smul]
+    rfl
+shortened proof!
+......
+line 38, col 4:
+congr 2
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.X.X.X.X..X.
+line 57, col 8:
+symm
+* Try this:
+
+  [apply]     subst ha hb
+    simp_all only [ofQuotientStabilizer_mk, f, Y]
+    duper [*, Quotient.eq'', mem_orbit, orbitRel_apply] {preprocessing := full}
+shortened proof!
+.
+line 58, col 8:
+rw [show fa • ia = fb • ib from e]
+* Try this:
+
+  [apply]     subst ha hb
+    simp_all only [ofQuotientStabilizer_mk, f, Y]
+    duper [*, Quotient.eq'', mem_orbit, orbitRel_apply] {preprocessing := full}
+shortened proof!
+..X.X

@@ -1,0 +1,32 @@
+.
+line 42, col 2:
+intro ⟨P, hP⟩
+* Try this:
+
+  [apply]     intro x
+    obtain ⟨val, property⟩ := x
+    simp_all only [SetLike.mk_smul_of_tower_mk, Submodule.mk_eq_zero]
+    simp_all only [Submodule.mem_torsionBy_iff, natCast_zsmul]
+shortened proof!
+...
+line 66, col 60:
+simp [h] at hn
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Nat.cast_zero, ne_eq, not_true_eq_false]
+.....
+line 71, col 4:
+simp [hn]
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_mul, zero_mul]
+.....
+line 97, col 2:
+ext P
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [AddMonoidHom.coe_comp, Function.comp_apply]
+    apply WeierstrassCurve.Affine.Point.map_map
+shortened proof!

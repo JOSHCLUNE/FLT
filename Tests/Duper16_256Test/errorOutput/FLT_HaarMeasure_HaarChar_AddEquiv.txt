@@ -1,0 +1,141 @@
+.............
+line 79, col 50:
+exact funext hComm
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_mk, ne_eq, μX, μY]
+    ext x : 1
+    simp_all only [Function.comp_apply]
+.....
+line 85, col 88:
+rfl
+* Try this:
+
+  [apply]     simp_all only [ContinuousMap.coe_mk, ne_eq, ENNReal.coe_toReal, smul_eq_mul, μX, μY]
+    rfl
+.............
+line 143, col 15:
+ext
+* Try this:
+
+  [apply]     simp_all only [Set.subset_univ]
+    ext x : 1
+    simp_all only [Set.mem_inter_iff, Set.mem_prod, Set.mem_univ, and_true, Set.mem_image, true_and]
+shortened proof!
+........_...........
+line 160, col 65:
+simp [one_mem_X, one_mem_Y]
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, map_one, Set.mem_prod, Set.mem_image, EmbeddingLike.map_eq_one_iff, exists_eq_right,
+      and_self, ν]
+..........
+line 170, col 15:
+ext
+* Try these:
+  [apply] grind only [= Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ, #295c, #8bbc]
+  [apply] grind only [= Set.mem_prod, = Set.mem_inter_iff, ← Set.mem_univ]
+  [apply] grind =>
+    cases #295c <;>
+      instantiate only [= Set.mem_prod, = Set.mem_inter_iff] <;>
+        instantiate only [= Set.mem_prod] <;> instantiate only [← Set.mem_univ] <;> cases #8bbc
+shortened proof!
+........_...........
+line 187, col 62:
+simp [one_mem_X, one_mem_Y]
+* Try this:
+
+  [apply]   simp_all only [Set.subset_univ, Set.mem_prod, and_self, ν, μ]
+...............
+line 209, col 37:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Set.subset_univ, Measure.smul_apply, nnreal_smul_coe_apply, ν, μ]
+    rfl
+.....
+line 218, col 58:
+rw [ν_apply hXopen.measurableSet]
+* Try these:
+  [apply] grind only [IsOpen.measurableSet, #dbd6]
+  [apply] grind only [IsOpen.measurableSet]
+  [apply] grind =>
+    instantiate only [#dbd6]
+    instantiate only [IsOpen.measurableSet]
+.
+line 219, col 48:
+rw [μ_apply hψYopen.measurableSet]
+* Try these:
+  [apply] grind only [IsOpen.measurableSet, #872f]
+  [apply] grind only [IsOpen.measurableSet]
+  [apply] grind =>
+    instantiate only [#872f]
+    instantiate only [IsOpen.measurableSet]
+...................................
+line 282, col 4:
+rfl
+* this parameter is redundant, environment already contains `Set.mem_pi` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.........
+line 335, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [le_principal_iff, Filter.mem_cofinite]
+    obtain ⟨val, property⟩ := i
+    obtain ⟨val_1, property_1⟩ := x
+    simp_all only
+    ext : 1
+    simp_all only [Set.MapsTo.val_restrict_apply, symm_apply_apply]
+shortened proof!
+.
+line 336, col 22:
+ext
+* Try this:
+
+  [apply]     simp_all only [le_principal_iff, Filter.mem_cofinite]
+    obtain ⟨val, property⟩ := i
+    obtain ⟨val_1, property_1⟩ := y
+    simp_all only
+    ext : 1
+    simp_all only [Set.MapsTo.val_restrict_apply, apply_symm_apply]
+shortened proof!
+.
+line 337, col 23:
+ext
+* Try this:
+
+  [apply]     rename_i x x_1
+    simp_all only [le_principal_iff, Filter.mem_cofinite]
+    obtain ⟨val, property⟩ := i
+    obtain ⟨val_1, property_1⟩ := x
+    obtain ⟨val_2, property_2⟩ := x_1
+    simp_all only [MulMemClass.mk_mul_mk]
+    ext : 1
+    simp_all only [Set.MapsTo.val_restrict_apply, map_mul, Subgroup.coe_mul]
+shortened proof!
+..............
+line 363, col 2:
+simpa [← Finset.coe_subset, Set.coe_toFinset] using hsupp
+* Try this:
+
+  [apply]   simp_all only [le_principal_iff, Filter.mem_cofinite, toMulEquiv_eq_coe, restrictedProductCongrRight_apply,
+      Subtype.forall, Function.mulSupport_subset_iff, ne_eq, Set.mem_compl_iff, Set.subset_toFinset,
+      Set.Finite.coe_toFinset, not_false_eq_true, implies_true, φ_C, I, Φ, Ψ]
+....
+line 376, col 51:
+simpa only [le_principal_iff] using! hφ
+* Try this:
+
+  [apply]     simp_all only [le_principal_iff, Filter.mem_cofinite, J]
+    exact hφ
+.......
+line 387, col 2:
+exact mulEquivHaarChar_restrictedProductCongrRight_of_principal _ hφ_J
+* Try this:
+
+  [apply]     simp_all only [id_eq, restrictedProductCongrRight_apply, J, ι_J, Φ, Φ_J]
+    apply MeasureTheory.mulEquivHaarChar_restrictedProductCongrRight_of_principal
+    intro i a
+    simp_all only [Set.mem_ofPred_eq, J]

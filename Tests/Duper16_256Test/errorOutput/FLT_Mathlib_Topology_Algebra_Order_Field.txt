@@ -1,0 +1,183 @@
+.......
+line 40, col 39:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hx₀
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, zero_lt_one]
+    grind only
+......
+line 46, col 6:
+exact tendsto_pow_atTop_nhds_zero_iff.2 this
+* Try this:
+
+  [apply]   simp_all only [ne_eq, tendsto_pow_atTop_nhds_zero_iff]
+.....
+line 52, col 2:
+linarith [tendsto_nhds_unique hcontr tendsto_const_nhds, w.pos hx₀.1]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, tendsto_const_nhds_iff, map_eq_zero]
+.....
+line 67, col 4:
+exact this b hb₁ a ha hb₂.symm <| lt_of_le_of_ne (not_lt.1 hwlog) hb₂.symm
+* Try these:
+  [apply] grind only [#26f5]
+  [apply] grind only
+  [apply] grind => instantiate only [#26f5]
+......
+line 73, col 4:
+rwa [← div_lt_div_iff₀ (Real.log_pos hwb) (Real.log_pos hwa)]
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    duper [*, div_lt_div_iff₀, Real.log_pos] {preprocessing := full}
+......
+line 78, col 47:
+simp only [Nat.cast_pos, q.den_pos]
+* Try these:
+  [apply] grind only [!Nat.cast_pos, !Rat.den_pos]
+  [apply] grind => instantiate only [!Nat.cast_pos, !Rat.den_pos]
+.
+line 79, col 72:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Real.log_pow, Real.log_zpow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, zero_div, lt_self_iff_false]
+.
+line 80, col 20:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Real.log_pow, Real.log_zpow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 80, col 61:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+......
+line 86, col 28:
+simp only [Nat.cast_pos, q.den_pos]
+* Try these:
+  [apply] grind only [!Nat.cast_pos, !Rat.den_pos]
+  [apply] grind => instantiate only [!Nat.cast_pos, !Rat.den_pos]
+...
+line 89, col 40:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, Real.log_zpow, Real.log_pow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 89, col 66:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, Real.log_zpow, Real.log_pow, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, zero_div, lt_self_iff_false]
+.
+line 90, col 33:
+linarith
+* Try this:
+
+  [apply]     simp_all only [ne_eq, map_div₀, AbsoluteValue.map_pow, map_zpow₀, AbsoluteValue.pos_iff]
+    obtain ⟨left, right⟩ := hq
+    apply Aesop.BuiltinRules.not_intro
+    intro a_1
+    subst a_1
+    simp_all only [AbsoluteValue.map_zero, Real.log_zero, EuclideanDomain.div_zero, div_eq_zero_iff, Real.log_eq_zero,
+      map_eq_zero, not_or, lt_self_iff_false]
+.
+line 91, col 2:
+exact not_lt_of_gt ((h _).1 h₀) h₁
+* Try these:
+  [apply] grind only [#b1d8]
+  [apply] grind only
+  [apply] grind => instantiate only [#b1d8]
+......
+line 101, col 72:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 101, col 86:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 102, col 40:
+linarith
+* Try this:
+  [apply] grind only
+.......
+line 118, col 66:
+linarith
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, map_eq_zero, ne_eq]
+    subst h₀
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+.....
+line 124, col 10:
+rw [← one_lt_inv_iff₀, ← map_inv₀, not_lt] at h₂
+* Try these:
+  [apply] grind only [!AbsoluteValue.pos_iff, !AbsoluteValue.nonpos_iff, AbsoluteValue.eq_zero, #8b08]
+  [apply] grind only [!AbsoluteValue.pos_iff, !AbsoluteValue.nonpos_iff, AbsoluteValue.eq_zero]
+  [apply] grind => instantiate only [#8b08, !AbsoluteValue.pos_iff, !AbsoluteValue.nonpos_iff, AbsoluteValue.eq_zero]
+shortened proof!
+......
+line 145, col 2:
+contrapose! hx
+* Try these:
+  [apply] grind only [!AbsoluteValue.nonneg, Real.rpow_inv_eq]
+  [apply] grind => instantiate only [!AbsoluteValue.nonneg, Real.rpow_inv_eq]
+shortened proof!
+......
+line 161, col 58:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 162, col 19:
+linarith
+* Try this:
+  [apply] grind only
+.
+line 162, col 38:
+linarith
+* Try this:
+  [apply] grind only

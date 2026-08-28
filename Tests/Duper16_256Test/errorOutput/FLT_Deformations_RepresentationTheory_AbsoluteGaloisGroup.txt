@@ -1,0 +1,44 @@
+......
+line 63, col 60:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.toAlgHom_restrictScalars, Algebra.algebraMap_self, RingHom.id_apply, AlgHom.coe_comp,
+      AlgHom.coe_restrictScalars', AlgEquiv.coe_toAlgHom, Function.comp_apply, AlgEquiv.one_apply,
+      AlgHom.toRingHom_eq_coe, RingHom.coe_coe]
+..............................._...
+line 131, col 52:
+positivity
+* Try this:
+
+  [apply]   simp_all only [one_div, Real.one_rpow, zero_le_one]
+.
+line 131, col 68:
+aesop
+* Try this:
+
+  [apply]   simp_all only [one_div, Real.one_rpow, inv_pos, sub_pos, Nat.cast_lt]
+.
+line 132, col 6:
+simpa [Valuation.mem_integer_iff] using this
+* Try this:
+
+  [apply]     simp_all only [Valued.toNormedField.norm_le_one_iff, Subring.coe_subtype, Subtype.range_coe_subtype,
+      SetLike.setOfPred_mem_eq, SetLike.mem_coe]
+    exact this
+........
+line 147, col 4:
+simp [H, spectralNorm_zero]
+* Try these:
+  [apply] grind only [spectralNorm_zero]
+  [apply] grind => instantiate only [spectralNorm_zero]
+...........
+line 181, col 41:
+rw [hτ x hx, hσ x hx]
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, #1c04, #f11f]
+  [apply] grind only [usr Set.mem_ofPred_eq]
+  [apply] grind =>
+    instantiate only [usr Set.mem_ofPred_eq]
+    instantiate only [#1c04, #f11f]
+._.......

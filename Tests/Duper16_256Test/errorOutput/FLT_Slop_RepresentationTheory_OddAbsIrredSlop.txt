@@ -1,0 +1,292 @@
+.
+line 82, col 4:
+change (ρ 1).baseChange l = 1
+* Try this:
+
+  [apply]   simp_all only [map_one, LinearMap.baseChange_one]
+shortened proof!
+.
+line 87, col 4:
+change (ρ (g * h)).baseChange l = (ρ g).baseChange l * (ρ h).baseChange l
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    ext x : 3
+    simp_all only [TensorProduct.AlgebraTensorModule.curry_apply, TensorProduct.curry_apply,
+      LinearMap.coe_restrictScalars, LinearMap.baseChange_tmul, End.mul_apply]
+shortened proof!
+.................
+line 140, col 8:
+exact Or.inl (Subrepresentation.toSubmodule_injective hb)
+* Try this:
+
+  [apply]     simp_all only [Submodule.nontrivial_iff]
+    apply Or.inl
+    ext x : 2
+    simp_all only [Submodule.nontrivial_iff, Submodule.mem_bot]
+    rfl
+.........
+line 165, col 4:
+rw [hφ, one_smul] at key
+* Try this:
+
+  [apply]     simp_all only [ne_eq, TensorProduct.mk_apply, one_smul, ψ]
+    subst key
+    apply Algebra.algebraMap_eq_smul_one
+shortened proof!
+...
+line 171, col 4:
+rw [TensorProduct.mk_apply, TensorProduct.tmul_smul, TensorProduct.smul_tmul',
+      Algebra.algebraMap_eq_smul_one]
+* Try this:
+
+  [apply]   smt +mono [*, Algebra.algebraMap_eq_smul_one, TensorProduct.smul_tmul]
+...
+line 187, col 4:
+rw [Module.End.mem_eigenspace_iff, one_smul]
+* Try this:
+
+  [apply]   simp_all only [End.mem_genEigenspace_one, one_smul]
+.....
+line 193, col 4:
+simp only [Module.End.mul_apply] at hc
+* Try this:
+
+  [apply]   simp_all only [End.mem_genEigenspace_one, one_smul, implies_true, End.mul_apply]
+shortened proof!
+......
+line 203, col 4:
+have h1 := congrArg Subtype.val hμ
+* Try this:
+
+  [apply]     simp_all
+    obtain ⟨val, property⟩ := v
+    simp_all only [Submodule.mk_eq_zero, SetLike.mk_smul_mk, Subtype.mk.injEq]
+shortened proof!
+..........
+line 219, col 4:
+rw [LinearMap.mem_ker]
+* Try this:
+
+  [apply]   simp_all only [End.mem_genEigenspace_one, one_smul, implies_true, ne_eq, Subtype.forall, ZeroMemClass.coe_eq_zero,
+      not_false_eq_true, LinearMap.mem_ker, LinearMap.sub_apply, LinearMap.smul_apply, End.one_apply, sub_self]
+shortened proof!
+..
+line 224, col 4:
+exfalso
+* Try this:
+
+  [apply]   simp_all only [End.mem_genEigenspace_one, one_smul, implies_true, ne_eq, Subtype.forall, ZeroMemClass.coe_eq_zero,
+      not_false_eq_true, Submodule.mem_bot, map_zero, zero_mem]
+shortened proof!
+...
+line 230, col 6:
+rw [htop]
+* Try this:
+
+  [apply]   simp_all only [End.mem_genEigenspace_one, one_smul, implies_true, ne_eq, Subtype.forall, ZeroMemClass.coe_eq_zero,
+      not_false_eq_true, Submodule.mem_top, imp_self, LinearMap.ker_eq_top, LinearMap.ker_zero]
+shortened proof!
+.
+line 231, col 4:
+rw [LinearMap.mem_ker] at hw
+* Try these:
+  [apply] grind only [LinearMap.mem_ker, LinearMap.sub_apply]
+  [apply] grind =>
+    instantiate only [LinearMap.mem_ker]
+    instantiate only [LinearMap.sub_apply]
+shortened proof!
+...............
+line 266, col 10:
+have h := f.map_smul (algebraMap k A μ) v
+* Try this:
+
+  [apply]   simp_all only [LinearMap.map_smul_of_tower, RingHom.id_apply, A]
+shortened proof!
+.....
+line 274, col 4:
+have h := LinearMap.congr_fun hμ v
+* Try this:
+
+  [apply]   simp_all only [LinearMap.smul_apply, End.one_apply, A, fk]
+shortened proof!
+......
+line 285, col 8:
+change T (g v) = g (T v)
+* Try this:
+
+  [apply]   simp_all only [End.smul_def, map_smul, RingHom.id_apply, A]
+shortened proof!
+...
+line 289, col 2:
+exact haT ▸ a.2
+* Try this:
+
+  [apply]     subst haT
+    simp_all only [LinearMap.coe_mk, AddHom.coe_mk, SetLike.coe_mem, A, T']
+.....
+line 306, col 65:
+rw [hEapp]
+* Try this:
+
+  [apply]     simp_all only [E]
+    rfl
+shortened proof!
+...........
+line 319, col 36:
+rw [h]
+* Try this:
+
+  [apply]   simp_all only [Algebra.map_top, Algebra.mem_top, E]
+shortened proof!
+..
+line 321, col 4:
+rwa [Subalgebra.mem_restrictScalars] at this
+* Try this:
+
+  [apply]   simp_all only [Algebra.map_top, AlgHom.mem_range, exists_apply_eq_apply, Subalgebra.mem_restrictScalars, E]
+................
+line 336, col 58:
+rw [hspan]
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top, Submodule.mem_top, E, ι, b, bl]
+shortened proof!
+....
+line 341, col 4:
+exact hrange T
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top, Submodule.mem_top, Subalgebra.coe_toSubmodule, SetLike.mem_coe, E, ι, b, bl]
+.
+line 342, col 2:
+exact hle hxspan
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top, Submodule.mem_top, top_le_iff, Algebra.toSubmodule_eq_top, E, ι, b, bl]
+.......
+line 360, col 8:
+obtain ⟨g, rfl⟩ := hx
+* Try this:
+
+  [apply]     intro w a
+    simp_all only [Set.mem_range]
+    obtain ⟨w_1, h_1⟩ := hx
+    subst h_1
+    simp_all only
+shortened proof!
+.
+line 363, col 8:
+intro w hw
+* Try this:
+
+  [apply]     intro w a
+    simp_all only [algebraMap_end_apply]
+    apply SMulMemClass.smul_mem
+    simp_all only
+shortened proof!
+.
+line 369, col 8:
+intro w hw
+* Try this:
+
+  [apply]     intro w a
+    simp_all only [LinearMap.add_apply]
+    duper [*, add_mem] {preprocessing := full}
+shortened proof!
+.
+line 373, col 8:
+intro w hw
+* Try this:
+
+  [apply]     intro w a
+    simp_all only [End.mul_apply]
+shortened proof!
+..
+line 378, col 14:
+rw [h]
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top, implies_true, forall_const]
+shortened proof!
+..
+line 380, col 4:
+exact Or.inl hbot
+* Try this:
+
+  [apply]     subst hbot
+    simp_all only [Submodule.mem_bot, map_zero, zero_mem, implies_true, Algebra.mem_top, imp_self, bot_ne_top, or_false]
+..........
+line 391, col 6:
+exact hall
+* Try this:
+
+  [apply]   smt +mono [*]
+..
+line 395, col 6:
+simp [LinearMap.smulRight_apply, LinearMap.smul_apply, smul_eq_mul,
+        inv_mul_cancel₀ hφ0]
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top, implies_true, imp_self, ne_eq, LinearMap.coe_smulRight, LinearMap.smul_apply,
+      smul_eq_mul, not_false_eq_true, inv_mul_cancel₀, one_smul]
+.
+line 397, col 4:
+have h2 := hWall (((φ w)⁻¹ • φ).smulRight v) w hwW
+* Try these:
+  [apply] grind only [#390f]
+  [apply] grind only
+  [apply] grind => instantiate only [#390f]
+shortened proof!
+...
+line 411, col 4:
+by_contra hV
+* Try this:
+
+  [apply]   simp_all only [FaithfullyFlat.nontrivial_tensorProduct_iff_right]
+shortened proof!
+..........
+line 434, col 16:
+rw [map_zero]
+* Try this:
+
+  [apply]   simp_all only [FaithfullyFlat.nontrivial_tensorProduct_iff_right, map_zero, zero_mem]
+shortened proof!
+.
+line 435, col 29:
+rw [map_add]
+* Try this:
+
+  [apply]     simp_all only [FaithfullyFlat.nontrivial_tensorProduct_iff_right, Submodule.map_coe, TensorProduct.mk_apply, map_add]
+    apply AddMemClass.add_mem
+    · simp_all only [TensorProduct.mk_apply]
+    · simp_all only [TensorProduct.mk_apply]
+shortened proof!
+.
+line 436, col 25:
+rw [map_smul]
+* Try this:
+
+  [apply]     simp_all only [FaithfullyFlat.nontrivial_tensorProduct_iff_right, Submodule.map_coe, TensorProduct.mk_apply, map_smul]
+    apply SMulMemClass.smul_mem
+    simp_all only [TensorProduct.mk_apply]
+shortened proof!
+........
+line 464, col 2:
+obtain ⟨v, hv0⟩ := exists_ne (0 : V)
+* Try this:
+
+  [apply]     apply Slop.OddRep.isIrreducible_of_adjoinRange_eq_top
+    simp_all only
+shortened proof!
+...
+line 488, col 4:
+intro hirr
+* Try this:
+
+  [apply]     intro a
+    apply Slop.OddRep.isIrreducible_baseChange_of_finrank_eigenspace_eq_one
+    · simp_all only
+    · exact hg
+shortened proof!
+..

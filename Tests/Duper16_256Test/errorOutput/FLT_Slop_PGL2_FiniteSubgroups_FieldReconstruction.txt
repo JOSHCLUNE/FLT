@@ -1,0 +1,1166 @@
+.......
+line 85, col 4:
+refine (Polynomial.natDegree_sub_eq_left_of_natDegree_lt ?_).trans (Polynomial.natDegree_X_pow (p ^ m))
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_eq_zero_of_lt` annotated with `@[grind <=]`
+* Try these:
+  [apply] grind only [Fact.out, FiniteField.X_pow_card_pow_sub_X_natDegree_eq, Nat.Prime.one_lt]
+  [apply] grind =>
+    instantiate only [Fact.out, FiniteField.X_pow_card_pow_sub_X_natDegree_eq]
+    instantiate only [Nat.Prime.one_lt]
+shortened proof!
+..
+line 90, col 6:
+rw [hP_deg, Polynomial.natDegree_zero]
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Polynomial.coeff_X_pow` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Fact.out, !Nat.one_le_pow, FiniteField.X_pow_card_pow_sub_X_natDegree_eq,
+    = Polynomial.natDegree_zero, Nat.Prime.one_lt]
+  [apply] grind =>
+    instantiate only [Fact.out, !Nat.one_le_pow, FiniteField.X_pow_card_pow_sub_X_natDegree_eq,
+      = Polynomial.natDegree_zero]
+    instantiate only [Nat.Prime.one_lt]
+shortened proof!
+.....
+line 95, col 63:
+omega
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq, P]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+..
+line 96, col 21:
+ring
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, zero_mul, mul_neg, mul_one, neg_neg, zero_add, P]
+....
+line 100, col 4:
+rw [Multiset.mem_toFinset, Polynomial.mem_roots hP_ne_zero]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq, Multiset.mem_toFinset, Polynomial.mem_roots', not_false_eq_true,
+      Polynomial.IsRoot.def, Polynomial.eval_sub, Polynomial.eval_pow, Polynomial.eval_X, true_and, P]
+    apply Iff.intro
+    · intro a
+      simp_all only [sub_self]
+    · intro a
+      grind only
+shortened proof!
+.....
+line 116, col 6:
+exact hV_zero
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq]
+....
+line 127, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.
+line 132, col 61:
+erw [Matrix.det_fin_two, mul_zero, sub_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+.....__........
+line 161, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 162, col 50:
+ring
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 163, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [mul_one, mul_zero, add_zero]
+..
+line 164, col 46:
+ring
+* Try this:
+
+  [apply]   simp_all only [zero_mul, mul_one, zero_add]
+.....
+line 179, col 4:
+exact ne_of_gt (lt_trans (by norm_num : 1 < 2) Fact.out) h_order.symm
+* Try this:
+
+  [apply]     subst h_order hx
+    simp_all only [gt_iff_lt, Nat.not_ofNat_lt_one]
+    apply Fact.out
+.......
+line 194, col 6:
+exact hP (g • P)
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt]
+....
+line 198, col 4:
+exact h_dvd
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, not_lt, Sylow.coe_coe]
+....
+line 203, col 64:
+rw [two_mul]
+* Try this:
+  [apply] grind only
+shortened proof!
+...............
+line 241, col 4:
+exact ⟨b, show translationPGL p b ∈ H from hb ▸ hg, hb.symm⟩
+* Try this:
+
+  [apply]     subst hb
+    simp_all only [gt_iff_lt, SetLike.mem_coe, Set.mem_image]
+    apply Exists.intro
+    · apply And.intro
+      · exact hg
+      · rfl
+....
+line 245, col 8:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Matrix.det_fin_two_of, mul_one, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.......
+line 253, col 6:
+exact eq_of_sub_eq_zero (Eq.trans
+        (Eq.trans
+          (show a - b = ((1 : K p) * (1 : K p) + (a - b) * (1 : K p)) - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p)) by ring)
+          (congrArg (fun x ↦ x - ((1 : K p) * (1 : K p) + (0 : K p) * (0 : K p))) h_00))
+        (sub_self _))
+* Try this:
+  [apply] grind only
+.
+line 258, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    rfl
+................
+line 308, col 6:
+convert (Fintype.card_eq_nat_card.trans (GaloisField.card p m (ne_of_gt hm))).symm
+* Try these:
+  [apply] grind only [!GaloisField.card, Fintype.card_eq_nat_card]
+  [apply] grind => instantiate only [!GaloisField.card, Fintype.card_eq_nat_card]
+.......
+line 322, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+......
+line 331, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+.
+line 332, col 12:
+exact hb'
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero]
+    rfl
+.
+line 333, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, map_zero]
+    rfl
+.
+line 334, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hb'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+...
+line 342, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, ne_eq, map_eq_zero, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+......
+line 351, col 12:
+exact hc'
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one]
+    rfl
+.
+line 352, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero, map_zero]
+    rfl
+.
+line 353, col 12:
+exact map_zero (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, map_zero]
+    rfl
+.
+line 354, col 12:
+exact map_one (galoisFieldRingHom p m)
+* Try this:
+
+  [apply]     subst hc'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, map_one]
+    rfl
+.
+line 361, col 10:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+..
+line 367, col 4:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, Matrix.det_fin_two_of, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+......
+line 375, col 40:
+rw [mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, mul_one, mul_zero, add_zero]
+..
+line 376, col 46:
+rw [zero_mul, add_zero, mul_div_cancel₀ b ha]
+* this parameter is redundant, environment already contains `ZMod.natCast_mod` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 377, col 48:
+rw [mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, mul_one, mul_zero, add_zero]
+..
+line 378, col 54:
+rw [zero_mul, mul_one, zero_add]
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, zero_mul, mul_one, zero_add]
+...
+line 382, col 58:
+rw [hb_mem]
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, ne_eq, pow_eq_zero_iff', Nat.pow_eq_zero, not_and, Decidable.not_not, false_and,
+      not_false_eq_true, div_left_inj']
+    exact hb_mem
+...
+line 393, col 25:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, Matrix.det_fin_two_of, mul_zero, sub_zero, or_self,
+      not_false_eq_true]
+shortened proof!
+.....
+line 399, col 2:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero,
+    Matrix.cons_val_one, mul_zero, zero_add, mul_one] at h0
+* Try this:
+
+  [apply]   simp_all only [Matrix.smul_cons, smul_zero, Matrix.smul_empty, mul_zero, Fin.isValue, Matrix.mulVec_cons,
+      Nat.succ_eq_add_one, Nat.reduceAdd, zero_smul, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply,
+      Function.comp_apply, Matrix.cons_val_zero, Matrix.tail_cons, Matrix.head_cons, zero_add]
+shortened proof!
+.
+line 406, col 33:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, Matrix.det_fin_two_of, mul_zero, sub_zero, or_self,
+      not_false_eq_true]
+shortened proof!
+.
+line 409, col 33:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, Matrix.det_fin_two_of, mul_zero, sub_zero, or_self,
+      not_false_eq_true]
+shortened proof!
+.........................
+line 450, col 25:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, Matrix.det_fin_two_of, mul_zero, sub_zero, or_self,
+      not_false_eq_true]
+shortened proof!
+.
+line 453, col 25:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ne_eq, mul_eq_zero, not_or, Matrix.det_fin_two_of, mul_zero, sub_zero, or_self,
+      not_false_eq_true]
+shortened proof!
+......
+line 461, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, mul_zero, add_zero, one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_eq_zero, not_or, Fin.isValue, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      mul_zero, Matrix.empty_vecMul, add_zero, Matrix.add_cons, Matrix.empty_add_empty, zero_smul, zero_add,
+      Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, one_smul]
+..
+line 464, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, one_mul]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, mul_eq_zero, not_or, Fin.isValue, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      mul_zero, Matrix.empty_vecMul, add_zero, Matrix.add_cons, Matrix.empty_add_empty, zero_smul, zero_add,
+      Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, Matrix.cons_val_zero, one_smul]
+    obtain ⟨left, right⟩ := h_det
+    grind only
+shortened proof!
+..
+line 468, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, mul_zero, add_zero, zero_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_eq_zero, not_or, Fin.isValue, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      mul_zero, Matrix.empty_vecMul, add_zero, Matrix.add_cons, Matrix.empty_add_empty, zero_smul, zero_add,
+      Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, one_smul]
+..
+line 471, col 4:
+simp only [Matrix.mul_apply, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.of_apply, mul_one, zero_mul, zero_add, one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_eq_zero, not_or, Fin.isValue, Matrix.cons_mul, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Matrix.vecMul_cons, Matrix.head_cons, Matrix.smul_cons, smul_eq_mul, mul_one, Matrix.smul_empty, Matrix.tail_cons,
+      mul_zero, Matrix.empty_vecMul, add_zero, Matrix.add_cons, Matrix.empty_add_empty, zero_smul, zero_add,
+      Matrix.empty_mul, Equiv.symm_apply_apply, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, one_smul]
+.
+line 479, col 27:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.det_fin_two_of, not_false_eq_true]
+shortened proof!
+..........
+line 490, col 4:
+exact h_zero.symm ▸ map_zero _
+* Try this:
+
+  [apply]     subst ha' hb' hc' hd'
+    simp_all only [ge_iff_le, Fin.isValue, Matrix.of_apply, Matrix.cons_val', Matrix.cons_val_zero,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, ne_eq, map_zero]
+..........
+line 515, col 82:
+exact ne_of_gt Fact.out
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+    apply Fact.out
+..
+line 527, col 45:
+rw [mul_one, mul_zero, sub_zero]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only
+shortened proof!
+..
+line 528, col 99:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, Matrix.det_fin_two_of, not_false_eq_true]
+shortened proof!
+...
+line 530, col 71:
+rw [mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, not_false_eq_true]
+shortened proof!
+......
+line 536, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one, zero_add, one_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons, zero_smul, one_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons, zero_add]
+..
+line 539, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one, zero_add]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, zero_smul, one_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons,
+      zero_add]
+......
+line 545, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, one_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Function.comp_apply, Matrix.head_cons, Matrix.tail_cons, sub_add_cancel]
+shortened proof!
+..
+line 549, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, zero_add]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_one, mul_zero, sub_zero, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty,
+      add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons, Matrix.tail_cons, zero_add]
+..
+line 558, col 45:
+rw [mul_zero, mul_one, zero_sub, neg_ne_zero]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only
+shortened proof!
+..
+line 559, col 99:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Matrix.det_fin_two_of,
+      not_false_eq_true]
+shortened proof!
+.......
+line 566, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, one_mul, mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons, one_smul, zero_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Function.comp_apply, Matrix.head_cons, Pi.zero_apply]
+..
+line 569, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, one_smul, zero_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons, Pi.zero_apply]
+......
+line 575, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, zero_add]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, Matrix.mulVec_cons, zero_smul, one_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons, zero_add]
+..
+line 578, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_mul, zero_add]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, zero_smul, one_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons]
+......
+line 584, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, one_mul]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Function.comp_apply, Matrix.head_cons, Matrix.tail_cons, add_sub_cancel]
+shortened proof!
+..
+line 587, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, add_zero]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_zero, mul_one, zero_sub, neg_sub, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty,
+      add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons, Matrix.tail_cons]
+..
+line 595, col 43:
+rw [mul_neg_one, mul_one, sub_neg_eq_add, add_comm, ← sub_eq_add_neg]
+* this parameter is redundant, environment already contains `Nat.odd_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+..
+line 596, col 97:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Matrix.det_fin_two_of, not_false_eq_true]
+shortened proof!
+.......
+line 603, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, one_mul, mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons, one_smul, zero_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Function.comp_apply, Matrix.head_cons, Pi.zero_apply]
+..
+line 606, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, mul_zero, add_zero]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, one_smul, zero_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons, Pi.zero_apply]
+......
+line 612, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, neg_mul, one_mul, Matrix.mulVec_cons, zero_smul, one_smul, Matrix.mulVec_empty,
+      add_zero, Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons, zero_add]
+shortened proof!
+..
+line 615, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, Matrix.mulVec_cons, zero_smul, one_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons,
+      zero_add]
+......
+line 621, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_zero, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply,
+      Function.comp_apply, Matrix.head_cons, Matrix.tail_cons]
+    grind only
+shortened proof!
+..
+line 624, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, mul_neg, mul_one, sub_neg_eq_add, Nat.succ_eq_add_one, Nat.reduceAdd,
+      Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, mul_zero, Matrix.mulVec_cons, one_smul,
+      Matrix.mulVec_empty, add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons, Matrix.tail_cons,
+      add_neg_cancel]
+shortened proof!
+..
+line 634, col 4:
+intro heq
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+..
+line 636, col 115:
+rw [Matrix.det_fin_two]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.det_fin_two_of, not_false_eq_true]
+shortened proof!
+.......
+line 647, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, add_zero, mul_one]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.mulVec_cons, one_smul, zero_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Function.comp_apply,
+      Matrix.head_cons, Pi.zero_apply]
+    grind only
+shortened proof!
+..
+line 650, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, add_zero, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, mul_one, Matrix.mulVec_cons, one_smul, zero_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Function.comp_apply, Matrix.head_cons, Pi.zero_apply]
+......
+line 656, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.mulVec_cons, zero_smul, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.zero_apply,
+      Function.comp_apply, Matrix.tail_cons, Matrix.head_cons, zero_add]
+    grind only
+shortened proof!
+..
+line 659, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_zero, zero_add, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, mul_one, Matrix.mulVec_cons, zero_smul, one_smul, Matrix.mulVec_empty, add_zero,
+      Pi.add_apply, Pi.zero_apply, Function.comp_apply, Matrix.tail_cons, Matrix.head_cons, zero_add]
+......
+line 665, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_zero,
+      Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Function.comp_apply, Matrix.head_cons,
+      Matrix.tail_cons]
+    grind only
+shortened proof!
+..
+line 668, col 6:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one,
+      Matrix.cons_val_fin_one, mul_one, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply,
+      Function.comp_apply, Matrix.head_cons, Matrix.tail_cons, sub_add_sub_cancel]
+shortened proof!
+....
+line 680, col 6:
+exact absurd rfl hab
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, not_false_eq_true, not_true_eq_false]
+..
+line 682, col 8:
+exact absurd rfl hac
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, not_true_eq_false]
+....
+line 686, col 8:
+exact absurd rfl hbc
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, not_false_eq_true, not_true_eq_false]
+........
+line 699, col 4:
+rcases heq with ⟨c, hc⟩
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, Matrix.smul_cons, smul_zero, Matrix.smul_empty, Matrix.vecCons_inj, zero_ne_one,
+      and_true, false_and, exists_const]
+shortened proof!
+....
+line 705, col 4:
+rcases heq with ⟨c, hc⟩
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.smul_cons, Matrix.smul_empty, Matrix.vecCons_inj, and_true]
+    obtain ⟨w, h⟩ := heq
+    obtain ⟨left, right⟩ := h
+    simp_all only [zero_ne_one]
+shortened proof!
+...
+line 710, col 4:
+rcases heq with ⟨c, hc⟩
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq, Matrix.smul_cons, Matrix.smul_empty, Matrix.vecCons_inj, and_true]
+    obtain ⟨w, h⟩ := heq
+    obtain ⟨left, right⟩ := h
+    simp_all only [one_ne_zero]
+shortened proof!
+..
+line 715, col 35:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, smul_left_cancel_iff]
+shortened proof!
+.
+line 716, col 34:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, smul_left_cancel_iff]
+shortened proof!
+.
+line 717, col 35:
+rw [← inv_smul_eq_iff, inv_smul_smul] at heq
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, smul_left_cancel_iff]
+shortened proof!
+..
+line 719, col 4:
+exact (mul_inv_cancel_left h g).symm
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, ge_iff_le, ne_eq, MonoidHom.mem_range, mul_inv_cancel_left]
+...........
+line 733, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_zero, one_mul, Matrix.mulVec_cons,
+      one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.smul_apply, Function.comp_apply, Matrix.head_cons,
+      smul_eq_mul, mul_one, Matrix.tail_cons]
+shortened proof!
+..
+line 736, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one, mul_one,
+      Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.smul_apply, Function.comp_apply,
+      Matrix.head_cons, smul_eq_mul, mul_zero, Matrix.tail_cons, zero_add]
+shortened proof!
+.
+line 741, col 59:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [mul_one, ne_eq, one_ne_zero, not_false_eq_true]
+......
+line 751, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_zero, one_mul,
+      Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.smul_apply, Function.comp_apply,
+      Matrix.head_cons, smul_eq_mul, Matrix.tail_cons]
+    grind only
+shortened proof!
+..
+line 754, col 4:
+simp only [Matrix.of_apply, Matrix.mulVec, dotProduct, Fin.sum_univ_two, Matrix.cons_val_zero, Matrix.cons_val_one]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      mul_one, Matrix.mulVec_cons, one_smul, Matrix.mulVec_empty, add_zero, Pi.add_apply, Pi.smul_apply,
+      Function.comp_apply, Matrix.head_cons, smul_eq_mul, mul_zero, Matrix.tail_cons, zero_add]
+shortened proof!
+.
+line 759, col 59:
+rw [mul_one]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_one, not_false_eq_true]
+shortened proof!
+..
+line 770, col 2:
+exact F_q_mul_closed p m x y⁻¹ hx (F_q_inv p m y hy hy_ne)
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Dickson.F_q_mul_closed
+    · simp_all only
+    · apply Dickson.F_q_inv
+      · simp_all only
+      · simp_all only [ne_eq, not_false_eq_true]
+.....................
+line 797, col 8:
+change galoisFieldRingHom p m (g.1 0 0) * 1 = galoisFieldRingHom p m (g.1 0 0) * 1 + galoisFieldRingHom p m (g.1 0 1) * 0
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, map_eq_zero, ne_eq, mul_one, Matrix.GeneralLinearGroup.map_apply, mul_zero,
+      add_zero, den, num]
+shortened proof!
+...
+line 802, col 8:
+change galoisFieldRingHom p m (g.1 0 0) * 0 = galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, map_eq_zero, ne_eq, mul_zero, Matrix.GeneralLinearGroup.map_apply, map_zero,
+      mul_one, add_zero, den, num]
+shortened proof!
+......
+line 812, col 10:
+exact h
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, map_eq_zero, ne_eq, not_false_eq_true, den]
+.......
+line 819, col 10:
+change den⁻¹ * (galoisFieldRingHom p m (g.1 0 0) * 1 + galoisFieldRingHom p m (g.1 0 1) * 0) = num / den
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Fin.isValue, map_eq_zero, Matrix.GeneralLinearGroup.map_apply, mul_one, mul_zero, add_zero,
+      den, num]
+    grind only
+shortened proof!
+...
+line 827, col 10:
+change den⁻¹ * (galoisFieldRingHom p m (g.1 1 0) * 1 + galoisFieldRingHom p m (g.1 1 1) * 0) = 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, map_eq_zero, Matrix.GeneralLinearGroup.map_apply, mul_one, mul_zero, add_zero,
+      ne_eq, not_false_eq_true, inv_mul_cancel₀, den]
+shortened proof!
+..........
+line 842, col 10:
+change (galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1)) * galoisFieldRingHom p m (g.1 1 0) - (galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1)) * galoisFieldRingHom p m (g.1 0 0) = _
+* this parameter is redundant, environment already contains `map_pow` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zpow` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+........
+line 851, col 8:
+change (galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1)) * 1 = galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1) * 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, ne_eq, mul_one, Matrix.GeneralLinearGroup.map_apply, den, num]
+shortened proof!
+...
+line 856, col 8:
+change (galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1)) * 0 = galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, ne_eq, mul_zero, Matrix.GeneralLinearGroup.map_apply, mul_one, den, num]
+shortened proof!
+...........
+line 872, col 10:
+change den⁻¹ * (galoisFieldRingHom p m (g.1 0 0) * a + galoisFieldRingHom p m (g.1 0 1) * 1) = num / den
+* Try this:
+
+  [apply]     simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply, mul_one, den, num]
+    grind only
+shortened proof!
+...
+line 880, col 10:
+change den⁻¹ * (galoisFieldRingHom p m (g.1 1 0) * a + galoisFieldRingHom p m (g.1 1 1) * 1) = 1
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, Fin.isValue, Matrix.GeneralLinearGroup.map_apply, mul_one, ne_eq, not_false_eq_true,
+      inv_mul_cancel₀, den]
+shortened proof!
+........
+line 915, col 4:
+exact hP_fix
+* Try this:
+
+  [apply]     intro g_1 a
+    simp_all only [gt_iff_lt, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right,
+      forall_exists_index, SetLike.coe_mem]
+    obtain ⟨val, property⟩ := g
+    obtain ⟨w, h⟩ := a
+    simp_all only
+...
+line 953, col 4:
+exact hm
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq]
+..
+line 955, col 6:
+exact hV_card
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq]
+..
+line 957, col 6:
+change v⁻¹ * x = v⁻¹ * y at hxy
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, mul_eq_mul_left_iff, inv_eq_zero, or_false]
+shortened proof!
+.
+line 959, col 4:
+exact ⟨0, hV_zero, mul_zero _⟩
+* Try this:
+
+  [apply]   simp_all only [ge_iff_le, ne_eq, Set.mem_image, mul_eq_zero, inv_eq_zero, false_or, exists_eq_right]
+.
+line 960, col 4:
+exact ⟨v, hv, inv_mul_cancel₀ hv_ne⟩
+* generated tactic cannot close the goal
+  · instantiate only [#c013, = Set.mem_image]
+    instantiate only [#7c9f]
+Initial goal
+case grind
+p : ℕ
+inst✝ : Fact (Nat.Prime p)
+m : ℕ
+hm : m ≥ 1
+V : Set (K p)
+hV_card : V.ncard = p ^ m
+_hV_add : ∀ (x y : K p), x ∈ V → y ∈ V → x + y ∈ V
+hV_zero : 0 ∈ V
+_hV_neg : ∀ x ∈ V, -x ∈ V
+hV_stable : ∀ (c : K p), c ^ (p ^ m - 1) = 1 → c ≠ 0 → ∀ x ∈ V, c * x ∈ V
+v : K p
+hv : v ∈ V
+hv_ne : v ≠ 0
+h✝ : 1 ∉ HMul.hMul v⁻¹ '' V
+⊢ False
+* Try these:
+  [apply] grind only [= Set.mem_image, #c013, #7c9f]
+  [apply] grind only [= Set.mem_image]
+  [apply] grind =>
+    instantiate only [#c013, = Set.mem_image]
+    instantiate only [#7c9f]
+.
+line 961, col 4:
+rintro c hc hc_ne _ ⟨x, hx, rfl⟩
+* Try this:
+
+  [apply]     intro c a a_1 x a_2
+    simp_all only [ge_iff_le, ne_eq, Set.mem_image]
+    obtain ⟨w, h⟩ := a_2
+    obtain ⟨left, right⟩ := h
+    subst right
+    grind only [#accb, #b6f3]
+shortened proof!
+.........
+line 977, col 6:
+exact ⟨a, ha, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.toMonoidHom_eq_coe, MonoidHom.coe_coe, MulAut.conj_apply, Subgroup.mem_map, mul_left_inj,
+      mul_right_inj, exists_eq_right]
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only
+......
+line 983, col 6:
+exact Subgroup.mem_map.mpr ⟨a, ha, rfl⟩
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.toMonoidHom_eq_coe, MulAut.conj_apply, Subgroup.mem_map, MonoidHom.coe_coe, mul_left_inj,
+      mul_right_inj, exists_eq_right]
+...........
+line 998, col 13:
+exact h0
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue, Pi.zero_apply]
+.
+line 999, col 13:
+exact hv1
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Fin.isValue, Pi.zero_apply]
+....
+line 1003, col 13:
+exact mul_one (v 0)
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, Pi.smul_apply, Matrix.cons_val_zero, Units.smul_mk0, smul_eq_mul, mul_one]
+.
+line 1005, col 8:
+change v 0 * 0 = v 1
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, Pi.smul_apply, Matrix.cons_val_one, Matrix.cons_val_fin_one, smul_zero]
+shortened proof!
+......
+line 1013, col 13:
+exact mul_div_cancel₀ (v 0) hv1
+* Try this:
+
+  [apply]     simp_all only [Fin.isValue, Pi.smul_apply, Matrix.cons_val_zero, Units.smul_mk0, smul_eq_mul]
+    simp_all only [ne_eq, Fin.isValue]
+    grind only
+.
+line 1014, col 13:
+exact mul_one (v 1)
+* Try this:
+
+  [apply]   simp_all only [Fin.isValue, Pi.smul_apply, Matrix.cons_val_one, Matrix.cons_val_fin_one, Units.smul_mk0, smul_eq_mul,
+      mul_one]
+..
+line 1024, col 4:
+exact Set.singleton_subset_iff.mpr (infty_mem_orbitInfty p G')
+* Try this:
+
+  [apply]     simp_all only [Set.singleton_subset_iff]
+    apply Dickson.infty_mem_orbitInfty
+....
+line 1028, col 4:
+exact orbit_closed_under_translation p G' α₀ hα₀ b (hV_sub b hb)
+* Try this:
+
+  [apply]     simp_all only [Set.mem_preimage]
+    apply Dickson.orbit_closed_under_translation
+    · simp_all only
+    · simp_all only
+......
+line 1052, col 10:
+rw [h_image] at h_pi
+* Try this:
+
+  [apply]     subst hS_card
+    simp_all only [ne_eq, Finset.forall_mem_not_eq', not_false_eq_true, ge_iff_le, Finset.one_le_card]
+shortened proof!
+.....
+line 1083, col 6:
+rw [h, ← mul_assoc, mul_inv_cancel₀ hc, one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, mul_inv_cancel_left₀]
+...
+line 1091, col 6:
+simp only [Matrix.det_fin_two, Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one, mul_one, sub_zero, ne_eq]
+* Try this:
+
+  [apply]   simp_all only [Matrix.det_fin_two_of, mul_one, sub_zero, ne_eq, one_ne_zero, not_false_eq_true]
+shortened proof!
+.....
+line 1096, col 2:
+exact (calc b = 1 + (b + -a) + a - 1 := by ring
+            _ = 1 + a - 1 := by rw [← h_eq]
+            _ = a := by ring).symm
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 1108, col 4:
+have h2 := h 1
+* Try this:
+
+  [apply]     subst hg_eq
+    simp_all only [mul_one, one_mul]
+shortened proof!
+.......
+line 1117, col 55:
+rw [div_eq_mul_inv, mul_comm]
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 1121, col 4:
+intro _
+* Try this:
+
+  [apply]     intro h_1
+    subst hg_eq h_ad
+    simp_all only [ne_eq, not_false_eq_true, div_self, one_mul, Matrix.GeneralLinearGroup.val_mkOfDetNeZero]
+shortened proof!
+...
+line 1123, col 57:
+rw [Ring.inverse_eq_inv, mul_inv_rev, mul_comm]
+* Try this:
+
+  [apply]     subst hg_eq h_ad
+    simp_all only [ne_eq, not_false_eq_true, div_self, Matrix.det_fin_two_of, mul_zero, sub_zero,
+      Matrix.GeneralLinearGroup.val_mkOfDetNeZero, imp_self, one_mul, Ring.inverse_eq_inv', mul_inv_rev]
+...__........
+line 1145, col 12:
+have h1x_simp : g₁ * translationPGL p x = g₁ := by
+              rw [← mul_one (g₁ * translationPGL p x), ← inv_mul_cancel g₁, ← mul_assoc, h1x, one_mul]
+* Try this:
+
+  [apply]     subst hc
+    simp_all only [zero_mul, conj_eq_one_iff, mul_one, mul_inv_cancel, implies_true, mul_inv_rev, inv_inv,
+      mul_inv_mul_mul_cancel, one_mul]
+shortened proof!
+..
+line 1151, col 12:
+rw [mul_inv_cancel₀ hc] at h_mul
+* Try this:
+
+  [apply]   simp_all only [mul_inv_rev, inv_inv, ne_eq, not_false_eq_true, mul_inv_cancel₀, one_mul]
+shortened proof!
+.
+line 1153, col 6:
+exact h_translation.imp fun β hβ ↦ by rw [← mul_one g₁, ← inv_mul_cancel g₂, ← mul_assoc, hβ]
+* Try these:
+  [apply] grind only [!inv_inv, mul_inv_eq_iff_eq_mul, #d630, #0e97]
+  [apply] grind only [!inv_inv, mul_inv_eq_iff_eq_mul]
+  [apply] grind => cases #d630 <;> instantiate only [!inv_inv, #0e97] <;> instantiate only [mul_inv_eq_iff_eq_mul]
+.........
+line 1190, col 4:
+rw [h] at h1
+* Try this:
+
+  [apply]   simp_all only [one_mul]
+shortened proof!
+...
+line 1194, col 8:
+exact congrArg _ (by ring)
+* Try this:
+
+  [apply]     subst h
+    simp_all only [exists_apply_eq_apply', add_neg_cancel_comm]
+..........
+line 1228, col 4:
+change (g : PGLOf (K p)) * G.subtype y * (g : PGLOf (K p))⁻¹ = (g : PGLOf (K p)) * translationPGL p x * (g : PGLOf (K p))⁻¹
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right,
+      forall_exists_index, Sylow.coe_coe, SetLike.mem_coe, Subgroup.coe_mul, InvMemClass.coe_inv]
+shortened proof!
+.......
+line 1256, col 71:
+convert P.card_eq_multiplicity
+* Try these:
+  [apply] grind only [!Sylow.card_eq_multiplicity]
+  [apply] grind => instantiate only [!Sylow.card_eq_multiplicity]
+....................WARNING: FLT/Slop/PGL2/FiniteSubgroups/FieldReconstruction.lean produced errors (exit code 143)

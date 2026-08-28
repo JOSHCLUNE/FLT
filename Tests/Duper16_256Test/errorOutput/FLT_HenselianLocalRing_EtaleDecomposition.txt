@@ -1,0 +1,143 @@
+.......
+line 60, col 74:
+ext
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [not_false_eq_true, Fin.castSucc_succ]
+    ext : 2
+........
+line 69, col 6:
+ext
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, P'φ, φ]
+    obtain ⟨val, property⟩ := P'φ
+    ext x : 1
+    simp_all only [not_false_eq_true, RingHom.coe_comp, RingHom.coe_coe, Function.comp_apply,
+      TensorProduct.includeRight_apply, TensorProduct.map_tmul, ofId_apply, map_one, AlgHom.coe_id, id_eq]
+shortened proof!
+.
+line 70, col 6:
+simp
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe,
+      Ideal.comap_fiberIsoOfBijectiveResidueField_apply, P'φ, φ]
+    obtain ⟨val, property⟩ := P'φ
+    rfl
+shortened proof!
+.......
+line 75, col 36:
+simpa [he'0]
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, Ideal.mem_comap, P'φ, φ]
+..
+line 76, col 43:
+simpa [he'0]
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, Ideal.mem_comap, Fin.castSucc_zero,
+      not_true_eq_false, P'φ, φ]
+.........
+line 83, col 17:
+simp [this]
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, Ideal.mem_comap, not_false_eq_true, AlgHom.toRingHom_eq_coe, ne_eq,
+      Fin.last_eq_zero_iff, Nat.add_eq_zero_iff, one_ne_zero, and_false, φ, P'φ]
+.
+line 83, col 57:
+simp [this]
+* Try this:
+
+  [apply]     intro i a_2
+    subst hP'q
+    simp_all only [Fin.castSucc_succ, Ideal.mem_comap, not_false_eq_true, AlgHom.toRingHom_eq_coe, ne_eq,
+      Fin.succ_ne_zero, not_true_eq_false, φ, P'φ]
+....
+line 87, col 51:
+ext
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, Ideal.mem_comap, not_false_eq_true, AlgHom.toRingHom_eq_coe, ne_eq,
+      Fin.castSucc_zero, TensorProduct.map_restrictScalars_comp_includeRight, AlgHom.comp_id, φ, P'φ]
+shortened proof!
+...
+line 90, col 4:
+simp only [Fin.cons_succ]
+* Try this:
+
+  [apply]     intro i
+    subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, Fin.cons_succ, P'φ, φ]
+shortened proof!
+.
+line 91, col 4:
+simp only [Fin.cons_succ]
+* Try this:
+
+  [apply]     intro i
+    subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, Fin.cons_succ, P'φ, φ]
+shortened proof!
+..
+line 92, col 25:
+simpa [he'0]
+* Try this:
+
+  [apply]     subst hP'q
+    simp_all only [Fin.castSucc_succ, AlgHom.toRingHom_eq_coe, Ideal.mem_comap, RingHom.coe_coe, not_false_eq_true,
+      Fin.cons_zero, Fin.castSucc_zero, φ, P'φ]
+.
+line 93, col 4:
+simpa
+* Try this:
+
+  [apply]     intro i
+    subst hP'q
+    simp_all only [Fin.castSucc_succ, not_false_eq_true, AlgHom.toRingHom_eq_coe, Fin.cons_succ, P'φ, φ]
+.
+line 100, col 2:
+rw [← Set.ncard_image_of_injective _
+    (Ideal.comap_injective_of_surjective _ Ideal.Quotient.mk_surjective)]
+* Try these:
+  [apply] grind only [!Ideal.ncard_primesOver_quotient_singleton_lt_of_notMem]
+  [apply] grind => instantiate only [!Ideal.ncard_primesOver_quotient_singleton_lt_of_notMem]
+shortened proof!
+........
+line 131, col 13:
+simp only [Nat.reduceAdd, Pi.one_apply, mul_one, Subsingleton.pairwise]
+* Try this:
+
+  [apply]   simp_all only [Set.finite_empty, not_lt_zero, not_isEmpty_of_nonempty, IsEmpty.forall_iff, and_true, exists_and_left,
+      exists_prop, IsEmpty.exists_iff, implies_true, Set.ncard_empty, Nat.reduceAdd, Pi.one_apply, mul_one,
+      Subsingleton.pairwise]
+.
+line 132, col 13:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.finite_empty, not_lt_zero, not_isEmpty_of_nonempty, IsEmpty.forall_iff, and_true, exists_and_left,
+      exists_prop, IsEmpty.exists_iff, implies_true, Set.ncard_empty, Nat.reduceAdd, Finset.univ_unique,
+      Fin.default_eq_zero, Fin.isValue, Pi.one_apply, Finset.sum_const, Finset.card_singleton, one_smul]
+..
+line 133, col 84:
+ext
+* Try this:
+
+  [apply]   simp_all only [Set.finite_empty, not_lt_zero, not_isEmpty_of_nonempty, IsEmpty.forall_iff, and_true, exists_and_left,
+      exists_prop, IsEmpty.exists_iff, implies_true, Set.ncard_empty, ofId_self, Ideal.ResidueField.mapₐ_id]
+....
+line 138, col 73:
+simp
+* Try this:
+  [apply] grind only
+.......................................

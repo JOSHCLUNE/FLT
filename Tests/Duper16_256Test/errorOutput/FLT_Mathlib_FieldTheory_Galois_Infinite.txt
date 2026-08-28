@@ -1,0 +1,157 @@
+.
+line 75, col 21:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+.
+line 76, col 21:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+.
+line 77, col 20:
+ext i
+* Try this:
+
+  [apply]     simp_all only [Equiv.toFun_as_coe]
+    rfl
+shortened proof!
+..
+line 90, col 4:
+ext x
+* Try this:
+
+  [apply]     simp_all only
+    obtain ⟨val, property⟩ := τ
+    simp_all only [Subgroup.mk_smul, MulOpposite.smul_eq_mul_unop]
+    simp_all only [Subgroup.mem_op]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, coe_val, Function.comp_apply, AlgEquiv.mul_apply,
+      EmbeddingLike.apply_eq_iff_eq]
+    obtain ⟨val_1, property_1⟩ := x
+    simp_all only
+    simp_all only [mem_fixedField_iff]
+shortened proof!
+.._...................
+line 122, col 2:
+rw [map_smul, inv_smul_smul]
+* Try this:
+
+  [apply]   simp_all only [map_smul, AlgEquiv.smul_def, AlgEquiv.coe_inv, AlgEquiv.symm_apply_apply]
+...........................
+line 168, col 2:
+ext x
+* Try this:
+
+  [apply]     simp_all only [AlgHom.coe_range, IntermediateField.mem_fixingSubgroup_iff, MulAction.mem_stabilizer_iff, E]
+    ext x : 1
+    apply hσ
+    simp_all only [RingHom.coe_coe]
+    apply IntermediateField.mem_adjoin_of_mem
+    simp_all only [Set.mem_range, exists_apply_eq_apply]
+shortened proof!
+..........
+line 185, col 4:
+ext x
+* Try this:
+
+  [apply]     simp_all only [IntermediateField.mem_fixingSubgroup_iff, AlgHom.mem_fieldRange, forall_exists_index,
+      forall_apply_eq_imp_iff, emb]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, Ideal.Quotient.mkₐ_eq_mk, Function.comp_apply]
+    apply hσ
+shortened proof!
+........................
+line 224, col 29:
+ext x
+* Try this:
+
+  [apply]     simp_all only
+    obtain ⟨val, property⟩ := σ
+    simp_all only [Subgroup.mk_smul, MulOpposite.smul_eq_mul_unop]
+    simp_all only [Subgroup.mem_op, IntermediateField.mem_fixingSubgroup_iff]
+    ext x : 1
+    simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, IntermediateField.coe_val, Function.comp_apply,
+      AlgEquiv.mul_apply, SetLike.coe_mem]
+shortened proof!
+...........
+line 239, col 4:
+obtain ⟨E, hE, H⟩ := (krullTopology_mem_nhds_one_iff _ _ _).mp hs
+* Try these:
+  [apply] grind only [krullTopology_mem_nhds_one_iff, mem_nhds_iff, !finiteIndex_fixingSubgroup, #4813, #5708, #dda8]
+  [apply] grind only [krullTopology_mem_nhds_one_iff, mem_nhds_iff, !finiteIndex_fixingSubgroup]
+  [apply] grind =>
+    instantiate only [krullTopology_mem_nhds_one_iff, mem_nhds_iff]
+    cases #4813 <;> cases #5708 <;> instantiate only [!finiteIndex_fixingSubgroup, #dda8]
+shortened proof!
+..........
+line 254, col 8:
+exact ⟨⟨_, subset_adjoin _ _ (by simp)⟩, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [id_eq, Set.mem_preimage, Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup,
+      Subgroup.mem_toSubmonoid, IntermediateField.mem_fixingSubgroup_iff, AlgEquiv.mul_apply, AlgEquiv.coe_inv,
+      AlgHom.mem_fieldRange, AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, coe_val, Function.comp_apply,
+      EmbeddingLike.apply_eq_iff_eq, Subtype.exists, exists_prop, exists_eq_right]
+    apply IntermediateField.mem_adjoin_of_mem
+    simp_all only [Set.mem_singleton_iff]
+.
+line 255, col 6:
+simpa using this.symm
+* Try this:
+
+  [apply]   simp_all only [id_eq, Set.mem_preimage, Subsemigroup.mem_carrier, Submonoid.mem_toSubsemigroup,
+      Subgroup.mem_toSubmonoid, IntermediateField.mem_fixingSubgroup_iff, AlgEquiv.mul_apply, AlgEquiv.coe_inv,
+      AlgEquiv.symm_apply_apply]
+...............
+line 273, col 8:
+rw [← H' _ _ hσ₂, H]
+* Try this:
+
+  [apply]   simp_all only
+..
+line 277, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_mul]
+* Try these:
+  [apply] grind only [= map_mul, #5292]
+  [apply] grind only [= map_mul]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_mul]
+..
+line 281, col 8:
+rw [← H' _ _ hσxy, ← H' _ _ hσx, ← H' _ _ hσy, map_add]
+* Try these:
+  [apply] grind only [= map_add, #5292]
+  [apply] grind only [= map_add]
+  [apply] grind =>
+    instantiate only [#5292]
+    instantiate only [= map_add]
+.
+line 282, col 22:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [AlgEquiv.commutes]
+........__..
+line 295, col 6:
+simp [F, ← H' _ _ (Set.mem_iInter₂.mp hσ _ h)]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_iInter, SetLike.mem_coe, AlgEquiv.coe_mk, Equiv.coe_fn_mk, F]
+.
+line 300, col 2:
+constructor
+* Try these:
+  [apply] grind only [continuousSMulDiscrete_iff_isOpen_stabilizer, !stabilizer_isOpen_of_isIntegral]
+  [apply] grind =>
+    instantiate only [continuousSMulDiscrete_iff_isOpen_stabilizer]
+    instantiate only [!stabilizer_isOpen_of_isIntegral]
+shortened proof!

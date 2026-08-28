@@ -1,0 +1,54 @@
+..
+line 28, col 4:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or, or_true]
+..
+line 30, col 42:
+grind
+* Try this:
+
+  [apply]   simp_all only [true_or]
+..
+line 34, col 4:
+grind [not_prime_one]
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    grind only [= odd_iff, Prime.ne_one]
+...
+line 47, col 4:
+apply FermatLastTheoremFor.mono h3
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [fermatLastTheoremThree, FermatLastTheoremFor.mono]
+  [apply] grind =>
+    instantiate only [fermatLastTheoremThree]
+    instantiate only [FermatLastTheoremFor.mono]
+shortened proof!
+.
+line 51, col 4:
+apply FermatLastTheoremFor.mono h4
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [fermatLastTheoremFour, FermatLastTheoremFor.mono]
+  [apply] grind =>
+    instantiate only [fermatLastTheoremFour]
+    instantiate only [FermatLastTheoremFor.mono]
+shortened proof!
+.
+line 55, col 4:
+apply FermatLastTheoremFor.mono hpn
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [FermatLastTheoremFor.mono, #67c2]
+  [apply] grind only [FermatLastTheoremFor.mono]
+  [apply] grind =>
+    instantiate only [#67c2]
+    instantiate only [FermatLastTheoremFor.mono]
+shortened proof!
+......

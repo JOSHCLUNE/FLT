@@ -1,0 +1,8 @@
+................
+line 128, col 4:
+infer_instance
+* Try this:
+
+  [apply]     simp_all only [Set.mem_ofPred_eq]
+    apply instIsUnramifiedAtConj
+..........

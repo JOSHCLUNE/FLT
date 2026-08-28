@@ -1,0 +1,57 @@
+...
+line 99, col 2:
+intro p hp _
+* Try this:
+
+  [apply]     intro y a a_1
+    obtain ⟨left, right⟩ := a
+    duper [*, Ideal.IsPrime.isRadical, Ideal.IsRadical.radical_le_iff, Ideal.radical_eq_sInf] {preprocessing := full}
+shortened proof!
+...
+line 108, col 4:
+rw [← isNoetherianRing_iff]
+* Try these:
+  [apply] grind only [!isArtinianRing_iff_isNoetherianRing_krullDimLE_zero]
+  [apply] grind => instantiate only [!isArtinianRing_iff_isNoetherianRing_krullDimLE_zero]
+shortened proof!
+..
+line 110, col 8:
+rw [Ideal.Quotient.algebraMap_eq]
+* Try this:
+
+  [apply]     simp_all only [Ideal.Quotient.algebraMap_eq]
+    apply Ideal.Quotient.mk_surjective
+shortened proof!
+.
+line 111, col 2:
+exact Module.length_ne_top
+* Try these:
+  [apply] grind only [!isArtinianRing_iff_isFiniteLength, Module.length_ne_top_iff]
+  [apply] grind => instantiate only [!isArtinianRing_iff_isFiniteLength, Module.length_ne_top_iff]
+..
+line 123, col 2:
+rw [I.radical_pow hn, h]
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    duper [*, Ideal.radical_pow, Ideal.sInf_minimalPrimes] {preprocessing := full}
+..
+line 137, col 4:
+simpa using hIJ
+* Try this:
+
+  [apply]   simp_all only [Submodule.comap_id]
+.........
+line 163, col 4:
+simpa using hIJ
+* Try this:
+
+  [apply]   simp_all only [Submodule.comap_id]
+......
+line 173, col 2:
+rw [LinearMap.exact_iff, Submodule.ker_mapQ, Submodule.range_subtype, Submodule.comap_id]
+* this parameter is redundant, environment already contains `Ideal.one_eq_top` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!Submodule.ker_mapQ, LinearMap.exact_iff, Submodule.comap_id, !Submodule.range_subtype]
+  [apply] grind =>
+    instantiate only [!Submodule.ker_mapQ, LinearMap.exact_iff, Submodule.comap_id, !Submodule.range_subtype]

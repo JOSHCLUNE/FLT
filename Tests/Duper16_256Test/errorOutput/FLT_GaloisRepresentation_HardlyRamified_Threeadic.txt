@@ -1,0 +1,6 @@
+.
+line 37, col 42:
+decide
+* Try this:
+
+  [apply]   grind only [= Nat.odd_iff]

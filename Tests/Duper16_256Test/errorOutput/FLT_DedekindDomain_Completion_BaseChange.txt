@@ -1,0 +1,194 @@
+................
+line 142, col 26:
+simp [γK]
+* Try this:
+
+  [apply]     subst hvw
+    simp_all only [WithVal.valueGroupOrderIso₀_apply, valueGroup₀_equiv_withZeroMulInt_apply,
+      valueGroup₀_equiv_withZeroMulInt_symm_apply, WithVal.valueGroupOrderIso₀_symm_apply, ne_eq, map_eq_zero,
+      exp_ne_zero, not_false_eq_true, γK, σK, σv, m, σw, σL, e]
+.....
+line 146, col 40:
+simp
+* Try this:
+
+  [apply]     subst hvw
+    simp_all only [WithVal.valueGroupOrderIso₀_apply, valueGroup₀_equiv_withZeroMulInt_apply,
+      valueGroup₀_equiv_withZeroMulInt_symm_apply, WithVal.valueGroupOrderIso₀_symm_apply, ne_eq, map_eq_zero,
+      exp_ne_zero, not_false_eq_true, map_zero, Units.zero_lt, γK, σK, σv, m, σw, σL, e]
+....
+line 153, col 54:
+simp_all
+* Try these:
+  [apply] grind only [WithVal.ofVal_eq_zero, map_eq_zero]
+  [apply] grind => instantiate only [WithVal.ofVal_eq_zero, map_eq_zero]
+.
+line 153, col 68:
+simp
+* Try this:
+
+  [apply]     subst hvw
+    simp_all only [WithVal.valueGroupOrderIso₀_apply, valueGroup₀_equiv_withZeroMulInt_apply,
+      valueGroup₀_equiv_withZeroMulInt_symm_apply, WithVal.valueGroupOrderIso₀_symm_apply, ne_eq, map_eq_zero,
+      exp_ne_zero, not_false_eq_true, γK, σK, σv, m, σw, σL, e]
+....
+line 162, col 21:
+simp_all
+* Try this:
+
+  [apply]     subst hvw
+    simp_all only [WithVal.valueGroupOrderIso₀_apply, valueGroup₀_equiv_withZeroMulInt_apply,
+      valueGroup₀_equiv_withZeroMulInt_symm_apply, WithVal.valueGroupOrderIso₀_symm_apply, ne_eq, map_eq_zero,
+      exp_ne_zero, not_false_eq_true, log_exp, pow_eq_zero_iff', WithVal.ofVal_eq_zero, false_and, γK, σK, σv, m, σw, σL,
+      e]
+.
+line 162, col 35:
+simp
+* Try this:
+
+  [apply]     subst hvw
+    simp_all only [WithVal.valueGroupOrderIso₀_apply, valueGroup₀_equiv_withZeroMulInt_apply,
+      valueGroup₀_equiv_withZeroMulInt_symm_apply, WithVal.valueGroupOrderIso₀_symm_apply, ne_eq, map_eq_zero,
+      exp_ne_zero, not_false_eq_true, log_exp, Units.ne_zero, γK, σK, σv, m, σw, σL, e]
+.............
+line 225, col 2:
+rw [WithVal.valued_toVal]
+* Try this:
+
+  [apply]   rfl
+.........
+line 282, col 24:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+.
+line 284, col 41:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.one_lt_ofNat]
+....
+line 289, col 4:
+rw [valuedAdicCompletion_eq_valuation' v (algebraMap A K x)]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, WithVal.equiv_symm_apply, valued_ofCompletion, valuedCompletion_apply, WithVal.valued_toVal,
+      map_eq_zero, FaithfulSMul.algebraMap_eq_zero_iff, not_false_eq_true, valuation_eq_one_iff_notMem, not_true_eq_false,
+      and_self]
+shortened proof!
+............
+line 313, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Submodule.carrier_eq_coe, AlgHom.toLinearMap_apply, SemialgHom.baseChangeRightOfAlgebraMap_apply,
+      SemialgHom.baseChange_of_algebraMap_tmul_left, s]
+................
+line 390, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.TensorProduct.algebraMap_apply, map_zero, TensorProduct.zero_tmul, AlgHom.toRingHom_eq_coe,
+      RingHom.coe_coe]
+.............
+line 413, col 10:
+exact mul_comm _ _
+* Try this:
+
+  [apply]   simp_all only [Algebra.ofId_apply, Algebra.TensorProduct.algebraMap_apply, Algebra.TensorProduct.tmul_mul_tmul, mul_one,
+      one_mul, TensorProduct.RightActions.algebraMap_eval]
+........
+line 422, col 10:
+exact isClosed_closure
+* Try this:
+
+  [apply]   simp_all only [Algebra.ofId_apply, Algebra.TensorProduct.algebraMap_apply, Algebra.TensorProduct.tmul_mul_tmul, mul_one,
+      one_mul, TensorProduct.RightActions.smul_def, TensorProduct.comm_symm, TensorProduct.comm_tmul, isClosed_closure, f]
+......
+line 431, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.ofId_apply, Algebra.TensorProduct.algebraMap_apply, Algebra.TensorProduct.tmul_mul_tmul, mul_one,
+      one_mul, TensorProduct.RightActions.smul_def, TensorProduct.comm_symm, TensorProduct.comm_tmul, algebraMap_smul,
+      OneMemClass.coe_one, Algebra.mul_smul_comm, f]
+......................................
+line 498, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [tensorAdicCompletionIntegersTo_tmul, OneMemClass.coe_one, Algebra.TensorProduct.algebraMap_apply]
+......
+line 511, col 2:
+rfl
+* Try this:
+
+  [apply]   simp_all only [RingHom.coe_range, val]
+............
+line 546, col 4:
+ext x
+* Try this:
+
+  [apply]     ext x : 1
+    simp_all only [Set.mem_range, Set.mem_image, Algebra.TensorProduct.algebraMap_apply, exists_exists_eq_and,
+      SemialgHom.baseChange_of_algebraMap_tmul_left]
+    rfl
+shortened proof!
+.....
+line 585, col 4:
+rfl
+* Try this:
+
+  [apply]     rename_i x x_1
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    rfl
+..............
+line 626, col 8:
+rw [← h, hx', Pi.single_eq_same]
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Set.mem_range, Function.comp_apply, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      Set.mem_pi, Set.mem_univ, SetLike.mem_coe, ValuationSubring.mem_toSubring, forall_const, Pi.single_eq_same, x']
+shortened proof!
+.
+line 628, col 8:
+rw [hx', Pi.single_eq_of_ne' h]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, Function.comp_apply, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      Set.mem_pi, Set.mem_univ, SetLike.mem_coe, ValuationSubring.mem_toSubring, forall_const, ne_eq, not_false_eq_true,
+      Pi.single_eq_of_ne', zero_mem, x']
+shortened proof!
+...................................
+line 719, col 4:
+simp at hcomap
+* Try this:
+
+  [apply]   simp_all only [Int.reduceNeg, ofAdd_neg, coe_inv, IsLocalRing.mem_maximalIdeal, mem_nonunits_iff, Nat.cast_add,
+      Nat.cast_one, neg_add_rev, le_add_iff_nonneg_left, Int.neg_nonneg, Int.reduceLE]
+......................
+line 826, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [LinearEquiv.restrictScalars_apply, AlgEquiv.toLinearEquiv_apply]
+    rfl
+......
+line 872, col 2:
+ext
+* Try this:
+
+  [apply]     simp_all only [AlgHom.comp_toLinearMap, AlgHom.toLinearMap_restrictScalars]
+    ext x x_1 : 5
+    simp_all only [TensorProduct.AlgebraTensorModule.curry_apply, LinearMap.restrictScalars_comp,
+      TensorProduct.curry_apply, LinearMap.coe_comp, LinearMap.coe_restrictScalars, LinearEquiv.coe_coe,
+      Function.comp_apply, adicCompletionIntegers.tensorCoe_tmul, integerBaseChangeLinearEquiv_tmul_apply, map_one,
+      one_mul, LinearMap.restrictScalars_trans, AlgHom.coe_toLinearMap, tensorAdicCompletionIntegersTo_tmul,
+      SemialgHom.baseChange_of_algebraMap_tmul_right]
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    rfl
+shortened proof!

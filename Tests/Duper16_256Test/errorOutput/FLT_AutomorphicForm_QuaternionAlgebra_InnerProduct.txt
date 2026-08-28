@@ -1,0 +1,500 @@
+....
+line 51, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [norm_nonneg]
+.
+line 51, col 52:
+simp
+* Try this:
+
+  [apply]   simp_all only [zero_le_one]
+.
+line 51, col 62:
+simpa using hn.ne'
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_eq_zero]
+    obtain ⟨val, property⟩ := u
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+.................
+line 90, col 2:
+ring
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 108, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [Subgroup.coe_map, QuotientGroup.mk'_apply, QuotientGroup.coe_mk', Set.image_nonempty,
+      OneMemClass.coe_nonempty]
+..................._.........................................
+line 204, col 65:
+simpa
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, ne_eq, Nat.cast_eq_zero, not_false_eq_true]
+...
+line 206, col 39:
+simpa
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, ne_eq, Nat.cast_eq_zero, not_false_eq_true]
+.....
+line 212, col 6:
+rfl
+* Try this:
+
+  [apply]     simp_all only [MonoidHom.coe_range, ne_eq, Subgroup.coe_comap, MonoidHom.coe_id, Set.preimage_id_eq, id_eq, ΔIndex_mk]
+    obtain ⟨val, property⟩ := f
+    obtain ⟨val_1, property_1⟩ := g
+    rfl
+....
+line 216, col 6:
+exact ⟨_, rfl⟩
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, ne_eq, Subgroup.coe_comap, MonoidHom.coe_id, Set.preimage_id_eq, id_eq, ΔIndex_mk,
+      MonoidHom.id_apply, dvd_mul_right]
+.......
+line 236, col 4:
+convert this using 1
+* Try this:
+
+  [apply]     simp_all only [ℒℂ, ℒ'ℂ]
+    exact this
+shortened proof!
+........
+line 264, col 26:
+positivity
+* Try this:
+
+  [apply]   simp_all only [levelStruct_U, Subgroup.coe_inf, NNReal.zero_le_coe]
+.
+line 264, col 82:
+positivity
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, inv_nonneg, Nat.cast_nonneg]
+..........
+line 275, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Subgroup.coe_map, QuotientGroup.mk'_apply, MonoidHom.coe_range, AddMemClass.mk_add_mk, ℒ]
+........
+line 283, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Subgroup.coe_map, QuotientGroup.mk'_apply, MonoidHom.coe_range, smul_eq_mul, SetLike.mk_smul_mk, ℒ]
+................
+line 339, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.one_apply, ENNReal.coe_one, one_mul]
+..
+line 347, col 2:
+rfl
+* Try this:
+
+  [apply]     simp_all only [MulDistribMulAction.toMonoidEnd_apply]
+    rfl
+.
+line 351, col 2:
+rw [← smul_le_smul_iff (g := g)]
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a_1
+      apply LE.le.trans'
+      on_goal 2 => {
+        apply smul_le_smul_left
+        · exact a_1
+      }
+      · simp_all only [smul_inv_smul, Std.le_refl]
+    · intro a_1
+      apply LE.le.trans'
+      · apply smul_le_smul_left
+        · exact a_1
+      · simp_all only [inv_smul_smul, Std.le_refl]
+shortened proof!
+...
+line 362, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [inv_smul_smul, Std.le_refl]
+......
+line 373, col 2:
+trivial
+* Try this:
+
+  [apply]   simp_all only [Subgroup.mem_top]
+.........
+line 397, col 56:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+...
+line 398, col 57:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+...
+line 400, col 57:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+...
+line 401, col 58:
+exact mem_form _ _
+* Try this:
+
+  [apply]   apply TotallyDefiniteQuaternionAlgebra.WeightTwoAutomorphicForm.mem_form
+...............
+line 421, col 10:
+trivial
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, inv_mem_iff, Subgroup.mem_top, ℒ]
+..
+line 423, col 8:
+simp
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_range, mul_inv_cancel_right, ℒ]
+..
+line 428, col 89:
+rfl
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+..............
+line 469, col 76:
+rfl
+* Try this:
+
+  [apply]   rfl
+...
+line 473, col 4:
+rfl
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := f
+    rfl
+........
+line 512, col 16:
+exact mem _ hx
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk]
+.
+line 513, col 20:
+exact algebraMap _
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk, Subalgebra.mk_algebraMap]
+.
+line 514, col 25:
+exact add ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk]
+.
+line 515, col 25:
+exact mul ⟨x, hx⟩ ⟨y, hy⟩ ‹_› ‹_›
+* Try this:
+
+  [apply]   simp_all only [Subtype.forall, AddMemClass.mk_add_mk, MulMemClass.mk_mul_mk]
+.....
+line 523, col 49:
+simp [H]
+* Try this:
+
+  [apply]   simp_all only [ne_eq]
+.
+line 524, col 20:
+simp
+* Try this:
+
+  [apply]   simp_all only [SubalgebraClass.coe_algebraMap, algebraMap_smul, ne_eq, AlgHom.commutes]
+..........
+line 547, col 18:
+obtain ⟨v, hvS, hvQ, rfl⟩ := hx
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Set.mem_ofPred_eq]
+    obtain ⟨val, property⟩ := μ
+    obtain ⟨w, h⟩ := hx
+    obtain ⟨w_1, h⟩ := h
+    obtain ⟨w_2, h⟩ := h
+    subst h
+    simp_all only [Submodule.mk_eq_zero, ne_eq, not_false_eq_true, smul_left_inj, exists_eq']
+shortened proof!
+..
+line 548, col 50:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, algebraMap_smul]
+...........
+line 559, col 4:
+simp +contextual [ha, ← sub_eq_zero (a := _ • _) (b := _ • _), ← sub_smul, hμ,
+      sub_eq_zero (a := a _)]
+* Try this:
+
+  [apply]     intro x a_1 a' a_2
+    simp_all only [ne_eq, not_false_eq_true, smul_left_inj]
+..
+line 563, col 24:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, smul_left_inj, implies_true, OneMemClass.coe_one, one_mem]
+....
+line 566, col 25:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, smul_left_inj, implies_true, ZeroMemClass.coe_zero, zero_mem]
+...
+line 568, col 27:
+simp
+* Try this:
+  [apply] grind only
+.....X.X.X.
+line 583, col 20:
+ext
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Function.comp_apply, DFinsupp.comapDomain_zero, DFinsupp.mapRange_zero]
+shortened proof!
+.
+line 584, col 23:
+ext
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range, not_exists, Function.comp_apply]
+    ext i : 2
+    simp_all only [DFinsupp.mapRange_apply, DFinsupp.comapDomain_apply, DirectSum.add_apply, Equiv.subtypeEquiv_apply,
+      AddMemClass.coe_add, Equiv.refl_apply, AddMemClass.mk_add_mk]
+shortened proof!
+.X.X.........X......
+line 599, col 8:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Finset.mem_map_mk, DFinsupp.mem_support_toFun, ne_eq, not_true_eq_false,
+      not_false_eq_true]
+..
+line 600, col 42:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Finset.mem_map_mk, DFinsupp.mem_support_toFun, ne_eq, not_false_eq_true]
+.X.X..X.......
+line 610, col 29:
+ext1
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range, not_exists, AddMonoidHom.coe_mk, ZeroHom.coe_mk, φ]
+    obtain ⟨val, property⟩ := a
+    ext : 1
+    simp_all only [ZeroMemClass.coe_zero]
+    apply hf₂
+    intro x
+    on_goal 2 => { exact property
+    }
+    simp_all only [not_false_eq_true]
+shortened proof!
+.
+line 611, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, AddMonoidHom.coe_mk, ZeroHom.coe_mk, AddMonoidHom.coe_comp,
+      Function.comp_apply, map_zero, DFinsupp.comapDomain_zero, DFinsupp.mapRange_zero, φ]
+.....................
+line 637, col 10:
+simpa using hμ
+* Try this:
+
+  [apply]     intro v hvS hvQ
+    simp_all only [Set.mem_ofPred_eq, Set.mem_range, not_exists, Module.toModuleEnd_apply, Submodule.mem_iInf,
+      Module.End.mem_genEigenspace_one, DistribSMul.toLinearMap_apply, Subtype.forall, forall_and_index,
+      not_false_eq_true]
+..
+line 638, col 28:
+simp [h₁]
+* Try this:
+
+  [apply]     intro x
+    simp_all only [Set.mem_ofPred_eq, Set.mem_range, not_exists, Module.toModuleEnd_apply, Submodule.mem_iInf,
+      Module.End.mem_genEigenspace_one, DistribSMul.toLinearMap_apply, Subtype.forall, forall_and_index, Subtype.coe_eta]
+.........
+line 653, col 46:
+simp
+* Try this:
+
+  [apply]   simp_all only [Cardinal.natCast_lt_aleph0]
+.......
+line 714, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [smul_zero, ZeroMemClass.coe_zero]
+.
+line 715, col 25:
+simp only [smul_add, *]
+* Try this:
+
+  [apply]   simp_all only [ZeroMemClass.coe_zero, zero_smul, smul_add, add_zero]
+............
+line 765, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_zero]
+.
+line 766, col 25:
+simp only [*, map_add, zero_add]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_add, add_zero]
+...
+line 771, col 4:
+simp_all
+* Try this:
+
+  [apply]   simp_all only [ne_eq, AlgHom.pi_apply, Pi.zero_apply, zero_smul, map_zero]
+...
+line 774, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.map_zero, map_zero, LinearMap.zero_apply, ne_eq, zero_smul]
+........
+line 784, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, smul_zero]
+..._.
+line 795, col 37:
+simp [ha i j e, hb i j e]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_ofPred_eq, Pi.mul_apply]
+    duper [*] {preprocessing := full}
+.
+line 796, col 37:
+simp [ha i j e, hb i j e]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_ofPred_eq, Pi.add_apply]
+    duper [*] {preprocessing := full}
+.
+line 797, col 26:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [Set.mem_ofPred_eq, Pi.algebraMap_apply, Algebra.algebraMap_self, RingHom.id_apply, implies_true]
+..._.....
+line 804, col 27:
+grind
+* Try these:
+  [apply] grind only [#1465]
+  [apply] grind only
+  [apply] grind => instantiate only [#1465]
+..........
+line 813, col 35:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, algebraMap_mem, st]
+..
+line 813, col 74:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, Pi.smul_apply, Pi.sub_apply, Pi.algebraMap_apply, Algebra.algebraMap_self,
+      RingHom.id_apply, sub_self, smul_eq_mul, mul_zero, st]
+...
+line 815, col 77:
+simpa using hj
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, Finset.mem_filter, true_and, not_false_eq_true, st]
+.........
+line 823, col 27:
+simpa using hk
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, Finset.mem_filter, true_and, not_false_eq_true, st]
+.
+line 823, col 55:
+simpa using hk
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_univ, Finset.mem_filter, true_and, not_false_eq_true, st]
+..........
+line 832, col 27:
+grind
+* Try these:
+  [apply] grind only [#9902]
+  [apply] grind only
+  [apply] grind => instantiate only [#9902]
+.......
+line 841, col 72:
+simp
+* Try this:
+
+  [apply]   simp_all only [Algebra.mem_top]
+.
+line 841, col 82:
+aesop
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Setoid.ker_def, Setoid.refl]
+...........
+line 865, col 4:
+simp [H] at this
+* Try this:
+
+  [apply]   simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, Function.comp_apply, map_sum, Finset.sum_const_zero, zero_ne_one,
+      φ']
+..........
+line 873, col 20:
+simp [Pi.single_apply]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, Function.comp_apply, ne_eq, mul_one, Pi.smul_apply,
+      smul_eq_mul, φ']
+    grind only [= Pi.single_apply, #bce1]
+.
+line 874, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, Function.comp_apply, ne_eq, map_smul, smul_eq_mul,
+      Pi.evalAlgHom_apply, φ']
+..........
+line 886, col 77:
+exact bot_le
+* Try this:
+
+  [apply]   simp_all only [and_self, bot_le]
+....................
