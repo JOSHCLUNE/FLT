@@ -1,0 +1,36 @@
+.
+line 31, col 14:
+rwa [Algebra.algebraMap_eq_smul_one]
+* Try this:
+
+  [apply]     subst ha
+    simp_all only [Set.mem_range, not_exists]
+    duper [*, Algebra.algebraMap_eq_smul_one, Algebra.smul_def] {preprocessing := full}
+.....
+line 44, col 2:
+lia
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, Subalgebra.bot_eq_top_of_finrank_eq_one, OfNat.ofNat_ne_one]
+......
+line 55, col 4:
+trivial
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, not_exists, Nat.succ_eq_add_one, Nat.reduceAdd, Submodule.mem_top]
+....
+line 59, col 4:
+rw [← hcd, hd, zero_smul, add_zero, Algebra.algebraMap_eq_smul_one]
+* Try this:
+
+  [apply]     subst hcd hd
+    simp_all only [Set.mem_range, not_exists, Nat.succ_eq_add_one, Nat.reduceAdd, zero_smul, add_zero]
+    duper [*, algebraMap_eq_smul_one] {preprocessing := full}
+....
+line 73, col 2:
+rw [map_mul, ← sq]
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    duper [*, pow_two] {preprocessing := full}
+shortened proof!

@@ -1,0 +1,29 @@
+.
+line 30, col 2:
+refine Polynomial.ringHom_ext (fun a ↦ ?_) ?_
+* Try this:
+
+  [apply]     subst h
+    ext : 1
+    · ext x : 1
+      simp_all only [RingHom.coe_comp, Function.comp_apply, mk_C, map_of, coe_mapRingHom, map_C]
+    · simp_all only [RingHom.coe_comp, Function.comp_apply, mk_X, map_root, coe_mapRingHom, map_X]
+shortened proof!
+....X.
+line 59, col 4:
+simpa only [map_add, map_mul, aeval_C, aeval_X] using hab
+* Try this:
+
+  [apply]   simp_all only [algebraMap_eq, aeval_eq, map_add, map_mul, mk_C, mk_X]
+.X.X.X.X.X.
+line 64, col 53:
+lia
+* Try this:
+
+  [apply]     simp_all only [algebraMap_eq, aeval_eq, map_add, map_mul, mk_C, mk_X, natDegree_add_C, not_le]
+    exact hdeg
+.X.X.X.X.X..
+line 76, col 2:
+lia
+* Try this:
+  [apply] grind only

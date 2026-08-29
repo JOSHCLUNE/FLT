@@ -1,0 +1,87 @@
+......
+line 109, col 4:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [map_one, lt_self_iff_false]
+shortened proof!
+.........
+line 123, col 44:
+ring
+* Try this:
+  [apply] grind only
+...
+line 126, col 2:
+convert h using 2
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+shortened proof!
+...........
+line 159, col 6:
+exact Set.mem_prod.mpr ⟨Set.mem_preimage.mpr (Set.mem_Iio.mpr (lt_of_le_of_lt h1 hp)),
+        Set.mem_preimage.mpr (Set.mem_Iio.mpr (lt_of_le_of_lt h2 hp))⟩
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, = Set.mem_prod, = Set.mem_preimage, = Set.mem_Iio]
+  [apply] grind =>
+    instantiate only [usr Set.mem_ofPred_eq, = Set.mem_prod]
+    instantiate only [= Set.mem_preimage]
+    instantiate only [= Set.mem_Iio]
+....
+line 170, col 30:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [map_pow, Int.cast_sum]
+shortened proof!
+...
+line 175, col 18:
+simp at hx
+* Try this:
+
+  [apply]   simp_all only [map_pow, Int.cast_sum, Function.support_mul, Set.mem_inter_iff, Function.mem_support, Nat.divisors_zero,
+      Finset.sum_empty, ne_eq, not_true_eq_false, pow_zero, one_ne_zero, not_false_eq_true, and_true]
+....
+line 188, col 2:
+exact tsum_congr fun N ↦ by rw [hF N]
+* Try this:
+
+  [apply]   simp_all only [Int.cast_sum]
+.....
+line 206, col 19:
+simpa using hn
+* Try this:
+
+  [apply]   simp_all only [Finset.mem_range, not_lt]
+.......
+line 226, col 2:
+simpa using ValuativeExtension.mapValueGroupWithZero_strictMono (A := k) (B := l) hq
+* Try this:
+
+  [apply]     apply ValuativeExtension.valuation_algebraMap_lt_one
+    simp_all only
+......
+line 244, col 4:
+rw [map_sum]
+* Try this:
+
+  [apply]   simp_all only [Units.val_mk0, map_sum, map_mul, map_intCast, map_pow]
+shortened proof!
+....
+line 260, col 10:
+rw [map_pow, ValuativeExtension.mapValueGroupWithZero_valuation]
+* Try this:
+
+  [apply]   simp_all only [Units.val_mk0, map_sum, map_mul, map_intCast, map_pow,
+      ValuativeExtension.mapValueGroupWithZero_valuation]
+....
+line 271, col 8:
+congr 1
+* Try this:
+
+  [apply]   simp_all only [Units.val_mk0, map_sum, map_mul, map_intCast, map_pow, sub_sub_sub_cancel_right]
+shortened proof!

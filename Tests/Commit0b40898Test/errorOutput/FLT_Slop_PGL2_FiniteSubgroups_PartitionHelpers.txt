@@ -1,0 +1,42 @@
+....
+line 69, col 74:
+omega
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ge_iff_le, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [nonpos_iff_eq_zero, one_ne_zero]
+.........
+line 85, col 2:
+linarith only [h1, h3]
+* Try this:
+
+  [apply]   simp_all only [gt_iff_lt, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right, exists_eq_right,
+      ge_iff_le, Nat.not_ofNat_le_one, P']
+......
+line 132, col 4:
+obtain ⟨g', hg', rfl⟩ := Subgroup.mem_map.mp hg
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, Subtype.forall, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right]
+    obtain ⟨w, h⟩ := hg
+    simp_all only [gt_iff_lt]
+shortened proof!
+...........
+line 157, col 28:
+rw [ha1, one_mul, mul_one]
+* Try this:
+
+  [apply]     subst ha1
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_toSubmonoid, Sylow.coe_coe, SetLike.mem_coe, one_mem, one_mul, mul_one]
+..
+line 158, col 28:
+rw [hb1, mul_one, one_mul]
+* Try this:
+
+  [apply]     subst hb1
+    simp_all only [gt_iff_lt, ne_eq, Subgroup.coe_toSubmonoid, Sylow.coe_coe, SetLike.mem_coe, one_mem, mul_one, one_mul]
+..............WARNING: FLT/Slop/PGL2/FiniteSubgroups/PartitionHelpers.lean was killed (exit code 137), likely by the 8G MemoryMax cap

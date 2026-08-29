@@ -1,0 +1,1118 @@
+..........
+line 111, col 4:
+rw [h_eq, Subgroup.index_top] at hH_index
+* Try this:
+
+  [apply]     subst hH_card h_eq
+    simp_all only [Subgroup.normal_top, Subgroup.index_top, OfNat.one_ne_ofNat]
+shortened proof!
+..
+line 113, col 29:
+rw [← pow_orderOf_eq_one a, h_invol a ha]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!pow_orderOf_eq_one, #077f]
+  [apply] grind only [!pow_orderOf_eq_one]
+  [apply] grind =>
+    instantiate only [#077f]
+    instantiate only [!pow_orderOf_eq_one]
+......
+line 120, col 4:
+exact orderOf_injective H.subtype Subtype.coe_injective b'
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+........
+line 131, col 33:
+rw [one_mul]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, one_mul, b]
+...
+line 133, col 32:
+group
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 134, col 24:
+rw [h_conj]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+....
+line 140, col 6:
+simp only [pow_zero, inv_one, one_mul, mul_one]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, pow_zero,
+      one_mul, inv_one, mul_one, b]
+...
+line 143, col 38:
+rw [ih, ← mul_assoc]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+......
+line 151, col 6:
+rcases hx g with ⟨h1, _⟩ | ⟨h1, _⟩
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= xor_def, #6c2f]
+  [apply] grind only [= xor_def]
+  [apply] grind =>
+    instantiate only [#6c2f]
+    instantiate only [= xor_def]
+shortened proof!
+..
+line 154, col 6:
+rcases hx a with ⟨h1, _⟩ | ⟨h1, _⟩
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= xor_def, #6c2f]
+  [apply] grind only [= xor_def]
+  [apply] grind =>
+    instantiate only [#6c2f]
+    instantiate only [= xor_def]
+shortened proof!
+..
+line 157, col 49:
+group
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, mul_inv_rev,
+      mul_mul_inv_mul_cancel, b]
+.
+line 157, col 93:
+group
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid,
+      mul_inv_cancel_left, b]
+..
+line 158, col 34:
+rw [← hb_order, pow_orderOf_eq_one]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [!pow_orderOf_eq_one]
+  [apply] grind => instantiate only [!pow_orderOf_eq_one]
+..._..._.
+line 167, col 32:
+rw [zpow_natCast, hb_pow_n]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, zpow_natCast,
+      b]
+.....
+line 173, col 55:
+omega
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, ne_eq,
+      Int.natCast_eq_zero, Fintype.card_ne_zero, not_false_eq_true, b]
+........
+line 182, col 69:
+omega
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, ne_eq,
+      Int.natCast_eq_zero, Fintype.card_ne_zero, not_false_eq_true, b]
+..
+line 183, col 37:
+omega
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...
+line 186, col 29:
+rw [hi]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b, k_nat]
+.
+line 189, col 32:
+rw [Nat.mod_eq_of_lt hk_nat_lt]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b, k_nat]
+.
+line 190, col 41:
+rw [ZMod.val_natCast]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid,
+      ZMod.val_natCast, b, k_nat]
+..........
+line 202, col 26:
+rw [sub_add_cancel]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid,
+      sub_add_cancel, b]
+.
+line 203, col 54:
+group
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid,
+      inv_mul_cancel_right, b]
+......._..
+line 218, col 6:
+exact hb_pow_mul k1 k2
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+.....
+line 223, col 50:
+rw [hb_pow_mul_a]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+.
+line 224, col 52:
+rw [mul_assoc]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 225, col 52:
+rw [hb_comm]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+.
+line 226, col 40:
+rw [← hb_pow_sub]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+.......
+line 236, col 54:
+rw [← mul_assoc (b ^ k1.val)]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 237, col 52:
+rw [← mul_assoc a]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 238, col 56:
+rw [hb_pow_mul_a]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+.
+line 239, col 56:
+rw [← mul_assoc a]
+* this parameter is redundant, environment already contains `Nat.mem_divisors` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 241, col 46:
+rw [one_mul]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, one_mul, b]
+.
+line 242, col 46:
+rw [hb_comm]
+* Try this:
+
+  [apply]     subst hH_card
+    simp_all only [Subtype.forall, SetLike.coe_mem, Nat.card_eq_fintype_card, ge_iff_le, orderOf_submonoid, b]
+....................
+line 273, col 6:
+contradiction
+* Try this:
+
+  [apply]     intro hb_pow_inj_nat x y a_1
+    simp_all only [Subtype.forall, SetLike.coe_mem, ge_iff_le, nonpos_iff_eq_zero, OfNat.ofNat_ne_zero, b]
+....._..........................
+line 322, col 2:
+apply Nat.eq_of_mul_eq_mul_right (zero_lt_two.trans_le hn)
+* Try these:
+  [apply] grind only [Subgroup.index_mul_card, Nat.mul_left_inj]
+  [apply] grind =>
+    instantiate only [Subgroup.index_mul_card]
+    instantiate only [Nat.mul_left_inj]
+shortened proof!
+......................
+line 358, col 10:
+exfalso
+* Try this:
+
+  [apply]     subst hH0_card h_map_eq
+    simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, zero_add, Nat.reduceAdd, Order.lt_two_iff,
+      Std.le_refl, getElem?_pos, Option.some.injEq, isUnit_iff_eq_one, IsUnit.dvd, orderOf_eq_one_iff, ge_iff_le,
+      List.get_eq_getElem, Fin.forall_fin_two, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.zero_mod, zero_le,
+      List.getElem_cons_zero, exists_eq_left', Nat.mod_succ, List.getElem_cons_succ, one_mul, true_and,
+      MulEquiv.toMonoidHom_eq_coe, Fin.exists_fin_two, Set.mem_ofPred_eq, ne_eq, Fin.zero_eta, Fin.mk_one,
+      MonoidHom.coe_coe, MulAut.conj_apply, mul_one, mul_inv_cancel, one_mem, not_true_eq_false]
+shortened proof!
+.
+line 360, col 23:
+exact h_two
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 365, col 6:
+rw [h_ord_eq, hx_ord]
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 367, col 6:
+exfalso
+* Try this:
+
+  [apply]     subst hH0_card h_map_eq
+    simp_all only [Nat.card_eq_fintype_card, ge_iff_le, List.length_cons, List.length_nil, zero_add, Nat.reduceAdd,
+      List.get_eq_getElem, Fin.forall_fin_two, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.zero_mod, Order.lt_two_iff, zero_le,
+      getElem?_pos, Option.some.injEq, List.getElem_cons_zero, exists_eq_left', Nat.mod_succ, Std.le_refl,
+      List.getElem_cons_succ, one_mul, MulEquiv.toMonoidHom_eq_coe, Fin.exists_fin_two, Set.mem_ofPred_eq, ne_eq,
+      Fin.zero_eta, Fin.mk_one, Nat.succ_eq_add_one, add_le_iff_nonpos_left, nonpos_iff_eq_zero, Nat.add_eq_zero_iff,
+      one_ne_zero, and_false, not_false_eq_true, getElem?_neg, reduceCtorEq]
+shortened proof!
+...........................
+line 411, col 6:
+rw [hi] at hHK_opt
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, = List.getElem_cons, #2c83]
+  [apply] grind only [= List.get_eq_getElem, = List.getElem_cons]
+  [apply] grind =>
+    instantiate only [= List.get_eq_getElem, #2c83]
+    instantiate only [= List.getElem_cons]
+    instantiate only [= List.getElem_cons]
+shortened proof!
+.
+line 415, col 6:
+rw [hi] at hHK_opt
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, = List.getElem_cons, #2c83]
+  [apply] grind only [= List.get_eq_getElem, = List.getElem_cons]
+  [apply] grind =>
+    instantiate only [= List.get_eq_getElem, #2c83]
+    instantiate only [= List.getElem_cons]
+    instantiate only [= List.getElem_cons]
+    instantiate only [= List.getElem_cons]
+shortened proof!
+..........
+line 434, col 2:
+omega
+* Try this:
+  [apply] grind only
+.....
+line 452, col 12:
+rw [hP_card, hp_eq]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.card_eq_fintype_card, Subgroup.mem_inf, SetLike.mem_coe, Std.le_refl]
+..
+line 456, col 8:
+rw [P.card_eq_multiplicity, Q.card_eq_multiplicity]
+* Try these:
+  [apply] grind only [!Sylow.card_eq_multiplicity]
+  [apply] grind => instantiate only [!Sylow.card_eq_multiplicity]
+..
+line 463, col 4:
+have h_mul := Subgroup.index_mul_card ((Subgroup.normalizer (SetLike.coe P)) : Subgroup G)
+* Try these:
+  [apply] grind only [!Sylow.card_eq_card_quotient_normalizer, !Subgroup.card_eq_card_quotient_mul_card_subgroup]
+  [apply] grind =>
+    instantiate only [!Sylow.card_eq_card_quotient_normalizer]
+    instantiate only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+shortened proof!
+..
+line 468, col 4:
+have h_dvd :=
+      Subgroup.card_dvd_of_le (show (P : Subgroup G) ≤ (Subgroup.normalizer (SetLike.coe P)) from Subgroup.le_normalizer)
+* Try these:
+  [apply] grind only [!Sylow.coe_coe, !Sylow.card_eq_multiplicity, !Subgroup.le_normalizer, Sylow.is_maximal',
+    IsPGroup.card, #1cc6]
+  [apply] grind only [!Sylow.coe_coe, !Sylow.card_eq_multiplicity, !Subgroup.le_normalizer, Sylow.is_maximal',
+    IsPGroup.card]
+  [apply] grind =>
+    instantiate only [!Sylow.coe_coe, !Sylow.card_eq_multiplicity]
+    instantiate only [#1cc6, !Subgroup.le_normalizer]
+    instantiate only [Sylow.is_maximal']
+    instantiate only [IsPGroup.card]
+shortened proof!
+..
+line 490, col 4:
+intro P
+* Try these:
+  [apply] grind only [!Sylow.coe_coe, !Subgroup.le_normalizer, Sylow.is_maximal', IsPGroup.card, #1cc6]
+  [apply] grind only [!Sylow.coe_coe, !Subgroup.le_normalizer, Sylow.is_maximal', IsPGroup.card]
+  [apply] grind =>
+    instantiate only [#1cc6, !Sylow.coe_coe]
+    instantiate only [!Subgroup.le_normalizer]
+    instantiate only [Sylow.is_maximal']
+    instantiate only [IsPGroup.card]
+shortened proof!
+..
+line 499, col 4:
+rw [Nat.card_eq_fintype_card] at h_sylow
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, implies_true, Nat.one_lt_ofNat]
+shortened proof!
+........
+line 519, col 4:
+rw [Fintype.card_fin, ← Nat.card_eq_fintype_card, h_sylow]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Fintype.card_fin]
+..
+line 523, col 47:
+simp only [Equiv.toFun_as_coe, Equiv.permCongr_apply, Equiv.Perm.mul_apply, Equiv.symm_apply_apply]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Fintype.card_fin, Equiv.toFun_as_coe, Equiv.permCongr_mul, Equiv.Perm.coe_mul,
+      Function.comp_apply, Equiv.permCongr_apply, Equiv.symm_apply_apply]
+............
+line 548, col 66:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.one_mod, Nat.ofNat_pos]
+._....
+line 556, col 34:
+rw [hH_card]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.one_mod, pow_one]
+shortened proof!
+.........
+line 568, col 8:
+linarith only [Nat.le_of_dvd (by norm_num) h1, h_pow_bound]
+* Try these:
+  [apply] grind only [!Subgroup.card_le_card_group]
+  [apply] grind =>
+    instantiate only [!Subgroup.card_le_card_group]
+    lia
+..
+line 571, col 8:
+have h_card_le : Nat.card H ≤ Nat.card (P : Subgroup G) :=
+          Nat.card_le_card_of_injective (Subgroup.inclusion hP) (Subgroup.inclusion_injective hP)
+* Try these:
+  [apply] grind only [!Finite.one_lt_card_iff_nontrivial, Sylow.ne_bot_of_dvd_card, !Subgroup.nontrivial_iff_ne_bot]
+  [apply] grind =>
+    instantiate only [!Finite.one_lt_card_iff_nontrivial, Sylow.ne_bot_of_dvd_card, !Subgroup.nontrivial_iff_ne_bot]
+shortened proof!
+.
+line 576, col 8:
+rfl
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.one_mod, pow_one, Nat.reduceDvd, Nat.one_le_ofNat]
+.
+line 578, col 8:
+norm_num at h1
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.one_mod, Nat.reducePow, Nat.reduceDvd]
+.....
+line 584, col 10:
+rw [hk, hk1, pow_one]
+* Try this:
+
+  [apply]     subst hk1
+    simp_all only [Nat.card_eq_fintype_card, Nat.one_mod, pow_one, Std.le_refl]
+shortened proof!
+.
+line 585, col 4:
+exact hH_not_normal (hHP ▸ Sylow.normal_of_subsingleton P)
+* Try these:
+  [apply] grind only [!Sylow.normal_of_subsingleton]
+  [apply] grind => instantiate only [!Sylow.normal_of_subsingleton]
+.
+line 587, col 4:
+exact h_four
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.one_mod]
+.....
+line 599, col 2:
+exact Nat.noConfusion (show 9 = 0 from congrArg (· - 3) hH_norm)
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.map_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.map_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, = List.getElem_cons]
+  [apply] grind =>
+    instantiate only [= List.get_eq_getElem]
+    instantiate only [= List.getElem_cons]
+    instantiate only [= List.getElem_cons]
+...
+line 606, col 56:
+norm_num
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.head_cons` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => instantiate approx
+..............
+line 623, col 6:
+rw [hH₁_card, hk] at h
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.....
+line 629, col 18:
+norm_num
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 631, col 6:
+have h_pos : 1 ≤ k := by
+        by_contra! hc
+        have h_zero : k = 0 := by omega
+        rw [h_zero, pow_zero] at hdvd_3
+        revert hdvd_3
+        norm_num
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+.
+line 638, col 4:
+rw [hk1, pow_one] at hk
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 642, col 87:
+rw [hQ_card,
+        hH₁_card]
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+....
+line 646, col 50:
+rw [hH₁_eq_Q, Sylow.coe_coe]
+* Try this:
+
+  [apply]     subst hH₁_eq_Q
+    simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, zero_add, Nat.reduceAdd, Fin.is_lt,
+      getElem?_pos, Option.some.injEq, List.get_eq_getElem, exists_eq_left', MulEquiv.toMonoidHom_eq_coe,
+      Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq, Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply,
+      true_and, Nat.one_lt_ofNat, Sylow.coe_coe, Std.le_refl]
+.
+line 647, col 2:
+rw [hsets, hH₁_norm, hN] at h_idx
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.finRange_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.getElem_ofFn` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+shortened proof!
+...............
+line 673, col 28:
+rw [show y * h_el * y⁻¹ = g from hk_eq]
+* Try this:
+
+  [apply]     subst hN hk_eq
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, conj_eq_one_iff, mul_left_inj, mul_right_inj,
+      exists_eq_right]
+..
+line 675, col 18:
+group
+* Try this:
+
+  [apply]     subst hN hk_eq
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, conj_eq_one_iff, mul_left_inj, mul_right_inj,
+      exists_eq_right, inv_mul_cancel_left]
+...
+line 679, col 4:
+exact ⟨fun hz ↦ Subgroup.mem_map.mpr ⟨z, hz, by
+        change 1 * z * 1⁻¹ = z
+        rw [inv_one, mul_one, one_mul]⟩,
+      fun hz ↦ by
+        obtain ⟨y, hy, hk_eq⟩ := Subgroup.mem_map.mp hz
+        change 1 * y * 1⁻¹ = z at hk_eq
+        rw [inv_one, mul_one, one_mul] at hk_eq
+        exact hk_eq ▸ hy⟩
+* Try this:
+
+  [apply]     subst hN
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, map_one, MulAut.one_apply, exists_eq_right]
+.....
+line 693, col 20:
+group
+* Try this:
+
+  [apply]     subst hN
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, mul_inv_cancel_right, IsConj]
+....
+line 697, col 4:
+exact hg_ne_one (Subgroup.mem_bot.mp h_inter)
+* Try this:
+
+  [apply]     subst hN
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, Subgroup.mem_bot, IsConj]
+.........
+line 704, col 27:
+exact Subgroup.mem_map.mpr ⟨x * n * x⁻¹, hxn, rfl⟩
+* Try this:
+
+  [apply]     subst hN
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, map_inv, inv_inv, MulAut.inv_apply,
+      MulAut.conj_symm_apply, mul_left_inj, mul_right_inj, exists_eq_right, IsConj]
+..
+line 707, col 4:
+rw [h_norm_top, ← hN]
+* Try this:
+
+  [apply]     subst hN
+    simp_all only [Fin.is_lt, getElem?_pos, Option.some.injEq, Nat.card_eq_fintype_card, List.get_eq_getElem,
+      exists_eq_left', MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ne_eq, forall_exists_index, ↓existsAndEq,
+      Subgroup.mem_map, MonoidHom.coe_coe, MulAut.conj_apply, true_and, Subgroup.mem_top, Fintype.card_subtype_true,
+      IsConj]
+shortened proof!
+..
+line 710, col 2:
+have h_lt : (configs.get i).f * (configs.get i).d < N := h_small _ (List.get_mem configs i)
+* this parameter is redundant, environment already contains `getElem?_pos` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, !List.getElem_mem, #da15]
+  [apply] grind only [= List.get_eq_getElem, !List.getElem_mem]
+  [apply] grind =>
+    instantiate only [#da15, = List.get_eq_getElem]
+    instantiate only [!List.getElem_mem]
+shortened proof!
+..........
+line 729, col 6:
+rw [Subgroup.coe_zpow] at h_eq
+* Try this:
+
+  [apply]     subst h_eq
+    simp_all only [Nat.card_eq_fintype_card, Subtype.forall, SubgroupClass.coe_zpow, Subgroup.zpow_mem_zpowers, k]
+shortened proof!
+...
+line 734, col 6:
+exact hm ▸ Subgroup.zpow_mem K k_sub.property m
+* Try this:
+
+  [apply]     subst hm
+    simp_all only [Nat.card_eq_fintype_card, Subtype.forall, Subgroup.zpow_mem_zpowers, k]
+    obtain ⟨val, property⟩ := k_sub
+    simp_all only
+    apply zpow_mem
+    simp_all only
+..
+line 737, col 40:
+rw [← hK_eq, hK]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, k]
+..
+line 740, col 18:
+rw [← hk_order, h, orderOf_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, orderOf_submonoid, OneMemClass.coe_eq_one, OfNat.one_ne_ofNat,
+      OneMemClass.coe_one, Subgroup.zpowers_one_eq_bot, Subgroup.normal_bot, Subgroup.mem_bot, Fintype.card_unique, k]
+................
+line 762, col 6:
+exact absurd (show k = 1 by
+        rw [← one_mul k, ← inv_mul_cancel g, mul_assoc, ← mul_one (g * k), ← inv_mul_cancel g]
+        rw [← mul_assoc (g * k) g⁻¹ g, h1, one_mul, inv_mul_cancel]) hk_ne_one
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, orderOf_submonoid, ne_eq, OneMemClass.coe_eq_one, zpow_ofNat,
+      conj_eq_one_iff, k]
+..
+line 766, col 47:
+group
+* Try these:
+  [apply] grind only [!mul_inv_cancel_right]
+  [apply] grind =>
+    instantiate only [!mul_inv_cancel_right]
+    instantiate only [!mul_inv_cancel_right]
+.
+line 766, col 64:
+rw [hk_eq]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, orderOf_submonoid, ne_eq, OneMemClass.coe_eq_one, zpow_ofNat,
+      k]
+..
+line 769, col 4:
+exact Subgroup.one_mem (Subgroup.center G)
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, orderOf_submonoid, ne_eq, OneMemClass.coe_eq_one, zpow_ofNat,
+      one_mem, k]
+.
+line 771, col 4:
+exact hk_center
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subtype.forall, orderOf_submonoid, ne_eq, OneMemClass.coe_eq_one, zpow_ofNat,
+      Subgroup.mem_zpowers, k]
+.....
+line 784, col 4:
+obtain ⟨g, rfl⟩ := MulAction.exists_smul_eq G P Q
+* Try this:
+
+  [apply]     subst hP
+    simp_all only [Nat.card_eq_fintype_card, Std.le_refl]
+    apply Sylow.ext
+    apply Sylow.is_maximal'
+    · apply Sylow.isPGroup'
+    · apply IsPGroup.le_sylow_of_normal
+      simp_all only
+shortened proof!
+.......
+line 799, col 50:
+obtain ⟨k, hk⟩ := h_dvd
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd]
+shortened proof!
+..
+line 800, col 57:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, ne_eq, Nat.ofNat_pos]
+.
+line 801, col 4:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+.......
+line 812, col 66:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd, not_false_eq_true, QG]
+....
+line 815, col 80:
+rw [hQG_card,
+      pow_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, pow_one, QG]
+...
+line 820, col 66:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, Nat.reduceDvd, not_false_eq_true, QG]
+......
+line 829, col 6:
+rw [Sylow.smul_eq_iff_mem_normalizer, ← Sylow.coe_coe, P.normalizer_eq_top]
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, QG]
+    apply Sylow.smul_eq_of_normal
+shortened proof!
+.
+line 831, col 2:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Subgroup.mem_map, Subgroup.subtype_apply, Subtype.exists, exists_and_right,
+      exists_eq_right, OfNat.one_ne_ofNat, QG]
+....
+line 843, col 124:
+intros
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Nat.card_eq_fintype_card]
+    smt +mono [*]
+shortened proof!
+.
+line 845, col 10:
+rw [← h_sylow, Sylow.card_eq_index_normalizer P, ← hN]
+* Try these:
+  [apply] grind only [!Sylow.card_eq_card_quotient_normalizer, !Subgroup.card_eq_card_quotient_mul_card_subgroup]
+  [apply] grind =>
+    instantiate only [!Sylow.card_eq_card_quotient_normalizer]
+    instantiate only [!Subgroup.card_eq_card_quotient_mul_card_subgroup]
+shortened proof!
+..
+line 852, col 60:
+intros
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+shortened proof!
+.
+line 853, col 25:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, Nat.ofNat_pos, K]
+.
+line 854, col 18:
+rw [h] at hK_dvd
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, zero_dvd_iff,
+      OfNat.ofNat_ne_zero, K]
+shortened proof!
+..
+line 860, col 14:
+exact x.property
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, SetLike.coe_mem, K]
+.
+line 862, col 14:
+rw [h2]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, OfNat.ofNat_ne_one,
+      not_false_eq_true, K]
+shortened proof!
+.
+line 864, col 88:
+rw [h3,
+            pow_one]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, pow_one, K]
+..
+line 866, col 80:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, Nat.reduceDvd, not_false_eq_true,
+      K]
+.
+line 868, col 44:
+rw [h_sylow]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, ne_eq, OfNat.ofNat_ne_one,
+      not_false_eq_true, K]
+shortened proof!
+.
+line 869, col 18:
+rw [h] at hK_dvd
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, Nat.reduceDvd, K]
+shortened proof!
+.
+line 870, col 18:
+rw [h] at hK_dvd
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, MonoidHom.mem_ker, MulAction.toPermHom_apply, Nat.reduceDvd, K]
+shortened proof!
+.......
+line 886, col 6:
+simp only [List.mem_cons, List.mem_nil_iff] at hc
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card, List.mem_cons, List.not_mem_nil, or_false]
+    cases hc with
+    | inl h_1 =>
+      subst h_1
+      simp_all only [Nat.reduceMul, Nat.reduceLT]
+    | inr h_2 =>
+      cases h_2 with
+      | inl h_1 =>
+        subst h_1
+        simp_all only [Nat.reduceMul, Nat.reduceLT]
+      | inr h_3 =>
+        subst h_3
+        simp_all only [Nat.reduceMul, Nat.reduceLT]
+shortened proof!
+..
+line 895, col 65:
+rw [← Nat.card_eq_fintype_card,
+            h_sylow, Fintype.card_fin]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Fintype.card_fin]
+...
+line 902, col 6:
+rw [← Nat.card_eq_fintype_card, hN,
+        Fintype.card_perm, Fintype.card_fin]
+* Try this:
+
+  [apply]     simp_all only [Nat.card_eq_fintype_card]
+    rfl
+shortened proof!
+.........
+line 919, col 4:
+exact map_one _
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.head_cons` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_one]
+  [apply] grind => instantiate only [= map_one]
+.............
+line 933, col 4:
+revert hi
+* this parameter is redundant, environment already contains `List.head_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.length_cons, = List.get_eq_getElem, = List.getElem_cons, = List.length_nil]
+  [apply] grind =>
+    instantiate only [= List.length_cons, = List.get_eq_getElem]
+    instantiate only [= List.length_cons, = List.getElem_cons]
+    instantiate only [= List.length_cons, = List.getElem_cons]
+    instantiate only [= List.length_nil]
+shortened proof!
+...
+line 940, col 64:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, zero_add, Nat.lt_add_one]
+..
+line 943, col 9:
+rw [hH₂_card]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, Fin.reduceFinMk, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.mod_succ, List.getElem_cons_succ,
+      List.getElem_cons_zero, Nat.reduceMul, pow_one]
+shortened proof!
+....
+line 948, col 66:
+norm_num
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 949, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, Fin.reduceFinMk, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.mod_succ, List.getElem_cons_succ,
+      List.getElem_cons_zero, Nat.reduceMul, pow_one, Std.le_refl]
+..
+line 951, col 2:
+have h_mul := (Subgroup.normalizer (SetLike.coe H₂)).index_mul_card
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, !Subgroup.card_mul_index, mul_assoc, = List.getElem_cons_succ,
+    = List.getElem_cons_zero]
+  [apply] grind =>
+    instantiate only [= List.get_eq_getElem, !Subgroup.card_mul_index]
+    instantiate only [mul_assoc, = List.getElem_cons_succ]
+    instantiate only [= List.getElem_cons_succ]
+    instantiate only [= List.getElem_cons_zero]
+shortened proof!
+...
+line 960, col 64:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, zero_add, Nat.one_lt_ofNat]
+..
+line 963, col 9:
+rw [hH₁_card]
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, Fin.mk_one, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.one_mod, List.getElem_cons_succ,
+      List.getElem_cons_zero, Nat.reduceMul, pow_one]
+shortened proof!
+....
+line 968, col 67:
+norm_num
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 969, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, List.length_cons, List.length_nil, Nat.reduceAdd, List.get_eq_getElem, ne_eq,
+      MulEquiv.toMonoidHom_eq_coe, Set.mem_ofPred_eq, ↓existsAndEq, and_true, Subgroup.mem_map, MonoidHom.coe_coe,
+      MulAut.conj_apply, Fin.mk_one, Fin.isValue, Fin.coe_ofNat_eq_mod, Nat.one_mod, List.getElem_cons_succ,
+      List.getElem_cons_zero, Nat.reduceMul, pow_one, Std.le_refl]
+..
+line 971, col 2:
+have h_mul := (Subgroup.normalizer (SetLike.coe H₁)).index_mul_card
+* this parameter is redundant, environment already contains `List.prod_cons` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `List.prod_nil` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= List.get_eq_getElem, !Subgroup.card_mul_index, mul_assoc, = List.getElem_cons_succ,
+    = List.getElem_cons_zero]
+  [apply] grind =>
+    instantiate only [= List.get_eq_getElem, !Subgroup.card_mul_index]
+    instantiate only [mul_assoc, = List.getElem_cons_succ]
+    instantiate only [= List.getElem_cons_zero]
+shortened proof!
+............
+line 1003, col 6:
+rw [h_card P, Nat.card_eq_fintype_card, Fintype.card_zpowers] at h_le
+* Try these:
+  [apply] grind only [usr Subtype.property, !Nat.card_zpowers, usr Set.mem_ofPred_eq, !orderOf_eq_prime,
+    orderOf_dvd_iff_pow_eq_one, #76a5]
+  [apply] grind only [usr Subtype.property, !Nat.card_zpowers, usr Set.mem_ofPred_eq, !orderOf_eq_prime,
+    orderOf_dvd_iff_pow_eq_one]
+  [apply] grind =>
+    instantiate only [#76a5, usr Subtype.property, !Nat.card_zpowers, usr Set.mem_ofPred_eq]
+    instantiate only [!orderOf_eq_prime]
+    instantiate only [orderOf_dvd_iff_pow_eq_one]
+shortened proof!
+........
+line 1020, col 8:
+rw [Nat.card_eq_fintype_card, Fintype.card_zpowers, hx, pow_one]
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, !Nat.card_zpowers]
+  [apply] grind => instantiate only [usr Set.mem_ofPred_eq, !Nat.card_zpowers]
+..
+line 1024, col 12:
+change orderOf x = p at hx
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Nat.card_eq_fintype_card, Set.mem_ofPred_eq, orderOf_one, Subgroup.zpowers_one_eq_bot, bot_le]
+shortened proof!
+............
+line 1048, col 4:
+rw [Nat.card_eq_fintype_card, Fintype.card_zpowers, hx, pow_one]
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [Nat.card_eq_fintype_card, pow_one]
+    apply Fintype.card_zpowers
+..
+line 1050, col 2:
+exact h P (hP (Subgroup.mem_zpowers x))
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [Subgroup.zpowers_le]
+    apply h
+    · exact hP
+......__..
+line 1066, col 56:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos]
+.
+line 1066, col 70:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceLeDiff]
+........__..
+line 1085, col 56:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.ofNat_pos, P]
+.
+line 1085, col 70:
+omega
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceLeDiff, P]
+......
+line 1095, col 70:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd, not_false_eq_true, P, Q]
+....
+line 1099, col 69:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.card_eq_fintype_card, Nat.reduceDvd, not_false_eq_true, P, Q]
+.......WARNING: FLT/Slop/PGL2/FiniteSubgroups/CyclicPartition.lean produced errors (exit code 143)

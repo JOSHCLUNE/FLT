@@ -1,0 +1,11 @@
+...
+line 72, col 31:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    duper [*, Ring.isField_iff_maximal_bot] {preprocessing := full}
+shortened proof!

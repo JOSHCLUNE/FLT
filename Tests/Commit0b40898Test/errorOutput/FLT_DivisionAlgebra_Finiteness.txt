@@ -1,0 +1,389 @@
+...............
+line 204, col 4:
+simpa [← hy2, this] using hy1
+* Try this:
+
+  [apply]     subst hy2
+    simp_all only [Set.mem_preimage, Function.comp_apply]
+..............
+line 231, col 2:
+grind
+* Try this:
+
+  [apply]     simp_all only [Algebra.TensorProduct.includeLeft_apply, Set.mem_inter_iff, Set.mem_range, Set.mem_singleton_iff, f]
+    apply Iff.intro
+    · intro a
+      obtain ⟨left, right⟩ := a
+      obtain ⟨w, h⟩ := left
+      subst h
+      simp_all only
+    · intro a
+      subst a
+      simp_all only [exists_apply_eq_apply, and_self]
+...........
+line 247, col 2:
+grind
+* Try this:
+
+  [apply]     simp_all only [Set.mem_inter_iff, Set.mem_range, Set.mem_singleton_iff, f]
+    apply Iff.intro
+    · intro a
+      obtain ⟨left, right⟩ := a
+      obtain ⟨w, h⟩ := left
+      subst h
+      simp_all only
+    · intro a
+      subst a
+      simp_all only [exists_apply_eq_apply, and_self]
+.......................
+line 281, col 4:
+simp [d, hq]
+* Try this:
+
+  [apply]   simp_all only [AddMonoidHom.coe_coe, Algebra.TensorProduct.includeLeft_apply, ContinuousLinearEquiv.coe_toLinearEquiv,
+      IsModuleTopology.continuousLinearEquiv_apply, LinearEquiv.trans_apply,
+      TensorProduct.RightActions.Module.TensorProduct.comm_symm_apply_tmul, TensorProduct.AlgebraTensorModule.congr_tmul,
+      LinearEquiv.refl_apply, LinearEquiv.apply_symm_apply, TensorProduct.piScalarRight_apply,
+      TensorProduct.piScalarRightHom_tmul, π, d]
+.......
+line 289, col 29:
+ext
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearEquiv.toLinearEquiv_symm, AddMonoidHom.coe_comp, QuotientAddGroup.coe_mk',
+      LinearMap.toAddMonoidHom_coe, LinearEquiv.coe_coe, ContinuousLinearEquiv.coe_symm_toLinearEquiv,
+      EquivLike.surjective_comp, AddMonoidHom.liftOfSurjective, π, H, φ, f]
+    ext x : 1
+    simp_all only [Function.comp_apply, AddMonoidHom.liftOfRightInverse_comp_apply, AddMonoidHom.coe_comp,
+      QuotientAddGroup.coe_mk', LinearMap.toAddMonoidHom_coe, LinearEquiv.coe_coe,
+      ContinuousLinearEquiv.coe_symm_toLinearEquiv, IsModuleTopology.continuousLinearEquiv_symm_apply,
+      LinearEquiv.trans_symm, LinearEquiv.symm_symm, LinearEquiv.trans_apply]
+shortened proof!
+................._.
+line 322, col 21:
+cases rs
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+...._...._.._.
+line 342, col 4:
+exact RingHom.map_add (D𝔸ProdRight K D).toRingHom a b
+* Try this:
+
+  [apply]   simp_all only [map_add]
+....
+line 350, col 4:
+rfl
+* Try this:
+
+  [apply]     subst hx
+    simp_all only [smul_eq_mul]
+    rfl
+...........
+line 389, col 2:
+simp [MulEquivClass.map_mul]
+* Try this:
+
+  [apply]     intro x
+    simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, ContinuousAddEquiv.mulLeft_apply, Units.coe_mapEquiv,
+      ContinuousAddEquiv.coe_mk, AlgEquiv.toEquiv_eq_coe, AddEquiv.coe_mk, EquivLike.coe_coe, map_mul,
+      MulEquivClass.apply_coe_symm_apply]
+....
+line 398, col 34:
+positivity
+* Try this:
+  [apply] grind only
+.
+line 398, col 58:
+positivity
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [lt_self_iff_false]
+.
+line 399, col 4:
+simp [Nat.ne_zero_iff_zero_lt, Module.finrank_pos]
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt, ne_eq, inv_eq_zero, Nat.cast_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only [!Module.finrank_pos]
+..........
+line 409, col 38:
+positivity
+* Try this:
+  [apply] grind only
+......
+line 442, col 4:
+congr
+* Try this:
+
+  [apply]     simp_all only [u']
+    rfl
+...
+line 447, col 4:
+congr
+* Try this:
+
+  [apply]     simp_all only [u']
+    rfl
+.....
+line 466, col 62:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [InfinitePlace.not_isReal_iff_isComplex]
+......
+line 486, col 69:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [InfinitePlace.not_isReal_iff_isComplex]
+...X.X........X....................
+line 570, col 4:
+exact algebraMap_completion _
+* Try this:
+
+  [apply]   apply NumberField.InfiniteAdeleRing.algebraMap_completion
+................
+line 615, col 2:
+rw [hl, hr]
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.toMonoidHom_eq_coe, u']
+    apply NumberField.InfiniteAdeleRing.isCentralSimple_infinite_addHaarScalarFactor_left_mul_eq_right_mul_aux
+shortened proof!
+......
+line 649, col 4:
+intro x
+* Try this:
+
+  [apply]     intro x
+    simp_all only [ContinuousAddEquiv.mulLeft_apply, ContinuousAddEquiv.coe_mk, AlgEquiv.toEquiv_eq_coe, AddEquiv.coe_mk,
+      EquivLike.coe_coe, map_mul, MulEquiv.trans_apply, u']
+    obtain ⟨fst, snd⟩ := u'
+    rfl
+shortened proof!
+....
+line 657, col 4:
+intro x
+* Try this:
+
+  [apply]     intro x
+    simp_all only [MulEquiv.trans_apply, ContinuousAddEquiv.mulRight_apply, ContinuousAddEquiv.coe_mk,
+      AlgEquiv.toEquiv_eq_coe, AddEquiv.coe_mk, EquivLike.coe_coe, map_mul, u']
+    obtain ⟨fst, snd⟩ := u'
+    rfl
+shortened proof!
+..................................
+line 747, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_smul]
+...
+line 751, col 4:
+apply E_family_nonempty_interior
+* Try this:
+
+  [apply]     simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, d, di]
+    apply NumberField.AdeleRing.DivisionAlgebra.Aux.E_family_nonempty_interior
+....
+line 756, col 4:
+exact ⟨hpos, hfin⟩
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, ne_eq, not_false_eq_true, and_self, d, di]
+.........
+line 768, col 2:
+rw [hρ]
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, ne_eq, NNReal.coe_add, NNReal.coe_one,
+      isUnit_iff_ne_zero, NNReal.coe_eq_zero, not_false_eq_true, IsUnit.div_mul_cancel, lt_add_iff_pos_right, zero_lt_one,
+      d, di]
+shortened proof!
+...................
+line 797, col 70:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, AddSubgroup.mem_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      RingHom.coe_range, AddSubmonoid.mem_mk, AddSubsemigroup.mem_mk, Set.mem_range,
+      Algebra.TensorProduct.includeLeftRingHom_apply, ne_eq, EmbeddingLike.apply_eq_iff_eq, not_false_eq_true]
+.
+line 797, col 80:
+simpa
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, AddSubgroup.mem_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      RingHom.coe_range, AddSubmonoid.mem_mk, AddSubsemigroup.mem_mk, Set.mem_range,
+      Algebra.TensorProduct.includeLeftRingHom_apply, ne_eq, ContinuousAddEquiv.apply_symm_apply,
+      Algebra.TensorProduct.includeLeft_apply]
+.......
+line 829, col 2:
+simpa [X]
+* Try this:
+
+  [apply]     simp_all only [Pi.sub_apply, Set.image_prod, Set.image2_sub]
+    exact this
+........
+line 842, col 6:
+simpa only [ne_eq, not_not, Units.mul_right_eq_zero] using (sub_ne_zero_of_ne noteq)
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Units.mul_right_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [mul_zero]
+    grind only
+....
+line 846, col 2:
+exact ⟨incl K D b1, ⟨b1, rfl⟩, by simpa [mul_sub] using hb.symm⟩
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Algebra.TensorProduct.includeLeft_apply, Set.mem_range, exists_exists_eq_and, Units.coe_map,
+      RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe, Algebra.TensorProduct.includeLeftRingHom_apply]
+    grind only [#4f9f]
+.......
+line 855, col 6:
+simpa only [ne_eq, Units.mul_left_eq_zero] using (sub_ne_zero_of_ne noteq)
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Units.mul_left_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [zero_mul]
+    grind only
+........
+line 868, col 4:
+infer_instance
+* Try this:
+
+  [apply]   apply NumberField.AdeleRing.DivisionAlgebra.Aux.discrete_includeLeft_subgroup
+.....
+line 878, col 4:
+exact ⟨ht1, d, rfl⟩
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, Set.mem_inter_iff, Set.mem_range,
+      Algebra.TensorProduct.includeLeft_apply, exists_apply_eq_apply, and_self]
+..............
+line 905, col 26:
+simp only [Set.mem_range, exists_apply_eq_apply]
+* Try this:
+
+  [apply]   simp_all only [Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, Set.mem_range, exists_apply_eq_apply]
+..
+line 908, col 4:
+exact (Subgroup.mul_mem_cancel_right (ringHaarCharKer (D ⊗[K] AdeleRing (𝓞 K) K)) hβ).mpr
+      ((Subgroup.inv_mem_iff (ringHaarCharKer (D ⊗[K] AdeleRing (𝓞 K) K))).mpr
+      (NumberField.AdeleRing.units_mem_ringHaarCharacter_ker K D b1))
+* Try this:
+
+  [apply]     simp_all only [Units.coe_map, RingHom.toMonoidHom_eq_coe, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply]
+    apply MulMemClass.mul_mem
+    · simp_all only [inv_mem_iff]
+      apply NumberField.AdeleRing.units_mem_ringHaarCharacter_ker
+    · simp_all only
+..........
+line 940, col 4:
+exact ⟨ν, Units.val (ν⁻¹), h31, rfl⟩
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range]
+    obtain ⟨w, h⟩ := hc
+    subst h
+    apply Exists.intro
+    · apply Exists.intro
+      · apply And.intro
+        on_goal 2 => { rfl
+        }
+        · simp_all only [Subgroup.subtype_apply]
+....
+line 948, col 6:
+refine Subgroup.mem_subgroupOf.mpr ?_
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, Subgroup.mem_subgroupOf, Subgroup.coe_mul, InvMemClass.coe_inv, mul_inv_rev,
+      mul_inv_cancel_left, inv_mem_iff, MonoidHom.mem_range]
+shortened proof!
+.
+line 952, col 4:
+rw [this]
+* Try this:
+
+  [apply]     simp_all only [Set.mem_range]
+    obtain ⟨w, h⟩ := hc
+    subst h
+    rfl
+shortened proof!
+.......
+line 964, col 57:
+simp
+* Try this:
+
+  [apply]   simp_all only [Submonoid.coe_bot, Set.finite_singleton, Set.Finite.isClosed]
+.
+line 967, col 44:
+fun_prop
+* Try this:
+
+  [apply]     simp_all only [continuous_prodMk]
+    apply And.intro
+    · grind only [continuous_fst]
+    · grind => sorry
+..
+line 983, col 2:
+use ((Units.map (algebraMap ℝ (Dinf K D))) ρ)
+* Try this:
+
+  [apply]     subst hρ
+    simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, gt_iff_lt, NNReal.coe_pos, NNReal.coe_inj,
+      exists_apply_eq_apply]
+........
+line 994, col 4:
+exact_mod_cast hy
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, gt_iff_lt, NNReal.coe_inj, r]
+......
+line 1004, col 6:
+ext
+* Try this:
+
+  [apply]   simp_all only [MulEquiv.symm_trans_apply, Units.mapEquiv_symm, gt_iff_lt, Prod.inv_mk, inv_one, Prod.mk_mul_mk, mul_one,
+      one_mul, r]
+shortened proof!
+........
+line 1022, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [Subgroup.subtype_apply, MulEquiv.trans_apply]
+    obtain ⟨val, property⟩ := b
+    obtain ⟨val_1, property_1⟩ := t
+    subst ht
+    simp_all only
+    rfl
+...........
+line 1048, col 2:
+simp [ha]
+* Try this:
+
+  [apply]   simp_all only [Subtype.coe_eta, Quotient.out_eq, SetLike.coe_mem, exists_const]
+......
+line 1074, col 2:
+exact this
+* Try this:
+
+  [apply]   simp_all only [Subgroup.comap_subtype]
+....

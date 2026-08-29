@@ -1,0 +1,94 @@
+..
+line 34, col 76:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_compl_iff, Set.mem_singleton_iff, zero_ne_one, not_false_eq_true]
+..
+line 35, col 55:
+simpa [Ideal.eq_top_iff_one] using hI'
+* Try this:
+
+  [apply]     simp_all only [Set.subset_compl_singleton_iff, SetLike.mem_coe, ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [Submodule.top_coe, isOpen_univ, Submodule.mem_top, not_true_eq_false]
+.
+line 36, col 2:
+exact ⟨J, hJ, AddSubgroup.isOpen_mono (H₁ := I.toAddSubgroup) (H₂ := J.toAddSubgroup) hIJ hI⟩
+* Try this:
+
+  [apply]     simp_all only [Set.subset_compl_singleton_iff, SetLike.mem_coe]
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => {
+        apply Ideal.isOpen_of_isOpen_subideal
+        on_goal 2 => { exact hI
+        }
+        · exact hIJ
+      }
+      · simp_all only
+.
+line 70, col 26:
+simp
+* Try this:
+
+  [apply]   simp_all only [Pi.smul_apply, map_one, smul_one]
+.
+line 70, col 36:
+simp
+* Try this:
+
+  [apply]     intro x y
+    simp_all only [Pi.smul_apply, map_mul, smul_mul']
+.................
+line 140, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe]
+    duper [*, ContinuousAlgHom.isLocalHom_toRingHom] {preprocessing := full}
+...
+line 151, col 2:
+rwa [ContinuousAlgHom.isLocalHom_toRingHom]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe]
+    duper [*, ContinuousAlgHom.isLocalHom_toRingHom] {preprocessing := full}
+.
+line 156, col 2:
+convert isLocalHom_equiv f
+* Try this:
+
+  [apply]   apply isLocalHom_toRingHom
+shortened proof!
+.
+line 160, col 17:
+convert hx.map e.symm
+* Try this:
+
+  [apply]   simp_all only [RingEquiv.toRingHom_eq_coe, RingHom.coe_coe, MulEquiv.isUnit_map]
+shortened proof!
+...............
+line 215, col 65:
+simp
+* Try this:
+
+  [apply]   simp_all only [LinearMap.ringLmapEquivSelf_apply, End.one_apply]
+.
+line 215, col 75:
+simp
+* Try this:
+
+  [apply]     intro x y
+    simp_all only [LinearMap.ringLmapEquivSelf_apply, End.mul_apply, Dual.apply_one_mul_eq]
+......
+line 296, col 49:
+rfl
+* Try this:
+
+  [apply]     rename_i x x_1
+    obtain ⟨val, property⟩ := x
+    simp_all only
+    rfl

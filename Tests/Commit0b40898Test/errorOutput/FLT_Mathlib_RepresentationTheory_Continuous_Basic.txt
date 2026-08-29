@@ -1,0 +1,30 @@
+.
+line 46, col 23:
+ext
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearMap.add_comp, ContinuousLinearMap.comp_add]
+shortened proof!
+.
+line 47, col 24:
+ext
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearMap.smul_comp, ContinuousLinearMap.comp_smulₛₗ, RingHom.id_apply]
+shortened proof!
+....
+line 54, col 29:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_one, inv_one]
+    rfl
+shortened proof!
+.
+line 55, col 35:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_mul, mul_inv_rev]
+    rfl
+shortened proof!

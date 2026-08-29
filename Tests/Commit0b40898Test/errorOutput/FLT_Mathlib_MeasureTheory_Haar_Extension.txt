@@ -1,0 +1,16 @@
+..
+line 60, col 2:
+exact H.inducedMeasure_lt_of_injOn μA μC hU h
+* Try this:
+
+  [apply]     apply TopologicalGroup.IsSES.inducedMeasure_lt_of_injOn
+    · simp_all only
+    · simp_all only
+..........
+line 79, col 6:
+exact isCompact_univ.measure_ne_top
+* Try this:
+
+  [apply]   simp_all only [haar_singleton, ENNReal.smul_toNNReal, ENNReal.toNNReal_mul, ENNReal.coe_mul, ne_eq, measure_ne_top,
+      not_false_eq_true, ENNReal.coe_toNNReal]
+.

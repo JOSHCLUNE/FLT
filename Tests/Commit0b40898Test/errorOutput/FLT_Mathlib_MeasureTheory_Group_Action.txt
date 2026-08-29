@@ -1,0 +1,122 @@
+...
+line 34, col 22:
+fun_prop
+* Try this:
+
+  [apply]   apply MeasurableMul.measurable_const_mul
+._....
+line 39, col 8:
+rintro ⟨y, hy, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Set.mem_image, Set.mem_preimage]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    apply Exists.intro
+    · apply And.intro
+      · exact left
+      · simp_all only [map_mul]
+shortened proof!
+...
+line 42, col 28:
+simp [yins]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, mul_inv_cancel_left]
+.
+line 43, col 8:
+apply congrArg (φ g⁻¹ * ·) at hy
+* Try this:
+
+  [apply]     simp_all only [map_mul]
+    grind only [inv_mul_cancel, !inv_inv, !inv_mul_cancel_right, = map_mul, = map_one]
+shortened proof!
+..
+line 47, col 4:
+exact hφ.measurableSet_image.mpr hs
+* Try this:
+
+  [apply]     apply MeasurableEmbedding.measurableSet_image'
+    · simp_all only
+    · simp_all only
+...
+line 57, col 22:
+fun_prop
+* Try this:
+
+  [apply]   apply MeasurableMul.measurable_mul_const
+._....
+line 62, col 8:
+rintro ⟨y, hy, rfl⟩
+* Try this:
+
+  [apply]     intro a
+    simp_all only [Set.mem_image, Set.mem_preimage]
+    obtain ⟨w, h⟩ := a
+    obtain ⟨left, right⟩ := h
+    subst right
+    apply Exists.intro
+    · apply And.intro
+      · exact left
+      · simp_all only [map_mul]
+shortened proof!
+...
+line 65, col 28:
+simp [yins]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_preimage, inv_mul_cancel_right]
+.
+line 66, col 8:
+apply congrArg (· * φ g⁻¹) at hy
+* this parameter is redundant, environment already contains `map_inv` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_mul` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `mulLeftEmbedding_apply` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [= map_mul, mul_inv_cancel, inv_mul_cancel, !inv_inv, !inv_mul_cancel_right, = map_one]
+  [apply] grind =>
+    instantiate only [= map_mul, mul_inv_cancel, inv_mul_cancel, !inv_inv]
+    instantiate only [!inv_mul_cancel_right]
+    instantiate only [= map_mul]
+    instantiate only [= map_mul, = map_one]
+    ac
+shortened proof!
+..
+line 70, col 4:
+exact hφ.measurableSet_image.mpr hs
+* Try this:
+
+  [apply]     apply MeasurableEmbedding.measurableSet_image'
+    · simp_all only
+    · simp_all only
+..
+line 87, col 46:
+measurability
+* Try this:
+
+  [apply]     simp_all only [measurable_inv_iff]
+    grind only [measurable_subtype_coe]
+.
+line 93, col 54:
+measurability
+* Try this:
+
+  [apply]     obtain ⟨val, property⟩ := c
+    simp_all only
+    apply Measurable.mul_const
+    apply measurable_subtype_coe
+........
+line 118, col 69:
+simpa
+* Try this:
+
+  [apply]   simp_all only [comap_subtype, Subtype.range_coe_subtype, SetLike.setOfPred_mem_eq, SetLike.coe_subset_coe]
+..
+line 120, col 4:
+exact .subtype_coe hK
+* Try this:
+
+  [apply]   duper [*, MeasurableEmbedding.subtype_coe] {preprocessing := full}

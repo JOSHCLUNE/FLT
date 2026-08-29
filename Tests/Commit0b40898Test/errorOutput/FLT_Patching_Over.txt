@@ -1,0 +1,73 @@
+...
+line 62, col 4:
+exact Submodule.smul_mono le_rfl le_top
+* Try this:
+
+  [apply]   simp_all only [map_top, range_mkQ, Std.le_refl]
+.....
+line 68, col 4:
+rw [eq_comm, Submodule.map_top, LinearMap.range_eq_top]
+* Try this:
+
+  [apply]   simp_all only [map_top, range_mkQ]
+shortened proof!
+..........
+line 92, col 60:
+simpa using congr(f.symm $hy)
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.symm_apply_apply]
+......
+line 98, col 55:
+simpa using congr(f $hy)
+* Try this:
+
+  [apply]   simp_all only [LinearEquiv.apply_symm_apply]
+..........
+line 128, col 4:
+exact Submodule.smul_mono le_rfl le_top
+* Try this:
+
+  [apply]   simp_all only [Submodule.map_top, Submodule.range_mkQ, Std.le_refl]
+....................
+line 156, col 4:
+rw [← Submodule.map_le_iff_le_comap, Submodule.map_smul'']
+* Try this:
+
+  [apply]   simp_all only [LinearMap.coe_comp, LinearMap.coe_restrictScalars, Filter.eventually_and, M₂, M₁, g₂, g₁]
+shortened proof!
+.....................................
+line 209, col 8:
+simp only [Module.toModuleEnd_apply, LinearMap.coe_comp, Finsupp.coe_lsum,
+          Function.comp_apply, Finsupp.lsingle_apply, Finsupp.mapRange.linearMap_apply,
+          LinearMap.coe_restrictScalars, Finsupp.mapRange_single,
+          DistribSMul.toLinearMap_apply, smul_zero, Finsupp.sum_single_index,
+          LinearMap.map_smul_of_tower, X, f]
+* Try this:
+
+  [apply]     subst hs
+    simp_all only [Module.toModuleEnd_apply, Finsupp.coe_lsum, LinearMap.coe_comp, Function.comp_apply,
+      Finsupp.lsingle_apply, Finsupp.mapRange.linearMap_apply, LinearMap.coe_restrictScalars, Finsupp.mapRange_single,
+      DistribSMul.toLinearMap_apply, smul_zero, Finsupp.sum_single_index, LinearMap.map_smul_of_tower, X, f]
+.........
+line 225, col 6:
+filter_upwards with i
+* Try this:
+
+  [apply]     subst hs
+    simp_all only [Finsupp.coe_lsum, Finsupp.mapRange.linearMap_apply, LinearMap.coe_restrictScalars, Submodule.mapQ_id,
+      Submodule.factor_comp_apply, Filter.eventually_true, X, s, f, t]
+shortened proof!
+...........................................
+line 319, col 46:
+exact sM
+* Try this:
+
+  [apply]     intro i
+    apply sM
+..................
+line 378, col 2:
+exact fun _ ↦ Ideal.Quotient.mk_surjective
+* Try these:
+  [apply] grind only [!Ideal.Quotient.mk_surjective]
+  [apply] grind => instantiate only [!Ideal.Quotient.mk_surjective]
