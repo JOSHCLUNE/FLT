@@ -1,0 +1,133 @@
+..............
+line 71, col 4:
+fun_prop
+* Try these:
+  [apply] grind only [Module.Finite.exists_fin', continuous_id', Continuous.snd]
+  [apply] grind =>
+    instantiate only [Module.Finite.exists_fin', continuous_id']
+    instantiate only [Continuous.snd]
+.
+line 113, col 2:
+let : TopologicalSpace (D ⊗[R] D) := moduleTopology R _
+* Try this:
+
+  [apply]   duper [*, continuous_mul'] {preprocessing := full}
+shortened proof!
+.......
+line 158, col 2:
+let : TopologicalSpace M := moduleTopology S M
+* Try this:
+
+  [apply]     simp_all only [le_sInf_iff, Set.mem_ofPred_eq, and_imp]
+    intro b a a_1
+    grind only [sInf_le, usr Set.mem_ofPred_eq, IsScalarTower.continuousSMul]
+shortened proof!
+............
+line 190, col 6:
+ext m
+* Try this:
+
+  [apply]     simp_all only [smul_assoc, RingHom.id_apply]
+    rfl
+shortened proof!
+..
+line 198, col 2:
+simp [iff R M, iff S M, moduleTopology.trans R S]
+* Try this:
+
+  [apply]     apply Iff.intro
+    · intro a
+      grind only [instIsModuleTopology, Module.Finite.exists_fin', !eq_moduleTopology, !moduleTopology.trans]
+    · intro a
+      grind only [instIsModuleTopology, Module.Finite.exists_fin', !eq_moduleTopology, !moduleTopology.trans]
+........
+line 261, col 6:
+exact fun U hU => ⟨U, ⟨⟨hU.1, hopen_mpr hU.2⟩, by simp⟩⟩
+* Try this:
+
+  [apply]     intro i a
+    obtain ⟨left, right⟩ := a
+    apply Exists.intro
+    · apply And.intro
+      on_goal 2 => { rfl
+      }
+      · simp_all only [and_self]
+...
+line 265, col 56:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero]
+.
+line 265, col 78:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.inter_subset_right]
+..
+line 271, col 6:
+exact hopen_mp (@IsOpen.inter _ (moduleTopology R S) _ _ hopen_range hU.2) (by simp)
+* this parameter is redundant, environment already contains `Set.subset_empty_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [IsOpen.inter, Set.inter_comm, isOpen_iff_forall_mem_open, = Set.subset_def, = Set.mem_inter_iff,
+    #b1e3]
+  [apply] grind only [IsOpen.inter, Set.inter_comm, isOpen_iff_forall_mem_open, = Set.subset_def, = Set.mem_inter_iff]
+  [apply] grind =>
+    instantiate only [#b1e3, IsOpen.inter, Set.inter_comm, isOpen_iff_forall_mem_open]
+    instantiate only [IsOpen.inter, isOpen_iff_forall_mem_open, = Set.subset_def]
+    instantiate only [= Set.mem_inter_iff]
+...
+line 289, col 2:
+refine IsOpenQuotientMap.isQuotientMap ⟨hsurj, continuous_of_linearMap f, h⟩
+* Try this:
+
+  [apply]     apply IsOpenMap.isQuotientMap
+    · simp_all only
+    · apply IsModuleTopology.continuous_of_linearMap
+    · simp_all only
+....
+line 345, col 4:
+let := IsModuleTopology.toContinuousAdd
+* Try this:
+
+  [apply]   duper [*, continuous_of_linearMap, toContinuousAdd] {preprocessing := full}
+shortened proof!
+..
+line 349, col 4:
+let := IsModuleTopology.toContinuousAdd
+* Try this:
+
+  [apply]   duper [*, continuous_of_linearMap, toContinuousAdd] {preprocessing := full}
+shortened proof!
+..............
+line 414, col 4:
+exact isClosed_singleton
+* Try this:
+
+  [apply]   simp_all only [Lean.Elab.WF.paramLet, ZeroHom.toFun_eq_coe, AddMonoidHom.toZeroHom_coe, LinearMap.coe_comp,
+      LinearMap.coe_mk, AddHom.coe_mk, LinearEquiv.coe_coe, Set.finite_singleton, Set.Finite.isClosed, g, f]
+...
+line 425, col 2:
+apply t2Space (R := K)
+* Try this:
+
+  [apply]   duper [*, t2Space] {preprocessing := full}
+...
+line 474, col 2:
+infer_instance
+* Try this:
+
+  [apply]   simp_all only
+...
+line 480, col 2:
+infer_instance
+* Try this:
+
+  [apply]   simp_all only
+......
+line 537, col 2:
+exact isOpenMap_of_surjective hφ
+* Try this:
+
+  [apply]     apply IsModuleTopology.isOpenMap_of_surjective
+    simp_all only

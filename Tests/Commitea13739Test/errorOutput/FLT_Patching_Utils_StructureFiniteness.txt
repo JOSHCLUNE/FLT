@@ -1,0 +1,51 @@
+.
+line 27, col 21:
+ext a b
+* Try this:
+
+  [apply]     simp_all only
+    ext x x_1 : 3
+    apply congr_fun
+    apply congr_fun
+    exact e
+shortened proof!
+.
+line 32, col 21:
+ext a b
+* Try this:
+
+  [apply]     simp_all only
+    apply Group.ext
+    exact e
+shortened proof!
+........
+line 54, col 4:
+exact (@Int.cast_smul_eq_zsmul R _ _ _ g₁ r a).trans
+      (Int.cast_smul_eq_zsmul R r a).symm
+* Try this:
+
+  [apply]     simp_all only [algebraMap_int_eq, eq_intCast]
+    duper [*, Int.cast_smul_eq_zsmul] {preprocessing := full}
+...................
+line 166, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaModuleContinuousSMulOfT2Space_fLT
+shortened proof!
+.........
+line 201, col 2:
+simp [e]
+* Try this:
+
+  [apply]   simp_all only [Equiv.toFun_as_coe, Homeomorph.coe_prodCongr, Homeomorph.refl_apply, Equiv.coe_toHomeomorph,
+      Function.comp_apply, Prod.map_fst, id_eq, Prod.map_snd, Equiv.symm_apply_apply, e, this]
+..............
+line 245, col 70:
+intro
+* Try this:
+
+  [apply]     intro i_3
+    apply instFinitePSigmaAlgebraContinuousSMulOfT2Space_fLT
+shortened proof!

@@ -1,0 +1,121 @@
+......
+line 68, col 2:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.......
+line 84, col 54:
+grobner
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 85, col 44:
+linear_combination -e2 + 3 * hr
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 87, col 6:
+linear_combination -e4 + (2 * E.a₂ - C.s * E.a₁ + 3 * C.r) * hr - C.s * C.t * h2
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 89, col 6:
+have ht : C.t = 0 := by grobner
+* Try this:
+
+  [apply]     simp_all only [ne_eq, mul_zero, add_zero, zero_mul, sub_zero, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow,
+      sub_eq_self, mul_eq_zero, or_false]
+    apply Or.inl
+    ext : 1
+    · ext : 1
+      simp_all only [Units.val_one]
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+shortened proof!
+..
+line 91, col 34:
+grobner
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 92, col 56:
+linear_combination h2
+* this parameter is redundant, environment already contains `List.getElem_idxOf` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 95, col 4:
+have hs : C.s = 0 := by grobner
+* Try this:
+
+  [apply]     simp_all only [ne_eq, add_eq_left, mul_eq_zero, false_or, zero_mul, sub_zero, mul_zero, add_zero, OfNat.ofNat_ne_zero,
+      not_false_eq_true, zero_pow]
+    apply Or.inl
+    ext : 1
+    · ext : 1
+      simp_all only [Units.val_one]
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+    · simp_all only
+      rfl
+shortened proof!
+........
+line 109, col 45:
+linear_combination hu6 - (C.u : K) ^ 2 * hu4
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 111, col 4:
+exact .inl (Units.val_eq_one.mp h)
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_pow, mul_one, Units.val_eq_one, true_or]
+.
+line 112, col 4:
+exact .inr (Units.ext h)
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_neg, mul_one, neg_neg, Units.val_eq_neg_one, or_true]
+..
+line 120, col 4:
+exact E.eq_one_or_eq_negVariableChange_of_u_eq_one hc4 hc6 hu hC
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply WeierstrassCurve.eq_one_or_eq_negVariableChange_of_u_eq_one
+    · simp_all only [ne_eq, not_false_eq_true]
+    · simp_all only [ne_eq, not_false_eq_true]
+    · simp_all only
+    · simp_all only
+........
+line 130, col 6:
+right
+* Try these:
+  [apply] grind only
+  [apply] grind => ac
+shortened proof!
+.
+line 131, col 6:
+left
+* Try this:
+
+  [apply]   smt +mono [*, negVariableChange_mul_self]
+shortened proof!

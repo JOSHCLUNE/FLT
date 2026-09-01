@@ -1,0 +1,12 @@
+Ran `hammer` (commit ea13739 (modified saturate loop)) on all of FLT with MEMORY_MAX="8G" and RUNTIME_MAX_SEC="3000".
+Final output was: "Done: 261 files processed, 9 with errors."
+
+tallySummaries.sh output:
+Total number of results: 16539
+Total number of successes: 3335
+Time taken: 85737s
+
+Total shortenedStepsCount: 1423
+
+~20.2% success rate
+~23.8 hours

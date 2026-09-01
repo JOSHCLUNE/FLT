@@ -1,0 +1,148 @@
+.
+line 57, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [span_eq_bot, Set.mem_singleton_iff, forall_eq]
+.
+line 63, col 2:
+ext x
+* Try this:
+
+  [apply]   apply map_bot
+shortened proof!
+.....
+line 81, col 46:
+simpa
+* Try this:
+
+  [apply]     subst hsc
+    simp_all only [exists_apply_eq_apply2, Function.comp_apply]
+.
+line 82, col 2:
+convert hsc
+* Try this:
+
+  [apply]     subst hsc
+    simp_all only [SetLike.coe_mem, ↓reduceDIte, Subtype.coe_eta]
+shortened proof!
+....X.X.
+line 105, col 15:
+simp
+* Try this:
+
+  [apply]     intro i a_1
+    simp_all only [Finset.sum_empty, ZeroMemClass.zero_mem, Finset.notMem_empty, f]
+..
+line 108, col 6:
+aesop
+* Try this:
+
+  [apply]     intro i a_1
+    simp_all only [not_false_eq_true, Finset.sum_insert, zero_tmul, zero_add, Finset.sum_const_zero,
+      ZeroMemClass.zero_mem, Finset.mem_insert, f]
+    cases a_1 with
+    | inl h_1 =>
+      subst h_1
+      simp_all only [zero_tmul, Finset.sum_const_zero, ZeroMemClass.zero_mem]
+    | inr h_2 => simp_all only [zero_tmul, Finset.sum_const_zero, ZeroMemClass.zero_mem]
+...X....X..
+line 116, col 72:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Finset.univ_eq_empty, one_mul, mul_one, Finset.sum_const, Finset.card_empty, zero_nsmul, f]
+....
+line 120, col 82:
+simp [eq1, eq2]
+* Try this:
+
+  [apply]     subst eq1 eq2
+    simp_all only [ne_eq, mem_top, Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, f]
+...X........X...............
+line 151, col 10:
+simp [hi]
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+.
+line 152, col 8:
+simp +contextual only [↓reduceIte] at ih
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [#01b5]
+  [apply] grind only
+  [apply] grind => instantiate only [#01b5]
+shortened proof!
+........_.........
+line 171, col 8:
+exact hkey
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+..
+line 174, col 6:
+simp [g, dif_neg hjs] at hb
+* this parameter is redundant, environment already contains `map_zero` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_add` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `map_one` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Commute.eq` annotated with `@[grind →]`
+* Try this:
+  [apply] grind only
+.X.X...
+line 179, col 2:
+simp +contextual [main]
+* Try this:
+
+  [apply]   simp_all only [Basis.baseChange_apply, zero_smul, Finset.sum_const_zero, ZeroMemClass.zero_mem, f]
+.X.X.X.
+line 188, col 6:
+exact bot_le
+* Try this:
+
+  [apply]   simp_all only [bot_le]
+.X.X...X.X.X.X.
+line 197, col 14:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Algebra.TensorProduct.includeRight_apply, Set.image_univ, zero_mem, f]
+.X.
+line 199, col 50:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Algebra.TensorProduct.tmul_mul_tmul, mul_one, one_mul, f]
+...X.X.X.
+line 205, col 4:
+exact hx
+* Try this:
+
+  [apply]   simp_all only [Algebra.TensorProduct.includeRight_apply, SetLike.mem_coe]
+......
+line 215, col 4:
+simp
+* Try this:
+
+  [apply]     intro x a
+    simp_all only [Algebra.TensorProduct.includeRight_apply, TwoSidedIdeal.coe_bot, Set.image_singleton, tmul_zero,
+      Set.mem_singleton_iff, f]
+....
+line 219, col 43:
+simp [Algebra.TensorProduct.one_def]
+* Try this:
+
+  [apply]     simp_all only [TwoSidedIdeal.coe_top, Set.mem_univ, Algebra.TensorProduct.includeRight_apply, true_and, f]
+    rfl

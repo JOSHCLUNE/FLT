@@ -1,0 +1,39 @@
+.....
+line 57, col 4:
+change Continuous (fun (x : (a : α) → (b : β) → φ a b) ↦ Function.swap x)
+* Try this:
+
+  [apply]     simp_all only [AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, LinearEquiv.coe_coe]
+    apply continuous_pi
+    intro i
+    apply continuous_pi
+    intro i_1
+    apply continuous_apply_apply
+shortened proof!
+.
+line 60, col 4:
+change Continuous (fun x ↦ Function.swap x)
+* Try this:
+
+  [apply]     simp_all only [LinearEquiv.invFun_eq_symm]
+    apply continuous_pi
+    intro i
+    apply continuous_pi
+    intro i_1
+    apply continuous_apply_apply
+shortened proof!
+.
+line 134, col 40:
+rw[Matrix.det_mul]
+* Try this:
+
+  [apply]   simp_all only [det_mul, IsUnit.mul_iff, and_self]
+shortened proof!
+...
+line 146, col 2:
+ext
+* Try this:
+
+  [apply]     ext x : 2
+    simp_all only [Matrix.toContinousLinearEquiv_apply, Matrix.toLin_toMatrix, LinearEquiv.coe_coe, coe_toLinearEquiv]
+shortened proof!

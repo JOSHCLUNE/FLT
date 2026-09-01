@@ -1,0 +1,1156 @@
+..
+line 175, col 2:
+ring_nf
+* Try these:
+  [apply] grind only [mul_add]
+  [apply] grind => instantiate only [mul_add]
+..
+line 179, col 2:
+ring_nf
+* Try this:
+
+  [apply]   simp_all only [mul_neg]
+.
+line 182, col 2:
+simp only [e, ← Complex.exp_int_mul]
+* Try this:
+
+  [apply]   duper [*, e, cpow_intCast, exp_int_mul, mul_one, mul_left_comm, mul_mul_mul_comm] {preprocessing := full}
+shortened proof!
+..
+line 190, col 2:
+nth_rw 1 [← Int.natAbs_of_nonneg hn, e_intMul, zpow_natCast]
+* Try this:
+
+  [apply]   duper [*, e_intMul, Int.natAbs_of_nonneg, Int.cast_natCast, cpow_intCast, e, cpow_natCast] {preprocessing := full}
+.
+line 194, col 2:
+rw [← neg_mul, ← Int.cast_neg, ← Int.ofNat_natAbs_of_nonpos hn, e_intMul, zpow_natCast]
+* Try this:
+
+  [apply]   duper [*, e_intCast_mul_natAbs, Int.natAbs_neg, neg_mul, Int.cast_neg, Int.zero_le_neg_iff] {preprocessing := full}
+..
+line 199, col 2:
+ring_nf
+* Try this:
+
+  [apply]   simp_all only [mul_zero, sub_zero, zero_mul, add_zero, mul_one, sub_self, zero_sub]
+...
+line 207, col 59:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_eq_zero, OfNat.ofNat_ne_zero, ofReal_eq_zero, Real.pi_ne_zero, or_self, I_ne_zero,
+      not_false_eq_true]
+..
+line 215, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      one_ne_zero, not_false_eq_true]
+.
+line 216, col 4:
+simpa using congrArg Complex.im h.symm
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.succ_eq_add_one, Nat.reduceAdd, Fin.isValue, Matrix.cons_val_one, Matrix.cons_val_fin_one,
+      real_smul, mul_one, Matrix.cons_val_zero]
+    subst h
+    simp_all only [ofReal_im, not_true_eq_false]
+......
+line 265, col 4:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+......
+line 277, col 4:
+simp [← hr1] at hr
+* Try this:
+
+  [apply]     subst hr1
+    simp_all only [norm_one, lt_self_iff_false]
+.....
+line 285, col 4:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 289, col 2:
+ring
+* Try this:
+  [apply] grind only
+......
+line 319, col 2:
+ring
+* Try this:
+  [apply] grind only
+.
+line 324, col 50:
+exact_mod_cast hk
+* Try this:
+
+  [apply]   simp_all only [Nat.ofNat_le_cast]
+.
+line 325, col 15:
+simp
+* Try this:
+
+  [apply]   simp_all only [Int.cast_one, one_mul, zpow_natCast]
+.
+line 329, col 55:
+simp
+* Try this:
+
+  [apply]   simp_all only [Equiv.neg_apply, Function.comp_apply]
+..
+line 333, col 74:
+simp [← sub_eq_add_neg]
+* Try this:
+
+  [apply]     simp_all only [Int.cast_neg, inv_inj]
+    rfl
+..
+line 338, col 2:
+refine tsum_congr fun m ↦ by simp [← sub_eq_add_neg]
+* Try this:
+
+  [apply]     simp_all only [Int.cast_neg]
+    rfl
+.....
+line 346, col 39:
+ring
+* this parameter is redundant, environment already contains `Nat.even_add` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.....
+line 354, col 39:
+ring
+* Try this:
+  [apply] grind only
+...
+line 361, col 54:
+rw [zero_add]
+* Try this:
+
+  [apply]   simp_all only [zero_add]
+..
+line 371, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, sub_self, OfNat.ofNat_ne_zero, zero_pow, div_zero]
+..
+line 373, col 4:
+ring
+* Try this:
+  [apply] grind only
+..
+line 378, col 34:
+linarith
+* Try this:
+
+  [apply]   simp_all only [sub_pos]
+...
+line 381, col 4:
+rw [norm_one] at h2
+* Try this:
+
+  [apply]     simp_all only [sub_pos, norm_one, tsub_le_iff_right, ge_iff_le]
+    grind only
+shortened proof!
+...............
+line 415, col 65:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]
+.
+line 417, col 4:
+exact sum_int_inv_sq w h
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply TateCurve.Blueprint.sum_int_inv_sq
+    simp_all only
+..
+line 423, col 70:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 430, col 2:
+rw [tsum_pnat_eq_tsum_succ]
+* Try this:
+
+  [apply]     apply tsum_pnat_eq_tsum_of_eq_zero
+    simp_all only
+shortened proof!
+..
+line 439, col 58:
+simp
+* Try this:
+
+  [apply]   simp_all only [CharP.cast_eq_zero, pow_zero, mul_one]
+.
+line 445, col 45:
+simpa using hq1
+* Try this:
+
+  [apply]   simp_all only [mul_one]
+.
+line 445, col 80:
+rw [mul_one]
+* Try this:
+
+  [apply]   simp_all only [mul_one]
+..
+line 451, col 68:
+simp
+* Try this:
+
+  [apply]   simp_all only [pow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero]
+....
+line 456, col 6:
+rw [norm_pow]
+* Try this:
+
+  [apply]     simp_all only [norm_pow]
+    grind only [PNat.ne_zero, !pow_lt_one_iff_of_nonneg, norm_nonneg]
+shortened proof!
+......
+line 463, col 66:
+simp
+* Try this:
+
+  [apply]   simp_all only [pow_one, ArithmeticFunction.map_zero, CharP.cast_eq_zero, pow_zero, mul_one]
+..
+line 468, col 45:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast]
+.....
+line 478, col 45:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast]
+....
+line 483, col 48:
+push_cast
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast, Nat.cast_add, Nat.cast_one]
+shortened proof!
+.......
+line 491, col 69:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast, neg_add_rev, Int.reduceNeg]
+...
+line 495, col 66:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zpow_natCast, neg_add_rev, Int.reduceNeg, pow_zero, sub_self, OfNat.ofNat_ne_zero,
+      not_false_eq_true, zero_pow, div_zero]
+.
+line 496, col 2:
+rw [h1, h2]
+* Try this:
+  [apply] grind only
+shortened proof!
+...
+line 508, col 2:
+rw [norm_mul, norm_inv, ← div_eq_mul_inv]
+* Try these:
+  [apply] grind only [Complex.norm_div, !inv_pos, ne_of_gt, mul_lt_mul_of_pos_right]
+  [apply] grind =>
+    instantiate only [Complex.norm_div]
+    instantiate only [!inv_pos]
+    instantiate only [ne_of_gt]
+    instantiate only [mul_lt_mul_of_pos_right]
+shortened proof!
+.
+line 514, col 2:
+rw [mul_inv, inv_inv, zpow_neg, zpow_natCast]
+* Try these:
+  [apply] grind only [mul_inv, zpow_neg, zpow_natCast]
+  [apply] grind =>
+    instantiate only [mul_inv, zpow_neg]
+    instantiate only [zpow_natCast]
+....
+line 524, col 19:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_add, Nat.cast_one]
+    rfl
+....
+line 535, col 47:
+simp [Complex.sub_im, Complex.mul_im]
+* Try this:
+
+  [apply]   simp_all only [sub_im, mul_im, intCast_re, intCast_im, zero_mul, add_zero]
+....
+line 537, col 70:
+exact_mod_cast h
+* Try this:
+
+  [apply]   simp_all only [Int.cast_nonpos]
+.....
+line 548, col 4:
+rw [show ∑' m : ℤ, (((((0 : ℤ) : ℂ)) * τ + m) ^ 2)⁻¹ = ∑' m : ℤ, ((m : ℂ) ^ 2)⁻¹ from
+      tsum_congr fun m ↦ by norm_num, hasSum_int_inv_sq.tsum_eq]
+* Try this:
+
+  [apply]     simp_all only [Int.cast_zero, zero_mul, zero_add, zpow_ofNat, pow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero,
+      not_false_eq_true, zero_pow, div_zero, mul_zero, ↓reduceIte]
+    apply HasSum.tsum_eq
+    apply _private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.hasSum_int_inv_sq
+shortened proof!
+..
+line 552, col 8:
+simpa [Complex.mul_im] using mul_ne_zero (Int.cast_ne_zero.mpr hn) hτ.ne'
+* Try this:
+
+  [apply]     simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero, mul_eq_zero, Int.cast_eq_zero, false_or]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    simp_all only [lt_self_iff_false]
+.........
+line 585, col 67:
+congr 1
+* Try this:
+
+  [apply]     simp_all only [ne_eq, inv_inj]
+    grind only
+shortened proof!
+.......
+line 598, col 28:
+congr 1
+* Try these:
+  [apply] grind only [sub_sub]
+  [apply] grind => instantiate only [sub_sub]
+shortened proof!
+......
+line 616, col 43:
+ring
+* Try this:
+  [apply] grind only
+.
+line 617, col 2:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 623, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_pow, sub_self, OfNat.ofNat_ne_zero, zero_pow,
+      div_zero, neg_zero]
+..
+line 625, col 4:
+ring
+* Try this:
+  [apply] grind only
+..
+line 633, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, one_ne_zero, not_false_eq_true, inv_one, one_mul, sub_self, OfNat.ofNat_ne_zero, zero_pow,
+      div_zero, neg_zero]
+..
+line 635, col 4:
+ring
+* Try this:
+  [apply] grind only
+..
+line 643, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero, one_pow, mul_zero, add_zero,
+      one_mul]
+.
+line 644, col 4:
+field_simp [sub_ne_zero.mpr (Ne.symm hv1)]
+* Try these:
+  [apply] grind only [pow_eq_zero_iff, add_sub_assoc, sub_eq_zero]
+  [apply] grind =>
+    instantiate only [pow_eq_zero_iff, add_sub_assoc, sub_eq_zero]
+    ring
+shortened proof!
+...
+line 654, col 42:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_one, Nat.reduceAdd]
+.
+line 654, col 79:
+simpa using h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, neg_im, Left.neg_pos_iff]
+.
+line 656, col 4:
+ring
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_neg, neg_neg]
+.
+line 657, col 4:
+exact sum_int_inv_cube w h
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply TateCurve.Blueprint.sum_int_inv_cube
+    simp_all only
+....
+line 667, col 37:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_add, Nat.cast_one]
+    rfl
+........
+line 699, col 56:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.reduceLeDiff]
+.
+line 700, col 6:
+rw [div_eq_mul_inv, show z - (n * τ + m) = z - n * τ - m by ring]
+* this parameter is redundant, environment already contains `abs_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....
+line 709, col 6:
+rw [← tsum_mul_left]
+* this parameter is redundant, environment already contains `abs_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [tsum_mul_left, #cbec, #a6a4, #a0dc, #ebca]
+  [apply] grind only [tsum_mul_left]
+  [apply] grind =>
+    instantiate only [tsum_mul_left]
+    cases #cbec
+    · cases #a6a4 <;> cases #a0dc <;> ring
+    · cases #ebca <;> cases #a6a4 <;> cases #a0dc <;> ring
+shortened proof!
+.
+line 714, col 4:
+ring
+* this parameter is redundant, environment already contains `abs_div` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 722, col 2:
+ring
+* this parameter is redundant, environment already contains `abs_div` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+..
+line 730, col 42:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.one_le_ofNat]
+...
+line 732, col 49:
+norm_num [Nat.factorial]
+* Try this:
+
+  [apply]     simp_all only [neg_mul]
+    rfl
+.
+line 733, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 739, col 72:
+ring
+* Try this:
+
+  [apply]   grind only
+.
+line 740, col 29:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceLeDiff]
+.
+line 740, col 55:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd]
+...
+line 747, col 4:
+simpa using hs.tendsto_atTop_zero.norm
+* Try these:
+  [apply] grind only [Summable.tendsto_atTop_zero, !summable_norm_iff]
+  [apply] grind => instantiate only [Summable.tendsto_atTop_zero, !summable_norm_iff]
+....
+line 751, col 36:
+exact_mod_cast hd2
+* Try this:
+
+  [apply]   simp_all only [norm_pow, RCLike.norm_natCast, Nat.one_le_cast]
+..
+line 753, col 2:
+linarith
+* Try this:
+  [apply] grind only
+......
+line 770, col 10:
+simp [zero_pow hj]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, CharP.cast_eq_zero, not_false_eq_true, zero_pow, pow_zero, mul_one]
+....
+line 773, col 66:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, ArithmeticFunction.map_zero, CharP.cast_eq_zero, pow_zero, mul_one]
+...
+line 783, col 6:
+rw [show ((-((n + 1 : ℕ) : ℤ)).natAbs) = ((-((n : ℤ) + 1)).natAbs) by omega]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.natAbs_natCast, Int.natAbs_neg, Nat.cast_add, Nat.cast_one, neg_add_rev, Int.reduceNeg]
+..
+line 788, col 8:
+rw [show ((n : ℤ)).natAbs = n by omega]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.natAbs_natCast, Int.natAbs_neg, neg_add_rev, Int.reduceNeg]
+....
+line 796, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 806, col 53:
+simp [Complex.mul_im]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero]
+.....
+line 810, col 37:
+exact_mod_cast h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero, Int.cast_lt_zero]
+...
+line 813, col 6:
+rw [him]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_im, intCast_re, intCast_im, zero_mul, add_zero, Int.cast_pos, mul_pos_iff_of_pos_left]
+shortened proof!
+.....
+line 834, col 4:
+rw [PeriodPair.sumInvPow_zero] at h
+* Try this:
+
+  [apply]   simp_all only [ne_eq, sub_zero, PeriodPair.sumInvPow_zero]
+shortened proof!
+.....
+line 842, col 30:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Int.cast_zero, zero_mul, zero_add]
+.
+line 844, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, mul_zero, ↓reduceIte, zero_add]
+.
+line 845, col 6:
+rw [row_eval_ne_zero hτ hkeven hrow hn, if_neg hn, add_zero]
+* Try this:
+
+  [apply]     simp_all only [ne_eq, ↓reduceIte, add_zero]
+    apply _private.FLT.KnownIn1980s.EllipticCurves.TateCurveConstruction.0.TateCurve.Blueprint.row_eval_ne_zero
+    · simp_all only
+    · simp_all only
+    · intro w a
+      simp_all only
+    · simp_all only [ne_eq, not_false_eq_true]
+....
+line 851, col 4:
+rwa [hrowval n] at h
+* Try this:
+
+  [apply]   simp_all only [ne_eq]
+....
+line 856, col 45:
+ring
+* Try this:
+
+  [apply]   simp_all only [ne_eq, add_sub_cancel_right]
+..
+line 860, col 6:
+rw [← mul_assoc, inv_mul_cancel₀ hC, one_mul]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, not_false_eq_true, inv_mul_cancel_left₀]
+.
+line 861, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 872, col 44:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+.
+line 872, col 58:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceLT]
+.
+line 872, col 75:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd]
+.
+line 873, col 56:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+..
+line 877, col 8:
+ring
+* Try this:
+  [apply] grind only
+.
+line 878, col 6:
+ring
+* Try this:
+  [apply] grind only
+.
+line 879, col 2:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+.
+line 882, col 2:
+rw [bernoulli'_def]
+* this parameter is redundant, environment already contains `Nat.choose_succ_self_right` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Nat.choose_zero_right` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [bernoulli'_eq_bernoulli, bernoulli'_def, bernoulli'_def', bernoulli_eq_bernoulli'_of_ne_one]
+  [apply] grind =>
+    instantiate only [bernoulli'_eq_bernoulli, bernoulli'_def, bernoulli'_def']
+    ring
+    instantiate only [bernoulli_eq_bernoulli'_of_ne_one]
+shortened proof!
+....
+line 892, col 49:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+..
+line 893, col 38:
+norm_num
+* Try this:
+  [apply] grind only
+..
+line 894, col 47:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd, Nat.reduceMul, Nat.add_one_sub_one, ne_eq, OfNat.ofNat_ne_one, not_false_eq_true]
+..
+line 896, col 2:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 904, col 42:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.one_le_ofNat]
+...
+line 906, col 51:
+norm_num [Nat.factorial]
+* Try this:
+
+  [apply]     simp_all only [neg_mul]
+    rfl
+.
+line 907, col 2:
+ring
+* Try this:
+  [apply] grind only
+..
+line 913, col 27:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceLeDiff]
+.
+line 913, col 53:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd]
+..
+line 924, col 44:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+.
+line 924, col 58:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceLT]
+.
+line 924, col 75:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [Nat.reduceAdd]
+.
+line 925, col 56:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true]
+..
+line 929, col 8:
+ring
+* Try this:
+  [apply] grind only
+.
+line 930, col 6:
+ring
+* Try this:
+  [apply] grind only
+.
+line 931, col 2:
+ring
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+..
+line 939, col 2:
+field_simp [Real.pi_ne_zero]
+* Try these:
+  [apply] grind only [Real.pi_ne_zero, two_ne_zero, mul_eq_zero]
+  [apply] grind =>
+    instantiate only [Real.pi_ne_zero, two_ne_zero, mul_eq_zero]
+    ring
+...
+line 946, col 4:
+field_simp [two_pi_I_ne_zero]
+* Try these:
+  [apply] grind only [Complex.two_pi_I_ne_zero]
+  [apply] grind =>
+    instantiate only [Complex.two_pi_I_ne_zero]
+    ring
+.
+line 947, col 2:
+rw [hmul, Complex.exp_log hw]
+* Try this:
+
+  [apply]   duper [*, log_one, exp_log] {preprocessing := full}
+....
+line 955, col 4:
+have h := congrArg Complex.im hmn
+* Try this:
+
+  [apply]     subst hmn
+    simp_all only [periodPair_ω₁, periodPair_ω₂, mul_one, add_im, mul_im, intCast_re, intCast_im, zero_mul, add_zero,
+      mul_pos_iff_of_pos_right, Int.cast_pos, mul_lt_iff_lt_one_left]
+shortened proof!
+..
+line 958, col 39:
+nlinarith [show 0 < (m : ℝ) * τ.im by simpa [him] using hz0]
+* Try this:
+
+  [apply]     subst hmn
+    simp_all only [periodPair_ω₁, periodPair_ω₂, mul_one, add_im, mul_im, intCast_re, intCast_im, zero_mul, add_zero,
+      mul_pos_iff_of_pos_right, Int.cast_pos, mul_lt_iff_lt_one_left]
+..
+line 960, col 4:
+nlinarith [show (m : ℝ) * τ.im < 1 * τ.im by simpa [one_mul, him] using hzt]
+* Try this:
+
+  [apply]     subst hmn
+    simp_all only [Int.cast_pos, periodPair_ω₁, periodPair_ω₂, mul_one, add_im, mul_im, intCast_re, intCast_im, zero_mul,
+      add_zero, mul_pos_iff_of_pos_left, mul_lt_iff_lt_one_left]
+..
+line 961, col 21:
+exact_mod_cast hm_pos_real
+* Try this:
+
+  [apply]     subst hmn
+    simp_all only [Int.cast_pos, periodPair_ω₁, periodPair_ω₂, mul_one, add_im, mul_im, intCast_re, intCast_im, zero_mul,
+      add_zero, mul_pos_iff_of_pos_left, mul_lt_iff_lt_one_left]
+...
+line 963, col 2:
+omega
+* this parameter is redundant, environment already contains `Set.mem_insert_iff` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+.
+line 970, col 2:
+have hmain :
+      c ^ 6 * ((x + 2 * y) ^ 2 -
+        (4 * (1 / 12 + x) ^ 3 - (1 + 240 * s3) / 12 * (1 / 12 + x) +
+          (1 - 504 * s5) / 216)) = 0 := by
+    rw [hD, hP, hg2, hg3] at hDE
+    ring_nf at hDE ⊢
+    linear_combination hDE
+* Try this:
+
+  [apply]     subst hP hD hg2 hg3
+    simp_all only [ne_eq, one_div]
+    grind only
+shortened proof!
+......
+line 1009, col 65:
+positivity
+* Try these:
+  [apply] grind only [Real.two_pi_pos]
+  [apply] grind => instantiate only [Real.two_pi_pos]
+....
+line 1015, col 73:
+positivity
+* Try these:
+  [apply] grind only [Real.pi_pos, mul_pos]
+  [apply] grind => instantiate only [Real.pi_pos, mul_pos]
+.
+line 1031, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_one, OneMemClass.coe_one]
+.
+line 1032, col 21:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_mul, IntermediateField.coe_mul]
+.
+line 1033, col 18:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, ZeroMemClass.coe_zero]
+.
+line 1034, col 21:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_add, IntermediateField.coe_add]
+.........
+line 1058, col 4:
+simpa using congrArg PNat.natPred hab
+* Try this:
+
+  [apply]   simp_all only [Nat.succPNat_inj]
+..
+line 1062, col 30:
+simp [Nat.succPNat_coe, Nat.succ_eq_add_one]
+* Try this:
+
+  [apply]   simp_all only [Function.comp_apply, Nat.succPNat_coe, Nat.succ_eq_add_one]
+..
+line 1069, col 2:
+have h1 : Summable fun n : ℕ ↦ f n := hf.comp_injective Nat.cast_injective
+* Try this:
+
+  [apply]     apply tsum_int_eq_zero_add_tsum_pnat
+    simp_all only
+shortened proof!
+.
+line 1083, col 70:
+simp
+* Try this:
+
+  [apply]   simp_all only [CharP.cast_eq_zero, pow_zero, mul_one]
+..
+line 1088, col 91:
+simp
+* Try this:
+
+  [apply]   simp_all only [Nat.choose_zero_succ, CharP.cast_eq_zero, pow_zero, mul_one]
+..
+line 1094, col 4:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [norm_zero, zero_lt_one, ne_eq, PNat.ne_zero, not_false_eq_true, zero_pow, mul_zero, sub_zero, one_pow,
+      div_one, hasSum_zero]
+......
+line 1102, col 6:
+field_simp
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    grind only
+shortened proof!
+..
+line 1104, col 41:
+simp
+* Try this:
+
+  [apply]   simp_all only [ne_eq, zero_add, Nat.choose_succ_self, CharP.cast_eq_zero, pow_zero, mul_one]
+.
+line 1105, col 4:
+rwa [show v⁻¹ * (v ^ 2 * ((1 - v) ^ 3)⁻¹) = v / (1 - v) ^ 3 by
+      rw [pow_two, mul_assoc, inv_mul_cancel_left₀ hv0, ← div_eq_mul_inv]] at h3
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+...........
+line 1130, col 4:
+omega
+* Try these:
+  [apply] grind only
+  [apply] grind => lia
+...
+line 1139, col 8:
+rw [Real.norm_of_nonneg (le_max_of_le_left (norm_nonneg x))]
+* Try these:
+  [apply] grind only [!norm_norm, = max_def, #22aa]
+  [apply] grind only [!norm_norm, = max_def]
+  [apply] grind =>
+    instantiate only [!norm_norm, = max_def]
+    cases #22aa
+shortened proof!
+.....
+line 1142, col 52:
+positivity
+* Try this:
+
+  [apply]   simp_all only [Complex.norm_mul, Nat.cast_nonneg, pow_succ_nonneg]
+...
+line 1144, col 37:
+positivity
+* Try this:
+
+  [apply]   simp_all only [Complex.norm_mul, norm_nonneg, pow_nonneg]
+....
+line 1149, col 71:
+positivity
+* Try this:
+
+  [apply]   simp_all only [Complex.norm_mul, norm_nonneg, pow_nonneg]
+...
+line 1166, col 89:
+ring
+* Try this:
+  [apply] grind only
+......
+line 1184, col 43:
+rw [(Nat.mem_divisorsAntidiagonal.mp hp).1]
+* Try this:
+
+  [apply]   simp_all only [Finset.univ_eq_attach, Nat.mem_divisorsAntidiagonal, ne_eq, PNat.ne_zero, not_false_eq_true, and_true]
+.
+line 1186, col 2:
+rw [hval] at h2
+* Try this:
+
+  [apply]     simp_all only [Finset.univ_eq_attach, Function.comp_apply]
+    exact h2
+shortened proof!
+..
+line 1197, col 8:
+simpa using hq1
+* Try this:
+
+  [apply]   simp_all only [mul_one]
+....
+line 1200, col 68:
+simp
+* Try this:
+
+  [apply]   simp_all only [one_pow, mul_one, pow_zero, sub_self, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, zero_pow, div_zero]
+.................
+line 1265, col 76:
+ring
+* Try this:
+
+  [apply]     simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, one_pow, mul_one]
+    obtain ⟨fst, snd⟩ := p
+    simp_all only
+    grind only
+....
+line 1271, col 66:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, PowerSeries.coeff_zero_eq_constantCoeff, pow_zero,
+      mul_one, zpow_natCast]
+.....
+line 1279, col 6:
+rw [zpow_zero, one_mul]
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, PowerSeries.coeff_zero_eq_constantCoeff, pow_zero,
+      mul_one, zpow_natCast, implies_true, zpow_neg, zpow_ofNat, one_mul]
+.
+line 1281, col 2:
+ring
+* Try this:
+  [apply] grind only
+.......
+line 1307, col 63:
+ring
+* Try this:
+
+  [apply]     simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, one_pow, mul_one]
+    obtain ⟨fst, snd⟩ := p
+    simp_all only
+    grind only
+....
+line 1314, col 74:
+rw [zpow_natCast]
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, PowerSeries.coeff_zero_eq_constantCoeff, pow_zero,
+      mul_one, zpow_natCast]
+.....
+line 1323, col 6:
+rw [zpow_zero, one_mul]
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, not_false_eq_true, inv_pow, PowerSeries.coeff_zero_eq_constantCoeff, pow_zero,
+      mul_one, zpow_natCast, implies_true, zpow_neg, zpow_ofNat, one_mul]
+.
+line 1326, col 2:
+ring
+* Try this:
+  [apply] grind only
+......
+line 1342, col 2:
+simpa only [PowerSeries.C_eq_algebraMap] using
+    (map_ofNat (algebraMap (RatFunc ℚ) ((RatFunc ℚ)⟦X⟧)) m).symm
+* Try this:
+
+  [apply]   rfl
+...
+line 1350, col 2:
+ring_nf
+* Try this:
+  [apply] grind only
+...
+line 1360, col 4:
+rw [PowerSeries.C_eq_algebraMap]
+* Try this:
+
+  [apply]     simp_all only [map_neg, neg_inj]
+    rfl
+shortened proof!
+..
+line 1363, col 2:
+norm_num
+* Try this:
+
+  [apply]   simp_all only [map_neg, neg_inj, neg_mul, Rat.cast_natCast]
+...
+line 1375, col 24:
+ring
+* Try this:
+  [apply] grind only
+..
+line 1384, col 26:
+ring
+* Try this:
+  [apply] grind only
+........
+line 1400, col 39:
+simpa [Metric.mem_ball, dist_eq_norm] using hz
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, Metric.mem_ball, dist_zero_right]
+...
+line 1404, col 60:
+simpa using hz
+* Try this:
+
+  [apply]   simp_all only [norm_pos_iff, ne_eq, Set.mem_compl_iff, Set.mem_singleton_iff, not_false_eq_true]
+......
+line 1417, col 2:
+simpa [Polynomial.IsRoot, Polynomial.eval_map] using
+    (div_eq_zero_iff.mp heval).resolve_right
+      (by simpa [Polynomial.IsRoot, Polynomial.eval_map] using hu.2)
+* Try this:
+
+  [apply]     simp_all only [Polynomial.IsRoot.def, Polynomial.eval_map_algebraMap, Set.mem_sdiff, Set.mem_ofPred_eq,
+      div_eq_zero_iff]
+    obtain ⟨left, right⟩ := hu
+    cases heval with
+    | inl h_1 => exact h_1
+    | inr h_2 => duper [*] {preprocessing := full}
+.......................
+line 1483, col 2:
+ring
+* Try this:
+  [apply] grind only
+.....
+line 1493, col 6:
+have hnorm : ‖(x : ℂ)‖ = x := (RCLike.norm_ofReal (K := ℂ) x).trans (abs_of_pos hx0)
+* Try this:
+
+  [apply]     simp_all only [norm_pos_iff, ne_eq, Set.mem_union, Set.mem_ofPred_eq, ofReal_eq_zero, norm_real, Real.norm_eq_abs,
+      true_and]
+    grind only [= Set.ofPred_true, = Set.ofPred_false, LT.lt.not_gt, = abs.eq_1, lt_max_of_lt_right, = max_def,
+      !norm_pos_iff, NormedField.exists_one_lt_norm, #a68c, #1222, #6f16, #fa7c, #f4ea, #5d41, #86bc]
+shortened proof!
+.
+line 1495, col 6:
+exact .inr (not_not.mp htr)
+* Try this:
+
+  [apply]     simp_all only [norm_pos_iff, ne_eq, Set.mem_union, Set.mem_ofPred_eq, ofReal_eq_zero, norm_real, Real.norm_eq_abs,
+      false_and, false_or]
+    duper [*] {preprocessing := full}
+..
+line 1500, col 2:
+exact not_le_of_gt Cardinal.aleph0_lt_continuum
+    (Cardinal.mk_Ioo_real one_pos ▸ Cardinal.le_aleph0_iff_set_countable.mpr hIoo)
+* Try these:
+  [apply] grind only [!Cardinal.le_aleph0_iff_set_countable, Cardinal.mk_univ_complex, not_countable_complex,
+    !Cardinal.mk_Ioo_real]
+  [apply] grind =>
+    instantiate only [!Cardinal.le_aleph0_iff_set_countable, Cardinal.mk_univ_complex, not_countable_complex,
+      !Cardinal.mk_Ioo_real]
+    instantiate only [!Cardinal.le_aleph0_iff_set_countable]
+................
+line 1550, col 2:
+ring
+* Try this:
+  [apply] grind only

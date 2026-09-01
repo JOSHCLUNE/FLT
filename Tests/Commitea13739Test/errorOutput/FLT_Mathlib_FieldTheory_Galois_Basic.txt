@@ -1,0 +1,54 @@
+....
+line 53, col 2:
+exact finrank_eq_two K L
+* Try this:
+
+  [apply]   apply Algebra.IsQuadraticExtension.finrank_eq_two
+..
+line 64, col 4:
+exact Or.inl h1
+* Try this:
+
+  [apply]     subst h1
+    simp_all only [ne_eq, true_or]
+.....
+line 79, col 4:
+exact AlgEquiv.one_apply x
+* Try this:
+
+  [apply]   simp_all only [ne_eq, AlgEquiv.one_apply]
+.
+line 80, col 4:
+exact hx
+* Try this:
+
+  [apply]   simp_all only [ne_eq]
+.
+line 87, col 39:
+simpa using algEquiv_eq_one_or_eq K L hσ φ
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Finset.mem_insert, Finset.mem_singleton]
+    apply Algebra.IsQuadraticExtension.algEquiv_eq_one_or_eq
+    simp_all only [ne_eq, not_false_eq_true]
+....
+line 102, col 39:
+rw [← map_pow, hα, AlgEquiv.commutes]
+* Try this:
+
+  [apply]   duper [*, map_pow, AlgEquiv.commutes] {preprocessing := full}
+...
+line 119, col 17:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgEquiv.one_apply, implies_true, ↓reduceIte]
+.......___...
+line 138, col 2:
+simp only [MonoidHom.coe_mk, OneHom.coe_mk]
+* Try this:
+
+  [apply]   simp_all only [MonoidHom.coe_mk, OneHom.coe_mk, ite_eq_left_iff, not_forall, neg_units_ne_self, imp_false, not_exists,
+      not_not]
+shortened proof!
+........
