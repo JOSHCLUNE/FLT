@@ -1,0 +1,72 @@
+....
+line 44, col 56:
+simp
+* Try this:
+
+  [apply]   simp_all only [Finset.finite_toSet]
+..
+line 45, col 29:
+aesop
+* Try this:
+
+  [apply]     rename_i w left right
+    subst right
+    simp_all only [imp_false, Decidable.not_not, SetLike.mem_coe, Nat.mem_primeFactors, ne_eq, Rat.den_ne_zero,
+      not_false_eq_true, and_true]
+    obtain ⟨val, property⟩ := w
+    simp_all only [true_and]
+    exact left
+.
+line 56, col 2:
+contrapose! hp
+* Try this:
+
+  [apply]     simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le]
+    grind only [!Padic.norm_le_one_iff_val_nonneg]
+shortened proof!
+.........
+line 79, col 6:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, ne_eq, one_pow]
+..
+line 80, col 47:
+simpa [Subtype.val_inj] using! hpq.symm
+* Try this:
+
+  [apply]   duper [*, Subtype.ext] {preprocessing := full}
+....
+line 89, col 4:
+simp
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, one_pow]
+.....
+line 97, col 6:
+simp [hx]
+* Try this:
+
+  [apply]   simp_all only [mem_indexSupport_iff, zero_mem, not_true_eq_false]
+........
+line 117, col 59:
+simpa [Subtype.val_inj] using! h
+* Try this:
+
+  [apply]   duper [*, Subtype.ext] {preprocessing := full}
+....
+line 128, col 4:
+exact hX p
+* this parameter is redundant, environment already contains `Subtype.property` annotated with `@[grind]`
+* Try these:
+  [apply] grind only [#2982]
+  [apply] grind only
+  [apply] grind => instantiate only [#2982]
+................
+line 143, col 34:
+simpa using hp
+* Try this:
+
+  [apply]   simp_all only [Nat.cast_pow, ZMod.natCast_val, Subtype.forall, mem_indexSupport_iff, mem_subring_iff, not_le, not_lt, a,
+      padicNum_bar]
+.....

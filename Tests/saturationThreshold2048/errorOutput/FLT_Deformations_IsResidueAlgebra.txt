@@ -1,0 +1,19 @@
+......
+line 79, col 4:
+exact IsResidueAlgebra.algebraMap_surjective _ _
+* Try this:
+
+  [apply]   apply IsResidueAlgebra.algebraMap_surjective
+..
+line 89, col 2:
+refine ⟨a, ?_⟩
+* Try this:
+
+  [apply]   duper [*, Submodule.Quotient.eq] {preprocessing := full}
+shortened proof!
+....
+line 109, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl

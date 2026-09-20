@@ -1,0 +1,122 @@
+...
+line 57, col 23:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_add]
+    rfl
+shortened proof!
+.
+line 58, col 24:
+ext
+* Try this:
+
+  [apply]     simp_all only [map_smul, RingHom.id_apply]
+    rfl
+shortened proof!
+...
+line 72, col 44:
+simp [tmul_add]
+* Try this:
+
+  [apply]   duper [*, tmul_add] {preprocessing := full}
+.
+line 72, col 77:
+simp
+* Try this:
+
+  [apply]     intro m x
+    simp_all only [tmul_smul, RingHom.id_apply]
+..
+line 76, col 42:
+ext
+* Try this:
+
+  [apply]     ext i : 1
+    simp_all only [smul_apply, smul_assoc]
+shortened proof!
+......
+line 100, col 12:
+rw [map_zero, map_zero, zero_apply]
+* Try this:
+
+  [apply]     simp_all only [map_zero, zero_apply]
+    rfl
+shortened proof!
+.
+line 101, col 16:
+simp [lTensorLeft_tmul]
+* Try this:
+
+  [apply]     simp_all only [lTensorLeft_tmul]
+    rfl
+shortened proof!
+.
+line 102, col 21:
+simp_all
+* Try this:
+
+  [apply]     simp_all only [map_add, add_apply]
+    rfl
+shortened proof!
+...
+line 123, col 8:
+simp [N', h]
+* Try this:
+
+  [apply]   simp_all only [↓reduceIte, Submodule.mem_top, N']
+.
+line 125, col 6:
+rw [Filter.eventually_principal]
+* Try this:
+
+  [apply]     simp_all only [SetLike.mem_coe, Filter.eventually_principal, N']
+    intro x_1 a
+    grind only [Module.FinitePresentation.exists_fin', Module.FinitePresentation.exists_fin,
+      Module.FinitePresentation.exists_fin_exact, usr Subtype.property]
+shortened proof!
+.
+line 128, col 23:
+ext
+* Try this:
+
+  [apply]     simp_all only [add_apply, N']
+    rfl
+shortened proof!
+.
+line 129, col 24:
+ext
+* Try this:
+
+  [apply]     simp_all only [smul_apply, RingHom.id_apply, N']
+    rfl
+shortened proof!
+.
+line 135, col 53:
+simp [N', h]
+* Try this:
+
+  [apply]   simp_all only [↓reduceIte, N']
+.
+line 138, col 58:
+simp [N', h]
+* Try this:
+
+  [apply]   simp_all only [↓reduceIte, N']
+......_.._.._.._......................
+line 221, col 4:
+simp only [comp, IsDirectLimit.Module.linearEquiv_symm_apply, inclusionLinearMap,
+      LinearEquiv.symm_apply_apply, id_eq] at hjx'
+* Try this:
+
+  [apply]     simp_all only [IsDirectLimit.Module.linearEquiv_symm_apply, LinearEquiv.symm_apply_apply, id_eq, comp]
+    subst hjx'
+    rfl
+shortened proof!
+....
+line 234, col 2:
+exact lTensor_bijective R M N ℱ L
+* Try this:
+
+  [apply]   apply RestrictedProduct.lTensor_bijective
+.

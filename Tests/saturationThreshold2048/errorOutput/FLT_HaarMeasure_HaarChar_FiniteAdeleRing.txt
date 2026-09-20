@@ -1,0 +1,167 @@
+.
+line 86, col 2:
+let b₀ := Module.Free.chooseBasis K B
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+.....
+line 104, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearEquiv.symm_apply_apply, g]
+.....
+line 129, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+......
+line 141, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+.....
+line 150, col 2:
+exact isCompact_adicCompletionIntegers K v
+* Try this:
+
+  [apply]   apply NumberField.isCompact_adicCompletionIntegers
+....
+line 184, col 2:
+intro x
+* Try this:
+
+  [apply]     intro x
+    simp_all only [AddSubgroup.coe_set_mk, Subsemiring.coe_carrier_toSubmonoid, Subring.coe_toSubsemiring,
+      AddSubmonoid.coe_set_mk, AddSubsemigroup.coe_set_mk, f]
+    rfl
+shortened proof!
+.
+line 215, col 2:
+let b₀ := Module.Free.chooseBasis K B
+* Try this:
+
+  [apply]   rfl
+shortened proof!
+.....
+line 244, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearEquiv.symm_apply_apply, g]
+..
+line 268, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, Finsupp.coe_zero]
+.
+line 268, col 77:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [map_add, Finsupp.coe_add]
+.
+line 269, col 2:
+ext
+* Try this:
+
+  [apply]     ext x_3 : 2
+    simp_all only [Module.Basis.baseChange_repr_tmul]
+    rfl
+shortened proof!
+..
+line 274, col 42:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, Finsupp.coe_zero]
+.
+line 274, col 77:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [map_add, Finsupp.coe_add]
+.
+line 275, col 2:
+ext
+* Try this:
+
+  [apply]     ext x_3 v : 3
+    simp_all only [Module.Basis.baseChange_repr_tmul]
+    rfl
+shortened proof!
+......_...
+line 297, col 4:
+ext
+* Try this:
+
+  [apply]     ext x : 2
+    simp_all only [Finset.sum_apply, Finset.sum_pi_single, Finset.mem_univ, ↓reduceIte]
+shortened proof!
+._........._...
+line 321, col 4:
+ext
+* Try this:
+
+  [apply]     ext x v : 3
+    simp_all only [Finset.sum_apply, Finset.sum_pi_single, Finset.mem_univ, ↓reduceIte]
+shortened proof!
+._.....
+line 342, col 14:
+simp only [AlgHom.toRingHom_eq_coe, smul_zero, map_zero]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, smul_zero, map_zero]
+.._....
+line 359, col 21:
+simp_all only [AlgHom.toRingHom_eq_coe, smul_add, map_add]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, smul_add, map_add]
+............._..._..
+line 408, col 4:
+simp [AlgHom.rTensor, b, bLocal]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, Module.Basis.baseChange_apply, b, b₀, bLocal]
+    rfl
+......
+line 420, col 4:
+rfl
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, Module.Basis.baseChange_apply, b, b₀, bLocal]
+    rfl
+......................................_......._.
+line 561, col 51:
+simp_all [AddSubgroup.mem_pi]
+* Try this:
+
+  [apply]     rename_i x_2
+    simp_all only [Module.Basis.baseChange_apply, SetLike.mem_coe, LinearMap.toMatrix'_apply, LinearEquiv.coe_coe,
+      ContinuousLinearEquiv.coe_toLinearEquiv, implies_true, bLocal, b₀, m, b, ψ]
+    apply x_2
+    simp_all only [Set.mem_univ]
+.....................................
+line 659, col 20:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [AlgEquiv.toEquiv_eq_coe, Algebra.TensorProduct.algebraMap_apply, Algebra.algebraMap_self,
+      RingHom.id_apply, Equiv.toFun_as_coe, EquivLike.coe_coe, Algebra.TensorProduct.comm_tmul,
+      TensorProduct.RightActions.algebraMap_eval]
+.....
+line 708, col 2:
+rw [this]
+* Try this:
+
+  [apply]     simp_all only [v]
+    apply NumberField.FiniteAdeleRing.tensor_isCentralSimple_addHaarScalarFactor_left_mul_eq_right_mul
+shortened proof!

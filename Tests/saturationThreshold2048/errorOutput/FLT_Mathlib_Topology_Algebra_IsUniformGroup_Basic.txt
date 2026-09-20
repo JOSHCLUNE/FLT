@@ -1,0 +1,6 @@
+........
+line 34, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_univ, Quotient.out_eq]

@@ -1,0 +1,112 @@
+...................
+line 102, col 24:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [AlgEquiv.toEquiv_eq_coe, algebraMap_int_eq, eq_intCast, Equiv.toFun_as_coe, EquivLike.coe_coe,
+      map_intCast]
+.
+line 105, col 4:
+rfl
+* Try this:
+
+  [apply]   rfl
+.._.....
+line 115, col 28:
+simp
+* Try this:
+
+  [apply]     intro r
+    simp_all only [AlgEquiv.toEquiv_eq_coe, algebraMap_int_eq, eq_intCast, Equiv.toFun_as_coe, EquivLike.coe_coe,
+      map_intCast]
+.
+line 124, col 4:
+rw [AdeleRing.algebraMap_snd_apply, WithVal.equiv_symm_apply]
+* Try this:
+
+  [apply]   duper [*] {preprocessing := full}
+shortened proof!
+.
+line 157, col 2:
+ext
+* Try this:
+
+  [apply]   simp_all only [toMatrix_baseChange]
+shortened proof!
+......................
+line 212, col 4:
+apply MeasureTheory.addHaarScalarFactor_tensor_adeles_rat_eq_one
+* Try this:
+
+  [apply]     rename_i this_1 this_2 this_3 this_4 this_5 this_6
+    simp_all only [ContinuousLinearEquiv.toContinuousAddEquiv_coe, f, this_1, this_3, this_5]
+    apply MeasureTheory.addHaarScalarFactor_tensor_adeles_rat_eq_one
+...
+line 215, col 14:
+simp
+* Try this:
+
+  [apply]     rename_i this_1 this_2 this_3 this_4 this_5 this_6
+    simp_all only [ContinuousLinearEquiv.toContinuousAddEquiv_coe, map_zero, f, this_1, this_3, this_5]
+.
+line 216, col 18:
+rfl
+* Try this:
+
+  [apply]     rename_i this_1 this_2 this_3 this_4 this_5 this_6
+    simp_all only [ContinuousLinearEquiv.toContinuousAddEquiv_coe, ContinuousLinearEquiv.baseChange_apply,
+      LinearEquiv.restrictScalars_apply, f, this_1, this_3, this_5]
+    rfl
+.
+line 217, col 23:
+simp at hx hy
+* Try this:
+
+  [apply]     rename_i this_1 this_2 this_3 this_4 this_5 this_6
+    simp_all only [ContinuousLinearEquiv.toContinuousAddEquiv_coe, map_add, f, this_1, this_3, this_5]
+shortened proof!
+......
+line 234, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [RingHom.toMonoidHom_eq_coe, ContinuousAddEquiv.mulLeft_apply, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, mul_zero, map_zero]
+.
+line 235, col 16:
+simp [LinearEquiv.mulLeft]
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe, ContinuousAddEquiv.mulLeft_apply, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+      ContinuousLinearEquiv.baseChange_apply]
+    rfl
+.
+line 236, col 21:
+simp_all [mul_add]
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]
+.....
+line 253, col 12:
+simp
+* Try this:
+
+  [apply]   simp_all only [RingHom.toMonoidHom_eq_coe, ContinuousAddEquiv.mulRight_apply, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, zero_mul, map_zero]
+.
+line 254, col 16:
+simp [LinearEquiv.mulRight]
+* Try this:
+
+  [apply]     simp_all only [RingHom.toMonoidHom_eq_coe, ContinuousAddEquiv.mulRight_apply, Units.coe_map, MonoidHom.coe_coe,
+      Algebra.TensorProduct.includeLeftRingHom_apply, Algebra.TensorProduct.tmul_mul_tmul, mul_one,
+      ContinuousLinearEquiv.baseChange_apply]
+    rfl
+.
+line 255, col 21:
+simp_all [add_mul]
+* Try these:
+  [apply] grind only [= map_add]
+  [apply] grind => instantiate only [= map_add]

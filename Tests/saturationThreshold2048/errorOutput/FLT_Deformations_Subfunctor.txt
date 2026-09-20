@@ -1,0 +1,6 @@
+..
+line 36, col 4:
+rfl
+* Try this:
+
+  [apply]   rfl

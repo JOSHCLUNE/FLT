@@ -1,0 +1,19 @@
+.
+line 43, col 68:
+simp
+* Try this:
+
+  [apply]     intro c x
+    simp_all only [map_smul, id_eq]
+.
+line 53, col 24:
+apply continuous_smul
+* Try this:
+
+  [apply]   apply ContinuousSMul.continuous_smul
+.
+line 54, col 23:
+apply continuous_add
+* Try this:
+
+  [apply]   apply continuous_add

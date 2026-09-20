@@ -1,0 +1,237 @@
+..
+line 42, col 28:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Nat.ofNat_pos, mul_pos_iff_of_pos_left]
+    apply Real.pi_pos
+.
+line 43, col 56:
+positivity
+* Try this:
+
+  [apply]     simp_all only [rpow_ofNat, exp_one_pow, Nat.cast_ofNat]
+    apply Real.exp_nonneg
+.
+line 43, col 72:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Nat.ofNat_pos, mul_nonneg_iff_of_pos_left]
+    apply Real.pi_nonneg
+.
+line 43, col 88:
+positivity
+* Try this:
+
+  [apply]   simp_all only [Nat.ofNat_pos]
+........
+line 50, col 60:
+positivity
+* Try this:
+
+  [apply]     apply Right.add_pos_of_nonneg_of_pos
+    · simp_all only [zero_le_one]
+    · simp_all only [inv_pos]
+..
+line 51, col 26:
+simp [add_comm]
+* Try this:
+  [apply] grind only
+...
+line 56, col 30:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_Ioi, zero_lt_one]
+.
+line 56, col 40:
+simp only [Set.mem_Ioi]
+* Try these:
+  [apply] grind only [= Set.mem_Ioi]
+  [apply] grind => instantiate only [= Set.mem_Ioi]
+shortened proof!
+....
+line 61, col 39:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.subset_compl_singleton_iff, Set.mem_Ioi, lt_self_iff_false, not_false_eq_true]
+..
+line 63, col 4:
+simp only [Set.mem_Ioi, ne_eq]
+* Try these:
+  [apply] grind only [= Set.mem_Ioi]
+  [apply] grind =>
+    instantiate only [= Set.mem_Ioi]
+    linarith
+shortened proof!
+.......
+line 74, col 81:
+linarith
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only
+  [apply] grind => linarith
+.
+line 75, col 4:
+simp only [id_eq, one_div, one_mul, mul_one, add_sub_cancel_left]
+* this parameter is redundant, environment already contains `Finset.mem_Icc` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [lt_of_lt_of_le, !Even.pow_nonneg, = id.eq_1, le_of_lt, = Nat.even_iff, #2c12, #4dedd, #b3b13]
+  [apply] grind only [lt_of_lt_of_le, !Even.pow_nonneg, = id.eq_1, le_of_lt, = Nat.even_iff]
+  [apply] grind =>
+    instantiate only [lt_of_lt_of_le, !Even.pow_nonneg, = id.eq_1]
+    instantiate only [le_of_lt, = Nat.even_iff]
+    instantiate only [lt_of_lt_of_le]
+    cases #2c12
+    cases #4dedd
+    · linarith
+    · cases #b3b13 <;> ring
+shortened proof!
+....
+line 85, col 26:
+positivity
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    grind only
+.
+line 85, col 42:
+positivity
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Nat.cast_eq_zero, not_false_eq_true]
+.
+line 85, col 56:
+field_simp
+* Try these:
+  [apply] grind only [!IsOrderedAddMonoid.toAddLeftMono, #3282]
+  [apply] grind only [!IsOrderedAddMonoid.toAddLeftMono]
+  [apply] grind =>
+    instantiate only [!IsOrderedAddMonoid.toAddLeftMono]
+    cases #3282 <;> ring
+shortened proof!
+...
+line 87, col 37:
+positivity
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_pos]
+    apply lt_of_le_of_ne'
+    · simp_all only [zero_le]
+    · simp_all only [ne_eq, not_false_eq_true]
+.
+line 89, col 8:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_add_one_ne_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_add_one_ne_zero]
+    ring
+shortened proof!
+..
+line 91, col 71:
+simp
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.one_le_cast]
+    duper [*, Nat.one_le_cast, Nat.one_le_cast_iff_ne_zero] {preprocessing := full}
+shortened proof!
+..
+line 96, col 63:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Nat.cast_pos, mul_nonneg_iff_of_pos_left]
+    grind only
+..
+line 98, col 58:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_ne_zero, Nat.sub_ne_zero_of_lt]
+  [apply] grind =>
+    instantiate only [Nat.cast_ne_zero, Nat.sub_ne_zero_of_lt]
+    ring
+..
+line 102, col 10:
+field_simp
+* Try these:
+  [apply] grind only [Nat.cast_add_one_ne_zero]
+  [apply] grind =>
+    instantiate only [Nat.cast_add_one_ne_zero]
+    ring
+..
+line 104, col 60:
+positivity
+* Try this:
+  [apply] grind only
+.
+line 104, col 76:
+positivity
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Nat.cast_eq_zero]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    duper [*, Nat.factorial_pos, ne_of_gt, Nat.factorial_eq_prod_range_add_one] {preprocessing := full}
+..
+line 115, col 68:
+positivity
+* Try this:
+
+  [apply]     simp_all only [Nat.ofNat_pos, div_pos_iff_of_pos_right]
+    apply Real.pi_pos
+..
+line 117, col 36:
+simp [Set.ext_iff]
+* Try this:
+
+  [apply]   apply Order.Iic_one
+shortened proof!
+.....
+line 123, col 58:
+ring_nf
+* Try these:
+  [apply] grind only
+  [apply] grind => ring
+....._..
+line 134, col 2:
+exact h₁
+* Try this:
+
+  [apply]   simp_all only
+....._..
+line 144, col 2:
+exact h₁
+* Try this:
+
+  [apply]   simp_all only
+....._...._.
+line 159, col 2:
+exact h₁.trans h₂
+* Try this:
+
+  [apply]     simp_all only [gt_iff_lt]
+    grind only
+....._...._.
+line 174, col 2:
+exact h₂.trans h₁
+* this parameter is redundant, environment already contains `Nat.not_odd_iff_even` annotated with `@[grind =]`
+* Try this:
+  [apply] grind only
+...X.
+line 181, col 29:
+omega
+* Try this:
+
+  [apply]   smt +mono [*]
+.....
+line 189, col 28:
+omega
+* Try this:
+
+  [apply]   duper [*, Nat.ge_of_not_lt, Nat.not_le_of_gt, Nat.succ_le_of_lt] {preprocessing := full}
+.

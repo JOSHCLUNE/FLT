@@ -1,0 +1,10 @@
+...
+line 37, col 4:
+rw [IsLocalRing.primesOver_eq S hp0]
+* Try these:
+  [apply] grind only [IsLocalRing.primesOver_eq, = Set.mem_singleton_iff]
+  [apply] grind =>
+    instantiate only [IsLocalRing.primesOver_eq]
+    instantiate only [= Set.mem_singleton_iff]
+shortened proof!
+....

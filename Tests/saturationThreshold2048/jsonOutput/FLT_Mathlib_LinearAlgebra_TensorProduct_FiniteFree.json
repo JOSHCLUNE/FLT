@@ -1,0 +1,42 @@
+[{"tacticSucceeded": false,
+  "startLine": 32,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "LinearEquiv.chooseBasisPiScalarRight",
+  "oldText": "letI b := Module.Free.chooseBasis R V",
+  "message": null,
+  "goalIsProp": false,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/TensorProduct/FiniteFree.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 33,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "LinearEquiv.chooseBasisPiScalarRight",
+  "oldText": "letI f := b.equivFun",
+  "message": null,
+  "goalIsProp": false,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/TensorProduct/FiniteFree.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 34,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "LinearEquiv.chooseBasisPiScalarRight",
+  "oldText":
+  "refine (LinearEquiv.baseChange R M V (Module.Free.ChooseBasisIndex R V → R) f) ≪≫ₗ ?_",
+  "message": null,
+  "goalIsProp": false,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/TensorProduct/FiniteFree.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 35,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "LinearEquiv.chooseBasisPiScalarRight",
+  "oldText":
+  "exact TensorProduct.piScalarRight R M M (Module.Free.ChooseBasisIndex R V)",
+  "message": null,
+  "goalIsProp": false,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/LinearAlgebra/TensorProduct/FiniteFree.lean"}]

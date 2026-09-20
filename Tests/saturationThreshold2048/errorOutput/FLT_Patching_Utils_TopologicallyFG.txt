@@ -1,0 +1,20 @@
+.
+line 31, col 74:
+simp [hs]
+* Try this:
+
+  [apply]   simp_all only [Algebra.coe_top, dense_univ]
+...X.
+line 45, col 18:
+exact H x hx m
+* Try this:
+
+  [apply]     apply H
+    simp_all only
+.
+line 47, col 6:
+exact .trans (letI := m₁; algebraMap_smul ..) (.symm (letI := m₂; algebraMap_smul ..))
+* Try this:
+
+  [apply]   smt +mono [*, algebraMap_smul]
+...X
