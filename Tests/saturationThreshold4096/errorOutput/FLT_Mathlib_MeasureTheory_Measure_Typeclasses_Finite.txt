@@ -1,0 +1,8 @@
+.
+line 29, col 4:
+rw [MeasurableEmbedding.comap_apply hφ.measurableEmbedding]
+* Try this:
+
+  [apply]   duper [*, IsFiniteMeasureOnCompacts.comap', IsOpenEmbedding.measurableEmbedding, continuous, IsCompact.measure_lt_top]
+      {preprocessing := full}
+shortened proof!

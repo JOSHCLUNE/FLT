@@ -1,0 +1,10 @@
+.
+line 25, col 2:
+convert! Valuation.Integers.isUnit_iff_valuation_eq_one _
+* Try these:
+  [apply] grind only [ValuationSubring.valuation_eq_one_iff, !Valuation.isEquiv_valuation_valuationSubring,
+    Valuation.IsEquiv.eq_one_iff_eq_one]
+  [apply] grind =>
+    instantiate only [ValuationSubring.valuation_eq_one_iff, !Valuation.isEquiv_valuation_valuationSubring]
+    instantiate only [Valuation.IsEquiv.eq_one_iff_eq_one]
+shortened proof!

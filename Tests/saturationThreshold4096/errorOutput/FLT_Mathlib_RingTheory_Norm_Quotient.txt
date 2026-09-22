@@ -1,0 +1,15 @@
+......
+line 40, col 2:
+rw [hcp] at hCH
+* Try this:
+
+  [apply]   simp_all only [Algebra.coe_lmul_eq_mul, map_add, Polynomial.aeval_sub, map_pow, Polynomial.aeval_X, map_mul,
+      Polynomial.aeval_C, b]
+shortened proof!
+.........
+line 81, col 4:
+simp only [← ResidueField.algebraMap_residue]
+* Try this:
+
+  [apply]   simp_all only [ResidueField.algebraMap_residue]
+.

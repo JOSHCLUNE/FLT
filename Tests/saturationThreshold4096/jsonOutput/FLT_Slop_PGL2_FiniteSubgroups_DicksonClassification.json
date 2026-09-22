@@ -1,0 +1,177 @@
+[{"tacticSucceeded": true,
+  "startLine": 81,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inr <| Or.inr <| Or.inr <| Or.inl h4",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 73,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h2",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 78,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inl h1",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 80,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inr <| Or.inr <| Or.inl h3",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 75,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h4",
+  "message":
+  "Try this:\n\n  [apply]     rename_i left\n    subst left\n    simp_all only [gt_iff_lt, Nat.lt_add_one, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or,\n      or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 79,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inr <| Or.inl h2",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 84,
+  "startCol": 4,
+  "shortenedStepsCount": 2,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "exact Or.inl ⟨⟨1, fun x ↦ by rw [Subsingleton.elim x 1]; exact Subgroup.mem_zpowers 1⟩⟩",
+  "message":
+  "Try this:\n\n  [apply]     simp_all\n    apply Or.inl\n    apply isCyclic_of_subsingleton",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 72,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h1",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, exists_prop, exists_and_left, ge_iff_le, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 74,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inr h3",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 82,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "exact Or.inr <| Or.inr <| Or.inr <| Or.inr <| Or.inl h5",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [gt_iff_lt, Nat.card_eq_fintype_card, ge_iff_le, exists_prop, exists_and_left, true_or, or_true]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 69,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "by_cases hG_nontrivial : Nontrivial G",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 70,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "by_cases h_div : p ∣ Nat.card G",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 71,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "rcases classification_wild_slop p G h_div with h1 | h2 | h3 | ⟨_, h4⟩",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 76,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText": "have : Fintype G := Fintype.ofFinite G",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 77,
+  "startCol": 6,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "rcases classification_tame_slop p G h_div hG_nontrivial with h1 | h2 | h3 | h4 | h5",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 83,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName": "Dickson.dickson_classification",
+  "oldText":
+  "have : Subsingleton G := not_nontrivial_iff_subsingleton.mp hG_nontrivial",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Slop/PGL2/FiniteSubgroups/DicksonClassification.lean"}]

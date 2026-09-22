@@ -1,0 +1,338 @@
+[{"tacticSucceeded": true,
+  "startLine": 80,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "oldText": "apply evalContinuousAlgebraMap_singleContinuousLinearMap",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [LinearMap.coe_comp, ContinuousLinearMap.coe_coe, ContinuousAlgHom.coe_toContinuousLinearMap,\n      Function.comp_apply, LinearMap.id_coe, id_eq]\n    apply IsDedekindDomain.FiniteAdeleRing.evalContinuousAlgebraMap_singleContinuousLinearMap",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 75,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "oldText":
+  "have :\n      (evalContinuousAlgebraMap R K p).toContinuousLinearMap\n        ∘ₗ (singleContinuousLinearMap R K p).toLinearMap\n      = LinearMap.id := by\n    ext1\n    apply evalContinuousAlgebraMap_singleContinuousLinearMap",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 79,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "oldText": "ext1",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 81,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "oldText":
+  "simp [localcomponent, ContinuousLinearMap.rTensor', ← LinearMap.rTensor_comp_apply, this]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 98,
+  "startCol": 20,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp +contextual",
+  "message":
+  "Try this:\n\n  [apply]     intro a a_1\n    simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,\n      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,\n      LinearMap.lsmul_apply, smul_eq_mul, map_add, smul_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 105,
+  "startCol": 20,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp +contextual",
+  "message":
+  "Try this:\n\n  [apply]     intro a a_1\n    simp_all only [map_add, smul_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 103,
+  "startCol": 37,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp",
+  "message": "Try this:\n\n  [apply]   simp_all only [map_zero, smul_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 96,
+  "startCol": 37,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,\n      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,\n      LinearMap.lsmul_apply, smul_eq_mul, map_zero, smul_zero]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 97,
+  "startCol": 20,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp_all [TensorProduct.smul_tmul']",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,\n      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,\n      LinearMap.lsmul_apply, smul_eq_mul, LinearMap.rTensor_tmul]\n    rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 90,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText":
+  "have rTensor_single_comp_eval {x : FiniteAdeleRing R K ⊗[K] V} :\n      LinearMap.rTensor V ((singleContinuousLinearMap R K p).toLinearMap\n        ∘ₗ (evalContinuousAlgebraMap R K p).toContinuousLinearMap) x\n      = (localIdempotent R K p) • x :=\n    have {a : FiniteAdeleRing R K} := congr_arg (fun f ↦ f a)\n      (singleContinuousAlgebraMap_comp_evalContinuousLinearMap R K p)\n    TensorProduct.induction_on x (by simp)\n      (fun _ _ ↦ by simp_all [TensorProduct.smul_tmul'])\n      (fun _ _ ↦ by simp +contextual)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 99,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText":
+  "have rTensor_eval_localIdempotent (x : FiniteAdeleRing R K ⊗[K] V) :\n      (LinearMap.rTensor V (evalContinuousAlgebraMap R K p).toContinuousLinearMap) x\n      = (LinearMap.rTensor V (evalContinuousAlgebraMap R K p).toContinuousLinearMap.toLinearMap)\n        (localIdempotent R K p • x) :=\n    TensorProduct.induction_on x (by simp)\n      (fun _ _ ↦ by simp_all [TensorProduct.smul_tmul', eval_localIdempotent])\n      (fun _ _ ↦ by simp +contextual)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 104,
+  "startCol": 20,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText": "simp_all [TensorProduct.smul_tmul', eval_localIdempotent]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 106,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_comp_apply",
+  "oldText":
+  "simp [localcomponent, ContinuousLinearMap.rTensor',\n    ← LinearMap.rTensor_comp_apply, rTensor_single_comp_eval,\n    rTensor_eval_localIdempotent\n      (φ (ψ ((LinearMap.rTensor V (singleContinuousLinearMap R K p)) x)))]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 132,
+  "startCol": 4,
+  "shortenedStepsCount": 3,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText":
+  "induction x with\n    | zero => simp\n    | tmul x y => exact LinearMap.rTensor_tmul _ _ _ _\n    | add x y _ _ => simp_all",
+  "message": "Try this:\n\n  [apply]     simp_all only [f]\n    rfl",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 125,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText": "dsimp [localcomponent]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 126,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText": "rw [← ContinuousLinearMap.rTensor'_comp_apply]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 127,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText":
+  "change (LinearMap.rTensor V _) (φ x) = (LinearMap.rTensor V _) (φ ((LinearMap.rTensor V _) x))",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 128,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText": "rw [singleContinuousAlgebraMap_comp_evalContinuousLinearMap]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 129,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText":
+  "let f := (LinearMap.lsmul\n    (FiniteAdeleRing R K) (FiniteAdeleRing R K) (localIdempotent R K p)).restrictScalars K",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 131,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText":
+  "have hf : LinearMap.rTensor V f x = (localIdempotent R K p) • x := by\n    induction x with\n    | zero => simp\n    | tmul x y => exact LinearMap.rTensor_tmul _ _ _ _\n    | add x y _ _ => simp_all",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 136,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText": "rw [hf, ContinuousLinearMap.map_smul]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 137,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText":
+  "change (AlgHom.rTensor V ((evalContinuousAlgebraMap R K p).toAlgHom)) (φ x) =\n    (AlgHom.rTensor V ((evalContinuousAlgebraMap R K p).toAlgHom)) (localIdempotent R K p • φ x)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 139,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_apply",
+  "oldText": "simp [eval_localIdempotent]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 157,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText": "simp [TensorProduct.localcomponent_id_apply]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ContinuousLinearEquiv.coe_symm_comp_coe]\n    apply IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 161,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText": "simp [TensorProduct.localcomponent_id_apply]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [ContinuousLinearEquiv.coe_comp_coe_symm]\n    apply IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 155,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText":
+  "change (localcomponent R K V p φ.symm) (localcomponent R K V p φ x) = x",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 156,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText": "rw [← TensorProduct.localcomponent_comp_apply]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 159,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText":
+  "change (localcomponent R K V p φ) (localcomponent R K V p φ.symm x) = x",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 160,
+  "startCol": 4,
+  "shortenedStepsCount": 0,
+  "parentName":
+  "IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponentEquiv",
+  "oldText": "rw [← TensorProduct.localcomponent_comp_apply]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/DedekindDomain/FiniteAdeleRing/TensorProduct.lean"}]

@@ -1,0 +1,7 @@
+..............
+line 52, col 42:
+exact Set.preimage_mono hKA
+* Try this:
+
+  [apply]   simp_all only [Set.preimage_subset_preimage_iff]
+.

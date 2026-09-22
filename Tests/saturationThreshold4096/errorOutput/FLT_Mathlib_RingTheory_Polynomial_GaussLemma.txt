@@ -1,0 +1,7 @@
+...
+line 30, col 2:
+exact ⟨Q, (IsFractionRing.injective R K).monic_map_iff.mpr (hQ ▸ hq), hQ⟩
+* Try this:
+
+  [apply]     subst hQ
+    duper [*, IsFractionRing.injective, Function.Injective.monic_map_iff] {preprocessing := full}

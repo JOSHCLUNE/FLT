@@ -1,0 +1,68 @@
+.................
+line 136, col 6:
+simp only [one_pow] at h1
+* Try this:
+
+  [apply]   simp_all only [one_pow, tendsto_const_nhds_iff, one_ne_zero]
+shortened proof!
+...
+line 141, col 4:
+have hval : ((0 : 𝕜) - 1) / (r - 1) = (1 - r)⁻¹ := by
+      grind
+* Try these:
+  [apply] grind only [#3b99]
+  [apply] grind only
+  [apply] grind => cases #3b99 <;> ring
+shortened proof!
+.....
+line 147, col 73:
+ring
+* Try this:
+
+  [apply]   simp_all only [Function.comp_apply, sub_self, add_sub_cancel_left]
+.
+line 148, col 4:
+simp_rw [sub_self, Function.comp_apply, hstep] at hdiff
+* Try this:
+
+  [apply]     simp_all only [Function.comp_apply, sub_self]
+    exact hdiff
+shortened proof!
+..................
+line 200, col 67:
+rw [pow_mul, pow_succ]
+* Try these:
+  [apply] grind only [pow_mul]
+  [apply] grind =>
+    instantiate only [pow_mul]
+    ring
+shortened proof!
+.....
+line 226, col 4:
+funext j
+* this parameter is redundant, environment already contains `Set.mem_compl_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [pow_mul, #6b13]
+  [apply] grind only [pow_mul]
+  [apply] grind => cases #6b13 <;> instantiate only [pow_mul]
+shortened proof!
+...
+line 236, col 2:
+simp only [Prod.fst_swap, Prod.snd_swap, mul_comm (p.2 : ℕ) (p.1 : ℕ)]
+* Try this:
+
+  [apply]     simp_all only [Prod.snd_swap, Prod.fst_swap, mul_eq_mul_left_iff, pow_eq_zero_iff', ne_eq]
+    obtain ⟨fst, snd⟩ := p
+    simp_all only
+    smt +mono [*]
+.
+line 240, col 2:
+refine Eq.trans (tsum_congr fun n ↦ ?_)
+    ((tsum_lambert_of_summable r (fun d ↦ (d : 𝕜) ^ k)
+      (fun m ↦ hasSum_geometric_pow_mul_succ hr m.pos.ne')
+      (summable_prod_mul_pow' k hr)).trans (tsum_congr fun N ↦ ?_))
+* Try this:
+
+  [apply]     apply tsum_pow_div_one_sub_eq_tsum_sigma
+    simp_all only
+shortened proof!

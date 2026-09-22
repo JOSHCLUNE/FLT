@@ -1,0 +1,9 @@
+[{"tacticSucceeded": true,
+  "startLine": 33,
+  "startCol": 51,
+  "shortenedStepsCount": 0,
+  "parentName": "instCountableHeightOneSpectrumRingOfIntegers_fLT",
+  "oldText": "simp",
+  "message": "Try this:\n\n  [apply]   simp_all only [Set.finite_singleton]",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/NumberField/HeightOneSpectrum.lean"}]

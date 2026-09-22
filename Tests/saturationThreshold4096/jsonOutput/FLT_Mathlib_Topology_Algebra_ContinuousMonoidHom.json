@@ -1,0 +1,31 @@
+[{"tacticSucceeded": false,
+  "startLine": 56,
+  "startCol": 26,
+  "shortenedStepsCount": 0,
+  "parentName": "ContinuousMulEquiv.piUnique",
+  "oldText":
+  "simpa [continuous_pi_iff, Unique.forall_iff] using continuous_id'",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 73,
+  "startCol": 25,
+  "shortenedStepsCount": 0,
+  "parentName": "ContinuousMulEquiv.mapUnits",
+  "oldText": "apply Continuous.units_map _ f.continuous_toFun",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 74,
+  "startCol": 26,
+  "shortenedStepsCount": 0,
+  "parentName": "ContinuousMulEquiv.mapUnits",
+  "oldText": "apply Continuous.units_map _ f.continuous_invFun",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/ContinuousMonoidHom.lean"}]

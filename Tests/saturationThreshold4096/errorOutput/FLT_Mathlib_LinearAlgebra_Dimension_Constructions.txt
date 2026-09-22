@@ -1,0 +1,7 @@
+.
+line 29, col 36:
+rw [Module.finrank_pi, Fintype.card_fin]
+* Try this:
+
+  [apply]   simp_all only [finrank_fintype_fun_eq_card, Fintype.card_fin]
+.
