@@ -1,0 +1,31 @@
+[{"tacticSucceeded": true,
+  "startLine": 43,
+  "startCol": 68,
+  "shortenedStepsCount": 0,
+  "parentName": "Topology.IsInducing.topologicalModule",
+  "oldText": "simp",
+  "message":
+  "Try this:\n\n  [apply]     intro c x\n    simp_all only [map_smul, id_eq]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 54,
+  "startCol": 23,
+  "shortenedStepsCount": 0,
+  "parentName": "Pi.instTopologicalModule",
+  "oldText": "apply continuous_add",
+  "message": "Try this:\n\n  [apply]   apply continuous_add",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 53,
+  "startCol": 24,
+  "shortenedStepsCount": 0,
+  "parentName": "Pi.instTopologicalModule",
+  "oldText": "apply continuous_smul",
+  "message": "Try this:\n\n  [apply]   apply ContinuousSMul.continuous_smul",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Deformations/ContinuousRepresentation/IsTopologicalModule.lean"}]

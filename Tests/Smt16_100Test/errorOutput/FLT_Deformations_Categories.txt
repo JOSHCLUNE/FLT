@@ -1,0 +1,19 @@
+.........................
+line 245, col 6:
+exact isOpen_maximalIdeal_of_isProartinian
+* Try this:
+
+  [apply]   apply isOpen_maximalIdeal_of_isProartinian
+......
+line 264, col 4:
+exact IsResidueAlgebra.preimage_spec _ _
+* Try these:
+  [apply] grind only [IsResidueAlgebra.preimage_spec]
+  [apply] grind => instantiate only [IsResidueAlgebra.preimage_spec]
+..
+line 265, col 27:
+rfl
+* Try this:
+
+  [apply]   rfl
+...

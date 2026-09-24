@@ -1,0 +1,11 @@
+..
+line 44, col 34:
+ring
+* Try this:
+  [apply] grind only
+....
+line 55, col 65:
+grobner
+* Try this:
+  [apply] grind only
+...

@@ -1,0 +1,10 @@
+[{"tacticSucceeded": true,
+  "startLine": 26,
+  "startCol": 2,
+  "shortenedStepsCount": 1,
+  "parentName": "instCountableElemSetSetsCofinite_fLT",
+  "oldText": "rw [Set.countable_coe_iff]",
+  "message":
+  "Try this:\n\n  [apply]     simp_all only [Set.countable_coe_iff]\n    apply Filter.cofinite.sets.countable",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Order/Filter/Cofinite.lean"}]

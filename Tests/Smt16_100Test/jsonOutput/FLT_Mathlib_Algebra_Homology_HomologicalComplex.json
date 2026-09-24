@@ -1,0 +1,9 @@
+[{"tacticSucceeded": false,
+  "startLine": 21,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "CochainComplex.prev_nat",
+  "oldText": "cases j",
+  "message": null,
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Algebra/Homology/HomologicalComplex.lean"}]

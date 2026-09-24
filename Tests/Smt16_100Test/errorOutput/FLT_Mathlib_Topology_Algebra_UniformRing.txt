@@ -1,0 +1,6 @@
+.....
+line 52, col 2:
+rw [mapSemialgHom_apply, map_coe hf]
+* Try this:
+
+  [apply]   duper [*, map_coe] {preprocessing := full}

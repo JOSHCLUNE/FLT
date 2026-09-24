@@ -1,0 +1,45 @@
+..
+line 56, col 2:
+exact Set.mem_singleton _
+* Try this:
+
+  [apply]   simp_all only [Set.mem_singleton_iff]
+.......
+line 78, col 45:
+rw [hIk]
+* Try this:
+
+  [apply]   simp_all only [ENat.WithBot.coe_eq_natCast]
+shortened proof!
+..........
+line 100, col 6:
+rw [Ideal.height_eq_inf_minimalPrimes]
+* Try these:
+  [apply] grind only [usr Set.mem_ofPred_eq, Ideal.height_mono, Ideal.IsMinimalPrime.le]
+  [apply] grind =>
+    instantiate only [usr Set.mem_ofPred_eq, Ideal.height_mono]
+    instantiate only [Ideal.IsMinimalPrime.le]
+shortened proof!
+.
+line 102, col 4:
+have h2 : (maximalIdeal R).height ≤ p.height := hJheight ▸ h1
+* Try this:
+
+  [apply]     simp_all only [ne_eq, Cardinal.ofENat_nat, Set.mem_ofPred_eq]
+    apply Ideal.eq_of_le_of_height_le
+    · apply IsLocalRing.le_maximalIdeal_of_isPrime
+    · simp_all only
+shortened proof!
+......
+line 112, col 8:
+exact_mod_cast hle
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Cardinal.ofENat_nat, Set.mem_ofPred_eq, Nat.cast_le]
+.
+line 113, col 53:
+rw [hfr]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, Cardinal.ofENat_nat, Set.mem_ofPred_eq, ENat.WithBot.coe_eq_natCast]
+shortened proof!

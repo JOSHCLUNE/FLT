@@ -1,0 +1,71 @@
+...
+line 80, col 4:
+apply evalContinuousAlgebraMap_singleContinuousLinearMap
+* Try this:
+
+  [apply]     simp_all only [LinearMap.coe_comp, ContinuousLinearMap.coe_coe, ContinuousAlgHom.coe_toContinuousLinearMap,
+      Function.comp_apply, LinearMap.id_coe, id_eq]
+    apply IsDedekindDomain.FiniteAdeleRing.evalContinuousAlgebraMap_singleContinuousLinearMap
+...
+line 96, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,
+      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,
+      LinearMap.lsmul_apply, smul_eq_mul, map_zero, smul_zero]
+.
+line 97, col 20:
+simp_all [TensorProduct.smul_tmul']
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,
+      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,
+      LinearMap.lsmul_apply, smul_eq_mul, LinearMap.rTensor_tmul]
+    rfl
+.
+line 98, col 20:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [ContinuousLinearMap.toLinearMap_comp, LinearMap.coe_comp, ContinuousLinearMap.coe_coe,
+      ContinuousAlgHom.coe_toContinuousLinearMap, Function.comp_apply, LinearMap.coe_restrictScalars,
+      LinearMap.lsmul_apply, smul_eq_mul, map_add, smul_add]
+..
+line 103, col 37:
+simp
+* Try this:
+
+  [apply]   simp_all only [map_zero, smul_zero]
+..
+line 105, col 20:
+simp +contextual
+* Try this:
+
+  [apply]     intro a a_1
+    simp_all only [map_add, smul_add]
+........
+line 132, col 4:
+induction x with
+    | zero => simp
+    | tmul x y => exact LinearMap.rTensor_tmul _ _ _ _
+    | add x y _ _ => simp_all
+* Try this:
+
+  [apply]     simp_all only [f]
+    rfl
+......
+line 157, col 4:
+simp [TensorProduct.localcomponent_id_apply]
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearEquiv.coe_symm_comp_coe]
+    apply IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply
+...
+line 161, col 4:
+simp [TensorProduct.localcomponent_id_apply]
+* Try this:
+
+  [apply]     simp_all only [ContinuousLinearEquiv.coe_comp_coe_symm]
+    apply IsDedekindDomain.FiniteAdeleRing.TensorProduct.localcomponent_id_apply

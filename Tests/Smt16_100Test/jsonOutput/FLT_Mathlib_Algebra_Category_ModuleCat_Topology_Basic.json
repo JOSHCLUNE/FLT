@@ -1,0 +1,54 @@
+[{"tacticSucceeded": true,
+  "startLine": 45,
+  "startCol": 26,
+  "shortenedStepsCount": 1,
+  "parentName": "TopModuleCat.linHomMap",
+  "oldText": "ext x",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ContinuousLinearMap.smul_comp, ContinuousLinearMap.comp_smulₛₗ, RingHom.id_apply]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Algebra/Category/ModuleCat/Topology/Basic.lean"},
+ {"tacticSucceeded": true,
+  "startLine": 44,
+  "startCol": 25,
+  "shortenedStepsCount": 1,
+  "parentName": "TopModuleCat.linHomMap",
+  "oldText": "ext x",
+  "message":
+  "Try this:\n\n  [apply]   simp_all only [ContinuousLinearMap.add_comp, ContinuousLinearMap.comp_add]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Algebra/Category/ModuleCat/Topology/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 47,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "TopModuleCat.linHomMap",
+  "oldText": "refine continuous_induced_rng.2 ?_",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Algebra/Category/ModuleCat/Topology/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 48,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "TopModuleCat.linHomMap",
+  "oldText":
+  "change Continuous fun φ : ↥A →L[k] ↥B ↦\n          (b.hom : C(↥B, ↥B')).comp ((⟨φ, φ.cont⟩ : C(↥A, ↥B)).comp (a.hom : C(↥A', ↥A)))",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Algebra/Category/ModuleCat/Topology/Basic.lean"},
+ {"tacticSucceeded": false,
+  "startLine": 50,
+  "startCol": 8,
+  "shortenedStepsCount": 0,
+  "parentName": "TopModuleCat.linHomMap",
+  "oldText":
+  "exact ((b.hom : C(↥B, ↥B')).continuous_postcomp).comp\n          (((a.hom : C(↥A', ↥A)).continuous_precomp).comp continuous_induced_dom)",
+  "message": null,
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Algebra/Category/ModuleCat/Topology/Basic.lean"}]

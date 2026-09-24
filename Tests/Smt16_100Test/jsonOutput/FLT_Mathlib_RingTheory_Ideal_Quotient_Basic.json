@@ -1,0 +1,9 @@
+[{"tacticSucceeded": false,
+  "startLine": 22,
+  "startCol": 2,
+  "shortenedStepsCount": 0,
+  "parentName": "Ideal.Quotient.out_sub",
+  "oldText": "rw [← Ideal.Quotient.eq, Ideal.Quotient.mk_out]",
+  "message": null,
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/RingTheory/Ideal/Quotient/Basic.lean"}]

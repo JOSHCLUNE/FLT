@@ -1,0 +1,70 @@
+.
+line 36, col 2:
+apply LinearMap.ext
+* Try this:
+
+  [apply]     simp_all only [AlgEquiv.toLinearEquiv_symm]
+    ext x_1 i j : 2
+    simp_all only [LinearMap.mulLeft_apply, LinearMap.coe_comp, LinearEquiv.coe_coe, AlgEquiv.coe_toLinearEquiv,
+      AlgEquiv.coe_symm_toLinearEquiv, Function.comp_apply, map_mul, AlgEquiv.apply_symm_apply]
+shortened proof!
+.
+line 42, col 2:
+apply LinearMap.ext
+* Try this:
+
+  [apply]     simp_all only [AlgEquiv.toLinearEquiv_symm]
+    ext x_1 i j : 2
+    simp_all only [LinearMap.mulRight_apply, LinearMap.coe_comp, LinearEquiv.coe_coe, AlgEquiv.coe_toLinearEquiv,
+      AlgEquiv.coe_symm_toLinearEquiv, Function.comp_apply, map_mul, AlgEquiv.apply_symm_apply]
+shortened proof!
+........
+line 82, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [K']
+    ext x : 3
+    simp_all only [TensorProduct.AlgebraTensorModule.curry_apply, TensorProduct.curry_apply,
+      LinearMap.coe_restrictScalars, LinearMap.baseChange_tmul, LinearMap.mulLeft_apply,
+      Algebra.TensorProduct.tmul_mul_tmul, mul_one, K']
+shortened proof!
+..
+line 84, col 4:
+ext
+* Try this:
+
+  [apply]     simp_all only [K']
+    ext x : 3
+    simp_all only [TensorProduct.AlgebraTensorModule.curry_apply, TensorProduct.curry_apply,
+      LinearMap.coe_restrictScalars, LinearMap.baseChange_tmul, LinearMap.mulRight_apply,
+      Algebra.TensorProduct.tmul_mul_tmul, mul_one, K']
+shortened proof!
+.....
+line 91, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [LinearMap.det_conj, AlgEquiv.toLinearEquiv_symm, K']
+...
+line 95, col 4:
+rfl
+* Try this:
+
+  [apply]   simp_all only [LinearMap.det_conj, AlgEquiv.toLinearEquiv_symm, K']
+..
+line 101, col 2:
+simp [LinearMap.det_toLin', Finset.prod_const, Finset.card_univ, Fintype.card_fin]
+* Try this:
+
+  [apply]   simp_all only [LinearMap.det_toLin', Finset.prod_const, Finset.card_univ, Fintype.card_fin, Matrix.det_transpose, K']
+.
+line 105, col 2:
+ext
+* Try this:
+
+  [apply]     ext : 1
+    simp_all only [LinearEquiv.coe_det, LinearEquiv.coe_mulLeft, LinearEquiv.coe_mulRight]
+    apply IsSimpleRing.mulLeft_det_eq_mulRight_det
+shortened proof!
+..

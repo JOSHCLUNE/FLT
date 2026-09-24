@@ -1,0 +1,64 @@
+.....
+line 27, col 4:
+simp [this]
+* Try this:
+
+  [apply]   simp_all only [natDegree_C, Nat.factorial_zero, Std.le_refl]
+...
+line 30, col 53:
+simp [hp]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, reduceCtorEq, not_false_eq_true]
+....
+line 34, col 6:
+suffices aeval (AdjoinSimple.gen F x) p = 0 by simp [this]
+* Try this:
+
+  [apply]     simp_all only [eval_map_algebraMap]
+    ext n_1 : 2
+    simp_all only [coeff_map, SubalgebraClass.coe_algebraMap, coeff_sub, coeff_C, AddSubgroupClass.coe_sub]
+    split
+    next h =>
+      subst h
+      simp_all only [AdjoinSimple.coe_aeval_gen_apply, sub_zero]
+    next h => simp_all only [ZeroMemClass.coe_zero, sub_zero]
+shortened proof!
+..
+line 37, col 27:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [natDegree_zero, Nat.right_eq_add, Nat.add_eq_zero_iff, one_ne_zero, and_false]
+shortened proof!
+..
+line 38, col 27:
+rintro rfl
+* Try this:
+
+  [apply]     simp_all only [ne_eq]
+    apply Aesop.BuiltinRules.not_intro
+    intro a
+    subst a
+    simp_all only [mul_zero, Polynomial.map_eq_zero]
+shortened proof!
+........
+line 45, col 56:
+simp [hp0]
+* Try this:
+
+  [apply]     subst hqn
+    simp_all only [ne_eq, Polynomial.map_eq_zero, not_false_eq_true]
+..
+line 47, col 8:
+exact map_dvd _ ⟨_, hq.trans (mul_comm _ _)⟩
+* Try this:
+
+  [apply]     subst hqn
+    simp_all only [ne_eq, Polynomial.map_mul, Polynomial.map_sub, map_X, map_C, IntermediateField.algebraMap_apply,
+      AdjoinSimple.coe_gen, dvd_mul_left]
+...............
