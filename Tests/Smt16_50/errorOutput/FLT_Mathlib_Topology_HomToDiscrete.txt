@@ -1,0 +1,78 @@
+...........
+line 33, col 4:
+rw [← Set.mem_preimage] at hy
+* Try this:
+
+  [apply]   duper [*, Set.mem_singleton_iff, Set.mem_preimage] {preprocessing := full}
+shortened proof!
+.
+line 35, col 4:
+intro eq i
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_range` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Finset.mem_image` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Classical.choose_spec, usr Exists.choose_spec, !Set.mem_singleton, Set.mem_preimage]
+  [apply] grind =>
+    instantiate only [Classical.choose_spec, usr Exists.choose_spec]
+    instantiate only [!Set.mem_singleton]
+    instantiate only [Set.mem_preimage]
+shortened proof!
+.
+line 42, col 2:
+obtain ⟨U, Uopen, Ueq⟩ := H x
+* Try this:
+
+  [apply]   duper [*, Set.preimage_comp, Homeomorph.isOpen_image, Homeomorph.preimage_image, isOpen_iff_continuous_mem]
+      {preprocessing := full}
+shortened proof!
+.
+line 57, col 2:
+obtain ⟨U, Uopen, Ueq⟩ := H x
+* Try this:
+
+  [apply]   duper [*, Homeomorph.isOpen_preimage, Set.preimage_comp] {preprocessing := full}
+shortened proof!
+..
+line 81, col 2:
+exact ⟨U, Uopen, by simp [Ueq]⟩
+* Try this:
+
+  [apply]     apply Exists.intro
+    · apply And.intro
+      · exact Uopen
+      · simp_all only [Set.image_singleton, Equiv.apply_symm_apply]
+..
+line 87, col 2:
+refine ⟨U, Uopen, ?_⟩
+* this parameter is redundant, environment already contains `Set.mem_preimage` annotated with `@[grind =]`
+* this parameter is redundant, environment already contains `Set.mem_singleton_iff` annotated with `@[grind =]`
+* Try these:
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton, #5a76]
+  [apply] grind only [Equiv.image_eq_preimage_symm, Set.image_singleton]
+  [apply] grind =>
+    instantiate only [Equiv.image_eq_preimage_symm, #5a76]
+    instantiate approx
+    instantiate only [Set.image_singleton]
+shortened proof!
+.
+line 102, col 2:
+refine discreteTopology_iff_isOpen_singleton.mpr ?_
+* Try this:
+
+  [apply]     rename_i inst_1
+    apply DiscreteTopology.of_subset
+    · exact inst_1
+    · simp_all only [Set.inter_subset_right]
+shortened proof!
+.
+line 114, col 2:
+rw [Set.inter_comm]
+* Try this:
+
+  [apply]     rename_i inst_1
+    apply DiscreteTopology.of_subset
+    · exact inst_1
+    · simp_all only [Set.inter_subset_left]
+shortened proof!

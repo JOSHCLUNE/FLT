@@ -1,0 +1,73 @@
+.....
+line 133, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext σ x_1 : 2
+    simp_all only [conj_apply_apply, LinearEquiv.symm_symm, LinearEquiv.symm_apply_apply]
+shortened proof!
+.
+line 134, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    ext σ x_1 : 2
+    simp_all only [conj_apply_apply, LinearEquiv.symm_symm, LinearEquiv.apply_symm_apply]
+shortened proof!
+.......
+line 173, col 22:
+ext
+* Try this:
+
+  [apply]     rename_i this_1 x
+    simp_all only [e, this_1]
+    ext x_1 i j : 3
+    simp_all only [ContinuousMonoidHom.val_toHomUnits_toFun, ContinuousMonoidHom.comp_toFun, Units.coeHomₜ_toFun,
+      ContinuousAlgHom.coe_toContinuousMonoidHom, ContinuousAlgEquiv.coe_coe, ContinuousAlgEquiv.apply_symm_apply]
+shortened proof!
+...
+line 202, col 22:
+ext
+* Try this:
+
+  [apply]     rename_i this_1 x
+    simp_all only [e, this_1]
+    ext x_1 : 1
+    simp_all only [ContinuousMonoidHom.comp_toFun, ContinuousAlgHom.coe_toContinuousMonoidHom, ContinuousAlgEquiv.coe_coe,
+      ContinuousAlgEquiv.apply_symm_apply]
+shortened proof!
+......
+line 227, col 64:
+simpa [F]
+* Try this:
+
+  [apply]   simp_all only [AlgHom.comp_algebraMap_of_tower, F]
+..........
+line 284, col 2:
+rfl
+* Try this:
+
+  [apply]   rfl
+.
+line 298, col 2:
+simp
+* Try this:
+
+  [apply]   simp_all only [Matrix.trace_toLin'_eq]
+.....
+line 328, col 93:
+simp
+* Try this:
+
+  [apply]   simp_all only [GaloisRep.ker_map, ContinuousMonoidHom.coe_toMonoidHom, GaloisRep.map_conj, GaloisRep.ker_conj,
+      Std.le_refl]
+....
+line 355, col 2:
+rw [this, charFrob]
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+........

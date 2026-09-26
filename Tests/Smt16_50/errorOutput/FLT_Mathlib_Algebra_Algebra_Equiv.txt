@@ -1,0 +1,13 @@
+.
+line 24, col 37:
+rw [e.commutes, hc]
+* Try this:
+
+  [apply]   simp_all only [Set.mem_range, algebraMap_eq_apply]
+.
+line 25, col 25:
+rw [← hc, e.commutes]
+* Try this:
+
+  [apply]     subst hc
+    simp_all only [Set.mem_range, exists_apply_eq_apply, commutes]

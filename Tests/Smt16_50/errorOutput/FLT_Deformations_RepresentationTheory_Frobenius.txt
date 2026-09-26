@@ -1,0 +1,30 @@
+........................
+line 102, col 4:
+simp [hs]
+* Try this:
+
+  [apply]   simp_all only [Set.isEmpty_coe_sort, IsEmpty.forall_iff, isConj_iff, implies_true, and_self, exists_const]
+....
+line 107, col 8:
+rwa [← Ideal.under, ← hQ₂.over]
+* Try this:
+
+  [apply]     simp_all only [Subtype.forall]
+    duper [*, Ideal.liesOver_iff] {preprocessing := full}
+..
+line 108, col 38:
+rwa [← hQ₂.over]
+* Try this:
+
+  [apply]     simp_all only [Subtype.forall]
+    duper [*, Ideal.liesOver_iff] {preprocessing := full}
+.....
+line 134, col 4:
+subst h₁
+* Try this:
+
+  [apply]     subst h₁
+    simp_all only
+    rfl
+shortened proof!
+..

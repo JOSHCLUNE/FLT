@@ -1,0 +1,7 @@
+.
+line 24, col 2:
+obtain ⟨n, s, h⟩ := Module.Finite.exists_fin (R := R) (M := M)
+* Try this:
+
+  [apply]   duper [*, Finsupp.Countable.of_moduleFinite] {preprocessing := full}
+shortened proof!

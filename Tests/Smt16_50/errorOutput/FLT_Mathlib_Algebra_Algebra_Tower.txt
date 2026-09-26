@@ -1,0 +1,52 @@
+.
+line 56, col 22:
+simpa using IsBiscalar.map_smul₂ S s x
+* Try this:
+
+  [apply]     simp_all only [AddHom.toFun_eq_coe, coe_toAddHom, RingHom.id_apply]
+    duper [*, IsBiscalar.map_smul₂] {preprocessing := full}
+.
+line 60, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   rfl
+....
+line 109, col 26:
+simp [IsBiscalar.commutes]
+* Try this:
+
+  [apply]     simp_all only [toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, toRingHom_toMonoidHom, OneHom.toFun_eq_coe,
+      MonoidHom.toOneHom_coe, MonoidHom.coe_coe]
+    apply IsBiscalar.commutes
+.
+line 113, col 2:
+simp [changeScalars]
+* Try this:
+
+  [apply]   rfl
+.
+line 123, col 25:
+simp [AlgHom.changeScalars_apply]
+* Try this:
+
+  [apply]     simp_all only [toEquiv_eq_coe, AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom,
+      OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe, MonoidHom.coe_coe, Equiv.invFun_as_coe, symm_toEquiv_eq_symm,
+      EquivLike.coe_coe]
+    duper [*, apply_symm_apply] {preprocessing := full}
+.
+line 124, col 26:
+simp [AlgHom.changeScalars_apply]
+* Try this:
+
+  [apply]     simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, toEquiv_eq_coe,
+      Equiv.invFun_as_coe, symm_toEquiv_eq_symm, EquivLike.coe_coe, OneHom.toFun_eq_coe, MonoidHom.toOneHom_coe,
+      MonoidHom.coe_coe]
+    duper [*, apply_symm_apply] {preprocessing := full}
+.
+line 125, col 27:
+simp
+* Try this:
+
+  [apply]   simp_all only [AlgHom.toRingHom_eq_coe, RingHom.toMonoidHom_eq_coe, AlgHom.toRingHom_toMonoidHom, OneHom.toFun_eq_coe,
+      MonoidHom.toOneHom_coe, MonoidHom.coe_coe, AlgHom.commutes]

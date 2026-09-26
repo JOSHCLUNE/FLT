@@ -1,0 +1,10 @@
+[{"tacticSucceeded": true,
+  "startLine": 31,
+  "startCol": 2,
+  "shortenedStepsCount": 16,
+  "parentName": "ContinuousMap.continuous_prodMk",
+  "oldText":
+  "simp_rw [continuous_iff_continuousAt, ContinuousAt, tendsto_nhds_compactOpen]",
+  "message": "Try this:\n\n  [apply]   apply continuous_prodMk",
+  "goalIsProp": true,
+  "filepath": "/data/FLT/FLT/Mathlib/Topology/CompactOpen.lean"}]

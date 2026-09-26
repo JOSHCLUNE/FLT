@@ -1,0 +1,11 @@
+[{"tacticSucceeded": true,
+  "startLine": 25,
+  "startCol": 2,
+  "shortenedStepsCount": 1,
+  "parentName": "Valued.isUnit_valuationSubring_iff",
+  "oldText": "convert! Valuation.Integers.isUnit_iff_valuation_eq_one _",
+  "message":
+  "Try these:\n  [apply] grind only [ValuationSubring.valuation_eq_one_iff, !Valuation.isEquiv_valuation_valuationSubring,\n    Valuation.IsEquiv.eq_one_iff_eq_one]\n  [apply] grind =>\n    instantiate only [ValuationSubring.valuation_eq_one_iff, !Valuation.isEquiv_valuation_valuationSubring]\n    instantiate only [Valuation.IsEquiv.eq_one_iff_eq_one]",
+  "goalIsProp": true,
+  "filepath":
+  "/data/FLT/FLT/Mathlib/Topology/Algebra/Valued/ValuationTopology.lean"}]

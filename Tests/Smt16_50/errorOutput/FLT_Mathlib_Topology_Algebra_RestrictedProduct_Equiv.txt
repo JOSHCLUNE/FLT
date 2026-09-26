@@ -1,0 +1,214 @@
+..
+line 48, col 54:
+exact fun i ↦ Set.BijOn.mapsTo
+* Try this:
+
+  [apply]     intro a a_1
+    apply Set.BijOn.mapsTo
+    simp_all only
+..
+line 50, col 29:
+exact fun i ↦ Set.BijOn.mapsTo ∘ Set.BijOn.equiv_symm
+* Try this:
+
+  [apply]     intro a a_1
+    apply Set.BijOn.mapsTo
+    simp_all only [bijOn_symm]
+.....
+line 67, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [toEquiv_eq_coe, Equiv.toFun_as_coe, Equiv.restrictedProductCongrRight_apply, EquivLike.coe_coe]
+    ext i : 1
+    simp_all only [map_apply, RestrictedProduct.mul_apply, map_mul]
+shortened proof!
+............
+line 85, col 27:
+ext
+* Try this:
+
+  [apply]     simp_all only [Units.val_mul, RestrictedProduct.mul_apply, mul_inv_rev]
+    rfl
+shortened proof!
+.
+line 102, col 21:
+ext
+* Try this:
+
+  [apply]     simp_all only [toAddEquiv_eq_coe, AddEquiv.toEquiv_eq_coe, Equiv.toFun_as_coe, EquivLike.coe_coe,
+      AddEquiv.restrictedProductCongrRight_apply, coe_toAddEquiv]
+    ext i : 1
+    simp_all only [map_apply, RestrictedProduct.mul_apply, map_mul]
+shortened proof!
+.
+line 120, col 8:
+filter_upwards [hφ]
+* Try this:
+
+  [apply]   simp_all only [AddEquiv.coe_mk, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, coe_coe, invFun_eq_symm, Equiv.coe_fn_mk]
+shortened proof!
+.....
+line 145, col 62:
+grind
+* Try these:
+  [apply] grind only [= symm_apply_apply, #99d2, #8b9a]
+  [apply] grind only [= symm_apply_apply]
+  [apply] grind => cases #99d2 <;> cases #8b9a <;> instantiate only [= symm_apply_apply]
+.....
+line 150, col 41:
+grind
+* Try these:
+  [apply] grind only [#dac2, #7d8a]
+  [apply] grind only
+  [apply] grind => cases #dac2 <;> cases #7d8a
+......
+line 193, col 21:
+ext
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Equiv.toFun_as_coe, Equiv.restrictedProductCongrLeft'_apply, RestrictedProduct.add_apply]
+    rfl
+shortened proof!
+...
+line 204, col 4:
+simp
+* Try this:
+
+  [apply]   
+.
+line 224, col 21:
+ext
+* Try this:
+
+  [apply]     subst h
+    simp_all only [Equiv.toFun_as_coe, Equiv.restrictedProductCongrLeft'_apply, RestrictedProduct.mul_apply]
+    rfl
+shortened proof!
+...
+line 235, col 4:
+simp
+* Try this:
+
+  [apply]   
+..........
+line 353, col 63:
+simp
+* Try this:
+
+  [apply]     subst h
+    simp_all only [toEquiv_eq_coe, Equiv.toFun_as_coe, Equiv.restrictedProductCongr_apply_apply,
+      RestrictedProduct.add_apply, EquivLike.coe_coe, map_add]
+...
+line 370, col 63:
+simp
+* Try this:
+
+  [apply]     subst h
+    simp_all only [toEquiv_eq_coe, Equiv.toFun_as_coe, Equiv.restrictedProductCongr_apply_apply,
+      RestrictedProduct.mul_apply, EquivLike.coe_coe, map_mul]
+...
+line 388, col 63:
+simp
+* Try this:
+
+  [apply]     subst h
+    simp_all only [toAddEquiv_eq_coe, AddEquiv.toEquiv_eq_coe, Equiv.toFun_as_coe, EquivLike.coe_coe,
+      AddEquiv.restrictedProductCongr_apply, Equiv.restrictedProductCongrRight_apply, coe_toAddEquiv,
+      Equiv.restrictedProductCongrLeft_apply_apply, map_apply, RestrictedProduct.mul_apply, map_mul]
+....
+line 430, col 4:
+simp
+* Try this:
+
+  [apply]     subst h
+    simp_all only [AddEquiv.toEquiv_eq_coe, Equiv.toFun_as_coe, EquivLike.coe_coe, AddEquiv.restrictedProductCongr_apply,
+      Equiv.restrictedProductCongrRight_apply, AddEquiv.coe_mk, AddHom.toFun_eq_coe, LinearMap.coe_toAddHom, coe_coe,
+      invFun_eq_symm, Equiv.coe_fn_mk, Equiv.restrictedProductCongrLeft_apply_apply, map_apply,
+      RestrictedProduct.smul_apply, _root_.map_smul, RingHom.id_apply]
+......
+line 456, col 4:
+aesop
+* Try this:
+
+  [apply]     subst h
+    simp_all only [toEquiv_eq_coe, coe_coe_toEquiv_symm, SetLike.mem_coe, mem_structureSubring_iff,
+      restrictedProductCongr_apply_apply]
+    apply hm
+    simp_all only [SetLike.mem_coe]
+.
+line 457, col 4:
+exact ⟨(restrictedProductCongr e h φ (.of_forall hφ)).symm y, by aesop⟩
+* Try this:
+
+  [apply]     subst h
+    simp_all only [toEquiv_eq_coe, coe_coe_toEquiv_symm, SetLike.mem_coe, mem_structureSubring_iff, Set.mem_image]
+    apply Exists.intro
+    · apply And.intro
+      intro i
+      on_goal 2 => { apply RingEquiv.apply_symm_apply
+      }
+      simp_all only [restrictedProductCongr_symm_apply]
+      apply hs
+      simp_all only [SetLike.mem_coe]
+...
+line 475, col 4:
+filter_upwards [yz.1.2, yz.2.2] with i using Set.mk_mem_prod
+* Try this:
+
+  [apply]   simp_all only [Set.mem_prod, Filter.eventually_and, eventually, and_self]
+._.
+line 477, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+..
+line 501, col 40:
+simp
+* Try this:
+
+  [apply]   simp_all only [Set.mem_ofPred_eq, Filter.eventually_all, eventually, implies_true]
+...
+line 503, col 20:
+ext
+* Try this:
+
+  [apply]     simp_all only
+    rfl
+shortened proof!
+..
+line 551, col 25:
+rw [Filter.tendsto_iff_comap]
+* Try this:
+
+  [apply]     subst hf
+    apply Filter.tendsto_comap
+shortened proof!
+.
+line 553, col 4:
+rw [← hf, Filter.eventually_comap] at hx
+* Try this:
+
+  [apply]     subst hf
+    simp_all only [Filter.eventually_comap, Set.mem_pi, Set.mem_univ, forall_const, Subtype.forall, Set.mem_preimage,
+      Set.mem_singleton_iff]
+shortened proof!
+......
+line 614, col 5:
+aesop
+* Try this:
+
+  [apply]   simp_all only [Filter.eventually_principal, ↓reduceDIte, Subtype.coe_prop, implies_true]
+.
+line 615, col 19:
+ext
+* Try this:
+
+  [apply]     simp_all only [dite_eq_ite, ite_self]
+    rfl
+shortened proof!
+...

@@ -1,0 +1,13 @@
+...
+line 44, col 17:
+simp [h0]
+* Try this:
+
+  [apply]   simp_all only [zero_lt_one, pow_one, Units.zero_lt]
+......
+line 49, col 44:
+rwa [map_pow]
+* Try this:
+
+  [apply]   simp_all only [ne_eq, map_pow]
+.........

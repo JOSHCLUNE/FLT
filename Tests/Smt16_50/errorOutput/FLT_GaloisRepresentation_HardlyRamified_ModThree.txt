@@ -1,0 +1,7 @@
+.
+line 32, col 42:
+decide
+* Try these:
+  [apply] grind only [= Nat.odd_iff]
+  [apply] grind => instantiate only [= Nat.odd_iff]
+.
